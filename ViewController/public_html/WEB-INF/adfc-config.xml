@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <managed-bean id="__1">
+    <managed-bean-name>regionBean</managed-bean-name>
+    <managed-bean-class>cm.gov.minfof.view.RegionBean</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+  </managed-bean>
+  <managed-bean id="__2">
+    <managed-bean-name>departementBean</managed-bean-name>
+    <managed-bean-class>cm.gov.minfof.view.DepartementBean</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+  </managed-bean>
+  <managed-bean id="__3">
+    <managed-bean-name>communeBean</managed-bean-name>
+    <managed-bean-class>cm.gov.minfof.view.CommuneBean</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+  </managed-bean>
+  <managed-bean id="__4">
+    <managed-bean-name>famillePfnl</managed-bean-name>
+    <managed-bean-class>cm.gov.minfof.view.FamillePfnl</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+  </managed-bean>
+  <managed-bean id="__5">
+    <managed-bean-name>produitPfnl</managed-bean-name>
+    <managed-bean-class>cm.gov.minfof.view.ProduitPfnl</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+  </managed-bean>
+  <managed-bean id="__6">
+    <managed-bean-name>partiesRecoltees</managed-bean-name>
+    <managed-bean-class>cm.gov.minfof.view.PartiesRecoltees</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+  </managed-bean>
+</adfc-config>

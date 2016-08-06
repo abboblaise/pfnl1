@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+        xmlns:c="http://java.sun.com/jsp/jstl/core">
+    <c:set var="viewcontrollerBundle" value="#{adfBundle['cm.gov.minfof.view.ViewControllerBundle']}"/>
+    <af:document title="#{viewcontrollerBundle.EDITION_DES_COMMUNES}" id="d1">
+        <af:messages id="m1"/>
+        <af:form id="f1">
+            <af:panelBox text="#{viewcontrollerBundle.EDITION_DES_COMMUNES}" id="pb1">
+                <f:facet name="toolbar"/>
+                <af:panelFormLayout id="pfl1" rows="2">
+                    <af:selectOneChoice value="#{bindings.RegionView1.inputValue}" label="#{bindings.RegionView1.label}"
+                                        required="#{bindings.RegionView1.hints.mandatory}"
+                                        shortDesc="#{bindings.RegionView1.hints.tooltip}" id="soc1" autoSubmit="true">
+                        <f:selectItems value="#{bindings.RegionView1.items}" id="si1"/>
+                        <f:validator binding="#{bindings.RegionView1.validator}"/>
+                    </af:selectOneChoice>
+                    <af:inputText value="#{bindings.Nomcommune.inputValue}" label="#{bindings.Nomcommune.hints.label}"
+                                  required="#{bindings.Nomcommune.hints.mandatory}"
+                                  columns="#{bindings.Nomcommune.hints.displayWidth}"
+                                  maximumLength="#{bindings.Nomcommune.hints.precision}"
+                                  shortDesc="#{bindings.Nomcommune.hints.tooltip}" id="it3">
+                        <f:validator binding="#{bindings.Nomcommune.validator}"/>
+                    </af:inputText>
+                    <af:selectOneChoice value="#{bindings.DepartementView3.inputValue}"
+                                        label="#{bindings.DepartementView3.label}"
+                                        required="#{bindings.DepartementView3.hints.mandatory}"
+                                        shortDesc="#{bindings.DepartementView3.hints.tooltip}" id="soc2"
+                                        autoSubmit="true">
+                        <f:selectItems value="#{bindings.DepartementView3.items}" id="si2"/>
+                        <f:validator binding="#{bindings.DepartementView3.validator}"/>
+                    </af:selectOneChoice>
+                    <af:inputText value="#{bindings.Idcommunes.inputValue}" label="#{bindings.Idcommunes.hints.label}"
+                                  required="#{bindings.Idcommunes.hints.mandatory}"
+                                  columns="#{bindings.Idcommunes.hints.displayWidth}"
+                                  maximumLength="#{bindings.Idcommunes.hints.precision}"
+                                  shortDesc="#{bindings.Idcommunes.hints.tooltip}" id="it1" visible="false">
+                        <f:validator binding="#{bindings.Idcommunes.validator}"/>
+                        <af:convertNumber groupingUsed="false" pattern="#{bindings.Idcommunes.format}"/>
+                    </af:inputText>
+                    <af:inputText value="#{bindings.Iddepartements.inputValue}"
+                                  label="#{bindings.Iddepartements.hints.label}"
+                                  required="#{bindings.Iddepartements.hints.mandatory}"
+                                  columns="#{bindings.Iddepartements.hints.displayWidth}"
+                                  maximumLength="#{bindings.Iddepartements.hints.precision}"
+                                  shortDesc="#{bindings.Iddepartements.hints.tooltip}" id="it2" visible="false">
+                        <f:validator binding="#{bindings.Iddepartements.validator}"/>
+                        <af:convertNumber groupingUsed="false" pattern="#{bindings.Iddepartements.format}"/>
+                    </af:inputText>
+                    <f:facet name="footer">
+                        <af:spacer width="10" height="10" id="s3"/>
+                        <af:panelGroupLayout id="pgl1">
+                            <af:button actionListener="#{bindings.CreateInsert.execute}"
+                                       text="#{viewcontrollerBundle.NOUVEAU}"
+                                       disabled="#{!bindings.CreateInsert.enabled}" id="b2"/>
+                            <af:spacer width="10" height="10" id="s1"/>
+                            <af:button text="Commit" id="b1"
+                                       disabled="#{!bindings.Commit.enabled}"
+                                       action="#{communeBean.enregistreCommune}" visible="false"/>
+                            <af:button text="#{viewcontrollerBundle.ENREGISTRER}" id="b3"
+                                       action="#{communeBean.enregistreCommune}"/>
+                            <af:spacer width="10" height="10" id="s2"/>
+                            <af:button
+                                       text="#{viewcontrollerBundle.SUPPRIMER}"
+                                       disabled="#{!bindings.Delete.enabled}" id="b4"
+                                       action="#{communeBean.supprimeCommune}"/>
+                        </af:panelGroupLayout>
+                    </f:facet>
+                </af:panelFormLayout>
+            </af:panelBox>
+            <af:panelBox text="#{viewcontrollerBundle.LISTE_DES_COMMUNES}" id="pb2">
+                <f:facet name="toolbar"/>
+                <af:panelCollection id="pc1">
+                    <f:facet name="menus"/>
+                    <f:facet name="toolbar"/>
+                    <af:table value="#{bindings.CommuneView5.collectionModel}" var="row"
+                              rows="#{bindings.CommuneView5.rangeSize}"
+                              emptyText="#{bindings.CommuneView5.viewable ? 'No data to display.' : 'Access Denied.'}"
+                              rowBandingInterval="0"
+                              selectedRowKeys="#{bindings.CommuneView5.collectionModel.selectedRow}"
+                              selectionListener="#{bindings.CommuneView5.collectionModel.makeCurrent}"
+                              rowSelection="single" fetchSize="#{bindings.CommuneView5.rangeSize}"
+                              filterModel="#{bindings.CommuneView5Query.queryDescriptor}" filterVisible="true"
+                              queryListener="#{bindings.CommuneView5Query.processQuery}" varStatus="vs" id="t1"
+                              partialTriggers=":::b2 :::b4" autoHeightRows="8">
+                        <af:column sortProperty="#{bindings.CommuneView5.hints.Idcommunes.name}" filterable="true"
+                                   sortable="true" headerText="#{bindings.CommuneView5.hints.Idcommunes.label}" id="c1">
+                            <af:outputText value="#{row.Idcommunes}"
+                                           shortDesc="#{bindings.CommuneView5.hints.Idcommunes.tooltip}" id="ot1">
+                                <af:convertNumber groupingUsed="false"
+                                                  pattern="#{bindings.CommuneView5.hints.Idcommunes.format}"/>
+                            </af:outputText>
+                        </af:column>
+                        <af:column sortProperty="#{bindings.CommuneView5.hints.Iddepartements.name}" filterable="true"
+                                   sortable="true" headerText="#{bindings.CommuneView5.hints.Iddepartements.label}"
+                                   id="c2">
+                            <af:outputText value="#{row.Iddepartements}"
+                                           shortDesc="#{bindings.CommuneView5.hints.Iddepartements.tooltip}" id="ot2">
+                                <af:convertNumber groupingUsed="false"
+                                                  pattern="#{bindings.CommuneView5.hints.Iddepartements.format}"/>
+                            </af:outputText>
+                        </af:column>
+                        <af:column sortProperty="#{bindings.CommuneView5.hints.Nomcommune.name}" filterable="true"
+                                   sortable="true" headerText="#{bindings.CommuneView5.hints.Nomcommune.label}" id="c3">
+                            <af:outputText value="#{row.Nomcommune}"
+                                           shortDesc="#{bindings.CommuneView5.hints.Nomcommune.tooltip}" id="ot3"/>
+                        </af:column>
+                    </af:table>
+                    <f:facet name="statusbar"/>
+                </af:panelCollection>
+            </af:panelBox>
+        </af:form>
+    </af:document>
+    <!--oracle-jdev-comment:preferred-managed-bean-name:communeBean-->
+</f:view>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.20.47" id="page_produitPageDef"
+                Package="cm.gov.minfof.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="FamillePfnlView1" RangeSize="25" DataControl="AppModuleDataControl" id="FamillePfnlView1Iterator"/>
+    <iterator Binds="ProduitsPfnlView4" RangeSize="25" DataControl="AppModuleDataControl"
+              id="ProduitsPfnlView4Iterator"/>
+    <iterator Binds="PartiesProduitsPfnlView19" RangeSize="25" DataControl="AppModuleDataControl"
+              id="PartiesProduitsPfnlView19Iterator"/>
+    <searchRegion Binds="PartiesProduitsPfnlView19Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="PartiesProduitsPfnlView19Query"/>
+    <iterator Binds="PartiesRecolteesView1" RangeSize="-1" DataControl="AppModuleDataControl"
+              id="PartiesRecolteesView1Iterator"/>
+    <searchRegion Binds="ProduitsPfnlView4Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="ProduitsPfnlView4Query"/>
+  </executables>
+  <bindings>
+    <list IterBinding="FamillePfnlView1Iterator" ListOperMode="navigation" ListIter="FamillePfnlView1Iterator"
+          id="FamillePfnlView1" DTSupportsMRU="true" SelectItemValueMode="ListObject">
+      <AttrNames>
+        <Item Value="Nomfamille"/>
+      </AttrNames>
+    </list>
+    <attributeValues IterBinding="ProduitsPfnlView4Iterator" id="Idproduitspfnl">
+      <AttrNames>
+        <Item Value="Idproduitspfnl"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ProduitsPfnlView4Iterator" id="Nomscientifique">
+      <AttrNames>
+        <Item Value="Nomscientifique"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ProduitsPfnlView4Iterator" id="Nomcommercial">
+      <AttrNames>
+        <Item Value="Nomcommercial"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ProduitsPfnlView4Iterator" id="Nomvernaculaire">
+      <AttrNames>
+        <Item Value="Nomvernaculaire"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ProduitsPfnlView4Iterator" id="Codeproduit">
+      <AttrNames>
+        <Item Value="Codeproduit"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ProduitsPfnlView4Iterator" id="Idfamillepfnl">
+      <AttrNames>
+        <Item Value="Idfamillepfnl"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ProduitsPfnlView4Iterator" id="Descriptionsommaire">
+      <AttrNames>
+        <Item Value="Descriptionsommaire"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ProduitsPfnlView4Iterator" id="Modeattribution">
+      <AttrNames>
+        <Item Value="Modeattribution"/>
+      </AttrNames>
+    </attributeValues>
+    <tree IterBinding="PartiesProduitsPfnlView19Iterator" id="PartiesProduitsPfnlView19">
+      <nodeDefinition DefName="cm.gov.minfof.model.entity.PartiesProduitsPfnlView" Name="PartiesProduitsPfnlView190">
+        <AttrNames>
+          <Item Value="Idpartiesproduitspfnl"/>
+          <Item Value="Idpartiesrecoltees" Binds="Idpartiesrecoltees"/>
+          <Item Value="Idproduitspfnl"/>
+          <Item Value="Estunproduitpfnl"/>
+          <Item Value="estUnProduitPfnlTransient"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <action IterBinding="ProduitsPfnlView4Iterator" id="CreateInsert" RequiresUpdateModel="true"
+            Action="createInsertRow"/>
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
+    <action IterBinding="ProduitsPfnlView4Iterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
+    <action IterBinding="PartiesProduitsPfnlView19Iterator" id="CreateInsert1" RequiresUpdateModel="true"
+            Action="createInsertRow"/>
+    <list IterBinding="PartiesProduitsPfnlView19Iterator" id="Idpartiesrecoltees" DTSupportsMRU="true"
+          SelectItemValueMode="ListObject" StaticList="false" ListIter="PartiesRecolteesView1Iterator">
+      <AttrNames>
+        <Item Value="Idpartiesrecoltees"/>
+      </AttrNames>
+      <ListAttrNames>
+        <Item Value="Idpartiesrecoltees"/>
+      </ListAttrNames>
+      <ListDisplayAttrNames>
+        <Item Value="Nompartierecoltee"/>
+      </ListDisplayAttrNames>
+    </list>
+    <tree IterBinding="ProduitsPfnlView4Iterator" id="ProduitsPfnlView4">
+      <nodeDefinition DefName="cm.gov.minfof.model.entity.ProduitsPfnlView" Name="ProduitsPfnlView40">
+        <AttrNames>
+          <Item Value="Idfamillepfnl"/>
+          <Item Value="Idproduitspfnl"/>
+          <Item Value="Codeproduit"/>
+          <Item Value="Nomscientifique"/>
+          <Item Value="Nomcommercial"/>
+          <Item Value="Nomvernaculaire"/>
+          <Item Value="Modeattribution"/>
+          <Item Value="Descriptionsommaire"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <action IterBinding="PartiesProduitsPfnlView19Iterator" id="Delete1" RequiresUpdateModel="false"
+            Action="removeCurrentRow"/>
+  </bindings>
+</pageDefinition>

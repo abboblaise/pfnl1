@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application" version="12.2.1.20.47" id="DataBindings"
+             SeparateXMLFiles="false" Package="cm.gov.minfof.view" ClientType="Generic">
+  <pageMap>
+    <page path="/page_region.jsf" usageId="cm_gov_minfof_view_page_regionPageDef"/>
+    <page path="/page_departement.jsf" usageId="cm_gov_minfof_view_page_departementPageDef"/>
+    <page path="/page_commune.jsf" usageId="cm_gov_minfof_view_page_communePageDef"/>
+    <page path="/page_famille_produit.jsf" usageId="cm_gov_minfof_view_page_famille_produitPageDef"/>
+    <page path="/page_produit.jsf" usageId="cm_gov_minfof_view_page_produitPageDef"/>
+    <page path="/page_parties_recoltees.jsf" usageId="cm_gov_minfof_view_page_parties_recolteesPageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="cm_gov_minfof_view_page_regionPageDef" path="cm.gov.minfof.view.pageDefs.page_regionPageDef"/>
+    <page id="cm_gov_minfof_view_page_departementPageDef" path="cm.gov.minfof.view.pageDefs.page_departementPageDef"/>
+    <page id="cm_gov_minfof_view_page_communePageDef" path="cm.gov.minfof.view.pageDefs.page_communePageDef"/>
+    <page id="cm_gov_minfof_view_page_famille_produitPageDef"
+          path="cm.gov.minfof.view.pageDefs.page_famille_produitPageDef"/>
+    <page id="cm_gov_minfof_view_page_produitPageDef" path="cm.gov.minfof.view.pageDefs.page_produitPageDef"/>
+    <page id="cm_gov_minfof_view_page_parties_recolteesPageDef"
+          path="cm.gov.minfof.view.pageDefs.page_parties_recolteesPageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <BC4JDataControl id="AppModuleDataControl" Package="cm.gov.minfof.model.entity"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
+                     SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true" Configuration="AppModuleLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+  </dataControlUsages>
+</Application>
