@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="Agrements"
+  Version="12.2.1.20.47"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="Agrements"
+  AliasName="Agrements"
+  BindingStyle="JDBC">
+  <Attribute
+    Name="Idagrements"
+    ColumnName="IDAgrements"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="BIGINT"
+    TableName="Agrements"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="19"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Idacteurspnfl"
+    ColumnName="IDActeursPNFL"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="BIGINT"
+    TableName="Agrements">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="19"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Datedebut"
+    ColumnName="Datedebut"
+    SQLType="DATE"
+    Type="java.sql.Date"
+    ColumnType="DATE"
+    TableName="Agrements"/>
+  <Attribute
+    Name="Datefin"
+    ColumnName="DATEFIN"
+    SQLType="DATE"
+    Type="java.sql.Date"
+    ColumnType="DATE"
+    TableName="Agrements"/>
+  <Attribute
+    Name="Volumeqte"
+    ColumnName="Volumeqte"
+    SQLType="DECIMAL"
+    Type="java.math.BigDecimal"
+    ColumnType="DECIMAL"
+    TableName="Agrements">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="16"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Volumecoupe"
+    ColumnName="Volumecoupe"
+    SQLType="DECIMAL"
+    Type="java.math.BigDecimal"
+    ColumnType="DECIMAL"
+    TableName="Agrements">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="16"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Numagreement"
+    Precision="50"
+    ColumnName="NUMAGREEMENT"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR"
+    TableName="Agrements">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="50"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Descriptioncontenuagreements"
+    ColumnName="Descriptioncontenuagreements"
+    SQLType="STRUCT"
+    Type="java.lang.String"
+    ColumnType="LONGTEXT"
+    TableName="Agrements"/>
+  <Attribute
+    Name="Idpermissionnairespnfl"
+    ColumnName="IDPermissionnairesPNFL"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="BIGINT"
+    TableName="Agrements">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="19"/>
+    </DesignTime>
+  </Attribute>
+  <AccessorAttribute
+    Name="Agrements"
+    Association="cm.gov.minfof.model.entity.AgrementsIbfk1Assoc"
+    AssociationEnd="cm.gov.minfof.model.entity.AgrementsIbfk1Assoc.Agrements"
+    AssociationOtherEnd="cm.gov.minfof.model.entity.AgrementsIbfk1Assoc.IdpermissionnairespnflAgrements"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="IdpermissionnairespnflAgrements"
+    Association="cm.gov.minfof.model.entity.AgrementsIbfk1Assoc"
+    AssociationEnd="cm.gov.minfof.model.entity.AgrementsIbfk1Assoc.IdpermissionnairespnflAgrements"
+    AssociationOtherEnd="cm.gov.minfof.model.entity.AgrementsIbfk1Assoc.Agrements"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="Permissionnairespnfl"
+    Association="cm.gov.minfof.model.entity.FkPermissionnairespnfl2Assoc1"
+    AssociationEnd="cm.gov.minfof.model.entity.FkPermissionnairespnfl2Assoc1.Permissionnairespnfl"
+    AssociationOtherEnd="cm.gov.minfof.model.entity.FkPermissionnairespnfl2Assoc1.Agrements"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="Permissionnairespnfl1"
+    Association="cm.gov.minfof.model.entity.FkPermissionnairespnfl1Assoc1"
+    AssociationEnd="cm.gov.minfof.model.entity.FkPermissionnairespnfl1Assoc1.Permissionnairespnfl1"
+    AssociationOtherEnd="cm.gov.minfof.model.entity.FkPermissionnairespnfl1Assoc1.Agrements1"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="Permissionnairespnfl2"
+    Association="cm.gov.minfof.model.entity.AgrementsIbfk1Assoc1"
+    AssociationEnd="cm.gov.minfof.model.entity.AgrementsIbfk1Assoc1.Permissionnairespnfl2"
+    AssociationOtherEnd="cm.gov.minfof.model.entity.AgrementsIbfk1Assoc1.Agrements2"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <Key
+    Name="Primary1"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="PRIMARY"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="cm.gov.minfof.model.entity.Agrements.Idagrements"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="AgrementsIbfk1">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="PRIMARY"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="Agrements_ibfk_1"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="cm.gov.minfof.model.entity.Agrements.Idpermissionnairespnfl"/>
+    </AttrArray>
+  </Key>
+</Entity>

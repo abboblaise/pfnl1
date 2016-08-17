@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="PartiesproduitspfnlView"
+  Version="12.2.1.20.47"
+  InheritPersonalization="merge"
+  BindingStyle="JDBC"
+  CustomQuery="true"
+  PageIterMode="Full"
+  RowClass="cm.gov.minfof.model.entityviewobject.PartiesproduitspfnlViewRowImpl">
+  <DesignTime>
+    <Attr Name="_isExpertMode" Value="true"/>
+    <Attr Name="_codeGenFlag2" Value="Access"/>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <SQLQuery><![CDATA[SELECT PfnlPartiesproduitspfnl.idpartiesproduitspfnl,
+       PfnlPartiesproduitspfnl.idpartiesrecoltees,
+       PfnlPartiesproduitspfnl.idproduitspfnl,
+       PfnlPartiesproduitspfnl.estunproduitpfnl
+FROM pfnl.partiesproduitspfnl PfnlPartiesproduitspfnl]]></SQLQuery>
+  <ViewAttribute
+    Name="Idpartiesproduitspfnl"
+    IsUpdateable="false"
+    IsPersistent="false"
+    IsNotNull="true"
+    PrecisionRule="true"
+    Type="java.math.BigDecimal"
+    ColumnType="BIGINT"
+    AliasName="idpartiesproduitspfnl"
+    Expression="idpartiesproduitspfnl"
+    SQLType="NUMERIC">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="19"/>
+    </DesignTime>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="Idpartiesrecoltees"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Type="java.math.BigDecimal"
+    ColumnType="BIGINT"
+    AliasName="idpartiesrecoltees"
+    Expression="idpartiesrecoltees"
+    SQLType="NUMERIC">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="19"/>
+    </DesignTime>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="Idproduitspfnl"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Type="java.math.BigDecimal"
+    ColumnType="BIGINT"
+    AliasName="idproduitspfnl"
+    Expression="idproduitspfnl"
+    SQLType="NUMERIC">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="19"/>
+    </DesignTime>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="Estunproduitpfnl"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Type="java.lang.Integer"
+    ColumnType="TINYINT"
+    AliasName="estunproduitpfnl"
+    Expression="estunproduitpfnl"
+    SQLType="INTEGER">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="3"/>
+    </DesignTime>
+  </ViewAttribute>
+  <AttrArray Name="KeyAttributes">
+    <Item Value="Idpartiesproduitspfnl"/>
+  </AttrArray>
+  <ViewLinkAccessor
+    Name="ProduitspfnlView"
+    ViewLink="cm.gov.minfof.model.entityviewobject.ProduitspfnlIbfk1Link2"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="IdproduitspfnlPartiesproduitspfnlView"
+    ViewLink="cm.gov.minfof.model.entityviewobject.FkPartiesproduitspfnl1Link2"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="IdpartiesrecolteesPartiesproduitspfnlView"
+    ViewLink="cm.gov.minfof.model.entityviewobject.FkPartiesproduitspfnl2Link2"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+</ViewObject>

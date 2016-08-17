@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<af:pageTemplateDef xmlns:af="http://xmlns.oracle.com/adf/faces/rich" var="attrs"
+                    xmlns:afc="http://xmlns.oracle.com/adf/faces/rich/component" xmlns:f="http://java.sun.com/jsf/core"
+                    xmlns:c="http://java.sun.com/jsp/jstl/core">
+    <c:set var="viewcontrollerBundle" value="#{adfBundle['cm.gov.minfof.view.ViewControllerBundle']}"/>
+    <af:xmlContent>
+        <afc:component>
+            <afc:description/>
+            <afc:display-name>TemplateGlobal</afc:display-name>
+            <afc:facet>
+                <afc:facet-name>
+                    content
+                </afc:facet-name>
+            </afc:facet>
+        </afc:component>
+    </af:xmlContent>
+    <af:panelSplitter splitterPosition="156" orientation="vertical" id="pt_ps1">
+        <f:facet name="first">
+            <af:panelGridLayout id="pt_pgl2" inlineStyle='background-image:url("arriere.jpg");' landmark="banner">
+                <af:gridRow marginTop="5px" height="100%" marginBottom="5px" id="pt_gr1">
+                    <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="pt_gc1">
+                        <af:panelGroupLayout id="pt_pgl3" halign="center" layout="horizontal" valign="middle">
+                            <af:image source="MINFOF.jpg" id="pt_i1">
+                                <?audit suppress oracle.adf.faces.imgshortdesc?>
+                            </af:image>
+                            <af:image source="Titre.png" id="pt_i2">
+                                <?audit suppress oracle.adf.faces.imgshortdesc?>
+                            </af:image>
+                        </af:panelGroupLayout>
+                    </af:gridCell>
+                </af:gridRow>
+            </af:panelGridLayout>
+        </f:facet>
+        <f:facet name="second">
+            <af:panelSplitter splitterPosition="31" orientation="vertical" positionedFromEnd="true" id="pt_ps2">
+                <f:facet name="first">
+                    <af:panelSplitter splitterPosition="161" id="pt_ps3">
+                        <f:facet name="first">
+                            <af:panelAccordion discloseMany="false" id="pt_pa1">
+                                <af:showDetailItem id="pane1" text="#{viewcontrollerBundle.PARAMETRAGE}">
+                                    <af:panelGroupLayout id="pt_pgl1" layout="vertical" halign="center" valign="top">
+                                        <af:button text="#{viewcontrollerBundle.PAYS}" id="pt_b2"
+                                                   destination="page_pays.jsf"/>
+                                        <af:spacer width="10" height="3" id="pt_s3"/>
+                                        <af:button text="#{viewcontrollerBundle.REGIONS}" id="pt_b1"
+                                                   destination="page_region.jsf"/>
+                                        <af:spacer width="10" height="3" id="pt_s2"/>
+                                        <af:button text="#{viewcontrollerBundle.DEPARTEMENTS}" id="pt_b3" destination="page_departement.jsf"/>
+                                        <af:spacer width="10" height="3" id="pt_s4"/>
+                                        <af:button text="#{viewcontrollerBundle.COMMUNES}" id="pt_b4"
+                                                   destination="page_commune.jsf"/>
+                                        <af:separator id="pt_s1"/>
+                                        <af:button text="#{viewcontrollerBundle.FAMILLE_DE_PRODUITS}" id="pt_b5"
+                                                   destination="page_famille_produit.jsf"/>
+                                        <af:spacer width="10" height="3" id="pt_s5"/>
+                                        <af:button text="#{viewcontrollerBundle.PRODUITS}" id="pt_b6"
+                                                   destination="page_produit.jsf"/>
+                                        <af:spacer width="10" height="3" id="pt_s6"/>
+                                        <af:button text="#{viewcontrollerBundle.PARTIES_RECOLTEES}" id="pt_b7" destination="page_parties_recoltees.jsf"/>
+                                        <af:separator id="pt_s7"/>
+                                        <af:button text="#{viewcontrollerBundle.ORIGINE_DES_PFNL}" id="pt_b8"
+                                                   destination="page_originepfnl.jsf"/>
+                                        <af:spacer width="10" height="3" id="pt_s8"/>
+                                        <af:button text="#{viewcontrollerBundle.PERMISSIONNAIRES}" id="pt_b9" destination="page_permissionnaire.jsf"/>
+                                    </af:panelGroupLayout>
+                                </af:showDetailItem>
+                                <af:showDetailItem text="#{viewcontrollerBundle.TRAITEMENTS}" id="pt_sdi1"/>
+                            </af:panelAccordion>
+                        </f:facet>
+                        <f:facet name="second">
+                            <af:panelSplitter id="pt_ps4" orientation="vertical" splitterPosition="40">
+                                <f:facet name="first"/>
+                                <f:facet name="second">
+                                    <af:facetRef facetName="content"/>
+                                </f:facet>
+                            </af:panelSplitter>
+                        </f:facet>
+                    </af:panelSplitter>
+                </f:facet>
+                <f:facet name="second">
+                    <af:panelGroupLayout id="pt_pgl4" halign="left" valign="middle"/>
+                </f:facet>
+            </af:panelSplitter>
+        </f:facet>
+    </af:panelSplitter>
+</af:pageTemplateDef>
