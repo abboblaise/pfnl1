@@ -64,8 +64,6 @@
                                         <af:button text="#{viewcontrollerBundle.PERMISSIONNAIRES}" id="pt_b9" destination="page_permissionnaire.jsf"/>
                                         <af:spacer width="10" height="10" id="pt_s10"/>
                                     </af:panelGroupLayout>
-                                    <af:button text="button 1" id="pt_b10"/>
-                                    <af:spacer width="10" height="10" id="pt_s9"/>
                                 </af:showDetailItem>
                                 <af:showDetailItem text="#{viewcontrollerBundle.TRAITEMENTS}" id="pt_sdi1"/>
                             </af:panelAccordion>
