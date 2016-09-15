@@ -225,42 +225,6 @@
     Name="AgrementsView1_1"
     ViewObjectName="cm.gov.minfof.model.queryviewobject.AgrementsView1"/>
   <ViewUsage
-    Name="PermissionnairespnflView2"
-    ViewObjectName="cm.gov.minfof.model.entityviewobject.PermissionnairespnflView"/>
-  <ViewUsage
-    Name="PermissionnairespnflView3"
-    ViewObjectName="cm.gov.minfof.model.entityviewobject.PermissionnairespnflView"/>
-  <ViewUsage
-    Name="AgrementsView2"
-    ViewObjectName="cm.gov.minfof.model.entityviewobject.AgrementsView"/>
-  <ViewUsage
-    Name="PermissionnairespnflView4"
-    ViewObjectName="cm.gov.minfof.model.entityviewobject.PermissionnairespnflView"/>
-  <ViewUsage
-    Name="PermissionnairespnflView5"
-    ViewObjectName="cm.gov.minfof.model.entityviewobject.PermissionnairespnflView"/>
-  <ViewUsage
-    Name="AgrementsView3"
-    ViewObjectName="cm.gov.minfof.model.entityviewobject.AgrementsView"/>
-  <ViewUsage
-    Name="PermissionnairespnflView1_2"
-    ViewObjectName="cm.gov.minfof.model.queryviewobject.PermissionnairespnflView1"/>
-  <ViewUsage
-    Name="PermissionnairespnflView1_3"
-    ViewObjectName="cm.gov.minfof.model.queryviewobject.PermissionnairespnflView1"/>
-  <ViewUsage
-    Name="AgrementsView1_2"
-    ViewObjectName="cm.gov.minfof.model.queryviewobject.AgrementsView1"/>
-  <ViewUsage
-    Name="PermissionnairespnflView1_4"
-    ViewObjectName="cm.gov.minfof.model.queryviewobject.PermissionnairespnflView1"/>
-  <ViewUsage
-    Name="PermissionnairespnflView1_5"
-    ViewObjectName="cm.gov.minfof.model.queryviewobject.PermissionnairespnflView1"/>
-  <ViewUsage
-    Name="AgrementsView1_3"
-    ViewObjectName="cm.gov.minfof.model.queryviewobject.AgrementsView1"/>
-  <ViewUsage
     Name="listeExploitant1"
     ViewObjectName="cm.gov.minfof.model.entityviewobject.listeExploitant"/>
   <ViewUsage
@@ -505,78 +469,6 @@
     ViewLinkObjectName="cm.gov.minfof.model.entity.FkPartiesproduitspfnl1Assoc3Link"
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.ProduitsPfnlView4"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.PartiesProduitsPfnlView19"
-    Reversed="false"/>
-  <ViewLinkUsage
-    Name="FkPermissionnairespnfl2Link1"
-    ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.FkPermissionnairespnfl2Link"
-    SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.PermissionnairespnflView1"
-    DstViewUsageName="cm.gov.minfof.model.entity.AppModule.PermissionnairespnflView2"
-    Reversed="false"/>
-  <ViewLinkUsage
-    Name="FkPermissionnairespnfl1Link1"
-    ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.FkPermissionnairespnfl1Link"
-    SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.PermissionnairespnflView1"
-    DstViewUsageName="cm.gov.minfof.model.entity.AppModule.PermissionnairespnflView3"
-    Reversed="false"/>
-  <ViewLinkUsage
-    Name="AgrementsIbfk1Link1"
-    ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.AgrementsIbfk1Link"
-    SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.AgrementsView1"
-    DstViewUsageName="cm.gov.minfof.model.entity.AppModule.AgrementsView2"
-    Reversed="false"/>
-  <ViewLinkUsage
-    Name="FkPermissionnairespnfl2Assoc1Link1"
-    ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.FkPermissionnairespnfl2Assoc1Link"
-    SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.AgrementsView1"
-    DstViewUsageName="cm.gov.minfof.model.entity.AppModule.PermissionnairespnflView4"
-    Reversed="false"/>
-  <ViewLinkUsage
-    Name="FkPermissionnairespnfl1Assoc1Link1"
-    ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.FkPermissionnairespnfl1Assoc1Link"
-    SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.AgrementsView1"
-    DstViewUsageName="cm.gov.minfof.model.entity.AppModule.PermissionnairespnflView5"
-    Reversed="false"/>
-  <ViewLinkUsage
-    Name="AgrementsIbfk1Assoc1Link1"
-    ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.AgrementsIbfk1Assoc1Link"
-    SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.PermissionnairespnflView1"
-    DstViewUsageName="cm.gov.minfof.model.entity.AppModule.AgrementsView3"
-    Reversed="false"/>
-  <ViewLinkUsage
-    Name="FkPermissionnairespnfl1Link2"
-    ViewLinkObjectName="cm.gov.minfof.model.queryviewobject.FkPermissionnairespnfl1Link"
-    SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.PermissionnairespnflView1_1"
-    DstViewUsageName="cm.gov.minfof.model.entity.AppModule.PermissionnairespnflView1_2"
-    Reversed="false"/>
-  <ViewLinkUsage
-    Name="FkPermissionnairespnfl2Link2"
-    ViewLinkObjectName="cm.gov.minfof.model.queryviewobject.FkPermissionnairespnfl2Link"
-    SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.PermissionnairespnflView1_1"
-    DstViewUsageName="cm.gov.minfof.model.entity.AppModule.PermissionnairespnflView1_3"
-    Reversed="false"/>
-  <ViewLinkUsage
-    Name="AgrementsIbfk1Link2"
-    ViewLinkObjectName="cm.gov.minfof.model.queryviewobject.AgrementsIbfk1Link"
-    SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.PermissionnairespnflView1_1"
-    DstViewUsageName="cm.gov.minfof.model.entity.AppModule.AgrementsView1_2"
-    Reversed="false"/>
-  <ViewLinkUsage
-    Name="FkPermissionnairespnfl1Link1_1"
-    ViewLinkObjectName="cm.gov.minfof.model.queryviewobject.FkPermissionnairespnfl1Link1"
-    SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.AgrementsView1_1"
-    DstViewUsageName="cm.gov.minfof.model.entity.AppModule.PermissionnairespnflView1_4"
-    Reversed="false"/>
-  <ViewLinkUsage
-    Name="FkPermissionnairespnfl2Link1_1"
-    ViewLinkObjectName="cm.gov.minfof.model.queryviewobject.FkPermissionnairespnfl2Link1"
-    SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.AgrementsView1_1"
-    DstViewUsageName="cm.gov.minfof.model.entity.AppModule.PermissionnairespnflView1_5"
-    Reversed="false"/>
-  <ViewLinkUsage
-    Name="AgrementsIbfk1Link1_1"
-    ViewLinkObjectName="cm.gov.minfof.model.queryviewobject.AgrementsIbfk1Link1"
-    SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.AgrementsView1_1"
-    DstViewUsageName="cm.gov.minfof.model.entity.AppModule.AgrementsView1_3"
     Reversed="false"/>
   <ClientInterface
     Name="__clientInterface">

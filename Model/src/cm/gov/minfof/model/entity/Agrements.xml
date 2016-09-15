@@ -88,52 +88,6 @@
     Type="java.lang.String"
     ColumnType="LONGTEXT"
     TableName="Agrements"/>
-  <Attribute
-    Name="Idpermissionnairespnfl"
-    ColumnName="IDPermissionnairesPNFL"
-    SQLType="NUMERIC"
-    Type="java.math.BigDecimal"
-    ColumnType="BIGINT"
-    TableName="Agrements">
-    <DesignTime>
-      <Attr Name="_DisplaySize" Value="19"/>
-    </DesignTime>
-  </Attribute>
-  <AccessorAttribute
-    Name="Agrements"
-    Association="cm.gov.minfof.model.entity.AgrementsIbfk1Assoc"
-    AssociationEnd="cm.gov.minfof.model.entity.AgrementsIbfk1Assoc.Agrements"
-    AssociationOtherEnd="cm.gov.minfof.model.entity.AgrementsIbfk1Assoc.IdpermissionnairespnflAgrements"
-    Type="oracle.jbo.RowIterator"
-    IsUpdateable="false"/>
-  <AccessorAttribute
-    Name="IdpermissionnairespnflAgrements"
-    Association="cm.gov.minfof.model.entity.AgrementsIbfk1Assoc"
-    AssociationEnd="cm.gov.minfof.model.entity.AgrementsIbfk1Assoc.IdpermissionnairespnflAgrements"
-    AssociationOtherEnd="cm.gov.minfof.model.entity.AgrementsIbfk1Assoc.Agrements"
-    Type="oracle.jbo.server.EntityImpl"
-    IsUpdateable="true"/>
-  <AccessorAttribute
-    Name="Permissionnairespnfl"
-    Association="cm.gov.minfof.model.entity.FkPermissionnairespnfl2Assoc1"
-    AssociationEnd="cm.gov.minfof.model.entity.FkPermissionnairespnfl2Assoc1.Permissionnairespnfl"
-    AssociationOtherEnd="cm.gov.minfof.model.entity.FkPermissionnairespnfl2Assoc1.Agrements"
-    Type="oracle.jbo.RowIterator"
-    IsUpdateable="false"/>
-  <AccessorAttribute
-    Name="Permissionnairespnfl1"
-    Association="cm.gov.minfof.model.entity.FkPermissionnairespnfl1Assoc1"
-    AssociationEnd="cm.gov.minfof.model.entity.FkPermissionnairespnfl1Assoc1.Permissionnairespnfl1"
-    AssociationOtherEnd="cm.gov.minfof.model.entity.FkPermissionnairespnfl1Assoc1.Agrements1"
-    Type="oracle.jbo.RowIterator"
-    IsUpdateable="false"/>
-  <AccessorAttribute
-    Name="Permissionnairespnfl2"
-    Association="cm.gov.minfof.model.entity.AgrementsIbfk1Assoc1"
-    AssociationEnd="cm.gov.minfof.model.entity.AgrementsIbfk1Assoc1.Permissionnairespnfl2"
-    AssociationOtherEnd="cm.gov.minfof.model.entity.AgrementsIbfk1Assoc1.Agrements2"
-    Type="oracle.jbo.server.EntityImpl"
-    IsUpdateable="true"/>
   <Key
     Name="Primary1"
     PrimaryKey="true">

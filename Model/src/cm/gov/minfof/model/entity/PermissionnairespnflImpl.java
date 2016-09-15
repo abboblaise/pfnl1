@@ -43,11 +43,9 @@ public class PermissionnairespnflImpl extends EntityImpl {
         Permissionnairespnfl,
         IddepartementsPermissionnairespnfl,
         Permissionnairespnfl1,
-        IdpaysPermissionnairespnfl,
-        Agrements,
-        Agrements1,
-        Agrements2;
+        IdpaysPermissionnairespnfl;
         private static AttributesEnum[] vals = null;
+        ;
         private static final int firstIndex = 0;
 
         protected int index() {
@@ -69,6 +67,8 @@ public class PermissionnairespnflImpl extends EntityImpl {
             return vals;
         }
     }
+
+
     public static final int NOMOURAISONSOCIALE = AttributesEnum.Nomouraisonsociale.index();
     public static final int STATUT = AttributesEnum.Statut.index();
     public static final int SIEGESOCIAL = AttributesEnum.Siegesocial.index();
@@ -93,15 +93,20 @@ public class PermissionnairespnflImpl extends EntityImpl {
         AttributesEnum.IddepartementsPermissionnairespnfl.index();
     public static final int PERMISSIONNAIRESPNFL1 = AttributesEnum.Permissionnairespnfl1.index();
     public static final int IDPAYSPERMISSIONNAIRESPNFL = AttributesEnum.IdpaysPermissionnairespnfl.index();
-    public static final int AGREMENTS = AttributesEnum.Agrements.index();
-    public static final int AGREMENTS1 = AttributesEnum.Agrements1.index();
-    public static final int AGREMENTS2 = AttributesEnum.Agrements2.index();
 
     /**
      * This is the default constructor (do not remove).
      */
     public PermissionnairespnflImpl() {
     }
+
+    /**
+     * @return the definition object for this instance class.
+     */
+    public static synchronized EntityDefImpl getDefinitionObject() {
+        return EntityDefImpl.findDefObject("cm.gov.minfof.model.entity.Permissionnairespnfl");
+    }
+
 
     /**
      * Gets the attribute value for Nomouraisonsociale, using the alias name Nomouraisonsociale.
@@ -449,40 +454,6 @@ public class PermissionnairespnflImpl extends EntityImpl {
         setAttributeInternal(IDPAYSPERMISSIONNAIRESPNFL, value);
     }
 
-    /**
-     * @return the associated entity oracle.jbo.server.EntityImpl.
-     */
-    public EntityImpl getAgrements() {
-        return (EntityImpl) getAttributeInternal(AGREMENTS);
-    }
-
-    /**
-     * Sets <code>value</code> as the associated entity oracle.jbo.server.EntityImpl.
-     */
-    public void setAgrements(EntityImpl value) {
-        setAttributeInternal(AGREMENTS, value);
-    }
-
-    /**
-     * @return the associated entity oracle.jbo.server.EntityImpl.
-     */
-    public EntityImpl getAgrements1() {
-        return (EntityImpl) getAttributeInternal(AGREMENTS1);
-    }
-
-    /**
-     * Sets <code>value</code> as the associated entity oracle.jbo.server.EntityImpl.
-     */
-    public void setAgrements1(EntityImpl value) {
-        setAttributeInternal(AGREMENTS1, value);
-    }
-
-    /**
-     * @return the associated entity oracle.jbo.RowIterator.
-     */
-    public RowIterator getAgrements2() {
-        return (RowIterator) getAttributeInternal(AGREMENTS2);
-    }
 
     /**
      * @param idpermissionnairespnfl key constituent
@@ -491,13 +462,6 @@ public class PermissionnairespnflImpl extends EntityImpl {
      */
     public static Key createPrimaryKey(BigDecimal idpermissionnairespnfl) {
         return new Key(new Object[] { idpermissionnairespnfl });
-    }
-
-    /**
-     * @return the definition object for this instance class.
-     */
-    public static synchronized EntityDefImpl getDefinitionObject() {
-        return EntityDefImpl.findDefObject("cm.gov.minfof.model.entity.Permissionnairespnfl");
     }
 
     /**

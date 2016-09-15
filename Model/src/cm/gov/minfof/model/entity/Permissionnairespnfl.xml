@@ -328,27 +328,6 @@
     AssociationOtherEnd="cm.gov.minfof.model.entity.FkPermissionnairespnfl1Assoc.Permissionnairespnfl1"
     Type="oracle.jbo.server.EntityImpl"
     IsUpdateable="true"/>
-  <AccessorAttribute
-    Name="Agrements"
-    Association="cm.gov.minfof.model.entity.FkPermissionnairespnfl2Assoc1"
-    AssociationEnd="cm.gov.minfof.model.entity.FkPermissionnairespnfl2Assoc1.Agrements"
-    AssociationOtherEnd="cm.gov.minfof.model.entity.FkPermissionnairespnfl2Assoc1.Permissionnairespnfl"
-    Type="oracle.jbo.server.EntityImpl"
-    IsUpdateable="true"/>
-  <AccessorAttribute
-    Name="Agrements1"
-    Association="cm.gov.minfof.model.entity.FkPermissionnairespnfl1Assoc1"
-    AssociationEnd="cm.gov.minfof.model.entity.FkPermissionnairespnfl1Assoc1.Agrements1"
-    AssociationOtherEnd="cm.gov.minfof.model.entity.FkPermissionnairespnfl1Assoc1.Permissionnairespnfl1"
-    Type="oracle.jbo.server.EntityImpl"
-    IsUpdateable="true"/>
-  <AccessorAttribute
-    Name="Agrements2"
-    Association="cm.gov.minfof.model.entity.AgrementsIbfk1Assoc1"
-    AssociationEnd="cm.gov.minfof.model.entity.AgrementsIbfk1Assoc1.Agrements2"
-    AssociationOtherEnd="cm.gov.minfof.model.entity.AgrementsIbfk1Assoc1.Permissionnairespnfl2"
-    Type="oracle.jbo.RowIterator"
-    IsUpdateable="false"/>
   <Key
     Name="Primary1"
     PrimaryKey="true">

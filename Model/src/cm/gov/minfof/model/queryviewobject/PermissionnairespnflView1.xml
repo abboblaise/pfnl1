@@ -56,7 +56,7 @@ FROM pfnl.PermissionnairesPNFL PfnlPermissionnairespnfl]]></SQLQuery>
     ColumnType="TINYINT"
     AliasName="statut"
     Expression="statut"
-    SQLType="TINYINT">
+    SQLType="INTEGER">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="3"/>
     </DesignTime>
@@ -204,7 +204,7 @@ FROM pfnl.PermissionnairesPNFL PfnlPermissionnairespnfl]]></SQLQuery>
     ColumnType="TINYINT"
     AliasName="Qualite"
     Expression="Qualite"
-    SQLType="TINYINT">
+    SQLType="INTEGER">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="3"/>
     </DesignTime>
@@ -248,7 +248,7 @@ FROM pfnl.PermissionnairesPNFL PfnlPermissionnairespnfl]]></SQLQuery>
     ColumnType="LONGTEXT"
     AliasName="Profession"
     Expression="Profession"
-    SQLType="STRUCT"/>
+    SQLType="$none$"/>
   <ViewAttribute
     Name="Typepersonne"
     IsUpdateable="false"
@@ -258,7 +258,7 @@ FROM pfnl.PermissionnairesPNFL PfnlPermissionnairespnfl]]></SQLQuery>
     ColumnType="TINYINT"
     AliasName="typepersonne"
     Expression="typepersonne"
-    SQLType="TINYINT">
+    SQLType="INTEGER">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="3"/>
     </DesignTime>
@@ -287,7 +287,7 @@ FROM pfnl.PermissionnairesPNFL PfnlPermissionnairespnfl]]></SQLQuery>
     ColumnType="TINYINT"
     AliasName="Sexe"
     Expression="Sexe"
-    SQLType="TINYINT">
+    SQLType="INTEGER">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="3"/>
     </DesignTime>
@@ -301,7 +301,7 @@ FROM pfnl.PermissionnairesPNFL PfnlPermissionnairespnfl]]></SQLQuery>
     ColumnType="TINYINT"
     AliasName="Qualiteexploitant"
     Expression="Qualiteexploitant"
-    SQLType="TINYINT">
+    SQLType="INTEGER">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="3"/>
     </DesignTime>
@@ -317,11 +317,6 @@ FROM pfnl.PermissionnairesPNFL PfnlPermissionnairespnfl]]></SQLQuery>
   <ViewLinkAccessor
     Name="IddepartementsPermissionnairespnflView1"
     ViewLink="cm.gov.minfof.model.queryviewobject.FkPermissionnairespnfl2Link"
-    Type="oracle.jbo.RowIterator"
-    IsUpdateable="false"/>
-  <ViewLinkAccessor
-    Name="AgrementsView1"
-    ViewLink="cm.gov.minfof.model.queryviewobject.AgrementsIbfk1Link"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
 </ViewObject>

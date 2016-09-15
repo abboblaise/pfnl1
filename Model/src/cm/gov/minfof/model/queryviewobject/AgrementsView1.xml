@@ -19,8 +19,7 @@
        PfnlAgrements.Volumeqte,
        PfnlAgrements.Volumecoupe,
        PfnlAgrements.NUMAGREEMENT,
-       PfnlAgrements.Descriptioncontenuagreements,
-       PfnlAgrements.IDPermissionnairesPNFL
+       PfnlAgrements.Descriptioncontenuagreements
 FROM pfnl.Agrements PfnlAgrements]]></SQLQuery>
   <ViewAttribute
     Name="Idagrements"
@@ -80,7 +79,7 @@ FROM pfnl.Agrements PfnlAgrements]]></SQLQuery>
     ColumnType="DECIMAL"
     AliasName="Volumeqte"
     Expression="Volumeqte"
-    SQLType="DECIMAL">
+    SQLType="NUMERIC">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="16"/>
     </DesignTime>
@@ -94,7 +93,7 @@ FROM pfnl.Agrements PfnlAgrements]]></SQLQuery>
     ColumnType="DECIMAL"
     AliasName="Volumecoupe"
     Expression="Volumecoupe"
-    SQLType="DECIMAL">
+    SQLType="NUMERIC">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="16"/>
     </DesignTime>
@@ -124,32 +123,8 @@ FROM pfnl.Agrements PfnlAgrements]]></SQLQuery>
     ColumnType="LONGTEXT"
     AliasName="Descriptioncontenuagreements"
     Expression="Descriptioncontenuagreements"
-    SQLType="STRUCT"/>
-  <ViewAttribute
-    Name="Idpermissionnairespnfl"
-    IsUpdateable="false"
-    IsPersistent="false"
-    PrecisionRule="true"
-    Type="java.math.BigDecimal"
-    ColumnType="BIGINT"
-    AliasName="IDPermissionnairesPNFL"
-    Expression="IDPermissionnairesPNFL"
-    SQLType="NUMERIC">
-    <DesignTime>
-      <Attr Name="_DisplaySize" Value="19"/>
-    </DesignTime>
-  </ViewAttribute>
+    SQLType="$none$"/>
   <AttrArray Name="KeyAttributes">
     <Item Value="Idagrements"/>
   </AttrArray>
-  <ViewLinkAccessor
-    Name="PermissionnairespnflView1"
-    ViewLink="cm.gov.minfof.model.queryviewobject.FkPermissionnairespnfl2Link1"
-    Type="oracle.jbo.RowIterator"
-    IsUpdateable="false"/>
-  <ViewLinkAccessor
-    Name="IdpermissionnairespnflAgrementsView1"
-    ViewLink="cm.gov.minfof.model.queryviewobject.AgrementsIbfk1Link1"
-    Type="oracle.jbo.RowIterator"
-    IsUpdateable="false"/>
 </ViewObject>
