@@ -242,6 +242,57 @@
   <ViewUsage
     Name="getLastIdPermissionnairePfnl1"
     ViewObjectName="cm.gov.minfof.model.entityviewobject.getLastIdPermissionnairePfnl"/>
+  <ViewUsage
+    Name="CategorieunitemesureView1"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.CategorieunitemesureView"/>
+  <ViewUsage
+    Name="CategorieunitemesureView1_1"
+    ViewObjectName="cm.gov.minfof.model.queryviewobject.CategorieunitemesureView1"/>
+  <ViewUsage
+    Name="getLastIdCategorieMesure1"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.getLastIdCategorieMesure"/>
+  <ViewUsage
+    Name="getLastIdCategorieUniteMesure1"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.getLastIdCategorieUniteMesure"/>
+  <ViewUsage
+    Name="UnitemesureView1"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.UnitemesureView"/>
+  <ViewUsage
+    Name="UnitemesureView1_1"
+    ViewObjectName="cm.gov.minfof.model.queryviewobject.UnitemesureView1"/>
+  <ViewUsage
+    Name="UnitemesureView2"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.UnitemesureView"/>
+  <ViewUsage
+    Name="UnitemesureView1_2"
+    ViewObjectName="cm.gov.minfof.model.queryviewobject.UnitemesureView1"/>
+  <ViewUsage
+    Name="CategorieunitemesureView2"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.CategorieunitemesureView"/>
+  <ViewUsage
+    Name="CategorieunitemesureView3"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.CategorieunitemesureView"/>
+  <ViewUsage
+    Name="CategorieunitemesureView4"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.CategorieunitemesureView"/>
+  <ViewUsage
+    Name="UnitemesureView3"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.UnitemesureView"/>
+  <ViewUsage
+    Name="CategorieunitemesureView5"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.CategorieunitemesureView"/>
+  <ViewUsage
+    Name="UnitemesureView4"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.UnitemesureView"/>
+  <ViewUsage
+    Name="CategorieunitemesureView6"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.CategorieunitemesureView"/>
+  <ViewUsage
+    Name="getLastIdUnitMesure1"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.gestLastIdUnitMesure"/>
+  <ViewUsage
+    Name="listOrdreGrandeur1"
+    ViewObjectName="cm.gov.minfof.model.entity.listOrdreGrandeur"/>
   <ViewLinkUsage
     Name="DepartementsIbfk1Link1"
     ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.DepartementsIbfk1Link"
@@ -470,8 +521,66 @@
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.ProduitsPfnlView4"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.PartiesProduitsPfnlView19"
     Reversed="false"/>
+  <ViewLinkUsage
+    Name="FkUnitemesure1Link1"
+    ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.FkUnitemesure1Link"
+    SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.UnitemesureView1"
+    DstViewUsageName="cm.gov.minfof.model.entity.AppModule.UnitemesureView2"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="FkUnitemesure1Link2"
+    ViewLinkObjectName="cm.gov.minfof.model.queryviewobject.FkUnitemesure1Link"
+    SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.UnitemesureView1_1"
+    DstViewUsageName="cm.gov.minfof.model.entity.AppModule.UnitemesureView1_2"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="CategToUnitLink"
+    ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.CategToUnitLink"
+    SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.CategorieunitemesureView4"
+    DstViewUsageName="cm.gov.minfof.model.entity.AppModule.UnitemesureView3"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="CategToUnitLink1"
+    ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.CategToUnitLink"
+    SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.UnitemesureView1"
+    DstViewUsageName="cm.gov.minfof.model.entity.AppModule.CategorieunitemesureView5"
+    Reversed="true"/>
+  <ViewLinkUsage
+    Name="CategToUnitLink2"
+    ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.CategToUnitLink"
+    SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.CategorieunitemesureView1"
+    DstViewUsageName="cm.gov.minfof.model.entity.AppModule.UnitemesureView4"
+    Reversed="false"/>
   <ClientInterface
     Name="__clientInterface">
+    <Method
+      Name="creerIdRegion"
+      MethodName="creerIdRegion">
+      <Return
+        Name="_return_type_"
+        Type="java.math.BigDecimal"/>
+    </Method>
+    <Method
+      Name="creerIdRegion"
+      MethodName="creerIdRegion">
+      <Return
+        Name="_return_type_"
+        Type="java.math.BigDecimal"/>
+    </Method>
+    <Method
+      Name="creerIdRegion"
+      MethodName="creerIdRegion">
+      <Return
+        Name="_return_type_"
+        Type="java.math.BigDecimal"/>
+    </Method>
+    <Method
+      Name="creerIdRegion"
+      MethodName="creerIdRegion">
+      <Return
+        Name="_return_type_"
+        Type="java.math.BigDecimal"/>
+    </Method>
     <Method
       Name="creerIdRegion"
       MethodName="creerIdRegion">

@@ -3,6 +3,9 @@ package cm.gov.minfof.model.entity;
 import cm.gov.minfof.model.entity.common.AppModule;
 import cm.gov.minfof.model.entityviewobject.RegionViewImpl;
 
+import cm.gov.minfof.model.entityviewobject.gestLastIdUnitMesureImpl;
+import cm.gov.minfof.model.entityviewobject.getLastIdCategorieMesureImpl;
+import cm.gov.minfof.model.entityviewobject.getLastIdCategorieUniteMesureImpl;
 import cm.gov.minfof.model.entityviewobject.getLastIdCommunesImpl;
 import cm.gov.minfof.model.entityviewobject.getLastIdDepartementsImpl;
 import cm.gov.minfof.model.entityviewobject.getLastIdFamillesImpl;
@@ -982,6 +985,184 @@ public class AppModuleImpl extends ApplicationModuleImpl implements AppModule {
      */
     public getLastIdPermissionnairePfnlImpl getgetLastIdPermissionnairePfnl1() {
         return (getLastIdPermissionnairePfnlImpl) findViewObject("getLastIdPermissionnairePfnl1");
+    }
+
+    /**
+     * Container's getter for CategorieunitemesureView1.
+     * @return CategorieunitemesureView1
+     */
+    public ViewObjectImpl getCategorieunitemesureView1() {
+        return (ViewObjectImpl) findViewObject("CategorieunitemesureView1");
+    }
+
+    /**
+     * Container's getter for CategorieunitemesureView1_1.
+     * @return CategorieunitemesureView1_1
+     */
+    public ViewObjectImpl getCategorieunitemesureView1_1() {
+        return (ViewObjectImpl) findViewObject("CategorieunitemesureView1_1");
+    }
+
+    /**
+     * Container's getter for getLastIdCategorieMesure1.
+     * @return getLastIdCategorieMesure1
+     */
+    public getLastIdCategorieMesureImpl getgetLastIdCategorieMesure1() {
+        return (getLastIdCategorieMesureImpl) findViewObject("getLastIdCategorieMesure1");
+    }
+
+    /**
+     * Container's getter for getLastIdCategorieUniteMesure1.
+     * @return getLastIdCategorieUniteMesure1
+     */
+    public getLastIdCategorieUniteMesureImpl getgetLastIdCategorieUniteMesure1() {
+        return (getLastIdCategorieUniteMesureImpl) findViewObject("getLastIdCategorieUniteMesure1");
+    }
+
+    /**
+     * Container's getter for UnitemesureView1.
+     * @return UnitemesureView1
+     */
+    public ViewObjectImpl getUnitemesureView1() {
+        return (ViewObjectImpl) findViewObject("UnitemesureView1");
+    }
+
+    /**
+     * Container's getter for UnitemesureView1_1.
+     * @return UnitemesureView1_1
+     */
+    public ViewObjectImpl getUnitemesureView1_1() {
+        return (ViewObjectImpl) findViewObject("UnitemesureView1_1");
+    }
+
+    /**
+     * Container's getter for UnitemesureView2.
+     * @return UnitemesureView2
+     */
+    public ViewObjectImpl getUnitemesureView2() {
+        return (ViewObjectImpl) findViewObject("UnitemesureView2");
+    }
+
+    /**
+     * Container's getter for UnitemesureView1_2.
+     * @return UnitemesureView1_2
+     */
+    public ViewObjectImpl getUnitemesureView1_2() {
+        return (ViewObjectImpl) findViewObject("UnitemesureView1_2");
+    }
+
+    /**
+     * Container's getter for FkUnitemesure1Link1.
+     * @return FkUnitemesure1Link1
+     */
+    public ViewLinkImpl getFkUnitemesure1Link1() {
+        return (ViewLinkImpl) findViewLink("FkUnitemesure1Link1");
+    }
+
+    /**
+     * Container's getter for FkUnitemesure1Link2.
+     * @return FkUnitemesure1Link2
+     */
+    public ViewLinkImpl getFkUnitemesure1Link2() {
+        return (ViewLinkImpl) findViewLink("FkUnitemesure1Link2");
+    }
+
+    /**
+     * Container's getter for CategorieunitemesureView2.
+     * @return CategorieunitemesureView2
+     */
+    public ViewObjectImpl getCategorieunitemesureView2() {
+        return (ViewObjectImpl) findViewObject("CategorieunitemesureView2");
+    }
+
+
+    /**
+     * Container's getter for CategorieunitemesureView3.
+     * @return CategorieunitemesureView3
+     */
+    public ViewObjectImpl getCategorieunitemesureView3() {
+        return (ViewObjectImpl) findViewObject("CategorieunitemesureView3");
+    }
+
+
+    /**
+     * Container's getter for CategorieunitemesureView4.
+     * @return CategorieunitemesureView4
+     */
+    public ViewObjectImpl getCategorieunitemesureView4() {
+        return (ViewObjectImpl) findViewObject("CategorieunitemesureView4");
+    }
+
+    /**
+     * Container's getter for UnitemesureView3.
+     * @return UnitemesureView3
+     */
+    public ViewObjectImpl getUnitemesureView3() {
+        return (ViewObjectImpl) findViewObject("UnitemesureView3");
+    }
+
+    /**
+     * Container's getter for CategToUnitLink.
+     * @return CategToUnitLink
+     */
+    public ViewLinkImpl getCategToUnitLink() {
+        return (ViewLinkImpl) findViewLink("CategToUnitLink");
+    }
+
+    /**
+     * Container's getter for CategorieunitemesureView5.
+     * @return CategorieunitemesureView5
+     */
+    public ViewObjectImpl getCategorieunitemesureView5() {
+        return (ViewObjectImpl) findViewObject("CategorieunitemesureView5");
+    }
+
+    /**
+     * Container's getter for CategToUnitLink1.
+     * @return CategToUnitLink1
+     */
+    public ViewLinkImpl getCategToUnitLink1() {
+        return (ViewLinkImpl) findViewLink("CategToUnitLink1");
+    }
+
+    /**
+     * Container's getter for UnitemesureView4.
+     * @return UnitemesureView4
+     */
+    public ViewObjectImpl getUnitemesureView4() {
+        return (ViewObjectImpl) findViewObject("UnitemesureView4");
+    }
+
+    /**
+     * Container's getter for CategToUnitLink2.
+     * @return CategToUnitLink2
+     */
+    public ViewLinkImpl getCategToUnitLink2() {
+        return (ViewLinkImpl) findViewLink("CategToUnitLink2");
+    }
+
+    /**
+     * Container's getter for CategorieunitemesureView6.
+     * @return CategorieunitemesureView6
+     */
+    public ViewObjectImpl getCategorieunitemesureView6() {
+        return (ViewObjectImpl) findViewObject("CategorieunitemesureView6");
+    }
+
+    /**
+     * Container's getter for gestLastIdUnitMesure1.
+     * @return gestLastIdUnitMesure1
+     */
+    public gestLastIdUnitMesureImpl getgetLastIdUnitMesure1() {
+        return (gestLastIdUnitMesureImpl) findViewObject("getLastIdUnitMesure1");
+    }
+
+    /**
+     * Container's getter for listOrdreGrandeur1.
+     * @return listOrdreGrandeur1
+     */
+    public listOrdreGrandeurImpl getlistOrdreGrandeur1() {
+        return (listOrdreGrandeurImpl) findViewObject("listOrdreGrandeur1");
     }
 }
 

@@ -1,0 +1,167 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+        xmlns:c="http://java.sun.com/jsp/jstl/core">
+    <c:set var="viewcontrollerBundle" value="#{adfBundle['cm.gov.minfof.view.ViewControllerBundle']}"/>
+    <af:document title="page_unitemesure.jsf" id="d1">
+        <af:messages id="m1"/>
+        <af:form id="f1">
+            <af:pageTemplate viewId="/TemplateGlobal.jsf" id="pt1">
+                <f:facet name="content">
+                    <af:panelBox text="#{viewcontrollerBundle.EDITION_DES_UNIT_U00E9S_DE_MESURE}" id="pb1">
+                        <f:facet name="toolbar"/>
+                        <af:panelFormLayout id="pfl1" rows="4">
+                            <af:inputText value="#{bindings.Idunitemesure.inputValue}"
+                                          label="#{bindings.Idunitemesure.hints.label}"
+                                          required="#{bindings.Idunitemesure.hints.mandatory}"
+                                          columns="#{bindings.Idunitemesure.hints.displayWidth}"
+                                          maximumLength="#{bindings.Idunitemesure.hints.precision}"
+                                          shortDesc="#{bindings.Idunitemesure.hints.tooltip}" id="it1" visible="false">
+                                <f:validator binding="#{bindings.Idunitemesure.validator}"/>
+                                <af:convertNumber groupingUsed="false" pattern="#{bindings.Idunitemesure.format}"/>
+                            </af:inputText>
+                            <af:inputText value="#{bindings.Libelleunitemesure.inputValue}"
+                                          label="#{bindings.Libelleunitemesure.hints.label}"
+                                          required="#{bindings.Libelleunitemesure.hints.mandatory}"
+                                          columns="#{bindings.Libelleunitemesure.hints.displayWidth}"
+                                          maximumLength="#{bindings.Libelleunitemesure.hints.precision}"
+                                          shortDesc="#{bindings.Libelleunitemesure.hints.tooltip}" id="it2">
+                                <f:validator binding="#{bindings.Libelleunitemesure.validator}"/>
+                            </af:inputText>
+                            <af:selectOneChoice value="#{bindings.Idcategorie.inputValue}"
+                                                label="#{bindings.Idcategorie.label}"
+                                                required="#{bindings.Idcategorie.hints.mandatory}"
+                                                shortDesc="#{bindings.Idcategorie.hints.tooltip}" id="soc1">
+                                <f:selectItems value="#{bindings.Idcategorie.items}" id="si1"/>
+                                <f:validator binding="#{bindings.Idcategorie.validator}"/>
+                            </af:selectOneChoice>
+                            <af:selectOneChoice value="#{bindings.Ordregrandeur.inputValue}"
+                                                label="#{bindings.Ordregrandeur.label}"
+                                                required="#{bindings.Ordregrandeur.hints.mandatory}"
+                                                shortDesc="#{bindings.Ordregrandeur.hints.tooltip}" id="soc3">
+                                <f:selectItems value="#{bindings.Ordregrandeur.items}" id="si3"/>
+                                <f:validator binding="#{bindings.Ordregrandeur.validator}"/>
+                            </af:selectOneChoice>
+                            <af:inputText value="#{bindings.Ratio.inputValue}" label="#{bindings.Ratio.hints.label}"
+                                          required="#{bindings.Ratio.hints.mandatory}"
+                                          columns="#{bindings.Ratio.hints.displayWidth}"
+                                          maximumLength="#{bindings.Ratio.hints.precision}"
+                                          shortDesc="#{bindings.Ratio.hints.tooltip}" id="it4">
+                                <f:validator binding="#{bindings.Ratio.validator}"/>
+                                <af:convertNumber groupingUsed="false" pattern="#{bindings.Ratio.format}"/>
+                            </af:inputText>
+                            <af:inputText value="#{bindings.Arrondi.inputValue}" label="#{bindings.Arrondi.hints.label}"
+                                          required="#{bindings.Arrondi.hints.mandatory}"
+                                          columns="#{bindings.Arrondi.hints.displayWidth}"
+                                          maximumLength="#{bindings.Arrondi.hints.precision}"
+                                          shortDesc="#{bindings.Arrondi.hints.tooltip}" id="it5">
+                                <f:validator binding="#{bindings.Arrondi.validator}"/>
+                                <af:convertNumber groupingUsed="false" pattern="#{bindings.Arrondi.format}"/>
+                            </af:inputText>
+                            <af:selectBooleanCheckbox value="#{bindings.Actif.inputValue}"
+                                                      label="#{bindings.Actif.label}"
+                                                      shortDesc="#{bindings.Actif.hints.tooltip}" id="sbc1"/>
+                        </af:panelFormLayout>
+                        <af:panelGroupLayout id="pgl1">
+                            <af:button text="#{viewcontrollerBundle.NOUVEAU}" id="b1"
+                                       actionListener="#{bindings.CreateInsert.execute}"
+                                       disabled="#{!bindings.CreateInsert.enabled}"/>
+                            <af:spacer width="10" height="10" id="s1"/>
+                            <af:button text="#{viewcontrollerBundle.ENREGISTRER}" id="b2"
+                                       actionListener="#{bindings.Commit.execute}"/>
+                            <af:spacer width="10" height="10" id="s2"/>
+                            <af:button text="#{viewcontrollerBundle.SUPPRIMER}" id="b3"
+                                       actionListener="#{bindings.Delete.execute}"
+                                       disabled="#{!bindings.Delete.enabled}"/>
+                            <af:spacer width="10" height="10" id="s4"/>
+                        </af:panelGroupLayout>
+                    </af:panelBox>
+                    <af:panelBox text="#{viewcontrollerBundle.LISTE_DES_UNIT_U00E9S_DE_MESURE}" id="pb2">
+                        <f:facet name="toolbar"/>
+                        <af:panelCollection id="pc1" inlineStyle="width:551px;">
+                            <f:facet name="menus"/>
+                            <f:facet name="toolbar"/>
+                            <f:facet name="statusbar"/>
+                            <af:table value="#{bindings.UnitemesureView1.collectionModel}" var="row"
+                                      rows="#{bindings.UnitemesureView1.rangeSize}"
+                                      emptyText="#{bindings.UnitemesureView1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                      rowBandingInterval="0"
+                                      selectedRowKeys="#{bindings.UnitemesureView1.collectionModel.selectedRow}"
+                                      selectionListener="#{bindings.UnitemesureView1.collectionModel.makeCurrent}"
+                                      rowSelection="single" fetchSize="#{bindings.UnitemesureView1.rangeSize}"
+                                      filterModel="#{bindings.UnitemesureView1Query.queryDescriptor}"
+                                      filterVisible="true"
+                                      queryListener="#{bindings.UnitemesureView1Query.processQuery}" varStatus="vs"
+                                      id="t1" partialTriggers=":::b1 :::b3 :::b2">
+                                <af:column sortProperty="#{bindings.UnitemesureView1.hints.Idunitemesure.name}"
+                                           filterable="true" sortable="true"
+                                           headerText="#{bindings.UnitemesureView1.hints.Idunitemesure.label}" id="c1"
+                                           visible="false">
+                                    <af:outputText value="#{row.Idunitemesure}"
+                                                   shortDesc="#{bindings.UnitemesureView1.hints.Idunitemesure.tooltip}"
+                                                   id="ot1">
+                                        <af:convertNumber groupingUsed="false"
+                                                          pattern="#{bindings.UnitemesureView1.hints.Idunitemesure.format}"/>
+                                    </af:outputText>
+                                </af:column>
+                                <af:column sortProperty="#{bindings.UnitemesureView1.hints.Libelleunitemesure.name}"
+                                           filterable="true" sortable="true"
+                                           headerText="#{bindings.UnitemesureView1.hints.Libelleunitemesure.label}"
+                                           id="c2">
+                                    <af:outputText value="#{row.Libelleunitemesure}"
+                                                   shortDesc="#{bindings.UnitemesureView1.hints.Libelleunitemesure.tooltip}"
+                                                   id="ot2"/>
+                                </af:column>
+                                <af:column sortProperty="#{bindings.UnitemesureView1.hints.Idcategorie.name}"
+                                           filterable="true" sortable="true"
+                                           headerText="#{bindings.UnitemesureView1.hints.Idcategorie.label}" id="c3">
+                                    <af:selectOneChoice value="#{row.bindings.Idcategorie.inputValue}"
+                                                        label="#{row.bindings.Idcategorie.label}"
+                                                        required="#{bindings.UnitemesureView1.hints.Idcategorie.mandatory}"
+                                                        shortDesc="#{bindings.UnitemesureView1.hints.Idcategorie.tooltip}"
+                                                        readOnly="true" id="soc2">
+                                        <f:selectItems value="#{row.bindings.Idcategorie.items}" id="si2"/>
+                                        <f:validator binding="#{row.bindings.Idcategorie.validator}"/>
+                                    </af:selectOneChoice>
+                                </af:column>
+                                <af:column sortProperty="#{bindings.UnitemesureView1.hints.Ordregrandeur.name}"
+                                           filterable="true" sortable="true"
+                                           headerText="#{bindings.UnitemesureView1.hints.Ordregrandeur.label}" id="c4">
+                                    <af:outputText value="#{row.Ordregrandeur}"
+                                                   shortDesc="#{bindings.UnitemesureView1.hints.Ordregrandeur.tooltip}"
+                                                   id="ot3"/>
+                                </af:column>
+                                <af:column sortProperty="#{bindings.UnitemesureView1.hints.Ratio.name}"
+                                           filterable="true" sortable="true"
+                                           headerText="#{bindings.UnitemesureView1.hints.Ratio.label}" id="c5">
+                                    <af:outputText value="#{row.Ratio}"
+                                                   shortDesc="#{bindings.UnitemesureView1.hints.Ratio.tooltip}"
+                                                   id="ot4">
+                                        <af:convertNumber groupingUsed="false"
+                                                          pattern="#{bindings.UnitemesureView1.hints.Ratio.format}"/>
+                                    </af:outputText>
+                                </af:column>
+                                <af:column headerText="#{bindings.UnitemesureView1.hints.Actif.label}" id="c7">
+                                    <af:selectBooleanCheckbox value="#{row.bindings.Actif.inputValue}"
+                                                              label="#{row.bindings.Actif.label}"
+                                                              shortDesc="#{bindings.UnitemesureView1.hints.Actif.tooltip}"
+                                                              id="sbc2"/>
+                                </af:column>
+                                <af:column sortProperty="#{bindings.UnitemesureView1.hints.Arrondi.name}"
+                                           filterable="true" sortable="true"
+                                           headerText="#{bindings.UnitemesureView1.hints.Arrondi.label}" id="c6">
+                                    <af:outputText value="#{row.Arrondi}"
+                                                   shortDesc="#{bindings.UnitemesureView1.hints.Arrondi.tooltip}"
+                                                   id="ot5">
+                                        <af:convertNumber groupingUsed="false"
+                                                          pattern="#{bindings.UnitemesureView1.hints.Arrondi.format}"/>
+                                    </af:outputText>
+                                </af:column>
+                            </af:table>
+                        </af:panelCollection>
+                    </af:panelBox>
+                </f:facet>
+            </af:pageTemplate>
+        </af:form>
+    </af:document>
+</f:view>
