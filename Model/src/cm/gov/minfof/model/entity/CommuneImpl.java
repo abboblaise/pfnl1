@@ -30,6 +30,7 @@ public class CommuneImpl extends EntityImpl {
         Region,
         Departement1;
         private static AttributesEnum[] vals = null;
+        ;
         private static final int firstIndex = 0;
 
         protected int index() {
@@ -51,6 +52,8 @@ public class CommuneImpl extends EntityImpl {
             return vals;
         }
     }
+
+
     public static final int IDCOMMUNES = AttributesEnum.Idcommunes.index();
     public static final int NOMCOMMUNE = AttributesEnum.Nomcommune.index();
     public static final int IDDEPARTEMENTS = AttributesEnum.Iddepartements.index();
@@ -65,6 +68,14 @@ public class CommuneImpl extends EntityImpl {
      */
     public CommuneImpl() {
     }
+
+    /**
+     * @return the definition object for this instance class.
+     */
+    public static synchronized EntityDefImpl getDefinitionObject() {
+        return EntityDefImpl.findDefObject("cm.gov.minfof.model.entity.Commune");
+    }
+
 
     /**
      * Gets the attribute value for Idcommunes, using the alias name Idcommunes.
@@ -170,6 +181,7 @@ public class CommuneImpl extends EntityImpl {
         setAttributeInternal(DEPARTEMENT1, value);
     }
 
+
     /**
      * @param idcommunes key constituent
 
@@ -177,13 +189,6 @@ public class CommuneImpl extends EntityImpl {
      */
     public static Key createPrimaryKey(BigDecimal idcommunes) {
         return new Key(new Object[] { idcommunes });
-    }
-
-    /**
-     * @return the definition object for this instance class.
-     */
-    public static synchronized EntityDefImpl getDefinitionObject() {
-        return EntityDefImpl.findDefObject("cm.gov.minfof.model.entity.Commune");
     }
 
     /**

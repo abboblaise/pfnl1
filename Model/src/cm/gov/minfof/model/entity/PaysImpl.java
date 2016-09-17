@@ -5,6 +5,7 @@ import java.math.BigDecimal;
 import oracle.jbo.AttributeList;
 import oracle.jbo.Key;
 import oracle.jbo.Row;
+import oracle.jbo.RowIterator;
 import oracle.jbo.ViewObject;
 import oracle.jbo.server.EntityDefImpl;
 import oracle.jbo.server.EntityImpl;
@@ -23,6 +24,7 @@ public class PaysImpl extends EntityImpl {
         Idpays,
         Nompays;
         private static AttributesEnum[] vals = null;
+        ;
         private static final int firstIndex = 0;
 
         protected int index() {
@@ -44,6 +46,8 @@ public class PaysImpl extends EntityImpl {
             return vals;
         }
     }
+
+
     public static final int IDPAYS = AttributesEnum.Idpays.index();
     public static final int NOMPAYS = AttributesEnum.Nompays.index();
 
@@ -52,6 +56,14 @@ public class PaysImpl extends EntityImpl {
      */
     public PaysImpl() {
     }
+
+    /**
+     * @return the definition object for this instance class.
+     */
+    public static synchronized EntityDefImpl getDefinitionObject() {
+        return EntityDefImpl.findDefObject("cm.gov.minfof.model.entity.Pays");
+    }
+
 
     /**
      * Gets the attribute value for Idpays, using the alias name Idpays.
@@ -85,6 +97,7 @@ public class PaysImpl extends EntityImpl {
         setAttributeInternal(NOMPAYS, value);
     }
 
+
     /**
      * @param idpays key constituent
 
@@ -92,13 +105,6 @@ public class PaysImpl extends EntityImpl {
      */
     public static Key createPrimaryKey(BigDecimal idpays) {
         return new Key(new Object[] { idpays });
-    }
-
-    /**
-     * @return the definition object for this instance class.
-     */
-    public static synchronized EntityDefImpl getDefinitionObject() {
-        return EntityDefImpl.findDefObject("cm.gov.minfof.model.entity.Pays");
     }
 
     /**

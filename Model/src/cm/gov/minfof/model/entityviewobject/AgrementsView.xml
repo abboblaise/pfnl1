@@ -24,12 +24,6 @@
     EntityUsage="Agrements"
     AliasName="IDAgrements"/>
   <ViewAttribute
-    Name="Idacteurspnfl"
-    PrecisionRule="true"
-    EntityAttrName="Idacteurspnfl"
-    EntityUsage="Agrements"
-    AliasName="IDActeursPNFL"/>
-  <ViewAttribute
     Name="Datedebut"
     PrecisionRule="true"
     EntityAttrName="Datedebut"
@@ -42,18 +36,6 @@
     EntityUsage="Agrements"
     AliasName="DATEFIN"/>
   <ViewAttribute
-    Name="Volumeqte"
-    PrecisionRule="true"
-    EntityAttrName="Volumeqte"
-    EntityUsage="Agrements"
-    AliasName="Volumeqte"/>
-  <ViewAttribute
-    Name="Volumecoupe"
-    PrecisionRule="true"
-    EntityAttrName="Volumecoupe"
-    EntityUsage="Agrements"
-    AliasName="Volumecoupe"/>
-  <ViewAttribute
     Name="Numagreement"
     PrecisionRule="true"
     EntityAttrName="Numagreement"
@@ -65,4 +47,10 @@
     EntityAttrName="Descriptioncontenuagreements"
     EntityUsage="Agrements"
     AliasName="Descriptioncontenuagreements"/>
+  <ViewAttribute
+    Name="Nomdetenteur"
+    PrecisionRule="true"
+    EntityAttrName="Nomdetenteur"
+    EntityUsage="Agrements"
+    AliasName="nomdetenteur"/>
 </ViewObject>

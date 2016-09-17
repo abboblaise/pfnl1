@@ -16,6 +16,8 @@
     <page path="/templateDef1.jsf" usageId="cm_gov_minfof_view_templateDef1PageDef"/>
     <page path="/page_categorie_unitemesure.jsf" usageId="cm_gov_minfof_view_page_categorie_unitemesurePageDef"/>
     <page path="/page_unitemesure.jsf" usageId="cm_gov_minfof_view_page_unitemesurePageDef"/>
+    <page path="/Page_Permis.jsf" usageId="cm_gov_minfof_view_Page_PermisPageDef"/>
+    <page path="/Page_Agrement.jsf" usageId="cm_gov_minfof_view_Page_AgrementPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="cm_gov_minfof_view_page_regionPageDef" path="cm.gov.minfof.view.pageDefs.page_regionPageDef"/>
@@ -36,6 +38,9 @@
     <page id="cm_gov_minfof_view_page_categorie_unitemesurePageDef"
           path="cm.gov.minfof.view.pageDefs.page_categorie_unitemesurePageDef"/>
     <page id="cm_gov_minfof_view_page_unitemesurePageDef" path="cm.gov.minfof.view.pageDefs.page_unitemesurePageDef"/>
+    <page id="cm_gov_minfof_view_Page_agrementPageDef" path="cm.gov.minfof.view.pageDefs.Page_agrementPageDef"/>
+    <page id="cm_gov_minfof_view_Page_PermisPageDef" path="cm.gov.minfof.view.pageDefs.Page_PermisPageDef"/>
+    <page id="cm_gov_minfof_view_Page_AgrementPageDef" path="cm.gov.minfof.view.pageDefs.Page_AgrementPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="cm.gov.minfof.model.entity"

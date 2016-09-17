@@ -27,6 +27,7 @@ public class PartiesRecolteesImpl extends EntityImpl {
         PartiesProduitsPfnl1,
         ProduitsPfnl;
         private static AttributesEnum[] vals = null;
+        ;
         private static final int firstIndex = 0;
 
         protected int index() {
@@ -48,6 +49,8 @@ public class PartiesRecolteesImpl extends EntityImpl {
             return vals;
         }
     }
+
+
     public static final int IDPARTIESRECOLTEES = AttributesEnum.Idpartiesrecoltees.index();
     public static final int NOMPARTIERECOLTEE = AttributesEnum.Nompartierecoltee.index();
     public static final int PARTIESPRODUITSPFNL = AttributesEnum.PartiesProduitsPfnl.index();
@@ -59,6 +62,14 @@ public class PartiesRecolteesImpl extends EntityImpl {
      */
     public PartiesRecolteesImpl() {
     }
+
+    /**
+     * @return the definition object for this instance class.
+     */
+    public static synchronized EntityDefImpl getDefinitionObject() {
+        return EntityDefImpl.findDefObject("cm.gov.minfof.model.entity.PartiesRecoltees");
+    }
+
 
     /**
      * Gets the attribute value for Idpartiesrecoltees, using the alias name Idpartiesrecoltees.
@@ -113,6 +124,7 @@ public class PartiesRecolteesImpl extends EntityImpl {
         return (RowIterator) getAttributeInternal(PRODUITSPFNL);
     }
 
+
     /**
      * @param idpartiesrecoltees key constituent
 
@@ -120,13 +132,6 @@ public class PartiesRecolteesImpl extends EntityImpl {
      */
     public static Key createPrimaryKey(BigDecimal idpartiesrecoltees) {
         return new Key(new Object[] { idpartiesrecoltees });
-    }
-
-    /**
-     * @return the definition object for this instance class.
-     */
-    public static synchronized EntityDefImpl getDefinitionObject() {
-        return EntityDefImpl.findDefObject("cm.gov.minfof.model.entity.PartiesRecoltees");
     }
 
     /**

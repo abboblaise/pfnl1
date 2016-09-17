@@ -9,7 +9,12 @@
   DBObjectType="table"
   DBObjectName="Agrements"
   AliasName="Agrements"
-  BindingStyle="JDBC">
+  BindingStyle="JDBC"
+  RowClass="cm.gov.minfof.model.entity.AgrementsImpl">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Init|Delete|Access|DML"/>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
   <Attribute
     Name="Idagrements"
     ColumnName="IDAgrements"
@@ -18,17 +23,6 @@
     ColumnType="BIGINT"
     TableName="Agrements"
     PrimaryKey="true">
-    <DesignTime>
-      <Attr Name="_DisplaySize" Value="19"/>
-    </DesignTime>
-  </Attribute>
-  <Attribute
-    Name="Idacteurspnfl"
-    ColumnName="IDActeursPNFL"
-    SQLType="NUMERIC"
-    Type="java.math.BigDecimal"
-    ColumnType="BIGINT"
-    TableName="Agrements">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="19"/>
     </DesignTime>
@@ -48,28 +42,6 @@
     ColumnType="DATE"
     TableName="Agrements"/>
   <Attribute
-    Name="Volumeqte"
-    ColumnName="Volumeqte"
-    SQLType="DECIMAL"
-    Type="java.math.BigDecimal"
-    ColumnType="DECIMAL"
-    TableName="Agrements">
-    <DesignTime>
-      <Attr Name="_DisplaySize" Value="16"/>
-    </DesignTime>
-  </Attribute>
-  <Attribute
-    Name="Volumecoupe"
-    ColumnName="Volumecoupe"
-    SQLType="DECIMAL"
-    Type="java.math.BigDecimal"
-    ColumnType="DECIMAL"
-    TableName="Agrements">
-    <DesignTime>
-      <Attr Name="_DisplaySize" Value="16"/>
-    </DesignTime>
-  </Attribute>
-  <Attribute
     Name="Numagreement"
     Precision="50"
     ColumnName="NUMAGREEMENT"
@@ -88,6 +60,18 @@
     Type="java.lang.String"
     ColumnType="LONGTEXT"
     TableName="Agrements"/>
+  <Attribute
+    Name="Nomdetenteur"
+    Precision="50"
+    ColumnName="nomdetenteur"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR"
+    TableName="Agrements">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="50"/>
+    </DesignTime>
+  </Attribute>
   <Key
     Name="Primary1"
     PrimaryKey="true">
@@ -105,8 +89,6 @@
       <Attr Name="_isForeign" Value="true"/>
       <Attr Name="_DBObjectName" Value="Agrements_ibfk_1"/>
     </DesignTime>
-    <AttrArray Name="Attributes">
-      <Item Value="cm.gov.minfof.model.entity.Agrements.Idpermissionnairespnfl"/>
-    </AttrArray>
+    <AttrArray Name="Attributes"/>
   </Key>
 </Entity>
