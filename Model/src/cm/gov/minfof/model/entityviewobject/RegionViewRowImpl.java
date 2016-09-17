@@ -1,5 +1,6 @@
 package cm.gov.minfof.model.entityviewobject;
 
+import cm.gov.minfof.model.entity.RegionImpl;
 import cm.gov.minfof.model.entityviewobject.common.RegionViewRow;
 
 import java.math.BigDecimal;
@@ -14,6 +15,7 @@ import oracle.jbo.server.ViewRowImpl;
 // ---    Warning: Do not modify method signatures of generated methods.
 // ---------------------------------------------------------------------
 public class RegionViewRowImpl extends ViewRowImpl implements RegionViewRow {
+
 
     public static final int ENTITY_REGION = 0;
 
@@ -52,6 +54,7 @@ public class RegionViewRowImpl extends ViewRowImpl implements RegionViewRow {
         }
     }
 
+
     public static final int IDREGIONS = AttributesEnum.Idregions.index();
     public static final int NOMREGION = AttributesEnum.Nomregion.index();
     public static final int CODEREGION = AttributesEnum.Coderegion.index();
@@ -70,8 +73,8 @@ public class RegionViewRowImpl extends ViewRowImpl implements RegionViewRow {
      * Gets Region entity object.
      * @return the Region
      */
-    public EntityImpl getRegion() {
-        return (EntityImpl) getEntity(ENTITY_REGION);
+    public RegionImpl getRegion() {
+        return (RegionImpl) getEntity(ENTITY_REGION);
     }
 
     /**
@@ -167,5 +170,7 @@ public class RegionViewRowImpl extends ViewRowImpl implements RegionViewRow {
     public RowIterator getCommuneView() {
         return (RowIterator) getAttributeInternal(COMMUNEVIEW);
     }
+
+
 }
 

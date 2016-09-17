@@ -5,6 +5,7 @@ import java.math.BigDecimal;
 import oracle.jbo.AttributeList;
 import oracle.jbo.Key;
 import oracle.jbo.Row;
+import oracle.jbo.RowIterator;
 import oracle.jbo.ViewObject;
 import oracle.jbo.server.EntityDefImpl;
 import oracle.jbo.server.EntityImpl;
@@ -24,6 +25,7 @@ public class OriginespnflsImpl extends EntityImpl {
         Nomsource,
         Originepnfl;
         private static AttributesEnum[] vals = null;
+        ;
         private static final int firstIndex = 0;
 
         protected int index() {
@@ -45,6 +47,8 @@ public class OriginespnflsImpl extends EntityImpl {
             return vals;
         }
     }
+
+
     public static final int IDORIGINESPNFLS = AttributesEnum.Idoriginespnfls.index();
     public static final int NOMSOURCE = AttributesEnum.Nomsource.index();
     public static final int ORIGINEPNFL = AttributesEnum.Originepnfl.index();
@@ -54,6 +58,14 @@ public class OriginespnflsImpl extends EntityImpl {
      */
     public OriginespnflsImpl() {
     }
+
+    /**
+     * @return the definition object for this instance class.
+     */
+    public static synchronized EntityDefImpl getDefinitionObject() {
+        return EntityDefImpl.findDefObject("cm.gov.minfof.model.entity.Originespnfls");
+    }
+
 
     /**
      * Gets the attribute value for Idoriginespnfls, using the alias name Idoriginespnfls.
@@ -103,6 +115,7 @@ public class OriginespnflsImpl extends EntityImpl {
         setAttributeInternal(ORIGINEPNFL, value);
     }
 
+
     /**
      * @param idoriginespnfls key constituent
 
@@ -110,13 +123,6 @@ public class OriginespnflsImpl extends EntityImpl {
      */
     public static Key createPrimaryKey(BigDecimal idoriginespnfls) {
         return new Key(new Object[] { idoriginespnfls });
-    }
-
-    /**
-     * @return the definition object for this instance class.
-     */
-    public static synchronized EntityDefImpl getDefinitionObject() {
-        return EntityDefImpl.findDefObject("cm.gov.minfof.model.entity.Originespnfls");
     }
 
     /**

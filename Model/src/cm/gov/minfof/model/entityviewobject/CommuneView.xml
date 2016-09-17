@@ -22,7 +22,8 @@
     PrecisionRule="true"
     EntityAttrName="Idcommunes"
     EntityUsage="Commune"
-    AliasName="idcommunes"/>
+    AliasName="idcommunes"
+    IsUpdateable="while_insert"/>
   <ViewAttribute
     Name="Nomcommune"
     IsUnique="true"

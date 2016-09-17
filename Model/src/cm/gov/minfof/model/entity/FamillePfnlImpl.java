@@ -27,6 +27,7 @@ public class FamillePfnlImpl extends EntityImpl {
         PartiesProduitsPfnl1,
         ProduitsPfnl;
         private static AttributesEnum[] vals = null;
+        ;
         private static final int firstIndex = 0;
 
         protected int index() {
@@ -48,6 +49,8 @@ public class FamillePfnlImpl extends EntityImpl {
             return vals;
         }
     }
+
+
     public static final int IDFAMILLEPFNL = AttributesEnum.Idfamillepfnl.index();
     public static final int NOMFAMILLE = AttributesEnum.Nomfamille.index();
     public static final int PARTIESPRODUITSPFNL = AttributesEnum.PartiesProduitsPfnl.index();
@@ -59,6 +62,14 @@ public class FamillePfnlImpl extends EntityImpl {
      */
     public FamillePfnlImpl() {
     }
+
+    /**
+     * @return the definition object for this instance class.
+     */
+    public static synchronized EntityDefImpl getDefinitionObject() {
+        return EntityDefImpl.findDefObject("cm.gov.minfof.model.entity.FamillePfnl");
+    }
+
 
     /**
      * Gets the attribute value for Idfamillepfnl, using the alias name Idfamillepfnl.
@@ -113,6 +124,7 @@ public class FamillePfnlImpl extends EntityImpl {
         return (RowIterator) getAttributeInternal(PRODUITSPFNL);
     }
 
+
     /**
      * @param idfamillepfnl key constituent
 
@@ -120,13 +132,6 @@ public class FamillePfnlImpl extends EntityImpl {
      */
     public static Key createPrimaryKey(BigDecimal idfamillepfnl) {
         return new Key(new Object[] { idfamillepfnl });
-    }
-
-    /**
-     * @return the definition object for this instance class.
-     */
-    public static synchronized EntityDefImpl getDefinitionObject() {
-        return EntityDefImpl.findDefObject("cm.gov.minfof.model.entity.FamillePfnl");
     }
 
     /**

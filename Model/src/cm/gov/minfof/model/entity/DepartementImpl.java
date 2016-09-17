@@ -32,6 +32,7 @@ public class DepartementImpl extends EntityImpl {
         Commune,
         Commune1;
         private static AttributesEnum[] vals = null;
+        ;
         private static final int firstIndex = 0;
 
         protected int index() {
@@ -53,6 +54,8 @@ public class DepartementImpl extends EntityImpl {
             return vals;
         }
     }
+
+
     public static final int IDDEPARTEMENTS = AttributesEnum.Iddepartements.index();
     public static final int NOMDEPARTEMENT = AttributesEnum.Nomdepartement.index();
     public static final int CODEDEPARTEMENT = AttributesEnum.Codedepartement.index();
@@ -69,6 +72,14 @@ public class DepartementImpl extends EntityImpl {
      */
     public DepartementImpl() {
     }
+
+    /**
+     * @return the definition object for this instance class.
+     */
+    public static synchronized EntityDefImpl getDefinitionObject() {
+        return EntityDefImpl.findDefObject("cm.gov.minfof.model.entity.Departement");
+    }
+
 
     /**
      * Gets the attribute value for Iddepartements, using the alias name Iddepartements.
@@ -188,14 +199,14 @@ public class DepartementImpl extends EntityImpl {
     /**
      * @return the associated entity oracle.jbo.server.EntityImpl.
      */
-    public EntityImpl getCommune() {
-        return (EntityImpl) getAttributeInternal(COMMUNE);
+    public CommuneImpl getCommune() {
+        return (CommuneImpl) getAttributeInternal(COMMUNE);
     }
 
     /**
      * Sets <code>value</code> as the associated entity oracle.jbo.server.EntityImpl.
      */
-    public void setCommune(EntityImpl value) {
+    public void setCommune(CommuneImpl value) {
         setAttributeInternal(COMMUNE, value);
     }
 
@@ -206,6 +217,7 @@ public class DepartementImpl extends EntityImpl {
         return (RowIterator) getAttributeInternal(COMMUNE1);
     }
 
+
     /**
      * @param iddepartements key constituent
 
@@ -213,13 +225,6 @@ public class DepartementImpl extends EntityImpl {
      */
     public static Key createPrimaryKey(BigDecimal iddepartements) {
         return new Key(new Object[] { iddepartements });
-    }
-
-    /**
-     * @return the definition object for this instance class.
-     */
-    public static synchronized EntityDefImpl getDefinitionObject() {
-        return EntityDefImpl.findDefObject("cm.gov.minfof.model.entity.Departement");
     }
 
     /**

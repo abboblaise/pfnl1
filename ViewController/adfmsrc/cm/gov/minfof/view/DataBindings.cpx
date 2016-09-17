@@ -12,8 +12,8 @@
     <page path="/page_originepfnl.jsf" usageId="cm_gov_minfof_view_page_originepfnlPageDef"/>
     <page path="/page_permissionnaire.jsf" usageId="cm_gov_minfof_view_page_permissionnairePageDef"/>
     <page path="/Template_General.jsf" usageId="cm_gov_minfof_view_Template_GeneralPageDef"/>
-    <page path="/untitled1.jsf" usageId="cm_gov_minfof_view_untitled1PageDef"/>
-    <page path="/templateDef1.jsf" usageId="cm_gov_minfof_view_templateDef1PageDef"/>
+    <page path="/Page_Permis.jsf" usageId="cm_gov_minfof_view_Page_PermisPageDef"/>
+    <page path="/Page_Agrement.jsf" usageId="cm_gov_minfof_view_Page_AgrementPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="cm_gov_minfof_view_page_regionPageDef" path="cm.gov.minfof.view.pageDefs.page_regionPageDef"/>
@@ -31,6 +31,9 @@
     <page id="cm_gov_minfof_view_Template_GeneralPageDef" path="cm.gov.minfof.view.pageDefs.Template_GeneralPageDef"/>
     <page id="cm_gov_minfof_view_untitled1PageDef" path="cm.gov.minfof.view.pageDefs.untitled1PageDef"/>
     <page id="cm_gov_minfof_view_templateDef1PageDef" path="cm.gov.minfof.view.pageDefs.templateDef1PageDef"/>
+    <page id="cm_gov_minfof_view_Page_agrementPageDef" path="cm.gov.minfof.view.pageDefs.Page_agrementPageDef"/>
+    <page id="cm_gov_minfof_view_Page_PermisPageDef" path="cm.gov.minfof.view.pageDefs.Page_PermisPageDef"/>
+    <page id="cm_gov_minfof_view_Page_AgrementPageDef" path="cm.gov.minfof.view.pageDefs.Page_AgrementPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="cm.gov.minfof.model.entity"

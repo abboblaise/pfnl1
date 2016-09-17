@@ -983,5 +983,170 @@ public class AppModuleImpl extends ApplicationModuleImpl implements AppModule {
     public getLastIdPermissionnairePfnlImpl getgetLastIdPermissionnairePfnl1() {
         return (getLastIdPermissionnairePfnlImpl) findViewObject("getLastIdPermissionnairePfnl1");
     }
+
+    /**
+     * Container's getter for getlastidagrement1.
+     * @return getlastidagrement1
+     */
+    public ViewObjectImpl getgetlastidagrement1() {
+        return (ViewObjectImpl) findViewObject("getlastidagrement1");
+    }
+
+
+    /**
+     * Container's getter for PaysView2.
+     * @return PaysView2
+     */
+    public ViewObjectImpl getPaysView2() {
+        return (ViewObjectImpl) findViewObject("PaysView2");
+    }
+
+
+    /**
+     * Container's getter for CommuneView7.
+     * @return CommuneView7
+     */
+    public ViewObjectImpl getCommuneView7() {
+        return (ViewObjectImpl) findViewObject("CommuneView7");
+    }
+
+
+    /**
+     * Container's getter for PermissionnairespnflView4.
+     * @return PermissionnairespnflView4
+     */
+    public ViewObjectImpl getPermissionnairespnflView4() {
+        return (ViewObjectImpl) findViewObject("PermissionnairespnflView4");
+    }
+
+
+    /**
+     * Container's getter for OriginespnflsView2.
+     * @return OriginespnflsView2
+     */
+    public ViewObjectImpl getOriginespnflsView2() {
+        return (ViewObjectImpl) findViewObject("OriginespnflsView2");
+    }
+
+
+    /**
+     * Container's getter for RegionView2.
+     * @return RegionView2
+     */
+    public RegionViewImpl getRegionView2() {
+        return (RegionViewImpl) findViewObject("RegionView2");
+    }
+
+
+    /**
+     * Container's getter for DepartementView6.
+     * @return DepartementView6
+     */
+    public ViewObjectImpl getDepartementView6() {
+        return (ViewObjectImpl) findViewObject("DepartementView6");
+    }
+
+
+    /**
+     * Container's getter for PaysView3.
+     * @return PaysView3
+     */
+    public ViewObjectImpl getPaysView3() {
+        return (ViewObjectImpl) findViewObject("PaysView3");
+    }
+
+
+    /**
+     * Container's getter for CommuneView8.
+     * @return CommuneView8
+     */
+    public ViewObjectImpl getCommuneView8() {
+        return (ViewObjectImpl) findViewObject("CommuneView8");
+    }
+
+
+    /**
+     * Container's getter for PermissionnairespnflView5.
+     * @return PermissionnairespnflView5
+     */
+    public ViewObjectImpl getPermissionnairespnflView5() {
+        return (ViewObjectImpl) findViewObject("PermissionnairespnflView5");
+    }
+
+
+    /**
+     * Container's getter for OriginespnflsView3.
+     * @return OriginespnflsView3
+     */
+    public ViewObjectImpl getOriginespnflsView3() {
+        return (ViewObjectImpl) findViewObject("OriginespnflsView3");
+    }
+
+
+    /**
+     * Container's getter for RegionView3.
+     * @return RegionView3
+     */
+    public RegionViewImpl getRegionView3() {
+        return (RegionViewImpl) findViewObject("RegionView3");
+    }
+
+
+    /**
+     * Container's getter for DepartementView7.
+     * @return DepartementView7
+     */
+    public ViewObjectImpl getDepartementView7() {
+        return (ViewObjectImpl) findViewObject("DepartementView7");
+    }
+
+
+    /**
+     * Container's getter for PermisView1.
+     * @return PermisView1
+     */
+    public ViewObjectImpl getPermisView1() {
+        return (ViewObjectImpl) findViewObject("PermisView1");
+    }
+
+    /**
+     * Container's getter for PermisView2.
+     * @return PermisView2
+     */
+    public ViewObjectImpl getPermisView2() {
+        return (ViewObjectImpl) findViewObject("PermisView2");
+    }
+
+    /**
+     * Container's getter for PermisView3.
+     * @return PermisView3
+     */
+    public ViewObjectImpl getPermisView3() {
+        return (ViewObjectImpl) findViewObject("PermisView3");
+    }
+
+    /**
+     * Container's getter for FkPermis2Link1.
+     * @return FkPermis2Link1
+     */
+    public ViewLinkImpl getFkPermis2Link1() {
+        return (ViewLinkImpl) findViewLink("FkPermis2Link1");
+    }
+
+    /**
+     * Container's getter for FkPermis1Link1.
+     * @return FkPermis1Link1
+     */
+    public ViewLinkImpl getFkPermis1Link1() {
+        return (ViewLinkImpl) findViewLink("FkPermis1Link1");
+    }
+
+    /**
+     * Container's getter for GetLastidPermis2.
+     * @return GetLastidPermis2
+     */
+    public ViewObjectImpl getgetLastidPermis1() {
+        return (ViewObjectImpl) findViewObject("getLastidPermis1");
+    }
 }
 

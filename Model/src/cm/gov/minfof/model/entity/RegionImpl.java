@@ -81,6 +81,7 @@ public class RegionImpl extends EntityImpl {
         Departement,
         Commune;
         private static AttributesEnum[] vals = null;
+        ;
         private static final int firstIndex = 0;
 
         protected int index() {
@@ -103,6 +104,7 @@ public class RegionImpl extends EntityImpl {
         }
     }
 
+
     public static final int IDREGIONS = AttributesEnum.Idregions.index();
     public static final int NOMREGION = AttributesEnum.Nomregion.index();
     public static final int CODEREGION = AttributesEnum.Coderegion.index();
@@ -123,6 +125,7 @@ public class RegionImpl extends EntityImpl {
     public static synchronized EntityDefImpl getDefinitionObject() {
         return EntityDefImpl.findDefObject("cm.gov.minfof.model.entity.Region");
     }
+
 
     /**
      * Gets the attribute value for Idregions, using the alias name Idregions.

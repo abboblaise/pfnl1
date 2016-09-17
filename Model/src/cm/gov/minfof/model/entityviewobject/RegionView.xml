@@ -79,4 +79,19 @@
       Attribute="Idregions"
       Ascending="false"/>
   </SortCriteria>
+  <SortCriteria>
+    <Sort
+      Attribute="Idregions"
+      Ascending="false"/>
+  </SortCriteria>
+  <SortCriteria>
+    <Sort
+      Attribute="Idregions"
+      Ascending="false"/>
+  </SortCriteria>
+  <SortCriteria>
+    <Sort
+      Attribute="Idregions"
+      Ascending="false"/>
+  </SortCriteria>
 </ViewObject>

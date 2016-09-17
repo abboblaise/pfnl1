@@ -45,4 +45,14 @@
     <managed-bean-class>cm.gov.minfof.view.PermissionnaireBean</managed-bean-class>
     <managed-bean-scope>request</managed-bean-scope>
   </managed-bean>
+  <managed-bean id="__10">
+    <managed-bean-name>AgrementBean</managed-bean-name>
+    <managed-bean-class>cm.gov.minfof.view.agrementBean</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+  </managed-bean>
+  <managed-bean id="__11">
+    <managed-bean-name>PermisBean</managed-bean-name>
+    <managed-bean-class>cm.gov.minfof.view.PermisBean</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+  </managed-bean>
 </adfc-config>
