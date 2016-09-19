@@ -80,8 +80,6 @@
     </attributeValues>
     <list IterBinding="PermissionnairespnflView1Iterator" StaticList="false" Uses="LOV_Sexe" id="Sexe"
           DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
-    <list IterBinding="PermissionnairespnflView1Iterator" StaticList="false" Uses="LOV_Qualiteexploitant"
-          id="Qualiteexploitant" DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
     <tree IterBinding="PermissionnairespnflView1Iterator" id="PermissionnairespnflView1">
       <nodeDefinition DefName="cm.gov.minfof.model.entityviewobject.PermissionnairespnflView"
                       Name="PermissionnairespnflView10">
@@ -97,14 +95,12 @@
           <Item Value="Natureactivite"/>
           <Item Value="Numceqe"/>
           <Item Value="Idpermissionnairespnfl"/>
-          <Item Value="Qualite"/>
           <Item Value="Nui"/>
           <Item Value="Idpays"/>
           <Item Value="Profession"/>
           <Item Value="Typepersonne"/>
           <Item Value="Adressep"/>
           <Item Value="Sexe"/>
-          <Item Value="Qualiteexploitant"/>
         </AttrNames>
       </nodeDefinition>
     </tree>

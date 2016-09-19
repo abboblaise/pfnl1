@@ -34,7 +34,7 @@
         <f:facet name="second">
             <af:panelSplitter splitterPosition="31" orientation="vertical" positionedFromEnd="true" id="pt_ps2">
                 <f:facet name="first">
-                    <af:panelSplitter splitterPosition="161" id="pt_ps3">
+                    <af:panelSplitter splitterPosition="212" id="pt_ps3">
                         <f:facet name="first">
                             <af:panelAccordion discloseMany="false" id="pt_pa1">
                                 <af:showDetailItem id="pane1" text="#{viewcontrollerBundle.PARAMETRAGE}">
@@ -53,9 +53,18 @@
                                         <af:button text="#{viewcontrollerBundle.FAMILLE_DE_PRODUITS}" id="pt_b5"
                                                    destination="page_famille_produit.jsf"/>
                                         <af:spacer width="10" height="3" id="pt_s5"/>
+                                        <af:button text="#{viewcontrollerBundle.CAT_U00E9GORIES_DE_PRODUITS}" id="pt_b11"
+                                                   destination="page_categorie_produit.jsf"/>
+                                        <af:spacer width="10" height="3" id="pt_s9"/>
                                         <af:button text="#{viewcontrollerBundle.PRODUITS}" id="pt_b6"
                                                    destination="page_produit.jsf"/>
                                         <af:spacer width="10" height="3" id="pt_s6"/>
+                                        <af:button text="#{viewcontrollerBundle.CATEGORIES_DE_MESURE}" id="pt_b12"
+                                                   destination="page_categorie_unitemesure.jsf"/>
+                                        <af:spacer width="10" height="3" id="pt_s11"/>
+                                        <af:button text="#{viewcontrollerBundle.UNITE_DE_MESURE}" id="pt_b13"
+                                                   destination="page_unitemesure.jsf"/>
+                                        <af:spacer width="10" height="3" id="pt_s12"/>
                                         <af:button text="#{viewcontrollerBundle.PARTIES_RECOLTEES}" id="pt_b7" destination="page_parties_recoltees.jsf"/>
                                         <af:separator id="pt_s7"/>
                                         <af:button text="#{viewcontrollerBundle.ORIGINE_DES_PFNL}" id="pt_b8"
@@ -63,7 +72,22 @@
                                         <af:spacer width="10" height="3" id="pt_s8"/>
                                         <af:button text="#{viewcontrollerBundle.PERMISSIONNAIRES}" id="pt_b9" destination="page_permissionnaire.jsf"/>
                                         <af:spacer width="10" height="10" id="pt_s10"/>
-                                        <af:button text="button 1" id="pt_b10"/>
+                                        <af:button text="#{viewcontrollerBundle.AGREMENTS}" id="pt_b10"
+                                                   destination="Page_Agrement.jsf"/>
+                                        <af:spacer width="10" height="3" id="pt_s13"/>
+                                        <af:button text="#{viewcontrollerBundle.LOCALITES}" id="pt_b14" destination="page_localite.jsf"/>
+                                        <af:spacer width="10" height="3" id="pt_s14"/>
+                                        <af:button text="#{viewcontrollerBundle.POSTES_DE_CONTROLE}" id="pt_b15"
+                                                   destination="page_postec.jsf"/>
+                                        <af:spacer width="10" height="3" id="pt_s15"/>
+                                        <af:button text="#{viewcontrollerBundle.TRANSPORTEURS}" id="pt_b16"
+                                                   destination="page_transporteur.jsf"/>
+                                        <af:spacer width="10" height="3" id="pt_s16"/>
+                                        <af:button text="#{viewcontrollerBundle.VEVICULES}" id="pt_b17"
+                                                   destination="page_vehicule.jsf"/>
+                                        <af:spacer width="10" height="3" id="pt_s17"/>
+                                        <af:button text="#{viewcontrollerBundle.PERMIS}" id="pt_b18"
+                                                   destination="page_permis.jsf"/>
                                     </af:panelGroupLayout>
                                 </af:showDetailItem>
                                 <af:showDetailItem text="#{viewcontrollerBundle.TRAITEMENTS}" id="pt_sdi1"/>

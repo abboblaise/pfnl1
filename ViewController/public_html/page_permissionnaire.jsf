@@ -264,16 +264,6 @@
                                                   pattern="#{bindings.PermissionnairespnflView1.hints.Idpermissionnairespnfl.format}"/>
                             </af:outputText>
                         </af:column>
-                        <af:column sortProperty="#{bindings.PermissionnairespnflView1.hints.Qualite.name}"
-                                   filterable="true" sortable="true"
-                                   headerText="#{bindings.PermissionnairespnflView1.hints.Qualite.label}" id="c12">
-                            <af:outputText value="#{row.Qualite}"
-                                           shortDesc="#{bindings.PermissionnairespnflView1.hints.Qualite.tooltip}"
-                                           id="ot10">
-                                <af:convertNumber groupingUsed="false"
-                                                  pattern="#{bindings.PermissionnairespnflView1.hints.Qualite.format}"/>
-                            </af:outputText>
-                        </af:column>
                         <af:column sortProperty="#{bindings.PermissionnairespnflView1.hints.Nui.name}" filterable="true"
                                    sortable="true" headerText="#{bindings.PermissionnairespnflView1.hints.Nui.label}"
                                    id="c13">
@@ -329,19 +319,6 @@
                                                 readOnly="true" id="soc11">
                                 <f:selectItems value="#{row.bindings.Sexe.items}" id="si11"/>
                                 <f:validator binding="#{row.bindings.Sexe.validator}"/>
-                            </af:selectOneChoice>
-                        </af:column>
-                        <af:column sortProperty="#{bindings.PermissionnairespnflView1.hints.Qualiteexploitant.name}"
-                                   filterable="true" sortable="true"
-                                   headerText="#{bindings.PermissionnairespnflView1.hints.Qualiteexploitant.label}"
-                                   id="c19">
-                            <af:selectOneChoice value="#{row.bindings.Qualiteexploitant.inputValue}"
-                                                label="#{row.bindings.Qualiteexploitant.label}"
-                                                required="#{bindings.PermissionnairespnflView1.hints.Qualiteexploitant.mandatory}"
-                                                shortDesc="#{bindings.PermissionnairespnflView1.hints.Qualiteexploitant.tooltip}"
-                                                readOnly="true" id="soc12">
-                                <f:selectItems value="#{row.bindings.Qualiteexploitant.items}" id="si12"/>
-                                <f:validator binding="#{row.bindings.Qualiteexploitant.validator}"/>
                             </af:selectOneChoice>
                         </af:column>
                     </af:table>

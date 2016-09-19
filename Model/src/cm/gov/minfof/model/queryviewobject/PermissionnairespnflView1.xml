@@ -23,7 +23,6 @@
        PfnlPermissionnairespnfl.Natureactivite,
        PfnlPermissionnairespnfl.NUMCEQE,
        PfnlPermissionnairespnfl.IDPermissionnairesPNFL,
-       PfnlPermissionnairespnfl.Qualite,
        PfnlPermissionnairespnfl.NUI,
        PfnlPermissionnairespnfl.IDPays,
        PfnlPermissionnairespnfl.Profession,
@@ -276,6 +275,20 @@ FROM pfnl.PermissionnairesPNFL PfnlPermissionnairespnfl]]></SQLQuery>
     SQLType="INTEGER">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="3"/>
+    </DesignTime>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="Qualiteexploitant"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Type="java.lang.Integer"
+    ColumnType="TINYINT"
+    AliasName="Qualiteexploitant"
+    Expression="Qualiteexploitant"
+    SQLType="TINYINT">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="4"/>
     </DesignTime>
   </ViewAttribute>
   <AttrArray Name="KeyAttributes">
