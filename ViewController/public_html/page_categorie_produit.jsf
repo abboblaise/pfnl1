@@ -33,7 +33,7 @@
                                                columns="#{bindings.Observation.hints.displayWidth}"
                                                shortDesc="#{bindings.Observation.hints.tooltip}" id="it4"
                                                rows="#{bindings.Observation.hints.displayHeight}">
-                                <facet name="footer"/>
+                      <!--          <facet name="footer"/>-->
                             </af:richTextEditor>
                             <f:facet name="footer">
                                 <af:panelGroupLayout id="pgl1">
