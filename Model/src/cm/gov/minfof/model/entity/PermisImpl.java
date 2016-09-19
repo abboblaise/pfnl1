@@ -37,7 +37,8 @@ public class PermisImpl extends EntityImpl {
         Permis,
         IdpermissionnairePermis,
         Permis1,
-        IdagrementPermis;
+        IdagrementPermis,
+        Detailpermis;
         private static AttributesEnum[] vals = null;
         private static final int firstIndex = 0;
 
@@ -60,6 +61,8 @@ public class PermisImpl extends EntityImpl {
             return vals;
         }
     }
+
+
     public static final int IDPERMIS = AttributesEnum.Idpermis.index();
     public static final int NUMEROPERMIS = AttributesEnum.Numeropermis.index();
     public static final int ZONECOUPE = AttributesEnum.Zonecoupe.index();
@@ -73,12 +76,21 @@ public class PermisImpl extends EntityImpl {
     public static final int IDPERMISSIONNAIREPERMIS = AttributesEnum.IdpermissionnairePermis.index();
     public static final int PERMIS1 = AttributesEnum.Permis1.index();
     public static final int IDAGREMENTPERMIS = AttributesEnum.IdagrementPermis.index();
+    public static final int DETAILPERMIS = AttributesEnum.Detailpermis.index();
 
     /**
      * This is the default constructor (do not remove).
      */
     public PermisImpl() {
     }
+
+    /**
+     * @return the definition object for this instance class.
+     */
+    public static synchronized EntityDefImpl getDefinitionObject() {
+        return EntityDefImpl.findDefObject("cm.gov.minfof.model.entity.Permis");
+    }
+
 
     /**
      * Gets the attribute value for Idpermis, using the alias name Idpermis.
@@ -267,19 +279,20 @@ public class PermisImpl extends EntityImpl {
     }
 
     /**
+     * @return the associated entity oracle.jbo.RowIterator.
+     */
+    public RowIterator getDetailpermis() {
+        return (RowIterator) getAttributeInternal(DETAILPERMIS);
+    }
+
+
+    /**
      * @param idpermis key constituent
 
      * @return a Key object based on given key constituents.
      */
     public static Key createPrimaryKey(BigDecimal idpermis) {
         return new Key(new Object[] { idpermis });
-    }
-
-    /**
-     * @return the definition object for this instance class.
-     */
-    public static synchronized EntityDefImpl getDefinitionObject() {
-        return EntityDefImpl.findDefObject("cm.gov.minfof.model.entity.Permis");
     }
 
     /**

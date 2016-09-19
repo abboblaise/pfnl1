@@ -60,4 +60,14 @@
     <managed-bean-class>cm.gov.minfof.view.PermisBean</managed-bean-class>
     <managed-bean-scope>request</managed-bean-scope>
   </managed-bean>
+  <managed-bean id="__13">
+    <managed-bean-name>LocaliteBean</managed-bean-name>
+    <managed-bean-class>cm.gov.minfof.view.LocaliteBean</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+  </managed-bean>
+  <managed-bean id="__14">
+    <managed-bean-name>PostecBean</managed-bean-name>
+    <managed-bean-class>cm.gov.minfof.view.PostecBean</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+  </managed-bean>
 </adfc-config>

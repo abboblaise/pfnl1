@@ -5,8 +5,8 @@ import oracle.adf.model.BindingContext;
 import oracle.binding.BindingContainer;
 import oracle.binding.OperationBinding;
 
-public class PermisBean {
-    public PermisBean() {
+public class PostecBean {
+    public PostecBean() {
     }
     
     public BindingContainer getBindings() {
@@ -24,7 +24,7 @@ public class PermisBean {
         return ob.execute();
     }
 
-    public String CreerPermis() {
+    public String CreerPoste() {
         BindingContainer bindings = getBindings();
         OperationBinding operationBinding = bindings.getOperationBinding("CreateInsert");
         Object result = operationBinding.execute();
@@ -34,20 +34,8 @@ public class PermisBean {
         }
         return null;
     }
-    
-    public String CreerDetailPermis() {
-        //executemethode("Commit");
-        BindingContainer bindings = getBindings();
-        OperationBinding operationBinding = bindings.getOperationBinding("CreateInsert1");
-        Object result = operationBinding.execute();
-        executemethode("Commit"); //pour permettre de g??n??rer les ids facilement
-        if (!operationBinding.getErrors().isEmpty()) {
-            return null;
-        }
-        return null;
-    }
 
-    public String EnregistrePermis() {
+    public String EnregistrerPoste() {
         BindingContainer bindings = getBindings();
         OperationBinding operationBinding = bindings.getOperationBinding("Commit");
         Object result = operationBinding.execute();
@@ -57,7 +45,7 @@ public class PermisBean {
         return null;
     }
 
-    public String SupprimePermis() {
+    public String SupprimerPoste() {
         BindingContainer bindings = getBindings();
         OperationBinding operationBinding = bindings.getOperationBinding("Delete");
         Object result = operationBinding.execute();

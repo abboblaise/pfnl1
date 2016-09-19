@@ -20,7 +20,6 @@
   </DesignTime>
   <Attribute
     Name="Idpermis"
-    IsNotNull="true"
     ColumnName="idpermis"
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
@@ -136,6 +135,13 @@
     AssociationOtherEnd="cm.gov.minfof.model.entity.FkPermis1Assoc.Permis1"
     Type="oracle.jbo.server.EntityImpl"
     IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="Detailpermis"
+    Association="cm.gov.minfof.model.entity.PermisToDetailAssoc"
+    AssociationEnd="cm.gov.minfof.model.entity.PermisToDetailAssoc.Detailpermis"
+    AssociationOtherEnd="cm.gov.minfof.model.entity.PermisToDetailAssoc.Permis"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
   <Key
     Name="Primary1"
     PrimaryKey="true">

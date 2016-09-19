@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+        xmlns:c="http://java.sun.com/jsp/jstl/core">
+    <c:set var="viewcontrollerBundle" value="#{adfBundle['cm.gov.minfof.view.ViewControllerBundle']}"/>
+    <af:document title="page_localite.jsf" id="d1">
+        <af:messages id="m1"/>
+        <af:form id="f1">
+            <af:pageTemplate viewId="/TemplateGlobal.jsf" id="pt1">
+                <f:facet name="content">
+                    <af:panelBox text="#{viewcontrollerBundle.CHOISISSEZ_UN_DEPARTEMENT}" id="pb1">
+                        <f:facet name="toolbar"/>
+                        <af:selectOneChoice value="#{bindings.DepartementView1.inputValue}"
+                                            label="#{bindings.DepartementView1.label}"
+                                            required="#{bindings.DepartementView1.hints.mandatory}"
+                                            shortDesc="#{bindings.DepartementView1.hints.tooltip}" id="soc1"
+                                            autoSubmit="true">
+                            <f:selectItems value="#{bindings.DepartementView1.items}" id="si1"/>
+                            <f:validator binding="#{bindings.DepartementView1.validator}"/>
+                        </af:selectOneChoice>
+                    </af:panelBox>
+                    <af:panelBox text="#{viewcontrollerBundle.EDITION_DES_LOCALITES}" id="pb2">
+                        <f:facet name="toolbar"/>
+                        <af:panelFormLayout id="pfl1">
+                            <af:inputText value="#{bindings.Nomlocalite.inputValue}"
+                                          label="#{bindings.Nomlocalite.hints.label}"
+                                          required="#{bindings.Nomlocalite.hints.mandatory}"
+                                          columns="#{bindings.Nomlocalite.hints.displayWidth}"
+                                          maximumLength="#{bindings.Nomlocalite.hints.precision}"
+                                          shortDesc="#{bindings.Nomlocalite.hints.tooltip}" id="it1">
+                                <f:validator binding="#{bindings.Nomlocalite.validator}"/>
+                            </af:inputText>
+                            <f:facet name="footer">
+                                <af:panelGroupLayout id="pgl1">
+                                    <af:button text="#{viewcontrollerBundle.NOUVEAU}" id="b1"
+                                               action="#{LocaliteBean.CreerLocalite}"/>
+                                    <af:spacer width="10" height="10" id="s1"/>
+                                    <af:button text="#{viewcontrollerBundle.ENREGISTRER}" id="b2"
+                                               action="#{LocaliteBean.EnregistreLocalite}"/>
+                                    <af:spacer width="10" height="10" id="s2"/>
+                                    <af:button text="#{viewcontrollerBundle.SUPPRIMER}" id="b3"
+                                               action="#{LocaliteBean.SupprimerLocalite}"/>
+                                </af:panelGroupLayout>
+                            </f:facet>
+                        </af:panelFormLayout>
+                    </af:panelBox>
+                    <af:panelBox text="#{viewcontrollerBundle.LISTE_DES_LOCALITES}" id="pb3">
+                        <f:facet name="toolbar"/>
+                        <af:panelCollection id="pc1">
+                            <f:facet name="menus"/>
+                            <f:facet name="toolbar"/>
+                            <f:facet name="statusbar"/>
+                            <af:table value="#{bindings.LocaliteView41.collectionModel}" var="row"
+                                      rows="#{bindings.LocaliteView41.rangeSize}"
+                                      emptyText="#{bindings.LocaliteView41.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                      rowBandingInterval="0"
+                                      selectedRowKeys="#{bindings.LocaliteView41.collectionModel.selectedRow}"
+                                      selectionListener="#{bindings.LocaliteView41.collectionModel.makeCurrent}"
+                                      rowSelection="single" fetchSize="#{bindings.LocaliteView41.rangeSize}"
+                                      filterModel="#{bindings.LocaliteView4Query.queryDescriptor}" filterVisible="true"
+                                      queryListener="#{bindings.LocaliteView4Query.processQuery}" varStatus="vs"
+                                      id="t1">
+                                <af:column sortProperty="#{bindings.LocaliteView41.hints.Iddepartement.name}"
+                                           filterable="true" sortable="true"
+                                           headerText="#{bindings.LocaliteView41.hints.Iddepartement.label}" id="c1"
+                                           width="222">
+                                    <af:selectOneChoice value="#{row.bindings.Iddepartement.inputValue}"
+                                                        label="#{row.bindings.Iddepartement.label}"
+                                                        required="#{bindings.LocaliteView41.hints.Iddepartement.mandatory}"
+                                                        shortDesc="#{bindings.LocaliteView41.hints.Iddepartement.tooltip}"
+                                                        readOnly="true" id="soc2">
+                                        <f:selectItems value="#{row.bindings.Iddepartement.items}" id="si2"/>
+                                        <f:validator binding="#{row.bindings.Iddepartement.validator}"/>
+                                    </af:selectOneChoice>
+                                </af:column>
+                                <af:column sortProperty="#{bindings.LocaliteView41.hints.Nomlocalite.name}"
+                                           filterable="true" sortable="true"
+                                           headerText="#{bindings.LocaliteView41.hints.Nomlocalite.label}" id="c2"
+                                           width="267">
+                                    <af:outputText value="#{row.Nomlocalite}"
+                                                   shortDesc="#{bindings.LocaliteView41.hints.Nomlocalite.tooltip}"
+                                                   id="ot1"/>
+                                </af:column>
+                            </af:table>
+                        </af:panelCollection>
+                    </af:panelBox>
+                </f:facet>
+            </af:pageTemplate>
+        </af:form>
+    </af:document>
+</f:view>

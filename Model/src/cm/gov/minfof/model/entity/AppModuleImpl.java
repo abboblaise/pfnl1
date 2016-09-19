@@ -1329,5 +1329,285 @@ public class AppModuleImpl extends ApplicationModuleImpl implements AppModule {
     public listOrdreGrandeurImpl getlistOrdreGrandeur1() {
         return (listOrdreGrandeurImpl) findViewObject("listOrdreGrandeur1");
     }
+
+    /**
+     * Container's getter for LocaliteView1.
+     * @return LocaliteView1
+     */
+    public ViewObjectImpl getLocaliteView1() {
+        return (ViewObjectImpl) findViewObject("LocaliteView1");
+    }
+
+    /**
+     * Container's getter for LocaliteView2.
+     * @return LocaliteView2
+     */
+    public ViewObjectImpl getLocaliteView2() {
+        return (ViewObjectImpl) findViewObject("LocaliteView2");
+    }
+
+    /**
+     * Container's getter for FkLocalite1Link1.
+     * @return FkLocalite1Link1
+     */
+    public ViewLinkImpl getFkLocalite1Link1() {
+        return (ViewLinkImpl) findViewLink("FkLocalite1Link1");
+    }
+
+    /**
+     * Container's getter for getLastidLocalite1.
+     * @return getLastidLocalite1
+     */
+    public ViewObjectImpl getgetLastidLocalite1() {
+        return (ViewObjectImpl) findViewObject("getLastidLocalite1");
+    }
+
+    /**
+     * Container's getter for DepartementView5.
+     * @return DepartementView5
+     */
+    public ViewObjectImpl getDepartementView5() {
+        return (ViewObjectImpl) findViewObject("DepartementView5");
+    }
+
+    /**
+     * Container's getter for LocaliteView3.
+     * @return LocaliteView3
+     */
+    public ViewObjectImpl getLocaliteView3() {
+        return (ViewObjectImpl) findViewObject("LocaliteView3");
+    }
+
+    /**
+     * Container's getter for DepToLocaliteLink.
+     * @return DepToLocaliteLink
+     */
+    public ViewLinkImpl getDepToLocaliteLink() {
+        return (ViewLinkImpl) findViewLink("DepToLocaliteLink");
+    }
+
+    /**
+     * Container's getter for LocaliteView4.
+     * @return LocaliteView4
+     */
+    public ViewObjectImpl getLocaliteView4() {
+        return (ViewObjectImpl) findViewObject("LocaliteView4");
+    }
+
+    /**
+     * Container's getter for DepToLocaliteLink1.
+     * @return DepToLocaliteLink1
+     */
+    public ViewLinkImpl getDepToLocaliteLink1() {
+        return (ViewLinkImpl) findViewLink("DepToLocaliteLink1");
+    }
+
+    /**
+     * Container's getter for DepartementView8.
+     * @return DepartementView8
+     */
+    public ViewObjectImpl getDepartementView8() {
+        return (ViewObjectImpl) findViewObject("DepartementView8");
+    }
+
+    /**
+     * Container's getter for DepToLocaliteLink2.
+     * @return DepToLocaliteLink2
+     */
+    public ViewLinkImpl getDepToLocaliteLink2() {
+        return (ViewLinkImpl) findViewLink("DepToLocaliteLink2");
+    }
+
+    /**
+     * Container's getter for PostecontroleView1.
+     * @return PostecontroleView1
+     */
+    public ViewObjectImpl getPostecontroleView1() {
+        return (ViewObjectImpl) findViewObject("PostecontroleView1");
+    }
+
+    /**
+     * Container's getter for PostecontroleView2.
+     * @return PostecontroleView2
+     */
+    public ViewObjectImpl getPostecontroleView2() {
+        return (ViewObjectImpl) findViewObject("PostecontroleView2");
+    }
+
+    /**
+     * Container's getter for FkPostecontrole1Link1.
+     * @return FkPostecontrole1Link1
+     */
+    public ViewLinkImpl getFkPostecontrole1Link1() {
+        return (ViewLinkImpl) findViewLink("FkPostecontrole1Link1");
+    }
+
+    /**
+     * Container's getter for getLatsidPostecontrole1.
+     * @return getLatsidPostecontrole1
+     */
+    public ViewObjectImpl getgetLatsidPostecontrole1() {
+        return (ViewObjectImpl) findViewObject("getLatsidPostecontrole1");
+    }
+
+    /**
+     * Container's getter for DepartementView9.
+     * @return DepartementView9
+     */
+    public ViewObjectImpl getDepartementView9() {
+        return (ViewObjectImpl) findViewObject("DepartementView9");
+    }
+
+    /**
+     * Container's getter for PostecontroleView3.
+     * @return PostecontroleView3
+     */
+    public ViewObjectImpl getPostecontroleView3() {
+        return (ViewObjectImpl) findViewObject("PostecontroleView3");
+    }
+
+    /**
+     * Container's getter for DepToPostecontroleLink.
+     * @return DepToPostecontroleLink
+     */
+    public ViewLinkImpl getDepToPostecontroleLink() {
+        return (ViewLinkImpl) findViewLink("DepToPostecontroleLink");
+    }
+
+    /**
+     * Container's getter for PostecontroleView4.
+     * @return PostecontroleView4
+     */
+    public ViewObjectImpl getPostecontroleView4() {
+        return (ViewObjectImpl) findViewObject("PostecontroleView4");
+    }
+
+    /**
+     * Container's getter for DepToPostecontroleLink1.
+     * @return DepToPostecontroleLink1
+     */
+    public ViewLinkImpl getDepToPostecontroleLink1() {
+        return (ViewLinkImpl) findViewLink("DepToPostecontroleLink1");
+    }
+
+    /**
+     * Container's getter for PostecontroleView5.
+     * @return PostecontroleView5
+     */
+    public ViewObjectImpl getPostecontroleView5() {
+        return (ViewObjectImpl) findViewObject("PostecontroleView5");
+    }
+
+    /**
+     * Container's getter for DepToPostecontroleLink2.
+     * @return DepToPostecontroleLink2
+     */
+    public ViewLinkImpl getDepToPostecontroleLink2() {
+        return (ViewLinkImpl) findViewLink("DepToPostecontroleLink2");
+    }
+
+    /**
+     * Container's getter for DetailpermisView1.
+     * @return DetailpermisView1
+     */
+    public ViewObjectImpl getDetailpermisView1() {
+        return (ViewObjectImpl) findViewObject("DetailpermisView1");
+    }
+
+    /**
+     * Container's getter for DetailpermisView2.
+     * @return DetailpermisView2
+     */
+    public ViewObjectImpl getDetailpermisView2() {
+        return (ViewObjectImpl) findViewObject("DetailpermisView2");
+    }
+
+    /**
+     * Container's getter for DetailpermisView3.
+     * @return DetailpermisView3
+     */
+    public ViewObjectImpl getDetailpermisView3() {
+        return (ViewObjectImpl) findViewObject("DetailpermisView3");
+    }
+
+    /**
+     * Container's getter for DetailpermisView4.
+     * @return DetailpermisView4
+     */
+    public ViewObjectImpl getDetailpermisView4() {
+        return (ViewObjectImpl) findViewObject("DetailpermisView4");
+    }
+
+    /**
+     * Container's getter for FkDetailpermis3Link1.
+     * @return FkDetailpermis3Link1
+     */
+    public ViewLinkImpl getFkDetailpermis3Link1() {
+        return (ViewLinkImpl) findViewLink("FkDetailpermis3Link1");
+    }
+
+    /**
+     * Container's getter for FkDetailpermis2Link1.
+     * @return FkDetailpermis2Link1
+     */
+    public ViewLinkImpl getFkDetailpermis2Link1() {
+        return (ViewLinkImpl) findViewLink("FkDetailpermis2Link1");
+    }
+
+    /**
+     * Container's getter for FkDetailpermis1Link1.
+     * @return FkDetailpermis1Link1
+     */
+    public ViewLinkImpl getFkDetailpermis1Link1() {
+        return (ViewLinkImpl) findViewLink("FkDetailpermis1Link1");
+    }
+
+    /**
+     * Container's getter for getLatsidDetailpermis1.
+     * @return getLatsidDetailpermis1
+     */
+    public ViewObjectImpl getgetLatsidDetailpermis1() {
+        return (ViewObjectImpl) findViewObject("getLatsidDetailpermis1");
+    }
+
+    /**
+     * Container's getter for PermisView4.
+     * @return PermisView4
+     */
+    public ViewObjectImpl getPermisView4() {
+        return (ViewObjectImpl) findViewObject("PermisView4");
+    }
+
+    /**
+     * Container's getter for DetailpermisView5.
+     * @return DetailpermisView5
+     */
+    public ViewObjectImpl getDetailpermisView5() {
+        return (ViewObjectImpl) findViewObject("DetailpermisView5");
+    }
+
+    /**
+     * Container's getter for PermisTopDetailLink.
+     * @return PermisTopDetailLink
+     */
+    public ViewLinkImpl getPermisTopDetailLink() {
+        return (ViewLinkImpl) findViewLink("PermisTopDetailLink");
+    }
+
+    /**
+     * Container's getter for DetailpermisView6.
+     * @return DetailpermisView6
+     */
+    public ViewObjectImpl getDetailpermisView6() {
+        return (ViewObjectImpl) findViewObject("DetailpermisView6");
+    }
+
+    /**
+     * Container's getter for PermisTopDetailLink1.
+     * @return PermisTopDetailLink1
+     */
+    public ViewLinkImpl getPermisTopDetailLink1() {
+        return (ViewLinkImpl) findViewLink("PermisTopDetailLink1");
+    }
 }
 

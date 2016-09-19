@@ -12,7 +12,9 @@
   BindingStyle="JDBC"
   CustomQuery="false"
   SelectAllAttributes="false"
-  PageIterMode="Full">
+  PageIterMode="Full"
+  FetchMode="FETCH_ALL"
+  Passivate="All">
   <EntityUsage
     Name="Departement"
     Entity="cm.gov.minfof.model.entity.Departement"/>
@@ -57,6 +59,16 @@
   <ViewLinkAccessor
     Name="CommuneView"
     ViewLink="cm.gov.minfof.model.entityviewobject.CommunesIbfk1Assoc2Link"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="LocaliteView"
+    ViewLink="cm.gov.minfof.model.entityviewobject.DepToLocaliteLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="PostecontroleView"
+    ViewLink="cm.gov.minfof.model.entityviewobject.DepToPostecontroleLink"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
   <SortCriteria>

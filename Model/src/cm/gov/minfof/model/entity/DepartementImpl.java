@@ -30,9 +30,10 @@ public class DepartementImpl extends EntityImpl {
         IdregionsDepartement,
         Region,
         Commune,
-        Commune1;
+        Commune1,
+        Localite,
+        Postecontrole;
         private static AttributesEnum[] vals = null;
-        ;
         private static final int firstIndex = 0;
 
         protected int index() {
@@ -66,6 +67,8 @@ public class DepartementImpl extends EntityImpl {
     public static final int REGION = AttributesEnum.Region.index();
     public static final int COMMUNE = AttributesEnum.Commune.index();
     public static final int COMMUNE1 = AttributesEnum.Commune1.index();
+    public static final int LOCALITE = AttributesEnum.Localite.index();
+    public static final int POSTECONTROLE = AttributesEnum.Postecontrole.index();
 
     /**
      * This is the default constructor (do not remove).
@@ -215,6 +218,22 @@ public class DepartementImpl extends EntityImpl {
      */
     public RowIterator getCommune1() {
         return (RowIterator) getAttributeInternal(COMMUNE1);
+    }
+
+
+    /**
+     * @return the associated entity oracle.jbo.RowIterator.
+     */
+    public RowIterator getLocalite() {
+        return (RowIterator) getAttributeInternal(LOCALITE);
+    }
+
+
+    /**
+     * @return the associated entity oracle.jbo.RowIterator.
+     */
+    public RowIterator getPostecontrole() {
+        return (RowIterator) getAttributeInternal(POSTECONTROLE);
     }
 
 
