@@ -32,6 +32,8 @@
       <SchemaBasedProperties>
         <DISPLAYWIDTH
           Value="20"/>
+        <LABEL
+          ResId="NOM_RAISON_SOCIALE"/>
       </SchemaBasedProperties>
     </Properties>
   </Attribute>
@@ -61,16 +63,18 @@
       <SchemaBasedProperties>
         <DISPLAYWIDTH
           Value="20"/>
+        <LABEL
+          ResId="SI_U00E8GE_SOCIAL"/>
       </SchemaBasedProperties>
     </Properties>
   </Attribute>
   <Attribute
     Name="Nbreemploye"
-    Precision="50"
+    Precision="11"
     ColumnName="nbreemploye"
     SQLType="VARCHAR"
-    Type="java.lang.String"
-    ColumnType="VARCHAR"
+    Type="java.lang.Integer"
+    ColumnType="INT"
     TableName="PermissionnairesPNFL">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="50"/>
@@ -133,6 +137,8 @@
       <SchemaBasedProperties>
         <DISPLAYWIDTH
           Value="20"/>
+        <LABEL
+          ResId="CODE_PFNL"/>
       </SchemaBasedProperties>
     </Properties>
   </Attribute>
@@ -146,6 +152,12 @@
     <DesignTime>
       <Attr Name="_DisplaySize" Value="19"/>
     </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="D_U00E9PARTEMENT"/>
+      </SchemaBasedProperties>
+    </Properties>
   </Attribute>
   <Attribute
     Name="Natureactivite"
@@ -162,6 +174,8 @@
       <SchemaBasedProperties>
         <DISPLAYWIDTH
           Value="20"/>
+        <LABEL
+          ResId="NATURE_DE_L_ACTIVIT_U00E9"/>
       </SchemaBasedProperties>
     </Properties>
   </Attribute>
@@ -180,6 +194,8 @@
       <SchemaBasedProperties>
         <DISPLAYWIDTH
           Value="20"/>
+        <LABEL
+          ResId="NUM_U00E9RO_CEQE"/>
       </SchemaBasedProperties>
     </Properties>
   </Attribute>
@@ -193,17 +209,6 @@
     PrimaryKey="true">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="19"/>
-    </DesignTime>
-  </Attribute>
-  <Attribute
-    Name="Qualite"
-    ColumnName="Qualite"
-    SQLType="TINYINT"
-    Type="java.lang.Integer"
-    ColumnType="TINYINT"
-    TableName="PermissionnairesPNFL">
-    <DesignTime>
-      <Attr Name="_DisplaySize" Value="3"/>
     </DesignTime>
   </Attribute>
   <Attribute
@@ -221,6 +226,8 @@
       <SchemaBasedProperties>
         <DISPLAYWIDTH
           Value="20"/>
+        <LABEL
+          ResId="NUM_U00E9RO_CONTRIBUABLE"/>
       </SchemaBasedProperties>
     </Properties>
   </Attribute>
@@ -234,6 +241,12 @@
     <DesignTime>
       <Attr Name="_DisplaySize" Value="19"/>
     </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="PAYS"/>
+      </SchemaBasedProperties>
+    </Properties>
   </Attribute>
   <Attribute
     Name="Profession"
@@ -259,6 +272,12 @@
     <DesignTime>
       <Attr Name="_DisplaySize" Value="3"/>
     </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="PERSONNE"/>
+      </SchemaBasedProperties>
+    </Properties>
   </Attribute>
   <Attribute
     Name="Adressep"
@@ -275,23 +294,14 @@
       <SchemaBasedProperties>
         <DISPLAYWIDTH
           Value="20"/>
+        <LABEL
+          ResId="ADRESSE"/>
       </SchemaBasedProperties>
     </Properties>
   </Attribute>
   <Attribute
     Name="Sexe"
     ColumnName="Sexe"
-    SQLType="TINYINT"
-    Type="java.lang.Integer"
-    ColumnType="TINYINT"
-    TableName="PermissionnairesPNFL">
-    <DesignTime>
-      <Attr Name="_DisplaySize" Value="3"/>
-    </DesignTime>
-  </Attribute>
-  <Attribute
-    Name="Qualiteexploitant"
-    ColumnName="Qualiteexploitant"
     SQLType="TINYINT"
     Type="java.lang.Integer"
     ColumnType="TINYINT"
@@ -360,4 +370,8 @@
       <Item Value="cm.gov.minfof.model.entity.Permissionnairespnfl.Iddepartements"/>
     </AttrArray>
   </Key>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="cm.gov.minfof.model.ModelBundle"/>
+  </ResourceBundle>
 </Entity>

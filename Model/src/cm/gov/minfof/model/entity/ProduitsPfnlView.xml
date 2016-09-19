@@ -22,7 +22,8 @@
     PrecisionRule="true"
     EntityAttrName="Idproduitspfnl"
     EntityUsage="ProduitsPfnl"
-    AliasName="idproduitspfnl"/>
+    AliasName="idproduitspfnl"
+    IsUpdateable="while_insert"/>
   <ViewAttribute
     Name="Nomscientifique"
     PrecisionRule="true"
@@ -66,6 +67,12 @@
     EntityAttrName="Modeattribution"
     EntityUsage="ProduitsPfnl"
     AliasName="modeattribution"/>
+  <ViewAttribute
+    Name="Idcategorie"
+    PrecisionRule="true"
+    EntityAttrName="Idcategorie"
+    EntityUsage="ProduitsPfnl"
+    AliasName="idcategorie"/>
   <ViewLinkAccessor
     Name="ProduitsPfnlView"
     ViewLink="cm.gov.minfof.model.entity.ProduitspfnlIbfk1Link"

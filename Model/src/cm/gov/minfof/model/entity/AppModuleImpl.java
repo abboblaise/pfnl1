@@ -1329,5 +1329,365 @@ public class AppModuleImpl extends ApplicationModuleImpl implements AppModule {
     public listOrdreGrandeurImpl getlistOrdreGrandeur1() {
         return (listOrdreGrandeurImpl) findViewObject("listOrdreGrandeur1");
     }
+
+    /**
+     * Container's getter for CategorieproduitView1.
+     * @return CategorieproduitView1
+     */
+    public ViewObjectImpl getCategorieproduitView1() {
+        return (ViewObjectImpl) findViewObject("CategorieproduitView1");
+    }
+
+    /**
+     * Container's getter for CategorieproduitView2.
+     * @return CategorieproduitView2
+     */
+    public ViewObjectImpl getCategorieproduitView2() {
+        return (ViewObjectImpl) findViewObject("CategorieproduitView2");
+    }
+
+    /**
+     * Container's getter for getLastIdCategorieProduit1.
+     * @return getLastIdCategorieProduit1
+     */
+    public ViewObjectImpl getgetLastIdCategorieProduit1() {
+        return (ViewObjectImpl) findViewObject("getLastIdCategorieProduit1");
+    }
+
+    /**
+     * Container's getter for CategorieproduitView3.
+     * @return CategorieproduitView3
+     */
+    public ViewObjectImpl getCategorieproduitView3() {
+        return (ViewObjectImpl) findViewObject("CategorieproduitView3");
+    }
+
+    /**
+     * Container's getter for ProduitspfnlView11.
+     * @return ProduitspfnlView11
+     */
+    public ViewObjectImpl getProduitspfnlView11() {
+        return (ViewObjectImpl) findViewObject("ProduitspfnlView11");
+    }
+
+    /**
+     * Container's getter for CategToProduitLink.
+     * @return CategToProduitLink
+     */
+    public ViewLinkImpl getCategToProduitLink() {
+        return (ViewLinkImpl) findViewLink("CategToProduitLink");
+    }
+
+    /**
+     * Container's getter for PartiesProduitsPfnlView20.
+     * @return PartiesProduitsPfnlView20
+     */
+    public ViewObjectImpl getPartiesProduitsPfnlView20() {
+        return (ViewObjectImpl) findViewObject("PartiesProduitsPfnlView20");
+    }
+
+    /**
+     * Container's getter for UnitemesureView5.
+     * @return UnitemesureView5
+     */
+    public ViewObjectImpl getUnitemesureView5() {
+        return (ViewObjectImpl) findViewObject("UnitemesureView5");
+    }
+
+    /**
+     * Container's getter for PartieProdToUniteMesureLink.
+     * @return PartieProdToUniteMesureLink
+     */
+    public ViewLinkImpl getPartieProdToUniteMesureLink() {
+        return (ViewLinkImpl) findViewLink("PartieProdToUniteMesureLink");
+    }
+
+    /**
+     * Container's getter for PartiesProduitsPfnlView21.
+     * @return PartiesProduitsPfnlView21
+     */
+    public ViewObjectImpl getPartiesProduitsPfnlView21() {
+        return (ViewObjectImpl) findViewObject("PartiesProduitsPfnlView21");
+    }
+
+    /**
+     * Container's getter for UnitemesureView6.
+     * @return UnitemesureView6
+     */
+    public ViewObjectImpl getUnitemesureView6() {
+        return (ViewObjectImpl) findViewObject("UnitemesureView6");
+    }
+
+    /**
+     * Container's getter for PartieProdToUniteMesureExport.
+     * @return PartieProdToUniteMesureExport
+     */
+    public ViewLinkImpl getPartieProdToUniteMesureExport() {
+        return (ViewLinkImpl) findViewLink("PartieProdToUniteMesureExport");
+    }
+
+    /**
+     * Container's getter for TransporteurView1.
+     * @return TransporteurView1
+     */
+    public ViewObjectImpl getTransporteurView1() {
+        return (ViewObjectImpl) findViewObject("TransporteurView1");
+    }
+
+    /**
+     * Container's getter for TransporteurView1_1.
+     * @return TransporteurView1_1
+     */
+    public ViewObjectImpl getTransporteurView1_1() {
+        return (ViewObjectImpl) findViewObject("TransporteurView1_1");
+    }
+
+    /**
+     * Container's getter for TypevehiculeView1.
+     * @return TypevehiculeView1
+     */
+    public ViewObjectImpl getTypevehiculeView1() {
+        return (ViewObjectImpl) findViewObject("TypevehiculeView1");
+    }
+
+    /**
+     * Container's getter for TypevehiculeView2.
+     * @return TypevehiculeView2
+     */
+    public ViewObjectImpl getTypevehiculeView2() {
+        return (ViewObjectImpl) findViewObject("TypevehiculeView2");
+    }
+
+    /**
+     * Container's getter for VehiculeView1.
+     * @return VehiculeView1
+     */
+    public ViewObjectImpl getVehiculeView1() {
+        return (ViewObjectImpl) findViewObject("VehiculeView1");
+    }
+
+    /**
+     * Container's getter for VehiculeView1_1.
+     * @return VehiculeView1_1
+     */
+    public ViewObjectImpl getVehiculeView1_1() {
+        return (ViewObjectImpl) findViewObject("VehiculeView1_1");
+    }
+
+    /**
+     * Container's getter for VehiculeView2.
+     * @return VehiculeView2
+     */
+    public ViewObjectImpl getVehiculeView2() {
+        return (ViewObjectImpl) findViewObject("VehiculeView2");
+    }
+
+    /**
+     * Container's getter for VehiculeView3.
+     * @return VehiculeView3
+     */
+    public ViewObjectImpl getVehiculeView3() {
+        return (ViewObjectImpl) findViewObject("VehiculeView3");
+    }
+
+    /**
+     * Container's getter for VehiculeView4.
+     * @return VehiculeView4
+     */
+    public ViewObjectImpl getVehiculeView4() {
+        return (ViewObjectImpl) findViewObject("VehiculeView4");
+    }
+
+    /**
+     * Container's getter for VehiculeView1_2.
+     * @return VehiculeView1_2
+     */
+    public ViewObjectImpl getVehiculeView1_2() {
+        return (ViewObjectImpl) findViewObject("VehiculeView1_2");
+    }
+
+    /**
+     * Container's getter for VehiculeView1_3.
+     * @return VehiculeView1_3
+     */
+    public ViewObjectImpl getVehiculeView1_3() {
+        return (ViewObjectImpl) findViewObject("VehiculeView1_3");
+    }
+
+    /**
+     * Container's getter for VehiculeView1_4.
+     * @return VehiculeView1_4
+     */
+    public ViewObjectImpl getVehiculeView1_4() {
+        return (ViewObjectImpl) findViewObject("VehiculeView1_4");
+    }
+
+    /**
+     * Container's getter for FkVehicule3Link1.
+     * @return FkVehicule3Link1
+     */
+    public ViewLinkImpl getFkVehicule3Link1() {
+        return (ViewLinkImpl) findViewLink("FkVehicule3Link1");
+    }
+
+    /**
+     * Container's getter for FkVehicule2Link1.
+     * @return FkVehicule2Link1
+     */
+    public ViewLinkImpl getFkVehicule2Link1() {
+        return (ViewLinkImpl) findViewLink("FkVehicule2Link1");
+    }
+
+    /**
+     * Container's getter for FkVehicule1Link1.
+     * @return FkVehicule1Link1
+     */
+    public ViewLinkImpl getFkVehicule1Link1() {
+        return (ViewLinkImpl) findViewLink("FkVehicule1Link1");
+    }
+
+    /**
+     * Container's getter for FkVehicule1Link2.
+     * @return FkVehicule1Link2
+     */
+    public ViewLinkImpl getFkVehicule1Link2() {
+        return (ViewLinkImpl) findViewLink("FkVehicule1Link2");
+    }
+
+    /**
+     * Container's getter for FkVehicule2Link2.
+     * @return FkVehicule2Link2
+     */
+    public ViewLinkImpl getFkVehicule2Link2() {
+        return (ViewLinkImpl) findViewLink("FkVehicule2Link2");
+    }
+
+    /**
+     * Container's getter for FkVehicule3Link2.
+     * @return FkVehicule3Link2
+     */
+    public ViewLinkImpl getFkVehicule3Link2() {
+        return (ViewLinkImpl) findViewLink("FkVehicule3Link2");
+    }
+
+    /**
+     * Container's getter for TransporteurView2.
+     * @return TransporteurView2
+     */
+    public ViewObjectImpl getTransporteurView2() {
+        return (ViewObjectImpl) findViewObject("TransporteurView2");
+    }
+
+    /**
+     * Container's getter for VehiculeView5.
+     * @return VehiculeView5
+     */
+    public ViewObjectImpl getVehiculeView5() {
+        return (ViewObjectImpl) findViewObject("VehiculeView5");
+    }
+
+    /**
+     * Container's getter for TransporteurToVehiculeLink.
+     * @return TransporteurToVehiculeLink
+     */
+    public ViewLinkImpl getTransporteurToVehiculeLink() {
+        return (ViewLinkImpl) findViewLink("TransporteurToVehiculeLink");
+    }
+
+    /**
+     * Container's getter for RegionView4.
+     * @return RegionView4
+     */
+    public RegionViewImpl getRegionView4() {
+        return (RegionViewImpl) findViewObject("RegionView4");
+    }
+
+    /**
+     * Container's getter for VehiculeView6.
+     * @return VehiculeView6
+     */
+    public ViewObjectImpl getVehiculeView6() {
+        return (ViewObjectImpl) findViewObject("VehiculeView6");
+    }
+
+    /**
+     * Container's getter for RegionToVehiculeLink.
+     * @return RegionToVehiculeLink
+     */
+    public ViewLinkImpl getRegionToVehiculeLink() {
+        return (ViewLinkImpl) findViewLink("RegionToVehiculeLink");
+    }
+
+    /**
+     * Container's getter for TypevehiculeView3.
+     * @return TypevehiculeView3
+     */
+    public ViewObjectImpl getTypevehiculeView3() {
+        return (ViewObjectImpl) findViewObject("TypevehiculeView3");
+    }
+
+    /**
+     * Container's getter for VehiculeView7.
+     * @return VehiculeView7
+     */
+    public ViewObjectImpl getVehiculeView7() {
+        return (ViewObjectImpl) findViewObject("VehiculeView7");
+    }
+
+    /**
+     * Container's getter for TypeVehiculeToVehiculeLink.
+     * @return TypeVehiculeToVehiculeLink
+     */
+    public ViewLinkImpl getTypeVehiculeToVehiculeLink() {
+        return (ViewLinkImpl) findViewLink("TypeVehiculeToVehiculeLink");
+    }
+
+    /**
+     * Container's getter for getLastIdTransporteur1.
+     * @return getLastIdTransporteur1
+     */
+    public ViewObjectImpl getgetLastIdTransporteur1() {
+        return (ViewObjectImpl) findViewObject("getLastIdTransporteur1");
+    }
+
+    /**
+     * Container's getter for getLastIdVehicule1.
+     * @return getLastIdVehicule1
+     */
+    public ViewObjectImpl getgetLastIdVehicule1() {
+        return (ViewObjectImpl) findViewObject("getLastIdVehicule1");
+    }
+
+    /**
+     * Container's getter for TypeVehiculeForMeView1.
+     * @return TypeVehiculeForMeView1
+     */
+    public ViewObjectImpl getTypeVehiculeForMeView1() {
+        return (ViewObjectImpl) findViewObject("TypeVehiculeForMeView1");
+    }
+
+    /**
+     * Container's getter for RegionView5.
+     * @return RegionView5
+     */
+    public RegionViewImpl getRegionView5() {
+        return (RegionViewImpl) findViewObject("RegionView5");
+    }
+
+    /**
+     * Container's getter for RegionView6.
+     * @return RegionView6
+     */
+    public RegionViewImpl getRegionView6() {
+        return (RegionViewImpl) findViewObject("RegionView6");
+    }
+
+    /**
+     * Container's getter for RegionToVehiculeLink1.
+     * @return RegionToVehiculeLink1
+     */
+    public ViewLinkImpl getRegionToVehiculeLink1() {
+        return (ViewLinkImpl) findViewLink("RegionToVehiculeLink1");
+    }
 }
 

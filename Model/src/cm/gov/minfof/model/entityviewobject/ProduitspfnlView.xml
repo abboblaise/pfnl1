@@ -12,15 +12,23 @@
   <DesignTime>
     <Attr Name="_isExpertMode" Value="true"/>
   </DesignTime>
-  <SQLQuery><![CDATA[SELECT PfnlProduitspfnl.idproduitspfnl,
-       PfnlProduitspfnl.nomscientifique,
-       PfnlProduitspfnl.nomcommercial,
-       PfnlProduitspfnl.nomvernaculaire,
-       PfnlProduitspfnl.codeproduit,
-       PfnlProduitspfnl.idfamillepfnl,
-       PfnlProduitspfnl.descriptionsommaire,
-       PfnlProduitspfnl.modeattribution
-FROM pfnl.produitspfnl PfnlProduitspfnl]]></SQLQuery>
+  <SQLQuery><![CDATA[SELECT 
+    PfnlProduitspfnl.idproduitspfnl, 
+    PfnlProduitspfnl.nomscientifique, 
+    PfnlProduitspfnl.nomcommercial, 
+    PfnlProduitspfnl.nomvernaculaire, 
+    PfnlProduitspfnl.codeproduit, 
+    PfnlProduitspfnl.idfamillepfnl, 
+    PfnlProduitspfnl.descriptionsommaire, 
+    PfnlProduitspfnl.modeattribution, 
+    PfnlProduitspfnl.idcategorie idcategorie, 
+    PfnlProduitspfnl.idunitemesure idunitemesure, 
+    PfnlProduitspfnl.idunitemesureexport idunitemesureexport 
+FROM 
+    pfnl.produitspfnl PfnlProduitspfnl]]></SQLQuery>
+  <EntityUsage
+    Name="ProduitsPfnl"
+    Entity="cm.gov.minfof.model.entity.ProduitsPfnl"/>
   <ViewAttribute
     Name="Idproduitspfnl"
     IsUpdateable="false"
@@ -120,7 +128,7 @@ FROM pfnl.produitspfnl PfnlProduitspfnl]]></SQLQuery>
     ColumnType="LONGTEXT"
     AliasName="descriptionsommaire"
     Expression="descriptionsommaire"
-    SQLType="STRUCT"/>
+    SQLType="$none$"/>
   <ViewAttribute
     Name="Modeattribution"
     IsUpdateable="false"
@@ -136,6 +144,20 @@ FROM pfnl.produitspfnl PfnlProduitspfnl]]></SQLQuery>
       <Attr Name="_DisplaySize" Value="60"/>
     </DesignTime>
   </ViewAttribute>
+  <ViewAttribute
+    Name="Idcategorie"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Type="java.math.BigDecimal"
+    ColumnType="BIGINT"
+    AliasName="idcategorie"
+    Expression="idcategorie"
+    SQLType="NUMERIC">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="20"/>
+    </DesignTime>
+  </ViewAttribute>
   <AttrArray Name="KeyAttributes">
     <Item Value="Idproduitspfnl"/>
   </AttrArray>
@@ -148,5 +170,11 @@ FROM pfnl.produitspfnl PfnlProduitspfnl]]></SQLQuery>
     Name="PartiesproduitspfnlView"
     ViewLink="cm.gov.minfof.model.entityviewobject.FkPartiesproduitspfnl2Link"
     Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="CategorieproduitView"
+    ViewLink="cm.gov.minfof.model.entityviewobject.CategToProduitLink"
+    Type="oracle.jbo.server.ViewRowImpl"
+    Reversed="true"
     IsUpdateable="false"/>
 </ViewObject>

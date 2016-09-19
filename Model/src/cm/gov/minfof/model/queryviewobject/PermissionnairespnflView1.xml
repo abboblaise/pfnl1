@@ -196,20 +196,6 @@ FROM pfnl.PermissionnairesPNFL PfnlPermissionnairespnfl]]></SQLQuery>
     </DesignTime>
   </ViewAttribute>
   <ViewAttribute
-    Name="Qualite"
-    IsUpdateable="false"
-    IsPersistent="false"
-    PrecisionRule="true"
-    Type="java.lang.Integer"
-    ColumnType="TINYINT"
-    AliasName="Qualite"
-    Expression="Qualite"
-    SQLType="INTEGER">
-    <DesignTime>
-      <Attr Name="_DisplaySize" Value="3"/>
-    </DesignTime>
-  </ViewAttribute>
-  <ViewAttribute
     Name="Nui"
     IsUpdateable="false"
     IsPersistent="false"
@@ -287,20 +273,6 @@ FROM pfnl.PermissionnairesPNFL PfnlPermissionnairespnfl]]></SQLQuery>
     ColumnType="TINYINT"
     AliasName="Sexe"
     Expression="Sexe"
-    SQLType="INTEGER">
-    <DesignTime>
-      <Attr Name="_DisplaySize" Value="3"/>
-    </DesignTime>
-  </ViewAttribute>
-  <ViewAttribute
-    Name="Qualiteexploitant"
-    IsUpdateable="false"
-    IsPersistent="false"
-    PrecisionRule="true"
-    Type="java.lang.Integer"
-    ColumnType="TINYINT"
-    AliasName="Qualiteexploitant"
-    Expression="Qualiteexploitant"
     SQLType="INTEGER">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="3"/>

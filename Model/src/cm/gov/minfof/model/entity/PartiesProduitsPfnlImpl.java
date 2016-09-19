@@ -25,6 +25,8 @@ public class PartiesProduitsPfnlImpl extends EntityImpl {
         Idpartiesrecoltees,
         Idproduitspfnl,
         Estunproduitpfnl,
+        Idunitemesure,
+        Idunitemesureexport,
         PartiesProduitsPfnl,
         IdpartiesrecolteesPartiesProduitsPfnl,
         PartiesProduitsPfnl1,
@@ -35,9 +37,10 @@ public class PartiesProduitsPfnlImpl extends EntityImpl {
         FamillePfnl1,
         ProduitsPfnl,
         ProduitsPfnl1,
-        ProduitsPfnl2;
+        ProduitsPfnl2,
+        Unitemesure,
+        Unitemesure1;
         private static AttributesEnum[] vals = null;
-        ;
         private static final int firstIndex = 0;
 
         protected int index() {
@@ -65,6 +68,8 @@ public class PartiesProduitsPfnlImpl extends EntityImpl {
     public static final int IDPARTIESRECOLTEES = AttributesEnum.Idpartiesrecoltees.index();
     public static final int IDPRODUITSPFNL = AttributesEnum.Idproduitspfnl.index();
     public static final int ESTUNPRODUITPFNL = AttributesEnum.Estunproduitpfnl.index();
+    public static final int IDUNITEMESURE = AttributesEnum.Idunitemesure.index();
+    public static final int IDUNITEMESUREEXPORT = AttributesEnum.Idunitemesureexport.index();
     public static final int PARTIESPRODUITSPFNL = AttributesEnum.PartiesProduitsPfnl.index();
     public static final int IDPARTIESRECOLTEESPARTIESPRODUITSPFNL =
         AttributesEnum.IdpartiesrecolteesPartiesProduitsPfnl.index();
@@ -78,6 +83,8 @@ public class PartiesProduitsPfnlImpl extends EntityImpl {
     public static final int PRODUITSPFNL = AttributesEnum.ProduitsPfnl.index();
     public static final int PRODUITSPFNL1 = AttributesEnum.ProduitsPfnl1.index();
     public static final int PRODUITSPFNL2 = AttributesEnum.ProduitsPfnl2.index();
+    public static final int UNITEMESURE = AttributesEnum.Unitemesure.index();
+    public static final int UNITEMESURE1 = AttributesEnum.Unitemesure1.index();
 
     /**
      * This is the default constructor (do not remove).
@@ -155,6 +162,38 @@ public class PartiesProduitsPfnlImpl extends EntityImpl {
      */
     public void setEstunproduitpfnl(Integer value) {
         setAttributeInternal(ESTUNPRODUITPFNL, value);
+    }
+
+    /**
+     * Gets the attribute value for Idunitemesure, using the alias name Idunitemesure.
+     * @return the value of Idunitemesure
+     */
+    public BigDecimal getIdunitemesure() {
+        return (BigDecimal) getAttributeInternal(IDUNITEMESURE);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for Idunitemesure.
+     * @param value value to set the Idunitemesure
+     */
+    public void setIdunitemesure(BigDecimal value) {
+        setAttributeInternal(IDUNITEMESURE, value);
+    }
+
+    /**
+     * Gets the attribute value for Idunitemesureexport, using the alias name Idunitemesureexport.
+     * @return the value of Idunitemesureexport
+     */
+    public BigDecimal getIdunitemesureexport() {
+        return (BigDecimal) getAttributeInternal(IDUNITEMESUREEXPORT);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for Idunitemesureexport.
+     * @param value value to set the Idunitemesureexport
+     */
+    public void setIdunitemesureexport(BigDecimal value) {
+        setAttributeInternal(IDUNITEMESUREEXPORT, value);
     }
 
     /**
@@ -290,6 +329,27 @@ public class PartiesProduitsPfnlImpl extends EntityImpl {
         return (RowIterator) getAttributeInternal(PRODUITSPFNL2);
     }
 
+
+    /**
+     * @return the associated entity oracle.jbo.RowIterator.
+     */
+    public RowIterator getUnitemesure() {
+        return (RowIterator) getAttributeInternal(UNITEMESURE);
+    }
+
+    /**
+     * @return the associated entity UnitemesureImpl.
+     */
+    public UnitemesureImpl getUnitemesure1() {
+        return (UnitemesureImpl) getAttributeInternal(UNITEMESURE1);
+    }
+
+    /**
+     * Sets <code>value</code> as the associated entity UnitemesureImpl.
+     */
+    public void setUnitemesure1(UnitemesureImpl value) {
+        setAttributeInternal(UNITEMESURE1, value);
+    }
 
     /**
      * @param idpartiesproduitspfnl key constituent

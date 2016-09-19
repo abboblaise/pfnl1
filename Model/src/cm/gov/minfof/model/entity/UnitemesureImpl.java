@@ -30,7 +30,9 @@ public class UnitemesureImpl extends EntityImpl {
         Arrondi,
         Unitemesure,
         IdcategorieUnitemesure,
-        Categorieunitemesure;
+        Categorieunitemesure,
+        PartiesProduitsPfnl,
+        PartiesProduitsPfnl1;
         private static AttributesEnum[] vals = null;
         private static final int firstIndex = 0;
 
@@ -54,6 +56,7 @@ public class UnitemesureImpl extends EntityImpl {
         }
     }
 
+
     public static final int IDUNITEMESURE = AttributesEnum.Idunitemesure.index();
     public static final int LIBELLEUNITEMESURE = AttributesEnum.Libelleunitemesure.index();
     public static final int IDCATEGORIE = AttributesEnum.Idcategorie.index();
@@ -64,6 +67,8 @@ public class UnitemesureImpl extends EntityImpl {
     public static final int UNITEMESURE = AttributesEnum.Unitemesure.index();
     public static final int IDCATEGORIEUNITEMESURE = AttributesEnum.IdcategorieUnitemesure.index();
     public static final int CATEGORIEUNITEMESURE = AttributesEnum.Categorieunitemesure.index();
+    public static final int PARTIESPRODUITSPFNL = AttributesEnum.PartiesProduitsPfnl.index();
+    public static final int PARTIESPRODUITSPFNL1 = AttributesEnum.PartiesProduitsPfnl1.index();
 
     /**
      * This is the default constructor (do not remove).
@@ -77,6 +82,7 @@ public class UnitemesureImpl extends EntityImpl {
     public static synchronized EntityDefImpl getDefinitionObject() {
         return EntityDefImpl.findDefObject("cm.gov.minfof.model.entity.Unitemesure");
     }
+
 
     /**
      * Gets the attribute value for Idunitemesure, using the alias name Idunitemesure.
@@ -227,6 +233,28 @@ public class UnitemesureImpl extends EntityImpl {
 
 
     /**
+     * @return the associated entity PartiesProduitsPfnlImpl.
+     */
+    public PartiesProduitsPfnlImpl getPartiesProduitsPfnl() {
+        return (PartiesProduitsPfnlImpl) getAttributeInternal(PARTIESPRODUITSPFNL);
+    }
+
+    /**
+     * Sets <code>value</code> as the associated entity PartiesProduitsPfnlImpl.
+     */
+    public void setPartiesProduitsPfnl(PartiesProduitsPfnlImpl value) {
+        setAttributeInternal(PARTIESPRODUITSPFNL, value);
+    }
+
+    /**
+     * @return the associated entity oracle.jbo.RowIterator.
+     */
+    public RowIterator getPartiesProduitsPfnl1() {
+        return (RowIterator) getAttributeInternal(PARTIESPRODUITSPFNL1);
+    }
+
+
+    /**
      * @param idunitemesure key constituent
 
      * @return a Key object based on given key constituents.
@@ -264,6 +292,7 @@ public class UnitemesureImpl extends EntityImpl {
      */
     protected void doDML(int operation, TransactionEvent e) {
         if (operation == DML_INSERT) {
+            System.out.println("actif = " + getActif());
             BigDecimal id = getLastId("getLastIdUnitMesure1");
             setIdunitemesure(id);
         }

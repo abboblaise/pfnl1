@@ -113,7 +113,8 @@
     SQLType="INTEGER"
     Type="java.lang.Integer"
     ColumnType="TINYINT"
-    TableName="unitemesure">
+    TableName="unitemesure"
+    DefaultValue="1">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="10"/>
     </DesignTime>
@@ -158,6 +159,20 @@
     AssociationOtherEnd="cm.gov.minfof.model.entity.CategToUnitAssoc.Unitemesure"
     Type="cm.gov.minfof.model.entity.CategorieunitemesureImpl"
     IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="PartiesProduitsPfnl"
+    Association="cm.gov.minfof.model.entity.PartieProdToUniteMesureAssoc"
+    AssociationEnd="cm.gov.minfof.model.entity.PartieProdToUniteMesureAssoc.PartiesProduitsPfnl"
+    AssociationOtherEnd="cm.gov.minfof.model.entity.PartieProdToUniteMesureAssoc.Unitemesure"
+    Type="cm.gov.minfof.model.entity.PartiesProduitsPfnlImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="PartiesProduitsPfnl1"
+    Association="cm.gov.minfof.model.entity.PartieProdToUniteMesureExportAssoc"
+    AssociationEnd="cm.gov.minfof.model.entity.PartieProdToUniteMesureExportAssoc.PartiesProduitsPfnl1"
+    AssociationOtherEnd="cm.gov.minfof.model.entity.PartieProdToUniteMesureExportAssoc.Unitemesure1"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
   <Key
     Name="Primary1"
     PrimaryKey="true">
@@ -221,6 +236,17 @@
     </DesignTime>
     <AttrArray Name="Attributes">
       <Item Value="cm.gov.minfof.model.entity.Unitemesure.Idcategorie"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="fk_Unitemesure2">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="Partiesproduitspfnl_Idunitemes"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="fk_Unitemesure2"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="cm.gov.minfof.model.entity.Unitemesure.Idunitemesure"/>
     </AttrArray>
   </Key>
   <ResourceBundle>

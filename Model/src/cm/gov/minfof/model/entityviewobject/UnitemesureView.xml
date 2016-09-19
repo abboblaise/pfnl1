@@ -24,8 +24,9 @@
   <ListBinding
     Name="LOV_Idcategorie"
     ListVOName="CategorieunitemesureView1"
-    NullValueFlag="none"
-    MRUCount="0">
+    NullValueFlag="start"
+    MRUCount="0"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}">
     <AttrArray Name="AttrNames">
       <Item Value="Idcategorie"/>
     </AttrArray>
@@ -132,6 +133,18 @@
     Name="CategorieunitemesureView"
     ViewLink="cm.gov.minfof.model.entityviewobject.CategToUnitLink"
     Type="oracle.jbo.server.ViewRowImpl"
+    Reversed="true"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="PartiesProduitsPfnlView"
+    ViewLink="cm.gov.minfof.model.entityviewobject.PartieProdToUniteMesureLink"
+    Type="cm.gov.minfof.model.entity.PartiesProduitsPfnlViewRowImpl"
+    Reversed="true"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="PartiesProduitsPfnlView1"
+    ViewLink="cm.gov.minfof.model.entityviewobject.PartieProdToUniteMesureExport"
+    Type="oracle.jbo.RowIterator"
     Reversed="true"
     IsUpdateable="false"/>
 </ViewObject>

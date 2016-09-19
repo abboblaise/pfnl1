@@ -92,24 +92,6 @@
     <DisplayCriteria/>
   </ListBinding>
   <ListBinding
-    Name="LOV_Qualiteexploitant"
-    ListVOName="listeExploitant1"
-    NullValueFlag="start"
-    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
-    MRUCount="0">
-    <AttrArray Name="AttrNames">
-      <Item Value="Qualiteexploitant"/>
-    </AttrArray>
-    <AttrArray Name="AttrExpressions"/>
-    <AttrArray Name="ListAttrNames">
-      <Item Value="idExploitant"/>
-    </AttrArray>
-    <AttrArray Name="ListDisplayAttrNames">
-      <Item Value="qualiteExploitant"/>
-    </AttrArray>
-    <DisplayCriteria/>
-  </ListBinding>
-  <ListBinding
     Name="LOV_Iddepartements"
     ListVOName="DepartementView1"
     NullValueFlag="start"
@@ -232,12 +214,6 @@
     EntityUsage="Permissionnairespnfl"
     AliasName="IDPermissionnairesPNFL"/>
   <ViewAttribute
-    Name="Qualite"
-    PrecisionRule="true"
-    EntityAttrName="Qualite"
-    EntityUsage="Permissionnairespnfl"
-    AliasName="Qualite"/>
-  <ViewAttribute
     Name="Nui"
     PrecisionRule="true"
     EntityAttrName="Nui"
@@ -290,20 +266,6 @@
     EntityUsage="Permissionnairespnfl"
     AliasName="Sexe"
     LOVName="LOV_Sexe">
-    <Properties>
-      <SchemaBasedProperties>
-        <CONTROLTYPE
-          Value="choice"/>
-      </SchemaBasedProperties>
-    </Properties>
-  </ViewAttribute>
-  <ViewAttribute
-    Name="Qualiteexploitant"
-    PrecisionRule="true"
-    EntityAttrName="Qualiteexploitant"
-    EntityUsage="Permissionnairespnfl"
-    AliasName="Qualiteexploitant"
-    LOVName="LOV_Qualiteexploitant">
     <Properties>
       <SchemaBasedProperties>
         <CONTROLTYPE

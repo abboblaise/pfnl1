@@ -156,6 +156,23 @@
       </SchemaBasedProperties>
     </Properties>
   </Attribute>
+  <Attribute
+    Name="Idcategorie"
+    ColumnName="idcategorie"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="BIGINT"
+    TableName="produitspfnl">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="19"/>
+    </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="cm.gov.minfof.model.entity.ProduitsPfnl.Idcategorie_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
   <AccessorAttribute
     Name="ProduitsPfnl"
     Association="cm.gov.minfof.model.entity.ProduitspfnlIbfk1Assoc"
@@ -205,6 +222,13 @@
     AssociationOtherEnd="cm.gov.minfof.model.entity.ProduitspfnlIbfk1Assoc3.ProduitsPfnl2"
     Type="oracle.jbo.server.EntityImpl"
     IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="Categorieproduit"
+    Association="cm.gov.minfof.model.entity.CategToProduitAssoc"
+    AssociationEnd="cm.gov.minfof.model.entity.CategToProduitAssoc.Categorieproduit"
+    AssociationOtherEnd="cm.gov.minfof.model.entity.CategToProduitAssoc.ProduitsPfnl"
+    Type="cm.gov.minfof.model.entity.CategorieproduitImpl"
+    IsUpdateable="true"/>
   <Key
     Name="Codeproduit1">
     <DesignTime>
@@ -223,6 +247,18 @@
     </DesignTime>
     <AttrArray Name="Attributes">
       <Item Value="cm.gov.minfof.model.entity.ProduitsPfnl.Idproduitspfnl"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="ProduitspfnlIdunitemesureCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"idunitemesure" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="Produitspfnl_Idunitemesure_Che"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="cm.gov.minfof.model.entity.ProduitsPfnl.Idunitemesure"/>
     </AttrArray>
   </Key>
   <Key
@@ -246,6 +282,17 @@
     </DesignTime>
     <AttrArray Name="Attributes">
       <Item Value="cm.gov.minfof.model.entity.ProduitsPfnl.Idfamillepfnl"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="fk_ProduitsPfnl1">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="PRIMARY"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="fk_Produits_Pfnl1"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="cm.gov.minfof.model.entity.ProduitsPfnl.Idcategorie"/>
     </AttrArray>
   </Key>
   <ResourceBundle>

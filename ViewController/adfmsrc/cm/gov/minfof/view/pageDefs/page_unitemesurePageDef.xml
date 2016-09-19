@@ -9,6 +9,21 @@
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="UnitemesureView1Query"/>
   </executables>
   <bindings>
+    <list IterBinding="UnitemesureView1Iterator" StaticList="false" Uses="LOV_Idcategorie" id="Idcategorie"
+          DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
+    <action IterBinding="UnitemesureView1Iterator" id="CreateInsert" RequiresUpdateModel="true"
+            Action="createInsertRow"/>
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
+    <action IterBinding="UnitemesureView1Iterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
+    <button IterBinding="UnitemesureView1Iterator" id="Actif" DTSupportsMRU="false" StaticList="true">
+      <AttrNames>
+        <Item Value="Actif"/>
+      </AttrNames>
+      <ValueList>
+        <Item Value="1"/>
+        <Item Value="0"/>
+      </ValueList>
+    </button>
     <attributeValues IterBinding="UnitemesureView1Iterator" id="Idunitemesure">
       <AttrNames>
         <Item Value="Idunitemesure"/>
@@ -19,7 +34,7 @@
         <Item Value="Libelleunitemesure"/>
       </AttrNames>
     </attributeValues>
-    <list IterBinding="UnitemesureView1Iterator" StaticList="false" Uses="LOV_Idcategorie" id="Idcategorie"
+    <list IterBinding="UnitemesureView1Iterator" StaticList="false" Uses="LOV_Ordregrandeur" id="Ordregrandeur"
           DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
     <attributeValues IterBinding="UnitemesureView1Iterator" id="Ratio">
       <AttrNames>
@@ -31,10 +46,6 @@
         <Item Value="Arrondi"/>
       </AttrNames>
     </attributeValues>
-    <action IterBinding="UnitemesureView1Iterator" id="CreateInsert" RequiresUpdateModel="true"
-            Action="createInsertRow"/>
-    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
-    <action IterBinding="UnitemesureView1Iterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
     <tree IterBinding="UnitemesureView1Iterator" id="UnitemesureView1">
       <nodeDefinition DefName="cm.gov.minfof.model.entityviewobject.UnitemesureView" Name="UnitemesureView10">
         <AttrNames>
@@ -43,21 +54,10 @@
           <Item Value="Idcategorie"/>
           <Item Value="Ordregrandeur"/>
           <Item Value="Ratio"/>
+          <Item Value="Actif"/>
           <Item Value="Arrondi"/>
-          <Item Value="Actif" Binds="Actif"/>
         </AttrNames>
       </nodeDefinition>
     </tree>
-    <list IterBinding="UnitemesureView1Iterator" StaticList="false" Uses="LOV_Ordregrandeur" id="Ordregrandeur"
-          DTSupportsMRU="true" SelectItemValueMode="ListObject"/>
-    <button IterBinding="UnitemesureView1Iterator" id="Actif" DTSupportsMRU="false" StaticList="true">
-      <AttrNames>
-        <Item Value="Actif"/>
-      </AttrNames>
-      <ValueList>
-        <Item Value="1"/>
-        <Item Value="0"/>
-      </ValueList>
-    </button>
   </bindings>
 </pageDefinition>

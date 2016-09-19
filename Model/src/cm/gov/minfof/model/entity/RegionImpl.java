@@ -79,9 +79,9 @@ public class RegionImpl extends EntityImpl {
         Descriptionregions,
         Cheflieuregion,
         Departement,
-        Commune;
+        Commune,
+        Vehicule;
         private static AttributesEnum[] vals = null;
-        ;
         private static final int firstIndex = 0;
 
         protected int index() {
@@ -112,6 +112,7 @@ public class RegionImpl extends EntityImpl {
     public static final int CHEFLIEUREGION = AttributesEnum.Cheflieuregion.index();
     public static final int DEPARTEMENT = AttributesEnum.Departement.index();
     public static final int COMMUNE = AttributesEnum.Commune.index();
+    public static final int VEHICULE = AttributesEnum.Vehicule.index();
 
     /**
      * This is the default constructor (do not remove).
@@ -219,6 +220,14 @@ public class RegionImpl extends EntityImpl {
      */
     public RowIterator getCommune() {
         return (RowIterator) getAttributeInternal(COMMUNE);
+    }
+
+
+    /**
+     * @return the associated entity oracle.jbo.RowIterator.
+     */
+    public RowIterator getVehicule() {
+        return (RowIterator) getAttributeInternal(VEHICULE);
     }
 
 

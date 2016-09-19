@@ -19,11 +19,12 @@ public class PartiesproduitspfnlViewRowImpl extends ViewRowImpl {
         Idpartiesrecoltees,
         Idproduitspfnl,
         Estunproduitpfnl,
+        Idunitemesure,
+        Idunitemesureexport,
         ProduitspfnlView,
         IdproduitspfnlPartiesproduitspfnlView,
         IdpartiesrecolteesPartiesproduitspfnlView;
         private static AttributesEnum[] vals = null;
-        ;
         private static final int firstIndex = 0;
 
         protected int index() {
@@ -51,6 +52,8 @@ public class PartiesproduitspfnlViewRowImpl extends ViewRowImpl {
     public static final int IDPARTIESRECOLTEES = AttributesEnum.Idpartiesrecoltees.index();
     public static final int IDPRODUITSPFNL = AttributesEnum.Idproduitspfnl.index();
     public static final int ESTUNPRODUITPFNL = AttributesEnum.Estunproduitpfnl.index();
+    public static final int IDUNITEMESURE = AttributesEnum.Idunitemesure.index();
+    public static final int IDUNITEMESUREEXPORT = AttributesEnum.Idunitemesureexport.index();
     public static final int PRODUITSPFNLVIEW = AttributesEnum.ProduitspfnlView.index();
     public static final int IDPRODUITSPFNLPARTIESPRODUITSPFNLVIEW =
         AttributesEnum.IdproduitspfnlPartiesproduitspfnlView.index();
@@ -95,6 +98,22 @@ public class PartiesproduitspfnlViewRowImpl extends ViewRowImpl {
         return (Integer) getAttributeInternal(ESTUNPRODUITPFNL);
     }
 
+
+    /**
+     * Gets the attribute value for the calculated attribute Idunitemesure.
+     * @return the Idunitemesure
+     */
+    public BigDecimal getIdunitemesure() {
+        return (BigDecimal) getAttributeInternal(IDUNITEMESURE);
+    }
+
+    /**
+     * Gets the attribute value for the calculated attribute Idunitemesureexport.
+     * @return the Idunitemesureexport
+     */
+    public BigDecimal getIdunitemesureexport() {
+        return (BigDecimal) getAttributeInternal(IDUNITEMESUREEXPORT);
+    }
 
     /**
      * Gets the associated <code>RowIterator</code> using master-detail link ProduitspfnlView.

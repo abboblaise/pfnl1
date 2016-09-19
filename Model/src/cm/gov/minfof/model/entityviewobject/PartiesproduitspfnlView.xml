@@ -15,11 +15,15 @@
     <Attr Name="_codeGenFlag2" Value="Access"/>
     <Attr Name="_isCodegen" Value="true"/>
   </DesignTime>
-  <SQLQuery><![CDATA[SELECT PfnlPartiesproduitspfnl.idpartiesproduitspfnl,
-       PfnlPartiesproduitspfnl.idpartiesrecoltees,
-       PfnlPartiesproduitspfnl.idproduitspfnl,
-       PfnlPartiesproduitspfnl.estunproduitpfnl
-FROM pfnl.partiesproduitspfnl PfnlPartiesproduitspfnl]]></SQLQuery>
+  <SQLQuery><![CDATA[SELECT 
+    PfnlPartiesproduitspfnl.idpartiesproduitspfnl, 
+    PfnlPartiesproduitspfnl.idpartiesrecoltees, 
+    PfnlPartiesproduitspfnl.idproduitspfnl, 
+    PfnlPartiesproduitspfnl.estunproduitpfnl, 
+    PfnlPartiesproduitspfnl.idunitemesure idunitemesure, 
+    PfnlPartiesproduitspfnl.idunitemesureexport idunitemesureexport 
+FROM 
+    pfnl.partiesproduitspfnl PfnlPartiesproduitspfnl]]></SQLQuery>
   <ViewAttribute
     Name="Idpartiesproduitspfnl"
     IsUpdateable="false"
@@ -75,6 +79,34 @@ FROM pfnl.partiesproduitspfnl PfnlPartiesproduitspfnl]]></SQLQuery>
     SQLType="INTEGER">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="3"/>
+    </DesignTime>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="Idunitemesure"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Type="java.math.BigDecimal"
+    ColumnType="BIGINT"
+    AliasName="idunitemesure"
+    Expression="idunitemesure"
+    SQLType="NUMERIC">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="20"/>
+    </DesignTime>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="Idunitemesureexport"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Type="java.math.BigDecimal"
+    ColumnType="BIGINT"
+    AliasName="idunitemesureexport"
+    Expression="idunitemesureexport"
+    SQLType="NUMERIC">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="20"/>
     </DesignTime>
   </ViewAttribute>
   <AttrArray Name="KeyAttributes">

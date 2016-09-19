@@ -12,6 +12,8 @@ import oracle.jbo.server.ViewRowImpl;
 // ---    Warning: Do not modify method signatures of generated methods.
 // ---------------------------------------------------------------------
 public class PartiesProduitsPfnlViewRowImpl extends ViewRowImpl {
+
+
     public static final int ENTITY_PARTIESPRODUITSPFNL = 0;
 
     /**
@@ -22,11 +24,16 @@ public class PartiesProduitsPfnlViewRowImpl extends ViewRowImpl {
         Idpartiesrecoltees,
         Idproduitspfnl,
         Estunproduitpfnl,
+        Idunitemesure,
+        Idunitemesureexport,
         estUnProduitPfnlTransient,
         PartiesProduitsPfnlView,
         PartiesProduitsPfnlView1,
-        ProduitsPfnlView;
+        ProduitsPfnlView,
+        UnitemesureView,
+        UnitemesureView1;
         private static AttributesEnum[] vals = null;
+        ;
         private static final int firstIndex = 0;
 
         protected int index() {
@@ -48,14 +55,20 @@ public class PartiesProduitsPfnlViewRowImpl extends ViewRowImpl {
             return vals;
         }
     }
+
+
     public static final int IDPARTIESPRODUITSPFNL = AttributesEnum.Idpartiesproduitspfnl.index();
     public static final int IDPARTIESRECOLTEES = AttributesEnum.Idpartiesrecoltees.index();
     public static final int IDPRODUITSPFNL = AttributesEnum.Idproduitspfnl.index();
     public static final int ESTUNPRODUITPFNL = AttributesEnum.Estunproduitpfnl.index();
+    public static final int IDUNITEMESURE = AttributesEnum.Idunitemesure.index();
+    public static final int IDUNITEMESUREEXPORT = AttributesEnum.Idunitemesureexport.index();
     public static final int ESTUNPRODUITPFNLTRANSIENT = AttributesEnum.estUnProduitPfnlTransient.index();
     public static final int PARTIESPRODUITSPFNLVIEW = AttributesEnum.PartiesProduitsPfnlView.index();
     public static final int PARTIESPRODUITSPFNLVIEW1 = AttributesEnum.PartiesProduitsPfnlView1.index();
     public static final int PRODUITSPFNLVIEW = AttributesEnum.ProduitsPfnlView.index();
+    public static final int UNITEMESUREVIEW = AttributesEnum.UnitemesureView.index();
+    public static final int UNITEMESUREVIEW1 = AttributesEnum.UnitemesureView1.index();
 
     /**
      * This is the default constructor (do not remove).
@@ -67,8 +80,8 @@ public class PartiesProduitsPfnlViewRowImpl extends ViewRowImpl {
      * Gets PartiesProduitsPfnl entity object.
      * @return the PartiesProduitsPfnl
      */
-    public EntityImpl getPartiesProduitsPfnl() {
-        return (EntityImpl) getEntity(ENTITY_PARTIESPRODUITSPFNL);
+    public PartiesProduitsPfnlImpl getPartiesProduitsPfnl() {
+        return (PartiesProduitsPfnlImpl) getEntity(ENTITY_PARTIESPRODUITSPFNL);
     }
 
     /**
@@ -167,6 +180,38 @@ public class PartiesProduitsPfnlViewRowImpl extends ViewRowImpl {
     }
 
     /**
+     * Gets the attribute value for idunitemesure using the alias name Idunitemesure.
+     * @return the idunitemesure
+     */
+    public BigDecimal getIdunitemesure() {
+        return (BigDecimal) getAttributeInternal(IDUNITEMESURE);
+    }
+
+    /**
+     * Sets <code>value</code> as attribute value for idunitemesure using the alias name Idunitemesure.
+     * @param value value to set the idunitemesure
+     */
+    public void setIdunitemesure(BigDecimal value) {
+        setAttributeInternal(IDUNITEMESURE, value);
+    }
+
+    /**
+     * Gets the attribute value for idunitemesureexport using the alias name Idunitemesureexport.
+     * @return the idunitemesureexport
+     */
+    public BigDecimal getIdunitemesureexport() {
+        return (BigDecimal) getAttributeInternal(IDUNITEMESUREEXPORT);
+    }
+
+    /**
+     * Sets <code>value</code> as attribute value for idunitemesureexport using the alias name Idunitemesureexport.
+     * @param value value to set the idunitemesureexport
+     */
+    public void setIdunitemesureexport(BigDecimal value) {
+        setAttributeInternal(IDUNITEMESUREEXPORT, value);
+    }
+
+    /**
      * Gets the associated <code>RowIterator</code> using master-detail link PartiesProduitsPfnlView.
      */
     public RowIterator getPartiesProduitsPfnlView() {
@@ -185,6 +230,27 @@ public class PartiesProduitsPfnlViewRowImpl extends ViewRowImpl {
      */
     public RowIterator getProduitsPfnlView() {
         return (RowIterator) getAttributeInternal(PRODUITSPFNLVIEW);
+    }
+
+    /**
+     * Gets the associated <code>RowIterator</code> using master-detail link UnitemesureView.
+     */
+    public RowIterator getUnitemesureView() {
+        return (RowIterator) getAttributeInternal(UNITEMESUREVIEW);
+    }
+
+    /**
+     * Gets the associated <code>ViewRowImpl</code> using master-detail link UnitemesureView1.
+     */
+    public ViewRowImpl getUnitemesureView1() {
+        return (ViewRowImpl) getAttributeInternal(UNITEMESUREVIEW1);
+    }
+
+    /**
+     * Sets the master-detail link UnitemesureView1 between this object and <code>value</code>.
+     */
+    public void setUnitemesureView1(ViewRowImpl value) {
+        setAttributeInternal(UNITEMESUREVIEW1, value);
     }
 }
 

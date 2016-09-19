@@ -18,6 +18,9 @@
     <page path="/page_unitemesure.jsf" usageId="cm_gov_minfof_view_page_unitemesurePageDef"/>
     <page path="/Page_Permis.jsf" usageId="cm_gov_minfof_view_Page_PermisPageDef"/>
     <page path="/Page_Agrement.jsf" usageId="cm_gov_minfof_view_Page_AgrementPageDef"/>
+    <page path="/page_categorie_produit.jsf" usageId="cm_gov_minfof_view_page_categorie_produitPageDef"/>
+    <page path="/page_transporteur.jsf" usageId="cm_gov_minfof_view_page_transporteurPageDef"/>
+    <page path="/page_vehicule.jsf" usageId="cm_gov_minfof_view_page_vehiculePageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="cm_gov_minfof_view_page_regionPageDef" path="cm.gov.minfof.view.pageDefs.page_regionPageDef"/>
@@ -41,6 +44,10 @@
     <page id="cm_gov_minfof_view_Page_agrementPageDef" path="cm.gov.minfof.view.pageDefs.Page_agrementPageDef"/>
     <page id="cm_gov_minfof_view_Page_PermisPageDef" path="cm.gov.minfof.view.pageDefs.Page_PermisPageDef"/>
     <page id="cm_gov_minfof_view_Page_AgrementPageDef" path="cm.gov.minfof.view.pageDefs.Page_AgrementPageDef"/>
+    <page id="cm_gov_minfof_view_page_categorie_produitPageDef"
+          path="cm.gov.minfof.view.pageDefs.page_categorie_produitPageDef"/>
+    <page id="cm_gov_minfof_view_page_transporteurPageDef" path="cm.gov.minfof.view.pageDefs.page_transporteurPageDef"/>
+    <page id="cm_gov_minfof_view_page_vehiculePageDef" path="cm.gov.minfof.view.pageDefs.page_vehiculePageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="cm.gov.minfof.model.entity"
