@@ -48,6 +48,19 @@
     EntityUsage="PartiesProduitsPfnl"
     AliasName="estunproduitpfnl"/>
   <ViewAttribute
+    Name="Idunitemesure"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Idunitemesure"
+    EntityUsage="PartiesProduitsPfnl"
+    AliasName="idunitemesure"/>
+  <ViewAttribute
+    Name="Idunitemesureexport"
+    PrecisionRule="true"
+    EntityAttrName="Idunitemesureexport"
+    EntityUsage="PartiesProduitsPfnl"
+    AliasName="idunitemesureexport"/>
+  <ViewAttribute
     Name="estUnProduitPfnlTransient"
     IsSelected="false"
     IsPersistent="false"
@@ -70,5 +83,15 @@
     Name="ProduitsPfnlView"
     ViewLink="cm.gov.minfof.model.entity.ProduitspfnlIbfk1Assoc3Link"
     Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="UnitemesureView"
+    ViewLink="cm.gov.minfof.model.entityviewobject.PartieProdToUniteMesureLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="UnitemesureView1"
+    ViewLink="cm.gov.minfof.model.entityviewobject.PartieProdToUniteMesureExport"
+    Type="oracle.jbo.server.ViewRowImpl"
     IsUpdateable="false"/>
 </ViewObject>

@@ -59,11 +59,6 @@
         <Item Value="Idpermissionnairespnfl"/>
       </AttrNames>
     </attributeValues>
-    <attributeValues IterBinding="PermissionnairespnflView1Iterator" id="Qualite">
-      <AttrNames>
-        <Item Value="Qualite"/>
-      </AttrNames>
-    </attributeValues>
     <attributeValues IterBinding="PermissionnairespnflView1Iterator" id="Nui">
       <AttrNames>
         <Item Value="Nui"/>

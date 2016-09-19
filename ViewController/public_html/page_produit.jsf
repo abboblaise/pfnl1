@@ -10,11 +10,11 @@
         <f:facet name="content">
             <af:panelSplitter id="ps1" orientation="vertical">
                 <f:facet name="first">
-                    <af:panelSplitter id="ps2" splitterPosition="730">
+                    <af:panelSplitter id="ps2" splitterPosition="701">
                         <f:facet name="first">
                             <af:panelBox text="#{viewcontrollerBundle.EDITION_DES_PRODUITS}" id="pb1">
                                 <f:facet name="toolbar"/>
-                                <af:panelFormLayout id="pfl1" rows="4">
+                                <af:panelFormLayout id="pfl1" rows="5">
                                     <af:selectOneChoice value="#{bindings.FamillePfnlView1.inputValue}"
                                                         label="#{bindings.FamillePfnlView1.label}"
                                                         required="#{bindings.FamillePfnlView1.hints.mandatory}"
@@ -23,7 +23,15 @@
                                         <f:selectItems value="#{bindings.FamillePfnlView1.items}" id="si1"/>
                                         <f:validator binding="#{bindings.FamillePfnlView1.validator}"/>
                                     </af:selectOneChoice>
-                                    <af:inputText value="#{bindings.Nomscientifique.inputValue}"
+                                            <af:inputText value="#{bindings.Codeproduit.inputValue}"
+                                                          label="#{bindings.Codeproduit.hints.label}"
+                                                          required="#{bindings.Codeproduit.hints.mandatory}"
+                                                          columns="#{bindings.Codeproduit.hints.displayWidth}"
+                                                          maximumLength="#{bindings.Codeproduit.hints.precision}"
+                                                          shortDesc="#{bindings.Codeproduit.hints.tooltip}" id="it5">
+                                                <f:validator binding="#{bindings.Codeproduit.validator}"/>
+                                            </af:inputText>
+                                            <af:inputText value="#{bindings.Nomscientifique.inputValue}"
                                                   label="#{bindings.Nomscientifique.hints.label}"
                                                   required="#{bindings.Nomscientifique.hints.mandatory}"
                                                   columns="#{bindings.Nomscientifique.hints.displayWidth}"
@@ -38,22 +46,6 @@
                                                   maximumLength="#{bindings.Nomcommercial.hints.precision}"
                                                   shortDesc="#{bindings.Nomcommercial.hints.tooltip}" id="it3">
                                         <f:validator binding="#{bindings.Nomcommercial.validator}"/>
-                                    </af:inputText>
-                                    <af:inputText value="#{bindings.Nomvernaculaire.inputValue}"
-                                                  label="#{bindings.Nomvernaculaire.hints.label}"
-                                                  required="#{bindings.Nomvernaculaire.hints.mandatory}"
-                                                  columns="#{bindings.Nomvernaculaire.hints.displayWidth}"
-                                                  maximumLength="#{bindings.Nomvernaculaire.hints.precision}"
-                                                  shortDesc="#{bindings.Nomvernaculaire.hints.tooltip}" id="it4">
-                                        <f:validator binding="#{bindings.Nomvernaculaire.validator}"/>
-                                    </af:inputText>
-                                    <af:inputText value="#{bindings.Codeproduit.inputValue}"
-                                                  label="#{bindings.Codeproduit.hints.label}"
-                                                  required="#{bindings.Codeproduit.hints.mandatory}"
-                                                  columns="#{bindings.Codeproduit.hints.displayWidth}"
-                                                  maximumLength="#{bindings.Codeproduit.hints.precision}"
-                                                  shortDesc="#{bindings.Codeproduit.hints.tooltip}" id="it5">
-                                        <f:validator binding="#{bindings.Codeproduit.validator}"/>
                                     </af:inputText>
                                     <af:inputText value="#{bindings.Idfamillepfnl.inputValue}"
                                                   label="#{bindings.Idfamillepfnl.hints.label}"
@@ -82,7 +74,15 @@
                                                   shortDesc="#{bindings.Modeattribution.hints.tooltip}" id="it8">
                                         <f:validator binding="#{bindings.Modeattribution.validator}"/>
                                     </af:inputText>
-                                    <af:inputText value="#{bindings.Idproduitspfnl.inputValue}"
+                                            <af:selectOneChoice value="#{bindings.Idcategorie.inputValue}"
+                                                                label="#{bindings.Idcategorie.label}"
+                                                                required="#{bindings.Idcategorie.hints.mandatory}"
+                                                                shortDesc="#{bindings.Idcategorie.hints.tooltip}"
+                                                                id="soc3">
+                                                <f:selectItems value="#{bindings.Idcategorie.items}" id="si3"/>
+                                                <f:validator binding="#{bindings.Idcategorie.validator}"/>
+                                            </af:selectOneChoice>
+                                            <af:inputText value="#{bindings.Idproduitspfnl.inputValue}"
                                                   label="#{bindings.Idproduitspfnl.hints.label}"
                                                   required="#{bindings.Idproduitspfnl.hints.mandatory}"
                                                   columns="#{bindings.Idproduitspfnl.hints.displayWidth}"
@@ -93,7 +93,7 @@
                                         <af:convertNumber groupingUsed="false"
                                                           pattern="#{bindings.Idproduitspfnl.format}"/>
                                     </af:inputText>
-                                    <f:facet name="footer">
+                                            <f:facet name="footer">
                                         <af:spacer width="10" height="10" id="s3"/>
                                         <af:panelGroupLayout id="pgl1">
                                             <af:button
@@ -113,7 +113,16 @@
                                             <af:button text="Regions" id="b7" destination='page_region.jsf'/>
                                         </af:panelGroupLayout>
                                     </f:facet>
-                                </af:panelFormLayout>
+                                            <af:inputText value="#{bindings.Nomvernaculaire.inputValue}"
+                                                          label="#{bindings.Nomvernaculaire.hints.label}"
+                                                          required="#{bindings.Nomvernaculaire.hints.mandatory}"
+                                                          columns="#{bindings.Nomvernaculaire.hints.displayWidth}"
+                                                          maximumLength="#{bindings.Nomvernaculaire.hints.precision}"
+                                                          shortDesc="#{bindings.Nomvernaculaire.hints.tooltip}"
+                                                          id="it4">
+                                                <f:validator binding="#{bindings.Nomvernaculaire.validator}"/>
+                                            </af:inputText>
+                                        </af:panelFormLayout>
                             </af:panelBox>
                         </f:facet>
                         <f:facet name="second">
@@ -128,11 +137,10 @@
                                                            disabled="#{!bindings.CreateInsert1.enabled}"
                                                            action="#{produitPfnl.creerPartiesProduitPfnl}"/>
                                                 <af:spacer width="10" height="10" id="s4"/>
-                                            </af:panelGroupLayout>
-                                            <af:button
-                                                       text="#{viewcontrollerBundle.SUPPRIMER}"
-                                                       disabled="#{!bindings.Delete1.enabled}" id="b6"
-                                                       action="#{produitPfnl.supprimePartieProduitPfnl}"/>
+                                                        <af:button text="#{viewcontrollerBundle.SUPPRIMER}"
+                                                                   disabled="#{!bindings.Delete1.enabled}" id="b6"
+                                                                   action="#{produitPfnl.supprimePartieProduitPfnl}"/>
+                                                    </af:panelGroupLayout>
                                         </af:toolbar>
                                     </f:facet>
                                     <af:table value="#{bindings.PartiesProduitsPfnlView19.collectionModel}" var="row"
@@ -206,7 +214,31 @@
                                                 <f:validator binding="#{row.bindings.estUnProduitPfnlTransient.validator}"/>
                                             </af:selectBooleanCheckbox>
                                         </af:column>
-                                    </af:table>
+                                                <af:column headerText="#{bindings.PartiesProduitsPfnlView19.hints.Idunitemesureexport.label}"
+                                                           id="c14">
+                                                    <af:selectOneChoice value="#{row.bindings.Idunitemesureexport.inputValue}"
+                                                                        label="#{row.bindings.Idunitemesureexport.label}"
+                                                                        required="#{bindings.PartiesProduitsPfnlView19.hints.Idunitemesureexport.mandatory}"
+                                                                        shortDesc="#{bindings.PartiesProduitsPfnlView19.hints.Idunitemesureexport.tooltip}"
+                                                                        id="soc5">
+                                                        <f:selectItems value="#{row.bindings.Idunitemesureexport.items}"
+                                                                       id="si5"/>
+                                                        <f:validator binding="#{row.bindings.Idunitemesureexport.validator}"/>
+                                                    </af:selectOneChoice>
+                                                </af:column>
+                                                <af:column headerText="#{bindings.PartiesProduitsPfnlView19.hints.Idunitemesure.label}"
+                                                           id="c13">
+                                                    <af:selectOneChoice value="#{row.bindings.Idunitemesure.inputValue}"
+                                                                        label="#{row.bindings.Idunitemesure.label}"
+                                                                        required="#{bindings.PartiesProduitsPfnlView19.hints.Idunitemesure.mandatory}"
+                                                                        shortDesc="#{bindings.PartiesProduitsPfnlView19.hints.Idunitemesure.tooltip}"
+                                                                        id="soc4">
+                                                        <f:selectItems value="#{row.bindings.Idunitemesure.items}"
+                                                                       id="si4"/>
+                                                        <f:validator binding="#{row.bindings.Idunitemesure.validator}"/>
+                                                    </af:selectOneChoice>
+                                                </af:column>
+                                            </af:table>
                                     <f:facet name="statusbar"/>
                                 </af:panelCollection>
                             </af:panelBox>

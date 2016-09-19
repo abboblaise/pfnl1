@@ -46,7 +46,7 @@
                                           required="#{bindings.Ratio.hints.mandatory}"
                                           columns="#{bindings.Ratio.hints.displayWidth}"
                                           maximumLength="#{bindings.Ratio.hints.precision}"
-                                          shortDesc="#{bindings.Ratio.hints.tooltip}" id="it4">
+                                          shortDesc="#{bindings.Ratio.hints.tooltip}" id="it3">
                                 <f:validator binding="#{bindings.Ratio.validator}"/>
                                 <af:convertNumber groupingUsed="false" pattern="#{bindings.Ratio.format}"/>
                             </af:inputText>
@@ -81,7 +81,6 @@
                         <af:panelCollection id="pc1" inlineStyle="width:551px;">
                             <f:facet name="menus"/>
                             <f:facet name="toolbar"/>
-                            <f:facet name="statusbar"/>
                             <af:table value="#{bindings.UnitemesureView1.collectionModel}" var="row"
                                       rows="#{bindings.UnitemesureView1.rangeSize}"
                                       emptyText="#{bindings.UnitemesureView1.viewable ? 'No data to display.' : 'Access Denied.'}"
@@ -92,11 +91,11 @@
                                       filterModel="#{bindings.UnitemesureView1Query.queryDescriptor}"
                                       filterVisible="true"
                                       queryListener="#{bindings.UnitemesureView1Query.processQuery}" varStatus="vs"
-                                      id="t1" partialTriggers=":::b1 :::b3 :::b2">
+                                      id="t1" partialTriggers=":::b1 :::b3" width="691">
                                 <af:column sortProperty="#{bindings.UnitemesureView1.hints.Idunitemesure.name}"
                                            filterable="true" sortable="true"
                                            headerText="#{bindings.UnitemesureView1.hints.Idunitemesure.label}" id="c1"
-                                           visible="false">
+                                           width="100">
                                     <af:outputText value="#{row.Idunitemesure}"
                                                    shortDesc="#{bindings.UnitemesureView1.hints.Idunitemesure.tooltip}"
                                                    id="ot1">
@@ -107,14 +106,15 @@
                                 <af:column sortProperty="#{bindings.UnitemesureView1.hints.Libelleunitemesure.name}"
                                            filterable="true" sortable="true"
                                            headerText="#{bindings.UnitemesureView1.hints.Libelleunitemesure.label}"
-                                           id="c2">
+                                           id="c2" width="100">
                                     <af:outputText value="#{row.Libelleunitemesure}"
                                                    shortDesc="#{bindings.UnitemesureView1.hints.Libelleunitemesure.tooltip}"
                                                    id="ot2"/>
                                 </af:column>
                                 <af:column sortProperty="#{bindings.UnitemesureView1.hints.Idcategorie.name}"
                                            filterable="true" sortable="true"
-                                           headerText="#{bindings.UnitemesureView1.hints.Idcategorie.label}" id="c3">
+                                           headerText="#{bindings.UnitemesureView1.hints.Idcategorie.label}" id="c3"
+                                           width="100">
                                     <af:selectOneChoice value="#{row.bindings.Idcategorie.inputValue}"
                                                         label="#{row.bindings.Idcategorie.label}"
                                                         required="#{bindings.UnitemesureView1.hints.Idcategorie.mandatory}"
@@ -126,30 +126,42 @@
                                 </af:column>
                                 <af:column sortProperty="#{bindings.UnitemesureView1.hints.Ordregrandeur.name}"
                                            filterable="true" sortable="true"
-                                           headerText="#{bindings.UnitemesureView1.hints.Ordregrandeur.label}" id="c4">
-                                    <af:outputText value="#{row.Ordregrandeur}"
-                                                   shortDesc="#{bindings.UnitemesureView1.hints.Ordregrandeur.tooltip}"
-                                                   id="ot3"/>
+                                           headerText="#{bindings.UnitemesureView1.hints.Ordregrandeur.label}" id="c4"
+                                           width="100">
+                                    <af:selectOneChoice value="#{row.bindings.Ordregrandeur.inputValue}"
+                                                        label="#{row.bindings.Ordregrandeur.label}"
+                                                        required="#{bindings.UnitemesureView1.hints.Ordregrandeur.mandatory}"
+                                                        shortDesc="#{bindings.UnitemesureView1.hints.Ordregrandeur.tooltip}"
+                                                        readOnly="true" id="soc4">
+                                        <f:selectItems value="#{row.bindings.Ordregrandeur.items}" id="si4"/>
+                                        <f:validator binding="#{row.bindings.Ordregrandeur.validator}"/>
+                                    </af:selectOneChoice>
                                 </af:column>
                                 <af:column sortProperty="#{bindings.UnitemesureView1.hints.Ratio.name}"
                                            filterable="true" sortable="true"
-                                           headerText="#{bindings.UnitemesureView1.hints.Ratio.label}" id="c5">
+                                           headerText="#{bindings.UnitemesureView1.hints.Ratio.label}" id="c5"
+                                           width="80">
                                     <af:outputText value="#{row.Ratio}"
                                                    shortDesc="#{bindings.UnitemesureView1.hints.Ratio.tooltip}"
-                                                   id="ot4">
+                                                   id="ot3">
                                         <af:convertNumber groupingUsed="false"
                                                           pattern="#{bindings.UnitemesureView1.hints.Ratio.format}"/>
                                     </af:outputText>
                                 </af:column>
-                                <af:column headerText="#{bindings.UnitemesureView1.hints.Actif.label}" id="c7">
-                                    <af:selectBooleanCheckbox value="#{row.bindings.Actif.inputValue}"
-                                                              label="#{row.bindings.Actif.label}"
-                                                              shortDesc="#{bindings.UnitemesureView1.hints.Actif.tooltip}"
-                                                              id="sbc2"/>
+                                <af:column sortProperty="#{bindings.UnitemesureView1.hints.Actif.name}"
+                                           filterable="true" sortable="true"
+                                           headerText="#{bindings.UnitemesureView1.hints.Actif.label}" id="c6"
+                                           width="120">
+                                    <af:outputText value="#{row.Actif}"
+                                                   shortDesc="#{bindings.UnitemesureView1.hints.Actif.tooltip}"
+                                                   id="ot4">
+                                        <af:convertNumber groupingUsed="false"
+                                                          pattern="#{bindings.UnitemesureView1.hints.Actif.format}"/>
+                                    </af:outputText>
                                 </af:column>
                                 <af:column sortProperty="#{bindings.UnitemesureView1.hints.Arrondi.name}"
                                            filterable="true" sortable="true"
-                                           headerText="#{bindings.UnitemesureView1.hints.Arrondi.label}" id="c6">
+                                           headerText="#{bindings.UnitemesureView1.hints.Arrondi.label}" id="c7">
                                     <af:outputText value="#{row.Arrondi}"
                                                    shortDesc="#{bindings.UnitemesureView1.hints.Arrondi.tooltip}"
                                                    id="ot5">
@@ -158,6 +170,7 @@
                                     </af:outputText>
                                 </af:column>
                             </af:table>
+                            <f:facet name="statusbar"/>
                         </af:panelCollection>
                     </af:panelBox>
                 </f:facet>

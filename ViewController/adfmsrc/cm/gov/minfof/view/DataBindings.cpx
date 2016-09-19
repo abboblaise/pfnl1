@@ -18,6 +18,9 @@
     <page path="/page_unitemesure.jsf" usageId="cm_gov_minfof_view_page_unitemesurePageDef"/>
     <page path="/Page_Permis1.jsf" usageId="cm_gov_minfof_view_Page_Permis1PageDef"/>
     <page path="/Page_Agrement.jsf" usageId="cm_gov_minfof_view_Page_AgrementPageDef"/>
+    <page path="/page_categorie_produit.jsf" usageId="cm_gov_minfof_view_page_categorie_produitPageDef"/>
+    <page path="/page_transporteur.jsf" usageId="cm_gov_minfof_view_page_transporteurPageDef"/>
+    <page path="/page_vehicule.jsf" usageId="cm_gov_minfof_view_page_vehiculePageDef"/>
     <page path="/page_localite.jsf" usageId="cm_gov_minfof_view_page_localitePageDef"/>
     <page path="/page_postec.jsf" usageId="cm_gov_minfof_view_page_postecPageDef"/>
     <page path="/page_permis.jsf" usageId="cm_gov_minfof_view_page_permisPageDef"/>
@@ -44,6 +47,10 @@
     <page id="cm_gov_minfof_view_Page_agrementPageDef" path="cm.gov.minfof.view.pageDefs.Page_agrementPageDef"/>
     <page id="cm_gov_minfof_view_Page_Permis1PageDef" path="cm.gov.minfof.view.pageDefs.Page_Permis1PageDef"/>
     <page id="cm_gov_minfof_view_Page_AgrementPageDef" path="cm.gov.minfof.view.pageDefs.Page_AgrementPageDef"/>
+    <page id="cm_gov_minfof_view_page_categorie_produitPageDef"
+          path="cm.gov.minfof.view.pageDefs.page_categorie_produitPageDef"/>
+    <page id="cm_gov_minfof_view_page_transporteurPageDef" path="cm.gov.minfof.view.pageDefs.page_transporteurPageDef"/>
+    <page id="cm_gov_minfof_view_page_vehiculePageDef" path="cm.gov.minfof.view.pageDefs.page_vehiculePageDef"/>
     <page id="cm_gov_minfof_view_page_localitePageDef" path="cm.gov.minfof.view.pageDefs.page_localitePageDef"/>
     <page id="cm_gov_minfof_view_page_postecPageDef" path="cm.gov.minfof.view.pageDefs.page_postecPageDef"/>
     <page id="cm_gov_minfof_view_page_permisPageDef" path="cm.gov.minfof.view.pageDefs.page_permisPageDef"/>

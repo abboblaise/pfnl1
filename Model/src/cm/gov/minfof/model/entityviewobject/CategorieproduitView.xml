@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="CategorieproduitView"
+  Version="12.2.1.20.47"
+  InheritPersonalization="merge"
+  SelectListFlags="1"
+  FromListFlags="1"
+  WhereFlags="1"
+  BindingStyle="JDBC"
+  CustomQuery="false"
+  SelectAllAttributes="false"
+  PageIterMode="Full">
+  <EntityUsage
+    Name="Categorieproduit"
+    Entity="cm.gov.minfof.model.entity.Categorieproduit"/>
+  <ViewAttribute
+    Name="Idcategorieproduit"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Idcategorieproduit"
+    EntityUsage="Categorieproduit"
+    AliasName="idcategorieproduit"/>
+  <ViewAttribute
+    Name="Libellecategorie"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Libellecategorie"
+    EntityUsage="Categorieproduit"
+    AliasName="libellecategorie"/>
+  <ViewAttribute
+    Name="Codecategorie"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Codecategorie"
+    EntityUsage="Categorieproduit"
+    AliasName="codecategorie"/>
+  <ViewAttribute
+    Name="Observation"
+    PrecisionRule="true"
+    EntityAttrName="Observation"
+    EntityUsage="Categorieproduit"
+    AliasName="observation"/>
+  <ViewLinkAccessor
+    Name="ProduitspfnlView"
+    ViewLink="cm.gov.minfof.model.entityviewobject.CategToProduitLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+</ViewObject>

@@ -133,6 +133,13 @@
     AssociationOtherEnd="cm.gov.minfof.model.entity.CommunesIbfk1Assoc1.Region"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="Vehicule"
+    Association="cm.gov.minfof.model.entity.RegionToVehiculeAssoc"
+    AssociationEnd="cm.gov.minfof.model.entity.RegionToVehiculeAssoc.Vehicule"
+    AssociationOtherEnd="cm.gov.minfof.model.entity.RegionToVehiculeAssoc.Region"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
   <Key
     Name="AltKey"
     AltKey="true">

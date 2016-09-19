@@ -91,14 +91,6 @@
                         <f:validator binding="#{bindings.Idpermissionnairespnfl.validator}"/>
                         <af:convertNumber groupingUsed="false" pattern="#{bindings.Idpermissionnairespnfl.format}"/>
                     </af:inputText>
-                    <af:inputText value="#{bindings.Qualite.inputValue}" label="#{bindings.Qualite.hints.label}"
-                                  required="#{bindings.Qualite.hints.mandatory}"
-                                  columns="#{bindings.Qualite.hints.displayWidth}"
-                                  maximumLength="#{bindings.Qualite.hints.precision}"
-                                  shortDesc="#{bindings.Qualite.hints.tooltip}" id="it10">
-                        <f:validator binding="#{bindings.Qualite.validator}"/>
-                        <af:convertNumber groupingUsed="false" pattern="#{bindings.Qualite.format}"/>
-                    </af:inputText>
                     <af:inputText value="#{bindings.Nui.inputValue}" label="#{bindings.Nui.hints.label}"
                                   required="#{bindings.Nui.hints.mandatory}"
                                   columns="#{bindings.Nui.hints.displayWidth}"
@@ -138,13 +130,6 @@
                                         shortDesc="#{bindings.Sexe.hints.tooltip}" id="soc5">
                         <f:selectItems value="#{bindings.Sexe.items}" id="si5"/>
                         <f:validator binding="#{bindings.Sexe.validator}"/>
-                    </af:selectOneChoice>
-                    <af:selectOneChoice value="#{bindings.Qualiteexploitant.inputValue}"
-                                        label="#{bindings.Qualiteexploitant.label}"
-                                        required="#{bindings.Qualiteexploitant.hints.mandatory}"
-                                        shortDesc="#{bindings.Qualiteexploitant.hints.tooltip}" id="soc6">
-                        <f:selectItems value="#{bindings.Qualiteexploitant.items}" id="si6"/>
-                        <f:validator binding="#{bindings.Qualiteexploitant.validator}"/>
                     </af:selectOneChoice>
                     <f:facet name="footer">
                         <af:panelGroupLayout id="pgl1">

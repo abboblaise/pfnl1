@@ -16,6 +16,9 @@
     <searchRegion Binds="ProduitsPfnlView4Iterator" Criteria=""
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="ProduitsPfnlView4Query"/>
     <page path="cm.gov.minfof.view.pageDefs.Template_GeneralPageDef" id="ptb1" Refresh="ifNeeded"/>
+    <iterator Binds="CategorieproduitView1" RangeSize="-1" DataControl="AppModuleDataControl"
+              id="CategorieproduitView1Iterator"/>
+    <iterator Binds="UnitemesureView1" RangeSize="-1" DataControl="AppModuleDataControl" id="UnitemesureView1Iterator"/>
   </executables>
   <bindings>
     <list IterBinding="FamillePfnlView1Iterator" ListOperMode="navigation" ListIter="FamillePfnlView1Iterator"
@@ -72,6 +75,8 @@
           <Item Value="Idproduitspfnl"/>
           <Item Value="Estunproduitpfnl"/>
           <Item Value="estUnProduitPfnlTransient"/>
+          <Item Value="Idunitemesure" Binds="Idunitemesure"/>
+          <Item Value="Idunitemesureexport" Binds="Idunitemesureexport"/>
         </AttrNames>
       </nodeDefinition>
     </tree>
@@ -109,5 +114,45 @@
     </tree>
     <action IterBinding="PartiesProduitsPfnlView19Iterator" id="Delete1" RequiresUpdateModel="false"
             Action="removeCurrentRow"/>
+    <list IterBinding="ProduitsPfnlView4Iterator" id="Idcategorie" DTSupportsMRU="true"
+          SelectItemValueMode="ListObject" StaticList="false" ListIter="CategorieproduitView1Iterator"
+          NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+          NullValueFlag="start">
+      <AttrNames>
+        <Item Value="Idcategorie"/>
+      </AttrNames>
+      <ListAttrNames>
+        <Item Value="Idcategorieproduit"/>
+      </ListAttrNames>
+      <ListDisplayAttrNames>
+        <Item Value="Codecategorie"/>
+      </ListDisplayAttrNames>
+    </list>
+    <list IterBinding="PartiesProduitsPfnlView19Iterator" id="Idunitemesure" DTSupportsMRU="true"
+          SelectItemValueMode="ListObject" StaticList="false" ListIter="UnitemesureView1Iterator">
+      <AttrNames>
+        <Item Value="Idunitemesure"/>
+      </AttrNames>
+      <ListAttrNames>
+        <Item Value="Idunitemesure"/>
+      </ListAttrNames>
+      <ListDisplayAttrNames>
+        <Item Value="Libelleunitemesure"/>
+      </ListDisplayAttrNames>
+    </list>
+    <list IterBinding="PartiesProduitsPfnlView19Iterator" id="Idunitemesureexport" DTSupportsMRU="true"
+          SelectItemValueMode="ListObject" StaticList="false" ListIter="UnitemesureView1Iterator"
+          NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+          NullValueFlag="start">
+      <AttrNames>
+        <Item Value="Idunitemesureexport"/>
+      </AttrNames>
+      <ListAttrNames>
+        <Item Value="Idunitemesure"/>
+      </ListAttrNames>
+      <ListDisplayAttrNames>
+        <Item Value="Libelleunitemesure"/>
+      </ListDisplayAttrNames>
+    </list>
   </bindings>
 </pageDefinition>

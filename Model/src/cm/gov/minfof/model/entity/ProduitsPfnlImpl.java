@@ -31,13 +31,15 @@ public class ProduitsPfnlImpl extends EntityImpl {
         Idfamillepfnl,
         Descriptionsommaire,
         Modeattribution,
+        Idcategorie,
         ProduitsPfnl,
         IdfamillepfnlProduitsPfnl,
         PartiesProduitsPfnl,
         PartiesProduitsPfnl1,
         FamillePfnl,
         PartiesRecoltees,
-        PartiesProduitsPfnl2;
+        PartiesProduitsPfnl2,
+        Categorieproduit;
         private static AttributesEnum[] vals = null;
         ;
         private static final int firstIndex = 0;
@@ -71,6 +73,7 @@ public class ProduitsPfnlImpl extends EntityImpl {
     public static final int IDFAMILLEPFNL = AttributesEnum.Idfamillepfnl.index();
     public static final int DESCRIPTIONSOMMAIRE = AttributesEnum.Descriptionsommaire.index();
     public static final int MODEATTRIBUTION = AttributesEnum.Modeattribution.index();
+    public static final int IDCATEGORIE = AttributesEnum.Idcategorie.index();
     public static final int PRODUITSPFNL = AttributesEnum.ProduitsPfnl.index();
     public static final int IDFAMILLEPFNLPRODUITSPFNL = AttributesEnum.IdfamillepfnlProduitsPfnl.index();
     public static final int PARTIESPRODUITSPFNL = AttributesEnum.PartiesProduitsPfnl.index();
@@ -78,6 +81,7 @@ public class ProduitsPfnlImpl extends EntityImpl {
     public static final int FAMILLEPFNL = AttributesEnum.FamillePfnl.index();
     public static final int PARTIESRECOLTEES = AttributesEnum.PartiesRecoltees.index();
     public static final int PARTIESPRODUITSPFNL2 = AttributesEnum.PartiesProduitsPfnl2.index();
+    public static final int CATEGORIEPRODUIT = AttributesEnum.Categorieproduit.index();
 
     /**
      * This is the default constructor (do not remove).
@@ -222,6 +226,23 @@ public class ProduitsPfnlImpl extends EntityImpl {
     }
 
     /**
+     * Gets the attribute value for Idcategorie, using the alias name Idcategorie.
+     * @return the value of Idcategorie
+     */
+    public BigDecimal getIdcategorie() {
+        return (BigDecimal) getAttributeInternal(IDCATEGORIE);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for Idcategorie.
+     * @param value value to set the Idcategorie
+     */
+    public void setIdcategorie(BigDecimal value) {
+        setAttributeInternal(IDCATEGORIE, value);
+    }
+
+
+    /**
      * @return the associated entity oracle.jbo.RowIterator.
      */
     public RowIterator getProduitsPfnl() {
@@ -296,6 +317,21 @@ public class ProduitsPfnlImpl extends EntityImpl {
      */
     public void setPartiesProduitsPfnl2(PartiesProduitsPfnlImpl value) {
         setAttributeInternal(PARTIESPRODUITSPFNL2, value);
+    }
+
+
+    /**
+     * @return the associated entity CategorieproduitImpl.
+     */
+    public CategorieproduitImpl getCategorieproduit() {
+        return (CategorieproduitImpl) getAttributeInternal(CATEGORIEPRODUIT);
+    }
+
+    /**
+     * Sets <code>value</code> as the associated entity CategorieproduitImpl.
+     */
+    public void setCategorieproduit(CategorieproduitImpl value) {
+        setAttributeInternal(CATEGORIEPRODUIT, value);
     }
 
 

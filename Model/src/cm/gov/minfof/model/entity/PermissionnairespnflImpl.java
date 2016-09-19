@@ -32,14 +32,12 @@ public class PermissionnairespnflImpl extends EntityImpl {
         Natureactivite,
         Numceqe,
         Idpermissionnairespnfl,
-        Qualite,
         Nui,
         Idpays,
         Profession,
         Typepersonne,
         Adressep,
         Sexe,
-        Qualiteexploitant,
         Permissionnairespnfl,
         IddepartementsPermissionnairespnfl,
         Permissionnairespnfl1,
@@ -80,14 +78,12 @@ public class PermissionnairespnflImpl extends EntityImpl {
     public static final int NATUREACTIVITE = AttributesEnum.Natureactivite.index();
     public static final int NUMCEQE = AttributesEnum.Numceqe.index();
     public static final int IDPERMISSIONNAIRESPNFL = AttributesEnum.Idpermissionnairespnfl.index();
-    public static final int QUALITE = AttributesEnum.Qualite.index();
     public static final int NUI = AttributesEnum.Nui.index();
     public static final int IDPAYS = AttributesEnum.Idpays.index();
     public static final int PROFESSION = AttributesEnum.Profession.index();
     public static final int TYPEPERSONNE = AttributesEnum.Typepersonne.index();
     public static final int ADRESSEP = AttributesEnum.Adressep.index();
     public static final int SEXE = AttributesEnum.Sexe.index();
-    public static final int QUALITEEXPLOITANT = AttributesEnum.Qualiteexploitant.index();
     public static final int PERMISSIONNAIRESPNFL = AttributesEnum.Permissionnairespnfl.index();
     public static final int IDDEPARTEMENTSPERMISSIONNAIRESPNFL =
         AttributesEnum.IddepartementsPermissionnairespnfl.index();
@@ -160,15 +156,15 @@ public class PermissionnairespnflImpl extends EntityImpl {
      * Gets the attribute value for Nbreemploye, using the alias name Nbreemploye.
      * @return the value of Nbreemploye
      */
-    public String getNbreemploye() {
-        return (String) getAttributeInternal(NBREEMPLOYE);
+    public Integer getNbreemploye() {
+        return (Integer) getAttributeInternal(NBREEMPLOYE);
     }
 
     /**
      * Sets <code>value</code> as the attribute value for Nbreemploye.
      * @param value value to set the Nbreemploye
      */
-    public void setNbreemploye(String value) {
+    public void setNbreemploye(Integer value) {
         setAttributeInternal(NBREEMPLOYE, value);
     }
 
@@ -284,21 +280,6 @@ public class PermissionnairespnflImpl extends EntityImpl {
         setAttributeInternal(IDPERMISSIONNAIRESPNFL, value);
     }
 
-    /**
-     * Gets the attribute value for Qualite, using the alias name Qualite.
-     * @return the value of Qualite
-     */
-    public Integer getQualite() {
-        return (Integer) getAttributeInternal(QUALITE);
-    }
-
-    /**
-     * Sets <code>value</code> as the attribute value for Qualite.
-     * @param value value to set the Qualite
-     */
-    public void setQualite(Integer value) {
-        setAttributeInternal(QUALITE, value);
-    }
 
     /**
      * Gets the attribute value for Nui, using the alias name Nui.
@@ -396,21 +377,6 @@ public class PermissionnairespnflImpl extends EntityImpl {
         setAttributeInternal(SEXE, value);
     }
 
-    /**
-     * Gets the attribute value for Qualiteexploitant, using the alias name Qualiteexploitant.
-     * @return the value of Qualiteexploitant
-     */
-    public Integer getQualiteexploitant() {
-        return (Integer) getAttributeInternal(QUALITEEXPLOITANT);
-    }
-
-    /**
-     * Sets <code>value</code> as the attribute value for Qualiteexploitant.
-     * @param value value to set the Qualiteexploitant
-     */
-    public void setQualiteexploitant(Integer value) {
-        setAttributeInternal(QUALITEEXPLOITANT, value);
-    }
 
     /**
      * @return the associated entity oracle.jbo.RowIterator.

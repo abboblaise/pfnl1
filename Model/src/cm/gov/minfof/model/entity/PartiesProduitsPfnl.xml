@@ -82,6 +82,42 @@
       </SchemaBasedProperties>
     </Properties>
   </Attribute>
+  <Attribute
+    Name="Idunitemesure"
+    ColumnName="idunitemesure"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="BIGINT"
+    TableName="partiesproduitspfnl"
+    IsNotNull="true"
+    DefaultValue="1">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="19"/>
+    </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="UNIT_U00E9_DE_MESURE"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
+  <Attribute
+    Name="Idunitemesureexport"
+    ColumnName="idunitemesureexport"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="BIGINT"
+    TableName="partiesproduitspfnl">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="19"/>
+    </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="UNIT_U00E9_DE_MESURE_D_EXPORTATION"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
   <AccessorAttribute
     Name="PartiesProduitsPfnl"
     Association="cm.gov.minfof.model.entity.FkPartiesproduitspfnl2Assoc"
@@ -159,6 +195,20 @@
     AssociationOtherEnd="cm.gov.minfof.model.entity.ProduitspfnlIbfk1Assoc3.PartiesProduitsPfnl2"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="Unitemesure"
+    Association="cm.gov.minfof.model.entity.PartieProdToUniteMesureAssoc"
+    AssociationEnd="cm.gov.minfof.model.entity.PartieProdToUniteMesureAssoc.Unitemesure"
+    AssociationOtherEnd="cm.gov.minfof.model.entity.PartieProdToUniteMesureAssoc.PartiesProduitsPfnl"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="Unitemesure1"
+    Association="cm.gov.minfof.model.entity.PartieProdToUniteMesureExportAssoc"
+    AssociationEnd="cm.gov.minfof.model.entity.PartieProdToUniteMesureExportAssoc.Unitemesure1"
+    AssociationOtherEnd="cm.gov.minfof.model.entity.PartieProdToUniteMesureExportAssoc.PartiesProduitsPfnl1"
+    Type="cm.gov.minfof.model.entity.UnitemesureImpl"
+    IsUpdateable="true"/>
   <Key
     Name="AltKey"
     AltKey="true">
@@ -169,6 +219,18 @@
     <AttrArray Name="Attributes">
       <Item Value="cm.gov.minfof.model.entity.PartiesProduitsPfnl.Idpartiesrecoltees"/>
       <Item Value="cm.gov.minfof.model.entity.PartiesProduitsPfnl.Idproduitspfnl"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="PartiesproduitspfnlIdunitemesureCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"idunitemesure" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="Partiesproduitspfnl_Idunitemes"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="cm.gov.minfof.model.entity.PartiesProduitsPfnl.Idunitemesure"/>
     </AttrArray>
   </Key>
   <Key
