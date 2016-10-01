@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="PermissionnairespnflView"
+  Version="12.2.1.20.47"
+  InheritPersonalization="merge"
+  SelectListFlags="1"
+  FromListFlags="1"
+  WhereFlags="1"
+  BindingStyle="JDBC"
+  CustomQuery="false"
+  SelectAllAttributes="false"
+  PageIterMode="Full">
+  <ViewAccessor
+    Name="listeStatutPermissionnaire1"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.listeStatutPermissionnaire"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="listeTypePersonne1"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.listeTypePersonne"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="listeSexe1"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.listeSexe"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="listeExploitant1"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.listeExploitant"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="DepartementView1"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.DepartementView"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="PaysView1"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.PaysView"
+    RowLevelBinds="true"/>
+  <ListBinding
+    Name="LOV_Statut"
+    ListVOName="listeStatutPermissionnaire1"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="Statut"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="id"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="libelleStatutPermissionnaire"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_Typepersonne"
+    ListVOName="listeTypePersonne1"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="Typepersonne"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="id"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="libelleType"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_Sexe"
+    ListVOName="listeSexe1"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="Sexe"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="id"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="libelleSexe"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_Iddepartements"
+    ListVOName="DepartementView1"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="Iddepartements"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Iddepartements"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Nomdepartement"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_Idpays"
+    ListVOName="PaysView1"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="Idpays"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Idpays"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Nompays"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <EntityUsage
+    Name="Permissionnairespnfl"
+    Entity="cm.gov.minfof.model.entity.Permissionnairespnfl"/>
+  <ViewAttribute
+    Name="Nomouraisonsociale"
+    PrecisionRule="true"
+    EntityAttrName="Nomouraisonsociale"
+    EntityUsage="Permissionnairespnfl"
+    AliasName="Nomouraisonsociale"/>
+  <ViewAttribute
+    Name="Statut"
+    PrecisionRule="true"
+    EntityAttrName="Statut"
+    EntityUsage="Permissionnairespnfl"
+    AliasName="statut"
+    LOVName="LOV_Statut">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="Siegesocial"
+    PrecisionRule="true"
+    EntityAttrName="Siegesocial"
+    EntityUsage="Permissionnairespnfl"
+    AliasName="siegesocial"/>
+  <ViewAttribute
+    Name="Nbreemploye"
+    PrecisionRule="true"
+    EntityAttrName="Nbreemploye"
+    EntityUsage="Permissionnairespnfl"
+    AliasName="nbreemploye"/>
+  <ViewAttribute
+    Name="Contact"
+    PrecisionRule="true"
+    EntityAttrName="Contact"
+    EntityUsage="Permissionnairespnfl"
+    AliasName="contact"/>
+  <ViewAttribute
+    Name="Mail"
+    PrecisionRule="true"
+    EntityAttrName="Mail"
+    EntityUsage="Permissionnairespnfl"
+    AliasName="mail"/>
+  <ViewAttribute
+    Name="Codepnfl"
+    PrecisionRule="true"
+    EntityAttrName="Codepnfl"
+    EntityUsage="Permissionnairespnfl"
+    AliasName="CodePNFL"/>
+  <ViewAttribute
+    Name="Iddepartements"
+    PrecisionRule="true"
+    EntityAttrName="Iddepartements"
+    EntityUsage="Permissionnairespnfl"
+    AliasName="IDDepartements"
+    LOVName="LOV_Iddepartements">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="Natureactivite"
+    PrecisionRule="true"
+    EntityAttrName="Natureactivite"
+    EntityUsage="Permissionnairespnfl"
+    AliasName="Natureactivite"/>
+  <ViewAttribute
+    Name="Numceqe"
+    PrecisionRule="true"
+    EntityAttrName="Numceqe"
+    EntityUsage="Permissionnairespnfl"
+    AliasName="NUMCEQE"/>
+  <ViewAttribute
+    Name="Idpermissionnairespnfl"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Idpermissionnairespnfl"
+    EntityUsage="Permissionnairespnfl"
+    AliasName="IDPermissionnairesPNFL"/>
+  <ViewAttribute
+    Name="Nui"
+    PrecisionRule="true"
+    EntityAttrName="Nui"
+    EntityUsage="Permissionnairespnfl"
+    AliasName="NUI"/>
+  <ViewAttribute
+    Name="Idpays"
+    PrecisionRule="true"
+    EntityAttrName="Idpays"
+    EntityUsage="Permissionnairespnfl"
+    AliasName="IDPays"
+    LOVName="LOV_Idpays">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="Profession"
+    PrecisionRule="true"
+    EntityAttrName="Profession"
+    EntityUsage="Permissionnairespnfl"
+    AliasName="Profession"/>
+  <ViewAttribute
+    Name="Typepersonne"
+    PrecisionRule="true"
+    EntityAttrName="Typepersonne"
+    EntityUsage="Permissionnairespnfl"
+    AliasName="typepersonne"
+    LOVName="LOV_Typepersonne">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="Adressep"
+    PrecisionRule="true"
+    EntityAttrName="Adressep"
+    EntityUsage="Permissionnairespnfl"
+    AliasName="Adressep"/>
+  <ViewAttribute
+    Name="Sexe"
+    PrecisionRule="true"
+    EntityAttrName="Sexe"
+    EntityUsage="Permissionnairespnfl"
+    AliasName="Sexe"
+    LOVName="LOV_Sexe">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewLinkAccessor
+    Name="PermissionnairespnflView1"
+    ViewLink="cm.gov.minfof.model.entityviewobject.FkPermissionnairespnfl1Link"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+</ViewObject>
