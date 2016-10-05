@@ -140,6 +140,13 @@
     AssociationOtherEnd="cm.gov.minfof.model.entity.PermisToDetailAssoc.Permis"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="Detailscollectepfnl"
+    Association="cm.gov.minfof.model.entity.DetailCollToDocOfficielAssoc"
+    AssociationEnd="cm.gov.minfof.model.entity.DetailCollToDocOfficielAssoc.Detailscollectepfnl"
+    AssociationOtherEnd="cm.gov.minfof.model.entity.DetailCollToDocOfficielAssoc.Permis"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
   <Key
     Name="Primary1"
     PrimaryKey="true">

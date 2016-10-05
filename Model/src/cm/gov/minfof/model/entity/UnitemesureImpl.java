@@ -32,7 +32,8 @@ public class UnitemesureImpl extends EntityImpl {
         IdcategorieUnitemesure,
         Categorieunitemesure,
         PartiesProduitsPfnl,
-        PartiesProduitsPfnl1;
+        PartiesProduitsPfnl1,
+        Detailscollectepfnl;
         private static AttributesEnum[] vals = null;
         private static final int firstIndex = 0;
 
@@ -69,6 +70,7 @@ public class UnitemesureImpl extends EntityImpl {
     public static final int CATEGORIEUNITEMESURE = AttributesEnum.Categorieunitemesure.index();
     public static final int PARTIESPRODUITSPFNL = AttributesEnum.PartiesProduitsPfnl.index();
     public static final int PARTIESPRODUITSPFNL1 = AttributesEnum.PartiesProduitsPfnl1.index();
+    public static final int DETAILSCOLLECTEPFNL = AttributesEnum.Detailscollectepfnl.index();
 
     /**
      * This is the default constructor (do not remove).
@@ -251,6 +253,14 @@ public class UnitemesureImpl extends EntityImpl {
      */
     public RowIterator getPartiesProduitsPfnl1() {
         return (RowIterator) getAttributeInternal(PARTIESPRODUITSPFNL1);
+    }
+
+
+    /**
+     * @return the associated entity oracle.jbo.RowIterator.
+     */
+    public RowIterator getDetailscollectepfnl() {
+        return (RowIterator) getAttributeInternal(DETAILSCOLLECTEPFNL);
     }
 
 

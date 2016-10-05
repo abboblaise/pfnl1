@@ -152,6 +152,20 @@
     AssociationOtherEnd="cm.gov.minfof.model.entity.DepToPosteAssoc.Departement"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="Collectepfnl"
+    Association="cm.gov.minfof.model.entity.DeptToCollecteAssoc"
+    AssociationEnd="cm.gov.minfof.model.entity.DeptToCollecteAssoc.Collectepfnl"
+    AssociationOtherEnd="cm.gov.minfof.model.entity.DeptToCollecteAssoc.Departement"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="Detailscollectepfnl"
+    Association="cm.gov.minfof.model.entity.DetailCollToDeptAssoc"
+    AssociationEnd="cm.gov.minfof.model.entity.DetailCollToDeptAssoc.Detailscollectepfnl"
+    AssociationOtherEnd="cm.gov.minfof.model.entity.DetailCollToDeptAssoc.Departement"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
   <Key
     Name="AltKey"
     AltKey="true">

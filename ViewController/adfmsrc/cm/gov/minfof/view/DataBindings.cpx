@@ -24,6 +24,7 @@
     <page path="/page_localite.jsf" usageId="cm_gov_minfof_view_page_localitePageDef"/>
     <page path="/page_postec.jsf" usageId="cm_gov_minfof_view_page_postecPageDef"/>
     <page path="/page_permis.jsf" usageId="cm_gov_minfof_view_page_permisPageDef"/>
+    <page path="/page_collecte.jsf" usageId="cm_gov_minfof_view_page_collectePageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="cm_gov_minfof_view_page_regionPageDef" path="cm.gov.minfof.view.pageDefs.page_regionPageDef"/>
@@ -54,6 +55,7 @@
     <page id="cm_gov_minfof_view_page_localitePageDef" path="cm.gov.minfof.view.pageDefs.page_localitePageDef"/>
     <page id="cm_gov_minfof_view_page_postecPageDef" path="cm.gov.minfof.view.pageDefs.page_postecPageDef"/>
     <page id="cm_gov_minfof_view_page_permisPageDef" path="cm.gov.minfof.view.pageDefs.page_permisPageDef"/>
+    <page id="cm_gov_minfof_view_page_collectePageDef" path="cm.gov.minfof.view.pageDefs.page_collectePageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="cm.gov.minfof.model.entity"

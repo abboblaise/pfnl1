@@ -75,6 +75,13 @@
     AssociationOtherEnd="cm.gov.minfof.model.entity.DepToLocaliteAssoc.Localite"
     Type="cm.gov.minfof.model.entity.DepartementImpl"
     IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="Collectepfnl"
+    Association="cm.gov.minfof.model.entity.LocaliteToCollecteAssoc"
+    AssociationEnd="cm.gov.minfof.model.entity.LocaliteToCollecteAssoc.Collectepfnl"
+    AssociationOtherEnd="cm.gov.minfof.model.entity.LocaliteToCollecteAssoc.Localite"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
   <Key
     Name="Primary1"
     PrimaryKey="true">

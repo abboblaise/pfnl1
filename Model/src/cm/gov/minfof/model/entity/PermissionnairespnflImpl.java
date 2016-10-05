@@ -41,9 +41,9 @@ public class PermissionnairespnflImpl extends EntityImpl {
         Permissionnairespnfl,
         IddepartementsPermissionnairespnfl,
         Permissionnairespnfl1,
-        IdpaysPermissionnairespnfl;
+        IdpaysPermissionnairespnfl,
+        Detailscollectepfnl;
         private static AttributesEnum[] vals = null;
-        ;
         private static final int firstIndex = 0;
 
         protected int index() {
@@ -89,6 +89,7 @@ public class PermissionnairespnflImpl extends EntityImpl {
         AttributesEnum.IddepartementsPermissionnairespnfl.index();
     public static final int PERMISSIONNAIRESPNFL1 = AttributesEnum.Permissionnairespnfl1.index();
     public static final int IDPAYSPERMISSIONNAIRESPNFL = AttributesEnum.IdpaysPermissionnairespnfl.index();
+    public static final int DETAILSCOLLECTEPFNL = AttributesEnum.Detailscollectepfnl.index();
 
     /**
      * This is the default constructor (do not remove).
@@ -418,6 +419,14 @@ public class PermissionnairespnflImpl extends EntityImpl {
      */
     public void setIdpaysPermissionnairespnfl(PermissionnairespnflImpl value) {
         setAttributeInternal(IDPAYSPERMISSIONNAIRESPNFL, value);
+    }
+
+
+    /**
+     * @return the associated entity oracle.jbo.RowIterator.
+     */
+    public RowIterator getDetailscollectepfnl() {
+        return (RowIterator) getAttributeInternal(DETAILSCOLLECTEPFNL);
     }
 
 

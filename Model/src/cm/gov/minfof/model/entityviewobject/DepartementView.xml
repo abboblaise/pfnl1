@@ -71,6 +71,12 @@
     ViewLink="cm.gov.minfof.model.entityviewobject.DepToPostecontroleLink"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="DetailscollectepfnlView"
+    ViewLink="cm.gov.minfof.model.entityviewobject.DetailCollToDeptLink"
+    Type="oracle.jbo.RowIterator"
+    Reversed="true"
+    IsUpdateable="false"/>
   <SortCriteria>
     <Sort
       Attribute="Iddepartements"

@@ -278,4 +278,10 @@
     ViewLink="cm.gov.minfof.model.entityviewobject.FkPermissionnairespnfl1Link"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="DetailscollectepfnlView"
+    ViewLink="cm.gov.minfof.model.entityviewobject.DetailCollToPermissionnaireLink"
+    Type="oracle.jbo.RowIterator"
+    Reversed="true"
+    IsUpdateable="false"/>
 </ViewObject>

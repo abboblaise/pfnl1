@@ -75,4 +75,9 @@
     <managed-bean-class>cm.gov.minfof.view.PostecBean</managed-bean-class>
     <managed-bean-scope>request</managed-bean-scope>
   </managed-bean>
+  <managed-bean id="__16">
+    <managed-bean-name>collecteBean</managed-bean-name>
+    <managed-bean-class>cm.gov.minfof.view.CollecteBean</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+  </managed-bean>
 </adfc-config>

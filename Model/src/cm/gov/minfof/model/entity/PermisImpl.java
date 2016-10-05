@@ -38,7 +38,8 @@ public class PermisImpl extends EntityImpl {
         IdpermissionnairePermis,
         Permis1,
         IdagrementPermis,
-        Detailpermis;
+        Detailpermis,
+        Detailscollectepfnl;
         private static AttributesEnum[] vals = null;
         private static final int firstIndex = 0;
 
@@ -77,6 +78,7 @@ public class PermisImpl extends EntityImpl {
     public static final int PERMIS1 = AttributesEnum.Permis1.index();
     public static final int IDAGREMENTPERMIS = AttributesEnum.IdagrementPermis.index();
     public static final int DETAILPERMIS = AttributesEnum.Detailpermis.index();
+    public static final int DETAILSCOLLECTEPFNL = AttributesEnum.Detailscollectepfnl.index();
 
     /**
      * This is the default constructor (do not remove).
@@ -283,6 +285,14 @@ public class PermisImpl extends EntityImpl {
      */
     public RowIterator getDetailpermis() {
         return (RowIterator) getAttributeInternal(DETAILPERMIS);
+    }
+
+
+    /**
+     * @return the associated entity oracle.jbo.RowIterator.
+     */
+    public RowIterator getDetailscollectepfnl() {
+        return (RowIterator) getAttributeInternal(DETAILSCOLLECTEPFNL);
     }
 
 

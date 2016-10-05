@@ -26,7 +26,8 @@ public class LocaliteImpl extends EntityImpl {
         Iddepartement,
         Localite,
         IddepartementLocalite,
-        Departement;
+        Departement,
+        Collectepfnl;
         private static AttributesEnum[] vals = null;
         private static final int firstIndex = 0;
 
@@ -57,6 +58,7 @@ public class LocaliteImpl extends EntityImpl {
     public static final int LOCALITE = AttributesEnum.Localite.index();
     public static final int IDDEPARTEMENTLOCALITE = AttributesEnum.IddepartementLocalite.index();
     public static final int DEPARTEMENT = AttributesEnum.Departement.index();
+    public static final int COLLECTEPFNL = AttributesEnum.Collectepfnl.index();
 
     /**
      * This is the default constructor (do not remove).
@@ -155,6 +157,13 @@ public class LocaliteImpl extends EntityImpl {
         setAttributeInternal(DEPARTEMENT, value);
     }
 
+
+    /**
+     * @return the associated entity oracle.jbo.RowIterator.
+     */
+    public RowIterator getCollectepfnl() {
+        return (RowIterator) getAttributeInternal(COLLECTEPFNL);
+    }
 
     /**
      * @param idlocalite key constituent

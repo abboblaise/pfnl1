@@ -68,6 +68,13 @@
       </SchemaBasedProperties>
     </Properties>
   </Attribute>
+  <AccessorAttribute
+    Name="Detailscollectepfnl"
+    Association="cm.gov.minfof.model.entity.DetailCollecToOrigineAssoc"
+    AssociationEnd="cm.gov.minfof.model.entity.DetailCollecToOrigineAssoc.Detailscollectepfnl"
+    AssociationOtherEnd="cm.gov.minfof.model.entity.DetailCollecToOrigineAssoc.Originespnfls"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
   <Key
     Name="Nomsource1">
     <DesignTime>

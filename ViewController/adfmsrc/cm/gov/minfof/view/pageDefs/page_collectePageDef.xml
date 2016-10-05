@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.20.47" id="page_collectePageDef"
+                Package="cm.gov.minfof.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="CollectepfnlView1" RangeSize="25" DataControl="AppModuleDataControl"
+              id="CollectepfnlView1Iterator"/>
+    <searchRegion Binds="CollectepfnlView1Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="CollectepfnlView1Query"/>
+    <iterator Binds="DetailscollectepfnlView17" RangeSize="25" DataControl="AppModuleDataControl"
+              id="DetailscollectepfnlView17Iterator"/>
+    <searchRegion Binds="DetailscollectepfnlView17Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="DetailscollectepfnlView17Query"/>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="CollectepfnlView1Iterator" id="Datecollecte">
+      <AttrNames>
+        <Item Value="Datecollecte"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CollectepfnlView1Iterator" id="Identificateur">
+      <AttrNames>
+        <Item Value="Identificateur"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CollectepfnlView1Iterator" id="Codepcfc">
+      <AttrNames>
+        <Item Value="Codepcfc"/>
+      </AttrNames>
+    </attributeValues>
+    <tree IterBinding="CollectepfnlView1Iterator" id="CollectepfnlView1">
+      <nodeDefinition DefName="cm.gov.minfof.model.entityviewobject.CollectepfnlView" Name="CollectepfnlView10">
+        <AttrNames>
+          <Item Value="Datecollecte"/>
+          <Item Value="Iddepartement"/>
+          <Item Value="Idlocalite"/>
+          <Item Value="Identificateur"/>
+          <Item Value="Codepcfc"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="DetailscollectepfnlView17Iterator" id="DetailscollectepfnlView17">
+      <nodeDefinition DefName="cm.gov.minfof.model.entityviewobject.DetailscollectepfnlView"
+                      Name="DetailscollectepfnlView170">
+        <AttrNames>
+          <Item Value="Iddetailscollectepfnl"/>
+          <Item Value="Idpermissionnaire"/>
+          <Item Value="Idorigine"/>
+          <Item Value="Quantite"/>
+          <Item Value="Idunitemesure"/>
+          <Item Value="Iddocumentofficiel"/>
+          <Item Value="Iddestination"/>
+          <Item Value="Idpartieproduitpfnl"/>
+          <Item Value="Idcollectepfnl"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <action IterBinding="CollectepfnlView1Iterator" id="CreateInsert" RequiresUpdateModel="true"
+            Action="createInsertRow"/>
+    <action id="Rollback" RequiresUpdateModel="false" Action="rollbackTransaction" DataControl="AppModuleDataControl"/>
+    <action IterBinding="DetailscollectepfnlView17Iterator" id="CreateInsert1" RequiresUpdateModel="true"
+            Action="createInsertRow"/>
+    <action IterBinding="DetailscollectepfnlView17Iterator" id="Delete" RequiresUpdateModel="false"
+            Action="removeCurrentRow"/>
+    <list IterBinding="CollectepfnlView1Iterator" StaticList="false" Uses="LOV_Iddepartement" id="Iddepartement"
+          DTSupportsMRU="true" SelectItemValueMode="ListObject"/>
+    <list IterBinding="CollectepfnlView1Iterator" StaticList="false" Uses="LOV_Idlocalite" id="Idlocalite"
+          DTSupportsMRU="true" SelectItemValueMode="ListObject"/>
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
+  </bindings>
+</pageDefinition>

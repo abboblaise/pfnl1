@@ -32,7 +32,9 @@ public class DepartementImpl extends EntityImpl {
         Commune,
         Commune1,
         Localite,
-        Postecontrole;
+        Postecontrole,
+        Collectepfnl,
+        Detailscollectepfnl;
         private static AttributesEnum[] vals = null;
         private static final int firstIndex = 0;
 
@@ -69,6 +71,8 @@ public class DepartementImpl extends EntityImpl {
     public static final int COMMUNE1 = AttributesEnum.Commune1.index();
     public static final int LOCALITE = AttributesEnum.Localite.index();
     public static final int POSTECONTROLE = AttributesEnum.Postecontrole.index();
+    public static final int COLLECTEPFNL = AttributesEnum.Collectepfnl.index();
+    public static final int DETAILSCOLLECTEPFNL = AttributesEnum.Detailscollectepfnl.index();
 
     /**
      * This is the default constructor (do not remove).
@@ -234,6 +238,28 @@ public class DepartementImpl extends EntityImpl {
      */
     public RowIterator getPostecontrole() {
         return (RowIterator) getAttributeInternal(POSTECONTROLE);
+    }
+
+
+    /**
+     * @return the associated entity oracle.jbo.server.EntityImpl.
+     */
+    public EntityImpl getCollectepfnl() {
+        return (EntityImpl) getAttributeInternal(COLLECTEPFNL);
+    }
+
+    /**
+     * Sets <code>value</code> as the associated entity oracle.jbo.server.EntityImpl.
+     */
+    public void setCollectepfnl(EntityImpl value) {
+        setAttributeInternal(COLLECTEPFNL, value);
+    }
+
+    /**
+     * @return the associated entity oracle.jbo.RowIterator.
+     */
+    public RowIterator getDetailscollectepfnl() {
+        return (RowIterator) getAttributeInternal(DETAILSCOLLECTEPFNL);
     }
 
 

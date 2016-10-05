@@ -31,7 +31,8 @@ public class PartiesProduitsPfnlViewRowImpl extends ViewRowImpl {
         PartiesProduitsPfnlView1,
         ProduitsPfnlView,
         UnitemesureView,
-        UnitemesureView1;
+        UnitemesureView1,
+        DetailscollectepfnlView;
         private static AttributesEnum[] vals = null;
         ;
         private static final int firstIndex = 0;
@@ -69,6 +70,7 @@ public class PartiesProduitsPfnlViewRowImpl extends ViewRowImpl {
     public static final int PRODUITSPFNLVIEW = AttributesEnum.ProduitsPfnlView.index();
     public static final int UNITEMESUREVIEW = AttributesEnum.UnitemesureView.index();
     public static final int UNITEMESUREVIEW1 = AttributesEnum.UnitemesureView1.index();
+    public static final int DETAILSCOLLECTEPFNLVIEW = AttributesEnum.DetailscollectepfnlView.index();
 
     /**
      * This is the default constructor (do not remove).
@@ -179,6 +181,7 @@ public class PartiesProduitsPfnlViewRowImpl extends ViewRowImpl {
         //setAttributeInternal(ESTUNPRODUITPFNLTRANSIENT, value);
     }
 
+
     /**
      * Gets the attribute value for idunitemesure using the alias name Idunitemesure.
      * @return the idunitemesure
@@ -251,6 +254,13 @@ public class PartiesProduitsPfnlViewRowImpl extends ViewRowImpl {
      */
     public void setUnitemesureView1(ViewRowImpl value) {
         setAttributeInternal(UNITEMESUREVIEW1, value);
+    }
+
+    /**
+     * Gets the associated <code>RowIterator</code> using master-detail link DetailscollectepfnlView.
+     */
+    public RowIterator getDetailscollectepfnlView() {
+        return (RowIterator) getAttributeInternal(DETAILSCOLLECTEPFNLVIEW);
     }
 }
 

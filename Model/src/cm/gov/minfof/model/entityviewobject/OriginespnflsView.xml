@@ -65,6 +65,12 @@
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
+  <ViewLinkAccessor
+    Name="DetailscollectepfnlView"
+    ViewLink="cm.gov.minfof.model.entityviewobject.DetailCollToOriginePfnlLink"
+    Type="oracle.jbo.RowIterator"
+    Reversed="true"
+    IsUpdateable="false"/>
   <SortCriteria>
     <Sort
       Attribute="Idoriginespnfls"

@@ -209,6 +209,13 @@
     AssociationOtherEnd="cm.gov.minfof.model.entity.PartieProdToUniteMesureExportAssoc.PartiesProduitsPfnl1"
     Type="cm.gov.minfof.model.entity.UnitemesureImpl"
     IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="Detailscollectepfnl"
+    Association="cm.gov.minfof.model.entity.DetailCollToPartieProdPfnlAssoc"
+    AssociationEnd="cm.gov.minfof.model.entity.DetailCollToPartieProdPfnlAssoc.Detailscollectepfnl"
+    AssociationOtherEnd="cm.gov.minfof.model.entity.DetailCollToPartieProdPfnlAssoc.PartiesProduitsPfnl"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
   <Key
     Name="AltKey"
     AltKey="true">

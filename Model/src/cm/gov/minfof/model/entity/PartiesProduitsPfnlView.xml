@@ -94,4 +94,10 @@
     ViewLink="cm.gov.minfof.model.entityviewobject.PartieProdToUniteMesureExport"
     Type="oracle.jbo.server.ViewRowImpl"
     IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="DetailscollectepfnlView"
+    ViewLink="cm.gov.minfof.model.entityviewobject.DetailCollToPartieProdPfnlLink"
+    Type="oracle.jbo.RowIterator"
+    Reversed="true"
+    IsUpdateable="false"/>
 </ViewObject>

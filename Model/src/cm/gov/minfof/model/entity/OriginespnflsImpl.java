@@ -23,9 +23,9 @@ public class OriginespnflsImpl extends EntityImpl {
     protected enum AttributesEnum {
         Idoriginespnfls,
         Nomsource,
-        Originepnfl;
+        Originepnfl,
+        Detailscollectepfnl;
         private static AttributesEnum[] vals = null;
-        ;
         private static final int firstIndex = 0;
 
         protected int index() {
@@ -52,6 +52,7 @@ public class OriginespnflsImpl extends EntityImpl {
     public static final int IDORIGINESPNFLS = AttributesEnum.Idoriginespnfls.index();
     public static final int NOMSOURCE = AttributesEnum.Nomsource.index();
     public static final int ORIGINEPNFL = AttributesEnum.Originepnfl.index();
+    public static final int DETAILSCOLLECTEPFNL = AttributesEnum.Detailscollectepfnl.index();
 
     /**
      * This is the default constructor (do not remove).
@@ -113,6 +114,14 @@ public class OriginespnflsImpl extends EntityImpl {
      */
     public void setOriginepnfl(Integer value) {
         setAttributeInternal(ORIGINEPNFL, value);
+    }
+
+
+    /**
+     * @return the associated entity oracle.jbo.RowIterator.
+     */
+    public RowIterator getDetailscollectepfnl() {
+        return (RowIterator) getAttributeInternal(DETAILSCOLLECTEPFNL);
     }
 
 

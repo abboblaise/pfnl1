@@ -6,8 +6,10 @@ import cm.gov.minfof.model.entityviewobject.RegionViewImpl;
 import cm.gov.minfof.model.entityviewobject.gestLastIdUnitMesureImpl;
 //import cm.gov.minfof.model.entityviewobject.getLastIdCategorieMesureImpl;
 import cm.gov.minfof.model.entityviewobject.getLastIdCategorieUniteMesureImpl;
+import cm.gov.minfof.model.entityviewobject.getLastIdCollectePfnlImpl;
 import cm.gov.minfof.model.entityviewobject.getLastIdCommunesImpl;
 import cm.gov.minfof.model.entityviewobject.getLastIdDepartementsImpl;
+import cm.gov.minfof.model.entityviewobject.getLastIdDetailsCollecteImpl;
 import cm.gov.minfof.model.entityviewobject.getLastIdFamillesImpl;
 import cm.gov.minfof.model.entityviewobject.getLastIdOriginePfnlImpl;
 import cm.gov.minfof.model.entityviewobject.getLastIdPartiesRecolteesImpl;
@@ -18,6 +20,10 @@ import cm.gov.minfof.model.entityviewobject.getLastIdRegionsImpl;
 
 import cm.gov.minfof.model.entityviewobject.getLastIdartiesProduitsPfnlImpl;
 
+import cm.gov.minfof.model.entityviewobject.getLibelleImpl;
+import cm.gov.minfof.model.entityviewobject.getLibellePartieProduitPfnlImpl;
+import cm.gov.minfof.model.entityviewobject.getLibelleProduitCompletImpl;
+import cm.gov.minfof.model.entityviewobject.getLibelleProduitPfnlImpl;
 import cm.gov.minfof.model.entityviewobject.listeExploitantImpl;
 import cm.gov.minfof.model.entityviewobject.listeOrigineImpl;
 
@@ -1967,6 +1973,631 @@ public class AppModuleImpl extends ApplicationModuleImpl implements AppModule {
      */
     public ViewLinkImpl getPermisTopDetailLink1() {
         return (ViewLinkImpl) findViewLink("PermisTopDetailLink1");
+    }
+
+    /**
+     * Container's getter for CollectepfnlView1.
+     * @return CollectepfnlView1
+     */
+    public ViewObjectImpl getCollectepfnlView1() {
+        return (ViewObjectImpl) findViewObject("CollectepfnlView1");
+    }
+
+    /**
+     * Container's getter for CollectepfnlView2.
+     * @return CollectepfnlView2
+     */
+    public ViewObjectImpl getCollectepfnlView2() {
+        return (ViewObjectImpl) findViewObject("CollectepfnlView2");
+    }
+
+    /**
+     * Container's getter for CollectepfnlView3.
+     * @return CollectepfnlView3
+     */
+    public ViewObjectImpl getCollectepfnlView3() {
+        return (ViewObjectImpl) findViewObject("CollectepfnlView3");
+    }
+
+    /**
+     * Container's getter for CollectepfnlView4.
+     * @return CollectepfnlView4
+     */
+    public ViewObjectImpl getCollectepfnlView4() {
+        return (ViewObjectImpl) findViewObject("CollectepfnlView4");
+    }
+
+    /**
+     * Container's getter for FkCollectepfnl1Link1.
+     * @return FkCollectepfnl1Link1
+     */
+    public ViewLinkImpl getFkCollectepfnl1Link1() {
+        return (ViewLinkImpl) findViewLink("FkCollectepfnl1Link1");
+    }
+
+    /**
+     * Container's getter for FkCollectepfnl1Link2.
+     * @return FkCollectepfnl1Link2
+     */
+    public ViewLinkImpl getFkCollectepfnl1Link2() {
+        return (ViewLinkImpl) findViewLink("FkCollectepfnl1Link2");
+    }
+
+    /**
+     * Container's getter for DetailscollectepfnlView1.
+     * @return DetailscollectepfnlView1
+     */
+    public ViewObjectImpl getDetailscollectepfnlView1() {
+        return (ViewObjectImpl) findViewObject("DetailscollectepfnlView1");
+    }
+
+    /**
+     * Container's getter for DetailscollectepfnlView1_1.
+     * @return DetailscollectepfnlView1_1
+     */
+    public ViewObjectImpl getDetailscollectepfnlView1_1() {
+        return (ViewObjectImpl) findViewObject("DetailscollectepfnlView1_1");
+    }
+
+    /**
+     * Container's getter for DetailscollectepfnlView2.
+     * @return DetailscollectepfnlView2
+     */
+    public ViewObjectImpl getDetailscollectepfnlView2() {
+        return (ViewObjectImpl) findViewObject("DetailscollectepfnlView2");
+    }
+
+    /**
+     * Container's getter for DetailscollectepfnlView3.
+     * @return DetailscollectepfnlView3
+     */
+    public ViewObjectImpl getDetailscollectepfnlView3() {
+        return (ViewObjectImpl) findViewObject("DetailscollectepfnlView3");
+    }
+
+    /**
+     * Container's getter for DetailscollectepfnlView4.
+     * @return DetailscollectepfnlView4
+     */
+    public ViewObjectImpl getDetailscollectepfnlView4() {
+        return (ViewObjectImpl) findViewObject("DetailscollectepfnlView4");
+    }
+
+    /**
+     * Container's getter for DetailscollectepfnlView5.
+     * @return DetailscollectepfnlView5
+     */
+    public ViewObjectImpl getDetailscollectepfnlView5() {
+        return (ViewObjectImpl) findViewObject("DetailscollectepfnlView5");
+    }
+
+    /**
+     * Container's getter for DetailscollectepfnlView6.
+     * @return DetailscollectepfnlView6
+     */
+    public ViewObjectImpl getDetailscollectepfnlView6() {
+        return (ViewObjectImpl) findViewObject("DetailscollectepfnlView6");
+    }
+
+    /**
+     * Container's getter for DetailscollectepfnlView7.
+     * @return DetailscollectepfnlView7
+     */
+    public ViewObjectImpl getDetailscollectepfnlView7() {
+        return (ViewObjectImpl) findViewObject("DetailscollectepfnlView7");
+    }
+
+    /**
+     * Container's getter for DetailscollectepfnlView8.
+     * @return DetailscollectepfnlView8
+     */
+    public ViewObjectImpl getDetailscollectepfnlView8() {
+        return (ViewObjectImpl) findViewObject("DetailscollectepfnlView8");
+    }
+
+    /**
+     * Container's getter for DetailscollectepfnlView1_2.
+     * @return DetailscollectepfnlView1_2
+     */
+    public ViewObjectImpl getDetailscollectepfnlView1_2() {
+        return (ViewObjectImpl) findViewObject("DetailscollectepfnlView1_2");
+    }
+
+    /**
+     * Container's getter for DetailscollectepfnlView1_3.
+     * @return DetailscollectepfnlView1_3
+     */
+    public ViewObjectImpl getDetailscollectepfnlView1_3() {
+        return (ViewObjectImpl) findViewObject("DetailscollectepfnlView1_3");
+    }
+
+    /**
+     * Container's getter for DetailscollectepfnlView1_4.
+     * @return DetailscollectepfnlView1_4
+     */
+    public ViewObjectImpl getDetailscollectepfnlView1_4() {
+        return (ViewObjectImpl) findViewObject("DetailscollectepfnlView1_4");
+    }
+
+    /**
+     * Container's getter for DetailscollectepfnlView1_5.
+     * @return DetailscollectepfnlView1_5
+     */
+    public ViewObjectImpl getDetailscollectepfnlView1_5() {
+        return (ViewObjectImpl) findViewObject("DetailscollectepfnlView1_5");
+    }
+
+    /**
+     * Container's getter for DetailscollectepfnlView1_6.
+     * @return DetailscollectepfnlView1_6
+     */
+    public ViewObjectImpl getDetailscollectepfnlView1_6() {
+        return (ViewObjectImpl) findViewObject("DetailscollectepfnlView1_6");
+    }
+
+    /**
+     * Container's getter for DetailscollectepfnlView1_7.
+     * @return DetailscollectepfnlView1_7
+     */
+    public ViewObjectImpl getDetailscollectepfnlView1_7() {
+        return (ViewObjectImpl) findViewObject("DetailscollectepfnlView1_7");
+    }
+
+    /**
+     * Container's getter for DetailscollectepfnlView1_8.
+     * @return DetailscollectepfnlView1_8
+     */
+    public ViewObjectImpl getDetailscollectepfnlView1_8() {
+        return (ViewObjectImpl) findViewObject("DetailscollectepfnlView1_8");
+    }
+
+    /**
+     * Container's getter for FkDetailscollectepfnl7Link1.
+     * @return FkDetailscollectepfnl7Link1
+     */
+    public ViewLinkImpl getFkDetailscollectepfnl7Link1() {
+        return (ViewLinkImpl) findViewLink("FkDetailscollectepfnl7Link1");
+    }
+
+    /**
+     * Container's getter for FkDetailscollectepfnl6Link1.
+     * @return FkDetailscollectepfnl6Link1
+     */
+    public ViewLinkImpl getFkDetailscollectepfnl6Link1() {
+        return (ViewLinkImpl) findViewLink("FkDetailscollectepfnl6Link1");
+    }
+
+    /**
+     * Container's getter for FkDetailscollectepfnl5Link1.
+     * @return FkDetailscollectepfnl5Link1
+     */
+    public ViewLinkImpl getFkDetailscollectepfnl5Link1() {
+        return (ViewLinkImpl) findViewLink("FkDetailscollectepfnl5Link1");
+    }
+
+    /**
+     * Container's getter for FkDetailscollectepfnl4Link1.
+     * @return FkDetailscollectepfnl4Link1
+     */
+    public ViewLinkImpl getFkDetailscollectepfnl4Link1() {
+        return (ViewLinkImpl) findViewLink("FkDetailscollectepfnl4Link1");
+    }
+
+    /**
+     * Container's getter for FkDetailscollectepfnl3Link1.
+     * @return FkDetailscollectepfnl3Link1
+     */
+    public ViewLinkImpl getFkDetailscollectepfnl3Link1() {
+        return (ViewLinkImpl) findViewLink("FkDetailscollectepfnl3Link1");
+    }
+
+    /**
+     * Container's getter for FkDetailscollectepfnl2Link1.
+     * @return FkDetailscollectepfnl2Link1
+     */
+    public ViewLinkImpl getFkDetailscollectepfnl2Link1() {
+        return (ViewLinkImpl) findViewLink("FkDetailscollectepfnl2Link1");
+    }
+
+    /**
+     * Container's getter for FkDetailscollectepfnl1Link1.
+     * @return FkDetailscollectepfnl1Link1
+     */
+    public ViewLinkImpl getFkDetailscollectepfnl1Link1() {
+        return (ViewLinkImpl) findViewLink("FkDetailscollectepfnl1Link1");
+    }
+
+    /**
+     * Container's getter for FkDetailscollectepfnl1Link2.
+     * @return FkDetailscollectepfnl1Link2
+     */
+    public ViewLinkImpl getFkDetailscollectepfnl1Link2() {
+        return (ViewLinkImpl) findViewLink("FkDetailscollectepfnl1Link2");
+    }
+
+    /**
+     * Container's getter for FkDetailscollectepfnl2Link2.
+     * @return FkDetailscollectepfnl2Link2
+     */
+    public ViewLinkImpl getFkDetailscollectepfnl2Link2() {
+        return (ViewLinkImpl) findViewLink("FkDetailscollectepfnl2Link2");
+    }
+
+    /**
+     * Container's getter for FkDetailscollectepfnl3Link2.
+     * @return FkDetailscollectepfnl3Link2
+     */
+    public ViewLinkImpl getFkDetailscollectepfnl3Link2() {
+        return (ViewLinkImpl) findViewLink("FkDetailscollectepfnl3Link2");
+    }
+
+    /**
+     * Container's getter for FkDetailscollectepfnl4Link2.
+     * @return FkDetailscollectepfnl4Link2
+     */
+    public ViewLinkImpl getFkDetailscollectepfnl4Link2() {
+        return (ViewLinkImpl) findViewLink("FkDetailscollectepfnl4Link2");
+    }
+
+    /**
+     * Container's getter for FkDetailscollectepfnl5Link2.
+     * @return FkDetailscollectepfnl5Link2
+     */
+    public ViewLinkImpl getFkDetailscollectepfnl5Link2() {
+        return (ViewLinkImpl) findViewLink("FkDetailscollectepfnl5Link2");
+    }
+
+    /**
+     * Container's getter for FkDetailscollectepfnl6Link2.
+     * @return FkDetailscollectepfnl6Link2
+     */
+    public ViewLinkImpl getFkDetailscollectepfnl6Link2() {
+        return (ViewLinkImpl) findViewLink("FkDetailscollectepfnl6Link2");
+    }
+
+    /**
+     * Container's getter for FkDetailscollectepfnl7Link2.
+     * @return FkDetailscollectepfnl7Link2
+     */
+    public ViewLinkImpl getFkDetailscollectepfnl7Link2() {
+        return (ViewLinkImpl) findViewLink("FkDetailscollectepfnl7Link2");
+    }
+
+    /**
+     * Container's getter for CollectepfnlView5.
+     * @return CollectepfnlView5
+     */
+    public ViewObjectImpl getCollectepfnlView5() {
+        return (ViewObjectImpl) findViewObject("CollectepfnlView5");
+    }
+
+    /**
+     * Container's getter for DetailscollectepfnlView9.
+     * @return DetailscollectepfnlView9
+     */
+    public ViewObjectImpl getDetailscollectepfnlView9() {
+        return (ViewObjectImpl) findViewObject("DetailscollectepfnlView9");
+    }
+
+    /**
+     * Container's getter for CollecteToDetailLink.
+     * @return CollecteToDetailLink
+     */
+    public ViewLinkImpl getCollecteToDetailLink() {
+        return (ViewLinkImpl) findViewLink("CollecteToDetailLink");
+    }
+
+    /**
+     * Container's getter for DetailscollectepfnlView10.
+     * @return DetailscollectepfnlView10
+     */
+    public ViewObjectImpl getDetailscollectepfnlView10() {
+        return (ViewObjectImpl) findViewObject("DetailscollectepfnlView10");
+    }
+
+    /**
+     * Container's getter for PermissionnairespnflView2.
+     * @return PermissionnairespnflView2
+     */
+    public ViewObjectImpl getPermissionnairespnflView2() {
+        return (ViewObjectImpl) findViewObject("PermissionnairespnflView2");
+    }
+
+    /**
+     * Container's getter for DetailCollToPermissionnaireLink.
+     * @return DetailCollToPermissionnaireLink
+     */
+    public ViewLinkImpl getDetailCollToPermissionnaireLink() {
+        return (ViewLinkImpl) findViewLink("DetailCollToPermissionnaireLink");
+    }
+
+    /**
+     * Container's getter for DetailscollectepfnlView11.
+     * @return DetailscollectepfnlView11
+     */
+    public ViewObjectImpl getDetailscollectepfnlView11() {
+        return (ViewObjectImpl) findViewObject("DetailscollectepfnlView11");
+    }
+
+    /**
+     * Container's getter for PartiesProduitsPfnlView22.
+     * @return PartiesProduitsPfnlView22
+     */
+    public ViewObjectImpl getPartiesProduitsPfnlView22() {
+        return (ViewObjectImpl) findViewObject("PartiesProduitsPfnlView22");
+    }
+
+    /**
+     * Container's getter for DetailCollToPartieProdPfnlLink.
+     * @return DetailCollToPartieProdPfnlLink
+     */
+    public ViewLinkImpl getDetailCollToPartieProdPfnlLink() {
+        return (ViewLinkImpl) findViewLink("DetailCollToPartieProdPfnlLink");
+    }
+
+    /**
+     * Container's getter for DetailscollectepfnlView12.
+     * @return DetailscollectepfnlView12
+     */
+    public ViewObjectImpl getDetailscollectepfnlView12() {
+        return (ViewObjectImpl) findViewObject("DetailscollectepfnlView12");
+    }
+
+    /**
+     * Container's getter for OriginespnflsView4.
+     * @return OriginespnflsView4
+     */
+    public ViewObjectImpl getOriginespnflsView4() {
+        return (ViewObjectImpl) findViewObject("OriginespnflsView4");
+    }
+
+    /**
+     * Container's getter for DetailCollToOriginePfnlLink.
+     * @return DetailCollToOriginePfnlLink
+     */
+    public ViewLinkImpl getDetailCollToOriginePfnlLink() {
+        return (ViewLinkImpl) findViewLink("DetailCollToOriginePfnlLink");
+    }
+
+    /**
+     * Container's getter for DetailscollectepfnlView13.
+     * @return DetailscollectepfnlView13
+     */
+    public ViewObjectImpl getDetailscollectepfnlView13() {
+        return (ViewObjectImpl) findViewObject("DetailscollectepfnlView13");
+    }
+
+    /**
+     * Container's getter for UnitemesureView7.
+     * @return UnitemesureView7
+     */
+    public ViewObjectImpl getUnitemesureView7() {
+        return (ViewObjectImpl) findViewObject("UnitemesureView7");
+    }
+
+    /**
+     * Container's getter for DetailCollToUnitMesureLink.
+     * @return DetailCollToUnitMesureLink
+     */
+    public ViewLinkImpl getDetailCollToUnitMesureLink() {
+        return (ViewLinkImpl) findViewLink("DetailCollToUnitMesureLink");
+    }
+
+    /**
+     * Container's getter for DetailscollectepfnlView14.
+     * @return DetailscollectepfnlView14
+     */
+    public ViewObjectImpl getDetailscollectepfnlView14() {
+        return (ViewObjectImpl) findViewObject("DetailscollectepfnlView14");
+    }
+
+    /**
+     * Container's getter for PermisView5.
+     * @return PermisView5
+     */
+    public ViewObjectImpl getPermisView5() {
+        return (ViewObjectImpl) findViewObject("PermisView5");
+    }
+
+    /**
+     * Container's getter for DetailCollToDocOfficielLink.
+     * @return DetailCollToDocOfficielLink
+     */
+    public ViewLinkImpl getDetailCollToDocOfficielLink() {
+        return (ViewLinkImpl) findViewLink("DetailCollToDocOfficielLink");
+    }
+
+    /**
+     * Container's getter for DetailscollectepfnlView15.
+     * @return DetailscollectepfnlView15
+     */
+    public ViewObjectImpl getDetailscollectepfnlView15() {
+        return (ViewObjectImpl) findViewObject("DetailscollectepfnlView15");
+    }
+
+    /**
+     * Container's getter for DepartementView10.
+     * @return DepartementView10
+     */
+    public ViewObjectImpl getDepartementView10() {
+        return (ViewObjectImpl) findViewObject("DepartementView10");
+    }
+
+    /**
+     * Container's getter for DetailCollToDeptLink.
+     * @return DetailCollToDeptLink
+     */
+    public ViewLinkImpl getDetailCollToDeptLink() {
+        return (ViewLinkImpl) findViewLink("DetailCollToDeptLink");
+    }
+
+    /**
+     * Container's getter for DetailscollectepfnlView16.
+     * @return DetailscollectepfnlView16
+     */
+    public ViewObjectImpl getDetailscollectepfnlView16() {
+        return (ViewObjectImpl) findViewObject("DetailscollectepfnlView16");
+    }
+
+
+    /**
+     * Container's getter for DetailscollectepfnlView17.
+     * @return DetailscollectepfnlView17
+     */
+    public ViewObjectImpl getDetailscollectepfnlView17() {
+        return (ViewObjectImpl) findViewObject("DetailscollectepfnlView17");
+    }
+
+    /**
+     * Container's getter for CollecteToDetailLink1.
+     * @return CollecteToDetailLink1
+     */
+    public ViewLinkImpl getCollecteToDetailLink1() {
+        return (ViewLinkImpl) findViewLink("CollecteToDetailLink1");
+    }
+
+    /**
+     * Container's getter for DepartementView11.
+     * @return DepartementView11
+     */
+    public ViewObjectImpl getDepartementView11() {
+        return (ViewObjectImpl) findViewObject("DepartementView11");
+    }
+
+    /**
+     * Container's getter for DetailCollToDeptLink1.
+     * @return DetailCollToDeptLink1
+     */
+    public ViewLinkImpl getDetailCollToDeptLink1() {
+        return (ViewLinkImpl) findViewLink("DetailCollToDeptLink1");
+    }
+
+    /**
+     * Container's getter for UnitemesureView8.
+     * @return UnitemesureView8
+     */
+    public ViewObjectImpl getUnitemesureView8() {
+        return (ViewObjectImpl) findViewObject("UnitemesureView8");
+    }
+
+    /**
+     * Container's getter for DetailCollToUnitMesureLink1.
+     * @return DetailCollToUnitMesureLink1
+     */
+    public ViewLinkImpl getDetailCollToUnitMesureLink1() {
+        return (ViewLinkImpl) findViewLink("DetailCollToUnitMesureLink1");
+    }
+
+    /**
+     * Container's getter for PermisView6.
+     * @return PermisView6
+     */
+    public ViewObjectImpl getPermisView6() {
+        return (ViewObjectImpl) findViewObject("PermisView6");
+    }
+
+    /**
+     * Container's getter for DetailCollToDocOfficielLink1.
+     * @return DetailCollToDocOfficielLink1
+     */
+    public ViewLinkImpl getDetailCollToDocOfficielLink1() {
+        return (ViewLinkImpl) findViewLink("DetailCollToDocOfficielLink1");
+    }
+
+    /**
+     * Container's getter for PermissionnairespnflView3.
+     * @return PermissionnairespnflView3
+     */
+    public ViewObjectImpl getPermissionnairespnflView3() {
+        return (ViewObjectImpl) findViewObject("PermissionnairespnflView3");
+    }
+
+    /**
+     * Container's getter for DetailCollToPermissionnaireLink1.
+     * @return DetailCollToPermissionnaireLink1
+     */
+    public ViewLinkImpl getDetailCollToPermissionnaireLink1() {
+        return (ViewLinkImpl) findViewLink("DetailCollToPermissionnaireLink1");
+    }
+
+    /**
+     * Container's getter for PartiesProduitsPfnlView23.
+     * @return PartiesProduitsPfnlView23
+     */
+    public ViewObjectImpl getPartiesProduitsPfnlView23() {
+        return (ViewObjectImpl) findViewObject("PartiesProduitsPfnlView23");
+    }
+
+    /**
+     * Container's getter for DetailCollToPartieProdPfnlLink1.
+     * @return DetailCollToPartieProdPfnlLink1
+     */
+    public ViewLinkImpl getDetailCollToPartieProdPfnlLink1() {
+        return (ViewLinkImpl) findViewLink("DetailCollToPartieProdPfnlLink1");
+    }
+
+    /**
+     * Container's getter for OriginespnflsView5.
+     * @return OriginespnflsView5
+     */
+    public ViewObjectImpl getOriginespnflsView5() {
+        return (ViewObjectImpl) findViewObject("OriginespnflsView5");
+    }
+
+    /**
+     * Container's getter for DetailCollToOriginePfnlLink1.
+     * @return DetailCollToOriginePfnlLink1
+     */
+    public ViewLinkImpl getDetailCollToOriginePfnlLink1() {
+        return (ViewLinkImpl) findViewLink("DetailCollToOriginePfnlLink1");
+    }
+
+    /**
+     * Container's getter for getLastIdCollectePfnl1.
+     * @return getLastIdCollectePfnl1
+     */
+    public getLastIdCollectePfnlImpl getgetLastIdCollectePfnl1() {
+        return (getLastIdCollectePfnlImpl) findViewObject("getLastIdCollectePfnl1");
+    }
+
+    /**
+     * Container's getter for getLastIdDetailsCollecte1.
+     * @return getLastIdDetailsCollecte1
+     */
+    public getLastIdDetailsCollecteImpl getgetLastIdDetailsCollecte1() {
+        return (getLastIdDetailsCollecteImpl) findViewObject("getLastIdDetailsCollecte1");
+    }
+
+    /**
+     * Container's getter for getLibellePartieProduitPfnl1.
+     * @return getLibellePartieProduitPfnl1
+     */
+    public getLibellePartieProduitPfnlImpl getgetLibellePartieProduitPfnl1() {
+        return (getLibellePartieProduitPfnlImpl) findViewObject("getLibellePartieProduitPfnl1");
+    }
+
+    /**
+     * Container's getter for getLibelleProduitPfnl1.
+     * @return getLibelleProduitPfnl1
+     */
+    public getLibelleProduitPfnlImpl getgetLibelleProduitPfnl1() {
+        return (getLibelleProduitPfnlImpl) findViewObject("getLibelleProduitPfnl1");
+    }
+
+    /**
+     * Container's getter for getLibelle1.
+     * @return getLibelle1
+     */
+    public getLibelleImpl getgetLibelle1() {
+        return (getLibelleImpl) findViewObject("getLibelle1");
+    }
+
+    /**
+     * Container's getter for getLibelleProduitComplet1.
+     * @return getLibelleProduitComplet1
+     */
+    public getLibelleProduitCompletImpl getgetLibelleProduitComplet1() {
+        return (getLibelleProduitCompletImpl) findViewObject("getLibelleProduitComplet1");
     }
 }
 

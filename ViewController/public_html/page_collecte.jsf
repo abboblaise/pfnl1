@@ -1,0 +1,316 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+        xmlns:c="http://java.sun.com/jsp/jstl/core">
+    <c:set var="viewcontrollerBundle" value="#{adfBundle['cm.gov.minfof.view.ViewControllerBundle']}"/>
+    <af:document title="page_collecte.jsf" id="d1">
+        <af:messages id="m1"/>
+        <af:form id="f1">
+            <af:pageTemplate viewId="/TemplateGlobal.jsf" id="pt1">
+                <f:facet name="content">
+                    <af:panelSplitter id="ps1" splitterPosition="471" orientation="horizontal">
+                        <f:facet name="first">
+                            <af:panelSplitter id="ps2" orientation="vertical">
+                                <f:facet name="first">
+                                    <af:panelBox text="#{viewcontrollerBundle.EDITION_DES_COLLECTES}" id="pb1">
+                                        <f:facet name="toolbar"/>
+                                        <af:panelFormLayout id="pfl1">
+                                            <af:inputText value="#{bindings.Identificateur.inputValue}"
+                                                          label="#{bindings.Identificateur.hints.label}"
+                                                          required="#{bindings.Identificateur.hints.mandatory}"
+                                                          columns="#{bindings.Identificateur.hints.displayWidth}"
+                                                          maximumLength="#{bindings.Identificateur.hints.precision}"
+                                                          shortDesc="#{bindings.Identificateur.hints.tooltip}" id="it1">
+                                                <f:validator binding="#{bindings.Identificateur.validator}"/>
+                                            </af:inputText>
+                                            <af:selectOneChoice value="#{bindings.Iddepartement.inputValue}"
+                                                                label="#{bindings.Iddepartement.label}"
+                                                                required="#{bindings.Iddepartement.hints.mandatory}"
+                                                                shortDesc="#{bindings.Iddepartement.hints.tooltip}"
+                                                                id="soc1">
+                                                <f:selectItems value="#{bindings.Iddepartement.items}" id="si1"/>
+                                                <f:validator binding="#{bindings.Iddepartement.validator}"/>
+                                            </af:selectOneChoice>
+                                            <af:selectOneChoice value="#{bindings.Idlocalite.inputValue}"
+                                                                label="#{bindings.Idlocalite.label}"
+                                                                required="#{bindings.Idlocalite.hints.mandatory}"
+                                                                shortDesc="#{bindings.Idlocalite.hints.tooltip}"
+                                                                id="soc2">
+                                                <f:selectItems value="#{bindings.Idlocalite.items}" id="si2"/>
+                                                <f:validator binding="#{bindings.Idlocalite.validator}"/>
+                                            </af:selectOneChoice>
+                                            <af:inputText value="#{bindings.Codepcfc.inputValue}"
+                                                          label="#{bindings.Codepcfc.hints.label}"
+                                                          required="#{bindings.Codepcfc.hints.mandatory}"
+                                                          columns="#{bindings.Codepcfc.hints.displayWidth}"
+                                                          maximumLength="#{bindings.Codepcfc.hints.precision}"
+                                                          shortDesc="#{bindings.Codepcfc.hints.tooltip}" id="it3">
+                                                <f:validator binding="#{bindings.Codepcfc.validator}"/>
+                                            </af:inputText>
+                                            <af:inputDate value="#{bindings.Datecollecte.inputValue}"
+                                                          label="#{bindings.Datecollecte.hints.label}"
+                                                          required="#{bindings.Datecollecte.hints.mandatory}"
+                                                          columns="#{bindings.Datecollecte.hints.displayWidth}"
+                                                          shortDesc="#{bindings.Datecollecte.hints.tooltip}" id="id1">
+                                                <f:validator binding="#{bindings.Datecollecte.validator}"/>
+                                                <af:convertDateTime pattern="#{bindings.Datecollecte.format}"/>
+                                            </af:inputDate>
+                                            <f:facet name="footer">
+                                                <af:panelGroupLayout id="pgl1">
+                                                    <af:button text="Submit" id="b1" visible="false"/>
+                                                    <af:button
+                                                               text="#{viewcontrollerBundle.NOUVEAU}"
+                                                               disabled="#{!bindings.CreateInsert.enabled}" id="b2"
+                                                               action="#{collecteBean.creerCollecte}"/>
+                                                    <af:button text="#{viewcontrollerBundle.ENREGISTRER}" id="b3"
+                                                               actionListener="#{bindings.Commit.execute}"
+                                                               disabled="false"/>
+                                                    <af:button
+                                                               text="#{viewcontrollerBundle.SUPPRIMER}"
+                                                               id="b7" action="#{collecteBean.supprimeCollecte}"/>
+                                                </af:panelGroupLayout>
+                                            </f:facet>
+                                        </af:panelFormLayout>
+                                    </af:panelBox>
+                                </f:facet>
+                                <f:facet name="second">
+                                    <af:panelBox text="#{viewcontrollerBundle.LISTE_DES_COLLECTES}" id="pb2">
+                                        <f:facet name="toolbar"/>
+                                        <af:panelCollection id="pc2">
+                                            <f:facet name="menus"/>
+                                            <f:facet name="toolbar"/>
+                                            <af:table value="#{bindings.CollectepfnlView1.collectionModel}" var="row"
+                                                      rows="#{bindings.CollectepfnlView1.rangeSize}"
+                                                      emptyText="#{bindings.CollectepfnlView1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                                      rowBandingInterval="0"
+                                                      selectedRowKeys="#{bindings.CollectepfnlView1.collectionModel.selectedRow}"
+                                                      selectionListener="#{bindings.CollectepfnlView1.collectionModel.makeCurrent}"
+                                                      rowSelection="single"
+                                                      fetchSize="#{bindings.CollectepfnlView1.rangeSize}"
+                                                      filterModel="#{bindings.CollectepfnlView1Query.queryDescriptor}"
+                                                      filterVisible="true"
+                                                      queryListener="#{bindings.CollectepfnlView1Query.processQuery}"
+                                                      varStatus="vs" id="t1" partialTriggers=":::b2 :::b7 :::b3"
+                                                      columnSelection="single">
+                                                <af:column sortProperty="#{bindings.CollectepfnlView1.hints.Identificateur.name}"
+                                                           filterable="true" sortable="true"
+                                                           headerText="#{bindings.CollectepfnlView1.hints.Identificateur.label}"
+                                                           id="c2">
+                                                    <af:outputText value="#{row.Identificateur}"
+                                                                   shortDesc="#{bindings.CollectepfnlView1.hints.Identificateur.tooltip}"
+                                                                   id="ot2"/>
+                                                </af:column>
+                                                <af:column headerText="#{bindings.CollectepfnlView1.hints.Iddepartement.label}"
+                                                           id="c3"
+                                                           sortProperty="#{bindings.CollectepfnlView1.hints.Iddepartement.name}"
+                                                           filterable="true">
+                                                    <af:selectOneChoice value="#{row.bindings.Iddepartement.inputValue}"
+                                                                        label="#{row.bindings.Iddepartement.label}"
+                                                                        required="#{bindings.CollectepfnlView1.hints.Iddepartement.mandatory}"
+                                                                        shortDesc="#{bindings.CollectepfnlView1.hints.Iddepartement.tooltip}"
+                                                                        id="soc3" disabled="false" readOnly="true">
+                                                        <f:selectItems value="#{row.bindings.Iddepartement.items}"
+                                                                       id="si3"/>
+                                                        <f:validator binding="#{row.bindings.Iddepartement.validator}"/>
+                                                    </af:selectOneChoice>
+                                                </af:column>
+                                                <af:column headerText="#{bindings.CollectepfnlView1.hints.Idlocalite.label}"
+                                                           id="c5"
+                                                           sortProperty="#{bindings.CollectepfnlView1.hints.Idlocalite.name}"
+                                                           filterable="true">
+                                                    <af:selectOneChoice value="#{row.bindings.Idlocalite.inputValue}"
+                                                                        label="#{row.bindings.Idlocalite.label}"
+                                                                        required="#{bindings.CollectepfnlView1.hints.Idlocalite.mandatory}"
+                                                                        shortDesc="#{bindings.CollectepfnlView1.hints.Idlocalite.tooltip}"
+                                                                        id="soc4" readOnly="true">
+                                                        <f:selectItems value="#{row.bindings.Idlocalite.items}"
+                                                                       id="si4"/>
+                                                        <f:validator binding="#{row.bindings.Idlocalite.validator}"/>
+                                                    </af:selectOneChoice>
+                                                </af:column>
+                                                <af:column sortProperty="#{bindings.CollectepfnlView1.hints.Codepcfc.name}"
+                                                           filterable="true" sortable="true"
+                                                           headerText="#{bindings.CollectepfnlView1.hints.Codepcfc.label}"
+                                                           id="c4">
+                                                    <af:outputText value="#{row.Codepcfc}"
+                                                                   shortDesc="#{bindings.CollectepfnlView1.hints.Codepcfc.tooltip}"
+                                                                   id="ot4"/>
+                                                </af:column>
+                                                <af:column sortProperty="#{bindings.CollectepfnlView1.hints.Datecollecte.name}"
+                                                           filterable="true" sortable="true"
+                                                           headerText="#{bindings.CollectepfnlView1.hints.Datecollecte.label}"
+                                                           id="c1">
+                                                    <f:facet name="filter">
+                                                        <af:inputDate value="#{bindings.CollectepfnlView1Query.queryDescriptor.filterConjunctionCriterion.criterionMap.Datecollecte.value}"
+                                                                      id="id2">
+                                                            <af:convertDateTime pattern="#{bindings.CollectepfnlView1.hints.Datecollecte.format}"/>
+                                                        </af:inputDate>
+                                                    </f:facet>
+                                                    <af:outputText value="#{row.Datecollecte}"
+                                                                   shortDesc="#{bindings.CollectepfnlView1.hints.Datecollecte.tooltip}"
+                                                                   id="ot1">
+                                                        <af:convertDateTime pattern="#{bindings.CollectepfnlView1.hints.Datecollecte.format}"/>
+                                                    </af:outputText>
+                                                </af:column>
+                                            </af:table>
+                                            <f:facet name="statusbar"/>
+                                        </af:panelCollection>
+                                    </af:panelBox>
+                                </f:facet>
+                            </af:panelSplitter>
+                        </f:facet>
+                        <f:facet name="second">
+                            <af:panelBox text="#{viewcontrollerBundle.D_U00E9TAILS_DE_LA_COLLECTE}" id="pb3">
+                                <f:facet name="toolbar"/>
+                                <af:panelCollection id="pc1">
+                                    <f:facet name="menus"/>
+                                    <f:facet name="toolbar">
+                                        <af:toolbar id="t3">
+                                            <af:button actionListener="#{bindings.CreateInsert1.execute}"
+                                                       text="#{viewcontrollerBundle.NOUVEAU}"
+                                                       disabled="#{!bindings.CreateInsert1.enabled}" id="b5"/>
+                                            <af:button actionListener="#{bindings.Delete.execute}"
+                                                       text="#{viewcontrollerBundle.SUPPRIMER}"
+                                                       disabled="#{!bindings.Delete.enabled}" id="b6"/>
+                                        </af:toolbar>
+                                    </f:facet>
+                                    <af:table value="#{bindings.DetailscollectepfnlView17.collectionModel}" var="row"
+                                              rows="#{bindings.DetailscollectepfnlView17.rangeSize}"
+                                              emptyText="#{bindings.DetailscollectepfnlView17.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                              rowBandingInterval="0"
+                                              selectedRowKeys="#{bindings.DetailscollectepfnlView17.collectionModel.selectedRow}"
+                                              selectionListener="#{bindings.DetailscollectepfnlView17.collectionModel.makeCurrent}"
+                                              rowSelection="single"
+                                              fetchSize="#{bindings.DetailscollectepfnlView17.rangeSize}"
+                                              filterModel="#{bindings.DetailscollectepfnlView17Query.queryDescriptor}"
+                                              filterVisible="true"
+                                              queryListener="#{bindings.DetailscollectepfnlView17Query.processQuery}"
+                                              varStatus="vs" id="t2" partialTriggers="::b5 ::b6">
+                                        <af:column sortProperty="#{bindings.DetailscollectepfnlView17.hints.Iddetailscollectepfnl.name}"
+                                                   filterable="true" sortable="true"
+                                                   headerText="#{bindings.DetailscollectepfnlView17.hints.Iddetailscollectepfnl.label}"
+                                                   id="c6" visible="false">
+                                            <af:inputText value="#{row.bindings.Iddetailscollectepfnl.inputValue}"
+                                                          label="#{bindings.DetailscollectepfnlView17.hints.Iddetailscollectepfnl.label}"
+                                                          required="#{bindings.DetailscollectepfnlView17.hints.Iddetailscollectepfnl.mandatory}"
+                                                          columns="#{bindings.DetailscollectepfnlView17.hints.Iddetailscollectepfnl.displayWidth}"
+                                                          maximumLength="#{bindings.DetailscollectepfnlView17.hints.Iddetailscollectepfnl.precision}"
+                                                          shortDesc="#{bindings.DetailscollectepfnlView17.hints.Iddetailscollectepfnl.tooltip}"
+                                                          id="it5">
+                                                <f:validator binding="#{row.bindings.Iddetailscollectepfnl.validator}"/>
+                                                <af:convertNumber groupingUsed="false"
+                                                                  pattern="#{bindings.DetailscollectepfnlView17.hints.Iddetailscollectepfnl.format}"/>
+                                            </af:inputText>
+                                        </af:column>
+                                        <af:column headerText="#{bindings.DetailscollectepfnlView17.hints.Idpermissionnaire.label}"
+                                                   id="c7">
+                                            <af:selectOneChoice value="#{row.bindings.Idpermissionnaire.inputValue}"
+                                                                label="#{row.bindings.Idpermissionnaire.label}"
+                                                                required="#{bindings.DetailscollectepfnlView17.hints.Idpermissionnaire.mandatory}"
+                                                                shortDesc="#{bindings.DetailscollectepfnlView17.hints.Idpermissionnaire.tooltip}"
+                                                                id="soc5">
+                                                <f:selectItems value="#{row.bindings.Idpermissionnaire.items}"
+                                                               id="si5"/>
+                                                <f:validator binding="#{row.bindings.Idpermissionnaire.validator}"/>
+                                            </af:selectOneChoice>
+                                        </af:column>
+                                        <af:column headerText="#{bindings.DetailscollectepfnlView17.hints.Idpartieproduitpfnl.label}"
+                                                   id="c13">
+                                            <af:selectOneChoice value="#{row.bindings.Idpartieproduitpfnl.inputValue}"
+                                                                label="#{row.bindings.Idpartieproduitpfnl.label}"
+                                                                required="#{bindings.DetailscollectepfnlView17.hints.Idpartieproduitpfnl.mandatory}"
+                                                                shortDesc="#{bindings.DetailscollectepfnlView17.hints.Idpartieproduitpfnl.tooltip}"
+                                                                id="soc6">
+                                                <f:selectItems value="#{row.bindings.Idpartieproduitpfnl.items}"
+                                                               id="si6"/>
+                                                <f:validator binding="#{row.bindings.Idpartieproduitpfnl.validator}"/>
+                                            </af:selectOneChoice>
+                                        </af:column>
+                                        <af:column headerText="#{bindings.DetailscollectepfnlView17.hints.Idorigine.label}"
+                                                   id="c8">
+                                            <af:selectOneChoice value="#{row.bindings.Idorigine.inputValue}"
+                                                                label="#{row.bindings.Idorigine.label}"
+                                                                required="#{bindings.DetailscollectepfnlView17.hints.Idorigine.mandatory}"
+                                                                shortDesc="#{bindings.DetailscollectepfnlView17.hints.Idorigine.tooltip}"
+                                                                id="soc7">
+                                                <f:selectItems value="#{row.bindings.Idorigine.items}" id="si7"/>
+                                                <f:validator binding="#{row.bindings.Idorigine.validator}"/>
+                                            </af:selectOneChoice>
+                                        </af:column>
+                                        <af:column sortProperty="#{bindings.DetailscollectepfnlView17.hints.Quantite.name}"
+                                                   filterable="true" sortable="true"
+                                                   headerText="#{bindings.DetailscollectepfnlView17.hints.Quantite.label}"
+                                                   id="c9">
+                                            <af:inputText value="#{row.bindings.Quantite.inputValue}"
+                                                          label="#{bindings.DetailscollectepfnlView17.hints.Quantite.label}"
+                                                          required="#{bindings.DetailscollectepfnlView17.hints.Quantite.mandatory}"
+                                                          columns="#{bindings.DetailscollectepfnlView17.hints.Quantite.displayWidth}"
+                                                          maximumLength="#{bindings.DetailscollectepfnlView17.hints.Quantite.precision}"
+                                                          shortDesc="#{bindings.DetailscollectepfnlView17.hints.Quantite.tooltip}"
+                                                          id="it8">
+                                                <f:validator binding="#{row.bindings.Quantite.validator}"/>
+                                                <af:convertNumber groupingUsed="false"
+                                                                  pattern="#{bindings.DetailscollectepfnlView17.hints.Quantite.format}"/>
+                                            </af:inputText>
+                                        </af:column>
+                                        <af:column headerText="#{bindings.DetailscollectepfnlView17.hints.Idunitemesure.label}"
+                                                   id="c10">
+                                            <af:selectOneChoice value="#{row.bindings.Idunitemesure.inputValue}"
+                                                                label="#{row.bindings.Idunitemesure.label}"
+                                                                required="#{bindings.DetailscollectepfnlView17.hints.Idunitemesure.mandatory}"
+                                                                shortDesc="#{bindings.DetailscollectepfnlView17.hints.Idunitemesure.tooltip}"
+                                                                id="soc8">
+                                                <f:selectItems value="#{row.bindings.Idunitemesure.items}" id="si8"/>
+                                                <f:validator binding="#{row.bindings.Idunitemesure.validator}"/>
+                                            </af:selectOneChoice>
+                                        </af:column>
+                                        <af:column headerText="#{bindings.DetailscollectepfnlView17.hints.Iddocumentofficiel.label}"
+                                                   id="c11">
+                                            <af:selectOneChoice value="#{row.bindings.Iddocumentofficiel.inputValue}"
+                                                                label="#{row.bindings.Iddocumentofficiel.label}"
+                                                                required="#{bindings.DetailscollectepfnlView17.hints.Iddocumentofficiel.mandatory}"
+                                                                shortDesc="#{bindings.DetailscollectepfnlView17.hints.Iddocumentofficiel.tooltip}"
+                                                                id="soc9">
+                                                <f:selectItems value="#{row.bindings.Iddocumentofficiel.items}"
+                                                               id="si9"/>
+                                                <f:validator binding="#{row.bindings.Iddocumentofficiel.validator}"/>
+                                            </af:selectOneChoice>
+                                        </af:column>
+                                        <af:column headerText="#{bindings.DetailscollectepfnlView17.hints.Iddestination.label}"
+                                                   id="c12">
+                                            <af:selectOneChoice value="#{row.bindings.Iddestination.inputValue}"
+                                                                label="#{row.bindings.Iddestination.label}"
+                                                                required="#{bindings.DetailscollectepfnlView17.hints.Iddestination.mandatory}"
+                                                                shortDesc="#{bindings.DetailscollectepfnlView17.hints.Iddestination.tooltip}"
+                                                                id="soc10">
+                                                <f:selectItems value="#{row.bindings.Iddestination.items}" id="si10"/>
+                                                <f:validator binding="#{row.bindings.Iddestination.validator}"/>
+                                            </af:selectOneChoice>
+                                        </af:column>
+                                        <af:column sortProperty="#{bindings.DetailscollectepfnlView17.hints.Idcollectepfnl.name}"
+                                                   filterable="true" sortable="true"
+                                                   headerText="#{bindings.DetailscollectepfnlView17.hints.Idcollectepfnl.label}"
+                                                   id="c14">
+                                            <af:inputText value="#{row.bindings.Idcollectepfnl.inputValue}"
+                                                          label="#{bindings.DetailscollectepfnlView17.hints.Idcollectepfnl.label}"
+                                                          required="#{bindings.DetailscollectepfnlView17.hints.Idcollectepfnl.mandatory}"
+                                                          columns="#{bindings.DetailscollectepfnlView17.hints.Idcollectepfnl.displayWidth}"
+                                                          maximumLength="#{bindings.DetailscollectepfnlView17.hints.Idcollectepfnl.precision}"
+                                                          shortDesc="#{bindings.DetailscollectepfnlView17.hints.Idcollectepfnl.tooltip}"
+                                                          id="it13">
+                                                <f:validator binding="#{row.bindings.Idcollectepfnl.validator}"/>
+                                                <af:convertNumber groupingUsed="false"
+                                                                  pattern="#{bindings.DetailscollectepfnlView17.hints.Idcollectepfnl.format}"/>
+                                            </af:inputText>
+                                        </af:column>
+                                    </af:table>
+                                    <f:facet name="statusbar"/>
+                                </af:panelCollection>
+                            </af:panelBox>
+                        </f:facet>
+                    </af:panelSplitter>
+                </f:facet>
+            </af:pageTemplate>
+        </af:form>
+    </af:document>
+</f:view>

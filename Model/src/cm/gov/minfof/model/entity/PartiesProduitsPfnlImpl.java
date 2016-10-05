@@ -39,8 +39,10 @@ public class PartiesProduitsPfnlImpl extends EntityImpl {
         ProduitsPfnl1,
         ProduitsPfnl2,
         Unitemesure,
-        Unitemesure1;
+        Unitemesure1,
+        Detailscollectepfnl;
         private static AttributesEnum[] vals = null;
+        ;
         private static final int firstIndex = 0;
 
         protected int index() {
@@ -85,6 +87,7 @@ public class PartiesProduitsPfnlImpl extends EntityImpl {
     public static final int PRODUITSPFNL2 = AttributesEnum.ProduitsPfnl2.index();
     public static final int UNITEMESURE = AttributesEnum.Unitemesure.index();
     public static final int UNITEMESURE1 = AttributesEnum.Unitemesure1.index();
+    public static final int DETAILSCOLLECTEPFNL = AttributesEnum.Detailscollectepfnl.index();
 
     /**
      * This is the default constructor (do not remove).
@@ -195,6 +198,7 @@ public class PartiesProduitsPfnlImpl extends EntityImpl {
     public void setIdunitemesureexport(BigDecimal value) {
         setAttributeInternal(IDUNITEMESUREEXPORT, value);
     }
+
 
     /**
      * @return the associated entity oracle.jbo.RowIterator.
@@ -351,6 +355,15 @@ public class PartiesProduitsPfnlImpl extends EntityImpl {
         setAttributeInternal(UNITEMESURE1, value);
     }
 
+
+    /**
+     * @return the associated entity oracle.jbo.RowIterator.
+     */
+    public RowIterator getDetailscollectepfnl() {
+        return (RowIterator) getAttributeInternal(DETAILSCOLLECTEPFNL);
+    }
+
+
     /**
      * @param idpartiesproduitspfnl key constituent
 
@@ -409,5 +422,12 @@ public class PartiesProduitsPfnlImpl extends EntityImpl {
         lastId = lastId.add(un);
         return lastId; 
     }
+    
+    public ViewObject rechercherVue(String viewName) {
+        ViewObject vo = this.getDBTransaction()
+                            .getRootApplicationModule()
+                            .findViewObject(viewName);
+        return vo; 
+        }
 }
 
