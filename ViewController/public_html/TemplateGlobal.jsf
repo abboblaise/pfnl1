@@ -107,7 +107,12 @@
                                         </af:showDetailItem>
                                     </af:panelAccordion>
                                 </af:showDetailItem>
-                                <af:showDetailItem text="#{viewcontrollerBundle.TRAITEMENTS}" id="pt_sdi1"/>
+                                <af:showDetailItem text="#{viewcontrollerBundle.TRAITEMENTS}" id="pt_sdi1">
+                                    <af:panelGroupLayout id="pt_pgl8" valign="middle" halign="center">
+                                        <af:button text="#{viewcontrollerBundle.FICHE_DE_COLLECTE}" id="pt_b19"
+                                                   destination="page_collecte.jsf"/>
+                                    </af:panelGroupLayout>
+                                </af:showDetailItem>
                             </af:panelAccordion>
                         </f:facet>
                         <f:facet name="second">
