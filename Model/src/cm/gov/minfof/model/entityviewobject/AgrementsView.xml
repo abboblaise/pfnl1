@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="AgrementsView"
+  Version="12.2.1.20.47"
+  InheritPersonalization="merge"
+  SelectListFlags="1"
+  FromListFlags="1"
+  WhereFlags="1"
+  BindingStyle="JDBC"
+  CustomQuery="false"
+  SelectAllAttributes="false"
+  PageIterMode="Full">
+  <EntityUsage
+    Name="Agrements"
+    Entity="cm.gov.minfof.model.entity.Agrements"/>
+  <ViewAttribute
+    Name="Idagrements"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Idagrements"
+    EntityUsage="Agrements"
+    AliasName="IDAgrements"/>
+  <ViewAttribute
+    Name="Datedebut"
+    PrecisionRule="true"
+    EntityAttrName="Datedebut"
+    EntityUsage="Agrements"
+    AliasName="Datedebut"/>
+  <ViewAttribute
+    Name="Datefin"
+    PrecisionRule="true"
+    EntityAttrName="Datefin"
+    EntityUsage="Agrements"
+    AliasName="DATEFIN"/>
+  <ViewAttribute
+    Name="Numagreement"
+    PrecisionRule="true"
+    EntityAttrName="Numagreement"
+    EntityUsage="Agrements"
+    AliasName="NUMAGREEMENT"/>
+  <ViewAttribute
+    Name="Descriptioncontenuagreements"
+    PrecisionRule="true"
+    EntityAttrName="Descriptioncontenuagreements"
+    EntityUsage="Agrements"
+    AliasName="Descriptioncontenuagreements"/>
+  <ViewAttribute
+    Name="Nomdetenteur"
+    PrecisionRule="true"
+    EntityAttrName="Nomdetenteur"
+    EntityUsage="Agrements"
+    AliasName="nomdetenteur"/>
+</ViewObject>

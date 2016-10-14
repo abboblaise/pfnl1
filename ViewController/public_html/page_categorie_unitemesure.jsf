@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+        xmlns:c="http://java.sun.com/jsp/jstl/core">
+    <c:set var="viewcontrollerBundle" value="#{adfBundle['cm.gov.minfof.view.ViewControllerBundle']}"/>
+    <af:document title="#{viewcontrollerBundle.CAT_U00E9GORIE_DES_UNIT_U00E9S_DE_MESURE}" id="d1">
+        <af:messages id="m1"/>
+        <af:form id="f1">
+            <af:pageTemplate viewId="/TemplateGlobal.jsf" id="pt1">
+                <f:facet name="content">
+                    <af:panelBox text="#{viewcontrollerBundle.EDITION_DES_CAT_U00E9GORIES_D_UNIT_U00E9_DE_MESURE}" id="pb1">
+                        <f:facet name="toolbar"/>
+                        <af:panelFormLayout id="pfl1">
+                            <af:inputText value="#{bindings.Idcategorieunitemesure.inputValue}"
+                                          label="#{bindings.Idcategorieunitemesure.hints.label}"
+                                          required="#{bindings.Idcategorieunitemesure.hints.mandatory}"
+                                          columns="#{bindings.Idcategorieunitemesure.hints.displayWidth}"
+                                          maximumLength="#{bindings.Idcategorieunitemesure.hints.precision}"
+                                          shortDesc="#{bindings.Idcategorieunitemesure.hints.tooltip}" id="it1"
+                                          visible="false">
+                                <f:validator binding="#{bindings.Idcategorieunitemesure.validator}"/>
+                                <af:convertNumber groupingUsed="false"
+                                                  pattern="#{bindings.Idcategorieunitemesure.format}"/>
+                            </af:inputText>
+                            <af:inputText value="#{bindings.Libellecategorie.inputValue}"
+                                          label="#{bindings.Libellecategorie.hints.label}"
+                                          required="#{bindings.Libellecategorie.hints.mandatory}"
+                                          columns="#{bindings.Libellecategorie.hints.displayWidth}"
+                                          maximumLength="#{bindings.Libellecategorie.hints.precision}"
+                                          shortDesc="#{bindings.Libellecategorie.hints.tooltip}" id="it2">
+                                <f:validator binding="#{bindings.Libellecategorie.validator}"/>
+                            </af:inputText>
+                            <af:spacer width="10" height="10" id="s1"/>
+                            <af:button actionListener="#{bindings.Commit.execute}" text="Commit"
+                                       disabled="#{!bindings.Commit.enabled}" id="b1" visible="false"/>
+                            <f:facet name="footer">
+                                <af:panelGroupLayout id="pgl1">
+                                    <af:button
+                                               text="#{viewcontrollerBundle.NOUVEAU}"
+                                               disabled="#{!bindings.CreateInsert.enabled}" id="b2"
+                                               action="#{categorieUniteMesureBean.creerCategUniteMesure}"/>
+                                    <af:spacer width="10" height="10" id="s2"/>
+                                    <af:button text="#{viewcontrollerBundle.ENREGISTRER}" id="b4"
+                                               action="#{categorieUniteMesureBean.enregCategUniteMesure}"/>
+                                    <af:spacer width="10" height="10" id="s3"/>
+                                    <af:button
+                                               text="#{viewcontrollerBundle.SUPPRIMER}"
+                                               disabled="#{!bindings.Delete.enabled}" id="b3"
+                                               action="#{categorieUniteMesureBean.supprimeCategUnitMesure}"/>
+                                </af:panelGroupLayout>
+                            </f:facet>
+                        </af:panelFormLayout>
+                    </af:panelBox>
+                    <af:panelBox text="#{viewcontrollerBundle.LISTE_DES_CAT_U00E9GORIES_D_UNIT_U00E9_DE_MESURE}" id="pb2">
+                        <f:facet name="toolbar"/>
+                        <af:panelCollection id="pc1">
+                            <f:facet name="menus"/>
+                            <f:facet name="toolbar"/>
+                            <af:table value="#{bindings.CategorieunitemesureView1.collectionModel}" var="row"
+                                      rows="#{bindings.CategorieunitemesureView1.rangeSize}"
+                                      emptyText="#{bindings.CategorieunitemesureView1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                      rowBandingInterval="0"
+                                      selectedRowKeys="#{bindings.CategorieunitemesureView1.collectionModel.selectedRow}"
+                                      selectionListener="#{bindings.CategorieunitemesureView1.collectionModel.makeCurrent}"
+                                      rowSelection="single" fetchSize="#{bindings.CategorieunitemesureView1.rangeSize}"
+                                      filterModel="#{bindings.CategorieunitemesureView1Query.queryDescriptor}"
+                                      filterVisible="true"
+                                      queryListener="#{bindings.CategorieunitemesureView1Query.processQuery}"
+                                      varStatus="vs" id="t1" partialTriggers=":::b2 :::b3">
+                                <af:column sortProperty="#{bindings.CategorieunitemesureView1.hints.Idcategorieunitemesure.name}"
+                                           filterable="true" sortable="true"
+                                           headerText="#{bindings.CategorieunitemesureView1.hints.Idcategorieunitemesure.label}"
+                                           id="c1">
+                                    <af:outputText value="#{row.Idcategorieunitemesure}"
+                                                   shortDesc="#{bindings.CategorieunitemesureView1.hints.Idcategorieunitemesure.tooltip}"
+                                                   id="ot1">
+                                        <af:convertNumber groupingUsed="false"
+                                                          pattern="#{bindings.CategorieunitemesureView1.hints.Idcategorieunitemesure.format}"/>
+                                    </af:outputText>
+                                </af:column>
+                                <af:column sortProperty="#{bindings.CategorieunitemesureView1.hints.Libellecategorie.name}"
+                                           filterable="true" sortable="true"
+                                           headerText="#{bindings.CategorieunitemesureView1.hints.Libellecategorie.label}"
+                                           id="c2">
+                                    <af:outputText value="#{row.Libellecategorie}"
+                                                   shortDesc="#{bindings.CategorieunitemesureView1.hints.Libellecategorie.tooltip}"
+                                                   id="ot2"/>
+                                </af:column>
+                            </af:table>
+                            <f:facet name="statusbar"/>
+                        </af:panelCollection>
+                    </af:panelBox>
+                </f:facet>
+            </af:pageTemplate>
+        </af:form>
+    </af:document>
+</f:view>

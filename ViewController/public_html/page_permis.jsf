@@ -1,0 +1,279 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+        xmlns:c="http://java.sun.com/jsp/jstl/core">
+    <c:set var="viewcontrollerBundle" value="#{adfBundle['cm.gov.minfof.view.ViewControllerBundle']}"/>
+    <af:document title="#{viewcontrollerBundle.PERMIS_D_EXPLOITATION}" id="d1">
+        <af:messages id="m1"/>
+        <af:form id="f1">
+            <af:pageTemplate viewId="/TemplateGlobal.jsf" id="pt1">
+                <f:facet name="content">
+                    <af:panelGroupLayout id="pgl1">
+                        <af:panelBox text="#{viewcontrollerBundle.EDITION_DES_PERMIS}" id="pb1">
+                            <f:facet name="toolbar"/>
+                            <af:panelFormLayout id="pfl1">
+                                <af:inputText value="#{bindings.Numeropermis.inputValue}"
+                                              label="#{bindings.Numeropermis.hints.label}"
+                                              required="#{bindings.Numeropermis.hints.mandatory}"
+                                              columns="#{bindings.Numeropermis.hints.displayWidth}"
+                                              maximumLength="#{bindings.Numeropermis.hints.precision}"
+                                              shortDesc="#{bindings.Numeropermis.hints.tooltip}" id="it1">
+                                    <f:validator binding="#{bindings.Numeropermis.validator}"/>
+                                </af:inputText>
+                                <af:selectOneChoice value="#{bindings.Idpermissionnaire.inputValue}"
+                                                    label="#{bindings.Idpermissionnaire.label}"
+                                                    required="#{bindings.Idpermissionnaire.hints.mandatory}"
+                                                    shortDesc="#{bindings.Idpermissionnaire.hints.tooltip}" id="soc1">
+                                    <f:selectItems value="#{bindings.Idpermissionnaire.items}" id="si1"/>
+                                    <f:validator binding="#{bindings.Idpermissionnaire.validator}"/>
+                                </af:selectOneChoice>
+                                <af:selectOneChoice value="#{bindings.Idagrement.inputValue}"
+                                                    label="#{bindings.Idagrement.label}"
+                                                    required="#{bindings.Idagrement.hints.mandatory}"
+                                                    shortDesc="#{bindings.Idagrement.hints.tooltip}" id="soc2">
+                                    <f:selectItems value="#{bindings.Idagrement.items}" id="si2"/>
+                                    <f:validator binding="#{bindings.Idagrement.validator}"/>
+                                </af:selectOneChoice>
+                                <af:inputText value="#{bindings.Zonecoupe.inputValue}"
+                                              label="#{bindings.Zonecoupe.hints.label}"
+                                              required="#{bindings.Zonecoupe.hints.mandatory}"
+                                              columns="#{bindings.Zonecoupe.hints.displayWidth}"
+                                              maximumLength="#{bindings.Zonecoupe.hints.precision}"
+                                              shortDesc="#{bindings.Zonecoupe.hints.tooltip}" id="it2">
+                                    <f:validator binding="#{bindings.Zonecoupe.validator}"/>
+                                </af:inputText>
+                                <af:inputDate value="#{bindings.Datedelivrance.inputValue}"
+                                              label="#{bindings.Datedelivrance.hints.label}"
+                                              required="#{bindings.Datedelivrance.hints.mandatory}"
+                                              columns="#{bindings.Datedelivrance.hints.displayWidth}"
+                                              shortDesc="#{bindings.Datedelivrance.hints.tooltip}" id="id1">
+                                    <f:validator binding="#{bindings.Datedelivrance.validator}"/>
+                                    <af:convertDateTime pattern="#{bindings.Datedelivrance.format}"/>
+                                </af:inputDate>
+                                <af:inputDate value="#{bindings.Datefin.inputValue}"
+                                              label="#{bindings.Datefin.hints.label}"
+                                              required="#{bindings.Datefin.hints.mandatory}"
+                                              columns="#{bindings.Datefin.hints.displayWidth}"
+                                              shortDesc="#{bindings.Datefin.hints.tooltip}" id="id2">
+                                    <f:validator binding="#{bindings.Datefin.validator}"/>
+                                    <af:convertDateTime pattern="#{bindings.Datefin.format}"/>
+                                </af:inputDate>
+                                <af:inputText value="#{bindings.Typedocument.inputValue}"
+                                              label="#{bindings.Typedocument.hints.label}"
+                                              required="#{bindings.Typedocument.hints.mandatory}"
+                                              columns="#{bindings.Typedocument.hints.displayWidth}"
+                                              maximumLength="#{bindings.Typedocument.hints.precision}"
+                                              shortDesc="#{bindings.Typedocument.hints.tooltip}" id="it3">
+                                    <f:validator binding="#{bindings.Typedocument.validator}"/>
+                                    <af:convertNumber groupingUsed="false" pattern="#{bindings.Typedocument.format}"/>
+                                </af:inputText>
+                                <af:inputText value="#{bindings.Observation.inputValue}"
+                                              label="#{bindings.Observation.hints.label}"
+                                              required="#{bindings.Observation.hints.mandatory}"
+                                              columns="#{bindings.Observation.hints.displayWidth}"
+                                              maximumLength="#{bindings.Observation.hints.precision}"
+                                              shortDesc="#{bindings.Observation.hints.tooltip}" id="it4">
+                                    <f:validator binding="#{bindings.Observation.validator}"/>
+                                </af:inputText>
+                                <f:facet name="footer">
+                                    <af:panelGroupLayout id="pgl2">
+                                        <af:button text="#{viewcontrollerBundle.NOUVEAU}" id="b1"
+                                                   action="#{PermisBean.CreerPermis}"/>
+                                        <af:spacer width="10" height="10" id="s1"/>
+                                        <af:button text="#{viewcontrollerBundle.ENREGISTRER}" id="b3"
+                                                   action="#{PermisBean.EnregistrePermis}"/>
+                                        <af:spacer width="10" height="10" id="s2"/>
+                                        <af:button text="#{viewcontrollerBundle.SUPPRIMER}" id="b4"
+                                                   action="#{PermisBean.SupprimePermis}"/>
+                                    </af:panelGroupLayout>
+                                </f:facet>
+                            </af:panelFormLayout>
+                        </af:panelBox>
+                        <af:panelBox text="#{viewcontrollerBundle.DETAIL_DU_PERMIS}" id="pb2">
+                            <f:facet name="toolbar">
+                                <af:panelGroupLayout id="pgl3">
+                                    <af:button actionListener="#{bindings.CreateInsert1.execute}"
+                                               text="#{viewcontrollerBundle.NOUVEAU}"
+                                               disabled="#{!bindings.CreateInsert1.enabled}" id="b2"/>
+                                    <af:spacer width="10" height="10" id="s3"/>
+                                    <af:button actionListener="#{bindings.Delete1.execute}"
+                                               text="#{viewcontrollerBundle.SUPPRIMER}"
+                                               disabled="#{!bindings.Delete1.enabled}" id="b5"
+                                               action="#{PermisBean.CreerDetailPermis}"/>
+                                </af:panelGroupLayout>
+                            </f:facet>
+                            <af:table value="#{bindings.DetailpermisView6.collectionModel}" var="row"
+                                      rows="#{bindings.DetailpermisView6.rangeSize}"
+                                      emptyText="#{bindings.DetailpermisView6.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                      rowBandingInterval="0"
+                                      selectedRowKeys="#{bindings.DetailpermisView6.collectionModel.selectedRow}"
+                                      selectionListener="#{bindings.DetailpermisView6.collectionModel.makeCurrent}"
+                                      rowSelection="single" fetchSize="#{bindings.DetailpermisView6.rangeSize}"
+                                      filterModel="#{bindings.DetailpermisView6Query.queryDescriptor}"
+                                      filterVisible="true"
+                                      queryListener="#{bindings.DetailpermisView6Query.processQuery}" varStatus="vs"
+                                      id="t2" partialTriggers="::b2 ::b5">
+                                <af:column sortProperty="#{bindings.DetailpermisView6.hints.Idpartieproduitpfnl.name}"
+                                           filterable="true" sortable="true"
+                                           headerText="#{bindings.DetailpermisView6.hints.Idpartieproduitpfnl.label}"
+                                           id="c9">
+                                    <af:selectOneChoice value="#{row.bindings.Idpartieproduitpfnl.inputValue}"
+                                                        label="#{row.bindings.Idpartieproduitpfnl.label}"
+                                                        required="#{bindings.DetailpermisView6.hints.Idpartieproduitpfnl.mandatory}"
+                                                        shortDesc="#{bindings.DetailpermisView6.hints.Idpartieproduitpfnl.tooltip}"
+                                                        id="soc3">
+                                        <f:selectItems value="#{row.bindings.Idpartieproduitpfnl.items}" id="si3"/>
+                                        <f:validator binding="#{row.bindings.Idpartieproduitpfnl.validator}"/>
+                                    </af:selectOneChoice>
+                                </af:column>
+                                <af:column sortProperty="#{bindings.DetailpermisView6.hints.Quantite.name}"
+                                           filterable="true" sortable="true"
+                                           headerText="#{bindings.DetailpermisView6.hints.Quantite.label}" id="c10">
+                                    <af:inputText value="#{row.bindings.Quantite.inputValue}"
+                                                  label="#{bindings.DetailpermisView6.hints.Quantite.label}"
+                                                  required="#{bindings.DetailpermisView6.hints.Quantite.mandatory}"
+                                                  columns="#{bindings.DetailpermisView6.hints.Quantite.displayWidth}"
+                                                  maximumLength="#{bindings.DetailpermisView6.hints.Quantite.precision}"
+                                                  shortDesc="#{bindings.DetailpermisView6.hints.Quantite.tooltip}"
+                                                  id="it5">
+                                        <f:validator binding="#{row.bindings.Quantite.validator}"/>
+                                        <af:convertNumber groupingUsed="false"
+                                                          pattern="#{bindings.DetailpermisView6.hints.Quantite.format}"/>
+                                    </af:inputText>
+                                </af:column>
+                                <af:column sortProperty="#{bindings.DetailpermisView6.hints.Idunitemesure.name}"
+                                           filterable="true" sortable="true"
+                                           headerText="#{bindings.DetailpermisView6.hints.Idunitemesure.label}"
+                                           id="c11">
+                                    <af:selectOneChoice value="#{row.bindings.Idunitemesure.inputValue}"
+                                                        label="#{row.bindings.Idunitemesure.label}"
+                                                        required="#{bindings.DetailpermisView6.hints.Idunitemesure.mandatory}"
+                                                        shortDesc="#{bindings.DetailpermisView6.hints.Idunitemesure.tooltip}"
+                                                        id="soc4">
+                                        <f:selectItems value="#{row.bindings.Idunitemesure.items}" id="si4"/>
+                                        <f:validator binding="#{row.bindings.Idunitemesure.validator}"/>
+                                    </af:selectOneChoice>
+                                </af:column>
+                                <af:column sortProperty="#{bindings.DetailpermisView6.hints.Observation.name}"
+                                           filterable="true" sortable="true"
+                                           headerText="#{bindings.DetailpermisView6.hints.Observation.label}" id="c12">
+                                    <af:inputText value="#{row.bindings.Observation.inputValue}"
+                                                  label="#{bindings.DetailpermisView6.hints.Observation.label}"
+                                                  required="#{bindings.DetailpermisView6.hints.Observation.mandatory}"
+                                                  columns="#{bindings.DetailpermisView6.hints.Observation.displayWidth}"
+                                                  maximumLength="#{bindings.DetailpermisView6.hints.Observation.precision}"
+                                                  shortDesc="#{bindings.DetailpermisView6.hints.Observation.tooltip}"
+                                                  id="it6">
+                                        <f:validator binding="#{row.bindings.Observation.validator}"/>
+                                    </af:inputText>
+                                </af:column>
+                            </af:table>
+                        </af:panelBox>
+                    </af:panelGroupLayout>
+                    <af:panelBox text="#{viewcontrollerBundle.LISTE_DES_PERMIS}" id="pb3">
+                        <f:facet name="toolbar"/>
+                        <af:panelCollection id="pc1">
+                            <f:facet name="menus"/>
+                            <f:facet name="toolbar"/>
+                            <f:facet name="statusbar"/>
+                            <af:table value="#{bindings.PermisView1.collectionModel}" var="row"
+                                      rows="#{bindings.PermisView1.rangeSize}"
+                                      emptyText="#{bindings.PermisView1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                      rowBandingInterval="0"
+                                      selectedRowKeys="#{bindings.PermisView1.collectionModel.selectedRow}"
+                                      selectionListener="#{bindings.PermisView1.collectionModel.makeCurrent}"
+                                      rowSelection="single" fetchSize="#{bindings.PermisView1.rangeSize}"
+                                      filterModel="#{bindings.PermisView1Query.queryDescriptor}" filterVisible="true"
+                                      queryListener="#{bindings.PermisView1Query.processQuery}" varStatus="vs" id="t1">
+                                <af:column sortProperty="#{bindings.PermisView1.hints.Numeropermis.name}"
+                                           filterable="true" sortable="true"
+                                           headerText="#{bindings.PermisView1.hints.Numeropermis.label}" id="c1">
+                                    <af:outputText value="#{row.Numeropermis}"
+                                                   shortDesc="#{bindings.PermisView1.hints.Numeropermis.tooltip}"
+                                                   id="ot1"/>
+                                </af:column>
+                                <af:column sortProperty="#{bindings.PermisView1.hints.Idpermissionnaire.name}"
+                                           filterable="true" sortable="true"
+                                           headerText="#{bindings.PermisView1.hints.Idpermissionnaire.label}" id="c2">
+                                    <af:selectOneChoice value="#{row.bindings.Idpermissionnaire.inputValue}"
+                                                        label="#{row.bindings.Idpermissionnaire.label}"
+                                                        required="#{bindings.PermisView1.hints.Idpermissionnaire.mandatory}"
+                                                        shortDesc="#{bindings.PermisView1.hints.Idpermissionnaire.tooltip}"
+                                                        readOnly="true" id="soc5">
+                                        <f:selectItems value="#{row.bindings.Idpermissionnaire.items}" id="si5"/>
+                                        <f:validator binding="#{row.bindings.Idpermissionnaire.validator}"/>
+                                    </af:selectOneChoice>
+                                </af:column>
+                                <af:column sortProperty="#{bindings.PermisView1.hints.Idagrement.name}"
+                                           filterable="true" sortable="true"
+                                           headerText="#{bindings.PermisView1.hints.Idagrement.label}" id="c3">
+                                    <af:selectOneChoice value="#{row.bindings.Idagrement.inputValue}"
+                                                        label="#{row.bindings.Idagrement.label}"
+                                                        required="#{bindings.PermisView1.hints.Idagrement.mandatory}"
+                                                        shortDesc="#{bindings.PermisView1.hints.Idagrement.tooltip}"
+                                                        readOnly="true" id="soc6">
+                                        <f:selectItems value="#{row.bindings.Idagrement.items}" id="si6"/>
+                                        <f:validator binding="#{row.bindings.Idagrement.validator}"/>
+                                    </af:selectOneChoice>
+                                </af:column>
+                                <af:column sortProperty="#{bindings.PermisView1.hints.Zonecoupe.name}" filterable="true"
+                                           sortable="true" headerText="#{bindings.PermisView1.hints.Zonecoupe.label}"
+                                           id="c4">
+                                    <af:outputText value="#{row.Zonecoupe}"
+                                                   shortDesc="#{bindings.PermisView1.hints.Zonecoupe.tooltip}"
+                                                   id="ot2"/>
+                                </af:column>
+                                <af:column sortProperty="#{bindings.PermisView1.hints.Datedelivrance.name}"
+                                           filterable="true" sortable="true"
+                                           headerText="#{bindings.PermisView1.hints.Datedelivrance.label}" id="c5">
+                                    <f:facet name="filter">
+                                        <af:inputDate value="#{bindings.PermisView1Query.queryDescriptor.filterConjunctionCriterion.criterionMap.Datedelivrance.value}"
+                                                      id="id3">
+                                            <af:convertDateTime pattern="#{bindings.PermisView1.hints.Datedelivrance.format}"/>
+                                        </af:inputDate>
+                                    </f:facet>
+                                    <af:outputText value="#{row.Datedelivrance}"
+                                                   shortDesc="#{bindings.PermisView1.hints.Datedelivrance.tooltip}"
+                                                   id="ot3">
+                                        <af:convertDateTime pattern="#{bindings.PermisView1.hints.Datedelivrance.format}"/>
+                                    </af:outputText>
+                                </af:column>
+                                <af:column sortProperty="#{bindings.PermisView1.hints.Datefin.name}" filterable="true"
+                                           sortable="true" headerText="#{bindings.PermisView1.hints.Datefin.label}"
+                                           id="c6">
+                                    <f:facet name="filter">
+                                        <af:inputDate value="#{bindings.PermisView1Query.queryDescriptor.filterConjunctionCriterion.criterionMap.Datefin.value}"
+                                                      id="id4">
+                                            <af:convertDateTime pattern="#{bindings.PermisView1.hints.Datefin.format}"/>
+                                        </af:inputDate>
+                                    </f:facet>
+                                    <af:outputText value="#{row.Datefin}"
+                                                   shortDesc="#{bindings.PermisView1.hints.Datefin.tooltip}" id="ot4">
+                                        <af:convertDateTime pattern="#{bindings.PermisView1.hints.Datefin.format}"/>
+                                    </af:outputText>
+                                </af:column>
+                                <af:column sortProperty="#{bindings.PermisView1.hints.Typedocument.name}"
+                                           filterable="true" sortable="true"
+                                           headerText="#{bindings.PermisView1.hints.Typedocument.label}" id="c7">
+                                    <af:outputText value="#{row.Typedocument}"
+                                                   shortDesc="#{bindings.PermisView1.hints.Typedocument.tooltip}"
+                                                   id="ot5">
+                                        <af:convertNumber groupingUsed="false"
+                                                          pattern="#{bindings.PermisView1.hints.Typedocument.format}"/>
+                                    </af:outputText>
+                                </af:column>
+                                <af:column sortProperty="#{bindings.PermisView1.hints.Observation.name}"
+                                           filterable="true" sortable="true"
+                                           headerText="#{bindings.PermisView1.hints.Observation.label}" id="c8">
+                                    <af:outputText value="#{row.Observation}"
+                                                   shortDesc="#{bindings.PermisView1.hints.Observation.tooltip}"
+                                                   id="ot6"/>
+                                </af:column>
+                            </af:table>
+                        </af:panelCollection>
+                    </af:panelBox>
+                </f:facet>
+            </af:pageTemplate>
+        </af:form>
+    </af:document>
+</f:view>
