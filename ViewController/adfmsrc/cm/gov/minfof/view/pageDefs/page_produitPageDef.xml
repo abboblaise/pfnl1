@@ -4,31 +4,21 @@
   <parameters/>
   <executables>
     <variableIterator id="variables"/>
-    <iterator Binds="FamillePfnlView1" RangeSize="25" DataControl="AppModuleDataControl" id="FamillePfnlView1Iterator"
-              Refresh="default" CacheResults="true"/>
-    <iterator Binds="ProduitsPfnlView4" RangeSize="25" DataControl="AppModuleDataControl"
+    <iterator Binds="ProduitsPfnlView1" RangeSize="25" DataControl="AppModuleDataControl"
               id="ProduitsPfnlView4Iterator" Refresh="default" CacheResults="true"/>
-    <iterator Binds="PartiesProduitsPfnlView19" RangeSize="25" DataControl="AppModuleDataControl"
+    <iterator Binds="PartiesProduitsPfnlView9" RangeSize="25" DataControl="AppModuleDataControl"
               id="PartiesProduitsPfnlView19Iterator" Refresh="default"/>
-    <searchRegion Binds="PartiesProduitsPfnlView19Iterator" Criteria=""
-                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="PartiesProduitsPfnlView19Query"/>
     <iterator Binds="PartiesRecolteesView1" RangeSize="-1" DataControl="AppModuleDataControl"
               id="PartiesRecolteesView1Iterator" Refresh="default"/>
     <searchRegion Binds="ProduitsPfnlView4Iterator" Criteria=""
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="ProduitsPfnlView4Query"/>
     <page path="cm.gov.minfof.view.pageDefs.Template_GeneralPageDef" id="ptb1" Refresh="ifNeeded"/>
     <iterator Binds="CategorieproduitView1" RangeSize="-1" DataControl="AppModuleDataControl"
-              id="CategorieproduitView1Iterator" Refresh="default"/>
-    <iterator Binds="UnitemesureView1" RangeSize="-1" DataControl="AppModuleDataControl" id="UnitemesureView1Iterator"
-              Refresh="default"/>
+              id="CategorieproduitView1Iterator"/>
+    <searchRegion Binds="PartiesProduitsPfnlView19Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="PartiesProduitsPfnlView9Query"/>
   </executables>
   <bindings>
-    <list IterBinding="FamillePfnlView1Iterator" ListOperMode="navigation" ListIter="FamillePfnlView1Iterator"
-          id="FamillePfnlView1" DTSupportsMRU="true" SelectItemValueMode="ListObject">
-      <AttrNames>
-        <Item Value="Nomfamille"/>
-      </AttrNames>
-    </list>
     <attributeValues IterBinding="ProduitsPfnlView4Iterator" id="Idproduitspfnl">
       <AttrNames>
         <Item Value="Idproduitspfnl"/>
@@ -42,11 +32,6 @@
     <attributeValues IterBinding="ProduitsPfnlView4Iterator" id="Nomcommercial">
       <AttrNames>
         <Item Value="Nomcommercial"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="ProduitsPfnlView4Iterator" id="Nomvernaculaire">
-      <AttrNames>
-        <Item Value="Nomvernaculaire"/>
       </AttrNames>
     </attributeValues>
     <attributeValues IterBinding="ProduitsPfnlView4Iterator" id="Codeproduit">
@@ -69,19 +54,6 @@
         <Item Value="Modeattribution"/>
       </AttrNames>
     </attributeValues>
-    <tree IterBinding="PartiesProduitsPfnlView19Iterator" id="PartiesProduitsPfnlView19">
-      <nodeDefinition DefName="cm.gov.minfof.model.entity.PartiesProduitsPfnlView" Name="PartiesProduitsPfnlView190">
-        <AttrNames>
-          <Item Value="Idpartiesproduitspfnl"/>
-          <Item Value="Idpartiesrecoltees" Binds="Idpartiesrecoltees"/>
-          <Item Value="Idproduitspfnl"/>
-          <Item Value="Estunproduitpfnl"/>
-          <Item Value="estUnProduitPfnlTransient"/>
-          <Item Value="Idunitemesure" Binds="Idunitemesure"/>
-          <Item Value="Idunitemesureexport" Binds="Idunitemesureexport"/>
-        </AttrNames>
-      </nodeDefinition>
-    </tree>
     <action IterBinding="ProduitsPfnlView4Iterator" id="CreateInsert" RequiresUpdateModel="true"
             Action="createInsertRow"/>
     <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
@@ -108,7 +80,6 @@
           <Item Value="Codeproduit"/>
           <Item Value="Nomscientifique"/>
           <Item Value="Nomcommercial"/>
-          <Item Value="Nomvernaculaire"/>
           <Item Value="Modeattribution"/>
           <Item Value="Descriptionsommaire"/>
         </AttrNames>
@@ -117,9 +88,7 @@
     <action IterBinding="PartiesProduitsPfnlView19Iterator" id="Delete1" RequiresUpdateModel="false"
             Action="removeCurrentRow"/>
     <list IterBinding="ProduitsPfnlView4Iterator" id="Idcategorie" DTSupportsMRU="true"
-          SelectItemValueMode="ListObject" StaticList="false" ListIter="CategorieproduitView1Iterator"
-          NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
-          NullValueFlag="start">
+          SelectItemValueMode="ListObject" StaticList="false" ListIter="CategorieproduitView1Iterator">
       <AttrNames>
         <Item Value="Idcategorie"/>
       </AttrNames>
@@ -127,34 +96,27 @@
         <Item Value="Idcategorieproduit"/>
       </ListAttrNames>
       <ListDisplayAttrNames>
-        <Item Value="Codecategorie"/>
+        <Item Value="Libellecategorie"/>
       </ListDisplayAttrNames>
     </list>
-    <list IterBinding="PartiesProduitsPfnlView19Iterator" id="Idunitemesure" DTSupportsMRU="true"
-          SelectItemValueMode="ListObject" StaticList="false" ListIter="UnitemesureView1Iterator">
-      <AttrNames>
-        <Item Value="Idunitemesure"/>
-      </AttrNames>
-      <ListAttrNames>
-        <Item Value="Idunitemesure"/>
-      </ListAttrNames>
-      <ListDisplayAttrNames>
-        <Item Value="Libelleunitemesure"/>
-      </ListDisplayAttrNames>
-    </list>
-    <list IterBinding="PartiesProduitsPfnlView19Iterator" id="Idunitemesureexport" DTSupportsMRU="true"
-          SelectItemValueMode="ListObject" StaticList="false" ListIter="UnitemesureView1Iterator"
-          NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
-          NullValueFlag="start">
-      <AttrNames>
-        <Item Value="Idunitemesureexport"/>
-      </AttrNames>
-      <ListAttrNames>
-        <Item Value="Idunitemesure"/>
-      </ListAttrNames>
-      <ListDisplayAttrNames>
-        <Item Value="Libelleunitemesure"/>
-      </ListDisplayAttrNames>
-    </list>
+    <listOfValues IterBinding="ProduitsPfnlView4Iterator" StaticList="false" Uses="LOV_Idfamillepfnl"
+                  id="Idfamillepfnl1"/>
+    <list IterBinding="PartiesProduitsPfnlView19Iterator" StaticList="false" Uses="LOV_Idpartiesrecoltees"
+          id="Idpartiesrecoltees1" DTSupportsMRU="true" SelectItemValueMode="ListObject"/>
+    <list IterBinding="PartiesProduitsPfnlView19Iterator" StaticList="false" Uses="LOV_Idunitemesure"
+          id="Idunitemesure1" DTSupportsMRU="true" SelectItemValueMode="ListObject"/>
+    <list IterBinding="PartiesProduitsPfnlView19Iterator" StaticList="false" Uses="LOV_Idunitemesureexport"
+          id="Idunitemesureexport1" DTSupportsMRU="true" SelectItemValueMode="ListObject"/>
+    <tree IterBinding="PartiesProduitsPfnlView19Iterator" id="PartiesProduitsPfnlView9">
+      <nodeDefinition DefName="cm.gov.minfof.model.entity.PartiesProduitsPfnlView" Name="PartiesProduitsPfnlView90">
+        <AttrNames>
+          <Item Value="Idpartiesproduitspfnl"/>
+          <Item Value="Idproduitspfnl"/>
+          <Item Value="Idpartiesrecoltees"/>
+          <Item Value="Idunitemesure"/>
+          <Item Value="Idunitemesureexport"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
   </bindings>
 </pageDefinition>

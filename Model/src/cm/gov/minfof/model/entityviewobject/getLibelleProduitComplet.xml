@@ -26,8 +26,7 @@
 from produitspfnl
 inner join (partiesrecoltees, partiesproduitspfnl)
 on (produitspfnl.idproduitspfnl = partiesproduitspfnl.idproduitspfnl and 
-	   partiesrecoltees.idpartiesrecoltees = partiesproduitspfnl.idpartiesrecoltees) 
-where partiesproduitspfnl.estunproduitpfnl=1
+	   partiesrecoltees.idpartiesrecoltees = partiesproduitspfnl.idpartiesrecoltees)
 order by 1]]></SQLQuery>
   <ViewAttribute
     Name="Idpartiesproduitspfnl"

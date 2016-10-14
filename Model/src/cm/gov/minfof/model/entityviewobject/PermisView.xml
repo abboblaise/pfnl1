@@ -22,6 +22,10 @@
     Name="AgrementsView1"
     ViewObjectName="cm.gov.minfof.model.entityviewobject.AgrementsView"
     RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="typeDocumentView1"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.typeDocumentView"
+    RowLevelBinds="true"/>
   <ListBinding
     Name="LOV_Idpermissionnaire"
     ListVOName="PermissionnairespnflView1"
@@ -55,6 +59,24 @@
     </AttrArray>
     <AttrArray Name="ListDisplayAttrNames">
       <Item Value="Numagreement"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_Typedocument"
+    ListVOName="typeDocumentView1"
+    NullValueFlag="end"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="Typedocument"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="idtypedoc"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="libelleTypeDocument"/>
     </AttrArray>
     <DisplayCriteria/>
   </ListBinding>
@@ -133,7 +155,15 @@
     PrecisionRule="true"
     EntityAttrName="Typedocument"
     EntityUsage="Permis"
-    AliasName="typedocument"/>
+    AliasName="typedocument"
+    LOVName="LOV_Typedocument">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewLinkAccessor
     Name="PermisView"
     ViewLink="cm.gov.minfof.model.entityviewobject.FkPermis2Link"
@@ -152,6 +182,18 @@
   <ViewLinkAccessor
     Name="DetailscollectepfnlView"
     ViewLink="cm.gov.minfof.model.entityviewobject.DetailCollToDocOfficielLink"
+    Type="oracle.jbo.RowIterator"
+    Reversed="true"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="PermissionnairespnflView"
+    ViewLink="cm.gov.minfof.model.entityviewobject.PermissionnaireToPermisLink"
+    Type="oracle.jbo.server.ViewRowImpl"
+    Reversed="true"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="ExportpfnlView"
+    ViewLink="cm.gov.minfof.model.entityviewobject.ExportToPermisLink"
     Type="oracle.jbo.RowIterator"
     Reversed="true"
     IsUpdateable="false"/>

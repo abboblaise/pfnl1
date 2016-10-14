@@ -153,4 +153,10 @@
     Type="oracle.jbo.RowIterator"
     Reversed="true"
     IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="DetailsexportpfnlView"
+    ViewLink="cm.gov.minfof.model.entityviewobject.DetailsExportToUnitMesureLink"
+    Type="oracle.jbo.RowIterator"
+    Reversed="true"
+    IsUpdateable="false"/>
 </ViewObject>

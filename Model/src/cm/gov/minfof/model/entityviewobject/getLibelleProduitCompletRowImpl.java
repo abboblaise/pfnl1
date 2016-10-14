@@ -38,6 +38,7 @@ public class getLibelleProduitCompletRowImpl extends ViewRowImpl {
             return vals;
         }
     }
+
     public static final int IDPARTIESPRODUITSPFNL = AttributesEnum.Idpartiesproduitspfnl.index();
     public static final int LIBELLE = AttributesEnum.Libelle.index();
 

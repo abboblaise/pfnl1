@@ -24,7 +24,6 @@ public class PartiesProduitsPfnlImpl extends EntityImpl {
         Idpartiesproduitspfnl,
         Idpartiesrecoltees,
         Idproduitspfnl,
-        Estunproduitpfnl,
         Idunitemesure,
         Idunitemesureexport,
         PartiesProduitsPfnl,
@@ -40,9 +39,9 @@ public class PartiesProduitsPfnlImpl extends EntityImpl {
         ProduitsPfnl2,
         Unitemesure,
         Unitemesure1,
-        Detailscollectepfnl;
+        Detailscollectepfnl,
+        Detailsexportpfnl;
         private static AttributesEnum[] vals = null;
-        ;
         private static final int firstIndex = 0;
 
         protected int index() {
@@ -69,7 +68,6 @@ public class PartiesProduitsPfnlImpl extends EntityImpl {
     public static final int IDPARTIESPRODUITSPFNL = AttributesEnum.Idpartiesproduitspfnl.index();
     public static final int IDPARTIESRECOLTEES = AttributesEnum.Idpartiesrecoltees.index();
     public static final int IDPRODUITSPFNL = AttributesEnum.Idproduitspfnl.index();
-    public static final int ESTUNPRODUITPFNL = AttributesEnum.Estunproduitpfnl.index();
     public static final int IDUNITEMESURE = AttributesEnum.Idunitemesure.index();
     public static final int IDUNITEMESUREEXPORT = AttributesEnum.Idunitemesureexport.index();
     public static final int PARTIESPRODUITSPFNL = AttributesEnum.PartiesProduitsPfnl.index();
@@ -88,6 +86,7 @@ public class PartiesProduitsPfnlImpl extends EntityImpl {
     public static final int UNITEMESURE = AttributesEnum.Unitemesure.index();
     public static final int UNITEMESURE1 = AttributesEnum.Unitemesure1.index();
     public static final int DETAILSCOLLECTEPFNL = AttributesEnum.Detailscollectepfnl.index();
+    public static final int DETAILSEXPORTPFNL = AttributesEnum.Detailsexportpfnl.index();
 
     /**
      * This is the default constructor (do not remove).
@@ -151,21 +150,6 @@ public class PartiesProduitsPfnlImpl extends EntityImpl {
         setAttributeInternal(IDPRODUITSPFNL, value);
     }
 
-    /**
-     * Gets the attribute value for Estunproduitpfnl, using the alias name Estunproduitpfnl.
-     * @return the value of Estunproduitpfnl
-     */
-    public Integer getEstunproduitpfnl() {
-        return (Integer) getAttributeInternal(ESTUNPRODUITPFNL);
-    }
-
-    /**
-     * Sets <code>value</code> as the attribute value for Estunproduitpfnl.
-     * @param value value to set the Estunproduitpfnl
-     */
-    public void setEstunproduitpfnl(Integer value) {
-        setAttributeInternal(ESTUNPRODUITPFNL, value);
-    }
 
     /**
      * Gets the attribute value for Idunitemesure, using the alias name Idunitemesure.
@@ -361,6 +345,14 @@ public class PartiesProduitsPfnlImpl extends EntityImpl {
      */
     public RowIterator getDetailscollectepfnl() {
         return (RowIterator) getAttributeInternal(DETAILSCOLLECTEPFNL);
+    }
+
+
+    /**
+     * @return the associated entity oracle.jbo.RowIterator.
+     */
+    public RowIterator getDetailsexportpfnl() {
+        return (RowIterator) getAttributeInternal(DETAILSEXPORTPFNL);
     }
 
 

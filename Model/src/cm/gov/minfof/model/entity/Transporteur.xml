@@ -35,7 +35,6 @@
     Type="java.lang.String"
     ColumnType="VARCHAR"
     TableName="transporteur"
-    IsNotNull="true"
     DefaultValue="Entrez une valeur">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="100"/>
@@ -120,18 +119,6 @@
     </DesignTime>
     <AttrArray Name="Attributes">
       <Item Value="cm.gov.minfof.model.entity.Transporteur.Idtransporteur"/>
-    </AttrArray>
-  </Key>
-  <Key
-    Name="TransporteurNuiCheck">
-    <DesignTime>
-      <Attr Name="_isNotNull" Value="true"/>
-      <Attr Name="_checkCondition" Value='"NUI" IS NOT NULL'/>
-      <Attr Name="_isCheck" Value="true"/>
-      <Attr Name="_DBObjectName" Value="Transporteur_Nui_Check"/>
-    </DesignTime>
-    <AttrArray Name="Attributes">
-      <Item Value="cm.gov.minfof.model.entity.Transporteur.Nui"/>
     </AttrArray>
   </Key>
   <ResourceBundle>

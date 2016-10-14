@@ -43,7 +43,7 @@
     <Properties>
       <SchemaBasedProperties>
         <LABEL
-          ResId="LIBELL_U00E9_CAT_U00E9GORIE"/>
+          ResId="LIBELL_U00E9_DU_TYPE_DE_PRODUIT"/>
       </SchemaBasedProperties>
     </Properties>
   </Attribute>
@@ -63,7 +63,7 @@
     <Properties>
       <SchemaBasedProperties>
         <LABEL
-          ResId="CODE_DE_LA_CAT_U00E9GORIE"/>
+          ResId="CODE_DU_TYPE_DE_PRODUIT"/>
       </SchemaBasedProperties>
     </Properties>
   </Attribute>

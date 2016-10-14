@@ -66,11 +66,11 @@
                                                 <af:button text="#{viewcontrollerBundle.FAMILLE_DE_PRODUITS}" id="pt_b5"
                                                            destination="page_famille_produit.jsf"/>
                                                 <af:spacer width="10" height="3" id="pt_s5"/>
-                                                <af:button text="#{viewcontrollerBundle.CAT_U00E9GORIES_DE_PRODUITS}"
-                                                           id="pt_b11" destination="page_categorie_produit.jsf"/>
+                                                <af:button text="#{viewcontrollerBundle.TYPE_DE_PRODUITS}"
+                                                           id="pt_b11" destination="page_type_produit.jsf"/>
                                                 <af:spacer width="10" height="3" id="pt_s9"/>
                                                 <af:button text="#{viewcontrollerBundle.PRODUITS}" id="pt_b6"
-                                                           destination="page_produit.jsf"/>
+                                                           destination="page_produit3.jsf"/>
                                                 <af:spacer width="10" height="3" id="pt_s6"/>
                                                 <af:button text="#{viewcontrollerBundle.CATEGORIES_DE_MESURE}"
                                                            id="pt_b12" destination="page_categorie_unitemesure.jsf"/>
@@ -89,7 +89,8 @@
                                         <af:showDetailItem text="#{viewcontrollerBundle.ACTEURS}" id="pt_sdi3">
                                             <af:panelGroupLayout id="pt_pgl1" layout="vertical" halign="center"
                                                                  valign="middle">
-                                                <af:button text="#{viewcontrollerBundle.PERMISSIONNAIRES}" id="pt_b9"
+                                                <af:spacer width="10" height="10" id="pt_s1"/>
+                                                <af:button text="#{viewcontrollerBundle.ACTEURS}" id="pt_b9"
                                                            destination="page_permissionnaire.jsf"/>
                                                 <af:spacer width="10" height="10" id="pt_s10"/>
                                                 <af:button text="#{viewcontrollerBundle.AGREMENTS}" id="pt_b10"
@@ -98,19 +99,23 @@
                                                 <af:button text="#{viewcontrollerBundle.TRANSPORTEURS}" id="pt_b16"
                                                            destination="page_transporteur.jsf"/>
                                                 <af:spacer width="10" height="3" id="pt_s16"/>
-                                                <af:button text="#{viewcontrollerBundle.VEVICULES}" id="pt_b17"
-                                                           destination="page_vehicule.jsf"/>
+                                                <af:button id="pt_b17"
+                                                           destination="page_vehicule.jsf"
+                                                           text="#{viewcontrollerBundle.V_U00E9HICULES}"/>
                                                 <af:spacer width="10" height="3" id="pt_s17"/>
-                                                <af:button text="#{viewcontrollerBundle.PERMIS}" id="pt_b18"
+                                                <af:button text="#{viewcontrollerBundle.DOCUMENTS_OFFICIELS}" id="pt_b18"
                                                            destination="page_permis.jsf"/>
                                             </af:panelGroupLayout>
                                         </af:showDetailItem>
                                     </af:panelAccordion>
                                 </af:showDetailItem>
                                 <af:showDetailItem text="#{viewcontrollerBundle.TRAITEMENTS}" id="pt_sdi1">
-                                    <af:panelGroupLayout id="pt_pgl8" valign="middle" halign="center">
+                                    <af:panelGroupLayout id="pt_pgl8" valign="middle" halign="center" layout="vertical">
                                         <af:button text="#{viewcontrollerBundle.FICHE_DE_COLLECTE}" id="pt_b19"
                                                    destination="page_collecte.jsf"/>
+                                        <af:spacer width="10" height="10" id="pt_s18"/>
+                                        <af:button text="#{viewcontrollerBundle.FICHE_D_EXPORTATION}" id="pt_b20"
+                                                   destination="page_export.jsf"/>
                                     </af:panelGroupLayout>
                                 </af:showDetailItem>
                             </af:panelAccordion>

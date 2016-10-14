@@ -39,7 +39,9 @@ public class PermisImpl extends EntityImpl {
         Permis1,
         IdagrementPermis,
         Detailpermis,
-        Detailscollectepfnl;
+        Detailscollectepfnl,
+        Permissionnairespnfl,
+        Exportpfnl;
         private static AttributesEnum[] vals = null;
         private static final int firstIndex = 0;
 
@@ -79,6 +81,8 @@ public class PermisImpl extends EntityImpl {
     public static final int IDAGREMENTPERMIS = AttributesEnum.IdagrementPermis.index();
     public static final int DETAILPERMIS = AttributesEnum.Detailpermis.index();
     public static final int DETAILSCOLLECTEPFNL = AttributesEnum.Detailscollectepfnl.index();
+    public static final int PERMISSIONNAIRESPNFL = AttributesEnum.Permissionnairespnfl.index();
+    public static final int EXPORTPFNL = AttributesEnum.Exportpfnl.index();
 
     /**
      * This is the default constructor (do not remove).
@@ -293,6 +297,29 @@ public class PermisImpl extends EntityImpl {
      */
     public RowIterator getDetailscollectepfnl() {
         return (RowIterator) getAttributeInternal(DETAILSCOLLECTEPFNL);
+    }
+
+
+    /**
+     * @return the associated entity PermissionnairespnflImpl.
+     */
+    public PermissionnairespnflImpl getPermissionnairespnfl() {
+        return (PermissionnairespnflImpl) getAttributeInternal(PERMISSIONNAIRESPNFL);
+    }
+
+    /**
+     * Sets <code>value</code> as the associated entity PermissionnairespnflImpl.
+     */
+    public void setPermissionnairespnfl(PermissionnairespnflImpl value) {
+        setAttributeInternal(PERMISSIONNAIRESPNFL, value);
+    }
+
+
+    /**
+     * @return the associated entity oracle.jbo.RowIterator.
+     */
+    public RowIterator getExportpfnl() {
+        return (RowIterator) getAttributeInternal(EXPORTPFNL);
     }
 
 

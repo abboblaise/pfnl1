@@ -56,6 +56,7 @@ public class CollectepfnlImpl extends EntityImpl {
             return vals;
         }
     }
+
     public static final int IDCOLLECTEPFNL = AttributesEnum.Idcollectepfnl.index();
     public static final int DATECOLLECTE = AttributesEnum.Datecollecte.index();
     public static final int IDENTIFICATEUR = AttributesEnum.Identificateur.index();
@@ -72,6 +73,13 @@ public class CollectepfnlImpl extends EntityImpl {
      * This is the default constructor (do not remove).
      */
     public CollectepfnlImpl() {
+    }
+
+    /**
+     * @return the definition object for this instance class.
+     */
+    public static synchronized EntityDefImpl getDefinitionObject() {
+        return EntityDefImpl.findDefObject("cm.gov.minfof.model.entity.Collectepfnl");
     }
 
     /**
@@ -219,6 +227,7 @@ public class CollectepfnlImpl extends EntityImpl {
         setAttributeInternal(LOCALITE, value);
     }
 
+
     /**
      * @param idcollectepfnl key constituent
 
@@ -226,13 +235,6 @@ public class CollectepfnlImpl extends EntityImpl {
      */
     public static Key createPrimaryKey(BigDecimal idcollectepfnl) {
         return new Key(new Object[] { idcollectepfnl });
-    }
-
-    /**
-     * @return the definition object for this instance class.
-     */
-    public static synchronized EntityDefImpl getDefinitionObject() {
-        return EntityDefImpl.findDefObject("cm.gov.minfof.model.entity.Collectepfnl");
     }
 
     /**

@@ -284,4 +284,15 @@
     Type="oracle.jbo.RowIterator"
     Reversed="true"
     IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="PermisView"
+    ViewLink="cm.gov.minfof.model.entityviewobject.PermissionnaireToPermisLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="ExportpfnlView"
+    ViewLink="cm.gov.minfof.model.entityviewobject.ExportToPermissionnaireLink"
+    Type="oracle.jbo.RowIterator"
+    Reversed="true"
+    IsUpdateable="false"/>
 </ViewObject>

@@ -26,7 +26,6 @@ public class ProduitsPfnlImpl extends EntityImpl {
         Idproduitspfnl,
         Nomscientifique,
         Nomcommercial,
-        Nomvernaculaire,
         Codeproduit,
         Idfamillepfnl,
         Descriptionsommaire,
@@ -68,7 +67,6 @@ public class ProduitsPfnlImpl extends EntityImpl {
     public static final int IDPRODUITSPFNL = AttributesEnum.Idproduitspfnl.index();
     public static final int NOMSCIENTIFIQUE = AttributesEnum.Nomscientifique.index();
     public static final int NOMCOMMERCIAL = AttributesEnum.Nomcommercial.index();
-    public static final int NOMVERNACULAIRE = AttributesEnum.Nomvernaculaire.index();
     public static final int CODEPRODUIT = AttributesEnum.Codeproduit.index();
     public static final int IDFAMILLEPFNL = AttributesEnum.Idfamillepfnl.index();
     public static final int DESCRIPTIONSOMMAIRE = AttributesEnum.Descriptionsommaire.index();
@@ -145,21 +143,6 @@ public class ProduitsPfnlImpl extends EntityImpl {
         setAttributeInternal(NOMCOMMERCIAL, value);
     }
 
-    /**
-     * Gets the attribute value for Nomvernaculaire, using the alias name Nomvernaculaire.
-     * @return the value of Nomvernaculaire
-     */
-    public String getNomvernaculaire() {
-        return (String) getAttributeInternal(NOMVERNACULAIRE);
-    }
-
-    /**
-     * Sets <code>value</code> as the attribute value for Nomvernaculaire.
-     * @param value value to set the Nomvernaculaire
-     */
-    public void setNomvernaculaire(String value) {
-        setAttributeInternal(NOMVERNACULAIRE, value);
-    }
 
     /**
      * Gets the attribute value for Codeproduit, using the alias name Codeproduit.

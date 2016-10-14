@@ -43,6 +43,14 @@
     <DesignTime>
       <Attr Name="_DisplaySize" Value="100"/>
     </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="NUM_U00E9RO_DE_PERMIS"/>
+        <DISPLAYWIDTH
+          Value="20"/>
+      </SchemaBasedProperties>
+    </Properties>
   </Attribute>
   <Attribute
     Name="Zonecoupe"
@@ -50,28 +58,58 @@
     SQLType="STRUCT"
     Type="java.lang.String"
     ColumnType="LONGTEXT"
-    TableName="permis"/>
+    TableName="permis">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="20"/>
+        <LABEL
+          ResId="ZONE_D_EXPLOITATION"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
   <Attribute
     Name="Datedelivrance"
     ColumnName="datedelivrance"
     SQLType="DATE"
     Type="java.sql.Date"
     ColumnType="DATE"
-    TableName="permis"/>
+    TableName="permis">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="DATE_DE_D_U00E9LIVRANCE"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
   <Attribute
     Name="Datefin"
     ColumnName="datefin"
     SQLType="DATE"
     Type="java.sql.Date"
     ColumnType="DATE"
-    TableName="permis"/>
+    TableName="permis">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="DATE_DE_FIN"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
   <Attribute
     Name="Observation"
     ColumnName="observation"
     SQLType="STRUCT"
     Type="java.lang.String"
     ColumnType="LONGTEXT"
-    TableName="permis"/>
+    TableName="permis">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="20"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
   <Attribute
     Name="Idagrement"
     ColumnName="idagrement"
@@ -82,6 +120,12 @@
     <DesignTime>
       <Attr Name="_DisplaySize" Value="19"/>
     </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="AGR_U00E9MENT"/>
+      </SchemaBasedProperties>
+    </Properties>
   </Attribute>
   <Attribute
     Name="Idpermissionnaire"
@@ -93,6 +137,12 @@
     <DesignTime>
       <Attr Name="_DisplaySize" Value="19"/>
     </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="PERMISSIONNAIRE"/>
+      </SchemaBasedProperties>
+    </Properties>
   </Attribute>
   <Attribute
     Name="Typedocument"
@@ -104,6 +154,12 @@
     <DesignTime>
       <Attr Name="_DisplaySize" Value="3"/>
     </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="cm.gov.minfof.model.entity.Permis.Typedocument_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
   </Attribute>
   <AccessorAttribute
     Name="Permis"
@@ -147,6 +203,20 @@
     AssociationOtherEnd="cm.gov.minfof.model.entity.DetailCollToDocOfficielAssoc.Permis"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="Permissionnairespnfl"
+    Association="cm.gov.minfof.model.entity.PermissionnaireToPermisAssoc"
+    AssociationEnd="cm.gov.minfof.model.entity.PermissionnaireToPermisAssoc.Permissionnairespnfl"
+    AssociationOtherEnd="cm.gov.minfof.model.entity.PermissionnaireToPermisAssoc.Permis"
+    Type="cm.gov.minfof.model.entity.PermissionnairespnflImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="Exportpfnl"
+    Association="cm.gov.minfof.model.entity.ExportToPermisAssoc"
+    AssociationEnd="cm.gov.minfof.model.entity.ExportToPermisAssoc.Exportpfnl"
+    AssociationOtherEnd="cm.gov.minfof.model.entity.ExportToPermisAssoc.Permis"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
   <Key
     Name="Primary1"
     PrimaryKey="true">
@@ -179,4 +249,19 @@
       <Item Value="cm.gov.minfof.model.entity.Permis.Idpermissionnaire"/>
     </AttrArray>
   </Key>
+  <Key
+    Name="fk_Permis">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="PRIMARY"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="fk_Permis"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="cm.gov.minfof.model.entity.Permis.Idpermissionnaire"/>
+    </AttrArray>
+  </Key>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="cm.gov.minfof.model.ModelBundle"/>
+  </ResourceBundle>
 </Entity>

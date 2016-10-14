@@ -37,6 +37,7 @@ public class getLastIdDetailsCollecteRowImpl extends ViewRowImpl {
             return vals;
         }
     }
+
     public static final int MAXID = AttributesEnum.Maxid.index();
 
     /**

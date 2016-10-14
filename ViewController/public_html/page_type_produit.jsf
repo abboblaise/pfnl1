@@ -8,7 +8,7 @@
         <af:form id="f1">
             <af:pageTemplate viewId="/TemplateGlobal.jsf" id="pt1">
                 <f:facet name="content">
-                    <af:panelBox text="#{viewcontrollerBundle.EDITION_DES_CAT_U00E9GORIES_DE_PRODUITS}" id="pb1">
+                    <af:panelBox text="#{viewcontrollerBundle.EDITION_DES_TYPES_DE_PRODUITS}" id="pb1">
                         <f:facet name="toolbar"/>
                         <af:panelFormLayout id="pfl1" rows="2">
                             <af:inputText value="#{bindings.Codecategorie.inputValue}"
@@ -50,7 +50,7 @@
                             </f:facet>
                         </af:panelFormLayout>
                     </af:panelBox>
-                    <af:panelBox text="#{viewcontrollerBundle.LISTE_DES_CAT_U00E9GORIES_DE_PRODUIT}" id="pb2">
+                    <af:panelBox text="#{viewcontrollerBundle.LISTE_DES_TYPES_DE_PRODUIT}" id="pb2">
                         <f:facet name="toolbar"/>
                         <af:panelCollection id="pc1" inlineStyle="width:711px;">
                             <f:facet name="menus"/>

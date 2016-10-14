@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.20.47" id="page_exportPageDef"
+                Package="cm.gov.minfof.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="ExportpfnlView1" RangeSize="25" DataControl="AppModuleDataControl" id="ExportpfnlView1Iterator"/>
+    <searchRegion Binds="ExportpfnlView1Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="ExportpfnlView1Query"/>
+    <iterator Binds="DetailsexportpfnlView12" RangeSize="25" DataControl="AppModuleDataControl"
+              id="DetailsexportpfnlView12Iterator"/>
+    <searchRegion Binds="DetailsexportpfnlView12Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="DetailsexportpfnlView12Query"/>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="ExportpfnlView1Iterator" id="Idexportpfnl">
+      <AttrNames>
+        <Item Value="Idexportpfnl"/>
+      </AttrNames>
+    </attributeValues>
+    <list IterBinding="ExportpfnlView1Iterator" StaticList="false" Uses="LOV_Idpermis" id="Idpermis"
+          DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
+    <list IterBinding="ExportpfnlView1Iterator" StaticList="false" Uses="LOV_Idpermissionnaire" id="Idpermissionnaire"
+          DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
+    <attributeValues IterBinding="ExportpfnlView1Iterator" id="Numeroexport">
+      <AttrNames>
+        <Item Value="Numeroexport"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ExportpfnlView1Iterator" id="Numeroco">
+      <AttrNames>
+        <Item Value="Numeroco"/>
+      </AttrNames>
+    </attributeValues>
+    <tree IterBinding="ExportpfnlView1Iterator" id="ExportpfnlView1">
+      <nodeDefinition DefName="cm.gov.minfof.model.entityviewobject.ExportpfnlView" Name="ExportpfnlView10">
+        <AttrNames>
+          <Item Value="Idexportpfnl"/>
+          <Item Value="Idpermis"/>
+          <Item Value="Idpermissionnaire"/>
+          <Item Value="Numeroexport"/>
+          <Item Value="Numeroco"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <attributeValues IterBinding="DetailsexportpfnlView12Iterator" id="Iddetailsexportpfnl">
+      <AttrNames>
+        <Item Value="Iddetailsexportpfnl"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="DetailsexportpfnlView12Iterator" id="Idexportpfnl1">
+      <AttrNames>
+        <Item Value="Idexportpfnl"/>
+      </AttrNames>
+    </attributeValues>
+    <list IterBinding="DetailsexportpfnlView12Iterator" StaticList="false" Uses="LOV_Idunitemesure" id="Idunitemesure"
+          DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
+    <attributeValues IterBinding="DetailsexportpfnlView12Iterator" id="Quantite">
+      <AttrNames>
+        <Item Value="Quantite"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="DetailsexportpfnlView12Iterator" id="Observations">
+      <AttrNames>
+        <Item Value="Observations"/>
+      </AttrNames>
+    </attributeValues>
+    <list IterBinding="DetailsexportpfnlView12Iterator" StaticList="false" Uses="LOV_Idpartieproduitpfnl"
+          id="Idpartieproduitpfnl" DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
+    <tree IterBinding="DetailsexportpfnlView12Iterator" id="DetailsexportpfnlView12">
+      <nodeDefinition DefName="cm.gov.minfof.model.entityviewobject.DetailsexportpfnlView"
+                      Name="DetailsexportpfnlView120">
+        <AttrNames>
+          <Item Value="Iddetailsexportpfnl"/>
+          <Item Value="Idexportpfnl"/>
+          <Item Value="Idunitemesure"/>
+          <Item Value="Quantite"/>
+          <Item Value="Observations"/>
+          <Item Value="Idpartieproduitpfnl"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <action IterBinding="ExportpfnlView1Iterator" id="CreateInsert" RequiresUpdateModel="true"
+            Action="createInsertRow"/>
+    <action id="Rollback" RequiresUpdateModel="false" Action="rollbackTransaction" DataControl="AppModuleDataControl"/>
+    <action IterBinding="DetailsexportpfnlView12Iterator" id="CreateInsert1" RequiresUpdateModel="true"
+            Action="createInsertRow"/>
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
+  </bindings>
+</pageDefinition>

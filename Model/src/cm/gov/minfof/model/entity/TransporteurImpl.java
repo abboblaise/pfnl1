@@ -50,6 +50,7 @@ public class TransporteurImpl extends EntityImpl {
         }
     }
 
+
     public static final int IDTRANSPORTEUR = AttributesEnum.Idtransporteur.index();
     public static final int NUI = AttributesEnum.Nui.index();
     public static final int NOM = AttributesEnum.Nom.index();
@@ -69,6 +70,7 @@ public class TransporteurImpl extends EntityImpl {
     public static synchronized EntityDefImpl getDefinitionObject() {
         return EntityDefImpl.findDefObject("cm.gov.minfof.model.entity.Transporteur");
     }
+
 
     /**
      * Gets the attribute value for Idtransporteur, using the alias name Idtransporteur.

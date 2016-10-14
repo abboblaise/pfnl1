@@ -71,26 +71,6 @@
     </Properties>
   </Attribute>
   <Attribute
-    Name="Nomvernaculaire"
-    Precision="100"
-    ColumnName="nomvernaculaire"
-    SQLType="VARCHAR"
-    Type="java.lang.String"
-    ColumnType="VARCHAR"
-    TableName="produitspfnl">
-    <DesignTime>
-      <Attr Name="_DisplaySize" Value="100"/>
-    </DesignTime>
-    <Properties>
-      <SchemaBasedProperties>
-        <LABEL
-          ResId="cm.gov.minfof.model.entity.ProduitsPfnl.Nomvernaculaire_LABEL"/>
-        <DISPLAYWIDTH
-          Value="20"/>
-      </SchemaBasedProperties>
-    </Properties>
-  </Attribute>
-  <Attribute
     Name="Codeproduit"
     IsUnique="true"
     Precision="5"
@@ -119,6 +99,12 @@
     <DesignTime>
       <Attr Name="_DisplaySize" Value="19"/>
     </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="FAMILLE"/>
+      </SchemaBasedProperties>
+    </Properties>
   </Attribute>
   <Attribute
     Name="Descriptionsommaire"
@@ -169,7 +155,7 @@
     <Properties>
       <SchemaBasedProperties>
         <LABEL
-          ResId="cm.gov.minfof.model.entity.ProduitsPfnl.Idcategorie_LABEL"/>
+          ResId="TYPE_PRODUITS"/>
       </SchemaBasedProperties>
     </Properties>
   </Attribute>
@@ -257,9 +243,7 @@
       <Attr Name="_isCheck" Value="true"/>
       <Attr Name="_DBObjectName" Value="Produitspfnl_Idunitemesure_Che"/>
     </DesignTime>
-    <AttrArray Name="Attributes">
-      <Item Value="cm.gov.minfof.model.entity.ProduitsPfnl.Idunitemesure"/>
-    </AttrArray>
+    <AttrArray Name="Attributes"/>
   </Key>
   <Key
     Name="ProduitspfnlIbfk1">

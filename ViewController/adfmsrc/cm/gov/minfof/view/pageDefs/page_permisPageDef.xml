@@ -37,11 +37,6 @@
         <Item Value="Datefin"/>
       </AttrNames>
     </attributeValues>
-    <attributeValues IterBinding="PermisView1Iterator" id="Typedocument">
-      <AttrNames>
-        <Item Value="Typedocument"/>
-      </AttrNames>
-    </attributeValues>
     <attributeValues IterBinding="PermisView1Iterator" id="Observation">
       <AttrNames>
         <Item Value="Observation"/>
@@ -70,8 +65,8 @@
       <nodeDefinition DefName="cm.gov.minfof.model.entityviewobject.DetailpermisView" Name="DetailpermisView60">
         <AttrNames>
           <Item Value="Idpartieproduitpfnl"/>
-          <Item Value="Quantite"/>
           <Item Value="Idunitemesure"/>
+          <Item Value="Quantite"/>
           <Item Value="Observation"/>
         </AttrNames>
       </nodeDefinition>
@@ -79,5 +74,28 @@
     <action IterBinding="DetailpermisView6Iterator" id="CreateInsert1" RequiresUpdateModel="true"
             Action="createInsertRow"/>
     <action IterBinding="DetailpermisView6Iterator" id="Delete1" RequiresUpdateModel="false" Action="removeCurrentRow"/>
+    <list IterBinding="PermisView1Iterator" StaticList="false" Uses="LOV_Typedocument" id="Typedocument"
+          DTSupportsMRU="true" SelectItemValueMode="ListObject"/>
+    <list IterBinding="DetailpermisView6Iterator" StaticList="false" Uses="LOV_Idpartieproduitpfnl"
+          id="Idpartieproduitpfnl" DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
+    <list IterBinding="DetailpermisView6Iterator" StaticList="false" Uses="LOV_Idunitemesure" id="Idunitemesure"
+          DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
+    <attributeValues IterBinding="DetailpermisView6Iterator" id="Quantite">
+      <AttrNames>
+        <Item Value="Quantite"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="DetailpermisView6Iterator" id="Observation1">
+      <AttrNames>
+        <Item Value="Observation"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="DetailpermisView6Iterator" id="Iddetailpermis">
+      <AttrNames>
+        <Item Value="Iddetailpermis"/>
+      </AttrNames>
+    </attributeValues>
+    <list IterBinding="DetailpermisView6Iterator" StaticList="false" Uses="LOV_Idpermis" id="Idpermis"
+          DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
   </bindings>
 </pageDefinition>

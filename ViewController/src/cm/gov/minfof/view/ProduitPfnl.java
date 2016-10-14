@@ -77,4 +77,15 @@ public class ProduitPfnl {
         }
         return null;
     }
+
+    public String creerPartiesProduitsPfnl1() {
+        BindingContainer bindings = getBindings();
+        OperationBinding operationBinding = bindings.getOperationBinding("CreateInsert1");
+        Object result = operationBinding.execute();
+        executemethode("Commit");
+        if (!operationBinding.getErrors().isEmpty()) {
+            return null;
+        }
+        return null;
+    }
 }

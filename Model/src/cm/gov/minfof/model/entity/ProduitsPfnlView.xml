@@ -13,6 +13,50 @@
   CustomQuery="false"
   SelectAllAttributes="false"
   PageIterMode="Full">
+  <ViewAccessor
+    Name="FamillePfnlView1"
+    ViewObjectName="cm.gov.minfof.model.entity.FamillePfnlView"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="CategorieproduitView1"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.CategorieproduitView"
+    RowLevelBinds="true"/>
+  <ListBinding
+    Name="LOV_Idfamillepfnl"
+    ListVOName="FamillePfnlView1"
+    NullValueFlag="end"
+    MRUCount="0"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}">
+    <AttrArray Name="AttrNames">
+      <Item Value="Idfamillepfnl"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Idfamillepfnl"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Nomfamille"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_Idcategorie"
+    ListVOName="CategorieproduitView1"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="Idcategorie"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Idcategorieproduit"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Libellecategorie"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
   <EntityUsage
     Name="ProduitsPfnl"
     Entity="cm.gov.minfof.model.entity.ProduitsPfnl"/>
@@ -37,12 +81,6 @@
     EntityUsage="ProduitsPfnl"
     AliasName="nomcommercial"/>
   <ViewAttribute
-    Name="Nomvernaculaire"
-    PrecisionRule="true"
-    EntityAttrName="Nomvernaculaire"
-    EntityUsage="ProduitsPfnl"
-    AliasName="nomvernaculaire"/>
-  <ViewAttribute
     Name="Codeproduit"
     IsUnique="true"
     PrecisionRule="true"
@@ -54,7 +92,15 @@
     PrecisionRule="true"
     EntityAttrName="Idfamillepfnl"
     EntityUsage="ProduitsPfnl"
-    AliasName="idfamillepfnl"/>
+    AliasName="idfamillepfnl"
+    LOVName="LOV_Idfamillepfnl">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Descriptionsommaire"
     PrecisionRule="true"
@@ -72,7 +118,15 @@
     PrecisionRule="true"
     EntityAttrName="Idcategorie"
     EntityUsage="ProduitsPfnl"
-    AliasName="idcategorie"/>
+    AliasName="idcategorie"
+    LOVName="LOV_Idcategorie">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewLinkAccessor
     Name="ProduitsPfnlView"
     ViewLink="cm.gov.minfof.model.entity.ProduitspfnlIbfk1Link"

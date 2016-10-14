@@ -22,7 +22,8 @@
     Type="java.math.BigDecimal"
     ColumnType="BIGINT"
     TableName="collectepfnl"
-    PrimaryKey="true">
+    PrimaryKey="true"
+    IsUpdateable="while_insert">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="19"/>
     </DesignTime>
@@ -34,7 +35,14 @@
     SQLType="DATE"
     Type="java.sql.Date"
     ColumnType="DATE"
-    TableName="collectepfnl"/>
+    TableName="collectepfnl">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="DATE_COLLECTE"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
   <Attribute
     Name="Identificateur"
     Precision="100"
@@ -50,6 +58,8 @@
       <SchemaBasedProperties>
         <DISPLAYWIDTH
           Value="50"/>
+        <LABEL
+          ResId="IDENTIFICATEUR"/>
       </SchemaBasedProperties>
     </Properties>
   </Attribute>
@@ -81,6 +91,14 @@
     <DesignTime>
       <Attr Name="_DisplaySize" Value="45"/>
     </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="CODE_PCFC"/>
+        <DISPLAYWIDTH
+          Value="10"/>
+      </SchemaBasedProperties>
+    </Properties>
   </Attribute>
   <Attribute
     Name="Idlocalite"

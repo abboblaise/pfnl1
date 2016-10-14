@@ -66,23 +66,6 @@
     </Properties>
   </Attribute>
   <Attribute
-    Name="Estunproduitpfnl"
-    ColumnName="estunproduitpfnl"
-    SQLType="TINYINT"
-    Type="java.lang.Integer"
-    ColumnType="TINYINT"
-    TableName="partiesproduitspfnl">
-    <DesignTime>
-      <Attr Name="_DisplaySize" Value="3"/>
-    </DesignTime>
-    <Properties>
-      <SchemaBasedProperties>
-        <LABEL
-          ResId="cm.gov.minfof.model.entity.PartiesProduitsPfnl.Estunproduitpfnl_LABEL"/>
-      </SchemaBasedProperties>
-    </Properties>
-  </Attribute>
-  <Attribute
     Name="Idunitemesure"
     ColumnName="idunitemesure"
     SQLType="NUMERIC"
@@ -214,6 +197,13 @@
     Association="cm.gov.minfof.model.entity.DetailCollToPartieProdPfnlAssoc"
     AssociationEnd="cm.gov.minfof.model.entity.DetailCollToPartieProdPfnlAssoc.Detailscollectepfnl"
     AssociationOtherEnd="cm.gov.minfof.model.entity.DetailCollToPartieProdPfnlAssoc.PartiesProduitsPfnl"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="Detailsexportpfnl"
+    Association="cm.gov.minfof.model.entity.DetailExportToPartieProduit"
+    AssociationEnd="cm.gov.minfof.model.entity.DetailExportToPartieProduit.Detailsexportpfnl"
+    AssociationOtherEnd="cm.gov.minfof.model.entity.DetailExportToPartieProduit.PartiesProduitsPfnl"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
   <Key

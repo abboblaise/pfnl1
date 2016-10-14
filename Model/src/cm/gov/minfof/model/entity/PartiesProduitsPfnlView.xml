@@ -18,6 +18,72 @@
     <Attr Name="_codeGenFlag2" Value="Access"/>
     <Attr Name="_isCodegen" Value="true"/>
   </DesignTime>
+  <ViewAccessor
+    Name="UnitemesureView2"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.UnitemesureView"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="UnitemesureView3"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.UnitemesureView"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="PartiesrecolteesView1"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.PartiesrecolteesView"
+    RowLevelBinds="true"/>
+  <ListBinding
+    Name="LOV_Idunitemesure"
+    ListVOName="UnitemesureView2"
+    NullValueFlag="end"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="Idunitemesure"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Idunitemesure"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Libelleunitemesure"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_Idunitemesureexport"
+    ListVOName="UnitemesureView3"
+    NullValueFlag="end"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="Idunitemesureexport"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Idunitemesure"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Libelleunitemesure"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_Idpartiesrecoltees"
+    ListVOName="PartiesrecolteesView1"
+    NullValueFlag="end"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="Idpartiesrecoltees"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Idpartiesrecoltees"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Nompartierecoltee"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
   <EntityUsage
     Name="PartiesProduitsPfnl"
     Entity="cm.gov.minfof.model.entity.PartiesProduitsPfnl"/>
@@ -34,7 +100,15 @@
     PrecisionRule="true"
     EntityAttrName="Idpartiesrecoltees"
     EntityUsage="PartiesProduitsPfnl"
-    AliasName="idpartiesrecoltees"/>
+    AliasName="idpartiesrecoltees"
+    LOVName="LOV_Idpartiesrecoltees">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Idproduitspfnl"
     PrecisionRule="true"
@@ -42,33 +116,34 @@
     EntityUsage="PartiesProduitsPfnl"
     AliasName="idproduitspfnl"/>
   <ViewAttribute
-    Name="Estunproduitpfnl"
-    PrecisionRule="true"
-    EntityAttrName="Estunproduitpfnl"
-    EntityUsage="PartiesProduitsPfnl"
-    AliasName="estunproduitpfnl"/>
-  <ViewAttribute
     Name="Idunitemesure"
     IsNotNull="true"
     PrecisionRule="true"
     EntityAttrName="Idunitemesure"
     EntityUsage="PartiesProduitsPfnl"
-    AliasName="idunitemesure"/>
+    AliasName="idunitemesure"
+    LOVName="LOV_Idunitemesure">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Idunitemesureexport"
     PrecisionRule="true"
     EntityAttrName="Idunitemesureexport"
     EntityUsage="PartiesProduitsPfnl"
-    AliasName="idunitemesureexport"/>
-  <ViewAttribute
-    Name="estUnProduitPfnlTransient"
-    IsSelected="false"
-    IsPersistent="false"
-    PrecisionRule="true"
-    Type="java.lang.Boolean"
-    ColumnType="BIT"
-    AliasName="VIEW_ATTR"
-    SQLType="BIT"/>
+    AliasName="idunitemesureexport"
+    LOVName="LOV_Idunitemesureexport">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewLinkAccessor
     Name="PartiesProduitsPfnlView"
     ViewLink="cm.gov.minfof.model.entity.FkPartiesproduitspfnl2Link"
@@ -97,6 +172,12 @@
   <ViewLinkAccessor
     Name="DetailscollectepfnlView"
     ViewLink="cm.gov.minfof.model.entityviewobject.DetailCollToPartieProdPfnlLink"
+    Type="oracle.jbo.RowIterator"
+    Reversed="true"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="DetailsexportpfnlView"
+    ViewLink="cm.gov.minfof.model.entityviewobject.DetailsExportToPartieProduitLink"
     Type="oracle.jbo.RowIterator"
     Reversed="true"
     IsUpdateable="false"/>

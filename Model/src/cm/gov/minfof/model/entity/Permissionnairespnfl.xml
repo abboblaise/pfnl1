@@ -345,6 +345,20 @@
     AssociationOtherEnd="cm.gov.minfof.model.entity.DetailCollToPermissionnaireAssoc.Permissionnairespnfl"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="Permis"
+    Association="cm.gov.minfof.model.entity.PermissionnaireToPermisAssoc"
+    AssociationEnd="cm.gov.minfof.model.entity.PermissionnaireToPermisAssoc.Permis"
+    AssociationOtherEnd="cm.gov.minfof.model.entity.PermissionnaireToPermisAssoc.Permissionnairespnfl"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="Exportpfnl"
+    Association="cm.gov.minfof.model.entity.ExportToPermissionnaireAssoc"
+    AssociationEnd="cm.gov.minfof.model.entity.ExportToPermissionnaireAssoc.Exportpfnl"
+    AssociationOtherEnd="cm.gov.minfof.model.entity.ExportToPermissionnaireAssoc.Permissionnairespnfl"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
   <Key
     Name="Primary1"
     PrimaryKey="true">

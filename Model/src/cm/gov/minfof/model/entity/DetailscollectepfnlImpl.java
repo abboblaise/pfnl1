@@ -7,6 +7,7 @@ import oracle.jbo.Key;
 import oracle.jbo.Row;
 import oracle.jbo.RowIterator;
 import oracle.jbo.ViewObject;
+import oracle.jbo.server.DBTransaction;
 import oracle.jbo.server.EntityDefImpl;
 import oracle.jbo.server.EntityImpl;
 import oracle.jbo.server.TransactionEvent;
@@ -30,6 +31,7 @@ public class DetailscollectepfnlImpl extends EntityImpl {
         Iddestination,
         Idpartieproduitpfnl,
         Idcollectepfnl,
+        Idprovenance,
         Detailscollectepfnl,
         IdcollectepfnlDetailscollectepfnl,
         Detailscollectepfnl1,
@@ -73,6 +75,8 @@ public class DetailscollectepfnlImpl extends EntityImpl {
             return vals;
         }
     }
+
+
     public static final int IDDETAILSCOLLECTEPFNL = AttributesEnum.Iddetailscollectepfnl.index();
     public static final int IDPERMISSIONNAIRE = AttributesEnum.Idpermissionnaire.index();
     public static final int IDORIGINE = AttributesEnum.Idorigine.index();
@@ -82,6 +86,7 @@ public class DetailscollectepfnlImpl extends EntityImpl {
     public static final int IDDESTINATION = AttributesEnum.Iddestination.index();
     public static final int IDPARTIEPRODUITPFNL = AttributesEnum.Idpartieproduitpfnl.index();
     public static final int IDCOLLECTEPFNL = AttributesEnum.Idcollectepfnl.index();
+    public static final int IDPROVENANCE = AttributesEnum.Idprovenance.index();
     public static final int DETAILSCOLLECTEPFNL = AttributesEnum.Detailscollectepfnl.index();
     public static final int IDCOLLECTEPFNLDETAILSCOLLECTEPFNL =
         AttributesEnum.IdcollectepfnlDetailscollectepfnl.index();
@@ -113,6 +118,14 @@ public class DetailscollectepfnlImpl extends EntityImpl {
      */
     public DetailscollectepfnlImpl() {
     }
+
+    /**
+     * @return the definition object for this instance class.
+     */
+    public static synchronized EntityDefImpl getDefinitionObject() {
+        return EntityDefImpl.findDefObject("cm.gov.minfof.model.entity.Detailscollectepfnl");
+    }
+
 
     /**
      * Gets the attribute value for Iddetailscollectepfnl, using the alias name Iddetailscollectepfnl.
@@ -256,6 +269,22 @@ public class DetailscollectepfnlImpl extends EntityImpl {
      */
     public void setIdcollectepfnl(BigDecimal value) {
         setAttributeInternal(IDCOLLECTEPFNL, value);
+    }
+
+    /**
+     * Gets the attribute value for Idprovenance, using the alias name Idprovenance.
+     * @return the value of Idprovenance
+     */
+    public BigDecimal getIdprovenance() {
+        return (BigDecimal) getAttributeInternal(IDPROVENANCE);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for Idprovenance.
+     * @param value value to set the Idprovenance
+     */
+    public void setIdprovenance(BigDecimal value) {
+        setAttributeInternal(IDPROVENANCE, value);
     }
 
     /**
@@ -503,6 +532,7 @@ public class DetailscollectepfnlImpl extends EntityImpl {
         setAttributeInternal(PERMIS, value);
     }
 
+
     /**
      * @param iddetailscollectepfnl key constituent
 
@@ -510,13 +540,6 @@ public class DetailscollectepfnlImpl extends EntityImpl {
      */
     public static Key createPrimaryKey(BigDecimal iddetailscollectepfnl) {
         return new Key(new Object[] { iddetailscollectepfnl });
-    }
-
-    /**
-     * @return the definition object for this instance class.
-     */
-    public static synchronized EntityDefImpl getDefinitionObject() {
-        return EntityDefImpl.findDefObject("cm.gov.minfof.model.entity.Detailscollectepfnl");
     }
 
     /**
@@ -547,7 +570,7 @@ public class DetailscollectepfnlImpl extends EntityImpl {
      * @param e the transaction event
      */
     protected void doDML(int operation, TransactionEvent e) {
-        if (operation == DML_INSERT) {
+        if (operation == DML_INSERT) { 
             BigDecimal id = getLastId("getLastIdDetailsCollecte1");
             setIddetailscollectepfnl(id);
         }
