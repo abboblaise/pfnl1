@@ -33,7 +33,8 @@ public class UnitemesureImpl extends EntityImpl {
         Categorieunitemesure,
         PartiesProduitsPfnl,
         PartiesProduitsPfnl1,
-        Detailscollectepfnl;
+        Detailscollectepfnl,
+        Detailsexportpfnl;
         private static AttributesEnum[] vals = null;
         private static final int firstIndex = 0;
 
@@ -71,6 +72,7 @@ public class UnitemesureImpl extends EntityImpl {
     public static final int PARTIESPRODUITSPFNL = AttributesEnum.PartiesProduitsPfnl.index();
     public static final int PARTIESPRODUITSPFNL1 = AttributesEnum.PartiesProduitsPfnl1.index();
     public static final int DETAILSCOLLECTEPFNL = AttributesEnum.Detailscollectepfnl.index();
+    public static final int DETAILSEXPORTPFNL = AttributesEnum.Detailsexportpfnl.index();
 
     /**
      * This is the default constructor (do not remove).
@@ -265,6 +267,14 @@ public class UnitemesureImpl extends EntityImpl {
 
 
     /**
+     * @return the associated entity oracle.jbo.RowIterator.
+     */
+    public RowIterator getDetailsexportpfnl() {
+        return (RowIterator) getAttributeInternal(DETAILSEXPORTPFNL);
+    }
+
+
+    /**
      * @param idunitemesure key constituent
 
      * @return a Key object based on given key constituents.
@@ -302,7 +312,7 @@ public class UnitemesureImpl extends EntityImpl {
      */
     protected void doDML(int operation, TransactionEvent e) {
         if (operation == DML_INSERT) {
-            //System.out.println("actif = " + getActif());
+            System.out.println("actif = " + getActif());
             BigDecimal id = getLastId("getLastIdUnitMesure1");
             setIdunitemesure(id);
         }
@@ -310,7 +320,7 @@ public class UnitemesureImpl extends EntityImpl {
     }
     
     public BigDecimal getLastId(String viewName) {
-        //System.out.println("entree dans getLastId");
+        System.out.println("entree dans getLastId");
         BigDecimal lastId=new BigDecimal(0);
         ViewObject vo = this.getDBTransaction()
                             .getRootApplicationModule()
@@ -319,7 +329,7 @@ public class UnitemesureImpl extends EntityImpl {
         if (vo.hasNext()) {
             Row r = vo.next();
             lastId = (BigDecimal) r.getAttribute(0);
-            //System.out.println("last Id = " + lastId);
+            System.out.println("last Id = " + lastId);
             vo.closeRowSet();
         }
         BigDecimal un = new BigDecimal(1);

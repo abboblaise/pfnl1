@@ -12,11 +12,54 @@
   <DesignTime>
     <Attr Name="_isExpertMode" Value="true"/>
   </DesignTime>
+  <ViewAccessor
+    Name="CategorieproduitView1"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.CategorieproduitView"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="FamillePfnlView1"
+    ViewObjectName="cm.gov.minfof.model.entity.FamillePfnlView"
+    RowLevelBinds="true"/>
+  <ListBinding
+    Name="LOV_Idcategorie"
+    ListVOName="CategorieproduitView1"
+    NullValueFlag="end"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="Idcategorie"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Idcategorieproduit"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Libellecategorie"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_Idfamillepfnl"
+    ListVOName="FamillePfnlView1"
+    NullValueFlag="end"
+    MRUCount="0"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}">
+    <AttrArray Name="AttrNames">
+      <Item Value="Idfamillepfnl"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Idfamillepfnl"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Nomfamille"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
   <SQLQuery><![CDATA[SELECT 
     PfnlProduitspfnl.idproduitspfnl, 
     PfnlProduitspfnl.nomscientifique, 
-    PfnlProduitspfnl.nomcommercial, 
-    PfnlProduitspfnl.nomvernaculaire, 
+    PfnlProduitspfnl.nomcommercial,  
     PfnlProduitspfnl.codeproduit, 
     PfnlProduitspfnl.idfamillepfnl, 
     PfnlProduitspfnl.descriptionsommaire, 
@@ -75,21 +118,6 @@ FROM
     </DesignTime>
   </ViewAttribute>
   <ViewAttribute
-    Name="Nomvernaculaire"
-    IsUpdateable="false"
-    IsPersistent="false"
-    PrecisionRule="true"
-    Precision="100"
-    Type="java.lang.String"
-    ColumnType="VARCHAR"
-    AliasName="nomvernaculaire"
-    Expression="nomvernaculaire"
-    SQLType="VARCHAR">
-    <DesignTime>
-      <Attr Name="_DisplaySize" Value="100"/>
-    </DesignTime>
-  </ViewAttribute>
-  <ViewAttribute
     Name="Codeproduit"
     IsUpdateable="false"
     IsPersistent="false"
@@ -113,10 +141,17 @@ FROM
     ColumnType="BIGINT"
     AliasName="idfamillepfnl"
     Expression="idfamillepfnl"
-    SQLType="NUMERIC">
+    SQLType="NUMERIC"
+    LOVName="LOV_Idfamillepfnl">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="19"/>
     </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
   </ViewAttribute>
   <ViewAttribute
     Name="Descriptionsommaire"
@@ -153,10 +188,17 @@ FROM
     ColumnType="BIGINT"
     AliasName="idcategorie"
     Expression="idcategorie"
-    SQLType="NUMERIC">
+    SQLType="NUMERIC"
+    LOVName="LOV_Idcategorie">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="20"/>
     </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
   </ViewAttribute>
   <AttrArray Name="KeyAttributes">
     <Item Value="Idproduitspfnl"/>

@@ -308,7 +308,7 @@ public class DepartementImpl extends EntityImpl {
     }
     
     public BigDecimal getLastId(String viewName) {
-        //System.out.println("entree dans getLastId");
+        System.out.println("entree dans getLastId");
         BigDecimal lastId=new BigDecimal(0);
         ViewObject vo = this.getDBTransaction()
                             .getRootApplicationModule()
@@ -317,7 +317,7 @@ public class DepartementImpl extends EntityImpl {
         if (vo.hasNext()) {
             Row r = vo.next();
             lastId = (BigDecimal) r.getAttribute(0);
-            //System.out.println("last Id = " + lastId);
+            System.out.println("last Id = " + lastId);
             vo.closeRowSet();
         }
         BigDecimal un = new BigDecimal(1);

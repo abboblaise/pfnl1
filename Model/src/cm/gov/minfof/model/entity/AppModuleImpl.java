@@ -1,10 +1,78 @@
 package cm.gov.minfof.model.entity;
 
-import cm.gov.minfof.model.entity.common.AppModule;
+import cm.gov.minfof.model.entity.common.*;
 import cm.gov.minfof.model.entityviewobject.RegionViewImpl;
 
 import cm.gov.minfof.model.entityviewobject.gestLastIdUnitMesureImpl;
+import cm.gov.minfof.model.entityviewobject.getLastIcCollecteImpl;
+import cm.gov.minfof.model.entityviewobject.getLastIdCategorieUniteMesureImpl;
+import cm.gov.minfof.model.entityviewobject.getLastIdCommunesImpl;
+import cm.gov.minfof.model.entityviewobject.getLastIdDepartementsImpl;
+import cm.gov.minfof.model.entityviewobject.getLastIdDetailsexportImpl;
+import cm.gov.minfof.model.entityviewobject.getLastIdExportImpl;
+import cm.gov.minfof.model.entityviewobject.getLastIdFamillesImpl;
+import cm.gov.minfof.model.entityviewobject.getLastIdOriginePfnlImpl;
+import cm.gov.minfof.model.entityviewobject.getLastIdPartiesRecolteesImpl;
+import cm.gov.minfof.model.entityviewobject.getLastIdPaysImpl;
+import cm.gov.minfof.model.entityviewobject.getLastIdPermissionnairePfnlImpl;
+import cm.gov.minfof.model.entityviewobject.getLastIdProduitsImpl;
+import cm.gov.minfof.model.entityviewobject.getLastIdRegionsImpl;
+import cm.gov.minfof.model.entityviewobject.getLastIdartiesProduitsPfnlImpl;
+import cm.gov.minfof.model.entityviewobject.getLibelleProduitPfnlImpl;
+import cm.gov.minfof.model.entityviewobject.listeExploitantImpl;
+import cm.gov.minfof.model.entityviewobject.listeOrigineImpl;
+import cm.gov.minfof.model.entityviewobject.listeQualitePermissionnaireImpl;
+import cm.gov.minfof.model.entityviewobject.listeSexeImpl;
+import cm.gov.minfof.model.entityviewobject.listeStatutPermissionnaireImpl;
+import cm.gov.minfof.model.entityviewobject.listeTypePersonneImpl;
+import cm.gov.minfof.model.entityviewobject.permisActifViewImpl;
+import cm.gov.minfof.model.entityviewobject.typeDocumentViewImpl;
+
+import oracle.jbo.server.ApplicationModuleImpl;
+import oracle.jbo.server.ViewLinkImpl;
+import oracle.jbo.server.ViewObjectImpl;
+import cm.gov.minfof.model.entityviewobject.getLastIcCollecteImpl;
+import cm.gov.minfof.model.entityviewobject.getLastIdCategorieUniteMesureImpl;
+import cm.gov.minfof.model.entityviewobject.getLastIdCollectePfnlImpl;
+import cm.gov.minfof.model.entityviewobject.getLastIdCommunesImpl;
+import cm.gov.minfof.model.entityviewobject.getLastIdDepartementsImpl;
+import cm.gov.minfof.model.entityviewobject.getLastIdDetailsCollecteImpl;
+import cm.gov.minfof.model.entityviewobject.getLastIdDetailsexportImpl;
+import cm.gov.minfof.model.entityviewobject.getLastIdExportImpl;
+import cm.gov.minfof.model.entityviewobject.getLastIdFamillesImpl;
+import cm.gov.minfof.model.entityviewobject.getLastIdOriginePfnlImpl;
+import cm.gov.minfof.model.entityviewobject.getLastIdPartiesRecolteesImpl;
+import cm.gov.minfof.model.entityviewobject.getLastIdPaysImpl;
+import cm.gov.minfof.model.entityviewobject.getLastIdPermissionnairePfnlImpl;
+import cm.gov.minfof.model.entityviewobject.getLastIdProduitsImpl;
+import cm.gov.minfof.model.entityviewobject.getLastIdRegionsImpl;
+
+import cm.gov.minfof.model.entityviewobject.getLastIdartiesProduitsPfnlImpl;
+
+import cm.gov.minfof.model.entityviewobject.getLibelleProduitCompletImpl;
+import cm.gov.minfof.model.entityviewobject.listeExploitantImpl;
+import cm.gov.minfof.model.entityviewobject.listeOrigineImpl;
+
+import cm.gov.minfof.model.entityviewobject.listeQualitePermissionnaireImpl;
+
+import cm.gov.minfof.model.entityviewobject.listeSexeImpl;
+import cm.gov.minfof.model.entityviewobject.listeStatutPermissionnaireImpl;
+import cm.gov.minfof.model.entityviewobject.listeTypePersonneImpl;
+
+import cm.gov.minfof.model.entityviewobject.permisActifViewImpl;
+
+import cm.gov.minfof.model.entityviewobject.typeDocumentViewImpl;
+
+import java.math.BigDecimal;
+
+import oracle.jbo.Row;
+import oracle.jbo.server.ApplicationModuleImpl;
+import oracle.jbo.server.ViewLinkImpl;
+import oracle.jbo.server.ViewObjectImpl;
+
+
 //import cm.gov.minfof.model.entityviewobject.getLastIdCategorieMesureImpl;
+
 import cm.gov.minfof.model.entityviewobject.getLastIdCategorieUniteMesureImpl;
 import cm.gov.minfof.model.entityviewobject.getLastIdCollectePfnlImpl;
 import cm.gov.minfof.model.entityviewobject.getLastIdCommunesImpl;
@@ -42,7 +110,7 @@ import oracle.jbo.server.ViewObjectImpl;
 // ---    Custom code may be added to this class.
 // ---    Warning: Do not modify method signatures of generated methods.
 // ---------------------------------------------------------------------
-public class AppModuleImpl extends ApplicationModuleImpl implements AppModule {
+public class AppModuleImpl extends ApplicationModuleImpl {
     /**
      * This is the default constructor (do not remove).
      */
@@ -2909,6 +2977,538 @@ public class AppModuleImpl extends ApplicationModuleImpl implements AppModule {
      */
     public ViewObjectImpl getAgrementByPermisView1() {
         return (ViewObjectImpl) findViewObject("AgrementByPermisView1");
+        }
+        /**
+     * Container's getter for PermissionnairespnflView6.
+     * @return PermissionnairespnflView6
+     */
+    public ViewObjectImpl getPermissionnairespnflView6() {
+        return (ViewObjectImpl) findViewObject("PermissionnairespnflView6");
     }
+
+    /**
+     * Container's getter for PermisView7.
+     * @return PermisView7
+     */
+    public ViewObjectImpl getPermisView7() {
+        return (ViewObjectImpl) findViewObject("PermisView7");
+    }
+
+    /**
+     * Container's getter for PermissionnaireToPermisLink.
+     * @return PermissionnaireToPermisLink
+     */
+    public ViewLinkImpl getPermissionnaireToPermisLink() {
+        return (ViewLinkImpl) findViewLink("PermissionnaireToPermisLink");
+    }
+
+
+    /**
+     * Container's getter for PermisView8.
+     * @return PermisView8
+     */
+    public ViewObjectImpl getPermisView8() {
+        return (ViewObjectImpl) findViewObject("PermisView8");
+    }
+
+    /**
+     * Container's getter for PermissionnaireToPermisLink1.
+     * @return PermissionnaireToPermisLink1
+     */
+    public ViewLinkImpl getPermissionnaireToPermisLink1() {
+        return (ViewLinkImpl) findViewLink("PermissionnaireToPermisLink1");
+    }
+
+    /**
+     * Container's getter for permisActifView1.
+     * @return permisActifView1
+     */
+    public permisActifViewImpl getpermisActifView1() {
+        return (permisActifViewImpl) findViewObject("permisActifView1");
+    }
+
+    /**
+     * Container's getter for typeDocumentView1.
+     * @return typeDocumentView1
+     */
+    public typeDocumentViewImpl gettypeDocumentView1() {
+        return (typeDocumentViewImpl) findViewObject("typeDocumentView1");
+    }
+
+
+    /**
+     * Container's getter for ProduitsPfnlView12.
+     * @return ProduitsPfnlView12
+     */
+    public ViewObjectImpl getProduitsPfnlView12() {
+        return (ViewObjectImpl) findViewObject("ProduitsPfnlView12");
+    }
+
+    /**
+     * Container's getter for PartiesProduitsPfnlView24.
+     * @return PartiesProduitsPfnlView24
+     */
+    public ViewObjectImpl getPartiesProduitsPfnlView24() {
+        return (ViewObjectImpl) findViewObject("PartiesProduitsPfnlView24");
+    }
+
+    /**
+     * Container's getter for FkPartiesproduitspfnl1Assoc3Link3.
+     * @return FkPartiesproduitspfnl1Assoc3Link3
+     */
+    public ViewLinkImpl getFkPartiesproduitspfnl1Assoc3Link3() {
+        return (ViewLinkImpl) findViewLink("FkPartiesproduitspfnl1Assoc3Link3");
+    }
+
+    /**
+     * Container's getter for PartiesProduitsPfnlView25.
+     * @return PartiesProduitsPfnlView25
+     */
+    public ViewObjectImpl getPartiesProduitsPfnlView25() {
+        return (ViewObjectImpl) findViewObject("PartiesProduitsPfnlView25");
+    }
+
+    /**
+     * Container's getter for FkPartiesproduitspfnl2Assoc3Link2.
+     * @return FkPartiesproduitspfnl2Assoc3Link2
+     */
+    public ViewLinkImpl getFkPartiesproduitspfnl2Assoc3Link2() {
+        return (ViewLinkImpl) findViewLink("FkPartiesproduitspfnl2Assoc3Link2");
+    }
+
+    /**
+     * Container's getter for ExportpfnlView1.
+     * @return ExportpfnlView1
+     */
+    public ViewObjectImpl getExportpfnlView1() {
+        return (ViewObjectImpl) findViewObject("ExportpfnlView1");
+    }
+
+    /**
+     * Container's getter for ExportpfnlView1_1.
+     * @return ExportpfnlView1_1
+     */
+    public ViewObjectImpl getExportpfnlView1_1() {
+        return (ViewObjectImpl) findViewObject("ExportpfnlView1_1");
+    }
+
+    /**
+     * Container's getter for ExportpfnlView2.
+     * @return ExportpfnlView2
+     */
+    public ViewObjectImpl getExportpfnlView2() {
+        return (ViewObjectImpl) findViewObject("ExportpfnlView2");
+    }
+
+    /**
+     * Container's getter for ExportpfnlView3.
+     * @return ExportpfnlView3
+     */
+    public ViewObjectImpl getExportpfnlView3() {
+        return (ViewObjectImpl) findViewObject("ExportpfnlView3");
+    }
+
+    /**
+     * Container's getter for ExportpfnlView1_2.
+     * @return ExportpfnlView1_2
+     */
+    public ViewObjectImpl getExportpfnlView1_2() {
+        return (ViewObjectImpl) findViewObject("ExportpfnlView1_2");
+    }
+
+    /**
+     * Container's getter for ExportpfnlView1_3.
+     * @return ExportpfnlView1_3
+     */
+    public ViewObjectImpl getExportpfnlView1_3() {
+        return (ViewObjectImpl) findViewObject("ExportpfnlView1_3");
+    }
+
+    /**
+     * Container's getter for FkExportpfnl2Link1.
+     * @return FkExportpfnl2Link1
+     */
+    public ViewLinkImpl getFkExportpfnl2Link1() {
+        return (ViewLinkImpl) findViewLink("FkExportpfnl2Link1");
+    }
+
+    /**
+     * Container's getter for FkExportpfnl1Link1.
+     * @return FkExportpfnl1Link1
+     */
+    public ViewLinkImpl getFkExportpfnl1Link1() {
+        return (ViewLinkImpl) findViewLink("FkExportpfnl1Link1");
+    }
+
+    /**
+     * Container's getter for FkExportpfnl1Link1_1.
+     * @return FkExportpfnl1Link1_1
+     */
+    public ViewLinkImpl getFkExportpfnl1Link1_1() {
+        return (ViewLinkImpl) findViewLink("FkExportpfnl1Link1_1");
+    }
+
+    /**
+     * Container's getter for FkExportpfnl2Link1_1.
+     * @return FkExportpfnl2Link1_1
+     */
+    public ViewLinkImpl getFkExportpfnl2Link1_1() {
+        return (ViewLinkImpl) findViewLink("FkExportpfnl2Link1_1");
+    }
+
+    /**
+     * Container's getter for DetailsexportpfnlView1.
+     * @return DetailsexportpfnlView1
+     */
+    public ViewObjectImpl getDetailsexportpfnlView1() {
+        return (ViewObjectImpl) findViewObject("DetailsexportpfnlView1");
+    }
+
+    /**
+     * Container's getter for DetailsexportpfnlView2.
+     * @return DetailsexportpfnlView2
+     */
+    public ViewObjectImpl getDetailsexportpfnlView2() {
+        return (ViewObjectImpl) findViewObject("DetailsexportpfnlView2");
+    }
+
+    /**
+     * Container's getter for DetailsexportpfnlView3.
+     * @return DetailsexportpfnlView3
+     */
+    public ViewObjectImpl getDetailsexportpfnlView3() {
+        return (ViewObjectImpl) findViewObject("DetailsexportpfnlView3");
+    }
+
+    /**
+     * Container's getter for DetailsexportpfnlView4.
+     * @return DetailsexportpfnlView4
+     */
+    public ViewObjectImpl getDetailsexportpfnlView4() {
+        return (ViewObjectImpl) findViewObject("DetailsexportpfnlView4");
+    }
+
+    /**
+     * Container's getter for DetailsexportpfnlView5.
+     * @return DetailsexportpfnlView5
+     */
+    public ViewObjectImpl getDetailsexportpfnlView5() {
+        return (ViewObjectImpl) findViewObject("DetailsexportpfnlView5");
+    }
+
+    /**
+     * Container's getter for DetailsexportpfnlView6.
+     * @return DetailsexportpfnlView6
+     */
+    public ViewObjectImpl getDetailsexportpfnlView6() {
+        return (ViewObjectImpl) findViewObject("DetailsexportpfnlView6");
+    }
+
+    /**
+     * Container's getter for DetailsexportpfnlView7.
+     * @return DetailsexportpfnlView7
+     */
+    public ViewObjectImpl getDetailsexportpfnlView7() {
+        return (ViewObjectImpl) findViewObject("DetailsexportpfnlView7");
+    }
+
+    /**
+     * Container's getter for DetailsexportpfnlView8.
+     * @return DetailsexportpfnlView8
+     */
+    public ViewObjectImpl getDetailsexportpfnlView8() {
+        return (ViewObjectImpl) findViewObject("DetailsexportpfnlView8");
+    }
+
+    /**
+     * Container's getter for FkDetailsexportpfnl3Link1.
+     * @return FkDetailsexportpfnl3Link1
+     */
+    public ViewLinkImpl getFkDetailsexportpfnl3Link1() {
+        return (ViewLinkImpl) findViewLink("FkDetailsexportpfnl3Link1");
+    }
+
+    /**
+     * Container's getter for FkDetailsexportpfnl2Link1.
+     * @return FkDetailsexportpfnl2Link1
+     */
+    public ViewLinkImpl getFkDetailsexportpfnl2Link1() {
+        return (ViewLinkImpl) findViewLink("FkDetailsexportpfnl2Link1");
+    }
+
+    /**
+     * Container's getter for FkDetailsexportpfnl1Link1.
+     * @return FkDetailsexportpfnl1Link1
+     */
+    public ViewLinkImpl getFkDetailsexportpfnl1Link1() {
+        return (ViewLinkImpl) findViewLink("FkDetailsexportpfnl1Link1");
+    }
+
+    /**
+     * Container's getter for FkDetailsexportpfnl1Link2.
+     * @return FkDetailsexportpfnl1Link2
+     */
+    public ViewLinkImpl getFkDetailsexportpfnl1Link2() {
+        return (ViewLinkImpl) findViewLink("FkDetailsexportpfnl1Link2");
+    }
+
+    /**
+     * Container's getter for FkDetailsexportpfnl2Link2.
+     * @return FkDetailsexportpfnl2Link2
+     */
+    public ViewLinkImpl getFkDetailsexportpfnl2Link2() {
+        return (ViewLinkImpl) findViewLink("FkDetailsexportpfnl2Link2");
+    }
+
+    /**
+     * Container's getter for FkDetailsexportpfnl3Link2.
+     * @return FkDetailsexportpfnl3Link2
+     */
+    public ViewLinkImpl getFkDetailsexportpfnl3Link2() {
+        return (ViewLinkImpl) findViewLink("FkDetailsexportpfnl3Link2");
+    }
+
+    /**
+     * Container's getter for getLastIcCollecte1.
+     * @return getLastIcCollecte1
+     */
+    public getLastIcCollecteImpl getgetLastIcCollecte1() {
+        return (getLastIcCollecteImpl) findViewObject("getLastIcCollecte1");
+    }
+
+    /**
+     * Container's getter for LastiddetailscollecteView1.
+     * @return LastiddetailscollecteView1
+     */
+    public ViewObjectImpl getLastiddetailscollecteView1() {
+        return (ViewObjectImpl) findViewObject("LastiddetailscollecteView1");
+    }
+
+    /**
+     * Container's getter for LastiddetailscollecteView1_1.
+     * @return LastiddetailscollecteView1_1
+     */
+    public ViewObjectImpl getLastiddetailscollecteView1_1() {
+        return (ViewObjectImpl) findViewObject("LastiddetailscollecteView1_1");
+    }
+
+    /**
+     * Container's getter for lastiddetailscollecte1.
+     * @return lastiddetailscollecte1
+     */
+    public ViewObjectImpl getlastiddetailscollecte1() {
+        return (ViewObjectImpl) findViewObject("lastiddetailscollecte1");
+    }
+
+    /**
+     * Container's getter for ExportpfnlView4.
+     * @return ExportpfnlView4
+     */
+    public ViewObjectImpl getExportpfnlView4() {
+        return (ViewObjectImpl) findViewObject("ExportpfnlView4");
+    }
+
+    /**
+     * Container's getter for DetailsexportpfnlView9.
+     * @return DetailsexportpfnlView9
+     */
+    public ViewObjectImpl getDetailsexportpfnlView9() {
+        return (ViewObjectImpl) findViewObject("DetailsexportpfnlView9");
+    }
+
+    /**
+     * Container's getter for ExportToDetailExportLink.
+     * @return ExportToDetailExportLink
+     */
+    public ViewLinkImpl getExportToDetailExportLink() {
+        return (ViewLinkImpl) findViewLink("ExportToDetailExportLink");
+    }
+
+    /**
+     * Container's getter for ExportpfnlView5.
+     * @return ExportpfnlView5
+     */
+    public ViewObjectImpl getExportpfnlView5() {
+        return (ViewObjectImpl) findViewObject("ExportpfnlView5");
+    }
+
+
+    /**
+     * Container's getter for ExportToPermisLink.
+     * @return ExportToPermisLink
+     */
+    public ViewLinkImpl getExportToPermisLink() {
+        return (ViewLinkImpl) findViewLink("ExportToPermisLink");
+    }
+
+    /**
+     * Container's getter for ExportpfnlView6.
+     * @return ExportpfnlView6
+     */
+    public ViewObjectImpl getExportpfnlView6() {
+        return (ViewObjectImpl) findViewObject("ExportpfnlView6");
+    }
+
+    /**
+     * Container's getter for PermissionnairespnflView7.
+     * @return PermissionnairespnflView7
+     */
+    public ViewObjectImpl getPermissionnairespnflView7() {
+        return (ViewObjectImpl) findViewObject("PermissionnairespnflView7");
+    }
+
+    /**
+     * Container's getter for ExportToPermissionnaireLink.
+     * @return ExportToPermissionnaireLink
+     */
+    public ViewLinkImpl getExportToPermissionnaireLink() {
+        return (ViewLinkImpl) findViewLink("ExportToPermissionnaireLink");
+    }
+
+    /**
+     * Container's getter for DetailsexportpfnlView10.
+     * @return DetailsexportpfnlView10
+     */
+    public ViewObjectImpl getDetailsexportpfnlView10() {
+        return (ViewObjectImpl) findViewObject("DetailsexportpfnlView10");
+    }
+
+    /**
+     * Container's getter for UnitemesureView9.
+     * @return UnitemesureView9
+     */
+    public ViewObjectImpl getUnitemesureView9() {
+        return (ViewObjectImpl) findViewObject("UnitemesureView9");
+    }
+
+    /**
+     * Container's getter for DetailsExportToUnitMesureLink.
+     * @return DetailsExportToUnitMesureLink
+     */
+    public ViewLinkImpl getDetailsExportToUnitMesureLink() {
+        return (ViewLinkImpl) findViewLink("DetailsExportToUnitMesureLink");
+    }
+
+    /**
+     * Container's getter for DetailsexportpfnlView11.
+     * @return DetailsexportpfnlView11
+     */
+    public ViewObjectImpl getDetailsexportpfnlView11() {
+        return (ViewObjectImpl) findViewObject("DetailsexportpfnlView11");
+    }
+
+    /**
+     * Container's getter for PartiesProduitsPfnlView26.
+     * @return PartiesProduitsPfnlView26
+     */
+    public ViewObjectImpl getPartiesProduitsPfnlView26() {
+        return (ViewObjectImpl) findViewObject("PartiesProduitsPfnlView26");
+    }
+
+    /**
+     * Container's getter for DetailsExportToPartieProduitLink.
+     * @return DetailsExportToPartieProduitLink
+     */
+    public ViewLinkImpl getDetailsExportToPartieProduitLink() {
+        return (ViewLinkImpl) findViewLink("DetailsExportToPartieProduitLink");
+    }
+
+    /**
+     * Container's getter for DetailsexportpfnlView12.
+     * @return DetailsexportpfnlView12
+     */
+    public ViewObjectImpl getDetailsexportpfnlView12() {
+        return (ViewObjectImpl) findViewObject("DetailsexportpfnlView12");
+    }
+
+    /**
+     * Container's getter for ExportToDetailExportLink1.
+     * @return ExportToDetailExportLink1
+     */
+    public ViewLinkImpl getExportToDetailExportLink1() {
+        return (ViewLinkImpl) findViewLink("ExportToDetailExportLink1");
+    }
+
+    /**
+     * Container's getter for PermissionnairespnflView8.
+     * @return PermissionnairespnflView8
+     */
+    public ViewObjectImpl getPermissionnairespnflView8() {
+        return (ViewObjectImpl) findViewObject("PermissionnairespnflView8");
+    }
+
+    /**
+     * Container's getter for ExportToPermissionnaireLink1.
+     * @return ExportToPermissionnaireLink1
+     */
+    public ViewLinkImpl getExportToPermissionnaireLink1() {
+        return (ViewLinkImpl) findViewLink("ExportToPermissionnaireLink1");
+    }
+
+    /**
+     * Container's getter for PermisView9.
+     * @return PermisView9
+     */
+    public ViewObjectImpl getPermisView9() {
+        return (ViewObjectImpl) findViewObject("PermisView9");
+    }
+
+    /**
+     * Container's getter for ExportToPermisLink1.
+     * @return ExportToPermisLink1
+     */
+    public ViewLinkImpl getExportToPermisLink1() {
+        return (ViewLinkImpl) findViewLink("ExportToPermisLink1");
+    }
+
+    /**
+     * Container's getter for PartiesProduitsPfnlView27.
+     * @return PartiesProduitsPfnlView27
+     */
+    public ViewObjectImpl getPartiesProduitsPfnlView27() {
+        return (ViewObjectImpl) findViewObject("PartiesProduitsPfnlView27");
+    }
+
+    /**
+     * Container's getter for DetailsExportToPartieProduitLink1.
+     * @return DetailsExportToPartieProduitLink1
+     */
+    public ViewLinkImpl getDetailsExportToPartieProduitLink1() {
+        return (ViewLinkImpl) findViewLink("DetailsExportToPartieProduitLink1");
+    }
+
+    /**
+     * Container's getter for UnitemesureView10.
+     * @return UnitemesureView10
+     */
+    public ViewObjectImpl getUnitemesureView10() {
+        return (ViewObjectImpl) findViewObject("UnitemesureView10");
+    }
+
+    /**
+     * Container's getter for DetailsExportToUnitMesureLink1.
+     * @return DetailsExportToUnitMesureLink1
+     */
+    public ViewLinkImpl getDetailsExportToUnitMesureLink1() {
+        return (ViewLinkImpl) findViewLink("DetailsExportToUnitMesureLink1");
+    }
+
+    /**
+     * Container's getter for getLastIdExport1.
+     * @return getLastIdExport1
+     */
+    public getLastIdExportImpl getgetLastIdExport1() {
+        return (getLastIdExportImpl) findViewObject("getLastIdExport1");
+    }
+
+    /**
+     * Container's getter for getLastIdDetailsexport1.
+     * @return getLastIdDetailsexport1
+     */
+    public getLastIdDetailsexportImpl getgetLastIdDetailsexport1() {
+        return (getLastIdDetailsexportImpl) findViewObject("getLastIdDetailsexport1");
+    }
+
 }
+
 

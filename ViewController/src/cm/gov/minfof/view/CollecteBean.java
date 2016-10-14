@@ -65,4 +65,36 @@ public class CollecteBean {
         }
         return null;
     }
+
+    public String creerDetailsCollecte() {
+        BindingContainer bindings = getBindings();
+        OperationBinding operationBinding = bindings.getOperationBinding("CreateInsert1");
+        Object result = operationBinding.execute();
+        executemethode("Commit");
+        if (!operationBinding.getErrors().isEmpty()) {
+            return null;
+        }
+        return null;
+    }
+
+    public String supprimerDetailCollecte() {
+        BindingContainer bindings = getBindings();
+        OperationBinding operationBinding = bindings.getOperationBinding("Delete");
+        Object result = operationBinding.execute();
+        executemethode("Commit");
+        if (!operationBinding.getErrors().isEmpty()) {
+            return null;
+        }
+        return null;
+    }
+
+    public String enregCollecte() {
+        BindingContainer bindings = getBindings();
+        OperationBinding operationBinding = bindings.getOperationBinding("Commit");
+        Object result = operationBinding.execute();
+        if (!operationBinding.getErrors().isEmpty()) {
+            return null;
+        }
+        return null;
+    }
 }

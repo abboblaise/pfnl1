@@ -67,4 +67,26 @@ public class PermisBean {
         }
         return null;
     }
+
+    public String supprimerDetailsPermis1() {
+        BindingContainer bindings = getBindings();
+        OperationBinding operationBinding = bindings.getOperationBinding("Delete1");
+        Object result = operationBinding.execute();
+        executemethode("Commit");
+        if (!operationBinding.getErrors().isEmpty()) {
+            return null;
+        }
+        return null;
+    }
+
+    public String creerDetailsPermis1() {
+        BindingContainer bindings = getBindings();
+        OperationBinding operationBinding = bindings.getOperationBinding("CreateInsert1");
+        Object result = operationBinding.execute();
+        executemethode("Commit"); //pour permettre de g??n??rer les ids facilement
+        if (!operationBinding.getErrors().isEmpty()) {
+            return null;
+        }
+        return null;
+    }
 }

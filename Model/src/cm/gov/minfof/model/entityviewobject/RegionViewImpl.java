@@ -66,30 +66,30 @@ public class RegionViewImpl extends ViewObjectImpl {
     @Override
     protected String buildQuery(int noUserParams, boolean forRowCount)
     {
-        //System.out.println("entree dans buildQuery 1");
+        System.out.println("entree dans buildQuery 1");
         String query = super.buildQuery(noUserParams, forRowCount);
-        //System.out.println(" avant query1 = " + query);
+        System.out.println(" avant query1 = " + query);
         if (query!=null) {
             query = query.replace( "LIKE UPPER( ? || '%')", "LIKE UPPER(CONCAT( ?, '%' ))");
             query = query.replace("LIKE ( ? || '%')", "LIKE CONCAT(?, '%')");
         }
-        //System.out.println(" apr??s query1 = " + query);
-        //System.out.println();
+        System.out.println(" apr??s query1 = " + query);
+        System.out.println();
         return query;
     }
 
     @Override
     protected String buildQuery(int noUserParams, boolean forRowCount, String selClause, String fromClause, String whereClause, int subQueryLevel)
     {
-        //System.out.println();
-        //System.out.println("entree dans buildQuery 2");
+        System.out.println();
+        System.out.println("entree dans buildQuery 2");
         String query = super.buildQuery(noUserParams, forRowCount, selClause, fromClause, whereClause, subQueryLevel);
-          //System.out.println("avant query2 = " + query);
+          System.out.println("avant query2 = " + query);
         if (query!=null) {
           query = query.replace( "LIKE UPPER( ? || '%')", "LIKE UPPER(CONCAT( ?, '%' ))");
           query = query.replace("LIKE ( ? || '%')", "LIKE CONCAT(?, '%')");
         }
-        //System.out.println("apr??s query2 = " + query);
+        System.out.println("apr??s query2 = " + query);
         return query;
       }
     }

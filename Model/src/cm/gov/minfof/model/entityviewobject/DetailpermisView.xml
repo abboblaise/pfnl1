@@ -26,6 +26,10 @@
     Name="PartiesproduitspfnlView1"
     ViewObjectName="cm.gov.minfof.model.entityviewobject.PartiesproduitspfnlView"
     RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="getLibelleProduitComplet1"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.getLibelleProduitComplet"
+    RowLevelBinds="true"/>
   <ListBinding
     Name="LOV_Idunitemesure"
     ListVOName="UnitemesureView1"
@@ -62,8 +66,8 @@
   </ListBinding>
   <ListBinding
     Name="LOV_Idpartieproduitpfnl"
-    ListVOName="PartiesproduitspfnlView1"
-    NullValueFlag="start"
+    ListVOName="getLibelleProduitComplet1"
+    NullValueFlag="end"
     NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
     MRUCount="0">
     <AttrArray Name="AttrNames">
@@ -72,6 +76,9 @@
     <AttrArray Name="AttrExpressions"/>
     <AttrArray Name="ListAttrNames">
       <Item Value="Idpartiesproduitspfnl"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Libelle"/>
     </AttrArray>
     <DisplayCriteria/>
   </ListBinding>

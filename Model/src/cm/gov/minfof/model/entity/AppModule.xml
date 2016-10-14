@@ -8,8 +8,7 @@
   InheritPersonalization="merge"
   ClearCacheOnRollback="true"
   ComponentClass="cm.gov.minfof.model.entity.AppModuleImpl"
-  DefClass="cm.gov.minfof.model.entity.AppModuleDefImpl"
-  ComponentInterface="cm.gov.minfof.model.entity.common.AppModule">
+  DefClass="cm.gov.minfof.model.entity.AppModuleDefImpl">
   <DesignTime>
     <Attr Name="_isDefCodegen" Value="true"/>
     <Attr Name="_isCodegen" Value="true"/>
@@ -618,29 +617,8 @@
     Name="UnitemesureView8"
     ViewObjectName="cm.gov.minfof.model.entityviewobject.UnitemesureView"/>
   <ViewUsage
-    Name="PermisView6"
-    ViewObjectName="cm.gov.minfof.model.entityviewobject.PermisView"/>
-  <ViewUsage
-    Name="PermissionnairespnflView3"
-    ViewObjectName="cm.gov.minfof.model.entityviewobject.PermissionnairespnflView"/>
-  <ViewUsage
-    Name="PartiesProduitsPfnlView23"
-    ViewObjectName="cm.gov.minfof.model.entity.PartiesProduitsPfnlView"/>
-  <ViewUsage
-    Name="OriginespnflsView5"
-    ViewObjectName="cm.gov.minfof.model.entityviewobject.OriginespnflsView"/>
-  <ViewUsage
-    Name="getLastIdCollectePfnl1"
-    ViewObjectName="cm.gov.minfof.model.entityviewobject.getLastIdCollectePfnl"/>
-  <ViewUsage
-    Name="getLastIdDetailsCollecte1"
-    ViewObjectName="cm.gov.minfof.model.entityviewobject.getLastIdDetailsCollecte"/>
-  <ViewUsage
     Name="getLibelleProduitPfnl1"
     ViewObjectName="cm.gov.minfof.model.entityviewobject.getLibelleProduitPfnl"/>
-  <ViewUsage
-    Name="getLibelleProduitComplet1"
-    ViewObjectName="cm.gov.minfof.model.entityviewobject.getLibelleProduitComplet"/>
   <ViewUsage
     Name="getLastidDetailslettrevoiture1"
     ViewObjectName="cm.gov.minfof.model.entityviewobject.getLastidDetailslettrevoiture"/>
@@ -710,6 +688,306 @@
   <ViewUsage
     Name="AgrementByPermisView1"
     ViewObjectName="cm.gov.minfof.model.entityviewobject.AgrementByPermisView"/>
+  
+  <ViewUsage
+    Name="PermissionnairespnflView3"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.PermissionnairespnflView"/>
+  <ViewUsage
+    Name="PartiesProduitsPfnlView23"
+    ViewObjectName="cm.gov.minfof.model.entity.PartiesProduitsPfnlView"/>
+  
+  <ViewUsage
+    Name="OriginespnflsView5"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.OriginespnflsView"/>
+  
+  <ViewUsage
+    Name="getLastIdCollectePfnl1"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.getLastIdCollectePfnl"/>
+  
+  <ViewUsage
+    Name="getLastIdDetailsCollecte1"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.getLastIdDetailsCollecte"/>
+  
+  <ViewUsage
+    Name="getLibelleProduitComplet1"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.getLibelleProduitComplet"/>
+
+  <ViewUsage
+    Name="PermissionnairespnflView6"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.PermissionnairespnflView"/>
+  <ViewUsage
+    Name="PermisView7"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.PermisView"/>
+  <ViewUsage
+    Name="PermisView8"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.PermisView"/>
+  <ViewUsage
+    Name="permisActifView1"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.permisActifView"/>
+  <ViewUsage
+    Name="typeDocumentView1"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.typeDocumentView"/>
+  <ViewUsage
+    Name="ProduitsPfnlView12"
+    ViewObjectName="cm.gov.minfof.model.entity.ProduitsPfnlView"/>
+  <ViewUsage
+    Name="PartiesProduitsPfnlView24"
+    ViewObjectName="cm.gov.minfof.model.entity.PartiesProduitsPfnlView"/>
+  <ViewUsage
+    Name="PartiesProduitsPfnlView25"
+    ViewObjectName="cm.gov.minfof.model.entity.PartiesProduitsPfnlView"/>
+  <ViewUsage
+    Name="ExportpfnlView1"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.ExportpfnlView"/>
+  <ViewUsage
+    Name="ExportpfnlView1_1"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.ExportpfnlView1"/>
+  <ViewUsage
+    Name="ExportpfnlView2"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.ExportpfnlView"/>
+  <ViewUsage
+    Name="ExportpfnlView3"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.ExportpfnlView"/>
+  <ViewUsage
+    Name="ExportpfnlView1_2"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.ExportpfnlView1"/>
+  <ViewUsage
+    Name="ExportpfnlView1_3"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.ExportpfnlView1"/>
+  <ViewUsage
+    Name="DetailsexportpfnlView1"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.DetailsexportpfnlView"/>
+  <ViewUsage
+    Name="DetailsexportpfnlView2"
+    ViewObjectName="cm.gov.minfof.model.queryviewobject.DetailsexportpfnlView"/>
+  <ViewUsage
+    Name="DetailsexportpfnlView3"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.DetailsexportpfnlView"/>
+  <ViewUsage
+    Name="DetailsexportpfnlView4"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.DetailsexportpfnlView"/>
+  <ViewUsage
+    Name="DetailsexportpfnlView5"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.DetailsexportpfnlView"/>
+  <ViewUsage
+    Name="DetailsexportpfnlView6"
+    ViewObjectName="cm.gov.minfof.model.queryviewobject.DetailsexportpfnlView"/>
+  <ViewUsage
+    Name="DetailsexportpfnlView7"
+    ViewObjectName="cm.gov.minfof.model.queryviewobject.DetailsexportpfnlView"/>
+  <ViewUsage
+    Name="DetailsexportpfnlView8"
+    ViewObjectName="cm.gov.minfof.model.queryviewobject.DetailsexportpfnlView"/>
+  <ViewUsage
+    Name="getLastIcCollecte1"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.getLastIcCollecte"/>
+  <ViewUsage
+    Name="LastiddetailscollecteView1"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.LastiddetailscollecteView"/>
+  <ViewUsage
+    Name="LastiddetailscollecteView1_1"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.LastiddetailscollecteView1"/>
+  <ViewUsage
+    Name="lastiddetailscollecte1"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.lastiddetailscollecte"/>
+  <ViewUsage
+    Name="ExportpfnlView4"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.ExportpfnlView"/>
+  <ViewUsage
+    Name="DetailsexportpfnlView9"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.DetailsexportpfnlView"/>
+  <ViewUsage
+    Name="ExportpfnlView5"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.ExportpfnlView"/>
+  <ViewUsage
+    Name="PermisView6"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.PermisView"/>
+  <ViewUsage
+    Name="PermisView6"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.PermisView"/>
+  <ViewUsage
+    Name="ExportpfnlView6"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.ExportpfnlView"/>
+  <ViewUsage
+    Name="PermissionnairespnflView7"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.PermissionnairespnflView"/>
+  <ViewUsage
+    Name="DetailsexportpfnlView10"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.DetailsexportpfnlView"/>
+  <ViewUsage
+    Name="UnitemesureView9"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.UnitemesureView"/>
+  <ViewUsage
+    Name="DetailsexportpfnlView11"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.DetailsexportpfnlView"/>
+  <ViewUsage
+    Name="PartiesProduitsPfnlView26"
+    ViewObjectName="cm.gov.minfof.model.entity.PartiesProduitsPfnlView"/>
+  <ViewUsage
+    Name="DetailsexportpfnlView12"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.DetailsexportpfnlView"/>
+  <ViewUsage
+    Name="PermissionnairespnflView8"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.PermissionnairespnflView"/>
+  <ViewUsage
+    Name="PermisView9"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.PermisView"/>
+  <ViewUsage
+    Name="PartiesProduitsPfnlView27"
+    ViewObjectName="cm.gov.minfof.model.entity.PartiesProduitsPfnlView"/>
+  <ViewUsage
+    Name="UnitemesureView10"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.UnitemesureView"/>
+  <ViewUsage
+    Name="getLastIdExport1"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.getLastIdExport"/>
+  <ViewUsage
+    Name="getLastIdDetailsexport1"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.getLastIdDetailsexport"/>
+  <ViewLinkUsage
+    Name="PermissionnaireToPermisLink"
+    ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.PermissionnaireToPermisLink"
+    SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.PermissionnairespnflView6"
+    DstViewUsageName="cm.gov.minfof.model.entity.AppModule.PermisView7"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="PermissionnaireToPermisLink1"
+    ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.PermissionnaireToPermisLink"
+    SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.PermissionnairespnflView1"
+    DstViewUsageName="cm.gov.minfof.model.entity.AppModule.PermisView8"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="FkPartiesproduitspfnl1Assoc3Link3"
+    ViewLinkObjectName="cm.gov.minfof.model.entity.FkPartiesproduitspfnl1Assoc3Link"
+    SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.ProduitsPfnlView12"
+    DstViewUsageName="cm.gov.minfof.model.entity.AppModule.PartiesProduitsPfnlView24"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="FkPartiesproduitspfnl2Assoc3Link2"
+    ViewLinkObjectName="cm.gov.minfof.model.entity.FkPartiesproduitspfnl2Assoc3Link"
+    SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.ProduitsPfnlView12"
+    DstViewUsageName="cm.gov.minfof.model.entity.AppModule.PartiesProduitsPfnlView25"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="FkExportpfnl2Link1"
+    ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.FkExportpfnl2Link"
+    SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.ExportpfnlView1"
+    DstViewUsageName="cm.gov.minfof.model.entity.AppModule.ExportpfnlView2"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="FkExportpfnl1Link1"
+    ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.FkExportpfnl1Link"
+    SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.ExportpfnlView1"
+    DstViewUsageName="cm.gov.minfof.model.entity.AppModule.ExportpfnlView3"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="FkExportpfnl1Link1_1"
+    ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.FkExportpfnl1Link1"
+    SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.ExportpfnlView1_1"
+    DstViewUsageName="cm.gov.minfof.model.entity.AppModule.ExportpfnlView1_2"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="FkExportpfnl2Link1_1"
+    ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.FkExportpfnl2Link1"
+    SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.ExportpfnlView1_1"
+    DstViewUsageName="cm.gov.minfof.model.entity.AppModule.ExportpfnlView1_3"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="FkDetailsexportpfnl3Link1"
+    ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.FkDetailsexportpfnl3Link"
+    SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.DetailsexportpfnlView1"
+    DstViewUsageName="cm.gov.minfof.model.entity.AppModule.DetailsexportpfnlView3"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="FkDetailsexportpfnl2Link1"
+    ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.FkDetailsexportpfnl2Link"
+    SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.DetailsexportpfnlView1"
+    DstViewUsageName="cm.gov.minfof.model.entity.AppModule.DetailsexportpfnlView4"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="FkDetailsexportpfnl1Link1"
+    ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.FkDetailsexportpfnl1Link"
+    SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.DetailsexportpfnlView1"
+    DstViewUsageName="cm.gov.minfof.model.entity.AppModule.DetailsexportpfnlView5"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="FkDetailsexportpfnl1Link2"
+    ViewLinkObjectName="cm.gov.minfof.model.queryviewobject.FkDetailsexportpfnl1Link"
+    SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.DetailsexportpfnlView2"
+    DstViewUsageName="cm.gov.minfof.model.entity.AppModule.DetailsexportpfnlView6"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="FkDetailsexportpfnl2Link2"
+    ViewLinkObjectName="cm.gov.minfof.model.queryviewobject.FkDetailsexportpfnl2Link"
+    SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.DetailsexportpfnlView2"
+    DstViewUsageName="cm.gov.minfof.model.entity.AppModule.DetailsexportpfnlView7"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="FkDetailsexportpfnl3Link2"
+    ViewLinkObjectName="cm.gov.minfof.model.queryviewobject.FkDetailsexportpfnl3Link"
+    SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.DetailsexportpfnlView2"
+    DstViewUsageName="cm.gov.minfof.model.entity.AppModule.DetailsexportpfnlView8"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="ExportToDetailExportLink"
+    ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.ExportToDetailExportLink"
+    SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.ExportpfnlView4"
+    DstViewUsageName="cm.gov.minfof.model.entity.AppModule.DetailsexportpfnlView9"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="ExportToPermisLink"
+    ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.ExportToPermisLink"
+    SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.ExportpfnlView5"
+    DstViewUsageName="cm.gov.minfof.model.entity.AppModule.PermisView6"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="ExportToPermissionnaireLink"
+    ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.ExportToPermissionnaireLink"
+    SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.ExportpfnlView6"
+    DstViewUsageName="cm.gov.minfof.model.entity.AppModule.PermissionnairespnflView7"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="DetailsExportToUnitMesureLink"
+    ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.DetailsExportToUnitMesureLink"
+    SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.DetailsexportpfnlView10"
+    DstViewUsageName="cm.gov.minfof.model.entity.AppModule.UnitemesureView9"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="DetailsExportToPartieProduitLink"
+    ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.DetailsExportToPartieProduitLink"
+    SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.DetailsexportpfnlView11"
+    DstViewUsageName="cm.gov.minfof.model.entity.AppModule.PartiesProduitsPfnlView26"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="ExportToDetailExportLink1"
+    ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.ExportToDetailExportLink"
+    SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.ExportpfnlView1"
+    DstViewUsageName="cm.gov.minfof.model.entity.AppModule.DetailsexportpfnlView12"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="ExportToPermissionnaireLink1"
+    ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.ExportToPermissionnaireLink"
+    SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.ExportpfnlView1"
+    DstViewUsageName="cm.gov.minfof.model.entity.AppModule.PermissionnairespnflView8"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="ExportToPermisLink1"
+    ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.ExportToPermisLink"
+    SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.ExportpfnlView1"
+    DstViewUsageName="cm.gov.minfof.model.entity.AppModule.PermisView9"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="DetailsExportToPartieProduitLink1"
+    ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.DetailsExportToPartieProduitLink"
+    SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.DetailsexportpfnlView12"
+    DstViewUsageName="cm.gov.minfof.model.entity.AppModule.PartiesProduitsPfnlView27"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="DetailsExportToUnitMesureLink1"
+    ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.DetailsExportToUnitMesureLink"
+    SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.DetailsexportpfnlView12"
+    DstViewUsageName="cm.gov.minfof.model.entity.AppModule.UnitemesureView10"
+    Reversed="false"/>
   <ViewLinkUsage
     Name="DepartementsIbfk1Link1"
     ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.DepartementsIbfk1Link"
@@ -722,6 +1000,7 @@
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.RegionView1"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.DepartementView3"
     Reversed="false"/>
+  
   <ViewLinkUsage
     Name="CommunesIbfk1Link1"
     ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.CommunesIbfk1Link"
@@ -740,6 +1019,7 @@
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.RegionView1"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.CommuneView3"
     Reversed="false"/>
+  
   <ViewLinkUsage
     Name="CommunesIbfk1Assoc2Link1"
     ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.CommunesIbfk1Assoc2Link"
@@ -752,6 +1032,7 @@
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.RegionsView1"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.CommunesView2"
     Reversed="false"/>
+  
   <ViewLinkUsage
     Name="DepartementsIbfk1Link2"
     ViewLinkObjectName="cm.gov.minfof.model.queryviewobject.DepartementsIbfk1Link"
@@ -812,368 +1093,427 @@
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.PartiesRecolteesView1"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.PartiesProduitsPfnlView6"
     Reversed="false"/>
+  
   <ViewLinkUsage
     Name="FkPartiesproduitspfnl2Assoc2Link1"
     ViewLinkObjectName="cm.gov.minfof.model.entity.FkPartiesproduitspfnl2Assoc2Link"
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.FamillePfnlView1"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.PartiesProduitsPfnlView7"
     Reversed="false"/>
+  
   <ViewLinkUsage
     Name="FkPartiesproduitspfnl1Assoc2Link1"
     ViewLinkObjectName="cm.gov.minfof.model.entity.FkPartiesproduitspfnl1Assoc2Link"
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.FamillePfnlView1"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.PartiesProduitsPfnlView8"
     Reversed="false"/>
+ 
   <ViewLinkUsage
     Name="ProduitspfnlIbfk1Link1"
     ViewLinkObjectName="cm.gov.minfof.model.entity.ProduitspfnlIbfk1Link"
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.ProduitsPfnlView1"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.ProduitsPfnlView3"
     Reversed="false"/>
+ 
   <ViewLinkUsage
     Name="FkPartiesproduitspfnl2Assoc3Link1"
     ViewLinkObjectName="cm.gov.minfof.model.entity.FkPartiesproduitspfnl2Assoc3Link"
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.ProduitsPfnlView1"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.PartiesProduitsPfnlView9"
     Reversed="false"/>
+  
   <ViewLinkUsage
     Name="FkPartiesproduitspfnl1Assoc3Link1"
     ViewLinkObjectName="cm.gov.minfof.model.entity.FkPartiesproduitspfnl1Assoc3Link"
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.ProduitsPfnlView1"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.PartiesProduitsPfnlView10"
     Reversed="false"/>
+  
   <ViewLinkUsage
     Name="ProduitspfnlIbfk1Assoc1Link1"
     ViewLinkObjectName="cm.gov.minfof.model.entity.ProduitspfnlIbfk1Assoc1Link"
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.FamillePfnlView1"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.ProduitsPfnlView4"
     Reversed="false"/>
+ 
   <ViewLinkUsage
     Name="ProduitspfnlIbfk1Assoc2Link1"
     ViewLinkObjectName="cm.gov.minfof.model.entity.ProduitspfnlIbfk1Assoc2Link"
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.PartiesRecolteesView1"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.ProduitsPfnlView5"
     Reversed="false"/>
+ 
   <ViewLinkUsage
     Name="ProduitspfnlIbfk1Assoc3Link1"
     ViewLinkObjectName="cm.gov.minfof.model.entity.ProduitspfnlIbfk1Assoc3Link"
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.PartiesProduitsPfnlView1"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.ProduitsPfnlView6"
     Reversed="false"/>
+  
   <ViewLinkUsage
     Name="ProduitspfnlIbfk1Link2"
     ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.ProduitspfnlIbfk1Link"
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.ProduitspfnlView2"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.ProduitspfnlView7"
     Reversed="false"/>
+  
   <ViewLinkUsage
     Name="FkPartiesproduitspfnl1Link2"
     ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.FkPartiesproduitspfnl1Link"
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.ProduitspfnlView2"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.PartiesproduitspfnlView11"
     Reversed="false"/>
+ 
   <ViewLinkUsage
     Name="FkPartiesproduitspfnl2Link2"
     ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.FkPartiesproduitspfnl2Link"
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.ProduitspfnlView2"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.PartiesproduitspfnlView12"
     Reversed="false"/>
+  
   <ViewLinkUsage
     Name="ProduitspfnlIbfk1Link1_1"
     ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.ProduitspfnlIbfk1Link1"
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.PartiesrecolteesView2"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.ProduitspfnlView8"
     Reversed="false"/>
+ 
   <ViewLinkUsage
     Name="FkPartiesproduitspfnl1Link1_1"
     ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.FkPartiesproduitspfnl1Link1"
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.PartiesrecolteesView2"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.PartiesproduitspfnlView13"
     Reversed="false"/>
+  
   <ViewLinkUsage
     Name="FkPartiesproduitspfnl2Link1_1"
     ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.FkPartiesproduitspfnl2Link1"
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.PartiesrecolteesView2"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.PartiesproduitspfnlView14"
     Reversed="false"/>
+  
   <ViewLinkUsage
     Name="ProduitspfnlIbfk1Link2_1"
     ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.ProduitspfnlIbfk1Link2"
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.PartiesproduitspfnlView2"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.ProduitspfnlView9"
     Reversed="false"/>
+  
   <ViewLinkUsage
     Name="FkPartiesproduitspfnl1Link2_1"
     ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.FkPartiesproduitspfnl1Link2"
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.PartiesproduitspfnlView2"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.PartiesproduitspfnlView15"
     Reversed="false"/>
+  
   <ViewLinkUsage
     Name="FkPartiesproduitspfnl2Link2_1"
     ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.FkPartiesproduitspfnl2Link2"
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.PartiesproduitspfnlView2"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.PartiesproduitspfnlView16"
     Reversed="false"/>
+  
   <ViewLinkUsage
     Name="ProduitspfnlIbfk1Link3_1"
     ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.ProduitspfnlIbfk1Link3"
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.FamillepfnlView2"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.ProduitspfnlView10"
     Reversed="false"/>
+  
   <ViewLinkUsage
     Name="FkPartiesproduitspfnl1Link3_1"
     ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.FkPartiesproduitspfnl1Link3"
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.FamillepfnlView2"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.PartiesproduitspfnlView17"
     Reversed="false"/>
+ 
   <ViewLinkUsage
     Name="FkPartiesproduitspfnl2Link3_1"
     ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.FkPartiesproduitspfnl2Link3"
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.FamillepfnlView2"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.PartiesproduitspfnlView18"
     Reversed="false"/>
+  
   <ViewLinkUsage
     Name="FkPartiesproduitspfnl1Assoc3Link2"
     ViewLinkObjectName="cm.gov.minfof.model.entity.FkPartiesproduitspfnl1Assoc3Link"
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.ProduitsPfnlView4"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.PartiesProduitsPfnlView19"
     Reversed="false"/>
-    
+
   <ViewLinkUsage
     Name="FkUnitemesure1Link1"
     ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.FkUnitemesure1Link"
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.UnitemesureView1"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.UnitemesureView2"
     Reversed="false"/>
+  
   <ViewLinkUsage
     Name="FkUnitemesure1Link2"
     ViewLinkObjectName="cm.gov.minfof.model.queryviewobject.FkUnitemesure1Link"
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.UnitemesureView1_1"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.UnitemesureView1_2"
     Reversed="false"/>
+ 
   <ViewLinkUsage
     Name="CategToUnitLink"
     ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.CategToUnitLink"
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.CategorieunitemesureView4"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.UnitemesureView3"
     Reversed="false"/>
+ 
   <ViewLinkUsage
     Name="CategToUnitLink1"
     ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.CategToUnitLink"
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.UnitemesureView1"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.CategorieunitemesureView5"
     Reversed="true"/>
+
   <ViewLinkUsage
     Name="CategToUnitLink2"
     ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.CategToUnitLink"
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.CategorieunitemesureView1"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.UnitemesureView4"
     Reversed="false"/>
-    <ViewLinkUsage
-    
+
+  <ViewLinkUsage
     Name="FkPermis2Link1"
     ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.FkPermis2Link"
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.PermisView1"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.PermisView2"
     Reversed="false"/>
+ 
   <ViewLinkUsage
     Name="FkPermis1Link1"
     ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.FkPermis1Link"
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.PermisView1"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.PermisView3"
     Reversed="false"/>
+  
   <ViewLinkUsage
     Name="FkLocalite1Link1"
     ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.FkLocalite1Link"
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.LocaliteView1"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.LocaliteView2"
     Reversed="false"/>
+  
   <ViewLinkUsage
     Name="DepToLocaliteLink"
     ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.DepToLocaliteLink"
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.DepartementView5"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.LocaliteView3"
     Reversed="false"/>
+  
   <ViewLinkUsage
     Name="DepToLocaliteLink1"
     ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.DepToLocaliteLink"
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.DepartementView1"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.LocaliteView4"
     Reversed="false"/>
+ 
   <ViewLinkUsage
     Name="DepToLocaliteLink2"
     ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.DepToLocaliteLink"
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.LocaliteView1"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.DepartementView8"
     Reversed="true"/>
+  
   <ViewLinkUsage
     Name="FkPostecontrole1Link1"
     ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.FkPostecontrole1Link"
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.PostecontroleView1"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.PostecontroleView2"
     Reversed="false"/>
+  
   <ViewLinkUsage
     Name="DepToPostecontroleLink"
     ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.DepToPostecontroleLink"
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.DepartementView9"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.PostecontroleView3"
     Reversed="false"/>
+  
   <ViewLinkUsage
     Name="DepToPostecontroleLink1"
     ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.DepToPostecontroleLink"
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.DepartementView1"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.PostecontroleView4"
     Reversed="false"/>
+  
   <ViewLinkUsage
     Name="DepToPostecontroleLink2"
     ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.DepToPostecontroleLink"
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.DepartementView5"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.PostecontroleView5"
     Reversed="false"/>
+  
   <ViewLinkUsage
     Name="FkDetailpermis3Link1"
     ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.FkDetailpermis3Link"
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.DetailpermisView1"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.DetailpermisView2"
     Reversed="false"/>
+ 
   <ViewLinkUsage
     Name="FkDetailpermis2Link1"
     ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.FkDetailpermis2Link"
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.DetailpermisView1"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.DetailpermisView3"
     Reversed="false"/>
+ 
   <ViewLinkUsage
     Name="FkDetailpermis1Link1"
     ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.FkDetailpermis1Link"
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.DetailpermisView1"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.DetailpermisView4"
     Reversed="false"/>
+  
   <ViewLinkUsage
     Name="PermisTopDetailLink"
     ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.PermisTopDetailLink"
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.PermisView4"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.DetailpermisView5"
     Reversed="false"/>
+  
   <ViewLinkUsage
     Name="PermisTopDetailLink1"
     ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.PermisTopDetailLink"
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.PermisView1"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.DetailpermisView6"
     Reversed="false"/>
+  
   <ViewLinkUsage
     Name="CategToProduitLink"
     ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.CategToProduitLink"
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.CategorieproduitView3"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.ProduitspfnlView11"
     Reversed="false"/>
+  
   <ViewLinkUsage
     Name="PartieProdToUniteMesureLink"
     ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.PartieProdToUniteMesureLink"
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.PartiesProduitsPfnlView20"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.UnitemesureView5"
     Reversed="false"/>
+  
   <ViewLinkUsage
     Name="PartieProdToUniteMesureExport"
     ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.PartieProdToUniteMesureExport"
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.PartiesProduitsPfnlView21"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.UnitemesureView6"
     Reversed="false"/>
+  
   <ViewLinkUsage
     Name="FkVehicule3Link1"
     ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.FkVehicule3Link"
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.VehiculeView1"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.VehiculeView2"
     Reversed="false"/>
+  
   <ViewLinkUsage
     Name="FkVehicule2Link1"
     ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.FkVehicule2Link"
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.VehiculeView1"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.VehiculeView3"
     Reversed="false"/>
+  
   <ViewLinkUsage
     Name="FkVehicule1Link1"
     ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.FkVehicule1Link"
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.VehiculeView1"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.VehiculeView4"
     Reversed="false"/>
+  
   <ViewLinkUsage
     Name="FkVehicule1Link2"
     ViewLinkObjectName="cm.gov.minfof.model.queryviewobject.FkVehicule1Link"
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.VehiculeView1_1"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.VehiculeView1_2"
     Reversed="false"/>
+  
   <ViewLinkUsage
     Name="FkVehicule2Link2"
     ViewLinkObjectName="cm.gov.minfof.model.queryviewobject.FkVehicule2Link"
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.VehiculeView1_1"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.VehiculeView1_3"
     Reversed="false"/>
+  
   <ViewLinkUsage
     Name="FkVehicule3Link2"
     ViewLinkObjectName="cm.gov.minfof.model.queryviewobject.FkVehicule3Link"
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.VehiculeView1_1"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.VehiculeView1_4"
     Reversed="false"/>
+  
   <ViewLinkUsage
     Name="TransporteurToVehiculeLink"
     ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.TransporteurToVehiculeLink"
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.TransporteurView2"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.VehiculeView5"
     Reversed="false"/>
+  
   <ViewLinkUsage
     Name="RegionToVehiculeLink"
     ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.RegionToVehiculeLink"
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.RegionView4"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.VehiculeView6"
     Reversed="false"/>
+  
   <ViewLinkUsage
     Name="TypeVehiculeToVehiculeLink"
     ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.TypeVehiculeToVehiculeLink"
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.TypevehiculeView3"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.VehiculeView7"
     Reversed="false"/>
+  
   <ViewLinkUsage
     Name="RegionToVehiculeLink1"
     ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.RegionToVehiculeLink"
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.VehiculeView1"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.RegionView6"
     Reversed="true"/>
+  
   <ViewLinkUsage
     Name="FkCollectepfnl1Link1"
     ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.FkCollectepfnl1Link"
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.CollectepfnlView1"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.CollectepfnlView3"
     Reversed="false"/>
+  
   <ViewLinkUsage
     Name="FkCollectepfnl1Link2"
     ViewLinkObjectName="cm.gov.minfof.model.queryviewobject.FkCollectepfnl1Link"
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.CollectepfnlView2"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.CollectepfnlView4"
     Reversed="false"/>
+  
   <ViewLinkUsage
     Name="FkDetailscollectepfnl7Link1"
     ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.FkDetailscollectepfnl7Link"
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.DetailscollectepfnlView1"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.DetailscollectepfnlView2"
     Reversed="false"/>
+  
   <ViewLinkUsage
     Name="FkDetailscollectepfnl6Link1"
     ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.FkDetailscollectepfnl6Link"
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.DetailscollectepfnlView1"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.DetailscollectepfnlView3"
     Reversed="false"/>
+  
   <ViewLinkUsage
     Name="FkDetailscollectepfnl5Link1"
     ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.FkDetailscollectepfnl5Link"
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.DetailscollectepfnlView1"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.DetailscollectepfnlView4"
     Reversed="false"/>
+  
   <ViewLinkUsage
     Name="FkDetailscollectepfnl4Link1"
     ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.FkDetailscollectepfnl4Link"
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.DetailscollectepfnlView1"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.DetailscollectepfnlView5"
     Reversed="false"/>
+  
   <ViewLinkUsage
     Name="FkDetailscollectepfnl3Link1"
     ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.FkDetailscollectepfnl3Link"
@@ -1186,114 +1526,133 @@
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.DetailscollectepfnlView1"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.DetailscollectepfnlView7"
     Reversed="false"/>
+  
   <ViewLinkUsage
     Name="FkDetailscollectepfnl1Link1"
     ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.FkDetailscollectepfnl1Link"
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.DetailscollectepfnlView1"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.DetailscollectepfnlView8"
     Reversed="false"/>
+  
   <ViewLinkUsage
     Name="FkDetailscollectepfnl1Link2"
     ViewLinkObjectName="cm.gov.minfof.model.queryviewobject.FkDetailscollectepfnl1Link"
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.DetailscollectepfnlView1_1"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.DetailscollectepfnlView1_2"
     Reversed="false"/>
+  
   <ViewLinkUsage
     Name="FkDetailscollectepfnl2Link2"
     ViewLinkObjectName="cm.gov.minfof.model.queryviewobject.FkDetailscollectepfnl2Link"
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.DetailscollectepfnlView1_1"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.DetailscollectepfnlView1_3"
     Reversed="false"/>
+  
   <ViewLinkUsage
     Name="FkDetailscollectepfnl3Link2"
     ViewLinkObjectName="cm.gov.minfof.model.queryviewobject.FkDetailscollectepfnl3Link"
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.DetailscollectepfnlView1_1"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.DetailscollectepfnlView1_4"
     Reversed="false"/>
+  
   <ViewLinkUsage
     Name="FkDetailscollectepfnl4Link2"
     ViewLinkObjectName="cm.gov.minfof.model.queryviewobject.FkDetailscollectepfnl4Link"
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.DetailscollectepfnlView1_1"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.DetailscollectepfnlView1_5"
     Reversed="false"/>
+  
   <ViewLinkUsage
     Name="FkDetailscollectepfnl5Link2"
     ViewLinkObjectName="cm.gov.minfof.model.queryviewobject.FkDetailscollectepfnl5Link"
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.DetailscollectepfnlView1_1"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.DetailscollectepfnlView1_6"
     Reversed="false"/>
+  
   <ViewLinkUsage
     Name="FkDetailscollectepfnl6Link2"
     ViewLinkObjectName="cm.gov.minfof.model.queryviewobject.FkDetailscollectepfnl6Link"
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.DetailscollectepfnlView1_1"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.DetailscollectepfnlView1_7"
     Reversed="false"/>
+  
   <ViewLinkUsage
     Name="FkDetailscollectepfnl7Link2"
     ViewLinkObjectName="cm.gov.minfof.model.queryviewobject.FkDetailscollectepfnl7Link"
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.DetailscollectepfnlView1_1"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.DetailscollectepfnlView1_8"
     Reversed="false"/>
+  
   <ViewLinkUsage
     Name="CollecteToDetailLink"
     ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.CollecteToDetailLink"
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.CollectepfnlView5"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.DetailscollectepfnlView9"
     Reversed="false"/>
+  
   <ViewLinkUsage
     Name="DetailCollToPermissionnaireLink"
     ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.DetailCollToPermissionnaireLink"
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.DetailscollectepfnlView10"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.PermissionnairespnflView2"
     Reversed="false"/>
+  
   <ViewLinkUsage
     Name="DetailCollToPartieProdPfnlLink"
     ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.DetailCollToPartieProdPfnlLink"
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.DetailscollectepfnlView11"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.PartiesProduitsPfnlView22"
     Reversed="false"/>
+  
   <ViewLinkUsage
     Name="DetailCollToOriginePfnlLink"
     ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.DetailCollToOriginePfnlLink"
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.DetailscollectepfnlView12"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.OriginespnflsView4"
     Reversed="false"/>
+ 
   <ViewLinkUsage
     Name="DetailCollToUnitMesureLink"
     ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.DetailCollToUnitMesureLink"
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.DetailscollectepfnlView13"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.UnitemesureView7"
     Reversed="false"/>
+  
   <ViewLinkUsage
     Name="DetailCollToDocOfficielLink"
     ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.DetailCollToDocOfficielLink"
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.DetailscollectepfnlView14"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.PermisView5"
     Reversed="false"/>
+  
   <ViewLinkUsage
     Name="DetailCollToDeptLink"
     ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.DetailCollToDeptLink"
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.DetailscollectepfnlView15"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.DepartementView10"
     Reversed="false"/>
+  
   <ViewLinkUsage
     Name="CollecteToDetailLink1"
     ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.CollecteToDetailLink"
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.CollectepfnlView1"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.DetailscollectepfnlView17"
     Reversed="false"/>
+  
   <ViewLinkUsage
     Name="DetailCollToDeptLink1"
     ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.DetailCollToDeptLink"
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.DetailscollectepfnlView17"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.DepartementView11"
     Reversed="false"/>
+  
   <ViewLinkUsage
     Name="DetailCollToUnitMesureLink1"
     ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.DetailCollToUnitMesureLink"
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.DetailscollectepfnlView17"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.UnitemesureView8"
     Reversed="false"/>
+ 
   <ViewLinkUsage
     Name="DetailCollToDocOfficielLink1"
     ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.DetailCollToDocOfficielLink"
@@ -1306,18 +1665,21 @@
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.DetailscollectepfnlView17"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.PermissionnairespnflView3"
     Reversed="false"/>
+ 
   <ViewLinkUsage
     Name="DetailCollToPartieProdPfnlLink1"
     ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.DetailCollToPartieProdPfnlLink"
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.DetailscollectepfnlView17"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.PartiesProduitsPfnlView23"
     Reversed="false"/>
+  
   <ViewLinkUsage
     Name="DetailCollToOriginePfnlLink1"
     ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.DetailCollToOriginePfnlLink"
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.DetailscollectepfnlView17"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.OriginespnflsView5"
     Reversed="false"/>
+  
   <ViewLinkUsage
     Name="FkLettrevoiture5Link1"
     ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.FkLettrevoiture5Link"
@@ -1414,105 +1776,4 @@
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.LettrevoitureView1"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.DetailslettrevoitureView7"
     Reversed="false"/>
-  <ClientInterface
-    Name="__clientInterface">
-    <Method
-      Name="creerIdRegion"
-      MethodName="creerIdRegion">
-      <Return
-        Name="_return_type_"
-        Type="java.math.BigDecimal"/>
-    </Method>
-    <Method
-      Name="creerIdRegion"
-      MethodName="creerIdRegion">
-      <Return
-        Name="_return_type_"
-        Type="java.math.BigDecimal"/>
-    </Method>
-    <Method
-      Name="creerIdRegion"
-      MethodName="creerIdRegion">
-      <Return
-        Name="_return_type_"
-        Type="java.math.BigDecimal"/>
-    </Method>
-    <Method
-      Name="creerIdRegion"
-      MethodName="creerIdRegion">
-      <Return
-        Name="_return_type_"
-        Type="java.math.BigDecimal"/>
-    </Method>
-    <Method
-      Name="creerIdRegion"
-      MethodName="creerIdRegion">
-      <Return
-        Name="_return_type_"
-        Type="java.math.BigDecimal"/>
-    </Method>
-    <Method
-      Name="creerIdRegion"
-      MethodName="creerIdRegion">
-      <Return
-        Name="_return_type_"
-        Type="java.math.BigDecimal"/>
-    </Method>
-    <Method
-      Name="creerIdRegion"
-      MethodName="creerIdRegion">
-      <Return
-        Name="_return_type_"
-        Type="java.math.BigDecimal"/>
-    </Method>
-    <Method
-      Name="creerIdRegion"
-      MethodName="creerIdRegion">
-      <Return
-        Name="_return_type_"
-        Type="java.math.BigDecimal"/>
-    </Method>
-    <Method
-      Name="creerIdRegion"
-      MethodName="creerIdRegion">
-      <Return
-        Name="_return_type_"
-        Type="java.math.BigDecimal"/>
-    </Method>
-    <Method
-      Name="creerIdRegion"
-      MethodName="creerIdRegion">
-      <Return
-        Name="_return_type_"
-        Type="java.math.BigDecimal"/>
-    </Method>
-    <Method
-      Name="creerIdRegion"
-      MethodName="creerIdRegion">
-      <Return
-        Name="_return_type_"
-        Type="java.math.BigDecimal"/>
-    </Method>
-    <Method
-      Name="creerIdRegion"
-      MethodName="creerIdRegion">
-      <Return
-        Name="_return_type_"
-        Type="java.math.BigDecimal"/>
-    </Method>
-    <Method
-      Name="creerIdRegion"
-      MethodName="creerIdRegion">
-      <Return
-        Name="_return_type_"
-        Type="java.math.BigDecimal"/>
-    </Method>
-    <Method
-      Name="creerIdRegion"
-      MethodName="creerIdRegion">
-      <Return
-        Name="_return_type_"
-        Type="java.math.BigDecimal"/>
-    </Method>
-  </ClientInterface>
 </AppModule>

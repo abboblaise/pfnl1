@@ -60,7 +60,7 @@ public class ProduitPfnl {
         BindingContainer bindings = getBindings();
         OperationBinding operationBinding = bindings.getOperationBinding("CreateInsert");
         Object result = operationBinding.execute();
-        executemethode("Commit"); //pour permettre de générer les ids facilement
+        executemethode("Commit"); //pour permettre de g??n??rer les ids facilement
         if (!operationBinding.getErrors().isEmpty()) {
             return null;
         }
@@ -68,6 +68,17 @@ public class ProduitPfnl {
     }
 
     public String creerPartiesProduitPfnl() {
+        BindingContainer bindings = getBindings();
+        OperationBinding operationBinding = bindings.getOperationBinding("CreateInsert1");
+        Object result = operationBinding.execute();
+        executemethode("Commit");
+        if (!operationBinding.getErrors().isEmpty()) {
+            return null;
+        }
+        return null;
+    }
+
+    public String creerPartiesProduitsPfnl1() {
         BindingContainer bindings = getBindings();
         OperationBinding operationBinding = bindings.getOperationBinding("CreateInsert1");
         Object result = operationBinding.execute();

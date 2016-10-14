@@ -193,9 +193,9 @@ public class CategorieproduitImpl extends EntityImpl {
                             .findViewObject(viewName);
         vo.executeQuery();
         if (vo.hasNext()) {
-            //System.out.println("entree dans la condition hasNext");
+            System.out.println("entree dans la condition hasNext");
             Row r = vo.next();
-            //System.out.println("row = " + r);
+            System.out.println("row = " + r);
             lastId = (BigDecimal) r.getAttribute(0);
         }
         BigDecimal un = new BigDecimal(1);

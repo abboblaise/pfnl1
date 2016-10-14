@@ -11,13 +11,6 @@
                     <af:panelBox text="#{viewcontrollerBundle.EDITION_DES_TRANSPORTEURS}" id="pb1">
                         <f:facet name="toolbar"/>
                         <af:panelFormLayout id="pfl1" rows="2">
-                            <af:inputText value="#{bindings.Nui.inputValue}" label="#{bindings.Nui.hints.label}"
-                                          required="#{bindings.Nui.hints.mandatory}"
-                                          columns="#{bindings.Nui.hints.displayWidth}"
-                                          maximumLength="#{bindings.Nui.hints.precision}"
-                                          shortDesc="#{bindings.Nui.hints.tooltip}" id="it2">
-                                <f:validator binding="#{bindings.Nui.validator}"/>
-                            </af:inputText>
                             <af:inputText value="#{bindings.Nom.inputValue}" label="#{bindings.Nom.hints.label}"
                                           required="#{bindings.Nom.hints.mandatory}"
                                           columns="#{bindings.Nom.hints.displayWidth}"
@@ -39,6 +32,13 @@
                                           maximumLength="#{bindings.Telephone.hints.precision}"
                                           shortDesc="#{bindings.Telephone.hints.tooltip}" id="it5">
                                 <f:validator binding="#{bindings.Telephone.validator}"/>
+                            </af:inputText>
+                            <af:inputText value="#{bindings.Nui.inputValue}" label="#{bindings.Nui.hints.label}"
+                                          required="#{bindings.Nui.hints.mandatory}"
+                                          columns="#{bindings.Nui.hints.displayWidth}"
+                                          maximumLength="#{bindings.Nui.hints.precision}"
+                                          shortDesc="#{bindings.Nui.hints.tooltip}" id="it2">
+                                <f:validator binding="#{bindings.Nui.validator}"/>
                             </af:inputText>
                             <f:facet name="footer">
                                 <af:panelGroupLayout id="pgl1">

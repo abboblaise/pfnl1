@@ -22,10 +22,6 @@
     ViewObjectName="cm.gov.minfof.model.entityviewobject.UnitemesureView"
     RowLevelBinds="true"/>
   <ViewAccessor
-    Name="PermisView1"
-    ViewObjectName="cm.gov.minfof.model.entityviewobject.PermisView"
-    RowLevelBinds="true"/>
-  <ViewAccessor
     Name="DepartementView1"
     ViewObjectName="cm.gov.minfof.model.entityviewobject.DepartementView"
     RowLevelBinds="true"/>
@@ -42,8 +38,23 @@
     ViewObjectName="cm.gov.minfof.model.entityviewobject.getLibelleProduitComplet"
     RowLevelBinds="true"/>
   <ViewAccessor
-    Name="getLibellePartieProduitPfnl1"
-    ViewObjectName="cm.gov.minfof.model.entityviewobject.getLibelleProduitPfnl"
+    Name="permisActifView1"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.permisActifView"
+    RowLevelBinds="true">
+    <ViewCriteriaUsage
+      Name="permisActifViewCriteria"
+      FullName="cm.gov.minfof.model.entityviewobject.permisActifView.permisActifViewCriteria"/>
+    <ParameterMap>
+      <PIMap Variable="permissionnaireIdBind">
+        <TransientExpression
+          trustMode="untrusted"
+          Name="ExpressionScript"><![CDATA[Idpermissionnaire]]></TransientExpression>
+      </PIMap>
+    </ParameterMap>
+  </ViewAccessor>
+  <ViewAccessor
+    Name="LocaliteView1"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.LocaliteView"
     RowLevelBinds="true"/>
   <ListBinding
     Name="LOV_Idorigine"
@@ -79,24 +90,6 @@
     </AttrArray>
     <AttrArray Name="ListDisplayAttrNames">
       <Item Value="Libelleunitemesure"/>
-    </AttrArray>
-    <DisplayCriteria/>
-  </ListBinding>
-  <ListBinding
-    Name="LOV_Iddocumentofficiel"
-    ListVOName="PermisView1"
-    NullValueFlag="start"
-    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
-    MRUCount="0">
-    <AttrArray Name="AttrNames">
-      <Item Value="Iddocumentofficiel"/>
-    </AttrArray>
-    <AttrArray Name="AttrExpressions"/>
-    <AttrArray Name="ListAttrNames">
-      <Item Value="Idpermis"/>
-    </AttrArray>
-    <AttrArray Name="ListDisplayAttrNames">
-      <Item Value="Numeropermis"/>
     </AttrArray>
     <DisplayCriteria/>
   </ListBinding>
@@ -151,6 +144,42 @@
     </AttrArray>
     <AttrArray Name="ListDisplayAttrNames">
       <Item Value="Nomouraisonsociale"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_Iddocumentofficiel"
+    ListVOName="permisActifView1"
+    NullValueFlag="end"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="Iddocumentofficiel"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Idpermis"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Numeropermis"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_Idprovenance"
+    ListVOName="LocaliteView1"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="Idprovenance"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Idlocalite"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Nomlocalite"/>
     </AttrArray>
     <DisplayCriteria/>
   </ListBinding>
@@ -261,6 +290,22 @@
     EntityAttrName="Idcollectepfnl"
     EntityUsage="Detailscollectepfnl"
     AliasName="idcollectepfnl"/>
+  <ViewAttribute
+    Name="Idprovenance"
+    PrecisionRule="true"
+    EntityAttrName="Idprovenance"
+    EntityUsage="Detailscollectepfnl"
+    AliasName="idprovenance"
+    LOVName="LOV_Idprovenance">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+        <LABEL
+          ResId="PROVENANCE"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewLinkAccessor
     Name="DetailscollectepfnlView"
     ViewLink="cm.gov.minfof.model.entityviewobject.FkDetailscollectepfnl7Link"
@@ -332,4 +377,8 @@
     ViewLink="cm.gov.minfof.model.entityviewobject.DetailCollToDeptLink"
     Type="oracle.jbo.server.ViewRowImpl"
     IsUpdateable="false"/>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="cm.gov.minfof.model.ModelBundle"/>
+  </ResourceBundle>
 </ViewObject>

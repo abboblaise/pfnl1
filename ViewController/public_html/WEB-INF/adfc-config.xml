@@ -80,4 +80,14 @@
     <managed-bean-class>cm.gov.minfof.view.CollecteBean</managed-bean-class>
     <managed-bean-scope>request</managed-bean-scope>
   </managed-bean>
+  <managed-bean id="__17">
+    <managed-bean-name>produitPfnl3</managed-bean-name>
+    <managed-bean-class>cm.gov.minfof.view.ProduitPfnl3</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+  </managed-bean>
+  <managed-bean id="__18">
+    <managed-bean-name>exportPfnlBean</managed-bean-name>
+    <managed-bean-class>cm.gov.minfof.view.ExportPfnlBean</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+  </managed-bean>
 </adfc-config>

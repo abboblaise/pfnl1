@@ -3,6 +3,7 @@ package cm.gov.minfof.model.entity;
 import java.math.BigDecimal;
 
 import oracle.jbo.RowIterator;
+import oracle.jbo.RowSet;
 import oracle.jbo.server.EntityImpl;
 import oracle.jbo.server.ViewRowImpl;
 // ---------------------------------------------------------------------
@@ -23,16 +24,18 @@ public class PartiesProduitsPfnlViewRowImpl extends ViewRowImpl {
         Idpartiesproduitspfnl,
         Idpartiesrecoltees,
         Idproduitspfnl,
-        Estunproduitpfnl,
         Idunitemesure,
         Idunitemesureexport,
-        estUnProduitPfnlTransient,
         PartiesProduitsPfnlView,
         PartiesProduitsPfnlView1,
         ProduitsPfnlView,
         UnitemesureView,
         UnitemesureView1,
-        DetailscollectepfnlView;
+        DetailscollectepfnlView,
+        DetailsexportpfnlView,
+        UnitemesureView2,
+        UnitemesureView3,
+        PartiesrecolteesView1;
         private static AttributesEnum[] vals = null;
         ;
         private static final int firstIndex = 0;
@@ -61,16 +64,18 @@ public class PartiesProduitsPfnlViewRowImpl extends ViewRowImpl {
     public static final int IDPARTIESPRODUITSPFNL = AttributesEnum.Idpartiesproduitspfnl.index();
     public static final int IDPARTIESRECOLTEES = AttributesEnum.Idpartiesrecoltees.index();
     public static final int IDPRODUITSPFNL = AttributesEnum.Idproduitspfnl.index();
-    public static final int ESTUNPRODUITPFNL = AttributesEnum.Estunproduitpfnl.index();
     public static final int IDUNITEMESURE = AttributesEnum.Idunitemesure.index();
     public static final int IDUNITEMESUREEXPORT = AttributesEnum.Idunitemesureexport.index();
-    public static final int ESTUNPRODUITPFNLTRANSIENT = AttributesEnum.estUnProduitPfnlTransient.index();
     public static final int PARTIESPRODUITSPFNLVIEW = AttributesEnum.PartiesProduitsPfnlView.index();
     public static final int PARTIESPRODUITSPFNLVIEW1 = AttributesEnum.PartiesProduitsPfnlView1.index();
     public static final int PRODUITSPFNLVIEW = AttributesEnum.ProduitsPfnlView.index();
     public static final int UNITEMESUREVIEW = AttributesEnum.UnitemesureView.index();
     public static final int UNITEMESUREVIEW1 = AttributesEnum.UnitemesureView1.index();
     public static final int DETAILSCOLLECTEPFNLVIEW = AttributesEnum.DetailscollectepfnlView.index();
+    public static final int DETAILSEXPORTPFNLVIEW = AttributesEnum.DetailsexportpfnlView.index();
+    public static final int UNITEMESUREVIEW2 = AttributesEnum.UnitemesureView2.index();
+    public static final int UNITEMESUREVIEW3 = AttributesEnum.UnitemesureView3.index();
+    public static final int PARTIESRECOLTEESVIEW1 = AttributesEnum.PartiesrecolteesView1.index();
 
     /**
      * This is the default constructor (do not remove).
@@ -132,53 +137,6 @@ public class PartiesProduitsPfnlViewRowImpl extends ViewRowImpl {
      */
     public void setIdproduitspfnl(BigDecimal value) {
         setAttributeInternal(IDPRODUITSPFNL, value);
-    }
-
-    /**
-     * Gets the attribute value for estunproduitpfnl using the alias name Estunproduitpfnl.
-     * @return the estunproduitpfnl
-     */
-    public Integer getEstunproduitpfnl() {
-        return (Integer) getAttributeInternal(ESTUNPRODUITPFNL);
-    }
-
-    /**
-     * Sets <code>value</code> as attribute value for estunproduitpfnl using the alias name Estunproduitpfnl.
-     * @param value value to set the estunproduitpfnl
-     */
-    public void setEstunproduitpfnl(Integer value) {
-        setAttributeInternal(ESTUNPRODUITPFNL, value);
-    }
-
-    /**
-     * Gets the attribute value for the calculated attribute estUnProduitPfnlTransient.
-     * @return the estUnProduitPfnlTransient
-     */
-    public Boolean getestUnProduitPfnlTransient() {
-        try
-        {
-            if (getEstunproduitpfnl() != 0)
-                return true;
-            else
-                return false;
-        }
-        catch (NullPointerException e)
-        {
-            return false;
-        }
-        //return (Boolean) getAttributeInternal(ESTUNPRODUITPFNLTRANSIENT);
-    }
-
-    /**
-     * Sets <code>value</code> as the attribute value for the calculated attribute estUnProduitPfnlTransient.
-     * @param value value to set the  estUnProduitPfnlTransient
-     */
-    public void setestUnProduitPfnlTransient(Boolean value) {
-        if (value)
-            setAttributeInternal(ESTUNPRODUITPFNL, 1);
-        else
-            setAttributeInternal(ESTUNPRODUITPFNL, 0);
-        //setAttributeInternal(ESTUNPRODUITPFNLTRANSIENT, value);
     }
 
 
@@ -261,6 +219,34 @@ public class PartiesProduitsPfnlViewRowImpl extends ViewRowImpl {
      */
     public RowIterator getDetailscollectepfnlView() {
         return (RowIterator) getAttributeInternal(DETAILSCOLLECTEPFNLVIEW);
+    }
+
+    /**
+     * Gets the associated <code>RowIterator</code> using master-detail link DetailsexportpfnlView.
+     */
+    public RowIterator getDetailsexportpfnlView() {
+        return (RowIterator) getAttributeInternal(DETAILSEXPORTPFNLVIEW);
+    }
+
+    /**
+     * Gets the view accessor <code>RowSet</code> UnitemesureView2.
+     */
+    public RowSet getUnitemesureView2() {
+        return (RowSet) getAttributeInternal(UNITEMESUREVIEW2);
+    }
+
+    /**
+     * Gets the view accessor <code>RowSet</code> UnitemesureView3.
+     */
+    public RowSet getUnitemesureView3() {
+        return (RowSet) getAttributeInternal(UNITEMESUREVIEW3);
+    }
+
+    /**
+     * Gets the view accessor <code>RowSet</code> PartiesrecolteesView1.
+     */
+    public RowSet getPartiesrecolteesView1() {
+        return (RowSet) getAttributeInternal(PARTIESRECOLTEESVIEW1);
     }
 }
 

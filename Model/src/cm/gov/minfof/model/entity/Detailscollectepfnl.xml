@@ -22,7 +22,8 @@
     Type="java.math.BigDecimal"
     ColumnType="BIGINT"
     TableName="detailscollectepfnl"
-    PrimaryKey="true">
+    PrimaryKey="true"
+    IsUpdateable="while_insert">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="19"/>
     </DesignTime>
@@ -41,7 +42,7 @@
     <Properties>
       <SchemaBasedProperties>
         <LABEL
-          ResId="cm.gov.minfof.model.entityviewobject.listeQualitePermissionnaire.SL_1_1"/>
+          ResId="ACTEUR"/>
       </SchemaBasedProperties>
     </Properties>
   </Attribute>
@@ -58,7 +59,7 @@
     <Properties>
       <SchemaBasedProperties>
         <LABEL
-          ResId="cm.gov.minfof.model.entity.Originespnfls.Originepnfl_LABEL"/>
+          ResId="SOURCE_D_APPROVISIONNEMENT"/>
       </SchemaBasedProperties>
     </Properties>
   </Attribute>
@@ -76,6 +77,8 @@
       <SchemaBasedProperties>
         <LABEL
           ResId="QUANTIT_U00E9"/>
+        <DISPLAYWIDTH
+          Value="6"/>
       </SchemaBasedProperties>
     </Properties>
   </Attribute>
@@ -150,6 +153,17 @@
   <Attribute
     Name="Idcollectepfnl"
     ColumnName="idcollectepfnl"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="BIGINT"
+    TableName="detailscollectepfnl">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="19"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Idprovenance"
+    ColumnName="idprovenance"
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
     ColumnType="BIGINT"

@@ -227,7 +227,7 @@ public class VehiculeImpl extends EntityImpl {
      * @param value value to set the Immatriculation
      */
     public void setImmatriculation(String value) {
-        //System.out.println("Ne doit pas etre modifiable");
+        System.out.println("Ne doit pas etre modifiable");
         setAttributeInternal(IMMATRICULATION, value);
     }
 
@@ -394,9 +394,9 @@ public class VehiculeImpl extends EntityImpl {
                             .findViewObject(viewName);
         vo.executeQuery();
         if (vo.hasNext()) {
-            //System.out.println("entree dans la condition hasNext");
+            System.out.println("entree dans la condition hasNext");
             Row r = vo.next();
-            //System.out.println("row = " + r);
+            System.out.println("row = " + r);
             lastId = (BigDecimal) r.getAttribute(0);
         }
         BigDecimal un = new BigDecimal(1);

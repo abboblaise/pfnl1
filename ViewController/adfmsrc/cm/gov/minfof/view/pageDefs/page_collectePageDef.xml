@@ -40,80 +40,63 @@
         </AttrNames>
       </nodeDefinition>
     </tree>
-    <tree IterBinding="DetailscollectepfnlView17Iterator" id="DetailscollectepfnlView17">
-      <nodeDefinition DefName="cm.gov.minfof.model.entityviewobject.DetailscollectepfnlView"
-                      Name="DetailscollectepfnlView170">
-        <AttrNames>
-          <Item Value="Iddetailscollectepfnl"/>
-          <Item Value="Idpermissionnaire"/>
-          <Item Value="Idorigine"/>
-          <Item Value="Quantite"/>
-          <Item Value="Idunitemesure"/>
-          <Item Value="Iddocumentofficiel"/>
-          <Item Value="Iddestination"/>
-          <Item Value="Idpartieproduitpfnl"/>
-          <Item Value="Idcollectepfnl"/>
-        </AttrNames>
-      </nodeDefinition>
-    </tree>
     <action IterBinding="CollectepfnlView1Iterator" id="CreateInsert" RequiresUpdateModel="true"
             Action="createInsertRow"/>
     <action id="Rollback" RequiresUpdateModel="false" Action="rollbackTransaction" DataControl="AppModuleDataControl"/>
-    <action IterBinding="DetailscollectepfnlView17Iterator" id="CreateInsert1" RequiresUpdateModel="true"
-            Action="createInsertRow"/>
-    <action IterBinding="DetailscollectepfnlView17Iterator" id="Delete" RequiresUpdateModel="false"
-            Action="removeCurrentRow"/>
     <list IterBinding="CollectepfnlView1Iterator" StaticList="false" Uses="LOV_Iddepartement" id="Iddepartement"
           DTSupportsMRU="true" SelectItemValueMode="ListObject"/>
     <list IterBinding="CollectepfnlView1Iterator" StaticList="false" Uses="LOV_Idlocalite" id="Idlocalite"
           DTSupportsMRU="true" SelectItemValueMode="ListObject"/>
     <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
-    <action IterBinding="CollectepfnlView1Iterator" id="Delete1" InstanceName="AppModuleDataControl.CollectepfnlView1"
-            DataControl="AppModuleDataControl" RequiresUpdateModel="false" Action="removeCurrentRow"/>
+    <list IterBinding="DetailscollectepfnlView17Iterator" StaticList="false" Uses="LOV_Idpermissionnaire"
+          id="Idpermissionnaire" DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
     <attributeValues IterBinding="DetailscollectepfnlView17Iterator" id="Iddetailscollectepfnl">
       <AttrNames>
         <Item Value="Iddetailscollectepfnl"/>
       </AttrNames>
     </attributeValues>
-    <attributeValues IterBinding="DetailscollectepfnlView17Iterator" id="Idpermissionnaire">
-      <AttrNames>
-        <Item Value="Idpermissionnaire"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="DetailscollectepfnlView17Iterator" id="Idorigine">
-      <AttrNames>
-        <Item Value="Idorigine"/>
-      </AttrNames>
-    </attributeValues>
+    <list IterBinding="DetailscollectepfnlView17Iterator" StaticList="false" Uses="LOV_Idorigine" id="Idorigine"
+          DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
     <attributeValues IterBinding="DetailscollectepfnlView17Iterator" id="Quantite">
       <AttrNames>
         <Item Value="Quantite"/>
       </AttrNames>
     </attributeValues>
-    <attributeValues IterBinding="DetailscollectepfnlView17Iterator" id="Idunitemesure">
-      <AttrNames>
-        <Item Value="Idunitemesure"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="DetailscollectepfnlView17Iterator" id="Iddocumentofficiel">
-      <AttrNames>
-        <Item Value="Iddocumentofficiel"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="DetailscollectepfnlView17Iterator" id="Iddestination">
-      <AttrNames>
-        <Item Value="Iddestination"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="DetailscollectepfnlView17Iterator" id="Idpartieproduitpfnl">
-      <AttrNames>
-        <Item Value="Idpartieproduitpfnl"/>
-      </AttrNames>
-    </attributeValues>
+    <list IterBinding="DetailscollectepfnlView17Iterator" StaticList="false" Uses="LOV_Idunitemesure"
+          id="Idunitemesure" DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
+    <list IterBinding="DetailscollectepfnlView17Iterator" StaticList="false" Uses="LOV_Iddocumentofficiel"
+          id="Iddocumentofficiel" DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
+    <list IterBinding="DetailscollectepfnlView17Iterator" StaticList="false" Uses="LOV_Iddestination"
+          id="Iddestination" DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
+    <list IterBinding="DetailscollectepfnlView17Iterator" StaticList="false" Uses="LOV_Idpartieproduitpfnl"
+          id="Idpartieproduitpfnl" DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
     <attributeValues IterBinding="DetailscollectepfnlView17Iterator" id="Idcollectepfnl">
       <AttrNames>
         <Item Value="Idcollectepfnl"/>
       </AttrNames>
     </attributeValues>
+    <action IterBinding="DetailscollectepfnlView17Iterator" id="CreateInsert1" RequiresUpdateModel="true"
+            Action="createInsertRow"/>
+    <action IterBinding="DetailscollectepfnlView17Iterator" id="Delete" RequiresUpdateModel="false"
+            Action="removeCurrentRow"/>
+    <list IterBinding="DetailscollectepfnlView17Iterator" StaticList="false" Uses="LOV_Idprovenance" id="Idprovenance"
+          DTSupportsMRU="true" SelectItemValueMode="ListObject"/>
+    <tree IterBinding="DetailscollectepfnlView17Iterator" id="DetailscollectepfnlView17">
+      <nodeDefinition DefName="cm.gov.minfof.model.entityviewobject.DetailscollectepfnlView"
+                      Name="DetailscollectepfnlView170">
+        <AttrNames>
+          <Item Value="Idcollectepfnl"/>
+          <Item Value="Iddetailscollectepfnl"/>
+          <Item Value="Idpermissionnaire"/>
+          <Item Value="Idpartieproduitpfnl"/>
+          <Item Value="Idunitemesure"/>
+          <Item Value="Quantite"/>
+          <Item Value="Iddocumentofficiel"/>
+          <Item Value="Idorigine"/>
+          <Item Value="Idprovenance"/>
+          <Item Value="Iddestination"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
   </bindings>
 </pageDefinition>

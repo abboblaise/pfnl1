@@ -8,153 +8,241 @@
         <af:form id="f1">
         <af:pageTemplate viewId="/TemplateGlobal.jsf" id="pt1">
         <f:facet name="content">
-            <af:panelBox text="#{viewcontrollerBundle.EDITION_DU_PERMISSIONNAIRE}" id="pb1">
-                <f:facet name="toolbar"/>
-                <af:panelFormLayout id="pfl1" rows="5">
-                    <af:inputText value="#{bindings.Codepnfl.inputValue}" label="#{bindings.Codepnfl.hints.label}"
-                                  required="#{bindings.Codepnfl.hints.mandatory}"
-                                  columns="#{bindings.Codepnfl.hints.displayWidth}"
-                                  maximumLength="#{bindings.Codepnfl.hints.precision}"
-                                  shortDesc="#{bindings.Codepnfl.hints.tooltip}" id="it1">
-                        <f:validator binding="#{bindings.Codepnfl.validator}"/>
-                    </af:inputText>
-                    <af:inputText value="#{bindings.Nomouraisonsociale.inputValue}"
-                                  label="#{bindings.Nomouraisonsociale.hints.label}"
-                                  required="#{bindings.Nomouraisonsociale.hints.mandatory}"
-                                  columns="#{bindings.Nomouraisonsociale.hints.displayWidth}"
-                                  maximumLength="#{bindings.Nomouraisonsociale.hints.precision}"
-                                  shortDesc="#{bindings.Nomouraisonsociale.hints.tooltip}" id="it2">
-                        <f:validator binding="#{bindings.Nomouraisonsociale.validator}"/>
-                    </af:inputText>
-                    <af:selectOneChoice value="#{bindings.Statut.inputValue}" label="#{bindings.Statut.label}"
-                                        required="#{bindings.Statut.hints.mandatory}"
-                                        shortDesc="#{bindings.Statut.hints.tooltip}" id="soc1">
-                        <f:selectItems value="#{bindings.Statut.items}" id="si1"/>
-                        <f:validator binding="#{bindings.Statut.validator}"/>
-                    </af:selectOneChoice>
-                    <af:inputText value="#{bindings.Siegesocial.inputValue}" label="#{bindings.Siegesocial.hints.label}"
-                                  required="#{bindings.Siegesocial.hints.mandatory}"
-                                  columns="#{bindings.Siegesocial.hints.displayWidth}"
-                                  maximumLength="#{bindings.Siegesocial.hints.precision}"
-                                  shortDesc="#{bindings.Siegesocial.hints.tooltip}" id="it3">
-                        <f:validator binding="#{bindings.Siegesocial.validator}"/>
-                    </af:inputText>
-                    <af:inputText value="#{bindings.Nbreemploye.inputValue}" label="#{bindings.Nbreemploye.hints.label}"
-                                  required="#{bindings.Nbreemploye.hints.mandatory}"
-                                  columns="#{bindings.Nbreemploye.hints.displayWidth}"
-                                  maximumLength="#{bindings.Nbreemploye.hints.precision}"
-                                  shortDesc="#{bindings.Nbreemploye.hints.tooltip}" id="it4">
-                        <f:validator binding="#{bindings.Nbreemploye.validator}"/>
-                    </af:inputText>
-                    <af:inputText value="#{bindings.Contact.inputValue}" label="#{bindings.Contact.hints.label}"
-                                  required="#{bindings.Contact.hints.mandatory}"
-                                  columns="#{bindings.Contact.hints.displayWidth}"
-                                  maximumLength="#{bindings.Contact.hints.precision}"
-                                  shortDesc="#{bindings.Contact.hints.tooltip}" id="it5">
-                        <f:validator binding="#{bindings.Contact.validator}"/>
-                    </af:inputText>
-                    <af:inputText value="#{bindings.Mail.inputValue}" label="#{bindings.Mail.hints.label}"
-                                  required="#{bindings.Mail.hints.mandatory}"
-                                  columns="#{bindings.Mail.hints.displayWidth}"
-                                  maximumLength="#{bindings.Mail.hints.precision}"
-                                  shortDesc="#{bindings.Mail.hints.tooltip}" id="it6">
-                        <f:validator binding="#{bindings.Mail.validator}"/>
-                    </af:inputText>
-                    <af:selectOneChoice value="#{bindings.Iddepartements.inputValue}"
-                                        label="#{bindings.Iddepartements.label}"
-                                        required="#{bindings.Iddepartements.hints.mandatory}"
-                                        shortDesc="#{bindings.Iddepartements.hints.tooltip}" id="soc2">
-                        <f:selectItems value="#{bindings.Iddepartements.items}" id="si2"/>
-                        <f:validator binding="#{bindings.Iddepartements.validator}"/>
-                    </af:selectOneChoice>
-                    <af:inputText value="#{bindings.Natureactivite.inputValue}"
-                                  label="#{bindings.Natureactivite.hints.label}"
-                                  required="#{bindings.Natureactivite.hints.mandatory}"
-                                  columns="#{bindings.Natureactivite.hints.displayWidth}"
-                                  maximumLength="#{bindings.Natureactivite.hints.precision}"
-                                  shortDesc="#{bindings.Natureactivite.hints.tooltip}" id="it7">
-                        <f:validator binding="#{bindings.Natureactivite.validator}"/>
-                    </af:inputText>
-                    <af:inputText value="#{bindings.Numceqe.inputValue}" label="#{bindings.Numceqe.hints.label}"
-                                  required="#{bindings.Numceqe.hints.mandatory}"
-                                  columns="#{bindings.Numceqe.hints.displayWidth}"
-                                  maximumLength="#{bindings.Numceqe.hints.precision}"
-                                  shortDesc="#{bindings.Numceqe.hints.tooltip}" id="it8">
-                        <f:validator binding="#{bindings.Numceqe.validator}"/>
-                    </af:inputText>
-                    <af:inputText value="#{bindings.Idpermissionnairespnfl.inputValue}"
-                                  label="#{bindings.Idpermissionnairespnfl.hints.label}"
-                                  required="#{bindings.Idpermissionnairespnfl.hints.mandatory}"
-                                  columns="#{bindings.Idpermissionnairespnfl.hints.displayWidth}"
-                                  maximumLength="#{bindings.Idpermissionnairespnfl.hints.precision}"
-                                  shortDesc="#{bindings.Idpermissionnairespnfl.hints.tooltip}" id="it9" visible="false">
-                        <f:validator binding="#{bindings.Idpermissionnairespnfl.validator}"/>
-                        <af:convertNumber groupingUsed="false" pattern="#{bindings.Idpermissionnairespnfl.format}"/>
-                    </af:inputText>
-                    <af:inputText value="#{bindings.Nui.inputValue}" label="#{bindings.Nui.hints.label}"
-                                  required="#{bindings.Nui.hints.mandatory}"
-                                  columns="#{bindings.Nui.hints.displayWidth}"
-                                  maximumLength="#{bindings.Nui.hints.precision}"
-                                  shortDesc="#{bindings.Nui.hints.tooltip}" id="it11">
-                        <f:validator binding="#{bindings.Nui.validator}"/>
-                    </af:inputText>
-                    <af:selectOneChoice value="#{bindings.Idpays.inputValue}" label="#{bindings.Idpays.label}"
-                                        required="#{bindings.Idpays.hints.mandatory}"
-                                        shortDesc="#{bindings.Idpays.hints.tooltip}" id="soc3">
-                        <f:selectItems value="#{bindings.Idpays.items}" id="si3"/>
-                        <f:validator binding="#{bindings.Idpays.validator}"/>
-                    </af:selectOneChoice>
-                    <af:inputText value="#{bindings.Profession.inputValue}" label="#{bindings.Profession.hints.label}"
-                                  required="#{bindings.Profession.hints.mandatory}"
-                                  columns="#{bindings.Profession.hints.displayWidth}"
-                                  maximumLength="#{bindings.Profession.hints.precision}"
-                                  shortDesc="#{bindings.Profession.hints.tooltip}" id="it12">
-                        <f:validator binding="#{bindings.Profession.validator}"/>
-                    </af:inputText>
-                    <af:selectOneChoice value="#{bindings.Typepersonne.inputValue}"
-                                        label="#{bindings.Typepersonne.label}"
-                                        required="#{bindings.Typepersonne.hints.mandatory}"
-                                        shortDesc="#{bindings.Typepersonne.hints.tooltip}" id="soc4">
-                        <f:selectItems value="#{bindings.Typepersonne.items}" id="si4"/>
-                        <f:validator binding="#{bindings.Typepersonne.validator}"/>
-                    </af:selectOneChoice>
-                    <af:inputText value="#{bindings.Adressep.inputValue}" label="#{bindings.Adressep.hints.label}"
-                                  required="#{bindings.Adressep.hints.mandatory}"
-                                  columns="#{bindings.Adressep.hints.displayWidth}"
-                                  maximumLength="#{bindings.Adressep.hints.precision}"
-                                  shortDesc="#{bindings.Adressep.hints.tooltip}" id="it13">
-                        <f:validator binding="#{bindings.Adressep.validator}"/>
-                    </af:inputText>
-                    <af:selectOneChoice value="#{bindings.Sexe.inputValue}" label="#{bindings.Sexe.label}"
-                                        required="#{bindings.Sexe.hints.mandatory}"
-                                        shortDesc="#{bindings.Sexe.hints.tooltip}" id="soc5">
-                        <f:selectItems value="#{bindings.Sexe.items}" id="si5"/>
-                        <f:validator binding="#{bindings.Sexe.validator}"/>
-                    </af:selectOneChoice>
-                    <f:facet name="footer">
-                        <af:panelGroupLayout id="pgl1">
-                            <af:button
-                                       text="#{viewcontrollerBundle.NOUVEAU}"
-                                       disabled="#{!bindings.CreateInsert.enabled}" id="b2"
-                                       action="#{permissionnaireBean.creerPermissionnaire}"/>
-                            <af:spacer width="10" height="10" id="s1"/>
-                            <af:button text="#{viewcontrollerBundle.ENREGISTRER}" id="b1"
-                                       action="#{permissionnaireBean.enregistrerPermissionnaire}"/>
-                            <af:spacer width="10" height="10" id="s2"/>
-                            <af:button
-                                       text="#{viewcontrollerBundle.SUPPRIMER}"
-                                       disabled="#{!bindings.Delete.enabled}" id="b3"
-                                       action="#{permissionnaireBean.supprimerPermissionnaire}"/>
-                            <af:spacer width="10" height="10" id="s3"/>
-                            <af:button actionListener="#{bindings.Rollback.execute}"
-                                       text="#{viewcontrollerBundle.ANNULER}" immediate="true" id="b4">
-                                <af:resetActionListener/>
-                            </af:button>
-                        </af:panelGroupLayout>
-                    </f:facet>
-                </af:panelFormLayout>
-            </af:panelBox>
-            <af:panelBox text="#{viewcontrollerBundle.LISTE_DES_PERMISSIONNAIRES}" id="pb2">
+                    <af:panelSplitter id="ps1" inlineStyle="width:1050px;" splitterPosition="763">
+                        <f:facet name="first">
+                            <af:panelBox text="#{viewcontrollerBundle.EDITION_D_UN_ACTEUR}" id="pb1">
+                                <f:facet name="toolbar"/>
+                                <af:panelFormLayout id="pfl1" rows="5">
+                                    <af:inputText value="#{bindings.Codepnfl.inputValue}"
+                                                  label="#{bindings.Codepnfl.hints.label}"
+                                                  required="#{bindings.Codepnfl.hints.mandatory}"
+                                                  columns="#{bindings.Codepnfl.hints.displayWidth}"
+                                                  maximumLength="#{bindings.Codepnfl.hints.precision}"
+                                                  shortDesc="#{bindings.Codepnfl.hints.tooltip}" id="it1">
+                                        <f:validator binding="#{bindings.Codepnfl.validator}"/>
+                                    </af:inputText>
+                                    <af:inputText value="#{bindings.Nomouraisonsociale.inputValue}"
+                                                  label="#{bindings.Nomouraisonsociale.hints.label}"
+                                                  required="#{bindings.Nomouraisonsociale.hints.mandatory}"
+                                                  columns="#{bindings.Nomouraisonsociale.hints.displayWidth}"
+                                                  maximumLength="#{bindings.Nomouraisonsociale.hints.precision}"
+                                                  shortDesc="#{bindings.Nomouraisonsociale.hints.tooltip}" id="it2">
+                                        <f:validator binding="#{bindings.Nomouraisonsociale.validator}"/>
+                                    </af:inputText>
+                                    <af:selectOneChoice value="#{bindings.Statut.inputValue}"
+                                                        label="#{bindings.Statut.label}"
+                                                        required="#{bindings.Statut.hints.mandatory}"
+                                                        shortDesc="#{bindings.Statut.hints.tooltip}" id="soc1">
+                                        <f:selectItems value="#{bindings.Statut.items}" id="si1"/>
+                                        <f:validator binding="#{bindings.Statut.validator}"/>
+                                    </af:selectOneChoice>
+                                    <af:inputText value="#{bindings.Siegesocial.inputValue}"
+                                                  label="#{bindings.Siegesocial.hints.label}"
+                                                  required="#{bindings.Siegesocial.hints.mandatory}"
+                                                  columns="#{bindings.Siegesocial.hints.displayWidth}"
+                                                  maximumLength="#{bindings.Siegesocial.hints.precision}"
+                                                  shortDesc="#{bindings.Siegesocial.hints.tooltip}" id="it3">
+                                        <f:validator binding="#{bindings.Siegesocial.validator}"/>
+                                    </af:inputText>
+                                    <af:inputText value="#{bindings.Nbreemploye.inputValue}"
+                                                  label="#{bindings.Nbreemploye.hints.label}"
+                                                  required="#{bindings.Nbreemploye.hints.mandatory}"
+                                                  columns="#{bindings.Nbreemploye.hints.displayWidth}"
+                                                  maximumLength="#{bindings.Nbreemploye.hints.precision}"
+                                                  shortDesc="#{bindings.Nbreemploye.hints.tooltip}" id="it4">
+                                        <f:validator binding="#{bindings.Nbreemploye.validator}"/>
+                                    </af:inputText>
+                                    <af:inputText value="#{bindings.Contact.inputValue}"
+                                                  label="#{bindings.Contact.hints.label}"
+                                                  required="#{bindings.Contact.hints.mandatory}"
+                                                  columns="#{bindings.Contact.hints.displayWidth}"
+                                                  maximumLength="#{bindings.Contact.hints.precision}"
+                                                  shortDesc="#{bindings.Contact.hints.tooltip}" id="it5">
+                                        <f:validator binding="#{bindings.Contact.validator}"/>
+                                    </af:inputText>
+                                    <af:inputText value="#{bindings.Mail.inputValue}"
+                                                  label="#{bindings.Mail.hints.label}"
+                                                  required="#{bindings.Mail.hints.mandatory}"
+                                                  columns="#{bindings.Mail.hints.displayWidth}"
+                                                  maximumLength="#{bindings.Mail.hints.precision}"
+                                                  shortDesc="#{bindings.Mail.hints.tooltip}" id="it6">
+                                        <f:validator binding="#{bindings.Mail.validator}"/>
+                                    </af:inputText>
+                                    <af:selectOneChoice value="#{bindings.Iddepartements.inputValue}"
+                                                        label="#{bindings.Iddepartements.label}"
+                                                        required="#{bindings.Iddepartements.hints.mandatory}"
+                                                        shortDesc="#{bindings.Iddepartements.hints.tooltip}" id="soc2">
+                                        <f:selectItems value="#{bindings.Iddepartements.items}" id="si2"/>
+                                        <f:validator binding="#{bindings.Iddepartements.validator}"/>
+                                    </af:selectOneChoice>
+                                    <af:inputText value="#{bindings.Natureactivite.inputValue}"
+                                                  label="#{bindings.Natureactivite.hints.label}"
+                                                  required="#{bindings.Natureactivite.hints.mandatory}"
+                                                  columns="#{bindings.Natureactivite.hints.displayWidth}"
+                                                  maximumLength="#{bindings.Natureactivite.hints.precision}"
+                                                  shortDesc="#{bindings.Natureactivite.hints.tooltip}" id="it7">
+                                        <f:validator binding="#{bindings.Natureactivite.validator}"/>
+                                    </af:inputText>
+                                    <af:inputText value="#{bindings.Numceqe.inputValue}"
+                                                  label="#{bindings.Numceqe.hints.label}"
+                                                  required="#{bindings.Numceqe.hints.mandatory}"
+                                                  columns="#{bindings.Numceqe.hints.displayWidth}"
+                                                  maximumLength="#{bindings.Numceqe.hints.precision}"
+                                                  shortDesc="#{bindings.Numceqe.hints.tooltip}" id="it8">
+                                        <f:validator binding="#{bindings.Numceqe.validator}"/>
+                                    </af:inputText>
+                                    <af:inputText value="#{bindings.Idpermissionnairespnfl.inputValue}"
+                                                  label="#{bindings.Idpermissionnairespnfl.hints.label}"
+                                                  required="#{bindings.Idpermissionnairespnfl.hints.mandatory}"
+                                                  columns="#{bindings.Idpermissionnairespnfl.hints.displayWidth}"
+                                                  maximumLength="#{bindings.Idpermissionnairespnfl.hints.precision}"
+                                                  shortDesc="#{bindings.Idpermissionnairespnfl.hints.tooltip}" id="it9"
+                                                  visible="false">
+                                        <f:validator binding="#{bindings.Idpermissionnairespnfl.validator}"/>
+                                        <af:convertNumber groupingUsed="false"
+                                                          pattern="#{bindings.Idpermissionnairespnfl.format}"/>
+                                    </af:inputText>
+                                    <af:inputText value="#{bindings.Nui.inputValue}" label="#{bindings.Nui.hints.label}"
+                                                  required="#{bindings.Nui.hints.mandatory}"
+                                                  columns="#{bindings.Nui.hints.displayWidth}"
+                                                  maximumLength="#{bindings.Nui.hints.precision}"
+                                                  shortDesc="#{bindings.Nui.hints.tooltip}" id="it11">
+                                        <f:validator binding="#{bindings.Nui.validator}"/>
+                                    </af:inputText>
+                                    <af:selectOneChoice value="#{bindings.Idpays.inputValue}"
+                                                        label="#{bindings.Idpays.label}"
+                                                        required="#{bindings.Idpays.hints.mandatory}"
+                                                        shortDesc="#{bindings.Idpays.hints.tooltip}" id="soc3">
+                                        <f:selectItems value="#{bindings.Idpays.items}" id="si3"/>
+                                        <f:validator binding="#{bindings.Idpays.validator}"/>
+                                    </af:selectOneChoice>
+                                    <af:inputText value="#{bindings.Profession.inputValue}"
+                                                  label="#{bindings.Profession.hints.label}"
+                                                  required="#{bindings.Profession.hints.mandatory}"
+                                                  columns="#{bindings.Profession.hints.displayWidth}"
+                                                  maximumLength="#{bindings.Profession.hints.precision}"
+                                                  shortDesc="#{bindings.Profession.hints.tooltip}" id="it12">
+                                        <f:validator binding="#{bindings.Profession.validator}"/>
+                                    </af:inputText>
+                                    <af:selectOneChoice value="#{bindings.Typepersonne.inputValue}"
+                                                        label="#{bindings.Typepersonne.label}"
+                                                        required="#{bindings.Typepersonne.hints.mandatory}"
+                                                        shortDesc="#{bindings.Typepersonne.hints.tooltip}" id="soc4">
+                                        <f:selectItems value="#{bindings.Typepersonne.items}" id="si4"/>
+                                        <f:validator binding="#{bindings.Typepersonne.validator}"/>
+                                    </af:selectOneChoice>
+                                    <af:inputText value="#{bindings.Adressep.inputValue}"
+                                                  label="#{bindings.Adressep.hints.label}"
+                                                  required="#{bindings.Adressep.hints.mandatory}"
+                                                  columns="#{bindings.Adressep.hints.displayWidth}"
+                                                  maximumLength="#{bindings.Adressep.hints.precision}"
+                                                  shortDesc="#{bindings.Adressep.hints.tooltip}" id="it13">
+                                        <f:validator binding="#{bindings.Adressep.validator}"/>
+                                    </af:inputText>
+                                    <af:selectOneChoice value="#{bindings.Sexe.inputValue}"
+                                                        label="#{bindings.Sexe.label}"
+                                                        required="#{bindings.Sexe.hints.mandatory}"
+                                                        shortDesc="#{bindings.Sexe.hints.tooltip}" id="soc5">
+                                        <f:selectItems value="#{bindings.Sexe.items}" id="si5"/>
+                                        <f:validator binding="#{bindings.Sexe.validator}"/>
+                                    </af:selectOneChoice>
+                                    <f:facet name="footer">
+                                        <af:panelGroupLayout id="pgl1">
+                                            <af:button text="#{viewcontrollerBundle.NOUVEAU}"
+                                                       disabled="#{!bindings.CreateInsert.enabled}" id="b2"
+                                                       action="#{permissionnaireBean.creerPermissionnaire}"/>
+                                            <af:spacer width="10" height="10" id="s1"/>
+                                            <af:button text="#{viewcontrollerBundle.ENREGISTRER}" id="b1"
+                                                       action="#{permissionnaireBean.enregistrerPermissionnaire}"/>
+                                            <af:spacer width="10" height="10" id="s2"/>
+                                            <af:button text="#{viewcontrollerBundle.SUPPRIMER}"
+                                                       disabled="#{!bindings.Delete.enabled}" id="b3"
+                                                       action="#{permissionnaireBean.supprimerPermissionnaire}"/>
+                                            <af:spacer width="10" height="10" id="s3"/>
+                                            <af:button actionListener="#{bindings.Rollback.execute}"
+                                                       text="#{viewcontrollerBundle.ANNULER}" immediate="true" id="b4">
+                                                <af:resetActionListener/>
+                                            </af:button>
+                                        </af:panelGroupLayout>
+                                    </f:facet>
+                                </af:panelFormLayout>
+                            </af:panelBox>
+                        </f:facet>
+                        <f:facet name="second">
+                            <af:panelBox text="#{viewcontrollerBundle.LISTE_DES_DOCUMENTS_OFFICIELS}" id="pb3" maximized="true">
+                                <f:facet name="toolbar"/>
+                                <af:panelCollection id="pc2" inlineStyle="width:272px;">
+                                    <f:facet name="menus"/>
+                                    <f:facet name="toolbar"/>
+                                    <af:table value="#{bindings.PermisView8.collectionModel}" var="row"
+                                              rows="#{bindings.PermisView8.rangeSize}"
+                                              emptyText="#{bindings.PermisView8.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                              rowBandingInterval="0"
+                                              selectedRowKeys="#{bindings.PermisView8.collectionModel.selectedRow}"
+                                              selectionListener="#{bindings.PermisView8.collectionModel.makeCurrent}"
+                                              rowSelection="single" fetchSize="#{bindings.PermisView8.rangeSize}"
+                                              filterModel="#{bindings.PermisView8Query.queryDescriptor}"
+                                              filterVisible="true"
+                                              queryListener="#{bindings.PermisView8Query.processQuery}" varStatus="vs"
+                                              id="t2" width="775" inlineStyle="height:243px;">
+                                        <af:column sortProperty="#{bindings.PermisView8.hints.Numeropermis.name}"
+                                                   filterable="true" sortable="true"
+                                                   headerText="#{bindings.PermisView8.hints.Numeropermis.label}"
+                                                   id="c12">
+                                            <af:outputText value="#{row.Numeropermis}"
+                                                           shortDesc="#{bindings.PermisView8.hints.Numeropermis.tooltip}"
+                                                           id="ot10"/>
+                                        </af:column>
+                                        <af:column headerText="#{bindings.PermisView8.hints.Typedocument.label}"
+                                                   id="c21">
+                                            <af:selectOneChoice value="#{row.bindings.Typedocument.inputValue}"
+                                                                label="#{row.bindings.Typedocument.label}"
+                                                                required="#{bindings.PermisView8.hints.Typedocument.mandatory}"
+                                                                shortDesc="#{bindings.PermisView8.hints.Typedocument.tooltip}"
+                                                                readOnly="true" id="soc6">
+                                                <f:selectItems value="#{row.bindings.Typedocument.items}" id="si6"/>
+                                                <f:validator binding="#{row.bindings.Typedocument.validator}"/>
+                                            </af:selectOneChoice>
+                                        </af:column>
+                                        <af:column sortProperty="#{bindings.PermisView8.hints.Datedelivrance.name}"
+                                                   filterable="true" sortable="true"
+                                                   headerText="#{bindings.PermisView8.hints.Datedelivrance.label}"
+                                                   id="c19">
+                                            <f:facet name="filter">
+                                                <af:inputDate value="#{bindings.PermisView8Query.queryDescriptor.filterConjunctionCriterion.criterionMap.Datedelivrance.value}"
+                                                              id="id1">
+                                                    <af:convertDateTime pattern="#{bindings.PermisView8.hints.Datedelivrance.format}"/>
+                                                </af:inputDate>
+                                            </f:facet>
+                                            <af:outputText value="#{row.Datedelivrance}"
+                                                           shortDesc="#{bindings.PermisView8.hints.Datedelivrance.tooltip}"
+                                                           id="ot14">
+                                                <af:convertDateTime pattern="#{bindings.PermisView8.hints.Datedelivrance.format}"/>
+                                            </af:outputText>
+                                        </af:column>
+                                        <af:column sortProperty="#{bindings.PermisView8.hints.Datefin.name}"
+                                                   filterable="true" sortable="true"
+                                                   headerText="#{bindings.PermisView8.hints.Datefin.label}" id="c20"
+                                                   visible="false">
+                                            <f:facet name="filter">
+                                                <af:inputDate value="#{bindings.PermisView8Query.queryDescriptor.filterConjunctionCriterion.criterionMap.Datefin.value}"
+                                                              id="id2">
+                                                    <af:convertDateTime pattern="#{bindings.PermisView8.hints.Datefin.format}"/>
+                                                </af:inputDate>
+                                            </f:facet>
+                                            <af:outputText value="#{row.Datefin}"
+                                                           shortDesc="#{bindings.PermisView8.hints.Datefin.tooltip}"
+                                                           id="ot15">
+                                                <af:convertDateTime pattern="#{bindings.PermisView8.hints.Datefin.format}"/>
+                                            </af:outputText>
+                                        </af:column>
+                                    </af:table>
+                                    <f:facet name="statusbar"/>
+                                </af:panelCollection>
+                            </af:panelBox>
+                        </f:facet>
+                    </af:panelSplitter>
+                    <af:panelBox text="#{viewcontrollerBundle.LISTE_DES_ACTEURS}" id="pb2">
                 <f:facet name="toolbar"/>
                 <af:panelCollection id="pc1">
                     <f:facet name="menus"/>
@@ -325,7 +413,7 @@
                     <f:facet name="statusbar"/>
                 </af:panelCollection>
             </af:panelBox>
-            </f:facet>
+                </f:facet>
             </af:pageTemplate>
         </af:form>
     </af:document>

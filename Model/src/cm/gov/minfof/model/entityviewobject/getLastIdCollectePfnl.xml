@@ -28,7 +28,6 @@ FROM
     collectepfnl]]></SQLQuery>
   <ViewAttribute
     Name="Maxid"
-    IsUpdateable="false"
     IsPersistent="false"
     PrecisionRule="true"
     Type="java.math.BigDecimal"

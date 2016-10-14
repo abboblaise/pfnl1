@@ -32,12 +32,6 @@
     Name="PartiesProduitsPfnl"
     Entity="cm.gov.minfof.model.entity.PartiesProduitsPfnl"/>
   <ViewAttribute
-    Name="Estunproduitpfnl"
-    PrecisionRule="true"
-    EntityAttrName="Estunproduitpfnl"
-    EntityUsage="PartiesProduitsPfnl"
-    AliasName="estunproduitpfnl"/>
-  <ViewAttribute
     Name="Idpartiesproduitspfnl"
     IsUpdateable="while_insert"
     PrecisionRule="true"
