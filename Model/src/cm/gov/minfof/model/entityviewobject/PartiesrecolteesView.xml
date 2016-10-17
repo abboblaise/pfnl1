@@ -45,6 +45,12 @@ FROM pfnl.partiesrecoltees PfnlPartiesrecoltees]]></SQLQuery>
     <DesignTime>
       <Attr Name="_DisplaySize" Value="100"/>
     </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="NOM_DE_LA_PARTIE_RECOLT_U00E9E"/>
+      </SchemaBasedProperties>
+    </Properties>
   </ViewAttribute>
   <AttrArray Name="KeyAttributes">
     <Item Value="Idpartiesrecoltees"/>
@@ -59,4 +65,8 @@ FROM pfnl.partiesrecoltees PfnlPartiesrecoltees]]></SQLQuery>
     ViewLink="cm.gov.minfof.model.entityviewobject.FkPartiesproduitspfnl2Link1"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="cm.gov.minfof.model.ModelBundle"/>
+  </ResourceBundle>
 </ViewObject>

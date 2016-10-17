@@ -67,20 +67,35 @@
     PrecisionRule="true"
     EntityAttrName="Idcollectepfnl"
     EntityUsage="Collectepfnl"
-    AliasName="idcollectepfnl"/>
+    AliasName="idcollectepfnl"
+    IsUpdateable="while_insert"/>
   <ViewAttribute
     Name="Datecollecte"
     IsNotNull="true"
     PrecisionRule="true"
     EntityAttrName="Datecollecte"
     EntityUsage="Collectepfnl"
-    AliasName="datecollecte"/>
+    AliasName="datecollecte">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="DATE_DE_COLLECTE"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Identificateur"
     PrecisionRule="true"
     EntityAttrName="Identificateur"
     EntityUsage="Collectepfnl"
-    AliasName="identificateur"/>
+    AliasName="identificateur">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="IDINTIFICATEUR"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Iddepartement"
     PrecisionRule="true"
@@ -125,4 +140,8 @@
     ViewLink="cm.gov.minfof.model.entityviewobject.CollecteToDetailLink"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="cm.gov.minfof.model.ModelBundle"/>
+  </ResourceBundle>
 </ViewObject>

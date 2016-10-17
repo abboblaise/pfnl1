@@ -12,7 +12,7 @@
                         <f:facet name="toolbar"/>
                         <af:panelFormLayout id="pfl1" rows="2">
                             <af:inputText value="#{bindings.Codecategorie.inputValue}"
-                                          label="#{bindings.Codecategorie.hints.label}"
+                                          label="#{bindings.Codecategorie.label}"
                                           required="#{bindings.Codecategorie.hints.mandatory}"
                                           columns="#{bindings.Codecategorie.hints.displayWidth}"
                                           maximumLength="#{bindings.Codecategorie.hints.precision}"
@@ -20,7 +20,7 @@
                                 <f:validator binding="#{bindings.Codecategorie.validator}"/>
                             </af:inputText>
                             <af:inputText value="#{bindings.Libellecategorie.inputValue}"
-                                          label="#{bindings.Libellecategorie.hints.label}"
+                                          label="#{bindings.Libellecategorie.label}"
                                           required="#{bindings.Libellecategorie.hints.mandatory}"
                                           columns="#{bindings.Libellecategorie.hints.displayWidth}"
                                           maximumLength="#{bindings.Libellecategorie.hints.precision}"
@@ -28,7 +28,7 @@
                                 <f:validator binding="#{bindings.Libellecategorie.validator}"/>
                             </af:inputText>
                             <af:richTextEditor value="#{bindings.Observation.inputValue}"
-                                               label="#{bindings.Observation.hints.label}"
+                                               label="#{bindings.Observation.label}"
                                                required="#{bindings.Observation.hints.mandatory}"
                                                columns="#{bindings.Observation.hints.displayWidth}"
                                                shortDesc="#{bindings.Observation.hints.tooltip}" id="it4"
@@ -79,7 +79,7 @@
                                 </af:column>
                                 <af:column sortProperty="#{bindings.CategorieproduitView1.hints.Codecategorie.name}"
                                            filterable="true" sortable="true"
-                                           headerText="#{bindings.CategorieproduitView1.hints.Codecategorie.label}"
+                                           headerText="#{bindings.Codecategorie.label}"
                                            id="c2">
                                     <af:outputText value="#{row.Codecategorie}"
                                                    shortDesc="#{bindings.CategorieproduitView1.hints.Codecategorie.tooltip}"
@@ -87,7 +87,7 @@
                                 </af:column>
                                 <af:column sortProperty="#{bindings.CategorieproduitView1.hints.Libellecategorie.name}"
                                            filterable="true" sortable="true"
-                                           headerText="#{bindings.CategorieproduitView1.hints.Libellecategorie.label}"
+                                           headerText="#{bindings.Libellecategorie.label}"
                                            id="c3">
                                     <af:outputText value="#{row.Libellecategorie}"
                                                    shortDesc="#{bindings.CategorieproduitView1.hints.Libellecategorie.tooltip}"
@@ -95,7 +95,7 @@
                                 </af:column>
                                 <af:column sortProperty="#{bindings.CategorieproduitView1.hints.Observation.name}"
                                            filterable="true" sortable="true"
-                                           headerText="#{bindings.CategorieproduitView1.hints.Observation.label}"
+                                           headerText="#{bindings.Observation.label}"
                                            id="c4">
                                     <af:outputText value="#{row.Observation}"
                                                    shortDesc="#{bindings.CategorieproduitView1.hints.Observation.tooltip}"

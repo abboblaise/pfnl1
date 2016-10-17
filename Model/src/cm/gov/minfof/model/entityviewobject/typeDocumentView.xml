@@ -28,7 +28,8 @@
     IsPersistent="false"
     PrecisionRule="true"
     Type="java.lang.Integer"
-    ColumnType="$none$"/>
+    ColumnType="$none$"
+    SQLType="INTEGER"/>
   <ViewAttribute
     Name="libelleTypeDocument"
     IsUpdateable="false"
@@ -37,7 +38,14 @@
     PrecisionRule="true"
     Type="java.lang.String"
     ColumnType="CHAR"
-    SQLType="VARCHAR"/>
+    SQLType="VARCHAR">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="LIBELL_U00E9_DU_TYPE_DE_DOCUMENT"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <AttrArray Name="KeyAttributes">
     <Item Value="idtypedoc"/>
   </AttrArray>

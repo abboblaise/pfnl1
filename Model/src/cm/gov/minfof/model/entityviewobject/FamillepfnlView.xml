@@ -44,6 +44,12 @@ FROM pfnl.famillepfnl PfnlFamillepfnl]]></SQLQuery>
     <DesignTime>
       <Attr Name="_DisplaySize" Value="70"/>
     </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="NOM_DE_LA_FAMILLE"/>
+      </SchemaBasedProperties>
+    </Properties>
   </ViewAttribute>
   <AttrArray Name="KeyAttributes">
     <Item Value="Idfamillepfnl"/>
@@ -58,4 +64,8 @@ FROM pfnl.famillepfnl PfnlFamillepfnl]]></SQLQuery>
     ViewLink="cm.gov.minfof.model.entityviewobject.FkPartiesproduitspfnl2Link3"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="cm.gov.minfof.model.ModelBundle"/>
+  </ResourceBundle>
 </ViewObject>

@@ -126,6 +126,8 @@
       <SchemaBasedProperties>
         <CONTROLTYPE
           Value="choice"/>
+        <LABEL
+          ResId="PERMIS"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
@@ -170,4 +172,8 @@
     Type="oracle.jbo.server.ViewRowImpl"
     Reversed="true"
     IsUpdateable="false"/>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="cm.gov.minfof.model.ModelBundle"/>
+  </ResourceBundle>
 </ViewObject>

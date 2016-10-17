@@ -12,7 +12,7 @@
                         <f:facet name="toolbar"/>
                         <af:panelFormLayout id="pfl1" maxColumns="2" rows="2">
                             <af:inputText value="#{bindings.Numagreement.inputValue}"
-                                          label="#{bindings.Numagreement.hints.label}"
+                                          label="#{bindings.Numagreement.label}"
                                           required="#{bindings.Numagreement.hints.mandatory}"
                                           columns="#{bindings.Numagreement.hints.displayWidth}"
                                           maximumLength="#{bindings.Numagreement.hints.precision}"
@@ -20,7 +20,7 @@
                                 <f:validator binding="#{bindings.Numagreement.validator}"/>
                             </af:inputText>
                             <af:inputText value="#{bindings.Nomdetenteur.inputValue}"
-                                          label="#{bindings.Nomdetenteur.hints.label}"
+                                          label="#{bindings.Nomdetenteur.label}"
                                           required="#{bindings.Nomdetenteur.hints.mandatory}"
                                           columns="#{bindings.Nomdetenteur.hints.displayWidth}"
                                           maximumLength="#{bindings.Nomdetenteur.hints.precision}"
@@ -28,14 +28,15 @@
                                 <f:validator binding="#{bindings.Nomdetenteur.validator}"/>
                             </af:inputText>
                             <af:inputDate value="#{bindings.Datedebut.inputValue}"
-                                          label="#{bindings.Datedebut.hints.label}"
+                                          label="#{bindings.Datedebut.label}"
                                           required="#{bindings.Datedebut.hints.mandatory}"
                                           columns="#{bindings.Datedebut.hints.displayWidth}"
                                           shortDesc="#{bindings.Datedebut.hints.tooltip}" id="id1">
                                 <f:validator binding="#{bindings.Datedebut.validator}"/>
                                 <af:convertDateTime pattern="#{bindings.Datedebut.format}"/>
                             </af:inputDate>
-                            <af:inputDate value="#{bindings.Datefin.inputValue}" label="#{bindings.Datefin.hints.label}"
+                            <af:inputDate value="#{bindings.Datefin.inputValue}"
+                                          label="#{bindings.Datefin.label}"
                                           required="#{bindings.Datefin.hints.mandatory}"
                                           columns="#{bindings.Datefin.hints.displayWidth}"
                                           shortDesc="#{bindings.Datefin.hints.tooltip}" id="id2">
@@ -43,7 +44,7 @@
                                 <af:convertDateTime pattern="#{bindings.Datefin.format}"/>
                             </af:inputDate>
                             <af:richTextEditor value="#{bindings.Descriptioncontenuagreements.inputValue}"
-                                               label="#{bindings.Descriptioncontenuagreements.hints.label}"
+                                               label="#{bindings.Descriptioncontenuagreements.label}"
                                                required="#{bindings.Descriptioncontenuagreements.hints.mandatory}"
                                                columns="#{bindings.Descriptioncontenuagreements.hints.displayWidth}"
                                                shortDesc="#{bindings.Descriptioncontenuagreements.hints.tooltip}"
@@ -80,21 +81,21 @@
                                       id="t1">
                                 <af:column sortProperty="#{bindings.AgrementsView1.hints.Numagreement.name}"
                                            filterable="true" sortable="true"
-                                           headerText="#{bindings.AgrementsView1.hints.Numagreement.label}" id="c1">
+                                           headerText="#{bindings.Numagreement.label}" id="c1">
                                     <af:outputText value="#{row.Numagreement}"
                                                    shortDesc="#{bindings.AgrementsView1.hints.Numagreement.tooltip}"
                                                    id="ot1"/>
                                 </af:column>
                                 <af:column sortProperty="#{bindings.AgrementsView1.hints.Nomdetenteur.name}"
                                            filterable="true" sortable="true"
-                                           headerText="#{bindings.AgrementsView1.hints.Nomdetenteur.label}" id="c2">
+                                           headerText="#{bindings.Nomdetenteur.label}" id="c2">
                                     <af:outputText value="#{row.Nomdetenteur}"
                                                    shortDesc="#{bindings.AgrementsView1.hints.Nomdetenteur.tooltip}"
                                                    id="ot2"/>
                                 </af:column>
                                 <af:column sortProperty="#{bindings.AgrementsView1.hints.Datedebut.name}"
                                            filterable="true" sortable="true"
-                                           headerText="#{bindings.AgrementsView1.hints.Datedebut.label}" id="c3">
+                                           headerText="#{bindings.Datedebut.label}" id="c3">
                                     <f:facet name="filter">
                                         <af:inputDate value="#{bindings.AgrementsView1Query.queryDescriptor.filterConjunctionCriterion.criterionMap.Datedebut.value}"
                                                       id="id3">
@@ -109,7 +110,7 @@
                                 </af:column>
                                 <af:column sortProperty="#{bindings.AgrementsView1.hints.Datefin.name}"
                                            filterable="true" sortable="true"
-                                           headerText="#{bindings.AgrementsView1.hints.Datefin.label}" id="c4">
+                                           headerText="#{bindings.Datefin.label}" id="c4">
                                     <f:facet name="filter">
                                         <af:inputDate value="#{bindings.AgrementsView1Query.queryDescriptor.filterConjunctionCriterion.criterionMap.Datefin.value}"
                                                       id="id4">
@@ -124,7 +125,7 @@
                                 </af:column>
                                 <af:column sortProperty="#{bindings.AgrementsView1.hints.Descriptioncontenuagreements.name}"
                                            filterable="true" sortable="true"
-                                           headerText="#{bindings.AgrementsView1.hints.Descriptioncontenuagreements.label}"
+                                           headerText="#{bindings.Descriptioncontenuagreements.label}"
                                            id="c5">
                                     <af:outputText value="#{row.Descriptioncontenuagreements}"
                                                    shortDesc="#{bindings.AgrementsView1.hints.Descriptioncontenuagreements.tooltip}"

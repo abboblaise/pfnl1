@@ -52,7 +52,14 @@
     PrecisionRule="true"
     EntityAttrName="Codeposte"
     EntityUsage="Postecontrole"
-    AliasName="codeposte"/>
+    AliasName="codeposte">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="CODE_DU_POSTE"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Intituleposte"
     IsUnique="true"
@@ -60,7 +67,14 @@
     PrecisionRule="true"
     EntityAttrName="Intituleposte"
     EntityUsage="Postecontrole"
-    AliasName="intituleposte"/>
+    AliasName="intituleposte">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="INTITUL_U00E9_DU_POSTE"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Iddepartement"
     IsNotNull="true"
@@ -73,6 +87,8 @@
       <SchemaBasedProperties>
         <CONTROLTYPE
           Value="choice"/>
+        <LABEL
+          ResId="D_U00E9PARTEMENT"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
@@ -81,7 +97,14 @@
     PrecisionRule="true"
     EntityAttrName="Posteexport"
     EntityUsage="Postecontrole"
-    AliasName="posteexport"/>
+    AliasName="posteexport">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="EST_UN_POSTE_D_EXPORT"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewLinkAccessor
     Name="PostecontroleView"
     ViewLink="cm.gov.minfof.model.entityviewobject.FkPostecontrole1Link"
@@ -93,4 +116,8 @@
     Type="oracle.jbo.server.ViewRowImpl"
     Reversed="true"
     IsUpdateable="false"/>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="cm.gov.minfof.model.ModelBundle"/>
+  </ResourceBundle>
 </ViewObject>

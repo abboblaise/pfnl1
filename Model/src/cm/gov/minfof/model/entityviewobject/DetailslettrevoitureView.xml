@@ -131,7 +131,14 @@
     PrecisionRule="true"
     EntityAttrName="Quantite"
     EntityUsage="Detailslettrevoiture"
-    AliasName="quantite"/>
+    AliasName="quantite">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="QUANTIT_U00E9"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Observations"
     PrecisionRule="true"
@@ -150,6 +157,8 @@
       <SchemaBasedProperties>
         <CONTROLTYPE
           Value="choice"/>
+        <LABEL
+          ResId="cm.gov.minfof.model.entity.ProduitsPfnl.Idunitemesure_LABEL"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
@@ -164,6 +173,8 @@
       <SchemaBasedProperties>
         <CONTROLTYPE
           Value="choice"/>
+        <LABEL
+          ResId="PRODUIT_TRANSPORT_U00E9"/>
       </SchemaBasedProperties>
     </Properties>
     <Dependencies>
@@ -211,4 +222,8 @@
     ViewLink="cm.gov.minfof.model.entityviewobject.FkLettrevoiture1Assoc1Link"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="cm.gov.minfof.model.ModelBundle"/>
+  </ResourceBundle>
 </ViewObject>

@@ -34,23 +34,55 @@
     PrecisionRule="true"
     EntityAttrName="Datefin"
     EntityUsage="Agrements"
-    AliasName="DATEFIN"/>
+    AliasName="DATEFIN">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="DATE_DE_FIN"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Numagreement"
     PrecisionRule="true"
     EntityAttrName="Numagreement"
     EntityUsage="Agrements"
-    AliasName="NUMAGREEMENT"/>
+    AliasName="NUMAGREEMENT">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="AGR_U00E9MENT"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Descriptioncontenuagreements"
     PrecisionRule="true"
     EntityAttrName="Descriptioncontenuagreements"
     EntityUsage="Agrements"
-    AliasName="Descriptioncontenuagreements"/>
+    AliasName="Descriptioncontenuagreements">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="cm.gov.minfof.model.entity.ProduitsPfnl.Descriptionsommaire_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Nomdetenteur"
     PrecisionRule="true"
     EntityAttrName="Nomdetenteur"
     EntityUsage="Agrements"
-    AliasName="nomdetenteur"/>
+    AliasName="nomdetenteur">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="cm.gov.minfof.model.entity.Departement.Nomdepartement_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="cm.gov.minfof.model.ModelBundle"/>
+  </ResourceBundle>
 </ViewObject>

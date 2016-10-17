@@ -101,6 +101,12 @@ FROM
     <DesignTime>
       <Attr Name="_DisplaySize" Value="100"/>
     </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="NOM_SCIFENTIFIQUE"/>
+      </SchemaBasedProperties>
+    </Properties>
   </ViewAttribute>
   <ViewAttribute
     Name="Nomcommercial"
@@ -116,6 +122,12 @@ FROM
     <DesignTime>
       <Attr Name="_DisplaySize" Value="100"/>
     </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="cm.gov.minfof.model.entity.ProduitsPfnl.Nomcommercial_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
   </ViewAttribute>
   <ViewAttribute
     Name="Codeproduit"
@@ -131,6 +143,12 @@ FROM
     <DesignTime>
       <Attr Name="_DisplaySize" Value="5"/>
     </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="cm.gov.minfof.model.entity.ProduitsPfnl.Codeproduit_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
   </ViewAttribute>
   <ViewAttribute
     Name="Idfamillepfnl"
@@ -150,6 +168,8 @@ FROM
       <SchemaBasedProperties>
         <CONTROLTYPE
           Value="choice"/>
+        <LABEL
+          ResId="FAMILLE"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
@@ -163,7 +183,14 @@ FROM
     ColumnType="LONGTEXT"
     AliasName="descriptionsommaire"
     Expression="descriptionsommaire"
-    SQLType="$none$"/>
+    SQLType="$none$">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="cm.gov.minfof.model.entity.ProduitsPfnl.Descriptionsommaire_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Modeattribution"
     IsUpdateable="false"
@@ -178,6 +205,12 @@ FROM
     <DesignTime>
       <Attr Name="_DisplaySize" Value="60"/>
     </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="cm.gov.minfof.model.entity.ProduitsPfnl.Modeattribution_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
   </ViewAttribute>
   <ViewAttribute
     Name="Idcategorie"
@@ -197,6 +230,8 @@ FROM
       <SchemaBasedProperties>
         <CONTROLTYPE
           Value="choice"/>
+        <LABEL
+          ResId="cm.gov.minfof.model.entity.ProduitsPfnl.Idcategorie_LABEL"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
@@ -219,4 +254,8 @@ FROM
     Type="oracle.jbo.server.ViewRowImpl"
     Reversed="true"
     IsUpdateable="false"/>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="cm.gov.minfof.model.ModelBundle"/>
+  </ResourceBundle>
 </ViewObject>

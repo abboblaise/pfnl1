@@ -52,7 +52,14 @@
     PrecisionRule="true"
     EntityAttrName="Nomlocalite"
     EntityUsage="Localite"
-    AliasName="nomlocalite"/>
+    AliasName="nomlocalite">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="NOM_DE_LA_LOCALIT_U00E9"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Iddepartement"
     PrecisionRule="true"
@@ -64,6 +71,8 @@
       <SchemaBasedProperties>
         <CONTROLTYPE
           Value="choice"/>
+        <LABEL
+          ResId="D_U00E9PARTEMENT"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
@@ -78,4 +87,8 @@
     Type="oracle.jbo.server.ViewRowImpl"
     Reversed="true"
     IsUpdateable="false"/>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="cm.gov.minfof.model.ModelBundle"/>
+  </ResourceBundle>
 </ViewObject>

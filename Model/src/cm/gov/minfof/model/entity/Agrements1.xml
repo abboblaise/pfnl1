@@ -9,7 +9,8 @@
   DBObjectType="table"
   DBObjectName="Agrements"
   AliasName="Agrements1"
-  BindingStyle="JDBC">
+  BindingStyle="JDBC"
+  xmlns:validation="http://xmlns.oracle.com/adfm/validation">
   <Attribute
     Name="Idagrements"
     IsNotNull="true"
@@ -44,10 +45,18 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR"
-    TableName="Agrements">
+    TableName="Agrements"
+    IsNotNull="true">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="50"/>
     </DesignTime>
+    <validation:PreDefinedValidationBean
+      Name="NumagreementRule0"
+      ResId="cm.gov.minfof.model.entity.Agrements1.Numagreement_Rule_0"
+      Severity="Warning"
+      Description="Mandatory"
+      ValName="Mandatory"
+      Subtype="MANDATORY"/>
   </Attribute>
   <Attribute
     Name="Descriptioncontenuagreements"
@@ -245,6 +254,18 @@
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
   <Key
+    Name="AgrementsNumagreementCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"NUMAGREEMENT" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="AGREMENTS_NUMAGREEMENT_CHECK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="cm.gov.minfof.model.entity.Agrements1.Numagreement"/>
+    </AttrArray>
+  </Key>
+  <Key
     Name="Primary1"
     PrimaryKey="true">
     <DesignTime>
@@ -254,4 +275,8 @@
       <Item Value="cm.gov.minfof.model.entity.Agrements1.Idagrements"/>
     </AttrArray>
   </Key>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="cm.gov.minfof.model.ModelBundle"/>
+  </ResourceBundle>
 </Entity>

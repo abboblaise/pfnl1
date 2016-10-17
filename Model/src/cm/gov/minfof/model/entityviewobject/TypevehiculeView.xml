@@ -29,7 +29,14 @@
     PrecisionRule="true"
     EntityAttrName="Codevehicule"
     EntityUsage="Typevehicule"
-    AliasName="codevehicule"/>
+    AliasName="codevehicule">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="CODE"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Libelletype"
     PrecisionRule="true"
@@ -41,4 +48,8 @@
     ViewLink="cm.gov.minfof.model.entityviewobject.TypeVehiculeToVehiculeLink"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="cm.gov.minfof.model.ModelBundle"/>
+  </ResourceBundle>
 </ViewObject>

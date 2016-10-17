@@ -30,7 +30,6 @@ public class AgrementsImpl extends EntityImpl {
         Descriptioncontenuagreements,
         Nomdetenteur;
         private static AttributesEnum[] vals = null;
-        ;
         private static final int firstIndex = 0;
 
         protected int index() {
