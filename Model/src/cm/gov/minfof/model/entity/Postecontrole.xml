@@ -13,7 +13,8 @@
   BatchThreshold="1"
   DefClass="cm.gov.minfof.model.entity.PostecontroleDefImpl"
   CollClass="cm.gov.minfof.model.entity.PostecontroleCollImpl"
-  RowClass="cm.gov.minfof.model.entity.PostecontroleImpl">
+  RowClass="cm.gov.minfof.model.entity.PostecontroleImpl"
+  xmlns:validation="http://xmlns.oracle.com/adfm/validation">
   <DesignTime>
     <Attr Name="_codeGenFlag2" Value="Init|Delete|Access|DML|Def|Coll"/>
     <Attr Name="_isCodegen" Value="true"/>
@@ -44,6 +45,12 @@
     <DesignTime>
       <Attr Name="_DisplaySize" Value="10"/>
     </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="CODE_DU_POSTE"/>
+      </SchemaBasedProperties>
+    </Properties>
   </Attribute>
   <Attribute
     Name="Intituleposte"
@@ -55,10 +62,16 @@
     Type="java.lang.String"
     ColumnType="VARCHAR"
     TableName="postecontrole"
-    DefaultValue="entrez une valeur">
+    DefaultValue="entrez un nom">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="45"/>
     </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="NOM_DU_POSTE"/>
+      </SchemaBasedProperties>
+    </Properties>
   </Attribute>
   <Attribute
     Name="Iddepartement"
@@ -72,6 +85,12 @@
     <DesignTime>
       <Attr Name="_DisplaySize" Value="19"/>
     </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="D_U00E9PARTEMENT"/>
+      </SchemaBasedProperties>
+    </Properties>
   </Attribute>
   <Attribute
     Name="Posteexport"
@@ -83,6 +102,12 @@
     <DesignTime>
       <Attr Name="_DisplaySize" Value="3"/>
     </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="EXPORTATION_"/>
+      </SchemaBasedProperties>
+    </Properties>
   </Attribute>
   <AccessorAttribute
     Name="Postecontrole"
@@ -105,6 +130,17 @@
     AssociationOtherEnd="cm.gov.minfof.model.entity.DepToPosteAssoc.Postecontrole"
     Type="cm.gov.minfof.model.entity.DepartementImpl"
     IsUpdateable="true"/>
+  <Key
+    Name="AltKey"
+    AltKey="true">
+    <DesignTime>
+      <Attr Name="_isUnique" Value="true"/>
+      <Attr Name="_DBObjectName" Value="postecontrole"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="cm.gov.minfof.model.entity.Postecontrole.Codeposte"/>
+    </AttrArray>
+  </Key>
   <Key
     Name="CodeposteUnique">
     <DesignTime>
@@ -157,4 +193,24 @@
       <Item Value="cm.gov.minfof.model.entity.Postecontrole.Iddepartement"/>
     </AttrArray>
   </Key>
+  <validation:UniqueKeyValidationBean
+    Name="PostecontroleRule0"
+    ResId="UN_POSTE_DE_CODE__0__EXISTE_D_U00E9J_U00E0"
+    KeyName="AltKey">
+    <validation:OnAttributes>
+      <validation:Item
+        Value="Codeposte"/>
+    </validation:OnAttributes>
+    <validation:ResExpressions
+      Name="PostecontroleRule0_ResExprList">
+      <validation:Expression
+        Name="0"
+        trustMode="untrusted"
+        CodeSourceName="PostecontroleRow"/>
+    </validation:ResExpressions>
+  </validation:UniqueKeyValidationBean>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="cm.gov.minfof.model.ModelBundle"/>
+  </ResourceBundle>
 </Entity>

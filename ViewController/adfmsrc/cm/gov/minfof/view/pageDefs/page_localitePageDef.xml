@@ -60,5 +60,6 @@
     </tree>
     <action IterBinding="LocaliteView4Iterator" id="CreateInsert" InstanceName="AppModuleDataControl.LocaliteView4"
             DataControl="AppModuleDataControl" RequiresUpdateModel="true" Action="createInsertRow"/>
+    <action id="Rollback" RequiresUpdateModel="false" Action="rollbackTransaction" DataControl="AppModuleDataControl"/>
   </bindings>
 </pageDefinition>

@@ -117,7 +117,7 @@
                                         <af:button text="#{viewcontrollerBundle.FICHE_D_EXPORTATION}" id="pt_b20"
                                                    destination="page_export.jsf"/>
                                         <af:spacer width="10" height="10" id="pt_s19"/>
-                                        <af:button text="#{viewcontrollerBundle.FICHE_DE_TRASIT}" id="pt_b21"
+                                        <af:button text="#{viewcontrollerBundle.FICHE_DE_TRANSIT}" id="pt_b21"
                                                    destination="page_lettrevoiture.jsf"/>
                                     </af:panelGroupLayout>
                                 </af:showDetailItem>

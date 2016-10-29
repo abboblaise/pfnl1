@@ -55,6 +55,8 @@ public class ExportpfnlImpl extends EntityImpl {
             return vals;
         }
     }
+
+
     public static final int IDEXPORTPFNL = AttributesEnum.Idexportpfnl.index();
     public static final int IDPERMIS = AttributesEnum.Idpermis.index();
     public static final int IDPERMISSIONNAIRE = AttributesEnum.Idpermissionnaire.index();
@@ -73,6 +75,14 @@ public class ExportpfnlImpl extends EntityImpl {
      */
     public ExportpfnlImpl() {
     }
+
+    /**
+     * @return the definition object for this instance class.
+     */
+    public static synchronized EntityDefImpl getDefinitionObject() {
+        return EntityDefImpl.findDefObject("cm.gov.minfof.model.entity.Exportpfnl");
+    }
+
 
     /**
      * Gets the attribute value for Idexportpfnl, using the alias name Idexportpfnl.
@@ -231,6 +241,7 @@ public class ExportpfnlImpl extends EntityImpl {
         return (RowIterator) getAttributeInternal(DETAILSEXPORTPFNL);
     }
 
+
     /**
      * @param idexportpfnl key constituent
 
@@ -238,13 +249,6 @@ public class ExportpfnlImpl extends EntityImpl {
      */
     public static Key createPrimaryKey(BigDecimal idexportpfnl) {
         return new Key(new Object[] { idexportpfnl });
-    }
-
-    /**
-     * @return the definition object for this instance class.
-     */
-    public static synchronized EntityDefImpl getDefinitionObject() {
-        return EntityDefImpl.findDefObject("cm.gov.minfof.model.entity.Exportpfnl");
     }
 
     /**

@@ -48,6 +48,12 @@
                                     <af:spacer width="10" height="10" id="s2"/>
                                     <af:button text="#{viewcontrollerBundle.SUPPRIMER}" id="b3"
                                                action="#{PostecBean.SupprimerPoste}"/>
+                                    <af:spacer width="10" height="10" id="s3"/>
+                                    <af:button actionListener="#{bindings.Rollback.execute}"
+                                               text="#{viewcontrollerBundle.ANNULER}"
+                                               disabled="#{!bindings.Rollback.enabled}" immediate="true" id="b4">
+                                        <af:resetActionListener/>
+                                    </af:button>
                                 </af:panelGroupLayout>
                             </f:facet>
                         </af:panelFormLayout>

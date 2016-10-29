@@ -50,5 +50,6 @@
     <action IterBinding="AgrementsView1Iterator" id="Delete" InstanceName="AppModuleDataControl.AgrementsView1"
             DataControl="AppModuleDataControl" RequiresUpdateModel="false" Action="removeCurrentRow"/>
     <action id="Commit" DataControl="AppModuleDataControl" RequiresUpdateModel="true" Action="commitTransaction"/>
+    <action id="Rollback" RequiresUpdateModel="false" Action="rollbackTransaction" DataControl="AppModuleDataControl"/>
   </bindings>
 </pageDefinition>

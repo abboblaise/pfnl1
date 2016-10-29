@@ -40,7 +40,7 @@
     ColumnType="VARCHAR"
     TableName="Pays"
     IsNotNull="true"
-    DefaultValue="Entrez un nom">
+    DefaultValue="entrez un nom">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="50"/>
     </DesignTime>

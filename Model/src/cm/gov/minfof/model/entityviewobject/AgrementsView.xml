@@ -28,7 +28,14 @@
     PrecisionRule="true"
     EntityAttrName="Datedebut"
     EntityUsage="Agrements"
-    AliasName="Datedebut"/>
+    AliasName="Datedebut">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="20"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Datefin"
     PrecisionRule="true"
@@ -39,6 +46,8 @@
       <SchemaBasedProperties>
         <LABEL
           ResId="DATE_DE_FIN"/>
+        <DISPLAYWIDTH
+          Value="20"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
@@ -52,6 +61,8 @@
       <SchemaBasedProperties>
         <LABEL
           ResId="AGR_U00E9MENT"/>
+        <DISPLAYWIDTH
+          Value="20"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
@@ -78,6 +89,8 @@
       <SchemaBasedProperties>
         <LABEL
           ResId="cm.gov.minfof.model.entity.Departement.Nomdepartement_LABEL"/>
+        <DISPLAYWIDTH
+          Value="20"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>

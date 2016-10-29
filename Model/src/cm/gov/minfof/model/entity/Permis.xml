@@ -74,7 +74,12 @@
     SQLType="DATE"
     Type="java.sql.Date"
     ColumnType="DATE"
-    TableName="permis">
+    TableName="permis"
+    IsNotNull="true">
+    <TransientExpression
+      Name="ExpressionScript"
+      trustMode="untrusted"
+      CodeSourceName="PermisRow"/>
     <Properties>
       <SchemaBasedProperties>
         <LABEL
@@ -133,7 +138,9 @@
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
     ColumnType="BIGINT"
-    TableName="permis">
+    TableName="permis"
+    IsNotNull="true"
+    DefaultValue="1">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="19"/>
     </DesignTime>
@@ -150,7 +157,9 @@
     SQLType="TINYINT"
     Type="java.lang.Integer"
     ColumnType="TINYINT"
-    TableName="permis">
+    TableName="permis"
+    IsNotNull="true"
+    DefaultValue="1">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="3"/>
     </DesignTime>
@@ -217,6 +226,42 @@
     AssociationOtherEnd="cm.gov.minfof.model.entity.ExportToPermisAssoc.Permis"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <Key
+    Name="PermisDatedelivranceCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"datedelivrance" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="Permis_Datedelivrance_Check"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="cm.gov.minfof.model.entity.Permis.Datedelivrance"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="PermisIdpermissionnaireCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"idpermissionnaire" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="Permis_Idpermissionnaire_Check"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="cm.gov.minfof.model.entity.Permis.Idpermissionnaire"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="PermisTypedocumentCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"typedocument" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="Permis_Typedocument_Check"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="cm.gov.minfof.model.entity.Permis.Typedocument"/>
+    </AttrArray>
+  </Key>
   <Key
     Name="Primary1"
     PrimaryKey="true">

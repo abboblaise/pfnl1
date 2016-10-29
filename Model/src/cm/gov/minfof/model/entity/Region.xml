@@ -41,7 +41,7 @@
     Type="java.lang.String"
     ColumnType="VARCHAR"
     TableName="regions"
-    DefaultValue="Entrez un nom">
+    DefaultValue="entrez un nom">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="80"/>
     </DesignTime>

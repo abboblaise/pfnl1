@@ -15,7 +15,8 @@
                                   required="#{bindings.Idregions.hints.mandatory}"
                                   columns="#{bindings.Idregions.hints.displayWidth}"
                                   maximumLength="#{bindings.Idregions.hints.precision}"
-                                  shortDesc="#{bindings.Idregions.hints.tooltip}" id="it5" visible="false">
+                                  shortDesc="#{bindings.Idregions.hints.tooltip}" id="it5" visible="false"
+                                  partialTriggers="b2 b4 b1 b3">
                         <f:validator binding="#{bindings.Idregions.validator}"/>
                         <af:convertNumber groupingUsed="false" pattern="#{bindings.Idregions.format}"/>
                     </af:inputText>
@@ -23,14 +24,16 @@
                                   required="#{bindings.Coderegion.hints.mandatory}"
                                   columns="#{bindings.Coderegion.hints.displayWidth}"
                                   maximumLength="#{bindings.Coderegion.hints.precision}"
-                                  shortDesc="#{bindings.Coderegion.hints.tooltip}" id="it1">
+                                  shortDesc="#{bindings.Coderegion.hints.tooltip}" id="it1"
+                                  partialTriggers="b2 b1 b3">
                         <f:validator binding="#{bindings.Coderegion.validator}"/>
                     </af:inputText>
                     <af:inputText value="#{bindings.Nomregion.inputValue}" label="#{bindings.Nomregion.hints.label}"
                                   required="#{bindings.Nomregion.hints.mandatory}"
                                   columns="#{bindings.Nomregion.hints.displayWidth}"
                                   maximumLength="#{bindings.Nomregion.hints.precision}"
-                                  shortDesc="#{bindings.Nomregion.hints.tooltip}" id="it2">
+                                  shortDesc="#{bindings.Nomregion.hints.tooltip}" id="it2"
+                                  partialTriggers="b2 b4 b1 b3" immediate="false">
                         <f:validator binding="#{bindings.Nomregion.validator}"/>
                     </af:inputText>
                     <af:inputText value="#{bindings.Cheflieuregion.inputValue}"
@@ -38,7 +41,8 @@
                                   required="#{bindings.Cheflieuregion.hints.mandatory}"
                                   columns="#{bindings.Cheflieuregion.hints.displayWidth}"
                                   maximumLength="#{bindings.Cheflieuregion.hints.precision}"
-                                  shortDesc="#{bindings.Cheflieuregion.hints.tooltip}" id="it3">
+                                  shortDesc="#{bindings.Cheflieuregion.hints.tooltip}" id="it3"
+                                  partialTriggers="b2 b4 b1 b3">
                         <f:validator binding="#{bindings.Cheflieuregion.validator}"/>
                     </af:inputText>
                     <af:inputText value="#{bindings.Descriptionregions.inputValue}"
@@ -46,15 +50,18 @@
                                   required="#{bindings.Descriptionregions.hints.mandatory}"
                                   columns="#{bindings.Descriptionregions.hints.displayWidth}"
                                   maximumLength="#{bindings.Descriptionregions.hints.precision}"
-                                  shortDesc="#{bindings.Descriptionregions.hints.tooltip}" id="it4" rows="3">
+                                  shortDesc="#{bindings.Descriptionregions.hints.tooltip}" id="it4" rows="3"
+                                  partialTriggers="b2 b4 b1 b3">
                         <f:validator binding="#{bindings.Descriptionregions.validator}"/>
                     </af:inputText>
                     <f:facet name="footer">
                         <af:panelGroupLayout id="pgl1">
-                            <af:button
+                                    <af:button text="#{viewcontrollerBundle.NOUVEAU}" disabled="#{!bindings.Create.enabled}" id="b5"
+                                               action="#{regionBean.creer}" visible="false"/>
+                                    <af:button
                                        text="#{viewcontrollerBundle.NOUVEAU}"
                                        disabled="#{!bindings.CreateInsert.enabled}" id="b2"
-                                       action="#{regionBean.creerInserer}"/>
+                                       action="#{regionBean.creerInserer}" visible="true"/>
                             <af:spacer width="10" height="10" id="s1"/>
                             <af:button text="#{viewcontrollerBundle.ENREGISTRER}" id="b4"
                                        action="#{regionBean.enregistreRegion}"/>
@@ -66,8 +73,13 @@
                                        text="#{viewcontrollerBundle.SUPPRIMER}"
                                        disabled="#{!bindings.Delete.enabled}" id="b3"
                                        action="#{regionBean.supprimeRegion}"/>
-                        </af:panelGroupLayout>
-                    </f:facet>
+                                    <af:spacer width="10" height="10" id="s3"/>
+                                    <af:button actionListener="#{bindings.Rollback.execute}"
+                                               text="#{viewcontrollerBundle.ANNULER}" immediate="true" id="b6">
+                                        <af:resetActionListener/>
+                                    </af:button>
+                                </af:panelGroupLayout>
+                            </f:facet>
                 </af:panelFormLayout>
             </af:panelBox>
             <af:panelBox text="#{viewcontrollerBundle.LISTE_DES_R_U00E9GIONS}" id="pb2">
@@ -85,7 +97,8 @@
                               rowSelection="single" fetchSize="#{bindings.RegionView1.rangeSize}"
                               filterModel="#{bindings.RegionView1Query.queryDescriptor}" filterVisible="true"
                               queryListener="#{bindings.RegionView1Query.processQuery}" varStatus="vs" id="t1"
-                              width="696" partialTriggers=":::b2 :::b3 :::b4" autoHeightRows="10" scrollPolicy="auto">
+                              width="696" partialTriggers=":::b2 :::b3 :::b4 :::b5" autoHeightRows="10" scrollPolicy="auto"
+                              immediate="true">
                         <af:column sortProperty="#{bindings.RegionView1.hints.Idregions.name}" filterable="true"
                                    sortable="true" headerText="#{bindings.RegionView1.hints.Idregions.label}" id="c1"
                                    visible="false">

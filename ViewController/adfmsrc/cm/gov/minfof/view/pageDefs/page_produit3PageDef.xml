@@ -97,5 +97,6 @@
     <list IterBinding="ProduitsPfnlView12Iterator" StaticList="false" Uses="LOV_Idcategorie" id="Idcategorie"
           DTSupportsMRU="true" SelectItemValueMode="ListObject"/>
     <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
+    <action id="Rollback" RequiresUpdateModel="false" Action="rollbackTransaction" DataControl="AppModuleDataControl"/>
   </bindings>
 </pageDefinition>

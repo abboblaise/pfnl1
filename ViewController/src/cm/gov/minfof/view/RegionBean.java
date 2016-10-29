@@ -63,4 +63,15 @@ public class RegionBean {
         }
         return null;
     }
+
+    public String creer() {
+        BindingContainer bindings = getBindings();
+        OperationBinding operationBinding = bindings.getOperationBinding("Create");
+        Object result = operationBinding.execute();
+        executemethode("Commit");
+        if (!operationBinding.getErrors().isEmpty()) {
+            return null;
+        }
+        return null;
+    }
 }

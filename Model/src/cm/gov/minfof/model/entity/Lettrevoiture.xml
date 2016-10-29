@@ -39,6 +39,14 @@
     <DesignTime>
       <Attr Name="_DisplaySize" Value="19"/>
     </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="cm.gov.minfof.model.entity.Lettrevoiture.Idpermissionnaire_LABEL"/>
+        <DISPLAYWIDTH
+          Value="20"/>
+      </SchemaBasedProperties>
+    </Properties>
   </Attribute>
   <Attribute
     Name="Idvehicule"
@@ -50,6 +58,14 @@
     <DesignTime>
       <Attr Name="_DisplaySize" Value="19"/>
     </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="V_U00E9HICULE"/>
+        <DISPLAYWIDTH
+          Value="20"/>
+      </SchemaBasedProperties>
+    </Properties>
   </Attribute>
   <Attribute
     Name="Idagrement"
@@ -62,6 +78,14 @@
     <DesignTime>
       <Attr Name="_DisplaySize" Value="19"/>
     </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="AGREMENT"/>
+        <DISPLAYWIDTH
+          Value="20"/>
+      </SchemaBasedProperties>
+    </Properties>
   </Attribute>
   <Attribute
     Name="Iddepartementdestination"
@@ -74,6 +98,14 @@
     <DesignTime>
       <Attr Name="_DisplaySize" Value="19"/>
     </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="D_U00E9PARTEMENT_DESTINATION"/>
+        <DISPLAYWIDTH
+          Value="20"/>
+      </SchemaBasedProperties>
+    </Properties>
   </Attribute>
   <Attribute
     Name="Nomconducteur"
@@ -86,6 +118,14 @@
     <DesignTime>
       <Attr Name="_DisplaySize" Value="45"/>
     </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="NOM_CONDUCTEUR"/>
+        <DISPLAYWIDTH
+          Value="20"/>
+      </SchemaBasedProperties>
+    </Properties>
   </Attribute>
   <Attribute
     Name="Idpostechargement"
@@ -98,6 +138,14 @@
     <DesignTime>
       <Attr Name="_DisplaySize" Value="19"/>
     </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="POSTE_CHARGEMENT"/>
+        <DISPLAYWIDTH
+          Value="20"/>
+      </SchemaBasedProperties>
+    </Properties>
   </Attribute>
   <Attribute
     Name="Numerolettrevoiture"
@@ -112,6 +160,14 @@
     <DesignTime>
       <Attr Name="_DisplaySize" Value="10"/>
     </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="cm.gov.minfof.model.entity.Lettrevoiture.Numerolettrevoiture_LABEL"/>
+        <DISPLAYWIDTH
+          Value="20"/>
+      </SchemaBasedProperties>
+    </Properties>
   </Attribute>
   <Attribute
     Name="Idpermis"
@@ -124,6 +180,14 @@
     <DesignTime>
       <Attr Name="_DisplaySize" Value="19"/>
     </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="cm.gov.minfof.model.entity.Lettrevoiture.Idpermis_LABEL"/>
+        <DISPLAYWIDTH
+          Value="20"/>
+      </SchemaBasedProperties>
+    </Properties>
   </Attribute>
   <AccessorAttribute
     Name="Lettrevoiture"
@@ -326,4 +390,8 @@
       <Item Value="cm.gov.minfof.model.entity.Lettrevoiture.Idvehicule"/>
     </AttrArray>
   </Key>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="cm.gov.minfof.model.ModelBundle"/>
+  </ResourceBundle>
 </Entity>

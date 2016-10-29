@@ -40,7 +40,6 @@ public class ProduitsPfnlImpl extends EntityImpl {
         PartiesProduitsPfnl2,
         Categorieproduit;
         private static AttributesEnum[] vals = null;
-        ;
         private static final int firstIndex = 0;
 
         protected int index() {

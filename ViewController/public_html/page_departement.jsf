@@ -58,11 +58,15 @@
                         <af:convertNumber groupingUsed="false" pattern="#{bindings.Iddepartements.format}"/>
                     </af:inputText>
                     <f:facet name="footer">
-                        <af:panelGroupLayout id="pgl1">
-                            <af:button
+                                <af:panelGroupLayout id="pgl1">
+                                    <af:button
+                                               text="#{viewcontrollerBundle.NOUVEAU}"
+                                               disabled="#{!bindings.Create.enabled}" id="b5"
+                                               action="#{departementBean.creer}" visible="false"/>
+                                    <af:button
                                        text="#{viewcontrollerBundle.NOUVEAU}"
                                        disabled="#{!bindings.CreateInsert.enabled}" id="b2"
-                                       action="#{departementBean.nouveauDept}"/>
+                                       action="#{departementBean.nouveauDept}" visible="true"/>
                             <af:button text="#{viewcontrollerBundle.ENREGISTRER}" id="b1"
                                        disabled="#{!bindings.Commit.enabled}"
                                        action="#{departementBean.enregistreDepartement}" visible="false"/>
@@ -74,7 +78,12 @@
                                        text="#{viewcontrollerBundle.SUPPRIMER}"
                                        disabled="#{!bindings.Delete.enabled}" id="b4"
                                        action="#{departementBean.supprimeDepartement}"/>
-                        </af:panelGroupLayout>
+                                    <af:spacer width="10" height="10" id="s1"/>
+                                    <af:button actionListener="#{bindings.Rollback.execute}"
+                                               text="#{viewcontrollerBundle.ANNULER}" immediate="true" id="b6">
+                                        <af:resetActionListener/>
+                                    </af:button>
+                                </af:panelGroupLayout>
                     </f:facet>
                 </af:panelFormLayout>
             </af:panelBox>
@@ -92,7 +101,7 @@
                               rowSelection="single" fetchSize="#{bindings.DepartementView3.rangeSize}"
                               filterModel="#{bindings.DepartementView3Query.queryDescriptor}" filterVisible="true"
                               queryListener="#{bindings.DepartementView3Query.processQuery}" varStatus="vs" id="t1"
-                              partialTriggers=":::b2 :::b4">
+                              partialTriggers=":::b2 :::b4 :::b5">
                         <af:column sortProperty="#{bindings.DepartementView3.hints.Iddepartements.name}"
                                    filterable="true" sortable="true"
                                    headerText="#{bindings.DepartementView3.hints.Iddepartements.label}" id="c1"

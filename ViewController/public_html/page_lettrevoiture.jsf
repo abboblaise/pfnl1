@@ -3,18 +3,18 @@
 <f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
         xmlns:c="http://java.sun.com/jsp/jstl/core">
     <c:set var="viewcontrollerBundle" value="#{adfBundle['cm.gov.minfof.view.ViewControllerBundle']}"/>
-    <af:document title="page_lettrevoiture.jsf" id="d1">
+    <af:document title="#{viewcontrollerBundle.LETTRE_DE_VOITURE}" id="d1">
         <af:messages id="m1"/>
         <af:form id="f1">
             <af:pageTemplate viewId="/TemplateGlobal.jsf" id="pt1">
                 <f:facet name="content">
-                    <af:panelSplitter id="ps1" splitterPosition="510">
+                    <af:panelSplitter id="ps1" splitterPosition="503">
                         <f:facet name="first">
-                            <af:panelSplitter id="ps2" orientation="vertical" splitterPosition="238">
+                            <af:panelSplitter id="ps2" orientation="vertical" splitterPosition="195">
                                 <f:facet name="first">
                                     <af:panelBox text="#{viewcontrollerBundle.EDITION_DES_DOCUMENTS_DE_TRANSIT}" id="pb1">
                                         <f:facet name="toolbar"/>
-                                        <af:panelFormLayout id="pfl1">
+                                        <af:panelFormLayout id="pfl1" rows="4">
                                             <af:inputText value="#{bindings.Numerolettrevoiture.inputValue}"
                                                           label="#{bindings.Numerolettrevoiture.hints.label}"
                                                           required="#{bindings.Numerolettrevoiture.hints.mandatory}"
@@ -88,12 +88,16 @@
                                                                actionListener="#{bindings.CreateInsert.execute}"/>
                                                     <af:spacer width="10" height="10" id="s1"/>
                                                     <af:button actionListener="#{bindings.Commit.execute}"
-                                                               text="#{viewcontrollerBundle.ENREGISTRER}"
-                                                               disabled="#{!bindings.Commit.enabled}" id="b4"/>
+                                                               text="#{viewcontrollerBundle.ENREGISTRER}" id="b4"/>
                                                     <af:spacer width="10" height="10" id="s2"/>
-                                                    <af:button text="#{viewcontrollerBundle.SUPPRIMER}"
-                                                               disabled="#{!bindings.Delete.enabled}" id="b3"
+                                                    <af:button text="#{viewcontrollerBundle.SUPPRIMER}" id="b3"
                                                                actionListener="#{bindings.Delete.execute}"/>
+                                                    <af:spacer width="10" height="10" id="s4"/>
+                                                    <af:button actionListener="#{bindings.Rollback.execute}"
+                                                               text="#{viewcontrollerBundle.ANNULER}"
+                                                               immediate="true" id="b6">
+                                                        <af:resetActionListener/>
+                                                    </af:button>
                                                 </af:panelGroupLayout>
                                             </f:facet>
                                         </af:panelFormLayout>
@@ -121,7 +125,7 @@
                                                 <af:column sortProperty="#{bindings.LettrevoitureView1.hints.Numerolettrevoiture.name}"
                                                            filterable="true" sortable="true"
                                                            headerText="#{bindings.LettrevoitureView1.hints.Numerolettrevoiture.label}"
-                                                           id="c1">
+                                                           id="c1" width="101">
                                                     <af:outputText value="#{row.Numerolettrevoiture}"
                                                                    shortDesc="#{bindings.LettrevoitureView1.hints.Numerolettrevoiture.tooltip}"
                                                                    id="ot1"/>
@@ -129,7 +133,7 @@
                                                 <af:column sortProperty="#{bindings.LettrevoitureView1.hints.Idpermis.name}"
                                                            filterable="true" sortable="true"
                                                            headerText="#{bindings.LettrevoitureView1.hints.Idpermis.label}"
-                                                           id="c2">
+                                                           id="c2" width="99">
                                                     <af:selectOneChoice value="#{row.bindings.Idpermis.inputValue}"
                                                                         label="#{row.bindings.Idpermis.label}"
                                                                         required="#{bindings.LettrevoitureView1.hints.Idpermis.mandatory}"
@@ -142,7 +146,7 @@
                                                 <af:column sortProperty="#{bindings.LettrevoitureView1.hints.Idpermissionnaire.name}"
                                                            filterable="true" sortable="true"
                                                            headerText="#{bindings.LettrevoitureView1.hints.Idpermissionnaire.label}"
-                                                           id="c3">
+                                                           id="c3" width="100">
                                                     <af:selectOneChoice value="#{row.bindings.Idpermissionnaire.inputValue}"
                                                                         label="#{row.bindings.Idpermissionnaire.label}"
                                                                         required="#{bindings.LettrevoitureView1.hints.Idpermissionnaire.mandatory}"
@@ -156,7 +160,7 @@
                                                 <af:column sortProperty="#{bindings.LettrevoitureView1.hints.Idagrement.name}"
                                                            filterable="true" sortable="true"
                                                            headerText="#{bindings.LettrevoitureView1.hints.Idagrement.label}"
-                                                           id="c4">
+                                                           id="c4" width="100">
                                                     <af:selectOneChoice value="#{row.bindings.Idagrement.inputValue}"
                                                                         label="#{row.bindings.Idagrement.label}"
                                                                         required="#{bindings.LettrevoitureView1.hints.Idagrement.mandatory}"
@@ -170,7 +174,7 @@
                                                 <af:column sortProperty="#{bindings.LettrevoitureView1.hints.Idvehicule.name}"
                                                            filterable="true" sortable="true"
                                                            headerText="#{bindings.LettrevoitureView1.hints.Idvehicule.label}"
-                                                           id="c5">
+                                                           id="c5" width="100">
                                                     <af:selectOneChoice value="#{row.bindings.Idvehicule.inputValue}"
                                                                         label="#{row.bindings.Idvehicule.label}"
                                                                         required="#{bindings.LettrevoitureView1.hints.Idvehicule.mandatory}"
@@ -224,66 +228,75 @@
                             </af:panelSplitter>
                         </f:facet>
                         <f:facet name="second">
-                            <af:panelSplitter id="ps3" orientation="vertical" splitterPosition="301">
+                            <af:panelSplitter id="ps3" orientation="vertical" splitterPosition="171">
                                 <f:facet name="first">
                                     <af:panelBox text="#{viewcontrollerBundle.EDITION_DU_DETAIL}" id="pb3">
                                         <f:facet name="toolbar"/>
-                                        <af:panelFormLayout id="pfl2">
-                                            <af:selectOneChoice value="#{bindings.Idlettrevoiture.inputValue}"
-                                                                label="#{bindings.Idlettrevoiture.label}"
-                                                                required="#{bindings.Idlettrevoiture.hints.mandatory}"
-                                                                shortDesc="#{bindings.Idlettrevoiture.hints.tooltip}"
-                                                                id="soc17" autoSubmit="true" readOnly="true"
-                                                                rendered="false">
-                                                <f:selectItems value="#{bindings.Idlettrevoiture.items}" id="si17"/>
-                                                <f:validator binding="#{bindings.Idlettrevoiture.validator}"/>
-                                            </af:selectOneChoice>
-                                            <af:selectOneChoice value="#{bindings.Idpartieproduitpfnl.inputValue}"
-                                                                label="#{bindings.Idpartieproduitpfnl.label}"
-                                                                required="#{bindings.Idpartieproduitpfnl.hints.mandatory}"
-                                                                shortDesc="#{bindings.Idpartieproduitpfnl.hints.tooltip}"
-                                                                id="soc13" partialTriggers="soc17">
-                                                <f:selectItems value="#{bindings.Idpartieproduitpfnl.items}" id="si13"/>
-                                                <f:validator binding="#{bindings.Idpartieproduitpfnl.validator}"/>
-                                            </af:selectOneChoice>
-                                            <af:selectOneChoice value="#{bindings.Idunitemesure.inputValue}"
-                                                                label="#{bindings.Idunitemesure.label}"
-                                                                required="#{bindings.Idunitemesure.hints.mandatory}"
-                                                                shortDesc="#{bindings.Idunitemesure.hints.tooltip}"
-                                                                id="soc14">
-                                                <f:selectItems value="#{bindings.Idunitemesure.items}" id="si14"/>
-                                                <f:validator binding="#{bindings.Idunitemesure.validator}"/>
-                                            </af:selectOneChoice>
-                                            <af:inputText value="#{bindings.Quantite.inputValue}"
-                                                          label="#{bindings.Quantite.hints.label}"
-                                                          required="#{bindings.Quantite.hints.mandatory}"
-                                                          columns="#{bindings.Quantite.hints.displayWidth}"
-                                                          maximumLength="#{bindings.Quantite.hints.precision}"
-                                                          shortDesc="#{bindings.Quantite.hints.tooltip}" id="it3">
-                                                <f:validator binding="#{bindings.Quantite.validator}"/>
-                                                <af:convertNumber groupingUsed="false"
-                                                                  pattern="#{bindings.Quantite.format}"/>
-                                            </af:inputText>
-                                            <af:richTextEditor value="#{bindings.Observations.inputValue}"
-                                                               label="#{bindings.Observations.hints.label}"
-                                                               required="#{bindings.Observations.hints.mandatory}"
-                                                               columns="73"
-                                                               shortDesc="#{bindings.Observations.hints.tooltip}"
-                                                               id="it4" rows="4">
-                                                
-                                            </af:richTextEditor>
-                                            <f:facet name="footer">
-                                                <af:panelGroupLayout id="pgl2">
-                                                    <af:button text="#{viewcontrollerBundle.NOUVEAU}" id="b2"
-                                                               actionListener="#{bindings.CreateInsert1.execute}"
-                                                               disabled="#{!bindings.CreateInsert1.enabled}"/>
-                                                    <af:spacer width="10" height="10" id="s3"/>
-                                                    <af:button actionListener="#{bindings.Delete1.execute}"
-                                                               text="#{viewcontrollerBundle.SUPPRIMER}" disabled="#{!bindings.Delete1.enabled}"
-                                                               id="b5"/>
-                                                </af:panelGroupLayout>
-                                            </f:facet>
-                                        </af:panelFormLayout>
+                                        <af:panelTabbed position="above" id="pt2">
+                                            <af:showDetailItem id="tab1" text="#{viewcontrollerBundle.INFOS}"
+                                                               disclosed="true">
+                                                <af:panelFormLayout id="pfl2" rows="2">
+                                                    <af:selectOneChoice value="#{bindings.Idlettrevoiture.inputValue}"
+                                                                        label="#{bindings.Idlettrevoiture.label}"
+                                                                        required="#{bindings.Idlettrevoiture.hints.mandatory}"
+                                                                        shortDesc="#{bindings.Idlettrevoiture.hints.tooltip}"
+                                                                        id="soc17" autoSubmit="true" readOnly="true"
+                                                                        rendered="false">
+                                                        <f:selectItems value="#{bindings.Idlettrevoiture.items}"
+                                                                       id="si17"/>
+                                                        <f:validator binding="#{bindings.Idlettrevoiture.validator}"/>
+                                                    </af:selectOneChoice>
+                                                    <af:selectOneChoice value="#{bindings.Idpartieproduitpfnl.inputValue}"
+                                                                        label="#{bindings.Idpartieproduitpfnl.label}"
+                                                                        required="#{bindings.Idpartieproduitpfnl.hints.mandatory}"
+                                                                        shortDesc="#{bindings.Idpartieproduitpfnl.hints.tooltip}"
+                                                                        id="soc13" partialTriggers="soc17">
+                                                        <f:selectItems value="#{bindings.Idpartieproduitpfnl.items}"
+                                                                       id="si13"/>
+                                                        <f:validator binding="#{bindings.Idpartieproduitpfnl.validator}"/>
+                                                    </af:selectOneChoice>
+                                                    <af:selectOneChoice value="#{bindings.Idunitemesure.inputValue}"
+                                                                        label="#{bindings.Idunitemesure.label}"
+                                                                        required="#{bindings.Idunitemesure.hints.mandatory}"
+                                                                        shortDesc="#{bindings.Idunitemesure.hints.tooltip}"
+                                                                        id="soc14">
+                                                        <f:selectItems value="#{bindings.Idunitemesure.items}"
+                                                                       id="si14"/>
+                                                        <f:validator binding="#{bindings.Idunitemesure.validator}"/>
+                                                    </af:selectOneChoice>
+                                                    <af:inputText value="#{bindings.Quantite.inputValue}"
+                                                                  label="#{bindings.Quantite.hints.label}"
+                                                                  required="#{bindings.Quantite.hints.mandatory}"
+                                                                  columns="5"
+                                                                  maximumLength="#{bindings.Quantite.hints.precision}"
+                                                                  shortDesc="#{bindings.Quantite.hints.tooltip}"
+                                                                  id="it3">
+                                                        <f:validator binding="#{bindings.Quantite.validator}"/>
+                                                        <af:convertNumber groupingUsed="false"
+                                                                          pattern="#{bindings.Quantite.format}"/>
+                                                    </af:inputText>
+                                                    <f:facet name="footer">
+                                                        <af:panelGroupLayout id="pgl2">
+                                                            <af:button text="#{viewcontrollerBundle.NOUVEAU}" id="b2"
+                                                                       actionListener="#{bindings.CreateInsert1.execute}"
+                                                                       disabled="#{!bindings.CreateInsert1.enabled}"/>
+                                                            <af:spacer width="10" height="10" id="s3"/>
+                                                            <af:button actionListener="#{bindings.Delete1.execute}"
+                                                                       text="#{viewcontrollerBundle.SUPPRIMER}"
+                                                                       disabled="#{!bindings.Delete1.enabled}" id="b5"/>
+                                                        </af:panelGroupLayout>
+                                                    </f:facet>
+                                                </af:panelFormLayout>
+                                            </af:showDetailItem>
+                                            <af:showDetailItem id="tab2" text="#{viewcontrollerBundle.DESCRIPTION}">
+                                                <af:richTextEditor value="#{bindings.Observations.inputValue}"
+                                                                   label="#{bindings.Observations.hints.label}"
+                                                                   required="#{bindings.Observations.hints.mandatory}"
+                                                                   columns="73"
+                                                                   shortDesc="#{bindings.Observations.hints.tooltip}"
+                                                                   id="it4" rows="2"/>
+                                            </af:showDetailItem>
+                                        </af:panelTabbed>
                                     </af:panelBox>
                                 </f:facet>
                                 <f:facet name="second">

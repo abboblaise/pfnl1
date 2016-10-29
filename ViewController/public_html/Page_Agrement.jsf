@@ -10,58 +10,72 @@
                 <f:facet name="content">
                     <af:panelBox text="#{viewcontrollerBundle.EDITION_DES_AGREMENTS}" id="pb1">
                         <f:facet name="toolbar"/>
-                        <af:panelFormLayout id="pfl1" maxColumns="2" rows="2">
-                            <af:inputText value="#{bindings.Numagreement.inputValue}"
-                                          label="#{bindings.Numagreement.label}"
-                                          required="#{bindings.Numagreement.hints.mandatory}"
-                                          columns="#{bindings.Numagreement.hints.displayWidth}"
-                                          maximumLength="#{bindings.Numagreement.hints.precision}"
-                                          shortDesc="#{bindings.Numagreement.hints.tooltip}" id="it1">
-                                <f:validator binding="#{bindings.Numagreement.validator}"/>
-                            </af:inputText>
-                            <af:inputText value="#{bindings.Nomdetenteur.inputValue}"
-                                          label="#{bindings.Nomdetenteur.label}"
-                                          required="#{bindings.Nomdetenteur.hints.mandatory}"
-                                          columns="#{bindings.Nomdetenteur.hints.displayWidth}"
-                                          maximumLength="#{bindings.Nomdetenteur.hints.precision}"
-                                          shortDesc="#{bindings.Nomdetenteur.hints.tooltip}" id="it2">
-                                <f:validator binding="#{bindings.Nomdetenteur.validator}"/>
-                            </af:inputText>
-                            <af:inputDate value="#{bindings.Datedebut.inputValue}"
-                                          label="#{bindings.Datedebut.label}"
-                                          required="#{bindings.Datedebut.hints.mandatory}"
-                                          columns="#{bindings.Datedebut.hints.displayWidth}"
-                                          shortDesc="#{bindings.Datedebut.hints.tooltip}" id="id1">
-                                <f:validator binding="#{bindings.Datedebut.validator}"/>
-                                <af:convertDateTime pattern="#{bindings.Datedebut.format}"/>
-                            </af:inputDate>
-                            <af:inputDate value="#{bindings.Datefin.inputValue}"
-                                          label="#{bindings.Datefin.label}"
-                                          required="#{bindings.Datefin.hints.mandatory}"
-                                          columns="#{bindings.Datefin.hints.displayWidth}"
-                                          shortDesc="#{bindings.Datefin.hints.tooltip}" id="id2">
-                                <f:validator binding="#{bindings.Datefin.validator}"/>
-                                <af:convertDateTime pattern="#{bindings.Datefin.format}"/>
-                            </af:inputDate>
-                            <af:richTextEditor value="#{bindings.Descriptioncontenuagreements.inputValue}"
-                                               label="#{bindings.Descriptioncontenuagreements.label}"
-                                               required="#{bindings.Descriptioncontenuagreements.hints.mandatory}"
-                                               columns="#{bindings.Descriptioncontenuagreements.hints.displayWidth}"
-                                               shortDesc="#{bindings.Descriptioncontenuagreements.hints.tooltip}"
-                                               id="it3"/>
-                            <f:facet name="footer">
-                                <af:panelGroupLayout id="pgl1">
-                                    <af:button text="#{viewcontrollerBundle.NOUVEAU}" id="b1"
-                                               action="#{AgrementBean.CreerAgrement}"/>
-                                    <af:spacer width="10" height="10" id="s1"/>
-                                    <af:button text="#{viewcontrollerBundle.ENREGISTRER}" id="b2"
-                                               action="#{AgrementBean.EnregitrerAgrement}"/>
-                                    <af:spacer width="10" height="10" id="s2"/>
-                                    <af:button text="#{viewcontrollerBundle.SUPPRIMER}" id="b3"
-                                               action="#{AgrementBean.SupprimerAgrement}"/>
-                                </af:panelGroupLayout>
-                            </f:facet>
-                        </af:panelFormLayout>
+                        <af:panelTabbed position="above" id="pt2" inlineStyle="width:556px;">
+                            <af:showDetailItem id="tab1" text="#{viewcontrollerBundle.INFOS_AGR_U00E9MENTS}">
+                                <af:panelFormLayout id="pfl1" maxColumns="2" rows="2">
+                                    <af:inputText value="#{bindings.Numagreement.inputValue}"
+                                                  label="#{bindings.Numagreement.label}"
+                                                  required="#{bindings.Numagreement.hints.mandatory}"
+                                                  columns="#{bindings.Numagreement.hints.displayWidth}"
+                                                  maximumLength="#{bindings.Numagreement.hints.precision}"
+                                                  shortDesc="#{bindings.Numagreement.hints.tooltip}" id="it1">
+                                        <f:validator binding="#{bindings.Numagreement.validator}"/>
+                                    </af:inputText>
+                                    <af:inputText value="#{bindings.Nomdetenteur.inputValue}"
+                                                  label="#{bindings.Nomdetenteur.label}"
+                                                  required="#{bindings.Nomdetenteur.hints.mandatory}"
+                                                  columns="#{bindings.Nomdetenteur.hints.displayWidth}"
+                                                  maximumLength="#{bindings.Nomdetenteur.hints.precision}"
+                                                  shortDesc="#{bindings.Nomdetenteur.hints.tooltip}" id="it2">
+                                        <f:validator binding="#{bindings.Nomdetenteur.validator}"/>
+                                    </af:inputText>
+                                    <af:inputDate value="#{bindings.Datedebut.inputValue}"
+                                                  label="#{bindings.Datedebut.label}"
+                                                  required="#{bindings.Datedebut.hints.mandatory}"
+                                                  columns="#{bindings.Datedebut.hints.displayWidth}"
+                                                  shortDesc="#{bindings.Datedebut.hints.tooltip}" id="id1">
+                                        <f:validator binding="#{bindings.Datedebut.validator}"/>
+                                        <af:convertDateTime pattern="#{bindings.Datedebut.format}"/>
+                                    </af:inputDate>
+                                    <af:inputDate value="#{bindings.Datefin.inputValue}"
+                                                  label="#{bindings.Datefin.label}"
+                                                  required="#{bindings.Datefin.hints.mandatory}"
+                                                  columns="#{bindings.Datefin.hints.displayWidth}"
+                                                  shortDesc="#{bindings.Datefin.hints.tooltip}" id="id2">
+                                        <f:validator binding="#{bindings.Datefin.validator}"/>
+                                        <af:convertDateTime pattern="#{bindings.Datefin.format}"/>
+                                    </af:inputDate>
+                                    <f:facet name="footer">
+                                        <af:spacer width="10" height="10" id="s3"/>
+                                        <af:panelGroupLayout id="pgl1">
+                                            <af:button text="#{viewcontrollerBundle.NOUVEAU}" id="b1"
+                                                       action="#{AgrementBean.CreerAgrement}"/>
+                                            <af:spacer width="10" height="10" id="s1"/>
+                                            <af:button text="#{viewcontrollerBundle.ENREGISTRER}" id="b2"
+                                                       action="#{AgrementBean.EnregitrerAgrement}"/>
+                                            <af:spacer width="10" height="10" id="s2"/>
+                                            <af:button text="#{viewcontrollerBundle.SUPPRIMER}" id="b3"
+                                                       action="#{AgrementBean.SupprimerAgrement}"/>
+                                            <af:spacer width="10" height="10" id="s4"/>
+                                            <af:button actionListener="#{bindings.Rollback.execute}"
+                                                       text="#{viewcontrollerBundle.ANNULER}"
+                                                       disabled="#{!bindings.Rollback.enabled}" immediate="true"
+                                                       id="b4">
+                                                <af:resetActionListener/>
+                                            </af:button>
+                                        </af:panelGroupLayout>
+                                    </f:facet>
+                                </af:panelFormLayout>
+                            </af:showDetailItem>
+                            <af:showDetailItem id="tab2" text="#{viewcontrollerBundle.DESCRIPTION}">
+                                <af:richTextEditor value="#{bindings.Descriptioncontenuagreements.inputValue}"
+                                                   label="#{bindings.Descriptioncontenuagreements.label}"
+                                                   required="#{bindings.Descriptioncontenuagreements.hints.mandatory}"
+                                                   columns="#{bindings.Descriptioncontenuagreements.hints.displayWidth}"
+                                                   shortDesc="#{bindings.Descriptioncontenuagreements.hints.tooltip}"
+                                                   id="it3"/>
+                            </af:showDetailItem>
+                        </af:panelTabbed>
                     </af:panelBox>
                     <af:panelBox text="#{viewcontrollerBundle.LISTE_DES_AGREMENTS}" id="pb2">
                         <f:facet name="toolbar"/>
@@ -78,24 +92,24 @@
                                       rowSelection="single" fetchSize="#{bindings.AgrementsView1.rangeSize}"
                                       filterModel="#{bindings.AgrementsView1Query.queryDescriptor}" filterVisible="true"
                                       queryListener="#{bindings.AgrementsView1Query.processQuery}" varStatus="vs"
-                                      id="t1">
+                                      id="t1" width="1226">
                                 <af:column sortProperty="#{bindings.AgrementsView1.hints.Numagreement.name}"
                                            filterable="true" sortable="true"
-                                           headerText="#{bindings.Numagreement.label}" id="c1">
+                                           headerText="#{bindings.Numagreement.label}" id="c1" width="121">
                                     <af:outputText value="#{row.Numagreement}"
                                                    shortDesc="#{bindings.AgrementsView1.hints.Numagreement.tooltip}"
                                                    id="ot1"/>
                                 </af:column>
                                 <af:column sortProperty="#{bindings.AgrementsView1.hints.Nomdetenteur.name}"
                                            filterable="true" sortable="true"
-                                           headerText="#{bindings.Nomdetenteur.label}" id="c2">
+                                           headerText="#{bindings.Nomdetenteur.label}" id="c2" width="136">
                                     <af:outputText value="#{row.Nomdetenteur}"
                                                    shortDesc="#{bindings.AgrementsView1.hints.Nomdetenteur.tooltip}"
                                                    id="ot2"/>
                                 </af:column>
                                 <af:column sortProperty="#{bindings.AgrementsView1.hints.Datedebut.name}"
                                            filterable="true" sortable="true"
-                                           headerText="#{bindings.Datedebut.label}" id="c3">
+                                           headerText="#{bindings.Datedebut.label}" id="c3" width="116">
                                     <f:facet name="filter">
                                         <af:inputDate value="#{bindings.AgrementsView1Query.queryDescriptor.filterConjunctionCriterion.criterionMap.Datedebut.value}"
                                                       id="id3">
@@ -110,7 +124,7 @@
                                 </af:column>
                                 <af:column sortProperty="#{bindings.AgrementsView1.hints.Datefin.name}"
                                            filterable="true" sortable="true"
-                                           headerText="#{bindings.Datefin.label}" id="c4">
+                                           headerText="#{bindings.Datefin.label}" id="c4" width="102">
                                     <f:facet name="filter">
                                         <af:inputDate value="#{bindings.AgrementsView1Query.queryDescriptor.filterConjunctionCriterion.criterionMap.Datefin.value}"
                                                       id="id4">
@@ -126,7 +140,7 @@
                                 <af:column sortProperty="#{bindings.AgrementsView1.hints.Descriptioncontenuagreements.name}"
                                            filterable="true" sortable="true"
                                            headerText="#{bindings.Descriptioncontenuagreements.label}"
-                                           id="c5">
+                                           id="c5" width="296">
                                     <af:outputText value="#{row.Descriptioncontenuagreements}"
                                                    shortDesc="#{bindings.AgrementsView1.hints.Descriptioncontenuagreements.tooltip}"
                                                    id="ot5"/>

@@ -40,7 +40,7 @@
     ColumnType="VARCHAR"
     TableName="departements"
     IsNotNull="true"
-    DefaultValue="Entrez un nom">
+    DefaultValue="entrez un nom">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="50"/>
     </DesignTime>
@@ -82,6 +82,12 @@
     <DesignTime>
       <Attr Name="_DisplaySize" Value="19"/>
     </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="R_U00E9GION"/>
+      </SchemaBasedProperties>
+    </Properties>
   </Attribute>
   <Attribute
     Name="Nomcheflieu"

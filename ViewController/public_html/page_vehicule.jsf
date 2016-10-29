@@ -8,6 +8,7 @@
         <af:form id="f1">
             <af:pageTemplate viewId="/TemplateGlobal.jsf" id="pt1">
                 <f:facet name="content">
+                    <af:spacer width="10" height="10" id="s6"/>
                     <af:panelBox text="#{viewcontrollerBundle.EDITION_DES_V_U00E9HICULES}" id="pb1">
                         <f:facet name="toolbar"/>
                         <af:panelGroupLayout id="pgl3" halign="center" inlineStyle="width:656px;">
@@ -59,29 +60,33 @@
                                               partialTriggers="b1 b3 b2" disabled="true">
                                     <f:validator binding="#{bindings.Immatriculation.validator}"/>
                                 </af:inputText>
+                                <f:facet name="footer">
+                                    <af:spacer width="10" height="20" id="s1"/>
+                                    <af:panelGroupLayout id="pgl1" halign="center">
+                                        <af:button actionListener="#{bindings.CreateInsert.execute}"
+                                                   text="#{viewcontrollerBundle.NOUVEAU}"
+                                                   disabled="#{!bindings.CreateInsert.enabled}" id="b1"/>
+                                        <af:spacer width="10" height="10" id="s2"/>
+                                        <af:button actionListener="#{bindings.Commit.execute}"
+                                                   text="#{viewcontrollerBundle.ENREGISTRER}" id="b3"/>
+                                        <af:spacer width="10" height="10" id="s3"/>
+                                        <af:button actionListener="#{bindings.Delete.execute}"
+                                                   text="#{viewcontrollerBundle.SUPPRIMER}"
+                                                   disabled="#{!bindings.Delete.enabled}" id="b2"/>
+                                        <af:spacer width="10" height="10" id="s5"/>
+                                        <af:button actionListener="#{bindings.Rollback.execute}"
+                                                   text="#{viewcontrollerBundle.ANNULER}" immediate="true" id="b4">
+                                            <af:resetActionListener/>
+                                        </af:button>
+                                    </af:panelGroupLayout>
+                                </f:facet>
                             </af:panelFormLayout>
-                        </af:panelGroupLayout>
-                        <af:panelGroupLayout id="pgl2">
-                            <af:spacer width="10" height="10" id="s4"/>
-                            <af:spacer width="10" height="10" id="s1"/>
-                        </af:panelGroupLayout>
-                        <af:panelGroupLayout id="pgl1" halign="center">
-                            <af:button actionListener="#{bindings.CreateInsert.execute}"
-                                       text="#{viewcontrollerBundle.NOUVEAU}"
-                                       disabled="#{!bindings.CreateInsert.enabled}" id="b1"/>
-                            <af:spacer width="10" height="10" id="s2"/>
-                            <af:button actionListener="#{bindings.Commit.execute}"
-                                       text="#{viewcontrollerBundle.ENREGISTRER}" id="b3"/>
-                            <af:spacer width="10" height="10" id="s3"/>
-                            <af:button actionListener="#{bindings.Delete.execute}"
-                                       text="#{viewcontrollerBundle.SUPPRIMER}"
-                                       disabled="#{!bindings.Delete.enabled}" id="b2"/>
                         </af:panelGroupLayout>
                     </af:panelBox>
                     <af:panelBox text="#{viewcontrollerBundle.LISTE_DES_V_U00E9HICULES}" id="pb2">
                         <f:facet name="toolbar"/>
                         <af:panelGroupLayout id="pgl4" halign="center">
-                            <af:panelCollection id="pc1" inlineStyle="width:627px;">
+                            <af:panelCollection id="pc1" inlineStyle="width:900px;">
                                 <f:facet name="menus"/>
                                 <f:facet name="toolbar"/>
                                 <af:table value="#{bindings.VehiculeView1.collectionModel}" var="row"
@@ -94,11 +99,11 @@
                                           filterModel="#{bindings.VehiculeView1Query.queryDescriptor}"
                                           filterVisible="true"
                                           queryListener="#{bindings.VehiculeView1Query.processQuery}" varStatus="vs"
-                                          id="t1" partialTriggers=":::b1 :::b2">
+                                          id="t1" partialTriggers=":::b1 :::b2 :::b3 :::b4">
                                     <af:column sortProperty="#{bindings.VehiculeView1.hints.Idtransporteur.name}"
                                                filterable="true" sortable="true"
                                                headerText="#{bindings.VehiculeView1.hints.Idtransporteur.label}"
-                                               id="c1">
+                                               id="c1" width="100">
                                         <af:selectOneChoice value="#{row.bindings.Idtransporteur.inputValue}"
                                                             label="#{row.bindings.Idtransporteur.label}"
                                                             required="#{bindings.VehiculeView1.hints.Idtransporteur.mandatory}"
@@ -110,7 +115,8 @@
                                     </af:column>
                                     <af:column sortProperty="#{bindings.VehiculeView1.hints.Idregion.name}"
                                                filterable="true" sortable="true"
-                                               headerText="#{bindings.VehiculeView1.hints.Idregion.label}" id="c2">
+                                               headerText="#{bindings.VehiculeView1.hints.Idregion.label}" id="c2"
+                                               width="100">
                                         <af:selectOneChoice value="#{row.bindings.Idregion.inputValue}"
                                                             label="#{row.bindings.Idregion.label}"
                                                             required="#{bindings.VehiculeView1.hints.Idregion.mandatory}"
@@ -123,7 +129,7 @@
                                     <af:column sortProperty="#{bindings.VehiculeView1.hints.Idtypevehicule.name}"
                                                filterable="true" sortable="true"
                                                headerText="#{bindings.VehiculeView1.hints.Idtypevehicule.label}"
-                                               id="c3">
+                                               id="c3" width="100">
                                         <af:selectOneChoice value="#{row.bindings.Idtypevehicule.inputValue}"
                                                             label="#{row.bindings.Idtypevehicule.label}"
                                                             required="#{bindings.VehiculeView1.hints.Idtypevehicule.mandatory}"
@@ -135,7 +141,8 @@
                                     </af:column>
                                     <af:column sortProperty="#{bindings.VehiculeView1.hints.Codechiffre.name}"
                                                filterable="true" sortable="true"
-                                               headerText="#{bindings.VehiculeView1.hints.Codechiffre.label}" id="c4">
+                                               headerText="#{bindings.VehiculeView1.hints.Codechiffre.label}" id="c4"
+                                               width="100">
                                         <af:outputText value="#{row.Codechiffre}"
                                                        shortDesc="#{bindings.VehiculeView1.hints.Codechiffre.tooltip}"
                                                        id="ot1">
@@ -145,7 +152,8 @@
                                     </af:column>
                                     <af:column sortProperty="#{bindings.VehiculeView1.hints.SuffixLettre.name}"
                                                filterable="true" sortable="true"
-                                               headerText="#{bindings.VehiculeView1.hints.SuffixLettre.label}" id="c5">
+                                               headerText="#{bindings.VehiculeView1.hints.SuffixLettre.label}" id="c5"
+                                               width="100">
                                         <af:outputText value="#{row.SuffixLettre}"
                                                        shortDesc="#{bindings.VehiculeView1.hints.SuffixLettre.tooltip}"
                                                        id="ot2"/>
@@ -153,7 +161,7 @@
                                     <af:column sortProperty="#{bindings.VehiculeView1.hints.Immatriculation.name}"
                                                sortable="true"
                                                headerText="#{bindings.VehiculeView1.hints.Immatriculation.label}"
-                                               filterable="true" id="c6">
+                                               filterable="true" id="c6" width="226">
                                         <af:outputText value="#{row.Immatriculation}"
                                                        shortDesc="#{bindings.VehiculeView1.hints.Immatriculation.tooltip}"
                                                        id="ot3"/>

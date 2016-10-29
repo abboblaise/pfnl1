@@ -64,12 +64,15 @@
                                             <af:button text="#{viewcontrollerBundle.NOUVEAU}"
                                                        disabled="#{!bindings.CreateInsert.enabled}" id="b2"
                                                        action="#{exportPfnlBean.creerExport}"/>
+                                            <af:spacer width="10" height="10" id="s2"/>
                                             <af:button text="#{viewcontrollerBundle.ENREGISTRER}" id="b1"
                                                        action="#{exportPfnlBean.enregExport}"/>
+                                            <af:spacer width="10" height="10" id="s3"/>
                                             <af:button actionListener="#{bindings.Commit.execute}" text="Commit" id="b7"
                                                        visible="false"/>
                                             <af:button text="#{viewcontrollerBundle.SUPPRIMER}" id="b3"
                                                        action="#{exportPfnlBean.deleteExport}"/>
+                                            <af:spacer width="10" height="10" id="s4"/>
                                             <af:button
                                                        text="#{viewcontrollerBundle.ANNULER}" immediate="true"
                                                        id="b4" action="#{exportPfnlBean.annulerExport}">

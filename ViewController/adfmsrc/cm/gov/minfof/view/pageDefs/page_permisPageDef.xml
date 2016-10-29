@@ -97,5 +97,6 @@
     </attributeValues>
     <list IterBinding="DetailpermisView6Iterator" StaticList="false" Uses="LOV_Idpermis" id="Idpermis"
           DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
+    <action id="Rollback" RequiresUpdateModel="false" Action="rollbackTransaction" DataControl="AppModuleDataControl"/>
   </bindings>
 </pageDefinition>

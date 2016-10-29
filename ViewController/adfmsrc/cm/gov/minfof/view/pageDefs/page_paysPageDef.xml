@@ -31,5 +31,6 @@
     <action IterBinding="PaysView1Iterator" id="CreateInsert" RequiresUpdateModel="true" Action="createInsertRow"/>
     <action IterBinding="PaysView1Iterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
     <action id="Rollback" RequiresUpdateModel="false" Action="rollbackTransaction" DataControl="AppModuleDataControl"/>
+    <action IterBinding="PaysView1Iterator" id="Create" RequiresUpdateModel="true" Action="createRow"/>
   </bindings>
 </pageDefinition>

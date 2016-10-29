@@ -33,7 +33,8 @@
                         <f:selectItems value="#{bindings.Originepnfl.items}" id="si1"/>
                         <f:validator binding="#{bindings.Originepnfl.validator}"/>
                     </af:selectOneChoice>
-                    <f:facet name="footer">
+                            <af:spacer width="10" height="10" id="s4"/>
+                            <f:facet name="footer">
                         <af:panelGroupLayout id="pgl1">
                             <af:button
                                        text="#{viewcontrollerBundle.NOUVEAU}"

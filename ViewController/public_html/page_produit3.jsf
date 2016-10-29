@@ -98,6 +98,12 @@
                                                     <af:button text="#{viewcontrollerBundle.SUPPRIMER}"
                                                                disabled="#{!bindings.Delete.enabled}" id="b3"
                                                                action="#{produitPfnl3.supprimeProduitPfnl}"/>
+                                                    <af:spacer width="10" height="10" id="s4"/>
+                                                    <af:button actionListener="#{bindings.Rollback.execute}"
+                                                               text="#{viewcontrollerBundle.ANNULER}" disabled="#{!bindings.Rollback.enabled}"
+                                                               immediate="true" id="b6">
+                                                        <af:resetActionListener/>
+                                                    </af:button>
                                                 </af:panelGroupLayout>
                                             </f:facet>
                                         </af:panelFormLayout>

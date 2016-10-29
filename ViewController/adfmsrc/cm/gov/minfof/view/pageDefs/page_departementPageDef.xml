@@ -56,5 +56,7 @@
     <action IterBinding="DepartementView3Iterator" id="CreateInsert" RequiresUpdateModel="true"
             Action="createInsertRow"/>
     <action IterBinding="DepartementView3Iterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
+    <action IterBinding="DepartementView3Iterator" id="Create" RequiresUpdateModel="true" Action="createRow"/>
+    <action id="Rollback" RequiresUpdateModel="false" Action="rollbackTransaction" DataControl="AppModuleDataControl"/>
   </bindings>
 </pageDefinition>

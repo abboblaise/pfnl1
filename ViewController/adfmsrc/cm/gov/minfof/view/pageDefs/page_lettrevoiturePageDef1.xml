@@ -85,5 +85,6 @@
             Action="removeCurrentRow"/>
     <list IterBinding="DetailslettrevoitureView5Iterator" StaticList="false" Uses="LOV_Idlettrevoiture"
           id="Idlettrevoiture" DTSupportsMRU="true" SelectItemValueMode="ListObject"/>
+    <action id="Rollback" RequiresUpdateModel="false" Action="rollbackTransaction" DataControl="AppModuleDataControl"/>
   </bindings>
 </pageDefinition>

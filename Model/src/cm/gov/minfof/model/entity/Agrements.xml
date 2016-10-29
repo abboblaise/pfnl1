@@ -34,14 +34,33 @@
     SQLType="DATE"
     Type="java.sql.Date"
     ColumnType="DATE"
-    TableName="Agrements"/>
+    TableName="Agrements"
+    IsNotNull="true">
+    <TransientExpression
+      Name="ExpressionScript"
+      trustMode="untrusted"
+      CodeSourceName="AgrementsRow"/>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="DATE_DE_D_U00E9BUT"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
   <Attribute
     Name="Datefin"
     ColumnName="DATEFIN"
     SQLType="DATE"
     Type="java.sql.Date"
     ColumnType="DATE"
-    TableName="Agrements"/>
+    TableName="Agrements">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="DATE_DE_FIN"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
   <Attribute
     Name="Numagreement"
     Precision="50"
@@ -50,7 +69,8 @@
     Type="java.lang.String"
     ColumnType="VARCHAR"
     TableName="Agrements"
-    IsNotNull="true">
+    IsNotNull="true"
+    DefaultValue="entrez une valeur">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="50"/>
     </DesignTime>
@@ -61,6 +81,12 @@
       Description="Mandatory"
       ValName="Mandatory"
       Subtype="MANDATORY"/>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="NUM_U00E9RO_AGR_U00E9MENT"/>
+      </SchemaBasedProperties>
+    </Properties>
   </Attribute>
   <Attribute
     Name="Descriptioncontenuagreements"
@@ -68,7 +94,14 @@
     SQLType="STRUCT"
     Type="java.lang.String"
     ColumnType="LONGTEXT"
-    TableName="Agrements"/>
+    TableName="Agrements">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="cm.gov.minfof.model.entity.ProduitsPfnl.Descriptionsommaire_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
   <Attribute
     Name="Nomdetenteur"
     Precision="50"
@@ -76,11 +109,43 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR"
-    TableName="Agrements">
+    TableName="Agrements"
+    IsNotNull="true"
+    DefaultValue="entrez un nom">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="50"/>
     </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="NOM_DU_D_U00E9TENTEUR"/>
+      </SchemaBasedProperties>
+    </Properties>
   </Attribute>
+  <Key
+    Name="AgrementsDatedebutCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"Datedebut" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="Agrements_Datedebut_Check"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="cm.gov.minfof.model.entity.Agrements.Datedebut"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="AgrementsNomdetenteurCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"nomdetenteur" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="Agrements_Nomdetenteur_Check"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="cm.gov.minfof.model.entity.Agrements.Nomdetenteur"/>
+    </AttrArray>
+  </Key>
   <Key
     Name="AgrementsNumagreementCheck">
     <DesignTime>

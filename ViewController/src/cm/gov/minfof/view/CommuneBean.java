@@ -55,4 +55,14 @@ public class CommuneBean {
         }
         return null;
     }
+
+    public String annuler() {
+        BindingContainer bindings = getBindings();
+        OperationBinding operationBinding = bindings.getOperationBinding("Rollback");
+        Object result = operationBinding.execute();
+        if (!operationBinding.getErrors().isEmpty()) {
+            return null;
+        }
+        return null;
+    }
 }

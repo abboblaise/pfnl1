@@ -57,7 +57,8 @@
     Type="java.lang.Integer"
     ColumnType="TINYINT"
     TableName="ORIGINESPNFLS"
-    IsNotNull="true">
+    IsNotNull="true"
+    DefaultValue="1">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="3"/>
     </DesignTime>

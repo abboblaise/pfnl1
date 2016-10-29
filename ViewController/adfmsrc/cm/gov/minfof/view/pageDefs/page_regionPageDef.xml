@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.20.47" id="page_regionPageDef"
-                Package="cm.gov.minfof.view.pageDefs">
+                Package="cm.gov.minfof.view.pageDefs" SkipValidation="skipDataControls">
   <parameters/>
   <executables>
     <variableIterator id="variables"/>
@@ -48,5 +48,7 @@
     <action IterBinding="RegionView1Iterator" id="CreateInsert" RequiresUpdateModel="true" Action="createInsertRow"/>
     <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
     <action IterBinding="RegionView1Iterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
+    <action IterBinding="RegionView1Iterator" id="Create" RequiresUpdateModel="true" Action="createRow"/>
+    <action id="Rollback" RequiresUpdateModel="false" Action="rollbackTransaction" DataControl="AppModuleDataControl"/>
   </bindings>
 </pageDefinition>

@@ -24,7 +24,9 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR"
-    TableName="PermissionnairesPNFL">
+    TableName="PermissionnairesPNFL"
+    IsNotNull="true"
+    DefaultValue="entrez un nom">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="100"/>
     </DesignTime>
@@ -83,6 +85,8 @@
       <SchemaBasedProperties>
         <DISPLAYWIDTH
           Value="20"/>
+        <LABEL
+          ResId="cm.gov.minfof.model.entity.Permissionnairespnfl.Nbreemploye_LABEL"/>
       </SchemaBasedProperties>
     </Properties>
   </Attribute>
@@ -210,6 +214,12 @@
     <DesignTime>
       <Attr Name="_DisplaySize" Value="19"/>
     </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="cm.gov.minfof.model.entity.Permissionnairespnfl.Idpermissionnairespnfl_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
   </Attribute>
   <Attribute
     Name="Nui"
@@ -359,6 +369,18 @@
     AssociationOtherEnd="cm.gov.minfof.model.entity.ExportToPermissionnaireAssoc.Permissionnairespnfl"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <Key
+    Name="PermissionnairespnflNomouraisonsocialeCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"Nomouraisonsociale" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="Permissionnairespnfl_Nomourais"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="cm.gov.minfof.model.entity.Permissionnairespnfl.Nomouraisonsociale"/>
+    </AttrArray>
+  </Key>
   <Key
     Name="Primary1"
     PrimaryKey="true">

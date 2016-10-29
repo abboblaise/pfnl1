@@ -62,12 +62,20 @@
                                                                text="#{viewcontrollerBundle.NOUVEAU}"
                                                                disabled="#{!bindings.CreateInsert.enabled}" id="b2"
                                                                action="#{collecteBean.creerCollecte}"/>
+                                                    <af:spacer width="10" height="10" id="s2"/>
                                                     <af:button text="#{viewcontrollerBundle.ENREGISTRER}" id="b3"
                                                                disabled="false"
                                                                actionListener="#{bindings.Commit.execute}"/>
+                                                    <af:spacer width="10" height="10" id="s3"/>
                                                     <af:button
                                                                text="#{viewcontrollerBundle.SUPPRIMER}"
                                                                id="b7" action="#{collecteBean.supprimeCollecte}"/>
+                                                    <af:spacer width="10" height="10" id="s4"/>
+                                                    <af:button actionListener="#{bindings.Rollback.execute}"
+                                                               text="#{viewcontrollerBundle.ANNULER}"
+                                                               immediate="true" id="b6">
+                                                        <af:resetActionListener/>
+                                                    </af:button>
                                                 </af:panelGroupLayout>
                                             </f:facet>
                                         </af:panelFormLayout>

@@ -12,7 +12,8 @@
   BindingStyle="JDBC"
   RowClass="cm.gov.minfof.model.entity.ProduitsPfnlImpl"
   DefClass="cm.gov.minfof.model.entity.ProduitsPfnlDefImpl"
-  CollClass="cm.gov.minfof.model.entity.ProduitsPfnlCollImpl">
+  CollClass="cm.gov.minfof.model.entity.ProduitsPfnlCollImpl"
+  xmlns:validation="http://xmlns.oracle.com/adfm/validation">
   <DesignTime>
     <Attr Name="_codeGenFlag2" Value="Init|Delete|Access|DML|Def|Coll|VarAccess"/>
     <Attr Name="_isCodegen" Value="true"/>
@@ -57,7 +58,9 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR"
-    TableName="produitspfnl">
+    TableName="produitspfnl"
+    IsNotNull="true"
+    DefaultValue="entrez un nom">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="100"/>
     </DesignTime>
@@ -148,7 +151,9 @@
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
     ColumnType="BIGINT"
-    TableName="produitspfnl">
+    TableName="produitspfnl"
+    IsNotNull="true"
+    DefaultValue="1">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="19"/>
     </DesignTime>
@@ -216,6 +221,17 @@
     Type="cm.gov.minfof.model.entity.CategorieproduitImpl"
     IsUpdateable="true"/>
   <Key
+    Name="AltKey"
+    AltKey="true">
+    <DesignTime>
+      <Attr Name="_isUnique" Value="true"/>
+      <Attr Name="_DBObjectName" Value="produitspfnl"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="cm.gov.minfof.model.entity.ProduitsPfnl.Codeproduit"/>
+    </AttrArray>
+  </Key>
+  <Key
     Name="Codeproduit1">
     <DesignTime>
       <Attr Name="_isUnique" Value="true"/>
@@ -236,6 +252,18 @@
     </AttrArray>
   </Key>
   <Key
+    Name="ProduitspfnlIdcategorieCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"idcategorie" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="PRODUITSPFNL_IDCATEGORIE_CHECK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="cm.gov.minfof.model.entity.ProduitsPfnl.Idcategorie"/>
+    </AttrArray>
+  </Key>
+  <Key
     Name="ProduitspfnlIdunitemesureCheck">
     <DesignTime>
       <Attr Name="_isNotNull" Value="true"/>
@@ -244,6 +272,18 @@
       <Attr Name="_DBObjectName" Value="Produitspfnl_Idunitemesure_Che"/>
     </DesignTime>
     <AttrArray Name="Attributes"/>
+  </Key>
+  <Key
+    Name="ProduitspfnlNomcommercialCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"nomcommercial" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="PRODUITSPFNL_NOMCOMMERCIAL_CHE"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="cm.gov.minfof.model.entity.ProduitsPfnl.Nomcommercial"/>
+    </AttrArray>
   </Key>
   <Key
     Name="ProduitspfnlIbfk1">
@@ -279,6 +319,22 @@
       <Item Value="cm.gov.minfof.model.entity.ProduitsPfnl.Idcategorie"/>
     </AttrArray>
   </Key>
+  <validation:UniqueKeyValidationBean
+    Name="ProduitsPfnlRule0"
+    ResId="LE_CODE__0__EXISTE_D_U00E9J_U00E0__LE_CODE_D_UN_PRODUIT_DOIT__U00EATRE_UNIQUE_"
+    KeyName="AltKey">
+    <validation:OnAttributes>
+      <validation:Item
+        Value="Codeproduit"/>
+    </validation:OnAttributes>
+    <validation:ResExpressions
+      Name="ProduitsPfnlRule0_ResExprList">
+      <validation:Expression
+        Name="0"
+        trustMode="untrusted"
+        CodeSourceName="ProduitsPfnlRow"/>
+    </validation:ResExpressions>
+  </validation:UniqueKeyValidationBean>
   <ResourceBundle>
     <PropertiesBundle
       PropertiesFile="cm.gov.minfof.model.ModelBundle"/>

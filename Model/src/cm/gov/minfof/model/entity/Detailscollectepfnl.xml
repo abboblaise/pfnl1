@@ -69,7 +69,9 @@
     SQLType="FLOAT"
     Type="java.lang.Float"
     ColumnType="FLOAT"
-    TableName="detailscollectepfnl">
+    TableName="detailscollectepfnl"
+    IsNotNull="true"
+    DefaultValue="1">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="12"/>
     </DesignTime>
@@ -319,6 +321,18 @@
     AssociationOtherEnd="cm.gov.minfof.model.entity.DetailCollToDocOfficielAssoc.Detailscollectepfnl"
     Type="cm.gov.minfof.model.entity.PermisImpl"
     IsUpdateable="true"/>
+  <Key
+    Name="DetailscollectepfnlQuantiteCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"quantite" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="Detailscollectepfnl_Quantite_C"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="cm.gov.minfof.model.entity.Detailscollectepfnl.Quantite"/>
+    </AttrArray>
+  </Key>
   <Key
     Name="Primary1"
     PrimaryKey="true">

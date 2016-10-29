@@ -41,6 +41,7 @@
                                 <f:validator binding="#{bindings.Nui.validator}"/>
                             </af:inputText>
                             <f:facet name="footer">
+                                <af:spacer width="10" height="10" id="s4"/>
                                 <af:panelGroupLayout id="pgl1">
                                     <af:button
                                                text="#{viewcontrollerBundle.NOUVEAU}"
@@ -54,6 +55,11 @@
                                                text="#{viewcontrollerBundle.SUPPRIMER}"
                                                disabled="#{!bindings.Delete.enabled}" id="b3"
                                                action="#{transporteurBean.supprimerTransporteur}"/>
+                                    <af:spacer width="10" height="10" id="s3"/>
+                                    <af:button actionListener="#{bindings.Rollback.execute}"
+                                               text="#{viewcontrollerBundle.ANNULER}" immediate="true" id="b4">
+                                        <af:resetActionListener/>
+                                    </af:button>
                                 </af:panelGroupLayout>
                             </f:facet>
                         </af:panelFormLayout>
@@ -87,28 +93,30 @@
                                 </af:column>
                                 <af:column sortProperty="#{bindings.TransporteurView1.hints.Nui.name}" filterable="true"
                                            sortable="true" headerText="#{bindings.TransporteurView1.hints.Nui.label}"
-                                           id="c2">
+                                           id="c2" width="100">
                                     <af:outputText value="#{row.Nui}"
                                                    shortDesc="#{bindings.TransporteurView1.hints.Nui.tooltip}"
                                                    id="ot2"/>
                                 </af:column>
                                 <af:column sortProperty="#{bindings.TransporteurView1.hints.Nom.name}" filterable="true"
                                            sortable="true" headerText="#{bindings.TransporteurView1.hints.Nom.label}"
-                                           id="c3">
+                                           id="c3" width="136">
                                     <af:outputText value="#{row.Nom}"
                                                    shortDesc="#{bindings.TransporteurView1.hints.Nom.tooltip}"
                                                    id="ot3"/>
                                 </af:column>
                                 <af:column sortProperty="#{bindings.TransporteurView1.hints.Adresse.name}"
                                            filterable="true" sortable="true"
-                                           headerText="#{bindings.TransporteurView1.hints.Adresse.label}" id="c4">
+                                           headerText="#{bindings.TransporteurView1.hints.Adresse.label}" id="c4"
+                                           width="134">
                                     <af:outputText value="#{row.Adresse}"
                                                    shortDesc="#{bindings.TransporteurView1.hints.Adresse.tooltip}"
                                                    id="ot4"/>
                                 </af:column>
                                 <af:column sortProperty="#{bindings.TransporteurView1.hints.Telephone.name}"
                                            filterable="true" sortable="true"
-                                           headerText="#{bindings.TransporteurView1.hints.Telephone.label}" id="c5">
+                                           headerText="#{bindings.TransporteurView1.hints.Telephone.label}" id="c5"
+                                           width="142">
                                     <af:outputText value="#{row.Telephone}"
                                                    shortDesc="#{bindings.TransporteurView1.hints.Telephone.tooltip}"
                                                    id="ot5"/>

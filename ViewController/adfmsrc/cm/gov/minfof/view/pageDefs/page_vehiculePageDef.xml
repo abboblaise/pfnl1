@@ -83,5 +83,6 @@
         </AttrNames>
       </nodeDefinition>
     </tree>
+    <action id="Rollback" RequiresUpdateModel="false" Action="rollbackTransaction" DataControl="AppModuleDataControl"/>
   </bindings>
 </pageDefinition>

@@ -63,5 +63,6 @@
         <Item Value="Nomdepartement"/>
       </ListDisplayAttrNames>
     </list>
+    <action id="Rollback" RequiresUpdateModel="false" Action="rollbackTransaction" DataControl="AppModuleDataControl"/>
   </bindings>
 </pageDefinition>
