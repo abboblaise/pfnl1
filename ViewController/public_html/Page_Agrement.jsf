@@ -58,8 +58,7 @@
                                                        action="#{AgrementBean.SupprimerAgrement}"/>
                                             <af:spacer width="10" height="10" id="s4"/>
                                             <af:button actionListener="#{bindings.Rollback.execute}"
-                                                       text="#{viewcontrollerBundle.ANNULER}"
-                                                       disabled="#{!bindings.Rollback.enabled}" immediate="true"
+                                                       text="#{viewcontrollerBundle.ANNULER}" immediate="true"
                                                        id="b4">
                                                 <af:resetActionListener/>
                                             </af:button>

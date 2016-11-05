@@ -72,7 +72,7 @@
                         <af:column sortProperty="#{bindings.FamillePfnlView1.hints.Idfamillepfnl.name}"
                                    filterable="true" sortable="true"
                                    headerText="#{bindings.FamillePfnlView1.hints.Idfamillepfnl.label}" id="c1"
-                                   width="100">
+                                   width="100" visible="false">
                             <af:outputText value="#{row.Idfamillepfnl}"
                                            shortDesc="#{bindings.FamillePfnlView1.hints.Idfamillepfnl.tooltip}"
                                            id="ot1">

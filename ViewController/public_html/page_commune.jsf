@@ -69,8 +69,7 @@
                                        action="#{communeBean.supprimeCommune}"/>
                                     <af:spacer width="10" height="10" id="s4"/>
                                     <af:button
-                                               text="#{viewcontrollerBundle.ANNULER}"
-                                               disabled="#{!bindings.Rollback.enabled}" immediate="true" id="b5"
+                                               text="#{viewcontrollerBundle.ANNULER}" immediate="true" id="b5"
                                                action="#{communeBean.annuler}">
                                         <af:resetActionListener/>
                                     </af:button>

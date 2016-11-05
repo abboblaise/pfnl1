@@ -161,6 +161,8 @@
       <SchemaBasedProperties>
         <LABEL
           ResId="TYPE_PRODUITS"/>
+        <DISPLAYWIDTH
+          Value="20"/>
       </SchemaBasedProperties>
     </Properties>
   </Attribute>

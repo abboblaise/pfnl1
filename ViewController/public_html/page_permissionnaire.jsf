@@ -8,7 +8,7 @@
         <af:form id="f1">
         <af:pageTemplate viewId="/TemplateGlobal.jsf" id="pt1">
         <f:facet name="content">
-                    <af:panelSplitter id="ps1" inlineStyle="width:1050px;" splitterPosition="763">
+                    <af:panelSplitter id="ps1" inlineStyle="width:1191px;" splitterPosition="763">
                         <f:facet name="first">
                             <af:panelBox text="#{viewcontrollerBundle.EDITION_D_UN_ACTEUR}" id="pb1">
                                 <f:facet name="toolbar"/>
@@ -171,7 +171,7 @@
                         <f:facet name="second">
                             <af:panelBox text="#{viewcontrollerBundle.LISTE_DES_DOCUMENTS_OFFICIELS}" id="pb3" maximized="true">
                                 <f:facet name="toolbar"/>
-                                <af:panelCollection id="pc2" inlineStyle="width:272px;">
+                                <af:panelCollection id="pc2" inlineStyle="width:322px;">
                                     <f:facet name="menus"/>
                                     <f:facet name="toolbar"/>
                                     <af:table value="#{bindings.PermisView8.collectionModel}" var="row"
@@ -184,7 +184,7 @@
                                               filterModel="#{bindings.PermisView8Query.queryDescriptor}"
                                               filterVisible="true"
                                               queryListener="#{bindings.PermisView8Query.processQuery}" varStatus="vs"
-                                              id="t2" width="775" inlineStyle="height:243px;">
+                                              id="t2" width="2066" inlineStyle="height:243px;">
                                         <af:column sortProperty="#{bindings.PermisView8.hints.Numeropermis.name}"
                                                    filterable="true" sortable="true"
                                                    headerText="#{bindings.PermisView8.hints.Numeropermis.label}"

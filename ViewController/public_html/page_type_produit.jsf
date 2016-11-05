@@ -48,8 +48,7 @@
                                                disabled="#{!bindings.Delete.enabled}" id="b3"/>
                                     <af:spacer width="10" height="10" id="s3"/>
                                     <af:button actionListener="#{bindings.Rollback.execute}"
-                                               text="#{viewcontrollerBundle.ANNULER}"
-                                               disabled="#{!bindings.Rollback.enabled}" immediate="true" id="b4">
+                                               text="#{viewcontrollerBundle.ANNULER}" immediate="true" id="b4">
                                         <af:resetActionListener/>
                                     </af:button>
                                 </af:panelGroupLayout>

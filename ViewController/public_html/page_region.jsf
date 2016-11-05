@@ -97,8 +97,7 @@
                               rowSelection="single" fetchSize="#{bindings.RegionView1.rangeSize}"
                               filterModel="#{bindings.RegionView1Query.queryDescriptor}" filterVisible="true"
                               queryListener="#{bindings.RegionView1Query.processQuery}" varStatus="vs" id="t1"
-                              width="696" partialTriggers=":::b2 :::b3 :::b4 :::b5" autoHeightRows="10" scrollPolicy="auto"
-                              immediate="true">
+                              width="696" partialTriggers=":::b2 :::b3 :::b4 :::b5" autoHeightRows="10" scrollPolicy="auto">
                         <af:column sortProperty="#{bindings.RegionView1.hints.Idregions.name}" filterable="true"
                                    sortable="true" headerText="#{bindings.RegionView1.hints.Idregions.label}" id="c1"
                                    visible="false">

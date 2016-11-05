@@ -73,7 +73,7 @@
                         <af:column sortProperty="#{bindings.PartiesRecolteesView1.hints.Idpartiesrecoltees.name}"
                                    filterable="true" sortable="true"
                                    headerText="#{bindings.PartiesRecolteesView1.hints.Idpartiesrecoltees.label}"
-                                   id="c1" width="100">
+                                   id="c1" width="100" visible="false">
                             <af:outputText value="#{row.Idpartiesrecoltees}"
                                            shortDesc="#{bindings.PartiesRecolteesView1.hints.Idpartiesrecoltees.tooltip}"
                                            id="ot1">

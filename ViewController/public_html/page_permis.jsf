@@ -8,9 +8,9 @@
         <af:form id="f1">
             <af:pageTemplate viewId="/TemplateGlobal.jsf" id="pt1">
                 <f:facet name="content">
-                    <af:panelSplitter id="ps1" inlineStyle="width:1191px;" splitterPosition="579">
+                    <af:panelSplitter id="ps1" inlineStyle="width:1191px;" splitterPosition="648">
                         <f:facet name="first">
-                            <af:panelSplitter id="ps2" orientation="vertical">
+                            <af:panelSplitter id="ps2" orientation="vertical" splitterPosition="221">
                                 <f:facet name="first">
                                     <af:panelBox text="#{viewcontrollerBundle.EDITION_DES_TYPES_DE_DOCUMENTS}" id="pb1">
                                         <f:facet name="toolbar"/>

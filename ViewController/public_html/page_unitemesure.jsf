@@ -95,7 +95,7 @@
                                 <af:column sortProperty="#{bindings.UnitemesureView1.hints.Idunitemesure.name}"
                                            filterable="true" sortable="true"
                                            headerText="#{bindings.UnitemesureView1.hints.Idunitemesure.label}" id="c1"
-                                           width="100">
+                                           width="100" visible="false">
                                     <af:outputText value="#{row.Idunitemesure}"
                                                    shortDesc="#{bindings.UnitemesureView1.hints.Idunitemesure.tooltip}"
                                                    id="ot1">

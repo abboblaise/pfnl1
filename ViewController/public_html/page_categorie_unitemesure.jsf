@@ -70,7 +70,7 @@
                                 <af:column sortProperty="#{bindings.CategorieunitemesureView1.hints.Idcategorieunitemesure.name}"
                                            filterable="true" sortable="true"
                                            headerText="#{bindings.CategorieunitemesureView1.hints.Idcategorieunitemesure.label}"
-                                           id="c1" width="100">
+                                           id="c1" width="100" visible="false">
                                     <af:outputText value="#{row.Idcategorieunitemesure}"
                                                    shortDesc="#{bindings.CategorieunitemesureView1.hints.Idcategorieunitemesure.tooltip}"
                                                    id="ot1">
