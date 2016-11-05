@@ -101,6 +101,9 @@ import cm.gov.minfof.model.entityviewobject.listeTypePersonneImpl;
 import java.math.BigDecimal;
 
 import oracle.jbo.Row;
+import oracle.jbo.ViewCriteria;
+import oracle.jbo.ViewCriteriaRow;
+import oracle.jbo.ViewObject;
 import oracle.jbo.server.ApplicationModuleImpl;
 import oracle.jbo.server.ViewLinkImpl;
 import oracle.jbo.server.ViewObjectImpl;
@@ -3509,6 +3512,156 @@ public class AppModuleImpl extends ApplicationModuleImpl {
         return (getLastIdDetailsexportImpl) findViewObject("getLastIdDetailsexport1");
     }
 
+    /**
+     * Container's getter for GroupeutilisateurView1.
+     * @return GroupeutilisateurView1
+     */
+    public ViewObjectImpl getGroupeutilisateurView1() {
+        return (ViewObjectImpl) findViewObject("GroupeutilisateurView1");
+    }
+
+    /**
+     * Container's getter for UtilisateurView1.
+     * @return UtilisateurView1
+     */
+    public ViewObjectImpl getUtilisateurView1() {
+        return (ViewObjectImpl) findViewObject("UtilisateurView1");
+    }
+
+    /**
+     * Container's getter for UtilisateurView2.
+     * @return UtilisateurView2
+     */
+    public ViewObjectImpl getUtilisateurView2() {
+        return (ViewObjectImpl) findViewObject("UtilisateurView2");
+    }
+
+    /**
+     * Container's getter for UtilisateurView3.
+     * @return UtilisateurView3
+     */
+    public ViewObjectImpl getUtilisateurView3() {
+        return (ViewObjectImpl) findViewObject("UtilisateurView3");
+    }
+
+    /**
+     * Container's getter for UtilisateurView4.
+     * @return UtilisateurView4
+     */
+    public ViewObjectImpl getUtilisateurView4() {
+        return (ViewObjectImpl) findViewObject("UtilisateurView4");
+    }
+
+    /**
+     * Container's getter for UtilisateurView5.
+     * @return UtilisateurView5
+     */
+    public ViewObjectImpl getUtilisateurView5() {
+        return (ViewObjectImpl) findViewObject("UtilisateurView5");
+    }
+
+    /**
+     * Container's getter for UtilisateurView6.
+     * @return UtilisateurView6
+     */
+    public ViewObjectImpl getUtilisateurView6() {
+        return (ViewObjectImpl) findViewObject("UtilisateurView6");
+    }
+
+    /**
+     * Container's getter for UtilisateurView7.
+     * @return UtilisateurView7
+     */
+    public ViewObjectImpl getUtilisateurView7() {
+        return (ViewObjectImpl) findViewObject("UtilisateurView7");
+    }
+
+    /**
+     * Container's getter for FkUtilisateur3Link1.
+     * @return FkUtilisateur3Link1
+     */
+    public ViewLinkImpl getFkUtilisateur3Link1() {
+        return (ViewLinkImpl) findViewLink("FkUtilisateur3Link1");
+    }
+
+    /**
+     * Container's getter for FkUtilisateur2Link1.
+     * @return FkUtilisateur2Link1
+     */
+    public ViewLinkImpl getFkUtilisateur2Link1() {
+        return (ViewLinkImpl) findViewLink("FkUtilisateur2Link1");
+    }
+
+    /**
+     * Container's getter for FkUtilisateur1Link1.
+     * @return FkUtilisateur1Link1
+     */
+    public ViewLinkImpl getFkUtilisateur1Link1() {
+        return (ViewLinkImpl) findViewLink("FkUtilisateur1Link1");
+    }
+
+    /**
+     * Container's getter for FkUtilisateur3Assoc1Link1.
+     * @return FkUtilisateur3Assoc1Link1
+     */
+    public ViewLinkImpl getFkUtilisateur3Assoc1Link1() {
+        return (ViewLinkImpl) findViewLink("FkUtilisateur3Assoc1Link1");
+    }
+
+    /**
+     * Container's getter for FkUtilisateur2Assoc1Link1.
+     * @return FkUtilisateur2Assoc1Link1
+     */
+    public ViewLinkImpl getFkUtilisateur2Assoc1Link1() {
+        return (ViewLinkImpl) findViewLink("FkUtilisateur2Assoc1Link1");
+    }
+
+    /**
+     * Container's getter for FkUtilisateur1Assoc1Link1.
+     * @return FkUtilisateur1Assoc1Link1
+     */
+    public ViewLinkImpl getFkUtilisateur1Assoc1Link1() {
+        return (ViewLinkImpl) findViewLink("FkUtilisateur1Assoc1Link1");
+    }
+    
+    public UserData findutil (String _loginuser, String _passworduser){
+        UserData util = null;
+        ViewObject vo = this.getUtilisateurView1();
+        ViewCriteria vc = vo.createViewCriteria();;
+        ViewCriteriaRow vcr = vc.createViewCriteriaRow();
+        vcr.setAttribute("Loginuser", _loginuser);
+        vcr.setAttribute("Passworduser",_passworduser);
+        vc.add(vcr);
+        vo.appendViewCriteria(vc);
+        vo.executeQuery();
+        if (vo.hasNext()){
+            util = new UserData();
+            Row rr=vo.next();
+            util.setLoginuser(rr.getAttribute("Loginuser").toString());
+            util.setNonuser(rr.getAttribute("Nomuser").toString());            
+            util.setTelephone(rr.getAttribute("Telephone").toString());
+            BigDecimal bd;
+            
+            bd= (BigDecimal)rr.getAttribute("Iddepartements");
+            util.setIddepartement(bd);
+            
+            bd= (BigDecimal)rr.getAttribute("Idregions");
+            util.setIdregion(bd);
+            
+            bd= (BigDecimal)rr.getAttribute("Idgroupe");
+            util.setIdgroupe(bd);
+            
+            bd= (BigDecimal)rr.getAttribute("Idutilisateur");
+            util.setIdutilisateur(bd);
+            
+            int nn = (Integer)rr.getAttribute("Niveauintervention");
+            util.setNiveauintervention(nn);
+            
+        }
+        
+        return util;
+        
+    }
 }
 
 

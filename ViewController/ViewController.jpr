@@ -83,11 +83,38 @@
          </hash>
       </list>
    </hash>
+   <hash n="oracle.ide.model.ResourcePaths">
+      <hash n="resourcesContentSet">
+         <list n="constituent-sets">
+            <hash>
+               <list n="pattern-filters">
+                  <string v="+texte.png"/>
+                  <string v="+image-saleka1.jpg"/>
+                  <string v="+image-saleka.jpg"/>
+                  <string v="+logo-pfnl.png"/>
+               </list>
+               <list n="url-path">
+                  <url path="src/META-INF/resources/images/"/>
+               </list>
+            </hash>
+            <hash>
+               <list n="pattern-filters">
+                  <string v="+*"/>
+               </list>
+               <list n="url-path">
+                  <url path="."/>
+               </list>
+            </hash>
+         </list>
+         <list n="url-path"/>
+      </hash>
+   </hash>
    <hash n="oracle.ide.model.TechnologyScopeConfiguration">
       <list n="technologyScope">
          <string v="ADF_FACES"/>
          <string v="ADFc"/>
          <string v="ADFm"/>
+         <string v="Database"/>
          <string v="JSF"/>
          <string v="JSP"/>
          <string v="Java"/>
@@ -609,6 +636,7 @@
             </hash>
             <value n="jspVersion" v="2.1"/>
             <value n="name" v="JSTL Core"/>
+            <value n="runInEditor" v="true"/>
             <value n="tldURL" v="@oracle.home@../wlserver/modules/org.glassfish.web.javax.servlet.jsp.jstl.jar!/META-INF/c.tld"/>
             <value n="URI" v="http://java.sun.com/jsp/jstl/core"/>
             <value n="version" v="1.2"/>
