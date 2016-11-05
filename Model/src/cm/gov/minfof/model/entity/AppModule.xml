@@ -844,6 +844,30 @@
   <ViewUsage
     Name="getLastIdDetailsexport1"
     ViewObjectName="cm.gov.minfof.model.entityviewobject.getLastIdDetailsexport"/>
+  <ViewUsage
+    Name="GroupeutilisateurView1"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.GroupeutilisateurView"/>
+  <ViewUsage
+    Name="UtilisateurView1"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.UtilisateurView"/>
+  <ViewUsage
+    Name="UtilisateurView2"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.UtilisateurView"/>
+  <ViewUsage
+    Name="UtilisateurView3"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.UtilisateurView"/>
+  <ViewUsage
+    Name="UtilisateurView4"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.UtilisateurView"/>
+  <ViewUsage
+    Name="UtilisateurView5"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.UtilisateurView"/>
+  <ViewUsage
+    Name="UtilisateurView6"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.UtilisateurView"/>
+  <ViewUsage
+    Name="UtilisateurView7"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.UtilisateurView"/>
   <ViewLinkUsage
     Name="PermissionnaireToPermisLink"
     ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.PermissionnaireToPermisLink"
@@ -1775,5 +1799,41 @@
     ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.FkDetailslettrevoiture3Assoc1Link"
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.LettrevoitureView1"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.DetailslettrevoitureView7"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="FkUtilisateur3Link1"
+    ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.FkUtilisateur3Link"
+    SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.UtilisateurView1"
+    DstViewUsageName="cm.gov.minfof.model.entity.AppModule.UtilisateurView2"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="FkUtilisateur2Link1"
+    ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.FkUtilisateur2Link"
+    SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.UtilisateurView1"
+    DstViewUsageName="cm.gov.minfof.model.entity.AppModule.UtilisateurView3"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="FkUtilisateur1Link1"
+    ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.FkUtilisateur1Link"
+    SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.UtilisateurView1"
+    DstViewUsageName="cm.gov.minfof.model.entity.AppModule.UtilisateurView4"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="FkUtilisateur3Assoc1Link1"
+    ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.FkUtilisateur3Assoc1Link"
+    SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.GroupeutilisateurView1"
+    DstViewUsageName="cm.gov.minfof.model.entity.AppModule.UtilisateurView5"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="FkUtilisateur2Assoc1Link1"
+    ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.FkUtilisateur2Assoc1Link"
+    SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.GroupeutilisateurView1"
+    DstViewUsageName="cm.gov.minfof.model.entity.AppModule.UtilisateurView6"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="FkUtilisateur1Assoc1Link1"
+    ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.FkUtilisateur1Assoc1Link"
+    SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.GroupeutilisateurView1"
+    DstViewUsageName="cm.gov.minfof.model.entity.AppModule.UtilisateurView7"
     Reversed="false"/>
 </AppModule>

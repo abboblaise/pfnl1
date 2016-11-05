@@ -7,7 +7,7 @@
         <af:form id="f1">
             <af:pageTemplate viewId="/TemplateGlobal.jsf" id="pt1">
                 <f:facet name="content">
-                    <af:image source="#{resource['images:image-saleka.jpg']}" id="i1"/>
+                    <af:image id="i1" source="#{resource['images:image-saleka1.jpg']}"/>
                 </f:facet>
             </af:pageTemplate>
         </af:form>

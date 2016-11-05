@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+
   <managed-bean id="__1">
     <managed-bean-name>regionBean</managed-bean-name>
     <managed-bean-class>cm.gov.minfof.view.RegionBean</managed-bean-class>
@@ -89,5 +90,21 @@
     <managed-bean-name>exportPfnlBean</managed-bean-name>
     <managed-bean-class>cm.gov.minfof.view.ExportPfnlBean</managed-bean-class>
     <managed-bean-scope>request</managed-bean-scope>
+  </managed-bean>
+  <managed-bean id="__19">
+    <managed-bean-name>login</managed-bean-name>
+    <managed-bean-class>cm.gov.minfof.view.login</managed-bean-class>
+    <managed-bean-scope>backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1page_login.jsf-->
+  </managed-bean>
+  <managed-bean id="__20">
+    <managed-bean-name>TemplateBean</managed-bean-name>
+    <managed-bean-class>cm.gov.minfof.view.TemplateBean</managed-bean-class>
+    <managed-bean-scope>session</managed-bean-scope>
+  </managed-bean>
+  <managed-bean id="__21">
+    <managed-bean-name>RecupUser</managed-bean-name>
+    <managed-bean-class>cm.gov.minfof.view.RecupUser</managed-bean-class>
+    <managed-bean-scope>session</managed-bean-scope>
   </managed-bean>
 </adfc-config>

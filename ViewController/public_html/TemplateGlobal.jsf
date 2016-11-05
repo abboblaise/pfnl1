@@ -18,12 +18,16 @@
         <f:facet name="first">
             <af:panelGridLayout id="pt_pgl2" inlineStyle='background-image:url("arriere.jpg");' landmark="banner">
                 <af:gridRow marginTop="5px" height="100%" marginBottom="5px" id="pt_gr1">
-                    <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="pt_gc1" halign="center">
+                    <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="pt_gc1" halign="center"
+                                 inlineStyle='background-image:url("arriere.jpg");'>
                         <af:panelGroupLayout id="pt_pgl3" halign="center" layout="horizontal" valign="middle">
-                            <af:image source="MINFOF.jpg" id="pt_i1">
+                            <af:image source="#{resource['images:MINFOF.png']}" id="pt_i1">
                                 <?audit suppress oracle.adf.faces.imgshortdesc?>
                             </af:image>
-                            <af:image source="Titre.png" id="pt_i2">
+                            <af:image id="pt_i2" source="#{resource['images:texte.png']}">
+                                <?audit suppress oracle.adf.faces.imgshortdesc?>
+                            </af:image>
+                            <af:image id="pt_i3" source="#{resource['images:logo_pfnl.png']}">
                                 <?audit suppress oracle.adf.faces.imgshortdesc?>
                             </af:image>
                         </af:panelGroupLayout>
@@ -37,7 +41,8 @@
                     <af:panelSplitter splitterPosition="212" id="pt_ps3">
                         <f:facet name="first">
                             <af:panelAccordion discloseMany="true" id="pt_pa1">
-                                <af:showDetailItem id="pane1" text="#{viewcontrollerBundle.PARAMETRAGE}">
+                                <af:showDetailItem id="pane1" text="#{viewcontrollerBundle.PARAMETRAGE}"
+                                                   rendered="#{RecupUser.ud.estadmin}">
                                     <af:panelAccordion discloseMany="false" id="pt_pa2">
                                         <af:showDetailItem id="pane2"
                                                            text="#{viewcontrollerBundle.UNIT_U00E9S_ADMINISTRATIVES}">
@@ -128,7 +133,18 @@
                                 <f:facet name="first">
                                     <af:panelGridLayout id="pt_pgl5" inlineStyle='background-image:url("arriere.jpg");'>
                                         <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="pt_gr2">
-                                            <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="pt_gc2"/>
+                                            <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="pt_gc2"
+                                                         inlineStyle='background-image:url("/arriere.jpg");'
+                                                         halign="end">
+                                                <af:panelGroupLayout id="pt_pgl9" halign="right"
+                                                                     inlineStyle='background-image:url("arriere.jpg");'>
+                                                    <af:outputText value="#{RecupUser.ud.nonuser}" id="pt_ot1"
+                                                                   inlineStyle="color:White;"/>
+                                                    <af:spacer width="10" height="10" id="pt_s20"/>
+                                                    <af:button text="#{viewcontrollerBundle.D_U00E9CONNEXION}" id="pt_b22"
+                                                               action="#{TemplateBean.Deconnecter}"/>
+                                                </af:panelGroupLayout>
+                                            </af:gridCell>
                                         </af:gridRow>
                                     </af:panelGridLayout>
                                 </f:facet>
@@ -145,4 +161,5 @@
             </af:panelSplitter>
         </f:facet>
     </af:panelSplitter>
+    <!--oracle-jdev-comment:preferred-managed-bean-name:TemplateBean-->
 </af:pageTemplateDef>

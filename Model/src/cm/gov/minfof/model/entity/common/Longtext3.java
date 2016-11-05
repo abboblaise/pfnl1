@@ -12,7 +12,10 @@ import oracle.jbo.domain.DomainOwnerInterface;
 // ---    Custom code may be added to this class.
 // ---    Warning: Do not modify method signatures of generated methods.
 // ---------------------------------------------------------------------
+@SuppressWarnings({ "oracle.jdeveloper.java.semantic-warning",
+                    "oracle.jdeveloper.java.serialversionuid-field-missing" })
 public class Longtext3 implements DomainInterface, Serializable {
+    @SuppressWarnings("oracle.jdeveloper.java.string-constructor")
     public Longtext3(String val) {
         mData = new String(val);
         validate();
