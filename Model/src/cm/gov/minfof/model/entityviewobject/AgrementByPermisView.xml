@@ -24,14 +24,14 @@
     Kind="viewcriteria"
     Type="java.math.BigDecimal"/>
   <SQLQuery><![CDATA[SELECT 
-    Agrements.IDAgrements, 
-    Agrements.NUMAGREEMENT, 
+    agrements.IDAgrements, 
+    agrements.NUMAGREEMENT, 
     permis.idpermis 
 FROM 
-    Agrements, 
+    agrements, 
     permis 
 WHERE 
-    Agrements.IDAgrements = permis.idagrement]]></SQLQuery>
+    agrements.IDAgrements = permis.idagrement]]></SQLQuery>
   <ViewAttribute
     Name="Idagrements"
     IsUpdateable="false"

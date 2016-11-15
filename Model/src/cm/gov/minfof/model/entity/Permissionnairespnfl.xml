@@ -7,7 +7,7 @@
   Version="12.2.1.20.47"
   InheritPersonalization="merge"
   DBObjectType="table"
-  DBObjectName="PermissionnairesPNFL"
+  DBObjectName="permissionnairespnfl"
   AliasName="Permissionnairespnfl"
   BindingStyle="JDBC"
   RowClass="cm.gov.minfof.model.entity.PermissionnairespnflImpl"
@@ -24,7 +24,7 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR"
-    TableName="PermissionnairesPNFL"
+    TableName="permissionnairespnfl"
     IsNotNull="true"
     DefaultValue="entrez un nom">
     <DesignTime>
@@ -45,7 +45,7 @@
     SQLType="TINYINT"
     Type="java.lang.Integer"
     ColumnType="TINYINT"
-    TableName="PermissionnairesPNFL">
+    TableName="permissionnairespnfl">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="3"/>
     </DesignTime>
@@ -57,7 +57,7 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR"
-    TableName="PermissionnairesPNFL">
+    TableName="permissionnairespnfl">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="50"/>
     </DesignTime>
@@ -77,7 +77,7 @@
     SQLType="VARCHAR"
     Type="java.lang.Integer"
     ColumnType="INT"
-    TableName="PermissionnairesPNFL">
+    TableName="permissionnairespnfl">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="50"/>
     </DesignTime>
@@ -97,7 +97,7 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR"
-    TableName="PermissionnairesPNFL">
+    TableName="permissionnairespnfl">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="50"/>
     </DesignTime>
@@ -115,7 +115,7 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR"
-    TableName="PermissionnairesPNFL">
+    TableName="permissionnairespnfl">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="50"/>
     </DesignTime>
@@ -133,7 +133,7 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR"
-    TableName="PermissionnairesPNFL">
+    TableName="permissionnairespnfl">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="15"/>
     </DesignTime>
@@ -152,7 +152,7 @@
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
     ColumnType="BIGINT"
-    TableName="PermissionnairesPNFL">
+    TableName="permissionnairespnfl">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="19"/>
     </DesignTime>
@@ -170,7 +170,7 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR"
-    TableName="PermissionnairesPNFL">
+    TableName="permissionnairespnfl">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="50"/>
     </DesignTime>
@@ -190,7 +190,7 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR"
-    TableName="PermissionnairesPNFL">
+    TableName="permissionnairespnfl">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="15"/>
     </DesignTime>
@@ -209,7 +209,7 @@
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
     ColumnType="BIGINT"
-    TableName="PermissionnairesPNFL"
+    TableName="permissionnairespnfl"
     PrimaryKey="true">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="19"/>
@@ -228,7 +228,7 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR"
-    TableName="PermissionnairesPNFL">
+    TableName="permissionnairespnfl">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="20"/>
     </DesignTime>
@@ -247,7 +247,7 @@
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
     ColumnType="BIGINT"
-    TableName="PermissionnairesPNFL">
+    TableName="permissionnairespnfl">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="19"/>
     </DesignTime>
@@ -264,7 +264,7 @@
     SQLType="STRUCT"
     Type="java.lang.String"
     ColumnType="LONGTEXT"
-    TableName="PermissionnairesPNFL">
+    TableName="permissionnairespnfl">
     <Properties>
       <SchemaBasedProperties>
         <DISPLAYWIDTH
@@ -278,7 +278,7 @@
     SQLType="TINYINT"
     Type="java.lang.Integer"
     ColumnType="TINYINT"
-    TableName="PermissionnairesPNFL">
+    TableName="permissionnairespnfl">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="3"/>
     </DesignTime>
@@ -296,7 +296,7 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR"
-    TableName="PermissionnairesPNFL">
+    TableName="permissionnairespnfl">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="50"/>
     </DesignTime>
@@ -315,7 +315,7 @@
     SQLType="TINYINT"
     Type="java.lang.Integer"
     ColumnType="TINYINT"
-    TableName="PermissionnairesPNFL">
+    TableName="permissionnairespnfl">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="3"/>
     </DesignTime>

@@ -7,7 +7,7 @@
   Version="12.2.1.20.47"
   InheritPersonalization="merge"
   DBObjectType="table"
-  DBObjectName="Agrements"
+  DBObjectName="agrements"
   AliasName="Agrements1"
   BindingStyle="JDBC"
   xmlns:validation="http://xmlns.oracle.com/adfm/validation">
@@ -18,7 +18,7 @@
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
     ColumnType="BIGINT"
-    TableName="Agrements"
+    TableName="agrements"
     PrimaryKey="true">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="19"/>
@@ -30,14 +30,14 @@
     SQLType="DATE"
     Type="java.sql.Date"
     ColumnType="DATE"
-    TableName="Agrements"/>
+    TableName="agrements"/>
   <Attribute
     Name="Datefin"
     ColumnName="DATEFIN"
     SQLType="DATE"
     Type="java.sql.Date"
     ColumnType="DATE"
-    TableName="Agrements"/>
+    TableName="agrements"/>
   <Attribute
     Name="Numagreement"
     Precision="50"
@@ -45,7 +45,7 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR"
-    TableName="Agrements"
+    TableName="agrements"
     IsNotNull="true">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="50"/>
@@ -65,7 +65,7 @@
     SQLType="STRUCT"
     Type="cm.gov.minfof.model.entity.common.Longtext6"
     ColumnType="LONGTEXT"
-    TableName="Agrements"/>
+    TableName="agrements"/>
   <Attribute
     Name="Nomdetenteur"
     Precision="50"
@@ -73,7 +73,7 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR"
-    TableName="Agrements">
+    TableName="agrements">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="50"/>
     </DesignTime>

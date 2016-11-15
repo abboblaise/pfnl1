@@ -20,7 +20,7 @@
        PfnlAgrements.Volumecoupe,
        PfnlAgrements.NUMAGREEMENT,
        PfnlAgrements.Descriptioncontenuagreements
-FROM pfnl.Agrements PfnlAgrements]]></SQLQuery>
+FROM pfnl.agrements PfnlAgrements]]></SQLQuery>
   <ViewAttribute
     Name="Idagrements"
     IsUpdateable="false"

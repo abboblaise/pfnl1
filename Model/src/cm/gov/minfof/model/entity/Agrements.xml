@@ -7,7 +7,7 @@
   Version="12.2.1.20.47"
   InheritPersonalization="merge"
   DBObjectType="table"
-  DBObjectName="Agrements"
+  DBObjectName="agrements"
   AliasName="Agrements"
   BindingStyle="JDBC"
   RowClass="cm.gov.minfof.model.entity.AgrementsImpl"
@@ -22,7 +22,7 @@
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
     ColumnType="BIGINT"
-    TableName="Agrements"
+    TableName="agrements"
     PrimaryKey="true">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="19"/>
@@ -34,7 +34,7 @@
     SQLType="DATE"
     Type="java.sql.Date"
     ColumnType="DATE"
-    TableName="Agrements"
+    TableName="agrements"
     IsNotNull="true">
     <TransientExpression
       Name="ExpressionScript"
@@ -53,7 +53,7 @@
     SQLType="DATE"
     Type="java.sql.Date"
     ColumnType="DATE"
-    TableName="Agrements">
+    TableName="agrements">
     <Properties>
       <SchemaBasedProperties>
         <LABEL
@@ -68,7 +68,7 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR"
-    TableName="Agrements"
+    TableName="agrements"
     IsNotNull="true"
     DefaultValue="entrez une valeur">
     <DesignTime>
@@ -94,7 +94,7 @@
     SQLType="STRUCT"
     Type="java.lang.String"
     ColumnType="LONGTEXT"
-    TableName="Agrements">
+    TableName="agrements">
     <Properties>
       <SchemaBasedProperties>
         <LABEL
@@ -109,7 +109,7 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR"
-    TableName="Agrements"
+    TableName="agrements"
     IsNotNull="true"
     DefaultValue="entrez un nom">
     <DesignTime>

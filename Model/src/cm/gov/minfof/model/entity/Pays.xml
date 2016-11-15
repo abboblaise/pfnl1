@@ -7,7 +7,7 @@
   Version="12.2.1.20.47"
   InheritPersonalization="merge"
   DBObjectType="table"
-  DBObjectName="Pays"
+  DBObjectName="pays"
   AliasName="Pays"
   BindingStyle="JDBC"
   xmlns:validation="http://xmlns.oracle.com/adfm/validation"
@@ -24,7 +24,7 @@
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
     ColumnType="BIGINT"
-    TableName="Pays"
+    TableName="pays"
     PrimaryKey="true">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="19"/>
@@ -38,7 +38,7 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR"
-    TableName="Pays"
+    TableName="pays"
     IsNotNull="true"
     DefaultValue="entrez un nom">
     <DesignTime>
