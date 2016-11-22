@@ -12,7 +12,11 @@
   BindingStyle="JDBC"
   CustomQuery="false"
   SelectAllAttributes="false"
-  PageIterMode="Full">
+  PageIterMode="Full"
+  ComponentClass="cm.gov.minfof.model.entityviewobject.PaysViewImpl">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Coll|VarAccess"/>
+  </DesignTime>
   <EntityUsage
     Name="Pays"
     Entity="cm.gov.minfof.model.entity.Pays"/>
@@ -30,6 +34,11 @@
     EntityAttrName="Nompays"
     EntityUsage="Pays"
     AliasName="NOMPays"/>
+  <SortCriteria>
+    <Sort
+      Attribute="Idpays"
+      Ascending="false"/>
+  </SortCriteria>
   <SortCriteria>
     <Sort
       Attribute="Idpays"

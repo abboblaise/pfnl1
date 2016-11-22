@@ -13,7 +13,11 @@
   CustomQuery="false"
   SelectAllAttributes="false"
   FetchMode="FETCH_AS_NEEDED"
-  PageIterMode="Full">
+  PageIterMode="Full"
+  ComponentClass="cm.gov.minfof.model.entityviewobject.DetailpermisViewImpl">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Coll|VarAccess"/>
+  </DesignTime>
   <ViewAccessor
     Name="UnitemesureView1"
     ViewObjectName="cm.gov.minfof.model.entityviewobject.UnitemesureView"

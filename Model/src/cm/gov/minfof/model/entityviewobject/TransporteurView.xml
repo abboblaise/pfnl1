@@ -12,7 +12,11 @@
   BindingStyle="JDBC"
   CustomQuery="false"
   SelectAllAttributes="false"
-  PageIterMode="Full">
+  PageIterMode="Full"
+  ComponentClass="cm.gov.minfof.model.entityviewobject.TransporteurViewImpl">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Coll|VarAccess"/>
+  </DesignTime>
   <EntityUsage
     Name="Transporteur"
     Entity="cm.gov.minfof.model.entity.Transporteur"/>

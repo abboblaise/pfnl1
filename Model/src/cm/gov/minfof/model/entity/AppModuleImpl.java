@@ -1,8 +1,29 @@
 package cm.gov.minfof.model.entity;
 
 import cm.gov.minfof.model.entity.common.*;
+import cm.gov.minfof.model.entityviewobject.AgrementsViewImpl;
+import cm.gov.minfof.model.entityviewobject.CategorieproduitViewImpl;
+import cm.gov.minfof.model.entityviewobject.CategorieunitemesureViewImpl;
+import cm.gov.minfof.model.entityviewobject.CollectepfnlViewImpl;
+import cm.gov.minfof.model.entityviewobject.CommuneViewImpl;
+import cm.gov.minfof.model.entityviewobject.DepartementViewImpl;
+import cm.gov.minfof.model.entityviewobject.DetailpermisViewImpl;
+import cm.gov.minfof.model.entityviewobject.DetailscollectepfnlViewImpl;
+import cm.gov.minfof.model.entityviewobject.DetailsexportpfnlViewImpl;
+import cm.gov.minfof.model.entityviewobject.DetailslettrevoitureViewImpl;
+import cm.gov.minfof.model.entityviewobject.ExportpfnlViewImpl;
+import cm.gov.minfof.model.entityviewobject.LettrevoitureViewImpl;
+import cm.gov.minfof.model.entityviewobject.LocaliteViewImpl;
+import cm.gov.minfof.model.entityviewobject.OriginespnflsViewImpl;
+import cm.gov.minfof.model.entityviewobject.PaysViewImpl;
+import cm.gov.minfof.model.entityviewobject.PermisViewImpl;
+import cm.gov.minfof.model.entityviewobject.PermissionnairespnflViewImpl;
+import cm.gov.minfof.model.entityviewobject.PostecontroleViewImpl;
 import cm.gov.minfof.model.entityviewobject.RegionViewImpl;
 
+import cm.gov.minfof.model.entityviewobject.TransporteurViewImpl;
+import cm.gov.minfof.model.entityviewobject.UnitemesureViewImpl;
+import cm.gov.minfof.model.entityviewobject.VehiculeViewImpl;
 import cm.gov.minfof.model.entityviewobject.gestLastIdUnitMesureImpl;
 import cm.gov.minfof.model.entityviewobject.getLastIcCollecteImpl;
 import cm.gov.minfof.model.entityviewobject.getLastIdCategorieUniteMesureImpl;
@@ -144,16 +165,16 @@ public class AppModuleImpl extends ApplicationModuleImpl {
      * Container's getter for CommuneView1.
      * @return CommuneView1
      */
-    public ViewObjectImpl getCommuneView1() {
-        return (ViewObjectImpl) findViewObject("CommuneView1");
+    public CommuneViewImpl getCommuneView1() {
+        return (CommuneViewImpl) findViewObject("CommuneView1");
     }
 
     /**
      * Container's getter for DepartementView1.
      * @return DepartementView1
      */
-    public ViewObjectImpl getDepartementView1() {
-        return (ViewObjectImpl) findViewObject("DepartementView1");
+    public DepartementViewImpl getDepartementView1() {
+        return (DepartementViewImpl) findViewObject("DepartementView1");
     }
 
     /**
@@ -192,48 +213,48 @@ public class AppModuleImpl extends ApplicationModuleImpl {
      * Container's getter for DepartementView2.
      * @return DepartementView2
      */
-    public ViewObjectImpl getDepartementView2() {
-        return (ViewObjectImpl) findViewObject("DepartementView2");
+    public DepartementViewImpl getDepartementView2() {
+        return (DepartementViewImpl) findViewObject("DepartementView2");
     }
 
     /**
      * Container's getter for DepartementView3.
      * @return DepartementView3
      */
-    public ViewObjectImpl getDepartementView3() {
-        return (ViewObjectImpl) findViewObject("DepartementView3");
+    public DepartementViewImpl getDepartementView3() {
+        return (DepartementViewImpl) findViewObject("DepartementView3");
     }
 
     /**
      * Container's getter for CommuneView2.
      * @return CommuneView2
      */
-    public ViewObjectImpl getCommuneView2() {
-        return (ViewObjectImpl) findViewObject("CommuneView2");
+    public CommuneViewImpl getCommuneView2() {
+        return (CommuneViewImpl) findViewObject("CommuneView2");
     }
 
     /**
      * Container's getter for DepartementView4.
      * @return DepartementView4
      */
-    public ViewObjectImpl getDepartementView4() {
-        return (ViewObjectImpl) findViewObject("DepartementView4");
+    public DepartementViewImpl getDepartementView4() {
+        return (DepartementViewImpl) findViewObject("DepartementView4");
     }
 
     /**
      * Container's getter for CommuneView3.
      * @return CommuneView3
      */
-    public ViewObjectImpl getCommuneView3() {
-        return (ViewObjectImpl) findViewObject("CommuneView3");
+    public CommuneViewImpl getCommuneView3() {
+        return (CommuneViewImpl) findViewObject("CommuneView3");
     }
 
     /**
      * Container's getter for CommuneView4.
      * @return CommuneView4
      */
-    public ViewObjectImpl getCommuneView4() {
-        return (ViewObjectImpl) findViewObject("CommuneView4");
+    public CommuneViewImpl getCommuneView4() {
+        return (CommuneViewImpl) findViewObject("CommuneView4");
     }
 
     /**
@@ -288,40 +309,40 @@ public class AppModuleImpl extends ApplicationModuleImpl {
      * Container's getter for CommuneView5.
      * @return CommuneView5
      */
-    public ViewObjectImpl getCommuneView5() {
-        return (ViewObjectImpl) findViewObject("CommuneView5");
+    public CommuneViewImpl getCommuneView5() {
+        return (CommuneViewImpl) findViewObject("CommuneView5");
     }
 
     /**
      * Container's getter for FamillePfnlView1.
      * @return FamillePfnlView1
      */
-    public ViewObjectImpl getFamillePfnlView1() {
-        return (ViewObjectImpl) findViewObject("FamillePfnlView1");
+    public FamillePfnlViewImpl getFamillePfnlView1() {
+        return (FamillePfnlViewImpl) findViewObject("FamillePfnlView1");
     }
 
     /**
      * Container's getter for PartiesProduitsPfnlView1.
      * @return PartiesProduitsPfnlView1
      */
-    public ViewObjectImpl getPartiesProduitsPfnlView1() {
-        return (ViewObjectImpl) findViewObject("PartiesProduitsPfnlView1");
+    public PartiesProduitsPfnlViewImpl getPartiesProduitsPfnlView1() {
+        return (PartiesProduitsPfnlViewImpl) findViewObject("PartiesProduitsPfnlView1");
     }
 
     /**
      * Container's getter for PartiesRecolteesView1.
      * @return PartiesRecolteesView1
      */
-    public ViewObjectImpl getPartiesRecolteesView1() {
-        return (ViewObjectImpl) findViewObject("PartiesRecolteesView1");
+    public PartiesRecolteesViewImpl getPartiesRecolteesView1() {
+        return (PartiesRecolteesViewImpl) findViewObject("PartiesRecolteesView1");
     }
 
     /**
      * Container's getter for ProduitsPfnlView1.
      * @return ProduitsPfnlView1
      */
-    public ViewObjectImpl getProduitsPfnlView1() {
-        return (ViewObjectImpl) findViewObject("ProduitsPfnlView1");
+    public ProduitsPfnlViewImpl getProduitsPfnlView1() {
+        return (ProduitsPfnlViewImpl) findViewObject("ProduitsPfnlView1");
     }
 
     /**
@@ -360,96 +381,96 @@ public class AppModuleImpl extends ApplicationModuleImpl {
      * Container's getter for PartiesProduitsPfnlView3.
      * @return PartiesProduitsPfnlView3
      */
-    public ViewObjectImpl getPartiesProduitsPfnlView3() {
-        return (ViewObjectImpl) findViewObject("PartiesProduitsPfnlView3");
+    public PartiesProduitsPfnlViewImpl getPartiesProduitsPfnlView3() {
+        return (PartiesProduitsPfnlViewImpl) findViewObject("PartiesProduitsPfnlView3");
     }
 
     /**
      * Container's getter for PartiesProduitsPfnlView4.
      * @return PartiesProduitsPfnlView4
      */
-    public ViewObjectImpl getPartiesProduitsPfnlView4() {
-        return (ViewObjectImpl) findViewObject("PartiesProduitsPfnlView4");
+    public PartiesProduitsPfnlViewImpl getPartiesProduitsPfnlView4() {
+        return (PartiesProduitsPfnlViewImpl) findViewObject("PartiesProduitsPfnlView4");
     }
 
     /**
      * Container's getter for PartiesProduitsPfnlView5.
      * @return PartiesProduitsPfnlView5
      */
-    public ViewObjectImpl getPartiesProduitsPfnlView5() {
-        return (ViewObjectImpl) findViewObject("PartiesProduitsPfnlView5");
+    public PartiesProduitsPfnlViewImpl getPartiesProduitsPfnlView5() {
+        return (PartiesProduitsPfnlViewImpl) findViewObject("PartiesProduitsPfnlView5");
     }
 
     /**
      * Container's getter for PartiesProduitsPfnlView6.
      * @return PartiesProduitsPfnlView6
      */
-    public ViewObjectImpl getPartiesProduitsPfnlView6() {
-        return (ViewObjectImpl) findViewObject("PartiesProduitsPfnlView6");
+    public PartiesProduitsPfnlViewImpl getPartiesProduitsPfnlView6() {
+        return (PartiesProduitsPfnlViewImpl) findViewObject("PartiesProduitsPfnlView6");
     }
 
     /**
      * Container's getter for PartiesProduitsPfnlView7.
      * @return PartiesProduitsPfnlView7
      */
-    public ViewObjectImpl getPartiesProduitsPfnlView7() {
-        return (ViewObjectImpl) findViewObject("PartiesProduitsPfnlView7");
+    public PartiesProduitsPfnlViewImpl getPartiesProduitsPfnlView7() {
+        return (PartiesProduitsPfnlViewImpl) findViewObject("PartiesProduitsPfnlView7");
     }
 
     /**
      * Container's getter for PartiesProduitsPfnlView8.
      * @return PartiesProduitsPfnlView8
      */
-    public ViewObjectImpl getPartiesProduitsPfnlView8() {
-        return (ViewObjectImpl) findViewObject("PartiesProduitsPfnlView8");
+    public PartiesProduitsPfnlViewImpl getPartiesProduitsPfnlView8() {
+        return (PartiesProduitsPfnlViewImpl) findViewObject("PartiesProduitsPfnlView8");
     }
 
     /**
      * Container's getter for ProduitsPfnlView3.
      * @return ProduitsPfnlView3
      */
-    public ViewObjectImpl getProduitsPfnlView3() {
-        return (ViewObjectImpl) findViewObject("ProduitsPfnlView3");
+    public ProduitsPfnlViewImpl getProduitsPfnlView3() {
+        return (ProduitsPfnlViewImpl) findViewObject("ProduitsPfnlView3");
     }
 
     /**
      * Container's getter for PartiesProduitsPfnlView9.
      * @return PartiesProduitsPfnlView9
      */
-    public ViewObjectImpl getPartiesProduitsPfnlView9() {
-        return (ViewObjectImpl) findViewObject("PartiesProduitsPfnlView9");
+    public PartiesProduitsPfnlViewImpl getPartiesProduitsPfnlView9() {
+        return (PartiesProduitsPfnlViewImpl) findViewObject("PartiesProduitsPfnlView9");
     }
 
     /**
      * Container's getter for PartiesProduitsPfnlView10.
      * @return PartiesProduitsPfnlView10
      */
-    public ViewObjectImpl getPartiesProduitsPfnlView10() {
-        return (ViewObjectImpl) findViewObject("PartiesProduitsPfnlView10");
+    public PartiesProduitsPfnlViewImpl getPartiesProduitsPfnlView10() {
+        return (PartiesProduitsPfnlViewImpl) findViewObject("PartiesProduitsPfnlView10");
     }
 
     /**
      * Container's getter for ProduitsPfnlView4.
      * @return ProduitsPfnlView4
      */
-    public ViewObjectImpl getProduitsPfnlView4() {
-        return (ViewObjectImpl) findViewObject("ProduitsPfnlView4");
+    public ProduitsPfnlViewImpl getProduitsPfnlView4() {
+        return (ProduitsPfnlViewImpl) findViewObject("ProduitsPfnlView4");
     }
 
     /**
      * Container's getter for ProduitsPfnlView5.
      * @return ProduitsPfnlView5
      */
-    public ViewObjectImpl getProduitsPfnlView5() {
-        return (ViewObjectImpl) findViewObject("ProduitsPfnlView5");
+    public ProduitsPfnlViewImpl getProduitsPfnlView5() {
+        return (ProduitsPfnlViewImpl) findViewObject("ProduitsPfnlView5");
     }
 
     /**
      * Container's getter for ProduitsPfnlView6.
      * @return ProduitsPfnlView6
      */
-    public ViewObjectImpl getProduitsPfnlView6() {
-        return (ViewObjectImpl) findViewObject("ProduitsPfnlView6");
+    public ProduitsPfnlViewImpl getProduitsPfnlView6() {
+        return (ProduitsPfnlViewImpl) findViewObject("ProduitsPfnlView6");
     }
 
     /**
@@ -552,8 +573,8 @@ public class AppModuleImpl extends ApplicationModuleImpl {
      * Container's getter for PartiesProduitsPfnlView19.
      * @return PartiesProduitsPfnlView19
      */
-    public ViewObjectImpl getPartiesProduitsPfnlView19() {
-        return (ViewObjectImpl) findViewObject("PartiesProduitsPfnlView19");
+    public PartiesProduitsPfnlViewImpl getPartiesProduitsPfnlView19() {
+        return (PartiesProduitsPfnlViewImpl) findViewObject("PartiesProduitsPfnlView19");
     }
 
     /**
@@ -920,8 +941,8 @@ public class AppModuleImpl extends ApplicationModuleImpl {
      * Container's getter for PaysView1.
      * @return PaysView1
      */
-    public ViewObjectImpl getPaysView1() {
-        return (ViewObjectImpl) findViewObject("PaysView1");
+    public PaysViewImpl getPaysView1() {
+        return (PaysViewImpl) findViewObject("PaysView1");
     }
 
     /**
@@ -944,8 +965,8 @@ public class AppModuleImpl extends ApplicationModuleImpl {
      * Container's getter for OriginespnflsView1.
      * @return OriginespnflsView1
      */
-    public ViewObjectImpl getOriginespnflsView1() {
-        return (ViewObjectImpl) findViewObject("OriginespnflsView1");
+    public OriginespnflsViewImpl getOriginespnflsView1() {
+        return (OriginespnflsViewImpl) findViewObject("OriginespnflsView1");
     }
 
     /**
@@ -984,16 +1005,16 @@ public class AppModuleImpl extends ApplicationModuleImpl {
      * Container's getter for AgrementsView1.
      * @return AgrementsView1
      */
-    public ViewObjectImpl getAgrementsView1() {
-        return (ViewObjectImpl) findViewObject("AgrementsView1");
+    public AgrementsViewImpl getAgrementsView1() {
+        return (AgrementsViewImpl) findViewObject("AgrementsView1");
     }
 
     /**
      * Container's getter for PermissionnairespnflView1.
      * @return PermissionnairespnflView1
      */
-    public ViewObjectImpl getPermissionnairespnflView1() {
-        return (ViewObjectImpl) findViewObject("PermissionnairespnflView1");
+    public PermissionnairespnflViewImpl getPermissionnairespnflView1() {
+        return (PermissionnairespnflViewImpl) findViewObject("PermissionnairespnflView1");
     }
 
     /**
@@ -1074,8 +1095,8 @@ public class AppModuleImpl extends ApplicationModuleImpl {
      * Container's getter for PaysView2.
      * @return PaysView2
      */
-    public ViewObjectImpl getPaysView2() {
-        return (ViewObjectImpl) findViewObject("PaysView2");
+    public PaysViewImpl getPaysView2() {
+        return (PaysViewImpl) findViewObject("PaysView2");
     }
 
 
@@ -1083,8 +1104,8 @@ public class AppModuleImpl extends ApplicationModuleImpl {
      * Container's getter for CommuneView7.
      * @return CommuneView7
      */
-    public ViewObjectImpl getCommuneView7() {
-        return (ViewObjectImpl) findViewObject("CommuneView7");
+    public CommuneViewImpl getCommuneView7() {
+        return (CommuneViewImpl) findViewObject("CommuneView7");
     }
 
 
@@ -1092,8 +1113,8 @@ public class AppModuleImpl extends ApplicationModuleImpl {
      * Container's getter for PermissionnairespnflView4.
      * @return PermissionnairespnflView4
      */
-    public ViewObjectImpl getPermissionnairespnflView4() {
-        return (ViewObjectImpl) findViewObject("PermissionnairespnflView4");
+    public PermissionnairespnflViewImpl getPermissionnairespnflView4() {
+        return (PermissionnairespnflViewImpl) findViewObject("PermissionnairespnflView4");
     }
 
 
@@ -1101,8 +1122,8 @@ public class AppModuleImpl extends ApplicationModuleImpl {
      * Container's getter for OriginespnflsView2.
      * @return OriginespnflsView2
      */
-    public ViewObjectImpl getOriginespnflsView2() {
-        return (ViewObjectImpl) findViewObject("OriginespnflsView2");
+    public OriginespnflsViewImpl getOriginespnflsView2() {
+        return (OriginespnflsViewImpl) findViewObject("OriginespnflsView2");
     }
 
 
@@ -1119,8 +1140,8 @@ public class AppModuleImpl extends ApplicationModuleImpl {
      * Container's getter for DepartementView6.
      * @return DepartementView6
      */
-    public ViewObjectImpl getDepartementView6() {
-        return (ViewObjectImpl) findViewObject("DepartementView6");
+    public DepartementViewImpl getDepartementView6() {
+        return (DepartementViewImpl) findViewObject("DepartementView6");
     }
 
 
@@ -1128,8 +1149,8 @@ public class AppModuleImpl extends ApplicationModuleImpl {
      * Container's getter for PaysView3.
      * @return PaysView3
      */
-    public ViewObjectImpl getPaysView3() {
-        return (ViewObjectImpl) findViewObject("PaysView3");
+    public PaysViewImpl getPaysView3() {
+        return (PaysViewImpl) findViewObject("PaysView3");
     }
 
 
@@ -1137,8 +1158,8 @@ public class AppModuleImpl extends ApplicationModuleImpl {
      * Container's getter for CommuneView8.
      * @return CommuneView8
      */
-    public ViewObjectImpl getCommuneView8() {
-        return (ViewObjectImpl) findViewObject("CommuneView8");
+    public CommuneViewImpl getCommuneView8() {
+        return (CommuneViewImpl) findViewObject("CommuneView8");
     }
 
 
@@ -1146,8 +1167,8 @@ public class AppModuleImpl extends ApplicationModuleImpl {
      * Container's getter for PermissionnairespnflView5.
      * @return PermissionnairespnflView5
      */
-    public ViewObjectImpl getPermissionnairespnflView5() {
-        return (ViewObjectImpl) findViewObject("PermissionnairespnflView5");
+    public PermissionnairespnflViewImpl getPermissionnairespnflView5() {
+        return (PermissionnairespnflViewImpl) findViewObject("PermissionnairespnflView5");
     }
 
 
@@ -1155,8 +1176,8 @@ public class AppModuleImpl extends ApplicationModuleImpl {
      * Container's getter for OriginespnflsView3.
      * @return OriginespnflsView3
      */
-    public ViewObjectImpl getOriginespnflsView3() {
-        return (ViewObjectImpl) findViewObject("OriginespnflsView3");
+    public OriginespnflsViewImpl getOriginespnflsView3() {
+        return (OriginespnflsViewImpl) findViewObject("OriginespnflsView3");
     }
 
 
@@ -1173,8 +1194,8 @@ public class AppModuleImpl extends ApplicationModuleImpl {
      * Container's getter for DepartementView7.
      * @return DepartementView7
      */
-    public ViewObjectImpl getDepartementView7() {
-        return (ViewObjectImpl) findViewObject("DepartementView7");
+    public DepartementViewImpl getDepartementView7() {
+        return (DepartementViewImpl) findViewObject("DepartementView7");
     }
 
 
@@ -1182,24 +1203,24 @@ public class AppModuleImpl extends ApplicationModuleImpl {
      * Container's getter for PermisView1.
      * @return PermisView1
      */
-    public ViewObjectImpl getPermisView1() {
-        return (ViewObjectImpl) findViewObject("PermisView1");
+    public PermisViewImpl getPermisView1() {
+        return (PermisViewImpl) findViewObject("PermisView1");
     }
 
     /**
      * Container's getter for PermisView2.
      * @return PermisView2
      */
-    public ViewObjectImpl getPermisView2() {
-        return (ViewObjectImpl) findViewObject("PermisView2");
+    public PermisViewImpl getPermisView2() {
+        return (PermisViewImpl) findViewObject("PermisView2");
     }
 
     /**
      * Container's getter for PermisView3.
      * @return PermisView3
      */
-    public ViewObjectImpl getPermisView3() {
-        return (ViewObjectImpl) findViewObject("PermisView3");
+    public PermisViewImpl getPermisView3() {
+        return (PermisViewImpl) findViewObject("PermisView3");
     }
 
     /**
@@ -1230,8 +1251,8 @@ public class AppModuleImpl extends ApplicationModuleImpl {
      * Container's getter for CategorieunitemesureView1.
      * @return CategorieunitemesureView1
      */
-    public ViewObjectImpl getCategorieunitemesureView1() {
-        return (ViewObjectImpl) findViewObject("CategorieunitemesureView1");
+    public CategorieunitemesureViewImpl getCategorieunitemesureView1() {
+        return (CategorieunitemesureViewImpl) findViewObject("CategorieunitemesureView1");
     }
 
     /**
@@ -1262,8 +1283,8 @@ public class AppModuleImpl extends ApplicationModuleImpl {
      * Container's getter for UnitemesureView1.
      * @return UnitemesureView1
      */
-    public ViewObjectImpl getUnitemesureView1() {
-        return (ViewObjectImpl) findViewObject("UnitemesureView1");
+    public UnitemesureViewImpl getUnitemesureView1() {
+        return (UnitemesureViewImpl) findViewObject("UnitemesureView1");
     }
 
     /**
@@ -1278,8 +1299,8 @@ public class AppModuleImpl extends ApplicationModuleImpl {
      * Container's getter for UnitemesureView2.
      * @return UnitemesureView2
      */
-    public ViewObjectImpl getUnitemesureView2() {
-        return (ViewObjectImpl) findViewObject("UnitemesureView2");
+    public UnitemesureViewImpl getUnitemesureView2() {
+        return (UnitemesureViewImpl) findViewObject("UnitemesureView2");
     }
 
     /**
@@ -1310,8 +1331,8 @@ public class AppModuleImpl extends ApplicationModuleImpl {
      * Container's getter for CategorieunitemesureView2.
      * @return CategorieunitemesureView2
      */
-    public ViewObjectImpl getCategorieunitemesureView2() {
-        return (ViewObjectImpl) findViewObject("CategorieunitemesureView2");
+    public CategorieunitemesureViewImpl getCategorieunitemesureView2() {
+        return (CategorieunitemesureViewImpl) findViewObject("CategorieunitemesureView2");
     }
 
 
@@ -1319,8 +1340,8 @@ public class AppModuleImpl extends ApplicationModuleImpl {
      * Container's getter for CategorieunitemesureView3.
      * @return CategorieunitemesureView3
      */
-    public ViewObjectImpl getCategorieunitemesureView3() {
-        return (ViewObjectImpl) findViewObject("CategorieunitemesureView3");
+    public CategorieunitemesureViewImpl getCategorieunitemesureView3() {
+        return (CategorieunitemesureViewImpl) findViewObject("CategorieunitemesureView3");
     }
 
 
@@ -1328,16 +1349,16 @@ public class AppModuleImpl extends ApplicationModuleImpl {
      * Container's getter for CategorieunitemesureView4.
      * @return CategorieunitemesureView4
      */
-    public ViewObjectImpl getCategorieunitemesureView4() {
-        return (ViewObjectImpl) findViewObject("CategorieunitemesureView4");
+    public CategorieunitemesureViewImpl getCategorieunitemesureView4() {
+        return (CategorieunitemesureViewImpl) findViewObject("CategorieunitemesureView4");
     }
 
     /**
      * Container's getter for UnitemesureView3.
      * @return UnitemesureView3
      */
-    public ViewObjectImpl getUnitemesureView3() {
-        return (ViewObjectImpl) findViewObject("UnitemesureView3");
+    public UnitemesureViewImpl getUnitemesureView3() {
+        return (UnitemesureViewImpl) findViewObject("UnitemesureView3");
     }
 
     /**
@@ -1352,8 +1373,8 @@ public class AppModuleImpl extends ApplicationModuleImpl {
      * Container's getter for CategorieunitemesureView5.
      * @return CategorieunitemesureView5
      */
-    public ViewObjectImpl getCategorieunitemesureView5() {
-        return (ViewObjectImpl) findViewObject("CategorieunitemesureView5");
+    public CategorieunitemesureViewImpl getCategorieunitemesureView5() {
+        return (CategorieunitemesureViewImpl) findViewObject("CategorieunitemesureView5");
     }
 
     /**
@@ -1368,8 +1389,8 @@ public class AppModuleImpl extends ApplicationModuleImpl {
      * Container's getter for UnitemesureView4.
      * @return UnitemesureView4
      */
-    public ViewObjectImpl getUnitemesureView4() {
-        return (ViewObjectImpl) findViewObject("UnitemesureView4");
+    public UnitemesureViewImpl getUnitemesureView4() {
+        return (UnitemesureViewImpl) findViewObject("UnitemesureView4");
     }
 
     /**
@@ -1384,8 +1405,8 @@ public class AppModuleImpl extends ApplicationModuleImpl {
      * Container's getter for CategorieunitemesureView6.
      * @return CategorieunitemesureView6
      */
-    public ViewObjectImpl getCategorieunitemesureView6() {
-        return (ViewObjectImpl) findViewObject("CategorieunitemesureView6");
+    public CategorieunitemesureViewImpl getCategorieunitemesureView6() {
+        return (CategorieunitemesureViewImpl) findViewObject("CategorieunitemesureView6");
     }
 
     /**
@@ -1408,8 +1429,8 @@ public class AppModuleImpl extends ApplicationModuleImpl {
      * Container's getter for CategorieproduitView1.
      * @return CategorieproduitView1
      */
-    public ViewObjectImpl getCategorieproduitView1() {
-        return (ViewObjectImpl) findViewObject("CategorieproduitView1");
+    public CategorieproduitViewImpl getCategorieproduitView1() {
+        return (CategorieproduitViewImpl) findViewObject("CategorieproduitView1");
     }
 
     /**
@@ -1432,8 +1453,8 @@ public class AppModuleImpl extends ApplicationModuleImpl {
      * Container's getter for CategorieproduitView3.
      * @return CategorieproduitView3
      */
-    public ViewObjectImpl getCategorieproduitView3() {
-        return (ViewObjectImpl) findViewObject("CategorieproduitView3");
+    public CategorieproduitViewImpl getCategorieproduitView3() {
+        return (CategorieproduitViewImpl) findViewObject("CategorieproduitView3");
     }
 
     /**
@@ -1456,16 +1477,16 @@ public class AppModuleImpl extends ApplicationModuleImpl {
      * Container's getter for PartiesProduitsPfnlView20.
      * @return PartiesProduitsPfnlView20
      */
-    public ViewObjectImpl getPartiesProduitsPfnlView20() {
-        return (ViewObjectImpl) findViewObject("PartiesProduitsPfnlView20");
+    public PartiesProduitsPfnlViewImpl getPartiesProduitsPfnlView20() {
+        return (PartiesProduitsPfnlViewImpl) findViewObject("PartiesProduitsPfnlView20");
     }
 
     /**
      * Container's getter for UnitemesureView5.
      * @return UnitemesureView5
      */
-    public ViewObjectImpl getUnitemesureView5() {
-        return (ViewObjectImpl) findViewObject("UnitemesureView5");
+    public UnitemesureViewImpl getUnitemesureView5() {
+        return (UnitemesureViewImpl) findViewObject("UnitemesureView5");
     }
 
     /**
@@ -1480,16 +1501,16 @@ public class AppModuleImpl extends ApplicationModuleImpl {
      * Container's getter for PartiesProduitsPfnlView21.
      * @return PartiesProduitsPfnlView21
      */
-    public ViewObjectImpl getPartiesProduitsPfnlView21() {
-        return (ViewObjectImpl) findViewObject("PartiesProduitsPfnlView21");
+    public PartiesProduitsPfnlViewImpl getPartiesProduitsPfnlView21() {
+        return (PartiesProduitsPfnlViewImpl) findViewObject("PartiesProduitsPfnlView21");
     }
 
     /**
      * Container's getter for UnitemesureView6.
      * @return UnitemesureView6
      */
-    public ViewObjectImpl getUnitemesureView6() {
-        return (ViewObjectImpl) findViewObject("UnitemesureView6");
+    public UnitemesureViewImpl getUnitemesureView6() {
+        return (UnitemesureViewImpl) findViewObject("UnitemesureView6");
     }
 
     /**
@@ -1504,8 +1525,8 @@ public class AppModuleImpl extends ApplicationModuleImpl {
      * Container's getter for TransporteurView1.
      * @return TransporteurView1
      */
-    public ViewObjectImpl getTransporteurView1() {
-        return (ViewObjectImpl) findViewObject("TransporteurView1");
+    public TransporteurViewImpl getTransporteurView1() {
+        return (TransporteurViewImpl) findViewObject("TransporteurView1");
     }
 
     /**
@@ -1536,8 +1557,8 @@ public class AppModuleImpl extends ApplicationModuleImpl {
      * Container's getter for VehiculeView1.
      * @return VehiculeView1
      */
-    public ViewObjectImpl getVehiculeView1() {
-        return (ViewObjectImpl) findViewObject("VehiculeView1");
+    public VehiculeViewImpl getVehiculeView1() {
+        return (VehiculeViewImpl) findViewObject("VehiculeView1");
     }
 
     /**
@@ -1552,24 +1573,24 @@ public class AppModuleImpl extends ApplicationModuleImpl {
      * Container's getter for VehiculeView2.
      * @return VehiculeView2
      */
-    public ViewObjectImpl getVehiculeView2() {
-        return (ViewObjectImpl) findViewObject("VehiculeView2");
+    public VehiculeViewImpl getVehiculeView2() {
+        return (VehiculeViewImpl) findViewObject("VehiculeView2");
     }
 
     /**
      * Container's getter for VehiculeView3.
      * @return VehiculeView3
      */
-    public ViewObjectImpl getVehiculeView3() {
-        return (ViewObjectImpl) findViewObject("VehiculeView3");
+    public VehiculeViewImpl getVehiculeView3() {
+        return (VehiculeViewImpl) findViewObject("VehiculeView3");
     }
 
     /**
      * Container's getter for VehiculeView4.
      * @return VehiculeView4
      */
-    public ViewObjectImpl getVehiculeView4() {
-        return (ViewObjectImpl) findViewObject("VehiculeView4");
+    public VehiculeViewImpl getVehiculeView4() {
+        return (VehiculeViewImpl) findViewObject("VehiculeView4");
     }
 
     /**
@@ -1648,16 +1669,16 @@ public class AppModuleImpl extends ApplicationModuleImpl {
      * Container's getter for TransporteurView2.
      * @return TransporteurView2
      */
-    public ViewObjectImpl getTransporteurView2() {
-        return (ViewObjectImpl) findViewObject("TransporteurView2");
+    public TransporteurViewImpl getTransporteurView2() {
+        return (TransporteurViewImpl) findViewObject("TransporteurView2");
     }
 
     /**
      * Container's getter for VehiculeView5.
      * @return VehiculeView5
      */
-    public ViewObjectImpl getVehiculeView5() {
-        return (ViewObjectImpl) findViewObject("VehiculeView5");
+    public VehiculeViewImpl getVehiculeView5() {
+        return (VehiculeViewImpl) findViewObject("VehiculeView5");
     }
 
     /**
@@ -1680,8 +1701,8 @@ public class AppModuleImpl extends ApplicationModuleImpl {
      * Container's getter for VehiculeView6.
      * @return VehiculeView6
      */
-    public ViewObjectImpl getVehiculeView6() {
-        return (ViewObjectImpl) findViewObject("VehiculeView6");
+    public VehiculeViewImpl getVehiculeView6() {
+        return (VehiculeViewImpl) findViewObject("VehiculeView6");
     }
 
     /**
@@ -1704,8 +1725,8 @@ public class AppModuleImpl extends ApplicationModuleImpl {
      * Container's getter for VehiculeView7.
      * @return VehiculeView7
      */
-    public ViewObjectImpl getVehiculeView7() {
-        return (ViewObjectImpl) findViewObject("VehiculeView7");
+    public VehiculeViewImpl getVehiculeView7() {
+        return (VehiculeViewImpl) findViewObject("VehiculeView7");
     }
 
     /**
@@ -1767,16 +1788,16 @@ public class AppModuleImpl extends ApplicationModuleImpl {
      * Container's getter for LocaliteView1.
      * @return LocaliteView1
      */
-    public ViewObjectImpl getLocaliteView1() {
-        return (ViewObjectImpl) findViewObject("LocaliteView1");
+    public LocaliteViewImpl getLocaliteView1() {
+        return (LocaliteViewImpl) findViewObject("LocaliteView1");
     }
 
     /**
      * Container's getter for LocaliteView2.
      * @return LocaliteView2
      */
-    public ViewObjectImpl getLocaliteView2() {
-        return (ViewObjectImpl) findViewObject("LocaliteView2");
+    public LocaliteViewImpl getLocaliteView2() {
+        return (LocaliteViewImpl) findViewObject("LocaliteView2");
     }
 
     /**
@@ -1799,16 +1820,16 @@ public class AppModuleImpl extends ApplicationModuleImpl {
      * Container's getter for DepartementView5.
      * @return DepartementView5
      */
-    public ViewObjectImpl getDepartementView5() {
-        return (ViewObjectImpl) findViewObject("DepartementView5");
+    public DepartementViewImpl getDepartementView5() {
+        return (DepartementViewImpl) findViewObject("DepartementView5");
     }
 
     /**
      * Container's getter for LocaliteView3.
      * @return LocaliteView3
      */
-    public ViewObjectImpl getLocaliteView3() {
-        return (ViewObjectImpl) findViewObject("LocaliteView3");
+    public LocaliteViewImpl getLocaliteView3() {
+        return (LocaliteViewImpl) findViewObject("LocaliteView3");
     }
 
     /**
@@ -1823,8 +1844,8 @@ public class AppModuleImpl extends ApplicationModuleImpl {
      * Container's getter for LocaliteView4.
      * @return LocaliteView4
      */
-    public ViewObjectImpl getLocaliteView4() {
-        return (ViewObjectImpl) findViewObject("LocaliteView4");
+    public LocaliteViewImpl getLocaliteView4() {
+        return (LocaliteViewImpl) findViewObject("LocaliteView4");
     }
 
     /**
@@ -1839,8 +1860,8 @@ public class AppModuleImpl extends ApplicationModuleImpl {
      * Container's getter for DepartementView8.
      * @return DepartementView8
      */
-    public ViewObjectImpl getDepartementView8() {
-        return (ViewObjectImpl) findViewObject("DepartementView8");
+    public DepartementViewImpl getDepartementView8() {
+        return (DepartementViewImpl) findViewObject("DepartementView8");
     }
 
     /**
@@ -1855,16 +1876,16 @@ public class AppModuleImpl extends ApplicationModuleImpl {
      * Container's getter for PostecontroleView1.
      * @return PostecontroleView1
      */
-    public ViewObjectImpl getPostecontroleView1() {
-        return (ViewObjectImpl) findViewObject("PostecontroleView1");
+    public PostecontroleViewImpl getPostecontroleView1() {
+        return (PostecontroleViewImpl) findViewObject("PostecontroleView1");
     }
 
     /**
      * Container's getter for PostecontroleView2.
      * @return PostecontroleView2
      */
-    public ViewObjectImpl getPostecontroleView2() {
-        return (ViewObjectImpl) findViewObject("PostecontroleView2");
+    public PostecontroleViewImpl getPostecontroleView2() {
+        return (PostecontroleViewImpl) findViewObject("PostecontroleView2");
     }
 
     /**
@@ -1887,16 +1908,16 @@ public class AppModuleImpl extends ApplicationModuleImpl {
      * Container's getter for DepartementView9.
      * @return DepartementView9
      */
-    public ViewObjectImpl getDepartementView9() {
-        return (ViewObjectImpl) findViewObject("DepartementView9");
+    public DepartementViewImpl getDepartementView9() {
+        return (DepartementViewImpl) findViewObject("DepartementView9");
     }
 
     /**
      * Container's getter for PostecontroleView3.
      * @return PostecontroleView3
      */
-    public ViewObjectImpl getPostecontroleView3() {
-        return (ViewObjectImpl) findViewObject("PostecontroleView3");
+    public PostecontroleViewImpl getPostecontroleView3() {
+        return (PostecontroleViewImpl) findViewObject("PostecontroleView3");
     }
 
     /**
@@ -1911,8 +1932,8 @@ public class AppModuleImpl extends ApplicationModuleImpl {
      * Container's getter for PostecontroleView4.
      * @return PostecontroleView4
      */
-    public ViewObjectImpl getPostecontroleView4() {
-        return (ViewObjectImpl) findViewObject("PostecontroleView4");
+    public PostecontroleViewImpl getPostecontroleView4() {
+        return (PostecontroleViewImpl) findViewObject("PostecontroleView4");
     }
 
     /**
@@ -1927,8 +1948,8 @@ public class AppModuleImpl extends ApplicationModuleImpl {
      * Container's getter for PostecontroleView5.
      * @return PostecontroleView5
      */
-    public ViewObjectImpl getPostecontroleView5() {
-        return (ViewObjectImpl) findViewObject("PostecontroleView5");
+    public PostecontroleViewImpl getPostecontroleView5() {
+        return (PostecontroleViewImpl) findViewObject("PostecontroleView5");
     }
 
     /**
@@ -1943,32 +1964,32 @@ public class AppModuleImpl extends ApplicationModuleImpl {
      * Container's getter for DetailpermisView1.
      * @return DetailpermisView1
      */
-    public ViewObjectImpl getDetailpermisView1() {
-        return (ViewObjectImpl) findViewObject("DetailpermisView1");
+    public DetailpermisViewImpl getDetailpermisView1() {
+        return (DetailpermisViewImpl) findViewObject("DetailpermisView1");
     }
 
     /**
      * Container's getter for DetailpermisView2.
      * @return DetailpermisView2
      */
-    public ViewObjectImpl getDetailpermisView2() {
-        return (ViewObjectImpl) findViewObject("DetailpermisView2");
+    public DetailpermisViewImpl getDetailpermisView2() {
+        return (DetailpermisViewImpl) findViewObject("DetailpermisView2");
     }
 
     /**
      * Container's getter for DetailpermisView3.
      * @return DetailpermisView3
      */
-    public ViewObjectImpl getDetailpermisView3() {
-        return (ViewObjectImpl) findViewObject("DetailpermisView3");
+    public DetailpermisViewImpl getDetailpermisView3() {
+        return (DetailpermisViewImpl) findViewObject("DetailpermisView3");
     }
 
     /**
      * Container's getter for DetailpermisView4.
      * @return DetailpermisView4
      */
-    public ViewObjectImpl getDetailpermisView4() {
-        return (ViewObjectImpl) findViewObject("DetailpermisView4");
+    public DetailpermisViewImpl getDetailpermisView4() {
+        return (DetailpermisViewImpl) findViewObject("DetailpermisView4");
     }
 
     /**
@@ -2007,16 +2028,16 @@ public class AppModuleImpl extends ApplicationModuleImpl {
      * Container's getter for PermisView4.
      * @return PermisView4
      */
-    public ViewObjectImpl getPermisView4() {
-        return (ViewObjectImpl) findViewObject("PermisView4");
+    public PermisViewImpl getPermisView4() {
+        return (PermisViewImpl) findViewObject("PermisView4");
     }
 
     /**
      * Container's getter for DetailpermisView5.
      * @return DetailpermisView5
      */
-    public ViewObjectImpl getDetailpermisView5() {
-        return (ViewObjectImpl) findViewObject("DetailpermisView5");
+    public DetailpermisViewImpl getDetailpermisView5() {
+        return (DetailpermisViewImpl) findViewObject("DetailpermisView5");
     }
 
     /**
@@ -2031,8 +2052,8 @@ public class AppModuleImpl extends ApplicationModuleImpl {
      * Container's getter for DetailpermisView6.
      * @return DetailpermisView6
      */
-    public ViewObjectImpl getDetailpermisView6() {
-        return (ViewObjectImpl) findViewObject("DetailpermisView6");
+    public DetailpermisViewImpl getDetailpermisView6() {
+        return (DetailpermisViewImpl) findViewObject("DetailpermisView6");
     }
 
     /**
@@ -2047,8 +2068,8 @@ public class AppModuleImpl extends ApplicationModuleImpl {
      * Container's getter for CollectepfnlView1.
      * @return CollectepfnlView1
      */
-    public ViewObjectImpl getCollectepfnlView1() {
-        return (ViewObjectImpl) findViewObject("CollectepfnlView1");
+    public CollectepfnlViewImpl getCollectepfnlView1() {
+        return (CollectepfnlViewImpl) findViewObject("CollectepfnlView1");
     }
 
     /**
@@ -2063,8 +2084,8 @@ public class AppModuleImpl extends ApplicationModuleImpl {
      * Container's getter for CollectepfnlView3.
      * @return CollectepfnlView3
      */
-    public ViewObjectImpl getCollectepfnlView3() {
-        return (ViewObjectImpl) findViewObject("CollectepfnlView3");
+    public CollectepfnlViewImpl getCollectepfnlView3() {
+        return (CollectepfnlViewImpl) findViewObject("CollectepfnlView3");
     }
 
     /**
@@ -2095,8 +2116,8 @@ public class AppModuleImpl extends ApplicationModuleImpl {
      * Container's getter for DetailscollectepfnlView1.
      * @return DetailscollectepfnlView1
      */
-    public ViewObjectImpl getDetailscollectepfnlView1() {
-        return (ViewObjectImpl) findViewObject("DetailscollectepfnlView1");
+    public DetailscollectepfnlViewImpl getDetailscollectepfnlView1() {
+        return (DetailscollectepfnlViewImpl) findViewObject("DetailscollectepfnlView1");
     }
 
     /**
@@ -2111,56 +2132,56 @@ public class AppModuleImpl extends ApplicationModuleImpl {
      * Container's getter for DetailscollectepfnlView2.
      * @return DetailscollectepfnlView2
      */
-    public ViewObjectImpl getDetailscollectepfnlView2() {
-        return (ViewObjectImpl) findViewObject("DetailscollectepfnlView2");
+    public DetailscollectepfnlViewImpl getDetailscollectepfnlView2() {
+        return (DetailscollectepfnlViewImpl) findViewObject("DetailscollectepfnlView2");
     }
 
     /**
      * Container's getter for DetailscollectepfnlView3.
      * @return DetailscollectepfnlView3
      */
-    public ViewObjectImpl getDetailscollectepfnlView3() {
-        return (ViewObjectImpl) findViewObject("DetailscollectepfnlView3");
+    public DetailscollectepfnlViewImpl getDetailscollectepfnlView3() {
+        return (DetailscollectepfnlViewImpl) findViewObject("DetailscollectepfnlView3");
     }
 
     /**
      * Container's getter for DetailscollectepfnlView4.
      * @return DetailscollectepfnlView4
      */
-    public ViewObjectImpl getDetailscollectepfnlView4() {
-        return (ViewObjectImpl) findViewObject("DetailscollectepfnlView4");
+    public DetailscollectepfnlViewImpl getDetailscollectepfnlView4() {
+        return (DetailscollectepfnlViewImpl) findViewObject("DetailscollectepfnlView4");
     }
 
     /**
      * Container's getter for DetailscollectepfnlView5.
      * @return DetailscollectepfnlView5
      */
-    public ViewObjectImpl getDetailscollectepfnlView5() {
-        return (ViewObjectImpl) findViewObject("DetailscollectepfnlView5");
+    public DetailscollectepfnlViewImpl getDetailscollectepfnlView5() {
+        return (DetailscollectepfnlViewImpl) findViewObject("DetailscollectepfnlView5");
     }
 
     /**
      * Container's getter for DetailscollectepfnlView6.
      * @return DetailscollectepfnlView6
      */
-    public ViewObjectImpl getDetailscollectepfnlView6() {
-        return (ViewObjectImpl) findViewObject("DetailscollectepfnlView6");
+    public DetailscollectepfnlViewImpl getDetailscollectepfnlView6() {
+        return (DetailscollectepfnlViewImpl) findViewObject("DetailscollectepfnlView6");
     }
 
     /**
      * Container's getter for DetailscollectepfnlView7.
      * @return DetailscollectepfnlView7
      */
-    public ViewObjectImpl getDetailscollectepfnlView7() {
-        return (ViewObjectImpl) findViewObject("DetailscollectepfnlView7");
+    public DetailscollectepfnlViewImpl getDetailscollectepfnlView7() {
+        return (DetailscollectepfnlViewImpl) findViewObject("DetailscollectepfnlView7");
     }
 
     /**
      * Container's getter for DetailscollectepfnlView8.
      * @return DetailscollectepfnlView8
      */
-    public ViewObjectImpl getDetailscollectepfnlView8() {
-        return (ViewObjectImpl) findViewObject("DetailscollectepfnlView8");
+    public DetailscollectepfnlViewImpl getDetailscollectepfnlView8() {
+        return (DetailscollectepfnlViewImpl) findViewObject("DetailscollectepfnlView8");
     }
 
     /**
@@ -2335,16 +2356,16 @@ public class AppModuleImpl extends ApplicationModuleImpl {
      * Container's getter for CollectepfnlView5.
      * @return CollectepfnlView5
      */
-    public ViewObjectImpl getCollectepfnlView5() {
-        return (ViewObjectImpl) findViewObject("CollectepfnlView5");
+    public CollectepfnlViewImpl getCollectepfnlView5() {
+        return (CollectepfnlViewImpl) findViewObject("CollectepfnlView5");
     }
 
     /**
      * Container's getter for DetailscollectepfnlView9.
      * @return DetailscollectepfnlView9
      */
-    public ViewObjectImpl getDetailscollectepfnlView9() {
-        return (ViewObjectImpl) findViewObject("DetailscollectepfnlView9");
+    public DetailscollectepfnlViewImpl getDetailscollectepfnlView9() {
+        return (DetailscollectepfnlViewImpl) findViewObject("DetailscollectepfnlView9");
     }
 
     /**
@@ -2359,16 +2380,16 @@ public class AppModuleImpl extends ApplicationModuleImpl {
      * Container's getter for DetailscollectepfnlView10.
      * @return DetailscollectepfnlView10
      */
-    public ViewObjectImpl getDetailscollectepfnlView10() {
-        return (ViewObjectImpl) findViewObject("DetailscollectepfnlView10");
+    public DetailscollectepfnlViewImpl getDetailscollectepfnlView10() {
+        return (DetailscollectepfnlViewImpl) findViewObject("DetailscollectepfnlView10");
     }
 
     /**
      * Container's getter for PermissionnairespnflView2.
      * @return PermissionnairespnflView2
      */
-    public ViewObjectImpl getPermissionnairespnflView2() {
-        return (ViewObjectImpl) findViewObject("PermissionnairespnflView2");
+    public PermissionnairespnflViewImpl getPermissionnairespnflView2() {
+        return (PermissionnairespnflViewImpl) findViewObject("PermissionnairespnflView2");
     }
 
     /**
@@ -2383,16 +2404,16 @@ public class AppModuleImpl extends ApplicationModuleImpl {
      * Container's getter for DetailscollectepfnlView11.
      * @return DetailscollectepfnlView11
      */
-    public ViewObjectImpl getDetailscollectepfnlView11() {
-        return (ViewObjectImpl) findViewObject("DetailscollectepfnlView11");
+    public DetailscollectepfnlViewImpl getDetailscollectepfnlView11() {
+        return (DetailscollectepfnlViewImpl) findViewObject("DetailscollectepfnlView11");
     }
 
     /**
      * Container's getter for PartiesProduitsPfnlView22.
      * @return PartiesProduitsPfnlView22
      */
-    public ViewObjectImpl getPartiesProduitsPfnlView22() {
-        return (ViewObjectImpl) findViewObject("PartiesProduitsPfnlView22");
+    public PartiesProduitsPfnlViewImpl getPartiesProduitsPfnlView22() {
+        return (PartiesProduitsPfnlViewImpl) findViewObject("PartiesProduitsPfnlView22");
     }
 
     /**
@@ -2407,16 +2428,16 @@ public class AppModuleImpl extends ApplicationModuleImpl {
      * Container's getter for DetailscollectepfnlView12.
      * @return DetailscollectepfnlView12
      */
-    public ViewObjectImpl getDetailscollectepfnlView12() {
-        return (ViewObjectImpl) findViewObject("DetailscollectepfnlView12");
+    public DetailscollectepfnlViewImpl getDetailscollectepfnlView12() {
+        return (DetailscollectepfnlViewImpl) findViewObject("DetailscollectepfnlView12");
     }
 
     /**
      * Container's getter for OriginespnflsView4.
      * @return OriginespnflsView4
      */
-    public ViewObjectImpl getOriginespnflsView4() {
-        return (ViewObjectImpl) findViewObject("OriginespnflsView4");
+    public OriginespnflsViewImpl getOriginespnflsView4() {
+        return (OriginespnflsViewImpl) findViewObject("OriginespnflsView4");
     }
 
     /**
@@ -2431,16 +2452,16 @@ public class AppModuleImpl extends ApplicationModuleImpl {
      * Container's getter for DetailscollectepfnlView13.
      * @return DetailscollectepfnlView13
      */
-    public ViewObjectImpl getDetailscollectepfnlView13() {
-        return (ViewObjectImpl) findViewObject("DetailscollectepfnlView13");
+    public DetailscollectepfnlViewImpl getDetailscollectepfnlView13() {
+        return (DetailscollectepfnlViewImpl) findViewObject("DetailscollectepfnlView13");
     }
 
     /**
      * Container's getter for UnitemesureView7.
      * @return UnitemesureView7
      */
-    public ViewObjectImpl getUnitemesureView7() {
-        return (ViewObjectImpl) findViewObject("UnitemesureView7");
+    public UnitemesureViewImpl getUnitemesureView7() {
+        return (UnitemesureViewImpl) findViewObject("UnitemesureView7");
     }
 
     /**
@@ -2455,16 +2476,16 @@ public class AppModuleImpl extends ApplicationModuleImpl {
      * Container's getter for DetailscollectepfnlView14.
      * @return DetailscollectepfnlView14
      */
-    public ViewObjectImpl getDetailscollectepfnlView14() {
-        return (ViewObjectImpl) findViewObject("DetailscollectepfnlView14");
+    public DetailscollectepfnlViewImpl getDetailscollectepfnlView14() {
+        return (DetailscollectepfnlViewImpl) findViewObject("DetailscollectepfnlView14");
     }
 
     /**
      * Container's getter for PermisView5.
      * @return PermisView5
      */
-    public ViewObjectImpl getPermisView5() {
-        return (ViewObjectImpl) findViewObject("PermisView5");
+    public PermisViewImpl getPermisView5() {
+        return (PermisViewImpl) findViewObject("PermisView5");
     }
 
     /**
@@ -2479,16 +2500,16 @@ public class AppModuleImpl extends ApplicationModuleImpl {
      * Container's getter for DetailscollectepfnlView15.
      * @return DetailscollectepfnlView15
      */
-    public ViewObjectImpl getDetailscollectepfnlView15() {
-        return (ViewObjectImpl) findViewObject("DetailscollectepfnlView15");
+    public DetailscollectepfnlViewImpl getDetailscollectepfnlView15() {
+        return (DetailscollectepfnlViewImpl) findViewObject("DetailscollectepfnlView15");
     }
 
     /**
      * Container's getter for DepartementView10.
      * @return DepartementView10
      */
-    public ViewObjectImpl getDepartementView10() {
-        return (ViewObjectImpl) findViewObject("DepartementView10");
+    public DepartementViewImpl getDepartementView10() {
+        return (DepartementViewImpl) findViewObject("DepartementView10");
     }
 
     /**
@@ -2503,8 +2524,8 @@ public class AppModuleImpl extends ApplicationModuleImpl {
      * Container's getter for DetailscollectepfnlView16.
      * @return DetailscollectepfnlView16
      */
-    public ViewObjectImpl getDetailscollectepfnlView16() {
-        return (ViewObjectImpl) findViewObject("DetailscollectepfnlView16");
+    public DetailscollectepfnlViewImpl getDetailscollectepfnlView16() {
+        return (DetailscollectepfnlViewImpl) findViewObject("DetailscollectepfnlView16");
     }
 
 
@@ -2512,8 +2533,8 @@ public class AppModuleImpl extends ApplicationModuleImpl {
      * Container's getter for DetailscollectepfnlView17.
      * @return DetailscollectepfnlView17
      */
-    public ViewObjectImpl getDetailscollectepfnlView17() {
-        return (ViewObjectImpl) findViewObject("DetailscollectepfnlView17");
+    public DetailscollectepfnlViewImpl getDetailscollectepfnlView17() {
+        return (DetailscollectepfnlViewImpl) findViewObject("DetailscollectepfnlView17");
     }
 
     /**
@@ -2528,8 +2549,8 @@ public class AppModuleImpl extends ApplicationModuleImpl {
      * Container's getter for DepartementView11.
      * @return DepartementView11
      */
-    public ViewObjectImpl getDepartementView11() {
-        return (ViewObjectImpl) findViewObject("DepartementView11");
+    public DepartementViewImpl getDepartementView11() {
+        return (DepartementViewImpl) findViewObject("DepartementView11");
     }
 
     /**
@@ -2544,8 +2565,8 @@ public class AppModuleImpl extends ApplicationModuleImpl {
      * Container's getter for UnitemesureView8.
      * @return UnitemesureView8
      */
-    public ViewObjectImpl getUnitemesureView8() {
-        return (ViewObjectImpl) findViewObject("UnitemesureView8");
+    public UnitemesureViewImpl getUnitemesureView8() {
+        return (UnitemesureViewImpl) findViewObject("UnitemesureView8");
     }
 
     /**
@@ -2560,8 +2581,8 @@ public class AppModuleImpl extends ApplicationModuleImpl {
      * Container's getter for PermisView6.
      * @return PermisView6
      */
-    public ViewObjectImpl getPermisView6() {
-        return (ViewObjectImpl) findViewObject("PermisView6");
+    public PermisViewImpl getPermisView6() {
+        return (PermisViewImpl) findViewObject("PermisView6");
     }
 
     /**
@@ -2576,8 +2597,8 @@ public class AppModuleImpl extends ApplicationModuleImpl {
      * Container's getter for PermissionnairespnflView3.
      * @return PermissionnairespnflView3
      */
-    public ViewObjectImpl getPermissionnairespnflView3() {
-        return (ViewObjectImpl) findViewObject("PermissionnairespnflView3");
+    public PermissionnairespnflViewImpl getPermissionnairespnflView3() {
+        return (PermissionnairespnflViewImpl) findViewObject("PermissionnairespnflView3");
     }
 
     /**
@@ -2592,8 +2613,8 @@ public class AppModuleImpl extends ApplicationModuleImpl {
      * Container's getter for PartiesProduitsPfnlView23.
      * @return PartiesProduitsPfnlView23
      */
-    public ViewObjectImpl getPartiesProduitsPfnlView23() {
-        return (ViewObjectImpl) findViewObject("PartiesProduitsPfnlView23");
+    public PartiesProduitsPfnlViewImpl getPartiesProduitsPfnlView23() {
+        return (PartiesProduitsPfnlViewImpl) findViewObject("PartiesProduitsPfnlView23");
     }
 
     /**
@@ -2608,8 +2629,8 @@ public class AppModuleImpl extends ApplicationModuleImpl {
      * Container's getter for OriginespnflsView5.
      * @return OriginespnflsView5
      */
-    public ViewObjectImpl getOriginespnflsView5() {
-        return (ViewObjectImpl) findViewObject("OriginespnflsView5");
+    public OriginespnflsViewImpl getOriginespnflsView5() {
+        return (OriginespnflsViewImpl) findViewObject("OriginespnflsView5");
     }
 
     /**
@@ -2706,144 +2727,144 @@ public class AppModuleImpl extends ApplicationModuleImpl {
      * Container's getter for DetailslettrevoitureView1.
      * @return DetailslettrevoitureView1
      */
-    public ViewObjectImpl getDetailslettrevoitureView1() {
-        return (ViewObjectImpl) findViewObject("DetailslettrevoitureView1");
+    public DetailslettrevoitureViewImpl getDetailslettrevoitureView1() {
+        return (DetailslettrevoitureViewImpl) findViewObject("DetailslettrevoitureView1");
     }
 
     /**
      * Container's getter for LettrevoitureView1.
      * @return LettrevoitureView1
      */
-    public ViewObjectImpl getLettrevoitureView1() {
-        return (ViewObjectImpl) findViewObject("LettrevoitureView1");
+    public LettrevoitureViewImpl getLettrevoitureView1() {
+        return (LettrevoitureViewImpl) findViewObject("LettrevoitureView1");
     }
 
     /**
      * Container's getter for LettrevoitureView2.
      * @return LettrevoitureView2
      */
-    public ViewObjectImpl getLettrevoitureView2() {
-        return (ViewObjectImpl) findViewObject("LettrevoitureView2");
+    public LettrevoitureViewImpl getLettrevoitureView2() {
+        return (LettrevoitureViewImpl) findViewObject("LettrevoitureView2");
     }
 
     /**
      * Container's getter for LettrevoitureView3.
      * @return LettrevoitureView3
      */
-    public ViewObjectImpl getLettrevoitureView3() {
-        return (ViewObjectImpl) findViewObject("LettrevoitureView3");
+    public LettrevoitureViewImpl getLettrevoitureView3() {
+        return (LettrevoitureViewImpl) findViewObject("LettrevoitureView3");
     }
 
     /**
      * Container's getter for LettrevoitureView4.
      * @return LettrevoitureView4
      */
-    public ViewObjectImpl getLettrevoitureView4() {
-        return (ViewObjectImpl) findViewObject("LettrevoitureView4");
+    public LettrevoitureViewImpl getLettrevoitureView4() {
+        return (LettrevoitureViewImpl) findViewObject("LettrevoitureView4");
     }
 
     /**
      * Container's getter for LettrevoitureView5.
      * @return LettrevoitureView5
      */
-    public ViewObjectImpl getLettrevoitureView5() {
-        return (ViewObjectImpl) findViewObject("LettrevoitureView5");
+    public LettrevoitureViewImpl getLettrevoitureView5() {
+        return (LettrevoitureViewImpl) findViewObject("LettrevoitureView5");
     }
 
     /**
      * Container's getter for LettrevoitureView6.
      * @return LettrevoitureView6
      */
-    public ViewObjectImpl getLettrevoitureView6() {
-        return (ViewObjectImpl) findViewObject("LettrevoitureView6");
+    public LettrevoitureViewImpl getLettrevoitureView6() {
+        return (LettrevoitureViewImpl) findViewObject("LettrevoitureView6");
     }
 
     /**
      * Container's getter for DetailslettrevoitureView2.
      * @return DetailslettrevoitureView2
      */
-    public ViewObjectImpl getDetailslettrevoitureView2() {
-        return (ViewObjectImpl) findViewObject("DetailslettrevoitureView2");
+    public DetailslettrevoitureViewImpl getDetailslettrevoitureView2() {
+        return (DetailslettrevoitureViewImpl) findViewObject("DetailslettrevoitureView2");
     }
 
     /**
      * Container's getter for DetailslettrevoitureView3.
      * @return DetailslettrevoitureView3
      */
-    public ViewObjectImpl getDetailslettrevoitureView3() {
-        return (ViewObjectImpl) findViewObject("DetailslettrevoitureView3");
+    public DetailslettrevoitureViewImpl getDetailslettrevoitureView3() {
+        return (DetailslettrevoitureViewImpl) findViewObject("DetailslettrevoitureView3");
     }
 
     /**
      * Container's getter for DetailslettrevoitureView4.
      * @return DetailslettrevoitureView4
      */
-    public ViewObjectImpl getDetailslettrevoitureView4() {
-        return (ViewObjectImpl) findViewObject("DetailslettrevoitureView4");
+    public DetailslettrevoitureViewImpl getDetailslettrevoitureView4() {
+        return (DetailslettrevoitureViewImpl) findViewObject("DetailslettrevoitureView4");
     }
 
     /**
      * Container's getter for LettrevoitureView7.
      * @return LettrevoitureView7
      */
-    public ViewObjectImpl getLettrevoitureView7() {
-        return (ViewObjectImpl) findViewObject("LettrevoitureView7");
+    public LettrevoitureViewImpl getLettrevoitureView7() {
+        return (LettrevoitureViewImpl) findViewObject("LettrevoitureView7");
     }
 
     /**
      * Container's getter for LettrevoitureView8.
      * @return LettrevoitureView8
      */
-    public ViewObjectImpl getLettrevoitureView8() {
-        return (ViewObjectImpl) findViewObject("LettrevoitureView8");
+    public LettrevoitureViewImpl getLettrevoitureView8() {
+        return (LettrevoitureViewImpl) findViewObject("LettrevoitureView8");
     }
 
     /**
      * Container's getter for LettrevoitureView9.
      * @return LettrevoitureView9
      */
-    public ViewObjectImpl getLettrevoitureView9() {
-        return (ViewObjectImpl) findViewObject("LettrevoitureView9");
+    public LettrevoitureViewImpl getLettrevoitureView9() {
+        return (LettrevoitureViewImpl) findViewObject("LettrevoitureView9");
     }
 
     /**
      * Container's getter for LettrevoitureView10.
      * @return LettrevoitureView10
      */
-    public ViewObjectImpl getLettrevoitureView10() {
-        return (ViewObjectImpl) findViewObject("LettrevoitureView10");
+    public LettrevoitureViewImpl getLettrevoitureView10() {
+        return (LettrevoitureViewImpl) findViewObject("LettrevoitureView10");
     }
 
     /**
      * Container's getter for LettrevoitureView11.
      * @return LettrevoitureView11
      */
-    public ViewObjectImpl getLettrevoitureView11() {
-        return (ViewObjectImpl) findViewObject("LettrevoitureView11");
+    public LettrevoitureViewImpl getLettrevoitureView11() {
+        return (LettrevoitureViewImpl) findViewObject("LettrevoitureView11");
     }
 
     /**
      * Container's getter for DetailslettrevoitureView5.
      * @return DetailslettrevoitureView5
      */
-    public ViewObjectImpl getDetailslettrevoitureView5() {
-        return (ViewObjectImpl) findViewObject("DetailslettrevoitureView5");
+    public DetailslettrevoitureViewImpl getDetailslettrevoitureView5() {
+        return (DetailslettrevoitureViewImpl) findViewObject("DetailslettrevoitureView5");
     }
 
     /**
      * Container's getter for DetailslettrevoitureView6.
      * @return DetailslettrevoitureView6
      */
-    public ViewObjectImpl getDetailslettrevoitureView6() {
-        return (ViewObjectImpl) findViewObject("DetailslettrevoitureView6");
+    public DetailslettrevoitureViewImpl getDetailslettrevoitureView6() {
+        return (DetailslettrevoitureViewImpl) findViewObject("DetailslettrevoitureView6");
     }
 
     /**
      * Container's getter for DetailslettrevoitureView7.
      * @return DetailslettrevoitureView7
      */
-    public ViewObjectImpl getDetailslettrevoitureView7() {
-        return (ViewObjectImpl) findViewObject("DetailslettrevoitureView7");
+    public DetailslettrevoitureViewImpl getDetailslettrevoitureView7() {
+        return (DetailslettrevoitureViewImpl) findViewObject("DetailslettrevoitureView7");
     }
 
     /**
@@ -2985,16 +3006,16 @@ public class AppModuleImpl extends ApplicationModuleImpl {
      * Container's getter for PermissionnairespnflView6.
      * @return PermissionnairespnflView6
      */
-    public ViewObjectImpl getPermissionnairespnflView6() {
-        return (ViewObjectImpl) findViewObject("PermissionnairespnflView6");
+    public PermissionnairespnflViewImpl getPermissionnairespnflView6() {
+        return (PermissionnairespnflViewImpl) findViewObject("PermissionnairespnflView6");
     }
 
     /**
      * Container's getter for PermisView7.
      * @return PermisView7
      */
-    public ViewObjectImpl getPermisView7() {
-        return (ViewObjectImpl) findViewObject("PermisView7");
+    public PermisViewImpl getPermisView7() {
+        return (PermisViewImpl) findViewObject("PermisView7");
     }
 
     /**
@@ -3010,8 +3031,8 @@ public class AppModuleImpl extends ApplicationModuleImpl {
      * Container's getter for PermisView8.
      * @return PermisView8
      */
-    public ViewObjectImpl getPermisView8() {
-        return (ViewObjectImpl) findViewObject("PermisView8");
+    public PermisViewImpl getPermisView8() {
+        return (PermisViewImpl) findViewObject("PermisView8");
     }
 
     /**
@@ -3043,16 +3064,16 @@ public class AppModuleImpl extends ApplicationModuleImpl {
      * Container's getter for ProduitsPfnlView12.
      * @return ProduitsPfnlView12
      */
-    public ViewObjectImpl getProduitsPfnlView12() {
-        return (ViewObjectImpl) findViewObject("ProduitsPfnlView12");
+    public ProduitsPfnlViewImpl getProduitsPfnlView12() {
+        return (ProduitsPfnlViewImpl) findViewObject("ProduitsPfnlView12");
     }
 
     /**
      * Container's getter for PartiesProduitsPfnlView24.
      * @return PartiesProduitsPfnlView24
      */
-    public ViewObjectImpl getPartiesProduitsPfnlView24() {
-        return (ViewObjectImpl) findViewObject("PartiesProduitsPfnlView24");
+    public PartiesProduitsPfnlViewImpl getPartiesProduitsPfnlView24() {
+        return (PartiesProduitsPfnlViewImpl) findViewObject("PartiesProduitsPfnlView24");
     }
 
     /**
@@ -3067,8 +3088,8 @@ public class AppModuleImpl extends ApplicationModuleImpl {
      * Container's getter for PartiesProduitsPfnlView25.
      * @return PartiesProduitsPfnlView25
      */
-    public ViewObjectImpl getPartiesProduitsPfnlView25() {
-        return (ViewObjectImpl) findViewObject("PartiesProduitsPfnlView25");
+    public PartiesProduitsPfnlViewImpl getPartiesProduitsPfnlView25() {
+        return (PartiesProduitsPfnlViewImpl) findViewObject("PartiesProduitsPfnlView25");
     }
 
     /**
@@ -3083,8 +3104,8 @@ public class AppModuleImpl extends ApplicationModuleImpl {
      * Container's getter for ExportpfnlView1.
      * @return ExportpfnlView1
      */
-    public ViewObjectImpl getExportpfnlView1() {
-        return (ViewObjectImpl) findViewObject("ExportpfnlView1");
+    public ExportpfnlViewImpl getExportpfnlView1() {
+        return (ExportpfnlViewImpl) findViewObject("ExportpfnlView1");
     }
 
     /**
@@ -3099,16 +3120,16 @@ public class AppModuleImpl extends ApplicationModuleImpl {
      * Container's getter for ExportpfnlView2.
      * @return ExportpfnlView2
      */
-    public ViewObjectImpl getExportpfnlView2() {
-        return (ViewObjectImpl) findViewObject("ExportpfnlView2");
+    public ExportpfnlViewImpl getExportpfnlView2() {
+        return (ExportpfnlViewImpl) findViewObject("ExportpfnlView2");
     }
 
     /**
      * Container's getter for ExportpfnlView3.
      * @return ExportpfnlView3
      */
-    public ViewObjectImpl getExportpfnlView3() {
-        return (ViewObjectImpl) findViewObject("ExportpfnlView3");
+    public ExportpfnlViewImpl getExportpfnlView3() {
+        return (ExportpfnlViewImpl) findViewObject("ExportpfnlView3");
     }
 
     /**
@@ -3163,8 +3184,8 @@ public class AppModuleImpl extends ApplicationModuleImpl {
      * Container's getter for DetailsexportpfnlView1.
      * @return DetailsexportpfnlView1
      */
-    public ViewObjectImpl getDetailsexportpfnlView1() {
-        return (ViewObjectImpl) findViewObject("DetailsexportpfnlView1");
+    public DetailsexportpfnlViewImpl getDetailsexportpfnlView1() {
+        return (DetailsexportpfnlViewImpl) findViewObject("DetailsexportpfnlView1");
     }
 
     /**
@@ -3179,24 +3200,24 @@ public class AppModuleImpl extends ApplicationModuleImpl {
      * Container's getter for DetailsexportpfnlView3.
      * @return DetailsexportpfnlView3
      */
-    public ViewObjectImpl getDetailsexportpfnlView3() {
-        return (ViewObjectImpl) findViewObject("DetailsexportpfnlView3");
+    public DetailsexportpfnlViewImpl getDetailsexportpfnlView3() {
+        return (DetailsexportpfnlViewImpl) findViewObject("DetailsexportpfnlView3");
     }
 
     /**
      * Container's getter for DetailsexportpfnlView4.
      * @return DetailsexportpfnlView4
      */
-    public ViewObjectImpl getDetailsexportpfnlView4() {
-        return (ViewObjectImpl) findViewObject("DetailsexportpfnlView4");
+    public DetailsexportpfnlViewImpl getDetailsexportpfnlView4() {
+        return (DetailsexportpfnlViewImpl) findViewObject("DetailsexportpfnlView4");
     }
 
     /**
      * Container's getter for DetailsexportpfnlView5.
      * @return DetailsexportpfnlView5
      */
-    public ViewObjectImpl getDetailsexportpfnlView5() {
-        return (ViewObjectImpl) findViewObject("DetailsexportpfnlView5");
+    public DetailsexportpfnlViewImpl getDetailsexportpfnlView5() {
+        return (DetailsexportpfnlViewImpl) findViewObject("DetailsexportpfnlView5");
     }
 
     /**
@@ -3307,16 +3328,16 @@ public class AppModuleImpl extends ApplicationModuleImpl {
      * Container's getter for ExportpfnlView4.
      * @return ExportpfnlView4
      */
-    public ViewObjectImpl getExportpfnlView4() {
-        return (ViewObjectImpl) findViewObject("ExportpfnlView4");
+    public ExportpfnlViewImpl getExportpfnlView4() {
+        return (ExportpfnlViewImpl) findViewObject("ExportpfnlView4");
     }
 
     /**
      * Container's getter for DetailsexportpfnlView9.
      * @return DetailsexportpfnlView9
      */
-    public ViewObjectImpl getDetailsexportpfnlView9() {
-        return (ViewObjectImpl) findViewObject("DetailsexportpfnlView9");
+    public DetailsexportpfnlViewImpl getDetailsexportpfnlView9() {
+        return (DetailsexportpfnlViewImpl) findViewObject("DetailsexportpfnlView9");
     }
 
     /**
@@ -3331,8 +3352,8 @@ public class AppModuleImpl extends ApplicationModuleImpl {
      * Container's getter for ExportpfnlView5.
      * @return ExportpfnlView5
      */
-    public ViewObjectImpl getExportpfnlView5() {
-        return (ViewObjectImpl) findViewObject("ExportpfnlView5");
+    public ExportpfnlViewImpl getExportpfnlView5() {
+        return (ExportpfnlViewImpl) findViewObject("ExportpfnlView5");
     }
 
 
@@ -3348,16 +3369,16 @@ public class AppModuleImpl extends ApplicationModuleImpl {
      * Container's getter for ExportpfnlView6.
      * @return ExportpfnlView6
      */
-    public ViewObjectImpl getExportpfnlView6() {
-        return (ViewObjectImpl) findViewObject("ExportpfnlView6");
+    public ExportpfnlViewImpl getExportpfnlView6() {
+        return (ExportpfnlViewImpl) findViewObject("ExportpfnlView6");
     }
 
     /**
      * Container's getter for PermissionnairespnflView7.
      * @return PermissionnairespnflView7
      */
-    public ViewObjectImpl getPermissionnairespnflView7() {
-        return (ViewObjectImpl) findViewObject("PermissionnairespnflView7");
+    public PermissionnairespnflViewImpl getPermissionnairespnflView7() {
+        return (PermissionnairespnflViewImpl) findViewObject("PermissionnairespnflView7");
     }
 
     /**
@@ -3372,16 +3393,16 @@ public class AppModuleImpl extends ApplicationModuleImpl {
      * Container's getter for DetailsexportpfnlView10.
      * @return DetailsexportpfnlView10
      */
-    public ViewObjectImpl getDetailsexportpfnlView10() {
-        return (ViewObjectImpl) findViewObject("DetailsexportpfnlView10");
+    public DetailsexportpfnlViewImpl getDetailsexportpfnlView10() {
+        return (DetailsexportpfnlViewImpl) findViewObject("DetailsexportpfnlView10");
     }
 
     /**
      * Container's getter for UnitemesureView9.
      * @return UnitemesureView9
      */
-    public ViewObjectImpl getUnitemesureView9() {
-        return (ViewObjectImpl) findViewObject("UnitemesureView9");
+    public UnitemesureViewImpl getUnitemesureView9() {
+        return (UnitemesureViewImpl) findViewObject("UnitemesureView9");
     }
 
     /**
@@ -3396,16 +3417,16 @@ public class AppModuleImpl extends ApplicationModuleImpl {
      * Container's getter for DetailsexportpfnlView11.
      * @return DetailsexportpfnlView11
      */
-    public ViewObjectImpl getDetailsexportpfnlView11() {
-        return (ViewObjectImpl) findViewObject("DetailsexportpfnlView11");
+    public DetailsexportpfnlViewImpl getDetailsexportpfnlView11() {
+        return (DetailsexportpfnlViewImpl) findViewObject("DetailsexportpfnlView11");
     }
 
     /**
      * Container's getter for PartiesProduitsPfnlView26.
      * @return PartiesProduitsPfnlView26
      */
-    public ViewObjectImpl getPartiesProduitsPfnlView26() {
-        return (ViewObjectImpl) findViewObject("PartiesProduitsPfnlView26");
+    public PartiesProduitsPfnlViewImpl getPartiesProduitsPfnlView26() {
+        return (PartiesProduitsPfnlViewImpl) findViewObject("PartiesProduitsPfnlView26");
     }
 
     /**
@@ -3420,8 +3441,8 @@ public class AppModuleImpl extends ApplicationModuleImpl {
      * Container's getter for DetailsexportpfnlView12.
      * @return DetailsexportpfnlView12
      */
-    public ViewObjectImpl getDetailsexportpfnlView12() {
-        return (ViewObjectImpl) findViewObject("DetailsexportpfnlView12");
+    public DetailsexportpfnlViewImpl getDetailsexportpfnlView12() {
+        return (DetailsexportpfnlViewImpl) findViewObject("DetailsexportpfnlView12");
     }
 
     /**
@@ -3436,8 +3457,8 @@ public class AppModuleImpl extends ApplicationModuleImpl {
      * Container's getter for PermissionnairespnflView8.
      * @return PermissionnairespnflView8
      */
-    public ViewObjectImpl getPermissionnairespnflView8() {
-        return (ViewObjectImpl) findViewObject("PermissionnairespnflView8");
+    public PermissionnairespnflViewImpl getPermissionnairespnflView8() {
+        return (PermissionnairespnflViewImpl) findViewObject("PermissionnairespnflView8");
     }
 
     /**
@@ -3452,8 +3473,8 @@ public class AppModuleImpl extends ApplicationModuleImpl {
      * Container's getter for PermisView9.
      * @return PermisView9
      */
-    public ViewObjectImpl getPermisView9() {
-        return (ViewObjectImpl) findViewObject("PermisView9");
+    public PermisViewImpl getPermisView9() {
+        return (PermisViewImpl) findViewObject("PermisView9");
     }
 
     /**
@@ -3468,8 +3489,8 @@ public class AppModuleImpl extends ApplicationModuleImpl {
      * Container's getter for PartiesProduitsPfnlView27.
      * @return PartiesProduitsPfnlView27
      */
-    public ViewObjectImpl getPartiesProduitsPfnlView27() {
-        return (ViewObjectImpl) findViewObject("PartiesProduitsPfnlView27");
+    public PartiesProduitsPfnlViewImpl getPartiesProduitsPfnlView27() {
+        return (PartiesProduitsPfnlViewImpl) findViewObject("PartiesProduitsPfnlView27");
     }
 
     /**
@@ -3484,8 +3505,8 @@ public class AppModuleImpl extends ApplicationModuleImpl {
      * Container's getter for UnitemesureView10.
      * @return UnitemesureView10
      */
-    public ViewObjectImpl getUnitemesureView10() {
-        return (ViewObjectImpl) findViewObject("UnitemesureView10");
+    public UnitemesureViewImpl getUnitemesureView10() {
+        return (UnitemesureViewImpl) findViewObject("UnitemesureView10");
     }
 
     /**

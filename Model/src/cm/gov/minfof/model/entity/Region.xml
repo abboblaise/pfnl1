@@ -152,6 +152,17 @@
     </AttrArray>
   </Key>
   <Key
+    Name="AltKey1"
+    AltKey="true">
+    <DesignTime>
+      <Attr Name="_isUnique" Value="true"/>
+      <Attr Name="_DBObjectName" Value="regions"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="cm.gov.minfof.model.entity.Region.Nomregion"/>
+    </AttrArray>
+  </Key>
+  <Key
     Name="Coderegion1">
     <DesignTime>
       <Attr Name="_isUnique" Value="true"/>
@@ -196,6 +207,15 @@
         trustMode="untrusted"
         CodeSourceName="RegionRow"/>
     </validation:ResExpressions>
+  </validation:UniqueKeyValidationBean>
+  <validation:UniqueKeyValidationBean
+    Name="RegionRule1"
+    ResId="LE_NOM_DE_LA_R_U00E9GION_DOIT__U00EATRE_UNIQUE"
+    KeyName="AltKey1">
+    <validation:OnAttributes>
+      <validation:Item
+        Value="Nomregion"/>
+    </validation:OnAttributes>
   </validation:UniqueKeyValidationBean>
   <ResourceBundle>
     <PropertiesBundle

@@ -65,7 +65,7 @@
                                                     <af:spacer width="10" height="10" id="s2"/>
                                                     <af:button text="#{viewcontrollerBundle.ENREGISTRER}" id="b3"
                                                                disabled="false"
-                                                               actionListener="#{bindings.Commit.execute}"/>
+                                                               action="#{collecteBean.enregistrerCollecte}"/>
                                                     <af:spacer width="10" height="10" id="s3"/>
                                                     <af:button
                                                                text="#{viewcontrollerBundle.SUPPRIMER}"
@@ -75,6 +75,13 @@
                                                                text="#{viewcontrollerBundle.ANNULER}"
                                                                immediate="true" id="b6">
                                                         <af:resetActionListener/>
+                                                    </af:button>
+                                                    <af:spacer width="10" height="10" id="s5"/>
+                                                    <af:button text="#{viewcontrollerBundle.IMPRIMER}" id="b8"
+                                                               action="#{collecteBean.imprimeEtat}">
+                                                        <af:fileDownloadActionListener method="#{collecteBean.imprime}"
+                                                                                       contentType="application/pdf"
+                                                                                       filename="resultta.pdf"/>
                                                     </af:button>
                                                 </af:panelGroupLayout>
                                             </f:facet>
@@ -439,4 +446,5 @@
             </af:pageTemplate>
         </af:form>
     </af:document>
+    <!--oracle-jdev-comment:preferred-managed-bean-name:collecteBean-->
 </f:view>

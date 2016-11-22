@@ -14,7 +14,7 @@
                                 <f:facet name="first">
                                     <af:panelBox text="#{viewcontrollerBundle.EDITION_DES_DOCUMENTS_DE_TRANSIT}" id="pb1">
                                         <f:facet name="toolbar"/>
-                                        <af:panelFormLayout id="pfl1" rows="4">
+                                        <af:panelFormLayout id="pfl1" rows="3">
                                             <af:inputText value="#{bindings.Numerolettrevoiture.inputValue}"
                                                           label="#{bindings.Numerolettrevoiture.hints.label}"
                                                           required="#{bindings.Numerolettrevoiture.hints.mandatory}"
@@ -72,6 +72,15 @@
                                                 <f:selectItems value="#{bindings.Idpostechargement.items}" id="si5"/>
                                                 <f:validator binding="#{bindings.Idpostechargement.validator}"/>
                                             </af:selectOneChoice>
+                                            <af:inputDate value="#{bindings.Datelettrevoiture.inputValue}"
+                                                          label="#{bindings.Datelettrevoiture.hints.label}"
+                                                          required="#{bindings.Datelettrevoiture.hints.mandatory}"
+                                                          columns="#{bindings.Datelettrevoiture.hints.displayWidth}"
+                                                          shortDesc="#{bindings.Datelettrevoiture.hints.tooltip}"
+                                                          id="id1">
+                                                <f:validator binding="#{bindings.Datelettrevoiture.validator}"/>
+                                                <af:convertDateTime pattern="#{bindings.Datelettrevoiture.format}"/>
+                                            </af:inputDate>
                                             <af:selectOneChoice value="#{bindings.Iddepartementdestination.inputValue}"
                                                                 label="#{bindings.Iddepartementdestination.label}"
                                                                 required="#{bindings.Iddepartementdestination.hints.mandatory}"
@@ -184,6 +193,14 @@
                                                                        id="si10"/>
                                                         <f:validator binding="#{row.bindings.Idvehicule.validator}"/>
                                                     </af:selectOneChoice>
+                                                </af:column>
+                                                <af:column headerText="#{bindings.LettrevoitureView1.hints.Datelettrevoiture.label}"
+                                                           id="c13">
+                                                    <af:outputText value="#{row.Datelettrevoiture}"
+                                                                   shortDesc="#{bindings.LettrevoitureView1.hints.Datelettrevoiture.tooltip}"
+                                                                   id="ot5">
+                                                        <af:convertDateTime pattern="#{bindings.LettrevoitureView1.hints.Datelettrevoiture.format}"/>
+                                                    </af:outputText>
                                                 </af:column>
                                                 <af:column sortProperty="#{bindings.LettrevoitureView1.hints.Nomconducteur.name}"
                                                            filterable="true" sortable="true"

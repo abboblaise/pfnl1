@@ -12,7 +12,8 @@ import oracle.jbo.server.ViewRowSetImpl;
 // ---    Custom code may be added to this class.
 // ---    Warning: Do not modify method signatures of generated methods.
 // ---------------------------------------------------------------------
-public class RegionViewImpl extends ViewObjectImpl {
+//public class RegionViewImpl extends ViewObjectImpl {
+public class RegionViewImpl extends VueImplementation {
     /**
      * This is the default constructor (do not remove).
      */
@@ -63,7 +64,7 @@ public class RegionViewImpl extends ViewObjectImpl {
         return value;
     }
     
-    @Override
+/*    @Override
     protected String buildQuery(int noUserParams, boolean forRowCount)
     {
         System.out.println("entree dans buildQuery 1");
@@ -91,6 +92,6 @@ public class RegionViewImpl extends ViewObjectImpl {
         }
         System.out.println("apr??s query2 = " + query);
         return query;
-      }
+      } */
     }
 

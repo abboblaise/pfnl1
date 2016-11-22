@@ -107,4 +107,9 @@
     <managed-bean-class>cm.gov.minfof.view.RecupUser</managed-bean-class>
     <managed-bean-scope>session</managed-bean-scope>
   </managed-bean>
+  <managed-bean id="__22">
+    <managed-bean-name>compilCollecte</managed-bean-name>
+    <managed-bean-class>cm.gov.minfof.view.CompilCollecte</managed-bean-class>
+    <managed-bean-scope>session</managed-bean-scope>
+  </managed-bean>
 </adfc-config>

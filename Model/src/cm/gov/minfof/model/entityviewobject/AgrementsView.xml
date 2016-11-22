@@ -12,7 +12,11 @@
   BindingStyle="JDBC"
   CustomQuery="false"
   SelectAllAttributes="false"
-  PageIterMode="Full">
+  PageIterMode="Full"
+  ComponentClass="cm.gov.minfof.model.entityviewobject.AgrementsViewImpl">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Coll|VarAccess"/>
+  </DesignTime>
   <EntityUsage
     Name="Agrements"
     Entity="cm.gov.minfof.model.entity.Agrements"/>

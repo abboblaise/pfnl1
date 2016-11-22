@@ -12,7 +12,11 @@
   BindingStyle="JDBC"
   CustomQuery="false"
   SelectAllAttributes="false"
-  PageIterMode="Full">
+  PageIterMode="Full"
+  ComponentClass="cm.gov.minfof.model.entityviewobject.ExportpfnlViewImpl">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Coll|VarAccess"/>
+  </DesignTime>
   <ViewAccessor
     Name="PermisView1"
     ViewObjectName="cm.gov.minfof.model.entityviewobject.PermisView"
@@ -108,6 +112,13 @@
     EntityAttrName="Numeroco"
     EntityUsage="Exportpfnl"
     AliasName="numeroco"/>
+  <ViewAttribute
+    Name="Dateexport"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Dateexport"
+    EntityUsage="Exportpfnl"
+    AliasName="dateexport"/>
   <ViewLinkAccessor
     Name="ExportpfnlView"
     ViewLink="cm.gov.minfof.model.entityviewobject.FkExportpfnl2Link"

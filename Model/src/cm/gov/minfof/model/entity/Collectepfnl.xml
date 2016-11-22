@@ -33,9 +33,13 @@
     IsNotNull="true"
     ColumnName="datecollecte"
     SQLType="DATE"
-    Type="java.sql.Date"
+    Type="oracle.jbo.domain.Timestamp"
     ColumnType="DATE"
     TableName="collectepfnl">
+    <TransientExpression
+      Name="ExpressionScript"
+      trustMode="untrusted"
+      CodeSourceName="CollectepfnlRow"/>
     <Properties>
       <SchemaBasedProperties>
         <LABEL

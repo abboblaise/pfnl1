@@ -12,7 +12,11 @@
   BindingStyle="JDBC"
   CustomQuery="false"
   SelectAllAttributes="false"
-  PageIterMode="Full">
+  PageIterMode="Full"
+  ComponentClass="cm.gov.minfof.model.entityviewobject.DetailscollectepfnlViewImpl">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Coll|VarAccess"/>
+  </DesignTime>
   <ViewAccessor
     Name="OriginespnflsView1"
     ViewObjectName="cm.gov.minfof.model.entityviewobject.OriginespnflsView"
@@ -192,7 +196,8 @@
     PrecisionRule="true"
     EntityAttrName="Iddetailscollectepfnl"
     EntityUsage="Detailscollectepfnl"
-    AliasName="iddetailscollectepfnl"/>
+    AliasName="iddetailscollectepfnl"
+    IsUpdateable="while_insert"/>
   <ViewAttribute
     Name="Idpermissionnaire"
     IsNotNull="true"

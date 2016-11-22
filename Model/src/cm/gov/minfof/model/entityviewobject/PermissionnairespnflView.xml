@@ -12,7 +12,11 @@
   BindingStyle="JDBC"
   CustomQuery="false"
   SelectAllAttributes="false"
-  PageIterMode="Full">
+  PageIterMode="Full"
+  ComponentClass="cm.gov.minfof.model.entityviewobject.PermissionnairespnflViewImpl">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Coll|VarAccess"/>
+  </DesignTime>
   <ViewAccessor
     Name="listeStatutPermissionnaire1"
     ViewObjectName="cm.gov.minfof.model.entityviewobject.listeStatutPermissionnaire"

@@ -12,7 +12,11 @@
   BindingStyle="JDBC"
   CustomQuery="false"
   SelectAllAttributes="false"
-  PageIterMode="Full">
+  PageIterMode="Full"
+  ComponentClass="cm.gov.minfof.model.entity.FamillePfnlViewImpl">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Coll|VarAccess"/>
+  </DesignTime>
   <EntityUsage
     Name="FamillePfnl"
     Entity="cm.gov.minfof.model.entity.FamillePfnl"/>
@@ -46,6 +50,11 @@
     ViewLink="cm.gov.minfof.model.entity.ProduitspfnlIbfk1Assoc1Link"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <SortCriteria>
+    <Sort
+      Attribute="Idfamillepfnl"
+      Ascending="false"/>
+  </SortCriteria>
   <SortCriteria>
     <Sort
       Attribute="Idfamillepfnl"

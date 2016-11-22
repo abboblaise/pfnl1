@@ -124,6 +124,9 @@
                                         <af:spacer width="10" height="10" id="pt_s19"/>
                                         <af:button text="#{viewcontrollerBundle.FICHE_DE_TRANSIT}" id="pt_b21"
                                                    destination="page_lettrevoiture.jsf"/>
+                                        <af:spacer width="10" height="10" id="pt_s21"/>
+                                        <af:button text="#{viewcontrollerBundle.COMPILATION_COLLECTES_ET_LETTRES}" id="pt_b23"
+                                                   destination="page_compilcollecte.jsf"/>
                                     </af:panelGroupLayout>
                                 </af:showDetailItem>
                             </af:panelAccordion>

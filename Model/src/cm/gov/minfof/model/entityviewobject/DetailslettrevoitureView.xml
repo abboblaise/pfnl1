@@ -13,7 +13,11 @@
   CustomQuery="false"
   SelectAllAttributes="false"
   FetchMode="FETCH_AS_NEEDED"
-  PageIterMode="Full">
+  PageIterMode="Full"
+  ComponentClass="cm.gov.minfof.model.entityviewobject.DetailslettrevoitureViewImpl">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Coll|VarAccess"/>
+  </DesignTime>
   <ViewAccessor
     Name="LettrevoitureView5"
     ViewObjectName="cm.gov.minfof.model.entityviewobject.LettrevoitureView"

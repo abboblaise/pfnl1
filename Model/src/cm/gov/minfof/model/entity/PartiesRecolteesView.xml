@@ -12,7 +12,11 @@
   BindingStyle="JDBC"
   CustomQuery="false"
   SelectAllAttributes="false"
-  PageIterMode="Full">
+  PageIterMode="Full"
+  ComponentClass="cm.gov.minfof.model.entity.PartiesRecolteesViewImpl">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Coll|VarAccess"/>
+  </DesignTime>
   <EntityUsage
     Name="PartiesRecoltees"
     Entity="cm.gov.minfof.model.entity.PartiesRecoltees"/>
@@ -22,7 +26,8 @@
     PrecisionRule="true"
     EntityAttrName="Idpartiesrecoltees"
     EntityUsage="PartiesRecoltees"
-    AliasName="idpartiesrecoltees"/>
+    AliasName="idpartiesrecoltees"
+    IsUpdateable="while_insert"/>
   <ViewAttribute
     Name="Nompartierecoltee"
     IsNotNull="true"
@@ -47,7 +52,8 @@
     IsUpdateable="false"/>
   <LOVUIHints
     ListType="105"
-    MRUCount="0">
+    MRUCount="0"
+    NullValueFlag="none">
     <AttrArray Name="ListDisplayAttrNames">
       <Item Value="Nompartierecoltee"/>
     </AttrArray>

@@ -9,6 +9,7 @@ import oracle.jbo.Key;
 import oracle.jbo.Row;
 import oracle.jbo.RowIterator;
 import oracle.jbo.ViewObject;
+import oracle.jbo.domain.Timestamp;
 import oracle.jbo.server.EntityDefImpl;
 import oracle.jbo.server.EntityImpl;
 import oracle.jbo.server.TransactionEvent;
@@ -57,6 +58,7 @@ public class CollectepfnlImpl extends EntityImpl {
         }
     }
 
+
     public static final int IDCOLLECTEPFNL = AttributesEnum.Idcollectepfnl.index();
     public static final int DATECOLLECTE = AttributesEnum.Datecollecte.index();
     public static final int IDENTIFICATEUR = AttributesEnum.Identificateur.index();
@@ -82,6 +84,7 @@ public class CollectepfnlImpl extends EntityImpl {
         return EntityDefImpl.findDefObject("cm.gov.minfof.model.entity.Collectepfnl");
     }
 
+
     /**
      * Gets the attribute value for Idcollectepfnl, using the alias name Idcollectepfnl.
      * @return the value of Idcollectepfnl
@@ -102,15 +105,15 @@ public class CollectepfnlImpl extends EntityImpl {
      * Gets the attribute value for Datecollecte, using the alias name Datecollecte.
      * @return the value of Datecollecte
      */
-    public Date getDatecollecte() {
-        return (Date) getAttributeInternal(DATECOLLECTE);
+    public Timestamp getDatecollecte() {
+        return (Timestamp) getAttributeInternal(DATECOLLECTE);
     }
 
     /**
      * Sets <code>value</code> as the attribute value for Datecollecte.
      * @param value value to set the Datecollecte
      */
-    public void setDatecollecte(Date value) {
+    public void setDatecollecte(Timestamp value) {
         setAttributeInternal(DATECOLLECTE, value);
     }
 

@@ -12,7 +12,11 @@
   BindingStyle="JDBC"
   CustomQuery="false"
   SelectAllAttributes="false"
-  PageIterMode="Full">
+  PageIterMode="Full"
+  ComponentClass="cm.gov.minfof.model.entityviewobject.OriginespnflsViewImpl">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Coll|VarAccess"/>
+  </DesignTime>
   <ViewAccessor
     Name="listeOrigine1"
     ViewObjectName="cm.gov.minfof.model.entityviewobject.listeOrigine"
@@ -71,6 +75,11 @@
     Type="oracle.jbo.RowIterator"
     Reversed="true"
     IsUpdateable="false"/>
+  <SortCriteria>
+    <Sort
+      Attribute="Idoriginespnfls"
+      Ascending="false"/>
+  </SortCriteria>
   <SortCriteria>
     <Sort
       Attribute="Idoriginespnfls"

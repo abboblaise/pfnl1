@@ -14,7 +14,11 @@
   SelectAllAttributes="false"
   PageIterMode="Full"
   FetchMode="FETCH_ALL"
-  Passivate="All">
+  Passivate="All"
+  ComponentClass="cm.gov.minfof.model.entityviewobject.DepartementViewImpl">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Coll|VarAccess"/>
+  </DesignTime>
   <EntityUsage
     Name="Departement"
     Entity="cm.gov.minfof.model.entity.Departement"/>
@@ -77,6 +81,11 @@
     Type="oracle.jbo.RowIterator"
     Reversed="true"
     IsUpdateable="false"/>
+  <SortCriteria>
+    <Sort
+      Attribute="Iddepartements"
+      Ascending="false"/>
+  </SortCriteria>
   <SortCriteria>
     <Sort
       Attribute="Iddepartements"

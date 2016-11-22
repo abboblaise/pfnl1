@@ -8,7 +8,7 @@
         <af:form id="f1">
             <af:pageTemplate viewId="/TemplateGlobal.jsf" id="pt1">
                 <f:facet name="content">
-                    <af:panelSplitter id="ps1" splitterPosition="442">
+                    <af:panelSplitter id="ps1" splitterPosition="575">
                         <f:facet name="first">
                             <af:panelSplitter id="ps2" orientation="vertical" splitterPosition="153">
                                 <f:facet name="first">
@@ -58,6 +58,14 @@
                                                           shortDesc="#{bindings.Numeroco.hints.tooltip}" id="it3">
                                                 <f:validator binding="#{bindings.Numeroco.validator}"/>
                                             </af:inputText>
+                                            <af:inputDate value="#{bindings.Dateexport.inputValue}"
+                                                          label="#{bindings.Dateexport.hints.label}"
+                                                          required="#{bindings.Dateexport.hints.mandatory}"
+                                                          columns="#{bindings.Dateexport.hints.displayWidth}"
+                                                          shortDesc="#{bindings.Dateexport.hints.tooltip}" id="id1">
+                                                <f:validator binding="#{bindings.Dateexport.validator}"/>
+                                                <af:convertDateTime pattern="#{bindings.Dateexport.format}"/>
+                                            </af:inputDate>
                                             <af:spacer width="10" height="10" id="s1"/>
                                         </af:panelFormLayout>
                                         <af:panelGroupLayout id="pgl1">
@@ -152,6 +160,14 @@
                                                     <af:outputText value="#{row.Numeroco}"
                                                                    shortDesc="#{bindings.ExportpfnlView1.hints.Numeroco.tooltip}"
                                                                    id="ot3"/>
+                                                </af:column>
+                                                <af:column headerText="#{bindings.ExportpfnlView1.hints.Dateexport.label}"
+                                                           id="c12">
+                                                    <af:outputText value="#{row.Dateexport}"
+                                                                   shortDesc="#{bindings.ExportpfnlView1.hints.Dateexport.tooltip}"
+                                                                   id="ot8">
+                                                        <af:convertDateTime pattern="#{bindings.ExportpfnlView1.hints.Dateexport.format}"/>
+                                                    </af:outputText>
                                                 </af:column>
                                             </af:table>
                                             <f:facet name="statusbar"/>
