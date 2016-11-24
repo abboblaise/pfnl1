@@ -3,7 +3,10 @@
                 Package="cm.gov.minfof.view.pageDefs">
   <parameters/>
   <executables>
-    <variableIterator id="variables"/>
+    <variableIterator id="variables">
+      <variable Name="debut" Type="oracle.jbo.domain.Timestamp"/>
+      <variable Name="fin" Type="oracle.jbo.domain.Timestamp"/>
+    </variableIterator>
     <iterator Binds="PermisView1" RangeSize="25" DataControl="AppModuleDataControl" id="PermisView1Iterator"/>
     <iterator Binds="DetailpermisView6" RangeSize="25" DataControl="AppModuleDataControl"
               id="DetailpermisView6Iterator"/>
@@ -98,5 +101,15 @@
     <list IterBinding="DetailpermisView6Iterator" StaticList="false" Uses="LOV_Idpermis" id="Idpermis"
           DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
     <action id="Rollback" RequiresUpdateModel="false" Action="rollbackTransaction" DataControl="AppModuleDataControl"/>
+    <attributeValues IterBinding="variables" id="debut1">
+      <AttrNames>
+        <Item Value="debut"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="variables" id="fin1">
+      <AttrNames>
+        <Item Value="fin"/>
+      </AttrNames>
+    </attributeValues>
   </bindings>
 </pageDefinition>

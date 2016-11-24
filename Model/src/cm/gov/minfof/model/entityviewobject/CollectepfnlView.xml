@@ -13,10 +13,22 @@
   CustomQuery="false"
   SelectAllAttributes="false"
   PageIterMode="Full"
-  ComponentClass="cm.gov.minfof.model.entityviewobject.CollectepfnlViewImpl">
+  ComponentClass="cm.gov.minfof.model.entityviewobject.CollectepfnlViewImpl"
+  ComponentInterface="cm.gov.minfof.model.entityviewobject.common.CollectepfnlView"
+  RowClass="cm.gov.minfof.model.entityviewobject.CollectepfnlViewRowImpl"
+  RowInterface="cm.gov.minfof.model.entityviewobject.common.CollectepfnlViewRow">
   <DesignTime>
-    <Attr Name="_codeGenFlag2" Value="Coll|VarAccess"/>
+    <Attr Name="_codeGenFlag2" Value="Access|Coll|Prog|VarAccess"/>
+    <Attr Name="_isCodegen" Value="true"/>
   </DesignTime>
+  <Variable
+    Name="dateFin"
+    Kind="viewcriteria"
+    Type="java.sql.Timestamp"/>
+  <Variable
+    Name="dateDebut"
+    Kind="viewcriteria"
+    Type="java.sql.Timestamp"/>
   <ViewAccessor
     Name="DepartementView1"
     ViewObjectName="cm.gov.minfof.model.entityviewobject.DepartementView"
@@ -134,6 +146,68 @@
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
+  <ViewCriteria
+    Name="CollectepfnlViewCriteria"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.CollectepfnlView"
+    Conjunction="AND">
+    <Properties Name="_Props">
+      <CustomProperties>
+        <Property
+          Name="autoExecute"
+          Value="false"/>
+        <Property
+          Name="mode"
+          Value="Basic"/>
+        <Property
+          Name="allowConjunctionOverride"
+          Value="true"/>
+        <Property
+          Name="showInList"
+          Value="true"/>
+        <Property
+          Name="displayOperators"
+          Value="InAdvancedMode"/>
+      </CustomProperties>
+    </Properties>
+    <ViewCriteriaRow
+      Name="CollectepfnlViewCriteria_row_0"
+      Conjunction="OR"
+      UpperColumns="1">
+      <ViewCriteriaItemCompound
+        Name="Datecollecte"
+        ViewAttribute="Datecollecte">
+        <ViewCriteria
+          Name="CollectepfnlViewCriteria_CollectepfnlViewCriteria_row_0_Datecollecte_itemHolder"
+          ViewObjectName="cm.gov.minfof.model.entityviewobject.CollectepfnlView"
+          Conjunction="OR">
+          <ViewCriteriaRow
+            Name="CollectepfnlViewCriteria_CollectepfnlViewCriteria_row_0_Datecollecte_itemHolder_row_0"
+            Conjunction="AND">
+            <ViewCriteriaItem
+              Name="Datecollecte"
+              ViewAttribute="Datecollecte"
+              Operator="ONORAFTER"
+              Conjunction="AND"
+              Value=":dateDebut"
+              IsBindVarValue="true"
+              Required="Optional"/>
+          </ViewCriteriaRow>
+          <ViewCriteriaRow
+            Name="CollectepfnlViewCriteria_CollectepfnlViewCriteria_row_0_Datecollecte_itemHolder_row_1"
+            Conjunction="AND">
+            <ViewCriteriaItem
+              Name="CollectepfnlViewCriteria_CollectepfnlViewCriteria_row_0_Datecollecte_CollectepfnlViewCriteria_CollectepfnlViewCriteria_row_0_Datecollecte_itemHolder_CollectepfnlViewCriteria_CollectepfnlViewCriteria_row_0_Datecollecte_itemHolder_row_1_Datecollecte"
+              ViewAttribute="Datecollecte"
+              Operator="ONORBEFORE"
+              Conjunction="AND"
+              Value=":dateFin"
+              IsBindVarValue="true"
+              Required="Optional"/>
+          </ViewCriteriaRow>
+        </ViewCriteria>
+      </ViewCriteriaItemCompound>
+    </ViewCriteriaRow>
+  </ViewCriteria>
   <ViewLinkAccessor
     Name="CollectepfnlView"
     ViewLink="cm.gov.minfof.model.entityviewobject.FkCollectepfnl1Link"
@@ -144,6 +218,29 @@
     ViewLink="cm.gov.minfof.model.entityviewobject.CollecteToDetailLink"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <ClientInterface
+    Name="__clientInterface">
+    <Method
+      Name="setdateDebut"
+      MethodName="setdateDebut">
+      <Return
+        Name="_return_type_"
+        Type="void"/>
+      <Parameter
+        Name="value"
+        Type="java.sql.Timestamp"/>
+    </Method>
+    <Method
+      Name="setdateFin"
+      MethodName="setdateFin">
+      <Return
+        Name="_return_type_"
+        Type="void"/>
+      <Parameter
+        Name="value"
+        Type="java.sql.Timestamp"/>
+    </Method>
+  </ClientInterface>
   <ResourceBundle>
     <PropertiesBundle
       PropertiesFile="cm.gov.minfof.model.ModelBundle"/>

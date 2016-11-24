@@ -41,8 +41,10 @@
                     <af:panelSplitter splitterPosition="212" id="pt_ps3">
                         <f:facet name="first">
                             <af:panelAccordion discloseMany="true" id="pt_pa1">
-                                <af:showDetailItem id="pane1" text="#{viewcontrollerBundle.PARAMETRAGE}"
-                                                   rendered="#{RecupUser.ud.estadmin}">
+                       <!--         <af:showDetailItem id="pane1" text="#{viewcontrollerBundle.PARAMETRAGE}"
+                                                   rendered="#{RecupUser.ud.estadmin}"> -->
+                                    <af:showDetailItem id="pane1" text="#{viewcontrollerBundle.PARAMETRAGE}"
+                                                   rendered="true">               
                                     <af:panelAccordion discloseMany="false" id="pt_pa2">
                                         <af:showDetailItem id="pane2"
                                                            text="#{viewcontrollerBundle.UNIT_U00E9S_ADMINISTRATIVES}">
@@ -141,7 +143,9 @@
                                                          halign="end">
                                                 <af:panelGroupLayout id="pt_pgl9" halign="right"
                                                                      inlineStyle='background-image:url("arriere.jpg");'>
-                                                    <af:outputText value="#{RecupUser.ud.nonuser}" id="pt_ot1"
+                                                  <!--  <af:outputText value="#{RecupUser.ud.nonuser}" id="pt_ot1"
+                                                                   inlineStyle="color:White;"/>  -->
+                                                        <af:outputText value="Aucun" id="pt_ot1"
                                                                    inlineStyle="color:White;"/>
                                                     <af:spacer width="10" height="10" id="pt_s20"/>
                                                     <af:button text="#{viewcontrollerBundle.D_U00E9CONNEXION}" id="pt_b22"

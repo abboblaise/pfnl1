@@ -105,8 +105,9 @@
                                                       fetchSize="#{bindings.ExportpfnlView1.rangeSize}"
                                                       filterModel="#{bindings.ExportpfnlView1Query.queryDescriptor}"
                                                       filterVisible="true"
-                                                      queryListener="#{bindings.ExportpfnlView1Query.processQuery}"
-                                                      varStatus="vs" id="t1" partialTriggers=":::b2 :::b3">
+                                                      queryListener="#{exportPfnlBean.onExportQuery}"
+                                                      varStatus="vs" id="t1" partialTriggers=":::b2 :::b3"
+                                                      editingMode="readOnly">
                                                 <af:column sortProperty="#{bindings.ExportpfnlView1.hints.Idexportpfnl.name}"
                                                            filterable="true" sortable="true"
                                                            headerText="#{bindings.ExportpfnlView1.hints.Idexportpfnl.label}"
@@ -121,7 +122,7 @@
                                                 <af:column sortProperty="#{bindings.ExportpfnlView1.hints.Idpermis.name}"
                                                            filterable="true" sortable="true"
                                                            headerText="#{bindings.ExportpfnlView1.hints.Idpermis.label}"
-                                                           id="c2">
+                                                           id="c2" width="100">
                                                     <af:selectOneChoice value="#{row.bindings.Idpermis.inputValue}"
                                                                         label="#{row.bindings.Idpermis.label}"
                                                                         required="#{bindings.ExportpfnlView1.hints.Idpermis.mandatory}"
@@ -134,7 +135,7 @@
                                                 <af:column sortProperty="#{bindings.ExportpfnlView1.hints.Idpermissionnaire.name}"
                                                            filterable="true" sortable="true"
                                                            headerText="#{bindings.ExportpfnlView1.hints.Idpermissionnaire.label}"
-                                                           id="c3">
+                                                           id="c3" width="92">
                                                     <af:selectOneChoice value="#{row.bindings.Idpermissionnaire.inputValue}"
                                                                         label="#{row.bindings.Idpermissionnaire.label}"
                                                                         required="#{bindings.ExportpfnlView1.hints.Idpermissionnaire.mandatory}"
@@ -148,7 +149,7 @@
                                                 <af:column sortProperty="#{bindings.ExportpfnlView1.hints.Numeroexport.name}"
                                                            filterable="true" sortable="true"
                                                            headerText="#{bindings.ExportpfnlView1.hints.Numeroexport.label}"
-                                                           id="c4">
+                                                           id="c4" width="99">
                                                     <af:outputText value="#{row.Numeroexport}"
                                                                    shortDesc="#{bindings.ExportpfnlView1.hints.Numeroexport.tooltip}"
                                                                    id="ot2"/>
@@ -156,18 +157,40 @@
                                                 <af:column sortProperty="#{bindings.ExportpfnlView1.hints.Numeroco.name}"
                                                            filterable="true" sortable="true"
                                                            headerText="#{bindings.ExportpfnlView1.hints.Numeroco.label}"
-                                                           id="c5">
+                                                           id="c5" width="101">
                                                     <af:outputText value="#{row.Numeroco}"
                                                                    shortDesc="#{bindings.ExportpfnlView1.hints.Numeroco.tooltip}"
                                                                    id="ot3"/>
                                                 </af:column>
                                                 <af:column headerText="#{bindings.ExportpfnlView1.hints.Dateexport.label}"
-                                                           id="c12">
-                                                    <af:outputText value="#{row.Dateexport}"
-                                                                   shortDesc="#{bindings.ExportpfnlView1.hints.Dateexport.tooltip}"
-                                                                   id="ot8">
+                                                           id="c12"
+                                                           sortProperty="#{bindings.ExportpfnlView1.hints.Dateexport.name}"
+                                                           filterable="true" width="147">
+                                                    <af:inputDate value="#{row.bindings.Dateexport.inputValue}"
+                                                                  label="#{bindings.ExportpfnlView1.hints.Dateexport.label}"
+                                                                  required="#{bindings.ExportpfnlView1.hints.Dateexport.mandatory}"
+                                                                  columns="#{bindings.ExportpfnlView1.hints.Dateexport.displayWidth}"
+                                                                  shortDesc="#{bindings.ExportpfnlView1.hints.Dateexport.tooltip}"
+                                                                  id="id3">
+                                                        <f:validator binding="#{row.bindings.Dateexport.validator}"/>
                                                         <af:convertDateTime pattern="#{bindings.ExportpfnlView1.hints.Dateexport.format}"/>
-                                                    </af:outputText>
+                                                    </af:inputDate>
+                                                    <f:facet name="filter">
+                                                        <af:panelGroupLayout id="pgl3">
+                                                            <af:panelLabelAndMessage label="#{viewcontrollerBundle.DU}" id="plam1">
+                                                                <af:inputDate value="#{bindings.dateDebut1.inputValue}"
+                                                                              id="id2">
+                                                                    <af:convertDateTime pattern="#{bindings.ExportpfnlView1.hints.Dateexport.format}"/>
+                                                                </af:inputDate>
+                                                            </af:panelLabelAndMessage>
+                                                            <af:panelLabelAndMessage label="#{viewcontrollerBundle.AU}" id="plam2">
+                                                                <af:inputDate value="#{bindings.dateFin1.inputValue}"
+                                                                              id="id4">
+                                                                    <af:convertDateTime pattern="#{bindings.ExportpfnlView1.hints.Dateexport.format}"/>
+                                                                </af:inputDate>
+                                                            </af:panelLabelAndMessage>
+                                                        </af:panelGroupLayout>
+                                                    </f:facet>
                                                 </af:column>
                                             </af:table>
                                             <f:facet name="statusbar"/>

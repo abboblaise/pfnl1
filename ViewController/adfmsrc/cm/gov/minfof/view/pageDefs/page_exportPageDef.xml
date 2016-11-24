@@ -3,7 +3,10 @@
                 Package="cm.gov.minfof.view.pageDefs">
   <parameters/>
   <executables>
-    <variableIterator id="variables"/>
+    <variableIterator id="variables">
+      <variable Name="dateDebut" Type="oracle.jbo.domain.Timestamp"/>
+      <variable Name="dateFin" Type="oracle.jbo.domain.Timestamp"/>
+    </variableIterator>
     <iterator Binds="ExportpfnlView1" RangeSize="25" DataControl="AppModuleDataControl" id="ExportpfnlView1Iterator"/>
     <searchRegion Binds="ExportpfnlView1Iterator" Criteria=""
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="ExportpfnlView1Query"/>
@@ -90,6 +93,16 @@
     <attributeValues IterBinding="ExportpfnlView1Iterator" id="Dateexport">
       <AttrNames>
         <Item Value="Dateexport"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="variables" id="dateDebut1">
+      <AttrNames>
+        <Item Value="dateDebut"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="variables" id="dateFin1">
+      <AttrNames>
+        <Item Value="dateFin"/>
       </AttrNames>
     </attributeValues>
   </bindings>

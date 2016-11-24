@@ -14,10 +14,19 @@
   SelectAllAttributes="false"
   FetchMode="FETCH_AS_NEEDED"
   PageIterMode="Full"
-  ComponentClass="cm.gov.minfof.model.entityviewobject.LettrevoitureViewImpl">
+  ComponentClass="cm.gov.minfof.model.entityviewobject.LettrevoitureViewImpl"
+  ComponentInterface="cm.gov.minfof.model.entityviewobject.common.LettrevoitureView">
   <DesignTime>
     <Attr Name="_codeGenFlag2" Value="Coll|VarAccess"/>
   </DesignTime>
+  <Variable
+    Name="dateFin"
+    Kind="viewcriteria"
+    Type="java.sql.Timestamp"/>
+  <Variable
+    Name="dateDebut"
+    Kind="viewcriteria"
+    Type="java.sql.Timestamp"/>
   <ViewAccessor
     Name="PermissionnairespnflView1"
     ViewObjectName="cm.gov.minfof.model.entityviewobject.PermissionnairespnflView"
@@ -280,6 +289,67 @@
     EntityAttrName="Datelettrevoiture"
     EntityUsage="Lettrevoiture"
     AliasName="datelettrevoiture"/>
+  <ViewCriteria
+    Name="LettrevoitureViewCriteria"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.LettrevoitureView"
+    Conjunction="AND">
+    <Properties Name="_Props">
+      <CustomProperties>
+        <Property
+          Name="autoExecute"
+          Value="false"/>
+        <Property
+          Name="mode"
+          Value="Basic"/>
+        <Property
+          Name="allowConjunctionOverride"
+          Value="true"/>
+        <Property
+          Name="showInList"
+          Value="true"/>
+        <Property
+          Name="displayOperators"
+          Value="InAdvancedMode"/>
+      </CustomProperties>
+    </Properties>
+    <ViewCriteriaRow
+      Name="LettrevoitureViewCriteria_row_1"
+      UpperColumns="1">
+      <ViewCriteriaItemCompound
+        Name="LettrevoitureViewCriteria_LettrevoitureViewCriteria_row_1_Datelettrevoiture"
+        ViewAttribute="Datelettrevoiture">
+        <ViewCriteria
+          Name="LettrevoitureViewCriteria_LettrevoitureViewCriteria_row_1_Datelettrevoiture_itemHolder"
+          ViewObjectName="cm.gov.minfof.model.entityviewobject.LettrevoitureView"
+          Conjunction="OR">
+          <ViewCriteriaRow
+            Name="LettrevoitureViewCriteria_LettrevoitureViewCriteria_row_1_Datelettrevoiture_itemHolder_row_0"
+            Conjunction="AND">
+            <ViewCriteriaItem
+              Name="LettrevoitureViewCriteria_LettrevoitureViewCriteria_row_1_Datelettrevoiture"
+              ViewAttribute="Datelettrevoiture"
+              Operator="ONORBEFORE"
+              Conjunction="AND"
+              Value=":dateFin"
+              IsBindVarValue="true"
+              Required="Optional"/>
+          </ViewCriteriaRow>
+          <ViewCriteriaRow
+            Name="LettrevoitureViewCriteria_LettrevoitureViewCriteria_row_1_Datelettrevoiture_itemHolder_row_1"
+            Conjunction="AND">
+            <ViewCriteriaItem
+              Name="LettrevoitureViewCriteria_LettrevoitureViewCriteria_row_1_Datelettrevoiture_LettrevoitureViewCriteria_LettrevoitureViewCriteria_row_1_Datelettrevoiture_itemHolder_LettrevoitureViewCriteria_LettrevoitureViewCriteria_row_1_Datelettrevoiture_itemHolder_row_1_Datelettrevoiture"
+              ViewAttribute="Datelettrevoiture"
+              Operator="ONORAFTER"
+              Conjunction="AND"
+              Value=":dateDebut"
+              IsBindVarValue="true"
+              Required="Optional"/>
+          </ViewCriteriaRow>
+        </ViewCriteria>
+      </ViewCriteriaItemCompound>
+    </ViewCriteriaRow>
+  </ViewCriteria>
   <ViewLinkAccessor
     Name="LettrevoitureView"
     ViewLink="cm.gov.minfof.model.entityviewobject.FkLettrevoiture5Link"
@@ -320,4 +390,27 @@
     ViewLink="cm.gov.minfof.model.entityviewobject.FkDetailslettrevoiture3Assoc1Link"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <ClientInterface
+    Name="__clientInterface">
+    <Method
+      Name="setdateDebut"
+      MethodName="setdateDebut">
+      <Return
+        Name="_return_type_"
+        Type="void"/>
+      <Parameter
+        Name="value"
+        Type="java.sql.Timestamp"/>
+    </Method>
+    <Method
+      Name="setdateFin"
+      MethodName="setdateFin">
+      <Return
+        Name="_return_type_"
+        Type="void"/>
+      <Parameter
+        Name="value"
+        Type="java.sql.Timestamp"/>
+    </Method>
+  </ClientInterface>
 </ViewObject>

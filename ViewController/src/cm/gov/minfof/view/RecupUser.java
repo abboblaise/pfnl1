@@ -18,7 +18,7 @@ public class RecupUser {
         FacesContext fc = FacesContext.getCurrentInstance();
         HttpSession session = (HttpSession) fc.getExternalContext().getSession(true);
         ud = (UserData) session.getAttribute("user");
-        ud.setEstadmin(false);
+        ud.setEstadmin(true);
         //infouser iu = new infouser();
         //ud=iu.getUsr();
         return ud;

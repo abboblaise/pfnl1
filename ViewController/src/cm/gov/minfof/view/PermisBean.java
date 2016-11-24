@@ -1,9 +1,25 @@
 package cm.gov.minfof.view;
 
+import javax.el.ELContext;
+import javax.el.ExpressionFactory;
+import javax.el.MethodExpression;
+
+import javax.faces.context.FacesContext;
+
 import oracle.adf.model.BindingContext;
 
+import oracle.adf.model.binding.DCBindingContainer;
+import oracle.adf.model.binding.DCIteratorBinding;
+import oracle.adf.view.rich.event.QueryEvent;
+
+import oracle.binding.AttributeBinding;
 import oracle.binding.BindingContainer;
 import oracle.binding.OperationBinding;
+
+import oracle.jbo.VariableValueManager;
+import oracle.jbo.ViewCriteria;
+import oracle.jbo.domain.Timestamp;
+import oracle.jbo.server.ViewObjectImpl;
 
 public class PermisBean {
     public PermisBean() {
@@ -89,4 +105,42 @@ public class PermisBean {
         }
         return null;
     }
+
+    public void onPermisQuery(QueryEvent queryEvent) {
+        BindingContext bctx = BindingContext.getCurrent();
+        DCBindingContainer bindings = (DCBindingContainer) bctx.getCurrentBindingsEntry();
+
+        //access the method bindings to set the bind variables on the ViewCriteria
+        OperationBinding rangeStartOperationBinding = bindings.getOperationBinding("setDebut");
+        OperationBinding rangeEndOperationBinding = bindings.getOperationBinding("setFin");
+
+        // get the start date and end date from the temporary valiables
+        AttributeBinding attr = (AttributeBinding) bindings.getControlBinding("debut1");
+        Timestamp sd = (Timestamp) attr.getInputValue();
+        attr = (AttributeBinding) bindings.getControlBinding("fin1");
+        Timestamp ed = (Timestamp) attr.getInputValue();
+        
+        DCIteratorBinding iterIB = (DCIteratorBinding) getBindings().get("PermisView1Iterator");
+        ViewObjectImpl ttVO =  (ViewObjectImpl)iterIB.getViewObject();  
+        ViewCriteria vc = ttVO.getViewCriteria("PermisViewCriteria");  
+        VariableValueManager vvm_vc = vc.ensureVariableManager();         
+        vvm_vc.setVariableValue("Debut",sd);         
+        vvm_vc.setVariableValue("Fin",ed); 
+        ttVO.setApplyViewCriteriaNames(new String[]{"PermisViewCriteria"});         
+
+        invokeMethodExpression("#{bindings.PermisView1Query.processQuery}", Object.class, QueryEvent.class,
+                               queryEvent);
+        }
+
+        public Object invokeMethodExpression(String expr, Class returnType, Class[] argTypes, Object[] args) {
+        FacesContext fc = FacesContext.getCurrentInstance();
+        ELContext elctx = fc.getELContext();
+        ExpressionFactory elFactory = fc.getApplication().getExpressionFactory();
+        MethodExpression methodExpr = elFactory.createMethodExpression(elctx, expr, returnType, argTypes);
+        return methodExpr.invoke(elctx, args);
+        }
+        
+        public Object invokeMethodExpression(String expr, Class returnType, Class argType, Object argument) {
+        return invokeMethodExpression(expr, returnType, new Class[] { argType }, new Object[] { argument });
+        }
 }

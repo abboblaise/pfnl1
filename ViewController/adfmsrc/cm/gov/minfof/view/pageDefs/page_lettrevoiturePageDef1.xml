@@ -3,7 +3,10 @@
                 Package="cm.gov.minfof.view.pageDefs">
   <parameters/>
   <executables>
-    <variableIterator id="variables"/>
+    <variableIterator id="variables">
+      <variable Name="dateDebut" Type="oracle.jbo.domain.Timestamp"/>
+      <variable Name="dateFin" Type="oracle.jbo.domain.Timestamp"/>
+    </variableIterator>
     <iterator Binds="LettrevoitureView1" RangeSize="25" DataControl="AppModuleDataControl"
               id="LettrevoitureView1Iterator"/>
     <searchRegion Binds="LettrevoitureView1Iterator" Criteria=""
@@ -44,10 +47,10 @@
           <Item Value="Idpermissionnaire"/>
           <Item Value="Idagrement"/>
           <Item Value="Idvehicule"/>
+          <Item Value="Datelettrevoiture"/>
           <Item Value="Nomconducteur"/>
           <Item Value="Idpostechargement"/>
           <Item Value="Iddepartementdestination"/>
-          <Item Value="Datelettrevoiture"/>
         </AttrNames>
       </nodeDefinition>
     </tree>
@@ -90,6 +93,16 @@
     <attributeValues IterBinding="LettrevoitureView1Iterator" id="Datelettrevoiture">
       <AttrNames>
         <Item Value="Datelettrevoiture"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="variables" id="dateDebut1">
+      <AttrNames>
+        <Item Value="dateDebut"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="variables" id="dateFin1">
+      <AttrNames>
+        <Item Value="dateFin"/>
       </AttrNames>
     </attributeValues>
   </bindings>

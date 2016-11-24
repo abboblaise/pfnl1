@@ -3,10 +3,13 @@
                 Package="cm.gov.minfof.view.pageDefs">
   <parameters/>
   <executables>
-    <variableIterator id="variables"/>
+    <variableIterator id="variables">
+      <variable Name="dateDebutVar" Type="oracle.jbo.domain.Timestamp"/>
+      <variable Name="dateFinVar" Type="oracle.jbo.domain.Timestamp"/>
+    </variableIterator>
     <iterator Binds="CollectepfnlView1" RangeSize="25" DataControl="AppModuleDataControl"
               id="CollectepfnlView1Iterator"/>
-    <searchRegion Binds="CollectepfnlView1Iterator" Criteria=""
+    <searchRegion Binds="CollectepfnlView1Iterator"
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="CollectepfnlView1Query"/>
     <iterator Binds="DetailscollectepfnlView17" RangeSize="25" DataControl="AppModuleDataControl"
               id="DetailscollectepfnlView17Iterator"/>
@@ -32,11 +35,11 @@
     <tree IterBinding="CollectepfnlView1Iterator" id="CollectepfnlView1">
       <nodeDefinition DefName="cm.gov.minfof.model.entityviewobject.CollectepfnlView" Name="CollectepfnlView10">
         <AttrNames>
-          <Item Value="Datecollecte"/>
+          <Item Value="Identificateur"/>
           <Item Value="Iddepartement"/>
           <Item Value="Idlocalite"/>
-          <Item Value="Identificateur"/>
           <Item Value="Codepcfc"/>
+          <Item Value="Datecollecte"/>
         </AttrNames>
       </nodeDefinition>
     </tree>
@@ -98,5 +101,25 @@
         </AttrNames>
       </nodeDefinition>
     </tree>
+    <methodAction id="setdateFin" RequiresUpdateModel="true" Action="invokeMethod" MethodName="setdateFin"
+                  IsViewObjectMethod="true" DataControl="AppModuleDataControl"
+                  InstanceName="bindings.setdateFin.dataControl.CollectepfnlView1">
+      <NamedData NDName="value" NDType="java.sql.Timestamp"/>
+    </methodAction>
+    <attributeValues IterBinding="variables" id="dateDebutVar1">
+      <AttrNames>
+        <Item Value="dateDebutVar"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="variables" id="dateFinVar1">
+      <AttrNames>
+        <Item Value="dateFinVar"/>
+      </AttrNames>
+    </attributeValues>
+    <methodAction id="setdateDebut" RequiresUpdateModel="true" Action="invokeMethod" MethodName="setdateDebut"
+                  IsViewObjectMethod="true" DataControl="AppModuleDataControl"
+                  InstanceName="bindings.setdateDebut.dataControl.CollectepfnlView1">
+      <NamedData NDName="value" NDType="java.sql.Timestamp"/>
+    </methodAction>
   </bindings>
 </pageDefinition>
