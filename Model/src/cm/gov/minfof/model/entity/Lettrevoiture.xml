@@ -35,7 +35,8 @@
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
     ColumnType="BIGINT"
-    TableName="lettrevoiture">
+    TableName="lettrevoiture"
+    DefaultValue="1">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="19"/>
     </DesignTime>
@@ -74,7 +75,8 @@
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
     ColumnType="BIGINT"
-    TableName="lettrevoiture">
+    TableName="lettrevoiture"
+    DefaultValue="1">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="19"/>
     </DesignTime>
@@ -94,7 +96,8 @@
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
     ColumnType="BIGINT"
-    TableName="lettrevoiture">
+    TableName="lettrevoiture"
+    DefaultValue="5">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="19"/>
     </DesignTime>
@@ -134,7 +137,8 @@
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
     ColumnType="BIGINT"
-    TableName="lettrevoiture">
+    TableName="lettrevoiture"
+    DefaultValue="1">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="19"/>
     </DesignTime>
@@ -156,7 +160,8 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR"
-    TableName="lettrevoiture">
+    TableName="lettrevoiture"
+    DefaultValue="entrez une valeur">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="10"/>
     </DesignTime>
@@ -176,7 +181,8 @@
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
     ColumnType="BIGINT"
-    TableName="lettrevoiture">
+    TableName="lettrevoiture"
+    DefaultValue="1">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="19"/>
     </DesignTime>
@@ -186,6 +192,25 @@
           ResId="cm.gov.minfof.model.entity.Lettrevoiture.Idpermis_LABEL"/>
         <DISPLAYWIDTH
           Value="20"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
+  <Attribute
+    Name="Datelettrevoiture"
+    IsNotNull="true"
+    ColumnName="datelettrevoiture"
+    SQLType="DATE"
+    Type="oracle.jbo.domain.Timestamp"
+    ColumnType="DATE"
+    TableName="lettrevoiture">
+    <TransientExpression
+      Name="ExpressionScript"
+      trustMode="untrusted"
+      CodeSourceName="LettrevoitureRow"/>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="DATE_DE_CR_U00E9ATION"/>
       </SchemaBasedProperties>
     </Properties>
   </Attribute>

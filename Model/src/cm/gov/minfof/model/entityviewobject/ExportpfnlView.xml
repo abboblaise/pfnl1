@@ -13,6 +13,19 @@
   CustomQuery="false"
   SelectAllAttributes="false"
   PageIterMode="Full"
+  ComponentClass="cm.gov.minfof.model.entityviewobject.ExportpfnlViewImpl"
+  ComponentInterface="cm.gov.minfof.model.entityviewobject.common.ExportpfnlView">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Coll|VarAccess"/>
+  </DesignTime>
+  <Variable
+    Name="dateFin"
+    Kind="viewcriteria"
+    Type="java.sql.Timestamp"/>
+  <Variable
+    Name="dateDebut"
+    Kind="viewcriteria"
+    Type="java.sql.Timestamp"/>
   SdoGen="true"
   SdoName="cm.gov.minfof.model.entityviewobject.common.ExportpfnlViewSDO"
   SdoNameSpace="/cm/gov/minfof/model/entityviewobject/common/">
@@ -111,6 +124,74 @@
     EntityAttrName="Numeroco"
     EntityUsage="Exportpfnl"
     AliasName="numeroco"/>
+  <ViewAttribute
+    Name="Dateexport"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Dateexport"
+    EntityUsage="Exportpfnl"
+    AliasName="dateexport"/>
+  <ViewCriteria
+    Name="ExportpfnlViewCriteria"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.ExportpfnlView"
+    Conjunction="AND">
+    <Properties Name="_Props">
+      <CustomProperties>
+        <Property
+          Name="autoExecute"
+          Value="false"/>
+        <Property
+          Name="mode"
+          Value="Basic"/>
+        <Property
+          Name="allowConjunctionOverride"
+          Value="true"/>
+        <Property
+          Name="showInList"
+          Value="true"/>
+        <Property
+          Name="displayOperators"
+          Value="InAdvancedMode"/>
+      </CustomProperties>
+    </Properties>
+    <ViewCriteriaRow
+      Name="ExportpfnlViewCriteria_row_0"
+      UpperColumns="1">
+      <ViewCriteriaItemCompound
+        Name="ExportpfnlViewCriteria_ExportpfnlViewCriteria_row_0_Dateexport"
+        ViewAttribute="Dateexport">
+        <ViewCriteria
+          Name="ExportpfnlViewCriteria_ExportpfnlViewCriteria_row_0_Dateexport_itemHolder"
+          ViewObjectName="cm.gov.minfof.model.entityviewobject.ExportpfnlView"
+          Conjunction="OR">
+          <ViewCriteriaRow
+            Name="ExportpfnlViewCriteria_ExportpfnlViewCriteria_row_0_Dateexport_itemHolder_row_0"
+            Conjunction="AND">
+            <ViewCriteriaItem
+              Name="ExportpfnlViewCriteria_ExportpfnlViewCriteria_row_0_Dateexport"
+              ViewAttribute="Dateexport"
+              Operator="ONORBEFORE"
+              Conjunction="AND"
+              Value=":dateFin"
+              IsBindVarValue="true"
+              Required="Optional"/>
+          </ViewCriteriaRow>
+          <ViewCriteriaRow
+            Name="ExportpfnlViewCriteria_ExportpfnlViewCriteria_row_0_Dateexport_itemHolder_row_1"
+            Conjunction="AND">
+            <ViewCriteriaItem
+              Name="ExportpfnlViewCriteria_ExportpfnlViewCriteria_row_0_Dateexport_ExportpfnlViewCriteria_ExportpfnlViewCriteria_row_0_Dateexport_itemHolder_ExportpfnlViewCriteria_ExportpfnlViewCriteria_row_0_Dateexport_itemHolder_row_1_Dateexport"
+              ViewAttribute="Dateexport"
+              Operator="ONORAFTER"
+              Conjunction="AND"
+              Value=":dateDebut"
+              IsBindVarValue="true"
+              Required="Optional"/>
+          </ViewCriteriaRow>
+        </ViewCriteria>
+      </ViewCriteriaItemCompound>
+    </ViewCriteriaRow>
+  </ViewCriteria>
   <ViewLinkAccessor
     Name="ExportpfnlView"
     ViewLink="cm.gov.minfof.model.entityviewobject.FkExportpfnl2Link"
@@ -136,4 +217,27 @@
     ViewLink="cm.gov.minfof.model.entityviewobject.ExportToPermissionnaireLink"
     Type="oracle.jbo.server.ViewRowImpl"
     IsUpdateable="false"/>
+  <ClientInterface
+    Name="__clientInterface">
+    <Method
+      Name="setdateDebut"
+      MethodName="setdateDebut">
+      <Return
+        Name="_return_type_"
+        Type="void"/>
+      <Parameter
+        Name="value"
+        Type="java.sql.Timestamp"/>
+    </Method>
+    <Method
+      Name="setdateFin"
+      MethodName="setdateFin">
+      <Return
+        Name="_return_type_"
+        Type="void"/>
+      <Parameter
+        Name="value"
+        Type="java.sql.Timestamp"/>
+    </Method>
+  </ClientInterface>
 </ViewObject>

@@ -124,6 +124,9 @@
                                         <af:spacer width="10" height="10" id="pt_s19"/>
                                         <af:button text="#{viewcontrollerBundle.FICHE_DE_TRANSIT}" id="pt_b21"
                                                    destination="page_lettrevoiture.jsf"/>
+                                        <af:spacer width="10" height="10" id="pt_s21"/>
+                                        <af:button text="#{viewcontrollerBundle.COMPILATION_COLLECTES_ET_LETTRES}" id="pt_b23"
+                                                   destination="page_compilcollecte.jsf"/>
                                     </af:panelGroupLayout>
                                 </af:showDetailItem>
                                 <af:showDetailItem text="#{viewcontrollerBundle.UTILISATEURS}" id="pt_sdi5"
@@ -145,7 +148,9 @@
                                                          halign="end">
                                                 <af:panelGroupLayout id="pt_pgl9" halign="right"
                                                                      inlineStyle='background-image:url("arriere.jpg");'>
-                                                    <af:outputText value="#{RecupUser.ud.nonuser}" id="pt_ot1"
+                                                  <!--  <af:outputText value="#{RecupUser.ud.nonuser}" id="pt_ot1"
+                                                                   inlineStyle="color:White;"/>  -->
+                                                        <af:outputText value="Aucun" id="pt_ot1"
                                                                    inlineStyle="color:White;"/>
                                                     <af:spacer width="10" height="10" id="pt_s20"/>
                                                     <af:button text="#{viewcontrollerBundle.D_U00E9CONNEXION}" id="pt_b22"

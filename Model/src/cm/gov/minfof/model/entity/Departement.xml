@@ -46,10 +46,10 @@
     </DesignTime>
     <Properties>
       <SchemaBasedProperties>
-        <LABEL
-          ResId="cm.gov.minfof.model.entity.Departement.Nomdepartement_LABEL"/>
         <DISPLAYWIDTH
           Value="20"/>
+        <LABEL
+          ResId="NOM_DU_D_U00E9PARTEMENT"/>
       </SchemaBasedProperties>
     </Properties>
   </Attribute>
@@ -236,12 +236,7 @@
         Value="Codedepartement"/>
     </validation:OnAttributes>
     <validation:ResExpressions
-      Name="DepartementRule0_ResExprList">
-      <validation:Expression
-        Name="0"
-        trustMode="untrusted"
-        CodeSourceName="DepartementRow"/>
-    </validation:ResExpressions>
+      Name="DepartementRule0_ResExprList"/>
   </validation:UniqueKeyValidationBean>
   <ResourceBundle>
     <PropertiesBundle

@@ -2,11 +2,14 @@ package cm.gov.minfof.model.entity;
 
 import java.math.BigDecimal;
 
+import java.sql.Date;
+
 import oracle.jbo.AttributeList;
 import oracle.jbo.Key;
 import oracle.jbo.Row;
 import oracle.jbo.RowIterator;
 import oracle.jbo.ViewObject;
+import oracle.jbo.domain.Timestamp;
 import oracle.jbo.server.EntityDefImpl;
 import oracle.jbo.server.EntityImpl;
 import oracle.jbo.server.TransactionEvent;
@@ -26,6 +29,7 @@ public class ExportpfnlImpl extends EntityImpl {
         Idpermissionnaire,
         Numeroexport,
         Numeroco,
+        Dateexport,
         Exportpfnl,
         IdpermissionnaireExportpfnl,
         Exportpfnl1,
@@ -62,6 +66,7 @@ public class ExportpfnlImpl extends EntityImpl {
     public static final int IDPERMISSIONNAIRE = AttributesEnum.Idpermissionnaire.index();
     public static final int NUMEROEXPORT = AttributesEnum.Numeroexport.index();
     public static final int NUMEROCO = AttributesEnum.Numeroco.index();
+    public static final int DATEEXPORT = AttributesEnum.Dateexport.index();
     public static final int EXPORTPFNL = AttributesEnum.Exportpfnl.index();
     public static final int IDPERMISSIONNAIREEXPORTPFNL = AttributesEnum.IdpermissionnaireExportpfnl.index();
     public static final int EXPORTPFNL1 = AttributesEnum.Exportpfnl1.index();
@@ -162,6 +167,22 @@ public class ExportpfnlImpl extends EntityImpl {
      */
     public void setNumeroco(String value) {
         setAttributeInternal(NUMEROCO, value);
+    }
+
+    /**
+     * Gets the attribute value for Dateexport, using the alias name Dateexport.
+     * @return the value of Dateexport
+     */
+    public Timestamp getDateexport() {
+        return (Timestamp) getAttributeInternal(DATEEXPORT);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for Dateexport.
+     * @param value value to set the Dateexport
+     */
+    public void setDateexport(Timestamp value) {
+        setAttributeInternal(DATEEXPORT, value);
     }
 
     /**

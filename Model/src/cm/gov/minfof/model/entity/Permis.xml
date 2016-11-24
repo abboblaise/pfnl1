@@ -72,7 +72,7 @@
     Name="Datedelivrance"
     ColumnName="datedelivrance"
     SQLType="DATE"
-    Type="java.sql.Date"
+    Type="oracle.jbo.domain.Timestamp"
     ColumnType="DATE"
     TableName="permis"
     IsNotNull="true">

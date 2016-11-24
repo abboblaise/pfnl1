@@ -14,6 +14,19 @@
   SelectAllAttributes="false"
   FetchMode="FETCH_AS_NEEDED"
   PageIterMode="Full"
+  ComponentClass="cm.gov.minfof.model.entityviewobject.PermisViewImpl"
+  ComponentInterface="cm.gov.minfof.model.entityviewobject.common.PermisView">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Coll|VarAccess"/>
+  </DesignTime>
+  <Variable
+    Name="Fin"
+    Kind="viewcriteria"
+    Type="java.sql.Timestamp"/>
+  <Variable
+    Name="Debut"
+    Kind="viewcriteria"
+    Type="java.sql.Timestamp"/>
   SdoGen="true"
   SdoName="cm.gov.minfof.model.entityviewobject.common.PermisViewSDO"
   SdoNameSpace="/cm/gov/minfof/model/entityviewobject/common/">
@@ -167,6 +180,67 @@
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
+  <ViewCriteria
+    Name="PermisViewCriteria"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.PermisView"
+    Conjunction="AND">
+    <Properties Name="_Props">
+      <CustomProperties>
+        <Property
+          Name="autoExecute"
+          Value="false"/>
+        <Property
+          Name="mode"
+          Value="Basic"/>
+        <Property
+          Name="allowConjunctionOverride"
+          Value="true"/>
+        <Property
+          Name="showInList"
+          Value="true"/>
+        <Property
+          Name="displayOperators"
+          Value="InAdvancedMode"/>
+      </CustomProperties>
+    </Properties>
+    <ViewCriteriaRow
+      Name="PermisViewCriteria_row_0"
+      UpperColumns="1">
+      <ViewCriteriaItemCompound
+        Name="PermisViewCriteria_PermisViewCriteria_row_0_Datedelivrance"
+        ViewAttribute="Datedelivrance">
+        <ViewCriteria
+          Name="PermisViewCriteria_PermisViewCriteria_row_0_Datedelivrance_itemHolder"
+          ViewObjectName="cm.gov.minfof.model.entityviewobject.PermisView"
+          Conjunction="OR">
+          <ViewCriteriaRow
+            Name="PermisViewCriteria_PermisViewCriteria_row_0_Datedelivrance_itemHolder_row_0"
+            Conjunction="AND">
+            <ViewCriteriaItem
+              Name="PermisViewCriteria_PermisViewCriteria_row_0_Datedelivrance"
+              ViewAttribute="Datedelivrance"
+              Operator="ONORBEFORE"
+              Conjunction="AND"
+              Value=":Fin"
+              IsBindVarValue="true"
+              Required="Optional"/>
+          </ViewCriteriaRow>
+          <ViewCriteriaRow
+            Name="PermisViewCriteria_PermisViewCriteria_row_0_Datedelivrance_itemHolder_row_1"
+            Conjunction="AND">
+            <ViewCriteriaItem
+              Name="PermisViewCriteria_PermisViewCriteria_row_0_Datedelivrance_PermisViewCriteria_PermisViewCriteria_row_0_Datedelivrance_itemHolder_PermisViewCriteria_PermisViewCriteria_row_0_Datedelivrance_itemHolder_row_1_Datedelivrance"
+              ViewAttribute="Datedelivrance"
+              Operator="ONORAFTER"
+              Conjunction="AND"
+              Value=":Debut"
+              IsBindVarValue="true"
+              Required="Optional"/>
+          </ViewCriteriaRow>
+        </ViewCriteria>
+      </ViewCriteriaItemCompound>
+    </ViewCriteriaRow>
+  </ViewCriteria>
   <ViewLinkAccessor
     Name="PermisView"
     ViewLink="cm.gov.minfof.model.entityviewobject.FkPermis2Link"
@@ -200,4 +274,27 @@
     Type="oracle.jbo.RowIterator"
     Reversed="true"
     IsUpdateable="false"/>
+  <ClientInterface
+    Name="__clientInterface">
+    <Method
+      Name="setDebut"
+      MethodName="setDebut">
+      <Return
+        Name="_return_type_"
+        Type="void"/>
+      <Parameter
+        Name="value"
+        Type="java.sql.Timestamp"/>
+    </Method>
+    <Method
+      Name="setFin"
+      MethodName="setFin">
+      <Return
+        Name="_return_type_"
+        Type="void"/>
+      <Parameter
+        Name="value"
+        Type="java.sql.Timestamp"/>
+    </Method>
+  </ClientInterface>
 </ViewObject>

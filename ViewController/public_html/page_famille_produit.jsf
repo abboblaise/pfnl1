@@ -46,8 +46,7 @@
                                        action="#{famillePfnl.supprimeFamillePfnl}"/>
                                     <af:spacer width="10" height="10" id="s3"/>
                                     <af:button actionListener="#{bindings.Rollback.execute}"
-                                               text="#{viewcontrollerBundle.ANNULER}"
-                                               disabled="#{!bindings.Rollback.enabled}" immediate="true" id="b5">
+                                               text="#{viewcontrollerBundle.ANNULER}" immediate="true" id="b5">
                                         <af:resetActionListener/>
                                     </af:button>
                                 </af:panelGroupLayout>

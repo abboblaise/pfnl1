@@ -90,7 +90,7 @@
     <Properties>
       <SchemaBasedProperties>
         <DISPLAYWIDTH
-          Value="30"/>
+          Value="20"/>
         <DISPLAYHEIGHT
           Value="2"/>
       </SchemaBasedProperties>

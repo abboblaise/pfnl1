@@ -13,6 +13,10 @@
   CustomQuery="false"
   SelectAllAttributes="false"
   PageIterMode="Full"
+  ComponentClass="cm.gov.minfof.model.entityviewobject.PaysViewImpl">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Coll|VarAccess"/>
+  </DesignTime>
   SdoGen="true"
   SdoName="cm.gov.minfof.model.entityviewobject.common.PaysViewSDO"
   SdoNameSpace="/cm/gov/minfof/model/entityviewobject/common/">
@@ -33,6 +37,11 @@
     EntityAttrName="Nompays"
     EntityUsage="Pays"
     AliasName="NOMPays"/>
+  <SortCriteria>
+    <Sort
+      Attribute="Idpays"
+      Ascending="false"/>
+  </SortCriteria>
   <SortCriteria>
     <Sort
       Attribute="Idpays"

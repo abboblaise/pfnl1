@@ -11,6 +11,7 @@ import oracle.jbo.Key;
 import oracle.jbo.Row;
 import oracle.jbo.RowIterator;
 import oracle.jbo.ViewObject;
+import oracle.jbo.domain.Timestamp;
 import oracle.jbo.server.EntityDefImpl;
 import oracle.jbo.server.EntityImpl;
 import oracle.jbo.server.TransactionEvent;
@@ -150,15 +151,15 @@ public class PermisImpl extends EntityImpl {
      * Gets the attribute value for Datedelivrance, using the alias name Datedelivrance.
      * @return the value of Datedelivrance
      */
-    public Date getDatedelivrance() {
-        return (Date) getAttributeInternal(DATEDELIVRANCE);
+    public Timestamp getDatedelivrance() {
+        return (Timestamp) getAttributeInternal(DATEDELIVRANCE);
     }
 
     /**
      * Sets <code>value</code> as the attribute value for Datedelivrance.
      * @param value value to set the Datedelivrance
      */
-    public void setDatedelivrance(Date value) {
+    public void setDatedelivrance(Timestamp value) {
         setAttributeInternal(DATEDELIVRANCE, value);
     }
 

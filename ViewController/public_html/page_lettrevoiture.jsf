@@ -14,7 +14,7 @@
                                 <f:facet name="first">
                                     <af:panelBox text="#{viewcontrollerBundle.EDITION_DES_DOCUMENTS_DE_TRANSIT}" id="pb1">
                                         <f:facet name="toolbar"/>
-                                        <af:panelFormLayout id="pfl1" rows="4">
+                                        <af:panelFormLayout id="pfl1" rows="3">
                                             <af:inputText value="#{bindings.Numerolettrevoiture.inputValue}"
                                                           label="#{bindings.Numerolettrevoiture.hints.label}"
                                                           required="#{bindings.Numerolettrevoiture.hints.mandatory}"
@@ -72,6 +72,15 @@
                                                 <f:selectItems value="#{bindings.Idpostechargement.items}" id="si5"/>
                                                 <f:validator binding="#{bindings.Idpostechargement.validator}"/>
                                             </af:selectOneChoice>
+                                            <af:inputDate value="#{bindings.Datelettrevoiture.inputValue}"
+                                                          label="#{bindings.Datelettrevoiture.hints.label}"
+                                                          required="#{bindings.Datelettrevoiture.hints.mandatory}"
+                                                          columns="#{bindings.Datelettrevoiture.hints.displayWidth}"
+                                                          shortDesc="#{bindings.Datelettrevoiture.hints.tooltip}"
+                                                          id="id1">
+                                                <f:validator binding="#{bindings.Datelettrevoiture.validator}"/>
+                                                <af:convertDateTime pattern="#{bindings.Datelettrevoiture.format}"/>
+                                            </af:inputDate>
                                             <af:selectOneChoice value="#{bindings.Iddepartementdestination.inputValue}"
                                                                 label="#{bindings.Iddepartementdestination.label}"
                                                                 required="#{bindings.Iddepartementdestination.hints.mandatory}"
@@ -85,7 +94,7 @@
                                                 <af:panelGroupLayout id="pgl1">
                                                     <af:button text="#{viewcontrollerBundle.NOUVEAU}" id="b1"
                                                                disabled="#{!bindings.CreateInsert.enabled}"
-                                                               actionListener="#{bindings.CreateInsert.execute}"/>
+                                                               action="#{lettreVoitureBean.creerLettreVoiture}"/>
                                                     <af:spacer width="10" height="10" id="s1"/>
                                                     <af:button actionListener="#{bindings.Commit.execute}"
                                                                text="#{viewcontrollerBundle.ENREGISTRER}" id="b4"/>
@@ -120,8 +129,9 @@
                                                       fetchSize="#{bindings.LettrevoitureView1.rangeSize}"
                                                       filterModel="#{bindings.LettrevoitureView1Query.queryDescriptor}"
                                                       filterVisible="true"
-                                                      queryListener="#{bindings.LettrevoitureView1Query.processQuery}"
-                                                      varStatus="vs" id="t1" partialTriggers=":::b1 :::b3">
+                                                      queryListener="#{lettreVoitureBean.onLettreVoitureQuery}"
+                                                      varStatus="vs" id="t1" partialTriggers=":::b1 :::b3"
+                                                      editingMode="readOnly">
                                                 <af:column sortProperty="#{bindings.LettrevoitureView1.hints.Numerolettrevoiture.name}"
                                                            filterable="true" sortable="true"
                                                            headerText="#{bindings.LettrevoitureView1.hints.Numerolettrevoiture.label}"
@@ -160,7 +170,7 @@
                                                 <af:column sortProperty="#{bindings.LettrevoitureView1.hints.Idagrement.name}"
                                                            filterable="true" sortable="true"
                                                            headerText="#{bindings.LettrevoitureView1.hints.Idagrement.label}"
-                                                           id="c4" width="100">
+                                                           id="c4" width="80">
                                                     <af:selectOneChoice value="#{row.bindings.Idagrement.inputValue}"
                                                                         label="#{row.bindings.Idagrement.label}"
                                                                         required="#{bindings.LettrevoitureView1.hints.Idagrement.mandatory}"
@@ -174,7 +184,7 @@
                                                 <af:column sortProperty="#{bindings.LettrevoitureView1.hints.Idvehicule.name}"
                                                            filterable="true" sortable="true"
                                                            headerText="#{bindings.LettrevoitureView1.hints.Idvehicule.label}"
-                                                           id="c5" width="100">
+                                                           id="c5" width="87">
                                                     <af:selectOneChoice value="#{row.bindings.Idvehicule.inputValue}"
                                                                         label="#{row.bindings.Idvehicule.label}"
                                                                         required="#{bindings.LettrevoitureView1.hints.Idvehicule.mandatory}"
@@ -185,10 +195,40 @@
                                                         <f:validator binding="#{row.bindings.Idvehicule.validator}"/>
                                                     </af:selectOneChoice>
                                                 </af:column>
+                                                <af:column headerText="#{bindings.LettrevoitureView1.hints.Datelettrevoiture.label}"
+                                                           id="c13"
+                                                           sortProperty="#{bindings.LettrevoitureView1.hints.Datelettrevoiture.name}"
+                                                           filterable="true" width="164">
+                                                    <af:inputDate value="#{row.bindings.Datelettrevoiture.inputValue}"
+                                                                  label="#{bindings.LettrevoitureView1.hints.Datelettrevoiture.label}"
+                                                                  required="#{bindings.LettrevoitureView1.hints.Datelettrevoiture.mandatory}"
+                                                                  columns="#{bindings.LettrevoitureView1.hints.Datelettrevoiture.displayWidth}"
+                                                                  shortDesc="#{bindings.LettrevoitureView1.hints.Datelettrevoiture.tooltip}"
+                                                                  id="id3">
+                                                        <f:validator binding="#{row.bindings.Datelettrevoiture.validator}"/>
+                                                        <af:convertDateTime pattern="#{bindings.LettrevoitureView1.hints.Datelettrevoiture.format}"/>
+                                                    </af:inputDate>
+                                                    <f:facet name="filter">
+                                                        <af:panelGroupLayout id="pgl3">
+                                                            <af:panelLabelAndMessage label="#{viewcontrollerBundle.DU}" id="plam1">
+                                                                <af:inputDate value="#{bindings.dateDebut1.inputValue}"
+                                                                              id="id2">
+                                                                    <af:convertDateTime pattern="#{bindings.LettrevoitureView1.hints.Datelettrevoiture.format}"/>
+                                                                </af:inputDate>
+                                                            </af:panelLabelAndMessage>
+                                                            <af:panelLabelAndMessage label="#{viewcontrollerBundle.AU}" id="plam2">
+                                                                <af:inputDate value="#{bindings.dateFin1.inputValue}"
+                                                                              id="id4">
+                                                                    <af:convertDateTime pattern="#{bindings.LettrevoitureView1.hints.Datelettrevoiture.format}"/>
+                                                                </af:inputDate>
+                                                            </af:panelLabelAndMessage>
+                                                        </af:panelGroupLayout>
+                                                    </f:facet>
+                                                </af:column>
                                                 <af:column sortProperty="#{bindings.LettrevoitureView1.hints.Nomconducteur.name}"
                                                            filterable="true" sortable="true"
                                                            headerText="#{bindings.LettrevoitureView1.hints.Nomconducteur.label}"
-                                                           id="c6">
+                                                           id="c6" width="92">
                                                     <af:outputText value="#{row.Nomconducteur}"
                                                                    shortDesc="#{bindings.LettrevoitureView1.hints.Nomconducteur.tooltip}"
                                                                    id="ot2"/>
@@ -196,7 +236,7 @@
                                                 <af:column sortProperty="#{bindings.LettrevoitureView1.hints.Idpostechargement.name}"
                                                            filterable="true" sortable="true"
                                                            headerText="#{bindings.LettrevoitureView1.hints.Idpostechargement.label}"
-                                                           id="c7">
+                                                           id="c7" width="88">
                                                     <af:selectOneChoice value="#{row.bindings.Idpostechargement.inputValue}"
                                                                         label="#{row.bindings.Idpostechargement.label}"
                                                                         required="#{bindings.LettrevoitureView1.hints.Idpostechargement.mandatory}"
@@ -210,7 +250,7 @@
                                                 <af:column sortProperty="#{bindings.LettrevoitureView1.hints.Iddepartementdestination.name}"
                                                            filterable="true" sortable="true"
                                                            headerText="#{bindings.LettrevoitureView1.hints.Iddepartementdestination.label}"
-                                                           id="c8">
+                                                           id="c8" width="89">
                                                     <af:selectOneChoice value="#{row.bindings.Iddepartementdestination.inputValue}"
                                                                         label="#{row.bindings.Iddepartementdestination.label}"
                                                                         required="#{bindings.LettrevoitureView1.hints.Iddepartementdestination.mandatory}"
@@ -376,4 +416,5 @@
             </af:pageTemplate>
         </af:form>
     </af:document>
+    <!--oracle-jdev-comment:preferred-managed-bean-name:lettreVoitureBean-->
 </f:view>

@@ -8,7 +8,7 @@
         <af:form id="f1">
             <af:pageTemplate viewId="/TemplateGlobal.jsf" id="pt1">
                 <f:facet name="content">
-                    <af:panelSplitter id="ps1" splitterPosition="471" orientation="horizontal">
+                    <af:panelSplitter id="ps1" splitterPosition="544" orientation="horizontal">
                         <f:facet name="first">
                             <af:panelSplitter id="ps2" orientation="vertical">
                                 <f:facet name="first">
@@ -65,7 +65,7 @@
                                                     <af:spacer width="10" height="10" id="s2"/>
                                                     <af:button text="#{viewcontrollerBundle.ENREGISTRER}" id="b3"
                                                                disabled="false"
-                                                               actionListener="#{bindings.Commit.execute}"/>
+                                                               action="#{collecteBean.enregistrerCollecte}"/>
                                                     <af:spacer width="10" height="10" id="s3"/>
                                                     <af:button
                                                                text="#{viewcontrollerBundle.SUPPRIMER}"
@@ -75,6 +75,13 @@
                                                                text="#{viewcontrollerBundle.ANNULER}"
                                                                immediate="true" id="b6">
                                                         <af:resetActionListener/>
+                                                    </af:button>
+                                                    <af:spacer width="10" height="10" id="s5"/>
+                                                    <af:button text="#{viewcontrollerBundle.IMPRIMER}" id="b8"
+                                                               action="#{collecteBean.imprimeEtat}">
+                                                        <af:fileDownloadActionListener method="#{collecteBean.imprime}"
+                                                                                       contentType="application/pdf"
+                                                                                       filename="resultta.pdf"/>
                                                     </af:button>
                                                 </af:panelGroupLayout>
                                             </f:facet>
@@ -97,9 +104,9 @@
                                                       fetchSize="#{bindings.CollectepfnlView1.rangeSize}"
                                                       filterModel="#{bindings.CollectepfnlView1Query.queryDescriptor}"
                                                       filterVisible="true"
-                                                      queryListener="#{bindings.CollectepfnlView1Query.processQuery}"
-                                                      varStatus="vs" id="t1" partialTriggers=":::b2 :::b7 :::b3"
-                                                      columnSelection="single">
+                                                      queryListener="#{collecteBean.onCollecteQuery}"
+                                                      varStatus="vs" id="t1" partialTriggers=":::b2 :::b3 :::b7"
+                                                      columnSelection="single" editingMode="readOnly">
                                                 <af:column sortProperty="#{bindings.CollectepfnlView1.hints.Identificateur.name}"
                                                            filterable="true" sortable="true"
                                                            headerText="#{bindings.CollectepfnlView1.hints.Identificateur.label}"
@@ -149,16 +156,29 @@
                                                            headerText="#{bindings.CollectepfnlView1.hints.Datecollecte.label}"
                                                            id="c1" width="100">
                                                     <f:facet name="filter">
-                                                        <af:inputDate value="#{bindings.CollectepfnlView1Query.queryDescriptor.filterConjunctionCriterion.criterionMap.Datecollecte.value}"
-                                                                      id="id2">
-                                                            <af:convertDateTime pattern="#{bindings.CollectepfnlView1.hints.Datecollecte.format}"/>
-                                                        </af:inputDate>
+                                                        <af:panelGroupLayout id="pgl3">
+                                                            <af:panelLabelAndMessage label="#{viewcontrollerBundle.DU}" id="plam1">
+                                                                <af:inputDate value="#{bindings.dateDebutVar1.inputValue}"
+                                                                              id="id2">
+                                                                    <af:convertDateTime pattern="#{bindings.CollectepfnlView1.hints.Datecollecte.format}"/>
+                                                                </af:inputDate>
+                                                            </af:panelLabelAndMessage>
+                                                            <af:panelLabelAndMessage label="#{viewcontrollerBundle.AU}" id="plam2">
+                                                                <af:inputDate value="#{bindings.dateFinVar1.inputValue}"
+                                                                              id="id3">
+                                                                    <af:convertDateTime pattern="#{bindings.CollectepfnlView1.hints.Datecollecte.format}"/>
+                                                                </af:inputDate>
+                                                            </af:panelLabelAndMessage>
+                                                        </af:panelGroupLayout>
                                                     </f:facet>
-                                                    <af:outputText value="#{row.Datecollecte}"
-                                                                   shortDesc="#{bindings.CollectepfnlView1.hints.Datecollecte.tooltip}"
-                                                                   id="ot1">
+                                                    <af:inputDate value="#{row.bindings.Datecollecte.inputValue}"
+                                                                  label="#{bindings.CollectepfnlView1.hints.Datecollecte.label}"
+                                                                  required="#{bindings.CollectepfnlView1.hints.Datecollecte.mandatory}"
+                                                                  columns="#{bindings.CollectepfnlView1.hints.Datecollecte.displayWidth}"
+                                                                  shortDesc="#{bindings.CollectepfnlView1.hints.Datecollecte.tooltip}">
+                                                        <f:validator binding="#{row.bindings.Datecollecte.validator}"/>
                                                         <af:convertDateTime pattern="#{bindings.CollectepfnlView1.hints.Datecollecte.format}"/>
-                                                    </af:outputText>
+                                                    </af:inputDate>
                                                 </af:column>
                                             </af:table>
                                             <f:facet name="statusbar"/>
@@ -439,4 +459,5 @@
             </af:pageTemplate>
         </af:form>
     </af:document>
+    <!--oracle-jdev-comment:preferred-managed-bean-name:collecteBean-->
 </f:view>

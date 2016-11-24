@@ -13,6 +13,10 @@
   CustomQuery="false"
   SelectAllAttributes="false"
   PageIterMode="Full"
+  ComponentClass="cm.gov.minfof.model.entityviewobject.TransporteurViewImpl">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Coll|VarAccess"/>
+  </DesignTime>
   SdoGen="true"
   SdoName="cm.gov.minfof.model.entityviewobject.common.TransporteurViewSDO"
   SdoNameSpace="/cm/gov/minfof/model/entityviewobject/common/">
