@@ -1,6 +1,7 @@
 package cm.gov.minfof.model.entity;
 
 import cm.gov.minfof.model.entity.common.*;
+import cm.gov.minfof.model.entityviewobject.NiveauValidationViewImpl;
 import cm.gov.minfof.model.entityviewobject.RegionViewImpl;
 
 import cm.gov.minfof.model.entityviewobject.gestLastIdUnitMesureImpl;
@@ -3641,6 +3642,8 @@ public class AppModuleImpl extends ApplicationModuleImpl {
             util.setNonuser(rr.getAttribute("Nomuser").toString());            
             util.setTelephone(rr.getAttribute("Telephone").toString());
             BigDecimal bd;
+            BigDecimal b1;
+            Boolean bb;
             
             bd= (BigDecimal)rr.getAttribute("Iddepartements");
             util.setIddepartement(bd);
@@ -3650,17 +3653,52 @@ public class AppModuleImpl extends ApplicationModuleImpl {
             
             bd= (BigDecimal)rr.getAttribute("Idgroupe");
             util.setIdgroupe(bd);
+            b1=new BigDecimal(1);
+            if (bd.equals(b1)) util.setEstinfo(true);
+            b1=new BigDecimal(2);
+            if (bd.equals(b1)) util.setEstadmin(true);
+            b1=new BigDecimal(3);
+            if (bd.equals(b1)) util.setEstuser(true);
+            
             
             bd= (BigDecimal)rr.getAttribute("Idutilisateur");
             util.setIdutilisateur(bd);
             
             int nn = (Integer)rr.getAttribute("Niveauintervention");
             util.setNiveauintervention(nn);
+            if (nn == 1) util.setEstcent(true);
+            if (nn == 2) util.setEstreg(true);
+            if (nn == 3) util.setEstdep(true);
+            
+            bb= (Boolean)rr.getAttribute("Saisieexport");
+            util.setSaisieexport(bb);
+            
+            bb= (Boolean)rr.getAttribute("Saisiecollecte");
+            util.setSaisiecollecte(bb);
+            
+            bb= (Boolean)rr.getAttribute("Saisietransit");
+            util.setSaisietransit(bb);
             
         }
         
         return util;
         
+    }
+
+    /**
+     * Container's getter for NiveauValidationView1.
+     * @return NiveauValidationView1
+     */
+    public NiveauValidationViewImpl getNiveauValidationView1() {
+        return (NiveauValidationViewImpl) findViewObject("NiveauValidationView1");
+    }
+
+    /**
+     * Container's getter for getLastIdUtilisateur1.
+     * @return getLastIdUtilisateur1
+     */
+    public ViewObjectImpl getgetLastIdUtilisateur1() {
+        return (ViewObjectImpl) findViewObject("getLastIdUtilisateur1");
     }
 }
 

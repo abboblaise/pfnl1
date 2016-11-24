@@ -1,0 +1,31 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sdoJava="commonj.sdo/java" targetNamespace="/cm/gov/minfof/model/entityviewobject/common/"
+     xmlns="/cm/gov/minfof/model/entityviewobject/common/" elementFormDefault="qualified"
+     sdoJava:package="cm.gov.minfof.model.entityviewobject.common">
+    <xsd:import schemaLocation="classpath:/xml/sdoJava.xsd" namespace="commonj.sdo/java"/>
+    <xsd:include schemaLocation="DetailsexportpfnlViewSDO.xsd"/>
+    <xsd:include schemaLocation="PermissionnairespnflViewSDO.xsd"/>
+    <xsd:include schemaLocation="PermisViewSDO.xsd"/>
+    <xsd:complexType name="ExportpfnlViewSDO">
+        <xsd:annotation>
+            <xsd:appinfo source="http://xmlns.oracle.com/adf/svc/metadata/">
+                <key xmlns="http://xmlns.oracle.com/adf/svc/metadata/">
+                    <attribute>Idexportpfnl</attribute>
+                </key>
+            </xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="Idexportpfnl" type="xsd:decimal" minOccurs="0"/>
+            <xsd:element name="Idpermis" type="xsd:decimal" minOccurs="0" nillable="true"/>
+            <xsd:element name="Idpermissionnaire" type="xsd:decimal" minOccurs="0" nillable="true"/>
+            <xsd:element name="Numeroexport" type="xsd:string" minOccurs="0" nillable="true"/>
+            <xsd:element name="Numeroco" type="xsd:string" minOccurs="0" nillable="true"/>
+            <xsd:element name="ExportpfnlView" type="ExportpfnlViewSDO" minOccurs="0" maxOccurs="unbounded"/>
+            <xsd:element name="ExportpfnlView1" type="ExportpfnlViewSDO" minOccurs="0" maxOccurs="unbounded"/>
+            <xsd:element name="DetailsexportpfnlView" type="DetailsexportpfnlViewSDO" minOccurs="0"
+                 maxOccurs="unbounded"/>
+            <xsd:element name="PermissionnairespnflView" type="PermissionnairespnflViewSDO" minOccurs="0"/>
+            <xsd:element name="PermisView" type="PermisViewSDO" minOccurs="0"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:element name="exportpfnlViewSDO" type="ExportpfnlViewSDO"/>
+</xsd:schema>

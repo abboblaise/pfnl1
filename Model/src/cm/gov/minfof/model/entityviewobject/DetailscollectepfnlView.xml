@@ -12,7 +12,10 @@
   BindingStyle="JDBC"
   CustomQuery="false"
   SelectAllAttributes="false"
-  PageIterMode="Full">
+  PageIterMode="Full"
+  SdoGen="true"
+  SdoName="cm.gov.minfof.model.entityviewobject.common.DetailscollectepfnlViewSDO"
+  SdoNameSpace="/cm/gov/minfof/model/entityviewobject/common/">
   <ViewAccessor
     Name="OriginespnflsView1"
     ViewObjectName="cm.gov.minfof.model.entityviewobject.OriginespnflsView"
@@ -192,7 +195,8 @@
     PrecisionRule="true"
     EntityAttrName="Iddetailscollectepfnl"
     EntityUsage="Detailscollectepfnl"
-    AliasName="iddetailscollectepfnl"/>
+    AliasName="iddetailscollectepfnl"
+    IsUpdateable="while_insert"/>
   <ViewAttribute
     Name="Idpermissionnaire"
     IsNotNull="true"

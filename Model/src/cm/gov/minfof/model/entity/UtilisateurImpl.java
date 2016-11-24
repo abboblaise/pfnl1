@@ -1,10 +1,14 @@
 package cm.gov.minfof.model.entity;
 
+import java.io.IOException;
+
 import java.math.BigDecimal;
 
 import oracle.jbo.AttributeList;
 import oracle.jbo.Key;
+import oracle.jbo.Row;
 import oracle.jbo.RowIterator;
+import oracle.jbo.ViewObject;
 import oracle.jbo.server.EntityDefImpl;
 import oracle.jbo.server.EntityImpl;
 import oracle.jbo.server.TransactionEvent;
@@ -28,6 +32,9 @@ public class UtilisateurImpl extends EntityImpl {
         Idregions,
         Iddepartements,
         Idgroupe,
+        Saisieexport,
+        Saisietransit,
+        Saisiecollecte,
         Utilisateur,
         IdgroupeUtilisateur,
         Utilisateur1,
@@ -59,6 +66,8 @@ public class UtilisateurImpl extends EntityImpl {
             return vals;
         }
     }
+
+
     public static final int IDUTILISATEUR = AttributesEnum.Idutilisateur.index();
     public static final int LOGINUSER = AttributesEnum.Loginuser.index();
     public static final int PASSWORDUSER = AttributesEnum.Passworduser.index();
@@ -68,6 +77,9 @@ public class UtilisateurImpl extends EntityImpl {
     public static final int IDREGIONS = AttributesEnum.Idregions.index();
     public static final int IDDEPARTEMENTS = AttributesEnum.Iddepartements.index();
     public static final int IDGROUPE = AttributesEnum.Idgroupe.index();
+    public static final int SAISIEEXPORT = AttributesEnum.Saisieexport.index();
+    public static final int SAISIETRANSIT = AttributesEnum.Saisietransit.index();
+    public static final int SAISIECOLLECTE = AttributesEnum.Saisiecollecte.index();
     public static final int UTILISATEUR = AttributesEnum.Utilisateur.index();
     public static final int IDGROUPEUTILISATEUR = AttributesEnum.IdgroupeUtilisateur.index();
     public static final int UTILISATEUR1 = AttributesEnum.Utilisateur1.index();
@@ -82,7 +94,18 @@ public class UtilisateurImpl extends EntityImpl {
      * This is the default constructor (do not remove).
      */
     public UtilisateurImpl() {
+        /*setAttributeInternal(SAISIECOLLECTE, 0);
+        setAttributeInternal(SAISIEEXPORT, 0);
+        setAttributeInternal(SAISIETRANSIT, 0);*/
     }
+
+    /**
+     * @return the definition object for this instance class.
+     */
+    public static synchronized EntityDefImpl getDefinitionObject() {
+        return EntityDefImpl.findDefObject("cm.gov.minfof.model.entity.Utilisateur");
+    }
+
 
     /**
      * Gets the attribute value for Idutilisateur, using the alias name Idutilisateur.
@@ -120,16 +143,25 @@ public class UtilisateurImpl extends EntityImpl {
      * Gets the attribute value for Passworduser, using the alias name Passworduser.
      * @return the value of Passworduser
      */
-    public String getPassworduser() {
-        return (String) getAttributeInternal(PASSWORDUSER);
+    public String getPassworduser() throws IOException {
+        String str = (String)getAttributeInternal(PASSWORDUSER);
+        CrypteDecrypte cd = new CrypteDecrypte();
+        
+        return cd.codedecode(str, 2);
+
+        //return (String) getAttributeInternal(PASSWORDUSER);
     }
 
     /**
      * Sets <code>value</code> as the attribute value for Passworduser.
      * @param value value to set the Passworduser
      */
-    public void setPassworduser(String value) {
-        setAttributeInternal(PASSWORDUSER, value);
+    public void setPassworduser(String value) throws IOException {
+        
+        CrypteDecrypte cd = new CrypteDecrypte();
+        String str = cd.codedecode(value, 1);
+        
+        setAttributeInternal(PASSWORDUSER, str);
     }
 
     /**
@@ -226,6 +258,56 @@ public class UtilisateurImpl extends EntityImpl {
      */
     public void setIdgroupe(BigDecimal value) {
         setAttributeInternal(IDGROUPE, value);
+    }
+
+
+    /**
+     * Gets the attribute value for Saisieexport, using the alias name Saisieexport.
+     * @return the value of Saisieexport
+     */
+    public Boolean getSaisieexport() {
+        return (Boolean) getAttributeInternal(SAISIEEXPORT);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for Saisieexport.
+     * @param value value to set the Saisieexport
+     */
+    public void setSaisieexport(Boolean value) {
+        setAttributeInternal(SAISIEEXPORT, value);
+    }
+
+    /**
+     * Gets the attribute value for Saisietransit, using the alias name Saisietransit.
+     * @return the value of Saisietransit
+     */
+    public Boolean getSaisietransit() {
+        return (Boolean) getAttributeInternal(SAISIETRANSIT);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for Saisietransit.
+     * @param value value to set the Saisietransit
+     */
+    public void setSaisietransit(Boolean value) {
+        System.out.println(value);
+        setAttributeInternal(SAISIETRANSIT, value);
+    }
+
+    /**
+     * Gets the attribute value for Saisiecollecte, using the alias name Saisiecollecte.
+     * @return the value of Saisiecollecte
+     */
+    public Boolean getSaisiecollecte() {
+        return (Boolean) getAttributeInternal(SAISIECOLLECTE);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for Saisiecollecte.
+     * @param value value to set the Saisiecollecte
+     */
+    public void setSaisiecollecte(Boolean value) {
+        setAttributeInternal(SAISIECOLLECTE, value);
     }
 
     /**
@@ -333,6 +415,7 @@ public class UtilisateurImpl extends EntityImpl {
         setAttributeInternal(GROUPEUTILISATEUR2, value);
     }
 
+
     /**
      * @param idutilisateur key constituent
 
@@ -340,13 +423,6 @@ public class UtilisateurImpl extends EntityImpl {
      */
     public static Key createPrimaryKey(BigDecimal idutilisateur) {
         return new Key(new Object[] { idutilisateur });
-    }
-
-    /**
-     * @return the definition object for this instance class.
-     */
-    public static synchronized EntityDefImpl getDefinitionObject() {
-        return EntityDefImpl.findDefObject("cm.gov.minfof.model.entity.Utilisateur");
     }
 
     /**
@@ -377,7 +453,30 @@ public class UtilisateurImpl extends EntityImpl {
      * @param e the transaction event
      */
     protected void doDML(int operation, TransactionEvent e) {
+        if (operation == DML_INSERT) {
+            //System.out.println("actif = " + getActif());
+            BigDecimal id = getLastId("getLastIdUtilisateur1");
+            setIdutilisateur(id);
+        }
         super.doDML(operation, e);
+    }
+    
+    public BigDecimal getLastId(String viewName) {
+        //System.out.println("entree dans getLastId");
+        BigDecimal lastId=new BigDecimal(0);
+        ViewObject vo = this.getDBTransaction()
+                            .getRootApplicationModule()
+                            .findViewObject(viewName);
+        vo.executeQuery();
+        if (vo.hasNext()) {
+            Row r = vo.next();
+            lastId = (BigDecimal) r.getAttribute(0);
+            System.out.println("last Id = " + lastId);
+            vo.closeRowSet();
+        }
+        BigDecimal un = new BigDecimal(1);
+        lastId = lastId.add(un);
+        return lastId; 
     }
 }
 

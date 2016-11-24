@@ -13,7 +13,10 @@
   CustomQuery="false"
   SelectAllAttributes="false"
   PageIterMode="Full"
-  RowClass="cm.gov.minfof.model.entity.PartiesProduitsPfnlViewRowImpl">
+  RowClass="cm.gov.minfof.model.entity.PartiesProduitsPfnlViewRowImpl"
+  SdoGen="true"
+  SdoName="cm.gov.minfof.model.entity.common.PartiesProduitsPfnlViewSDO"
+  SdoNameSpace="/cm/gov/minfof/model/entity/common/">
   <DesignTime>
     <Attr Name="_codeGenFlag2" Value="Access"/>
     <Attr Name="_isCodegen" Value="true"/>

@@ -16,7 +16,10 @@
   RowClass="cm.gov.minfof.model.entityviewobject.RegionViewRowImpl"
   ComponentClass="cm.gov.minfof.model.entityviewobject.RegionViewImpl"
   DefClass="cm.gov.minfof.model.entityviewobject.RegionViewDefImpl"
-  RowInterface="cm.gov.minfof.model.entityviewobject.common.RegionViewRow">
+  RowInterface="cm.gov.minfof.model.entityviewobject.common.RegionViewRow"
+  SdoGen="true"
+  SdoName="cm.gov.minfof.model.entityviewobject.common.RegionViewSDO"
+  SdoNameSpace="/cm/gov/minfof/model/entityviewobject/common/">
   <DesignTime>
     <Attr Name="_codeGenFlag2" Value="Access|Def|Coll|Prog|VarAccess"/>
     <Attr Name="_isCodegen" Value="true"/>

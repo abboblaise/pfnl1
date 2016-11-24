@@ -13,7 +13,10 @@
   CustomQuery="false"
   SelectAllAttributes="false"
   FetchMode="FETCH_AS_NEEDED"
-  PageIterMode="Full">
+  PageIterMode="Full"
+  SdoGen="true"
+  SdoName="cm.gov.minfof.model.entityviewobject.common.PostecontroleViewSDO"
+  SdoNameSpace="/cm/gov/minfof/model/entityviewobject/common/">
   <ViewAccessor
     Name="DepartementView1"
     ViewObjectName="cm.gov.minfof.model.entityviewobject.DepartementView"

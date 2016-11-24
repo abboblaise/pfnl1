@@ -14,7 +14,10 @@
   SelectAllAttributes="false"
   PageIterMode="Full"
   FetchMode="FETCH_ALL"
-  Passivate="All">
+  Passivate="All"
+  SdoGen="true"
+  SdoName="cm.gov.minfof.model.entityviewobject.common.DepartementViewSDO"
+  SdoNameSpace="/cm/gov/minfof/model/entityviewobject/common/">
   <EntityUsage
     Name="Departement"
     Entity="cm.gov.minfof.model.entity.Departement"/>

@@ -6,6 +6,7 @@ import oracle.binding.BindingContainer;
 import oracle.binding.OperationBinding;
 
 public class PaysBean {
+    
     public PaysBean() {
     }
 

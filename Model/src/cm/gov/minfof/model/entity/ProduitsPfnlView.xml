@@ -12,7 +12,10 @@
   BindingStyle="JDBC"
   CustomQuery="false"
   SelectAllAttributes="false"
-  PageIterMode="Full">
+  PageIterMode="Full"
+  SdoGen="true"
+  SdoName="cm.gov.minfof.model.entity.common.ProduitsPfnlViewSDO"
+  SdoNameSpace="/cm/gov/minfof/model/entity/common/">
   <ViewAccessor
     Name="FamillePfnlView1"
     ViewObjectName="cm.gov.minfof.model.entity.FamillePfnlView"

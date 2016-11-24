@@ -2,6 +2,7 @@ package cm.gov.minfof.view;
 
 import cm.gov.minfof.model.entity.AppModuleImpl;
 
+import cm.gov.minfof.model.entity.CrypteDecrypte;
 import cm.gov.minfof.model.entity.UserData;
 
 import java.io.IOException;
@@ -41,7 +42,11 @@ public class login {
         this.Passwoduser = Passwoduser;
     }
 
-    public String getPasswoduser() {
+    public String getPasswoduser() throws IOException {
+        /*String str = Passwoduser;
+        CrypteDecrypte cd = new CrypteDecrypte();
+        Passwoduser=cd.codedecode(str, 2);*/
+        
         return Passwoduser;
     }
     private RichPanelGridLayout pgl1;
@@ -141,7 +146,9 @@ public class login {
                 String config = "AppModuleLocal";
                 ApplicationModule ami = Configuration.createRootApplicationModule(amDef,config);
                 AppModuleImpl am = (AppModuleImpl)ami;
-                UserData util = am.findutil(Loginuser, Passwoduser);
+                CrypteDecrypte cd = new CrypteDecrypte();
+                String str = cd.codedecode(Passwoduser, 1);
+                UserData util = am.findutil(Loginuser, str);
                 if (util == null){
                     msg = new FacesMessage(FacesMessage.SEVERITY_ERROR, "Utilisateur inexistant ou mot de passe incorrect", "");    
                     

@@ -42,7 +42,7 @@
                         <f:facet name="first">
                             <af:panelAccordion discloseMany="true" id="pt_pa1">
                                 <af:showDetailItem id="pane1" text="#{viewcontrollerBundle.PARAMETRAGE}"
-                                                   rendered="#{RecupUser.ud.estadmin}">
+                                                   rendered="#{RecupUser.ud.estinfo or RecupUser.ud.estadmin}">
                                     <af:panelAccordion discloseMany="false" id="pt_pa2">
                                         <af:showDetailItem id="pane2"
                                                            text="#{viewcontrollerBundle.UNIT_U00E9S_ADMINISTRATIVES}">
@@ -124,6 +124,13 @@
                                         <af:spacer width="10" height="10" id="pt_s19"/>
                                         <af:button text="#{viewcontrollerBundle.FICHE_DE_TRANSIT}" id="pt_b21"
                                                    destination="page_lettrevoiture.jsf"/>
+                                    </af:panelGroupLayout>
+                                </af:showDetailItem>
+                                <af:showDetailItem text="#{viewcontrollerBundle.UTILISATEURS}" id="pt_sdi5"
+                                                   rendered="#{RecupUser.ud.estinfo}">
+                                    <af:panelGroupLayout id="pt_pgl10" valign="top" halign="center">
+                                        <af:button text="#{viewcontrollerBundle.UTILISATEURS}" id="pt_b23"
+                                                   destination="page_utilisateur.jsf"/>
                                     </af:panelGroupLayout>
                                 </af:showDetailItem>
                             </af:panelAccordion>

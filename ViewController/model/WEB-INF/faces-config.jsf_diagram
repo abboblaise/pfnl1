@@ -29,7 +29,7 @@
    </Page>
    <NavigationCase
       islink="true"
-      id="NavigationCase6"
+      id="NavigationCase12"
       from="Page11"
       to="Page6">
       <property

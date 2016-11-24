@@ -12,7 +12,10 @@
   BindingStyle="JDBC"
   CustomQuery="false"
   SelectAllAttributes="false"
-  PageIterMode="Full">
+  PageIterMode="Full"
+  SdoGen="true"
+  SdoName="cm.gov.minfof.model.entityviewobject.common.ExportpfnlViewSDO"
+  SdoNameSpace="/cm/gov/minfof/model/entityviewobject/common/">
   <ViewAccessor
     Name="PermisView1"
     ViewObjectName="cm.gov.minfof.model.entityviewobject.PermisView"

@@ -14,6 +14,94 @@
   SelectAllAttributes="false"
   FetchMode="FETCH_AS_NEEDED"
   PageIterMode="Full">
+  <ViewAccessor
+    Name="RegionView1"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.RegionView"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="DepartementView1"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.DepartementView"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="GroupeutilisateurView1"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.GroupeutilisateurView"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="NiveauValidationView1"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.NiveauValidationView"
+    RowLevelBinds="true"/>
+  <ListBinding
+    Name="LOV_Idregions"
+    ListVOName="RegionView1"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="Idregions"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Idregions"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Nomregion"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_Iddepartements"
+    ListVOName="DepartementView1"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="Iddepartements"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Idregions"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Nomdepartement"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_Idgroupe"
+    ListVOName="GroupeutilisateurView1"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="Idgroupe"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Idgroupeutilisateur"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Nomgroupe"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_Niveauintervention"
+    ListVOName="NiveauValidationView1"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="Niveauintervention"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="idniveau"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Libelleniveau"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
   <EntityUsage
     Name="Utilisateur"
     Entity="cm.gov.minfof.model.entity.Utilisateur"/>
@@ -55,25 +143,75 @@
     PrecisionRule="true"
     EntityAttrName="Niveauintervention"
     EntityUsage="Utilisateur"
-    AliasName="niveauintervention"/>
+    AliasName="niveauintervention"
+    LOVName="LOV_Niveauintervention">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Idregions"
     PrecisionRule="true"
     EntityAttrName="Idregions"
     EntityUsage="Utilisateur"
-    AliasName="idregions"/>
+    AliasName="idregions"
+    LOVName="LOV_Idregions">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Iddepartements"
     PrecisionRule="true"
     EntityAttrName="Iddepartements"
     EntityUsage="Utilisateur"
-    AliasName="iddepartements"/>
+    AliasName="iddepartements"
+    LOVName="LOV_Iddepartements">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Idgroupe"
     PrecisionRule="true"
     EntityAttrName="Idgroupe"
     EntityUsage="Utilisateur"
-    AliasName="idgroupe"/>
+    AliasName="idgroupe"
+    LOVName="LOV_Idgroupe">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="Saisiecollecte"
+    PrecisionRule="true"
+    EntityAttrName="Saisiecollecte"
+    EntityUsage="Utilisateur"
+    AliasName="saisiecollecte"/>
+  <ViewAttribute
+    Name="Saisieexport"
+    PrecisionRule="true"
+    EntityAttrName="Saisieexport"
+    EntityUsage="Utilisateur"
+    AliasName="saisieexport"/>
+  <ViewAttribute
+    Name="Saisietransit"
+    PrecisionRule="true"
+    EntityAttrName="Saisietransit"
+    EntityUsage="Utilisateur"
+    AliasName="saisietransit"/>
   <ViewLinkAccessor
     Name="UtilisateurView"
     ViewLink="cm.gov.minfof.model.entityviewobject.FkUtilisateur3Link"

@@ -8,7 +8,10 @@
   InheritPersonalization="merge"
   BindingStyle="JDBC"
   CustomQuery="true"
-  PageIterMode="Full">
+  PageIterMode="Full"
+  SdoGen="true"
+  SdoName="cm.gov.minfof.model.queryviewobject.common.CommunesViewSDO"
+  SdoNameSpace="/cm/gov/minfof/model/queryviewobject/common/">
   <DesignTime>
     <Attr Name="_isExpertMode" Value="true"/>
   </DesignTime>

@@ -39,6 +39,8 @@
     <page path="/page_collecte.jsf" usageId="cm_gov_minfof_view_page_collectePageDef"/>
     <page path="/page_lettrevoiture.jsf" usageId="cm_gov_minfof_view_page_lettrevoiturePageDef1"/>
     <page path="/login.jsf" usageId="cm_gov_minfof_view_loginPageDef"/>
+    <page path="/page_utilisateur.jsf" usageId="cm_gov_minfof_view_page_utilisateurPageDef"/>
+    <page path="/page_user.jsf" usageId="cm_gov_minfof_view_pae_userPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="cm_gov_minfof_view_page_regionPageDef" path="cm.gov.minfof.view.pageDefs.page_regionPageDef"/>
@@ -82,6 +84,8 @@
           path="cm.gov.minfof.view.pageDefs.page_lettrevoiturePageDef1"/>
     <page id="cm_gov_minfof_view_page_loginPageDef" path="cm.gov.minfof.view.pageDefs.page_loginPageDef"/>
     <page id="cm_gov_minfof_view_loginPageDef" path="cm.gov.minfof.view.pageDefs.loginPageDef"/>
+    <page id="cm_gov_minfof_view_page_utilisateurPageDef" path="cm.gov.minfof.view.pageDefs.page_utilisateurPageDef"/>
+    <page id="cm_gov_minfof_view_pae_userPageDef" path="cm.gov.minfof.view.pageDefs.pae_userPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="cm.gov.minfof.model.entity"
