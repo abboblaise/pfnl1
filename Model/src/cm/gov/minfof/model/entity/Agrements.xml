@@ -159,6 +159,17 @@
     </AttrArray>
   </Key>
   <Key
+    Name="AltKey"
+    AltKey="true">
+    <DesignTime>
+      <Attr Name="_isUnique" Value="true"/>
+      <Attr Name="_DBObjectName" Value="agrements"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="cm.gov.minfof.model.entity.Agrements.Numagreement"/>
+    </AttrArray>
+  </Key>
+  <Key
     Name="Primary1"
     PrimaryKey="true">
     <DesignTime>
@@ -177,6 +188,34 @@
     </DesignTime>
     <AttrArray Name="Attributes"/>
   </Key>
+  <validation:UniqueKeyValidationBean
+    Name="AgrementsRule0UniqNum"
+    ResId="LE_NUM_U00E9RO_DE_L__AGR_U00E9MENT_DOIT__U00EATRE_UNIQUE"
+    KeyName="AltKey">
+    <validation:OnAttributes>
+      <validation:Item
+        Value="Numagreement"/>
+    </validation:OnAttributes>
+  </validation:UniqueKeyValidationBean>
+  <validation:CompareValidationBean
+    Name="AgrementsRule1Date"
+    ResId="LA_DATE_DE_D_U00E9BUT_DOIT__U00EATRE_INF_U00E9RIEURE__U00E0_LA_DATE_DE_FIN"
+    OnAttribute="Datedebut"
+    OperandType="ATTR"
+    Inverse="false"
+    CompareType="LESSTHANEQUALTO"
+    CompareValue="Datefin">
+    <validation:OnAttributes>
+      <validation:Item
+        Value="Datedebut"/>
+      <validation:Item
+        Value="Datefin"/>
+    </validation:OnAttributes>
+    <validation:OnCondition
+      Name="OnConditionScript"
+      trustMode="untrusted"
+      CodeSourceName="AgrementsRow"/>
+  </validation:CompareValidationBean>
   <ResourceBundle>
     <PropertiesBundle
       PropertiesFile="cm.gov.minfof.model.ModelBundle"/>

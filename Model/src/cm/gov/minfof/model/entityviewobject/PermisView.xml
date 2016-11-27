@@ -30,9 +30,6 @@
     Name="Debut"
     Kind="viewcriteria"
     Type="java.sql.Timestamp"/>
-  SdoGen="true"
-  SdoName="cm.gov.minfof.model.entityviewobject.common.PermisViewSDO"
-  SdoNameSpace="/cm/gov/minfof/model/entityviewobject/common/">
   <ViewAccessor
     Name="PermissionnairespnflView1"
     ViewObjectName="cm.gov.minfof.model.entityviewobject.PermissionnairespnflView"

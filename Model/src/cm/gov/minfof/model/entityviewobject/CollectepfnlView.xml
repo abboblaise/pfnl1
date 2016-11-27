@@ -32,9 +32,6 @@
     Name="dateDebut"
     Kind="viewcriteria"
     Type="java.sql.Timestamp"/>
-  SdoGen="true"
-  SdoName="cm.gov.minfof.model.entityviewobject.common.CollectepfnlViewSDO"
-  SdoNameSpace="/cm/gov/minfof/model/entityviewobject/common/">
   <ViewAccessor
     Name="DepartementView1"
     ViewObjectName="cm.gov.minfof.model.entityviewobject.DepartementView"

@@ -30,7 +30,7 @@
        PfnlPermissionnairespnfl.Adressep,
        PfnlPermissionnairespnfl.Sexe,
        PfnlPermissionnairespnfl.Qualiteexploitant
-FROM pfnl.PermissionnairesPNFL PfnlPermissionnairespnfl]]></SQLQuery>
+FROM pfnl.permissionnairespnfl PfnlPermissionnairespnfl]]></SQLQuery>
   <ViewAttribute
     Name="Nomouraisonsociale"
     IsUpdateable="false"

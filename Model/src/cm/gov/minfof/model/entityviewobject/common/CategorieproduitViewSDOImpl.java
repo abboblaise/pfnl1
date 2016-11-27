@@ -7,7 +7,7 @@ public class CategorieproduitViewSDOImpl extends SDODataObject implements Catego
 
    public static final int START_PROPERTY_INDEX = 0;
 
-   public static final int END_PROPERTY_INDEX = START_PROPERTY_INDEX + 3;
+   public static final int END_PROPERTY_INDEX = START_PROPERTY_INDEX + 5;
 
    public CategorieproduitViewSDOImpl() {}
 
@@ -41,6 +41,22 @@ public class CategorieproduitViewSDOImpl extends SDODataObject implements Catego
 
    public void setObservation(java.lang.String value) {
       set(START_PROPERTY_INDEX + 3 , value);
+   }
+
+   public java.lang.Boolean isQuotas() {
+      return getBoolean(START_PROPERTY_INDEX + 4);
+   }
+
+   public void setQuotas(java.lang.Boolean value) {
+      set(START_PROPERTY_INDEX + 4 , value);
+   }
+
+   public java.lang.Boolean isQuotasTransient() {
+      return getBoolean(START_PROPERTY_INDEX + 5);
+   }
+
+   public void setQuotasTransient(java.lang.Boolean value) {
+      set(START_PROPERTY_INDEX + 5 , value);
    }
 
 

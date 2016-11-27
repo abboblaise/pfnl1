@@ -22,7 +22,7 @@
         ResId="cm.gov.minfof.model.entityviewobject.getLastIdPays_LABEL"/>
     </SchemaBasedProperties>
   </Properties>
-  <SQLQuery><![CDATA[SELECT coalesce(MAX(Pays.IDPays),0) as maxId FROM Pays]]></SQLQuery>
+  <SQLQuery><![CDATA[SELECT coalesce(MAX(pays.IDPays),0) as maxId FROM pays]]></SQLQuery>
   <ViewAttribute
     Name="Maxid"
     IsPersistent="false"

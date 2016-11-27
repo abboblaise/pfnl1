@@ -22,7 +22,7 @@
         ResId="cm.gov.minfof.model.entityviewobject.getLastIdPermissionnairePfnl_LABEL"/>
     </SchemaBasedProperties>
   </Properties>
-  <SQLQuery><![CDATA[select coalesce(max(IDPermissionnairesPNFL), 0) as IdMax from PermissionnairesPNFL]]></SQLQuery>
+  <SQLQuery><![CDATA[select coalesce(max(IDPermissionnairesPNFL), 0) as IdMax from permissionnairespnfl]]></SQLQuery>
   <ViewAttribute
     Name="Idmax"
     IsPersistent="false"

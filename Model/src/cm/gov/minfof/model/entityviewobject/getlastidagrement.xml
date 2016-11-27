@@ -20,9 +20,9 @@
     </SchemaBasedProperties>
   </Properties>
   <SQLQuery><![CDATA[SELECT 
-    coalesce(max(Agrements.IDAgrements),0) as maxid 
+    coalesce(max(agrements.IDAgrements),0) as maxid 
 FROM 
-    Agrements]]></SQLQuery>
+    agrements]]></SQLQuery>
   <ViewAttribute
     Name="Maxid"
     IsUpdateable="false"

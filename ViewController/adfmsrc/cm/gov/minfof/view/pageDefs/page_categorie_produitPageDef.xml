@@ -36,10 +36,30 @@
           <Item Value="Idcategorieproduit"/>
           <Item Value="Codecategorie"/>
           <Item Value="Libellecategorie"/>
+          <Item Value="Quotas"/>
           <Item Value="Observation"/>
+          <Item Value="QuotasTransient"/>
         </AttrNames>
       </nodeDefinition>
     </tree>
     <action id="Rollback" RequiresUpdateModel="false" Action="rollbackTransaction" DataControl="AppModuleDataControl"/>
+    <button IterBinding="CategorieproduitView1Iterator" id="Quotas" DTSupportsMRU="false" StaticList="true">
+      <AttrNames>
+        <Item Value="Quotas"/>
+      </AttrNames>
+      <ValueList>
+        <Item Value="true"/>
+        <Item Value="false"/>
+      </ValueList>
+    </button>
+    <button IterBinding="CategorieproduitView1Iterator" id="QuotasTransient" DTSupportsMRU="false" StaticList="true">
+      <AttrNames>
+        <Item Value="QuotasTransient"/>
+      </AttrNames>
+      <ValueList>
+        <Item Value="true"/>
+        <Item Value="false"/>
+      </ValueList>
+    </button>
   </bindings>
 </pageDefinition>

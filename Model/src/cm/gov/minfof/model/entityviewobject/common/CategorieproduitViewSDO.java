@@ -18,6 +18,14 @@ public interface CategorieproduitViewSDO extends java.io.Serializable {
 
    public void setObservation(java.lang.String value);
 
+   public java.lang.Boolean isQuotas();
+
+   public void setQuotas(java.lang.Boolean value);
+
+   public java.lang.Boolean isQuotasTransient();
+
+   public void setQuotasTransient(java.lang.Boolean value);
+
 
 }
 

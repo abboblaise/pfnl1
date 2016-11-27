@@ -35,6 +35,9 @@
                                                rows="#{bindings.Observation.hints.displayHeight}">
                       <!--          <facet name="footer"/>-->
                             </af:richTextEditor>
+                            <af:selectBooleanCheckbox value="#{bindings.Quotas.inputValue}"
+                                                      label="#{bindings.Quotas.label}"
+                                                      shortDesc="#{bindings.Quotas.hints.tooltip}" id="sbc1"/>
                             <f:facet name="footer">
                                 <af:panelGroupLayout id="pgl1">
                                     <af:button actionListener="#{bindings.CreateInsert.execute}"
@@ -48,8 +51,7 @@
                                                disabled="#{!bindings.Delete.enabled}" id="b3"/>
                                     <af:spacer width="10" height="10" id="s3"/>
                                     <af:button actionListener="#{bindings.Rollback.execute}"
-                                               text="#{viewcontrollerBundle.ANNULER}"
-                                               disabled="#{!bindings.Rollback.enabled}" immediate="true" id="b4">
+                                               text="#{viewcontrollerBundle.ANNULER}" immediate="true" id="b4">
                                         <af:resetActionListener/>
                                     </af:button>
                                 </af:panelGroupLayout>
@@ -71,7 +73,7 @@
                                       filterModel="#{bindings.CategorieproduitView1Query.queryDescriptor}"
                                       filterVisible="true"
                                       queryListener="#{bindings.CategorieproduitView1Query.processQuery}" varStatus="vs"
-                                      id="t1" partialTriggers=":::b2 :::b3">
+                                      id="t1" partialTriggers=":::b2 :::b3" columnSelection="single" editingMode="editAll" columnResizing="enabled">
                                 <af:column sortProperty="#{bindings.CategorieproduitView1.hints.Idcategorieproduit.name}"
                                            filterable="true" sortable="true"
                                            headerText="#{bindings.CategorieproduitView1.hints.Idcategorieproduit.label}"
@@ -85,7 +87,7 @@
                                 </af:column>
                                 <af:column sortProperty="#{bindings.CategorieproduitView1.hints.Codecategorie.name}"
                                            filterable="true" sortable="true"
-                                           headerText="#{bindings.Codecategorie.label}"
+                                           headerText="#{bindings.CategorieproduitView1.hints.Codecategorie.label}"
                                            id="c2">
                                     <af:outputText value="#{row.Codecategorie}"
                                                    shortDesc="#{bindings.CategorieproduitView1.hints.Codecategorie.tooltip}"
@@ -93,15 +95,23 @@
                                 </af:column>
                                 <af:column sortProperty="#{bindings.CategorieproduitView1.hints.Libellecategorie.name}"
                                            filterable="true" sortable="true"
-                                           headerText="#{bindings.Libellecategorie.label}"
+                                           headerText="#{bindings.CategorieproduitView1.hints.Libellecategorie.label}"
                                            id="c3">
                                     <af:outputText value="#{row.Libellecategorie}"
                                                    shortDesc="#{bindings.CategorieproduitView1.hints.Libellecategorie.tooltip}"
                                                    id="ot3"/>
                                 </af:column>
+                                <af:column headerText="#{bindings.CategorieproduitView1.hints.Quotas.label}" id="c6"
+                                           sortProperty="#{bindings.CategorieproduitView1.hints.Quotas.name}"
+                                           filterable="true">
+                                    <af:selectBooleanCheckbox value="#{row.bindings.Quotas.inputValue}"
+                                                              label="#{row.bindings.Quotas.label}"
+                                                              shortDesc="#{bindings.CategorieproduitView1.hints.Quotas.tooltip}"
+                                                              id="sbc3"/>
+                                </af:column>
                                 <af:column sortProperty="#{bindings.CategorieproduitView1.hints.Observation.name}"
                                            filterable="true" sortable="true"
-                                           headerText="#{bindings.Observation.label}"
+                                           headerText="#{bindings.CategorieproduitView1.hints.Observation.label}"
                                            id="c4">
                                     <af:outputText value="#{row.Observation}"
                                                    shortDesc="#{bindings.CategorieproduitView1.hints.Observation.tooltip}"

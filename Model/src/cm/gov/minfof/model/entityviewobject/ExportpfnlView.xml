@@ -29,9 +29,6 @@
     Name="dateDebut"
     Kind="viewcriteria"
     Type="java.sql.Timestamp"/>
-  SdoGen="true"
-  SdoName="cm.gov.minfof.model.entityviewobject.common.ExportpfnlViewSDO"
-  SdoNameSpace="/cm/gov/minfof/model/entityviewobject/common/">
   <ViewAccessor
     Name="PermisView1"
     ViewObjectName="cm.gov.minfof.model.entityviewobject.PermisView"
