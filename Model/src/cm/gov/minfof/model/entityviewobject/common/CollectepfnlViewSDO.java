@@ -6,9 +6,9 @@ public interface CollectepfnlViewSDO extends java.io.Serializable {
 
    public void setIdcollectepfnl(java.math.BigDecimal value);
 
-   public java.sql.Date getDatecollecte();
+   public java.sql.Timestamp getDatecollecte();
 
-   public void setDatecollecte(java.sql.Date value);
+   public void setDatecollecte(java.sql.Timestamp value);
 
    public java.lang.String getIdentificateur();
 

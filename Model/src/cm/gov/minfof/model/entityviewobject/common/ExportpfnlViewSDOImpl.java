@@ -7,7 +7,7 @@ public class ExportpfnlViewSDOImpl extends SDODataObject implements ExportpfnlVi
 
    public static final int START_PROPERTY_INDEX = 0;
 
-   public static final int END_PROPERTY_INDEX = START_PROPERTY_INDEX + 9;
+   public static final int END_PROPERTY_INDEX = START_PROPERTY_INDEX + 10;
 
    public ExportpfnlViewSDOImpl() {}
 
@@ -51,44 +51,52 @@ public class ExportpfnlViewSDOImpl extends SDODataObject implements ExportpfnlVi
       set(START_PROPERTY_INDEX + 4 , value);
    }
 
-   public java.util.List getExportpfnlView() {
-      return getList(START_PROPERTY_INDEX + 5);
+   public java.sql.Timestamp getDateexport() {
+      return (java.sql.Timestamp)get(START_PROPERTY_INDEX + 5);
    }
 
-   public void setExportpfnlView(java.util.List value) {
+   public void setDateexport(java.sql.Timestamp value) {
       set(START_PROPERTY_INDEX + 5 , value);
    }
 
-   public java.util.List getExportpfnlView1() {
+   public java.util.List getExportpfnlView() {
       return getList(START_PROPERTY_INDEX + 6);
    }
 
-   public void setExportpfnlView1(java.util.List value) {
+   public void setExportpfnlView(java.util.List value) {
       set(START_PROPERTY_INDEX + 6 , value);
    }
 
-   public java.util.List getDetailsexportpfnlView() {
+   public java.util.List getExportpfnlView1() {
       return getList(START_PROPERTY_INDEX + 7);
    }
 
-   public void setDetailsexportpfnlView(java.util.List value) {
+   public void setExportpfnlView1(java.util.List value) {
       set(START_PROPERTY_INDEX + 7 , value);
    }
 
-   public cm.gov.minfof.model.entityviewobject.common.PermissionnairespnflViewSDO getPermissionnairespnflView() {
-      return (cm.gov.minfof.model.entityviewobject.common.PermissionnairespnflViewSDO)get(START_PROPERTY_INDEX + 8);
+   public java.util.List getDetailsexportpfnlView() {
+      return getList(START_PROPERTY_INDEX + 8);
    }
 
-   public void setPermissionnairespnflView(cm.gov.minfof.model.entityviewobject.common.PermissionnairespnflViewSDO value) {
+   public void setDetailsexportpfnlView(java.util.List value) {
       set(START_PROPERTY_INDEX + 8 , value);
    }
 
+   public cm.gov.minfof.model.entityviewobject.common.PermissionnairespnflViewSDO getPermissionnairespnflView() {
+      return (cm.gov.minfof.model.entityviewobject.common.PermissionnairespnflViewSDO)get(START_PROPERTY_INDEX + 9);
+   }
+
+   public void setPermissionnairespnflView(cm.gov.minfof.model.entityviewobject.common.PermissionnairespnflViewSDO value) {
+      set(START_PROPERTY_INDEX + 9 , value);
+   }
+
    public cm.gov.minfof.model.entityviewobject.common.PermisViewSDO getPermisView() {
-      return (cm.gov.minfof.model.entityviewobject.common.PermisViewSDO)get(START_PROPERTY_INDEX + 9);
+      return (cm.gov.minfof.model.entityviewobject.common.PermisViewSDO)get(START_PROPERTY_INDEX + 10);
    }
 
    public void setPermisView(cm.gov.minfof.model.entityviewobject.common.PermisViewSDO value) {
-      set(START_PROPERTY_INDEX + 9 , value);
+      set(START_PROPERTY_INDEX + 10 , value);
    }
 
 

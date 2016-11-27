@@ -1,6 +1,8 @@
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sdoJava="commonj.sdo/java" targetNamespace="/cm/gov/minfof/model/entityviewobject/common/"
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ns0="http://xmlns.oracle.com/adf/svc/types/"
+     xmlns:sdoJava="commonj.sdo/java" targetNamespace="/cm/gov/minfof/model/entityviewobject/common/"
      xmlns="/cm/gov/minfof/model/entityviewobject/common/" elementFormDefault="qualified"
      sdoJava:package="cm.gov.minfof.model.entityviewobject.common">
+    <xsd:import schemaLocation="classpath:/META-INF/wsdl/BC4JService.xsd" namespace="http://xmlns.oracle.com/adf/svc/types/"/>
     <xsd:import schemaLocation="classpath:/xml/sdoJava.xsd" namespace="commonj.sdo/java"/>
     <xsd:include schemaLocation="DetailsexportpfnlViewSDO.xsd"/>
     <xsd:include schemaLocation="PermissionnairespnflViewSDO.xsd"/>
@@ -19,6 +21,7 @@
             <xsd:element name="Idpermissionnaire" type="xsd:decimal" minOccurs="0" nillable="true"/>
             <xsd:element name="Numeroexport" type="xsd:string" minOccurs="0" nillable="true"/>
             <xsd:element name="Numeroco" type="xsd:string" minOccurs="0" nillable="true"/>
+            <xsd:element name="Dateexport" type="ns0:dateTime-Timestamp" minOccurs="0"/>
             <xsd:element name="ExportpfnlView" type="ExportpfnlViewSDO" minOccurs="0" maxOccurs="unbounded"/>
             <xsd:element name="ExportpfnlView1" type="ExportpfnlViewSDO" minOccurs="0" maxOccurs="unbounded"/>
             <xsd:element name="DetailsexportpfnlView" type="DetailsexportpfnlViewSDO" minOccurs="0"

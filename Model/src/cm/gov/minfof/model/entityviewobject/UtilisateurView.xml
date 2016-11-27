@@ -199,19 +199,40 @@
     PrecisionRule="true"
     EntityAttrName="Saisiecollecte"
     EntityUsage="Utilisateur"
-    AliasName="saisiecollecte"/>
+    AliasName="saisiecollecte">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="check_box"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Saisieexport"
     PrecisionRule="true"
     EntityAttrName="Saisieexport"
     EntityUsage="Utilisateur"
-    AliasName="saisieexport"/>
+    AliasName="saisieexport">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="check_box"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Saisietransit"
     PrecisionRule="true"
     EntityAttrName="Saisietransit"
     EntityUsage="Utilisateur"
-    AliasName="saisietransit"/>
+    AliasName="saisietransit">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="check_box"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewLinkAccessor
     Name="UtilisateurView"
     ViewLink="cm.gov.minfof.model.entityviewobject.FkUtilisateur3Link"

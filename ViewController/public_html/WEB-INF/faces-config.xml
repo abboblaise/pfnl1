@@ -3,8 +3,9 @@
   <application>
     <default-render-kit-id>oracle.adf.rich</default-render-kit-id>
   </application>
- <!-- <lifecycle>    <phase-listener>cm.gov.minfof.view.VerifUser</phase-listener>
-  </lifecycle> -->
+  <lifecycle>
+    <phase-listener>cm.gov.minfof.view.VerifUser</phase-listener>
+  </lifecycle>
   <navigation-rule>
     <from-view-id>*</from-view-id>
     <navigation-case>

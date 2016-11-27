@@ -13,7 +13,10 @@
   CustomQuery="false"
   SelectAllAttributes="false"
   PageIterMode="Full"
-  ComponentClass="cm.gov.minfof.model.entityviewobject.UnitemesureViewImpl">
+  ComponentClass="cm.gov.minfof.model.entityviewobject.UnitemesureViewImpl"
+  SdoGen="true"
+  SdoName="cm.gov.minfof.model.entityviewobject.common.UnitemesureViewSDO"
+  SdoNameSpace="/cm/gov/minfof/model/entityviewobject/common/">
   <DesignTime>
     <Attr Name="_codeGenFlag2" Value="Coll|VarAccess"/>
   </DesignTime>

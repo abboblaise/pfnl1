@@ -19,11 +19,11 @@ public class CollectepfnlViewSDOImpl extends SDODataObject implements Collectepf
       set(START_PROPERTY_INDEX + 0 , value);
    }
 
-   public java.sql.Date getDatecollecte() {
-      return (java.sql.Date)get(START_PROPERTY_INDEX + 1);
+   public java.sql.Timestamp getDatecollecte() {
+      return (java.sql.Timestamp)get(START_PROPERTY_INDEX + 1);
    }
 
-   public void setDatecollecte(java.sql.Date value) {
+   public void setDatecollecte(java.sql.Timestamp value) {
       set(START_PROPERTY_INDEX + 1 , value);
    }
 

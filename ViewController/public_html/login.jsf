@@ -7,9 +7,13 @@
                      inlineStyle='background-image:url("arriere-login.jpg"); background-repeat:repeat-x; background-position:inherit; background-size:200pt auto; background-origin:padding-box;'>
             <af:form id="f1" defaultCommand="b1">
                 <af:panelGridLayout id="pgl1">
-                    <af:gridRow height="100%" id="gr1">
+                <af:gridRow id="gr4">
+                    <af:gridCell id="gc6" halign="center" valign="middle">
+                        <af:image source="/reports/logo_pfnl.png" id="i1"/>
+                    </af:gridCell>
+                </af:gridRow>
+                <af:gridRow id="gr1">
                         <af:gridCell width="100%" halign="center" valign="middle" id="gc1">
-                            <!-- Content -->
                         <af:panelBox text="#{viewcontrollerBundle.CONNEXION}" id="pb1"
                                      inlineStyle="width:421px; border-width:5px; background-color:Teal;" titleHalign="center"
                                      showHeader="always">

@@ -172,53 +172,26 @@
     </Properties>
   </Attribute>
   <Attribute
+    Name="Saisiecollecte"
+    ColumnName="saisiecollecte"
+    SQLType="BIT"
+    Type="java.lang.Boolean"
+    ColumnType="BIT"
+    TableName="utilisateur"/>
+  <Attribute
     Name="Saisieexport"
     ColumnName="saisieexport"
     SQLType="BIT"
     Type="java.lang.Boolean"
     ColumnType="BIT"
-    TableName="utilisateur">
-    <Properties>
-      <SchemaBasedProperties>
-        <CONTROLTYPE
-          Value="check_box"/>
-        <LABEL
-          ResId="SAISIT_LES_EXPORTS"/>
-      </SchemaBasedProperties>
-    </Properties>
-  </Attribute>
+    TableName="utilisateur"/>
   <Attribute
     Name="Saisietransit"
     ColumnName="saisietransit"
     SQLType="BIT"
     Type="java.lang.Boolean"
     ColumnType="BIT"
-    TableName="utilisateur">
-    <Properties>
-      <SchemaBasedProperties>
-        <CONTROLTYPE
-          Value="check_box"/>
-        <LABEL
-          ResId="SAISIT_LES_TRANSITS"/>
-      </SchemaBasedProperties>
-    </Properties>
-  </Attribute>
-  <Attribute
-    Name="Saisiecollecte"
-    ColumnName="saisiecollecte"
-    SQLType="BIT"
-    Type="java.lang.Boolean"
-    ColumnType="BIT"
-    TableName="utilisateur">
-    <Properties>
-      <SchemaBasedProperties>
-        <CONTROLTYPE
-          Value="check_box"/>
-        <LABEL
-          ResId="SAISIT_LES_COLLECTES"/>
-      </SchemaBasedProperties>
-    </Properties>
-  </Attribute>
+    TableName="utilisateur"/>
   <AccessorAttribute
     Name="Utilisateur"
     Association="cm.gov.minfof.model.entity.FkUtilisateur3Assoc"

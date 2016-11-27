@@ -32,9 +32,9 @@ public class UtilisateurImpl extends EntityImpl {
         Idregions,
         Iddepartements,
         Idgroupe,
+        Saisiecollecte,
         Saisieexport,
         Saisietransit,
-        Saisiecollecte,
         Utilisateur,
         IdgroupeUtilisateur,
         Utilisateur1,
@@ -77,9 +77,9 @@ public class UtilisateurImpl extends EntityImpl {
     public static final int IDREGIONS = AttributesEnum.Idregions.index();
     public static final int IDDEPARTEMENTS = AttributesEnum.Iddepartements.index();
     public static final int IDGROUPE = AttributesEnum.Idgroupe.index();
+    public static final int SAISIECOLLECTE = AttributesEnum.Saisiecollecte.index();
     public static final int SAISIEEXPORT = AttributesEnum.Saisieexport.index();
     public static final int SAISIETRANSIT = AttributesEnum.Saisietransit.index();
-    public static final int SAISIECOLLECTE = AttributesEnum.Saisiecollecte.index();
     public static final int UTILISATEUR = AttributesEnum.Utilisateur.index();
     public static final int IDGROUPEUTILISATEUR = AttributesEnum.IdgroupeUtilisateur.index();
     public static final int UTILISATEUR1 = AttributesEnum.Utilisateur1.index();
@@ -262,6 +262,22 @@ public class UtilisateurImpl extends EntityImpl {
 
 
     /**
+     * Gets the attribute value for Saisiecollecte, using the alias name Saisiecollecte.
+     * @return the value of Saisiecollecte
+     */
+    public Boolean getSaisiecollecte() {
+        return (Boolean) getAttributeInternal(SAISIECOLLECTE);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for Saisiecollecte.
+     * @param value value to set the Saisiecollecte
+     */
+    public void setSaisiecollecte(Boolean value) {
+        setAttributeInternal(SAISIECOLLECTE, value);
+    }
+
+    /**
      * Gets the attribute value for Saisieexport, using the alias name Saisieexport.
      * @return the value of Saisieexport
      */
@@ -290,24 +306,7 @@ public class UtilisateurImpl extends EntityImpl {
      * @param value value to set the Saisietransit
      */
     public void setSaisietransit(Boolean value) {
-        System.out.println(value);
         setAttributeInternal(SAISIETRANSIT, value);
-    }
-
-    /**
-     * Gets the attribute value for Saisiecollecte, using the alias name Saisiecollecte.
-     * @return the value of Saisiecollecte
-     */
-    public Boolean getSaisiecollecte() {
-        return (Boolean) getAttributeInternal(SAISIECOLLECTE);
-    }
-
-    /**
-     * Sets <code>value</code> as the attribute value for Saisiecollecte.
-     * @param value value to set the Saisiecollecte
-     */
-    public void setSaisiecollecte(Boolean value) {
-        setAttributeInternal(SAISIECOLLECTE, value);
     }
 
     /**

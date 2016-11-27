@@ -15,7 +15,10 @@
   FetchMode="FETCH_AS_NEEDED"
   PageIterMode="Full"
   ComponentClass="cm.gov.minfof.model.entityviewobject.PermisViewImpl"
-  ComponentInterface="cm.gov.minfof.model.entityviewobject.common.PermisView">
+  ComponentInterface="cm.gov.minfof.model.entityviewobject.common.PermisView"
+  SdoGen="true"
+  SdoName="cm.gov.minfof.model.entityviewobject.common.PermisViewSDO"
+  SdoNameSpace="/cm/gov/minfof/model/entityviewobject/common/">
   <DesignTime>
     <Attr Name="_codeGenFlag2" Value="Coll|VarAccess"/>
   </DesignTime>

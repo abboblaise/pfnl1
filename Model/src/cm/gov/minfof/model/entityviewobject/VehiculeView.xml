@@ -13,7 +13,10 @@
   CustomQuery="false"
   SelectAllAttributes="false"
   PageIterMode="Full"
-  ComponentClass="cm.gov.minfof.model.entityviewobject.VehiculeViewImpl">
+  ComponentClass="cm.gov.minfof.model.entityviewobject.VehiculeViewImpl"
+  SdoGen="true"
+  SdoName="cm.gov.minfof.model.entityviewobject.common.VehiculeViewSDO"
+  SdoNameSpace="/cm/gov/minfof/model/entityviewobject/common/">
   <DesignTime>
     <Attr Name="_codeGenFlag2" Value="Coll|VarAccess"/>
   </DesignTime>

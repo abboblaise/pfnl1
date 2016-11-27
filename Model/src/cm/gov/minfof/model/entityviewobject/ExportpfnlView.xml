@@ -14,7 +14,10 @@
   SelectAllAttributes="false"
   PageIterMode="Full"
   ComponentClass="cm.gov.minfof.model.entityviewobject.ExportpfnlViewImpl"
-  ComponentInterface="cm.gov.minfof.model.entityviewobject.common.ExportpfnlView">
+  ComponentInterface="cm.gov.minfof.model.entityviewobject.common.ExportpfnlView"
+  SdoGen="true"
+  SdoName="cm.gov.minfof.model.entityviewobject.common.ExportpfnlViewSDO"
+  SdoNameSpace="/cm/gov/minfof/model/entityviewobject/common/">
   <DesignTime>
     <Attr Name="_codeGenFlag2" Value="Coll|VarAccess"/>
   </DesignTime>

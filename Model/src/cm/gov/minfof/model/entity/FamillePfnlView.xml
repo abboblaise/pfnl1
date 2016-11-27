@@ -13,7 +13,10 @@
   CustomQuery="false"
   SelectAllAttributes="false"
   PageIterMode="Full"
-  ComponentClass="cm.gov.minfof.model.entity.FamillePfnlViewImpl">
+  ComponentClass="cm.gov.minfof.model.entity.FamillePfnlViewImpl"
+  SdoGen="true"
+  SdoName="cm.gov.minfof.model.entity.common.FamillePfnlViewSDO"
+  SdoNameSpace="/cm/gov/minfof/model/entity/common/">
   <DesignTime>
     <Attr Name="_codeGenFlag2" Value="Coll|VarAccess"/>
   </DesignTime>

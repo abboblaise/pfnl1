@@ -14,7 +14,10 @@
   SelectAllAttributes="false"
   FetchMode="FETCH_AS_NEEDED"
   PageIterMode="Full"
-  ComponentClass="cm.gov.minfof.model.entityviewobject.PostecontroleViewImpl">
+  ComponentClass="cm.gov.minfof.model.entityviewobject.PostecontroleViewImpl"
+  SdoGen="true"
+  SdoName="cm.gov.minfof.model.entityviewobject.common.PostecontroleViewSDO"
+  SdoNameSpace="/cm/gov/minfof/model/entityviewobject/common/">
   <DesignTime>
     <Attr Name="_codeGenFlag2" Value="Coll|VarAccess"/>
   </DesignTime>

@@ -43,6 +43,8 @@
                             <af:panelAccordion discloseMany="true" id="pt_pa1">
                                 <af:showDetailItem id="pane1" text="#{viewcontrollerBundle.PARAMETRAGE}"
                                                    rendered="#{RecupUser.ud.estinfo or RecupUser.ud.estadmin}">
+                                    <!--<af:showDetailItem id="pane1" text="#{viewcontrollerBundle.PARAMETRAGE}"
+                                                   rendered="true">-->
                                     <af:panelAccordion discloseMany="false" id="pt_pa2">
                                         <af:showDetailItem id="pane2"
                                                            text="#{viewcontrollerBundle.UNIT_U00E9S_ADMINISTRATIVES}">
@@ -117,13 +119,16 @@
                                 <af:showDetailItem text="#{viewcontrollerBundle.TRAITEMENTS}" id="pt_sdi1">
                                     <af:panelGroupLayout id="pt_pgl8" valign="middle" halign="center" layout="vertical">
                                         <af:button text="#{viewcontrollerBundle.FICHE_DE_COLLECTE}" id="pt_b19"
-                                                   destination="page_collecte.jsf"/>
+                                                   destination="page_collecte.jsf"
+                                                   rendered="#{RecupUser.ud.saisiecollecte}"/>
                                         <af:spacer width="10" height="10" id="pt_s18"/>
                                         <af:button text="#{viewcontrollerBundle.FICHE_D_EXPORTATION}" id="pt_b20"
-                                                   destination="page_export.jsf"/>
+                                                   destination="page_export.jsf"
+                                                   rendered="#{RecupUser.ud.saisieexport}"/>
                                         <af:spacer width="10" height="10" id="pt_s19"/>
                                         <af:button text="#{viewcontrollerBundle.FICHE_DE_TRANSIT}" id="pt_b21"
-                                                   destination="page_lettrevoiture.jsf"/>
+                                                   destination="page_lettrevoiture.jsf"
+                                                   rendered="#{RecupUser.ud.saisietransit}"/>
                                         <af:spacer width="10" height="10" id="pt_s21"/>
                                         <af:button text="#{viewcontrollerBundle.COMPILATION_COLLECTES_ET_LETTRES}" id="pt_b23"
                                                    destination="page_compilcollecte.jsf"/>
@@ -131,8 +136,10 @@
                                 </af:showDetailItem>
                                 <af:showDetailItem text="#{viewcontrollerBundle.UTILISATEURS}" id="pt_sdi5"
                                                    rendered="#{RecupUser.ud.estinfo}">
+                                   <!-- <af:showDetailItem text="#{viewcontrollerBundle.UTILISATEURS}" id="pt_sdi5"
+                                                   rendered="true">-->
                                     <af:panelGroupLayout id="pt_pgl10" valign="top" halign="center">
-                                        <af:button text="#{viewcontrollerBundle.UTILISATEURS}" id="pt_b23"
+                                        <af:button text="#{viewcontrollerBundle.UTILISATEURS}" id="pt_b24"
                                                    destination="page_utilisateur.jsf"/>
                                     </af:panelGroupLayout>
                                 </af:showDetailItem>
@@ -148,10 +155,10 @@
                                                          halign="end">
                                                 <af:panelGroupLayout id="pt_pgl9" halign="right"
                                                                      inlineStyle='background-image:url("arriere.jpg");'>
-                                                  <!--  <af:outputText value="#{RecupUser.ud.nonuser}" id="pt_ot1"
-                                                                   inlineStyle="color:White;"/>  -->
-                                                        <af:outputText value="Aucun" id="pt_ot1"
+                                                    <af:outputText value="#{RecupUser.ud.nonuser}" id="pt_ot1"
                                                                    inlineStyle="color:White;"/>
+                                                       <!--<af:outputText value="Test" id="pt_ot1"
+                                                                   inlineStyle="color:White;"/>-->
                                                     <af:spacer width="10" height="10" id="pt_s20"/>
                                                     <af:button text="#{viewcontrollerBundle.D_U00E9CONNEXION}" id="pt_b22"
                                                                action="#{TemplateBean.Deconnecter}"/>

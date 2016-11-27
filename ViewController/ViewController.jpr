@@ -88,6 +88,7 @@
          <list n="constituent-sets">
             <hash>
                <list n="pattern-filters">
+                  <string v="+logo_pfnl.png"/>
                   <string v="+texte.png"/>
                   <string v="+image-saleka1.jpg"/>
                   <string v="+image-saleka.jpg"/>
