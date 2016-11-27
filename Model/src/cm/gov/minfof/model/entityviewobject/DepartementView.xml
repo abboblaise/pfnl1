@@ -15,13 +15,13 @@
   PageIterMode="Full"
   FetchMode="FETCH_ALL"
   Passivate="All"
-  ComponentClass="cm.gov.minfof.model.entityviewobject.DepartementViewImpl">
-  <DesignTime>
-    <Attr Name="_codeGenFlag2" Value="Coll|VarAccess"/>
-  </DesignTime>
+  ComponentClass="cm.gov.minfof.model.entityviewobject.DepartementViewImpl"
   SdoGen="true"
   SdoName="cm.gov.minfof.model.entityviewobject.common.DepartementViewSDO"
   SdoNameSpace="/cm/gov/minfof/model/entityviewobject/common/">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Coll|VarAccess"/>
+  </DesignTime>
   <EntityUsage
     Name="Departement"
     Entity="cm.gov.minfof.model.entity.Departement"/>

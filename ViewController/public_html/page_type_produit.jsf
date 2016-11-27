@@ -27,6 +27,9 @@
                                           shortDesc="#{bindings.Libellecategorie.hints.tooltip}" id="it2">
                                 <f:validator binding="#{bindings.Libellecategorie.validator}"/>
                             </af:inputText>
+                            <af:selectBooleanCheckbox value="#{bindings.Quotas.inputValue}"
+                                                      label="#{bindings.Quotas.label}"
+                                                      shortDesc="#{bindings.Quotas.hints.tooltip}" id="sbc1"/>
                             <af:richTextEditor value="#{bindings.Observation.inputValue}"
                                                label="#{bindings.Observation.hints.label}"
                                                required="#{bindings.Observation.hints.mandatory}"
@@ -97,6 +100,12 @@
                                     <af:outputText value="#{row.Libellecategorie}"
                                                    shortDesc="#{bindings.CategorieproduitView1.hints.Libellecategorie.tooltip}"
                                                    id="ot3"/>
+                                </af:column>
+                                <af:column headerText="#{bindings.CategorieproduitView1.hints.QuotasTransient.label}"
+                                           id="c5">
+                                    <af:outputText value="#{row.QuotasTransient}"
+                                                   shortDesc="#{bindings.CategorieproduitView1.hints.QuotasTransient.tooltip}"
+                                                   id="ot5"/>
                                 </af:column>
                                 <af:column sortProperty="#{bindings.CategorieproduitView1.hints.Observation.name}"
                                            filterable="true" sortable="true"

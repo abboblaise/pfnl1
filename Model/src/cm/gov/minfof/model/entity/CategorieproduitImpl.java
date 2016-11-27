@@ -25,6 +25,8 @@ public class CategorieproduitImpl extends EntityImpl {
         Libellecategorie,
         Codecategorie,
         Observation,
+        Quotas,
+        QuotasTransient,
         ProduitsPfnl;
         private static AttributesEnum[] vals = null;
         private static final int firstIndex = 0;
@@ -54,6 +56,8 @@ public class CategorieproduitImpl extends EntityImpl {
     public static final int LIBELLECATEGORIE = AttributesEnum.Libellecategorie.index();
     public static final int CODECATEGORIE = AttributesEnum.Codecategorie.index();
     public static final int OBSERVATION = AttributesEnum.Observation.index();
+    public static final int QUOTAS = AttributesEnum.Quotas.index();
+    public static final int QUOTASTRANSIENT = AttributesEnum.QuotasTransient.index();
     public static final int PRODUITSPFNL = AttributesEnum.ProduitsPfnl.index();
 
     /**
@@ -132,6 +136,40 @@ public class CategorieproduitImpl extends EntityImpl {
      */
     public void setObservation(String value) {
         setAttributeInternal(OBSERVATION, value);
+    }
+
+    /**
+     * Gets the attribute value for Quotas, using the alias name Quotas.
+     * @return the value of Quotas
+     */
+    public Boolean getQuotas() {
+        return (Boolean) getAttributeInternal(QUOTAS);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for Quotas.
+     * @param value value to set the Quotas
+     */
+    public void setQuotas(Boolean value) {
+        setAttributeInternal(QUOTAS, value);
+    }
+
+
+    /**
+     * Gets the attribute value for QuotasTransient, using the alias name QuotasTransient.
+     * @return the value of QuotasTransient
+     */
+    public Boolean getQuotasTransient() {
+        //return (Boolean) getAttributeInternal(QUOTASTRANSIENT);
+        return (Boolean) getAttributeInternal(QUOTAS);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for QuotasTransient.
+     * @param value value to set the QuotasTransient
+     */
+    public void setQuotasTransient(Boolean value) {
+        setAttributeInternal(QUOTASTRANSIENT, value);
     }
 
     /**

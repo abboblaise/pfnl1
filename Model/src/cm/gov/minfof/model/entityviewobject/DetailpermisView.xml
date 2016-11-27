@@ -14,13 +14,13 @@
   SelectAllAttributes="false"
   FetchMode="FETCH_AS_NEEDED"
   PageIterMode="Full"
-  ComponentClass="cm.gov.minfof.model.entityviewobject.DetailpermisViewImpl">
-  <DesignTime>
-    <Attr Name="_codeGenFlag2" Value="Coll|VarAccess"/>
-  </DesignTime>
+  ComponentClass="cm.gov.minfof.model.entityviewobject.DetailpermisViewImpl"
   SdoGen="true"
   SdoName="cm.gov.minfof.model.entityviewobject.common.DetailpermisViewSDO"
   SdoNameSpace="/cm/gov/minfof/model/entityviewobject/common/">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Coll|VarAccess"/>
+  </DesignTime>
   <ViewAccessor
     Name="UnitemesureView1"
     ViewObjectName="cm.gov.minfof.model.entityviewobject.UnitemesureView"

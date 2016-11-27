@@ -13,13 +13,14 @@
   CustomQuery="false"
   SelectAllAttributes="false"
   PageIterMode="Full"
-  ComponentClass="cm.gov.minfof.model.entityviewobject.AgrementsViewImpl">
-  <DesignTime>
-    <Attr Name="_codeGenFlag2" Value="Coll|VarAccess"/>
-  </DesignTime>
+  ComponentClass="cm.gov.minfof.model.entityviewobject.AgrementsViewImpl"
   SdoGen="true"
   SdoName="cm.gov.minfof.model.entityviewobject.common.AgrementsViewSDO"
   SdoNameSpace="/cm/gov/minfof/model/entityviewobject/common/">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Coll|VarAccess"/>
+  </DesignTime>
+  
   <EntityUsage
     Name="Agrements"
     Entity="cm.gov.minfof.model.entity.Agrements"/>

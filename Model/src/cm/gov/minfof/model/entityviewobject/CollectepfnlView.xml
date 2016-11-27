@@ -16,7 +16,10 @@
   ComponentClass="cm.gov.minfof.model.entityviewobject.CollectepfnlViewImpl"
   ComponentInterface="cm.gov.minfof.model.entityviewobject.common.CollectepfnlView"
   RowClass="cm.gov.minfof.model.entityviewobject.CollectepfnlViewRowImpl"
-  RowInterface="cm.gov.minfof.model.entityviewobject.common.CollectepfnlViewRow">
+  RowInterface="cm.gov.minfof.model.entityviewobject.common.CollectepfnlViewRow"
+  SdoGen="true"
+  SdoName="cm.gov.minfof.model.entityviewobject.common.CollectepfnlViewSDO"
+  SdoNameSpace="/cm/gov/minfof/model/entityviewobject/common/">
   <DesignTime>
     <Attr Name="_codeGenFlag2" Value="Access|Coll|Prog|VarAccess"/>
     <Attr Name="_isCodegen" Value="true"/>
@@ -29,9 +32,6 @@
     Name="dateDebut"
     Kind="viewcriteria"
     Type="java.sql.Timestamp"/>
-  SdoGen="true"
-  SdoName="cm.gov.minfof.model.entityviewobject.common.CollectepfnlViewSDO"
-  SdoNameSpace="/cm/gov/minfof/model/entityviewobject/common/">
   <ViewAccessor
     Name="DepartementView1"
     ViewObjectName="cm.gov.minfof.model.entityviewobject.DepartementView"

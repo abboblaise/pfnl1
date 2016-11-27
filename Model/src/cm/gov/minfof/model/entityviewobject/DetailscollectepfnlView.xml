@@ -13,13 +13,13 @@
   CustomQuery="false"
   SelectAllAttributes="false"
   PageIterMode="Full"
-  ComponentClass="cm.gov.minfof.model.entityviewobject.DetailscollectepfnlViewImpl">
-  <DesignTime>
-    <Attr Name="_codeGenFlag2" Value="Coll|VarAccess"/>
-  </DesignTime>
+  ComponentClass="cm.gov.minfof.model.entityviewobject.DetailscollectepfnlViewImpl"
   SdoGen="true"
   SdoName="cm.gov.minfof.model.entityviewobject.common.DetailscollectepfnlViewSDO"
   SdoNameSpace="/cm/gov/minfof/model/entityviewobject/common/">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Coll|VarAccess"/>
+  </DesignTime>
   <ViewAccessor
     Name="OriginespnflsView1"
     ViewObjectName="cm.gov.minfof.model.entityviewobject.OriginespnflsView"

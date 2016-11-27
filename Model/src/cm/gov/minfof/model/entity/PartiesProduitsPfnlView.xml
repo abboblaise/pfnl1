@@ -14,7 +14,10 @@
   SelectAllAttributes="false"
   PageIterMode="Full"
   RowClass="cm.gov.minfof.model.entity.PartiesProduitsPfnlViewRowImpl"
-  ComponentClass="cm.gov.minfof.model.entity.PartiesProduitsPfnlViewImpl">
+  ComponentClass="cm.gov.minfof.model.entity.PartiesProduitsPfnlViewImpl"
+  SdoGen="true"
+  SdoName="cm.gov.minfof.model.entity.common.PartiesProduitsPfnlViewSDO"
+  SdoNameSpace="/cm/gov/minfof/model/entity/common/">
   SdoGen="true"
   SdoName="cm.gov.minfof.model.entity.common.PartiesProduitsPfnlViewSDO"
   SdoNameSpace="/cm/gov/minfof/model/entity/common/">

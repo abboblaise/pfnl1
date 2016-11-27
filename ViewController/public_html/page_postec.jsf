@@ -39,6 +39,7 @@
                                 <f:validator binding="#{bindings.Intituleposte.validator}"/>
                             </af:inputText>
                             <f:facet name="footer">
+                                <af:spacer width="10" height="10" id="s4"/>
                                 <af:panelGroupLayout id="pgl1">
                                     <af:button text="#{viewcontrollerBundle.NOUVEAU}" id="b1"
                                                action="#{PostecBean.CreerPoste}"/>

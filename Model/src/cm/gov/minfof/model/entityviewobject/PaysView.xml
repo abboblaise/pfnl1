@@ -13,13 +13,13 @@
   CustomQuery="false"
   SelectAllAttributes="false"
   PageIterMode="Full"
-  ComponentClass="cm.gov.minfof.model.entityviewobject.PaysViewImpl">
-  <DesignTime>
-    <Attr Name="_codeGenFlag2" Value="Coll|VarAccess"/>
-  </DesignTime>
+  ComponentClass="cm.gov.minfof.model.entityviewobject.PaysViewImpl"
   SdoGen="true"
   SdoName="cm.gov.minfof.model.entityviewobject.common.PaysViewSDO"
   SdoNameSpace="/cm/gov/minfof/model/entityviewobject/common/">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Coll|VarAccess"/>
+  </DesignTime>
   <EntityUsage
     Name="Pays"
     Entity="cm.gov.minfof.model.entity.Pays"/>

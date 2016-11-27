@@ -35,11 +35,11 @@ public class PermisViewSDOImpl extends SDODataObject implements PermisViewSDO {
       set(START_PROPERTY_INDEX + 2 , value);
    }
 
-   public java.sql.Date getDatedelivrance() {
-      return (java.sql.Date)get(START_PROPERTY_INDEX + 3);
+   public java.sql.Timestamp getDatedelivrance() {
+      return (java.sql.Timestamp)get(START_PROPERTY_INDEX + 3);
    }
 
-   public void setDatedelivrance(java.sql.Date value) {
+   public void setDatedelivrance(java.sql.Timestamp value) {
       set(START_PROPERTY_INDEX + 3 , value);
    }
 

@@ -13,13 +13,13 @@
   CustomQuery="false"
   SelectAllAttributes="false"
   PageIterMode="Full"
-  ComponentClass="cm.gov.minfof.model.entityviewobject.CategorieunitemesureViewImpl">
-  <DesignTime>
-    <Attr Name="_codeGenFlag2" Value="Coll|VarAccess"/>
-  </DesignTime>
+  ComponentClass="cm.gov.minfof.model.entityviewobject.CategorieunitemesureViewImpl"
   SdoGen="true"
   SdoName="cm.gov.minfof.model.entityviewobject.common.CategorieunitemesureViewSDO"
   SdoNameSpace="/cm/gov/minfof/model/entityviewobject/common/">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Coll|VarAccess"/>
+  </DesignTime>
   <EntityUsage
     Name="Categorieunitemesure"
     Entity="cm.gov.minfof.model.entity.Categorieunitemesure"/>

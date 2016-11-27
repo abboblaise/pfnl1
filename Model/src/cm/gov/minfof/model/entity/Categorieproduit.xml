@@ -45,6 +45,8 @@
       <SchemaBasedProperties>
         <LABEL
           ResId="LIBELL_U00E9_DU_TYPE_DE_PRODUIT"/>
+        <DISPLAYWIDTH
+          Value="30"/>
       </SchemaBasedProperties>
     </Properties>
   </Attribute>
@@ -82,9 +84,38 @@
     <Properties>
       <SchemaBasedProperties>
         <DISPLAYWIDTH
-          Value="100"/>
+          Value="50"/>
         <DISPLAYHEIGHT
           Value="2"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
+  <Attribute
+    Name="Quotas"
+    ColumnName="quotas"
+    SQLType="BIT"
+    Type="java.lang.Boolean"
+    ColumnType="BIT"
+    TableName="categorieproduit">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="QUOTAS_"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
+  <Attribute
+    Name="QuotasTransient"
+    ColumnName="Quotas_Transient"
+    SQLType="BIT"
+    Type="java.lang.Boolean"
+    ColumnType="BIT"
+    IsPersistent="false"
+    IsQueriable="false">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="QUOTAS_"/>
       </SchemaBasedProperties>
     </Properties>
   </Attribute>

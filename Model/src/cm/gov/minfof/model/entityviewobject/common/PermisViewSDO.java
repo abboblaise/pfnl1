@@ -14,9 +14,9 @@ public interface PermisViewSDO extends java.io.Serializable {
 
    public void setZonecoupe(java.lang.String value);
 
-   public java.sql.Date getDatedelivrance();
+   public java.sql.Timestamp getDatedelivrance();
 
-   public void setDatedelivrance(java.sql.Date value);
+   public void setDatedelivrance(java.sql.Timestamp value);
 
    public java.sql.Date getDatefin();
 

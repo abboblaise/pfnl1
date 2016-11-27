@@ -28,7 +28,8 @@
                         <f:validator binding="#{bindings.Nomfamille.validator}"/>
                     </af:inputText>
                     <f:facet name="footer">
-                        <af:panelGroupLayout id="pgl1">
+                                <af:spacer width="10" height="10" id="s4"/>
+                                <af:panelGroupLayout id="pgl1">
                             <af:button
                                        text="#{viewcontrollerBundle.NOUVEAU}"
                                        disabled="#{!bindings.CreateInsert.enabled}" id="b2"
@@ -50,7 +51,7 @@
                                         <af:resetActionListener/>
                                     </af:button>
                                 </af:panelGroupLayout>
-                    </f:facet>
+                            </f:facet>
                 </af:panelFormLayout>
             </af:panelBox>
             <af:panelBox text="#{viewcontrollerBundle.LISTE_DES_FAMILLES_DE_PFNL}" id="pb2">

@@ -17,7 +17,7 @@
             <xsd:element name="Idpermis" type="xsd:decimal" minOccurs="0"/>
             <xsd:element name="Numeropermis" type="xsd:string" minOccurs="0"/>
             <xsd:element name="Zonecoupe" type="xsd:string" minOccurs="0" nillable="true"/>
-            <xsd:element name="Datedelivrance" type="ns0:date-Date" minOccurs="0"/>
+            <xsd:element name="Datedelivrance" type="ns0:dateTime-Timestamp" minOccurs="0"/>
             <xsd:element name="Datefin" type="ns0:date-Date" minOccurs="0" nillable="true"/>
             <xsd:element name="Observation" type="xsd:string" minOccurs="0" nillable="true"/>
             <xsd:element name="Idagrement" type="xsd:decimal" minOccurs="0" nillable="true"/>

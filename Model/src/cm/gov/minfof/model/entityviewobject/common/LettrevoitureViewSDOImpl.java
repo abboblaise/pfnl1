@@ -7,7 +7,7 @@ public class LettrevoitureViewSDOImpl extends SDODataObject implements Lettrevoi
 
    public static final int START_PROPERTY_INDEX = 0;
 
-   public static final int END_PROPERTY_INDEX = START_PROPERTY_INDEX + 13;
+   public static final int END_PROPERTY_INDEX = START_PROPERTY_INDEX + 14;
 
    public LettrevoitureViewSDOImpl() {}
 
@@ -83,44 +83,52 @@ public class LettrevoitureViewSDOImpl extends SDODataObject implements Lettrevoi
       set(START_PROPERTY_INDEX + 8 , value);
    }
 
-   public java.util.List getLettrevoitureView() {
-      return getList(START_PROPERTY_INDEX + 9);
+   public java.sql.Timestamp getDatelettrevoiture() {
+      return (java.sql.Timestamp)get(START_PROPERTY_INDEX + 9);
    }
 
-   public void setLettrevoitureView(java.util.List value) {
+   public void setDatelettrevoiture(java.sql.Timestamp value) {
       set(START_PROPERTY_INDEX + 9 , value);
    }
 
-   public java.util.List getLettrevoitureView1() {
+   public java.util.List getLettrevoitureView() {
       return getList(START_PROPERTY_INDEX + 10);
    }
 
-   public void setLettrevoitureView1(java.util.List value) {
+   public void setLettrevoitureView(java.util.List value) {
       set(START_PROPERTY_INDEX + 10 , value);
    }
 
-   public java.util.List getLettrevoitureView2() {
+   public java.util.List getLettrevoitureView1() {
       return getList(START_PROPERTY_INDEX + 11);
    }
 
-   public void setLettrevoitureView2(java.util.List value) {
+   public void setLettrevoitureView1(java.util.List value) {
       set(START_PROPERTY_INDEX + 11 , value);
    }
 
-   public java.util.List getLettrevoitureView3() {
+   public java.util.List getLettrevoitureView2() {
       return getList(START_PROPERTY_INDEX + 12);
    }
 
-   public void setLettrevoitureView3(java.util.List value) {
+   public void setLettrevoitureView2(java.util.List value) {
       set(START_PROPERTY_INDEX + 12 , value);
    }
 
-   public java.util.List getLettrevoitureView4() {
+   public java.util.List getLettrevoitureView3() {
       return getList(START_PROPERTY_INDEX + 13);
    }
 
-   public void setLettrevoitureView4(java.util.List value) {
+   public void setLettrevoitureView3(java.util.List value) {
       set(START_PROPERTY_INDEX + 13 , value);
+   }
+
+   public java.util.List getLettrevoitureView4() {
+      return getList(START_PROPERTY_INDEX + 14);
+   }
+
+   public void setLettrevoitureView4(java.util.List value) {
+      set(START_PROPERTY_INDEX + 14 , value);
    }
 
 
