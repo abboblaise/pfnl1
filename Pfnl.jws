@@ -375,6 +375,7 @@
                         <string v="Oracle JDBC"/>
                         <string v="Connection Manager"/>
                         <string v="BC4J Oracle Domains"/>
+                        <string v="JAX-WS Web Services"/>
                      </list>
                      <value n="targetWithinJar" v="lib"/>
                      <value n="type" v="3"/>
@@ -393,8 +394,8 @@
       <list n="profileList">
          <string v="application1"/>
          <string v="application2"/>
-         <string v="pfnl"/>
          <string v="application3"/>
+         <string v="pfnl"/>
       </list>
    </hash>
    <hash n="oracle.jdeveloper.deploy.SecurityDeploymentSettings">

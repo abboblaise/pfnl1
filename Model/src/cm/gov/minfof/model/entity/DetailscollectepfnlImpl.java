@@ -32,6 +32,8 @@ public class DetailscollectepfnlImpl extends EntityImpl {
         Idpartieproduitpfnl,
         Idcollectepfnl,
         Idprovenance,
+        Nomacteur,
+        Typeacteur,
         Detailscollectepfnl,
         IdcollectepfnlDetailscollectepfnl,
         Detailscollectepfnl1,
@@ -87,6 +89,8 @@ public class DetailscollectepfnlImpl extends EntityImpl {
     public static final int IDPARTIEPRODUITPFNL = AttributesEnum.Idpartieproduitpfnl.index();
     public static final int IDCOLLECTEPFNL = AttributesEnum.Idcollectepfnl.index();
     public static final int IDPROVENANCE = AttributesEnum.Idprovenance.index();
+    public static final int NOMACTEUR = AttributesEnum.Nomacteur.index();
+    public static final int TYPEACTEUR = AttributesEnum.Typeacteur.index();
     public static final int DETAILSCOLLECTEPFNL = AttributesEnum.Detailscollectepfnl.index();
     public static final int IDCOLLECTEPFNLDETAILSCOLLECTEPFNL =
         AttributesEnum.IdcollectepfnlDetailscollectepfnl.index();
@@ -285,6 +289,38 @@ public class DetailscollectepfnlImpl extends EntityImpl {
      */
     public void setIdprovenance(BigDecimal value) {
         setAttributeInternal(IDPROVENANCE, value);
+    }
+
+    /**
+     * Gets the attribute value for Nomacteur, using the alias name Nomacteur.
+     * @return the value of Nomacteur
+     */
+    public String getNomacteur() {
+        return (String) getAttributeInternal(NOMACTEUR);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for Nomacteur.
+     * @param value value to set the Nomacteur
+     */
+    public void setNomacteur(String value) {
+        setAttributeInternal(NOMACTEUR, value);
+    }
+
+    /**
+     * Gets the attribute value for Typeacteur, using the alias name Typeacteur.
+     * @return the value of Typeacteur
+     */
+    public Integer getTypeacteur() {
+        return (Integer) getAttributeInternal(TYPEACTEUR);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for Typeacteur.
+     * @param value value to set the Typeacteur
+     */
+    public void setTypeacteur(Integer value) {
+        setAttributeInternal(TYPEACTEUR, value);
     }
 
     /**

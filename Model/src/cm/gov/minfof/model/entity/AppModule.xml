@@ -884,6 +884,9 @@
   <ViewUsage
     Name="PermisView6"
     ViewObjectName="cm.gov.minfof.model.entityviewobject.PermisView"/>
+  <ViewUsage
+    Name="TypeacteurView1"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.TypeacteurView"/>
   <ViewLinkUsage
     Name="PermissionnaireToPermisLink"
     ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.PermissionnaireToPermisLink"

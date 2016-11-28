@@ -42,6 +42,14 @@ public interface DetailscollectepfnlViewSDO extends java.io.Serializable {
 
    public void setIdprovenance(java.math.BigDecimal value);
 
+   public java.lang.String getNomacteur();
+
+   public void setNomacteur(java.lang.String value);
+
+   public java.lang.Integer getTypeacteur();
+
+   public void setTypeacteur(java.lang.Integer value);
+
    public java.util.List getDetailscollectepfnlView();
 
    public void setDetailscollectepfnlView(java.util.List value);
@@ -78,21 +86,21 @@ public interface DetailscollectepfnlViewSDO extends java.io.Serializable {
 
    public void setPermisView(cm.gov.minfof.model.entityviewobject.common.PermisViewSDO value);
 
-   public cm.gov.minfof.model.entityviewobject.common.OriginespnflsViewSDO getOriginespnflsView();
+   public cm.gov.minfof.model.entity.common.PartiesProduitsPfnlViewSDO getPartiesProduitsPfnlView();
 
-   public void setOriginespnflsView(cm.gov.minfof.model.entityviewobject.common.OriginespnflsViewSDO value);
+   public void setPartiesProduitsPfnlView(cm.gov.minfof.model.entity.common.PartiesProduitsPfnlViewSDO value);
 
    public cm.gov.minfof.model.entityviewobject.common.UnitemesureViewSDO getUnitemesureView();
 
    public void setUnitemesureView(cm.gov.minfof.model.entityviewobject.common.UnitemesureViewSDO value);
 
+   public cm.gov.minfof.model.entityviewobject.common.OriginespnflsViewSDO getOriginespnflsView();
+
+   public void setOriginespnflsView(cm.gov.minfof.model.entityviewobject.common.OriginespnflsViewSDO value);
+
    public cm.gov.minfof.model.entityviewobject.common.DepartementViewSDO getDepartementView();
 
    public void setDepartementView(cm.gov.minfof.model.entityviewobject.common.DepartementViewSDO value);
-
-   public cm.gov.minfof.model.entity.common.PartiesProduitsPfnlViewSDO getPartiesProduitsPfnlView();
-
-   public void setPartiesProduitsPfnlView(cm.gov.minfof.model.entity.common.PartiesProduitsPfnlViewSDO value);
 
 
 }

@@ -63,6 +63,10 @@
     Name="LocaliteView1"
     ViewObjectName="cm.gov.minfof.model.entityviewobject.LocaliteView"
     RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="TypeacteurView1"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.TypeacteurView"
+    RowLevelBinds="true"/>
   <ListBinding
     Name="LOV_Idorigine"
     ListVOName="OriginespnflsView1"
@@ -190,6 +194,23 @@
     </AttrArray>
     <DisplayCriteria/>
   </ListBinding>
+  <ListBinding
+    Name="LOV_Typeacteur"
+    ListVOName="TypeacteurView1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="Typeacteur"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="idtype"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="libelletype"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
   <EntityUsage
     Name="Detailscollectepfnl"
     Entity="cm.gov.minfof.model.entity.Detailscollectepfnl"/>
@@ -311,6 +332,26 @@
           Value="choice"/>
         <LABEL
           ResId="PROVENANCE"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="Nomacteur"
+    PrecisionRule="true"
+    EntityAttrName="Nomacteur"
+    EntityUsage="Detailscollectepfnl"
+    AliasName="nomacteur"/>
+  <ViewAttribute
+    Name="Typeacteur"
+    PrecisionRule="true"
+    EntityAttrName="Typeacteur"
+    EntityUsage="Detailscollectepfnl"
+    AliasName="typeacteur"
+    LOVName="LOV_Typeacteur">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>

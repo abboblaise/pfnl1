@@ -98,6 +98,7 @@
           <Item Value="Idorigine"/>
           <Item Value="Idprovenance"/>
           <Item Value="Iddestination"/>
+          <Item Value="Nomacteur"/>
         </AttrNames>
       </nodeDefinition>
     </tree>
@@ -121,5 +122,12 @@
                   InstanceName="bindings.setdateDebut.dataControl.CollectepfnlView1">
       <NamedData NDName="value" NDType="java.sql.Timestamp"/>
     </methodAction>
+    <list IterBinding="DetailscollectepfnlView17Iterator" StaticList="false" Uses="LOV_Typeacteur" id="Typeacteur"
+          DTSupportsMRU="true" SelectItemValueMode="ListObject"/>
+    <attributeValues IterBinding="DetailscollectepfnlView17Iterator" id="Nomacteur">
+      <AttrNames>
+        <Item Value="Nomacteur"/>
+      </AttrNames>
+    </attributeValues>
   </bindings>
 </pageDefinition>

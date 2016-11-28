@@ -23,6 +23,7 @@ import cm.gov.minfof.model.entityviewobject.PostecontroleViewImpl;
 import cm.gov.minfof.model.entityviewobject.RegionViewImpl;
 
 import cm.gov.minfof.model.entityviewobject.TransporteurViewImpl;
+import cm.gov.minfof.model.entityviewobject.TypeacteurViewImpl;
 import cm.gov.minfof.model.entityviewobject.UnitemesureViewImpl;
 import cm.gov.minfof.model.entityviewobject.VehiculeViewImpl;
 import cm.gov.minfof.model.entityviewobject.gestLastIdUnitMesureImpl;
@@ -3720,6 +3721,14 @@ public class AppModuleImpl extends ApplicationModuleImpl {
      */
     public ViewObjectImpl getgetLastIdUtilisateur1() {
         return (ViewObjectImpl) findViewObject("getLastIdUtilisateur1");
+    }
+
+    /**
+     * Container's getter for TypeacteurView1.
+     * @return TypeacteurView1
+     */
+    public TypeacteurViewImpl getTypeacteurView1() {
+        return (TypeacteurViewImpl) findViewObject("TypeacteurView1");
     }
 }
 
