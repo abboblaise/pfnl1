@@ -205,11 +205,29 @@
                                             </af:panelGroupLayout>
                                         </f:facet>
                                         <af:panelFormLayout id="pfl2" rows="4">
+                                            <af:selectOneChoice value="#{bindings.Typeacteur.inputValue}"
+                                                                label="#{bindings.Typeacteur.label}"
+                                                                required="#{bindings.Typeacteur.hints.mandatory}"
+                                                                shortDesc="#{bindings.Typeacteur.hints.tooltip}"
+                                                                id="soc19" autoSubmit="true">
+                                                <f:selectItems value="#{bindings.Typeacteur.items}" id="si19"/>
+                                                <f:validator binding="#{bindings.Typeacteur.validator}"/>
+                                            </af:selectOneChoice>
+                                            <af:inputText value="#{bindings.Nomacteur.inputValue}"
+                                                          label="#{bindings.Nomacteur.hints.label}"
+                                                          required="#{bindings.Nomacteur.hints.mandatory}"
+                                                          columns="#{bindings.Nomacteur.hints.displayWidth}"
+                                                          maximumLength="#{bindings.Nomacteur.hints.precision}"
+                                                          shortDesc="#{bindings.Nomacteur.hints.tooltip}" id="it5"
+                                                          rendered="#{bindings.Typeacteur.inputValue eq 2}">
+                                                <f:validator binding="#{bindings.Nomacteur.validator}"/>
+                                            </af:inputText>
                                             <af:selectOneChoice value="#{bindings.Idpermissionnaire.inputValue}"
                                                                 label="#{bindings.Idpermissionnaire.label}"
                                                                 required="#{bindings.Idpermissionnaire.hints.mandatory}"
                                                                 shortDesc="#{bindings.Idpermissionnaire.hints.tooltip}"
-                                                                id="soc9" autoSubmit="true">
+                                                                id="soc9" autoSubmit="true"
+                                                                rendered="#{bindings.Typeacteur.inputValue eq 1}">
                                                 <f:selectItems value="#{bindings.Idpermissionnaire.items}" id="si9"/>
                                                 <f:validator binding="#{bindings.Idpermissionnaire.validator}"/>
                                             </af:selectOneChoice>
