@@ -37,15 +37,14 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR"
-    TableName="categorieunitemesure"
-    DefaultValue="Entrez un nom">
+    TableName="categorieunitemesure">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="45"/>
     </DesignTime>
     <Properties>
       <SchemaBasedProperties>
         <LABEL
-          ResId="LIBELL_U00E9_DE_L_UNIT_U00E9_DE_MESURE"/>
+          ResId="CAT_U00E9GORIE_D_UNIT_U00E9_DE_MESURE"/>
       </SchemaBasedProperties>
     </Properties>
   </Attribute>

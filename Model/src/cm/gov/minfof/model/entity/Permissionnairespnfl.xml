@@ -25,8 +25,7 @@
     Type="java.lang.String"
     ColumnType="VARCHAR"
     TableName="permissionnairespnfl"
-    IsNotNull="true"
-    DefaultValue="entrez un nom">
+    IsNotNull="true">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="100"/>
     </DesignTime>
@@ -142,24 +141,7 @@
         <DISPLAYWIDTH
           Value="20"/>
         <LABEL
-          ResId="CODE_PFNL"/>
-      </SchemaBasedProperties>
-    </Properties>
-  </Attribute>
-  <Attribute
-    Name="Iddepartements"
-    ColumnName="IDDepartements"
-    SQLType="NUMERIC"
-    Type="java.math.BigDecimal"
-    ColumnType="BIGINT"
-    TableName="permissionnairespnfl">
-    <DesignTime>
-      <Attr Name="_DisplaySize" Value="19"/>
-    </DesignTime>
-    <Properties>
-      <SchemaBasedProperties>
-        <LABEL
-          ResId="D_U00E9PARTEMENT"/>
+          ResId="CODE_PLATEFORME"/>
       </SchemaBasedProperties>
     </Properties>
   </Attribute>
@@ -242,23 +224,6 @@
     </Properties>
   </Attribute>
   <Attribute
-    Name="Idpays"
-    ColumnName="IDPays"
-    SQLType="NUMERIC"
-    Type="java.math.BigDecimal"
-    ColumnType="BIGINT"
-    TableName="permissionnairespnfl">
-    <DesignTime>
-      <Attr Name="_DisplaySize" Value="19"/>
-    </DesignTime>
-    <Properties>
-      <SchemaBasedProperties>
-        <LABEL
-          ResId="PAYS"/>
-      </SchemaBasedProperties>
-    </Properties>
-  </Attribute>
-  <Attribute
     Name="Profession"
     ColumnName="Profession"
     SQLType="STRUCT"
@@ -285,7 +250,7 @@
     <Properties>
       <SchemaBasedProperties>
         <LABEL
-          ResId="PERSONNE"/>
+          ResId="STATUT_JURIDIQUE"/>
       </SchemaBasedProperties>
     </Properties>
   </Attribute>
@@ -320,34 +285,23 @@
       <Attr Name="_DisplaySize" Value="3"/>
     </DesignTime>
   </Attribute>
-  <AccessorAttribute
-    Name="Permissionnairespnfl"
-    Association="cm.gov.minfof.model.entity.FkPermissionnairespnfl2Assoc"
-    AssociationEnd="cm.gov.minfof.model.entity.FkPermissionnairespnfl2Assoc.Permissionnairespnfl"
-    AssociationOtherEnd="cm.gov.minfof.model.entity.FkPermissionnairespnfl2Assoc.IddepartementsPermissionnairespnfl"
-    Type="oracle.jbo.RowIterator"
-    IsUpdateable="false"/>
-  <AccessorAttribute
-    Name="IddepartementsPermissionnairespnfl"
-    Association="cm.gov.minfof.model.entity.FkPermissionnairespnfl2Assoc"
-    AssociationEnd="cm.gov.minfof.model.entity.FkPermissionnairespnfl2Assoc.IddepartementsPermissionnairespnfl"
-    AssociationOtherEnd="cm.gov.minfof.model.entity.FkPermissionnairespnfl2Assoc.Permissionnairespnfl"
-    Type="oracle.jbo.server.EntityImpl"
-    IsUpdateable="true"/>
-  <AccessorAttribute
-    Name="Permissionnairespnfl1"
-    Association="cm.gov.minfof.model.entity.FkPermissionnairespnfl1Assoc"
-    AssociationEnd="cm.gov.minfof.model.entity.FkPermissionnairespnfl1Assoc.Permissionnairespnfl1"
-    AssociationOtherEnd="cm.gov.minfof.model.entity.FkPermissionnairespnfl1Assoc.IdpaysPermissionnairespnfl"
-    Type="oracle.jbo.RowIterator"
-    IsUpdateable="false"/>
-  <AccessorAttribute
-    Name="IdpaysPermissionnairespnfl"
-    Association="cm.gov.minfof.model.entity.FkPermissionnairespnfl1Assoc"
-    AssociationEnd="cm.gov.minfof.model.entity.FkPermissionnairespnfl1Assoc.IdpaysPermissionnairespnfl"
-    AssociationOtherEnd="cm.gov.minfof.model.entity.FkPermissionnairespnfl1Assoc.Permissionnairespnfl1"
-    Type="oracle.jbo.server.EntityImpl"
-    IsUpdateable="true"/>
+  <Attribute
+    Name="Idcommune"
+    ColumnName="idcommune"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="BIGINT"
+    TableName="permissionnairespnfl">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="19"/>
+    </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="COMMUNE"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
   <AccessorAttribute
     Name="Detailscollectepfnl"
     Association="cm.gov.minfof.model.entity.DetailCollToPermissionnaireAssoc"
@@ -409,9 +363,7 @@
       <Attr Name="_isForeign" Value="true"/>
       <Attr Name="_DBObjectName" Value="fk_PermissionnairesPNFL_2"/>
     </DesignTime>
-    <AttrArray Name="Attributes">
-      <Item Value="cm.gov.minfof.model.entity.Permissionnairespnfl.Iddepartements"/>
-    </AttrArray>
+    <AttrArray Name="Attributes"/>
   </Key>
   <ResourceBundle>
     <PropertiesBundle

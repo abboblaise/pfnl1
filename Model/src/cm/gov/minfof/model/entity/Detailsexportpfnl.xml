@@ -10,7 +10,8 @@
   DBObjectName="detailsexportpfnl"
   AliasName="Detailsexportpfnl"
   BindingStyle="JDBC"
-  RowClass="cm.gov.minfof.model.entity.DetailsexportpfnlImpl">
+  RowClass="cm.gov.minfof.model.entity.DetailsexportpfnlImpl"
+  xmlns:validation="http://xmlns.oracle.com/adfm/validation">
   <DesignTime>
     <Attr Name="_codeGenFlag2" Value="Init|Delete|Access|DML"/>
     <Attr Name="_isCodegen" Value="true"/>
@@ -113,6 +114,41 @@
       </SchemaBasedProperties>
     </Properties>
   </Attribute>
+  <Attribute
+    Name="Idcertificat"
+    ColumnName="idcertificat"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="BIGINT"
+    TableName="detailsexportpfnl"
+    IsNotNull="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="19"/>
+    </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="CERTIFICAT_D_ORIGINE"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
+  <Attribute
+    Name="Idpays"
+    ColumnName="idpays"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="BIGINT"
+    TableName="detailsexportpfnl">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="19"/>
+    </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="DESTINATION"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
   <AccessorAttribute
     Name="Detailsexportpfnl"
     Association="cm.gov.minfof.model.entity.FkDetailsexportpfnl3Assoc"
@@ -176,6 +212,29 @@
     AssociationOtherEnd="cm.gov.minfof.model.entity.ExportToDetailExportAssoc.Detailsexportpfnl"
     Type="oracle.jbo.server.EntityImpl"
     IsUpdateable="true"/>
+  <Key
+    Name="AltKey"
+    AltKey="true">
+    <DesignTime>
+      <Attr Name="_isUnique" Value="true"/>
+      <Attr Name="_DBObjectName" Value="detailsexportpfnl"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="cm.gov.minfof.model.entity.Detailsexportpfnl.Idcertificat"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="DetailsexportpfnlIdcertificatCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"idcertificat" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="Detailsexportpfnl_Idcertificat"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="cm.gov.minfof.model.entity.Detailsexportpfnl.Idcertificat"/>
+    </AttrArray>
+  </Key>
   <Key
     Name="DetailsexportpfnlQuantiteCheck">
     <DesignTime>
@@ -242,6 +301,15 @@
       <Item Value="cm.gov.minfof.model.entity.Detailsexportpfnl.Idexportpfnl"/>
     </AttrArray>
   </Key>
+  <validation:UniqueKeyValidationBean
+    Name="DetailsexportpfnlRule0"
+    ResId="CE_CERTIFICAT_A_D_U00E9J_U00E0__U00E9T_U00E9_UTILIS_U00E9"
+    KeyName="AltKey">
+    <validation:OnAttributes>
+      <validation:Item
+        Value="Idcertificat"/>
+    </validation:OnAttributes>
+  </validation:UniqueKeyValidationBean>
   <ResourceBundle>
     <PropertiesBundle
       PropertiesFile="cm.gov.minfof.model.ModelBundle"/>

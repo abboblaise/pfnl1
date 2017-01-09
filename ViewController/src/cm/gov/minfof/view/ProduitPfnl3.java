@@ -2,10 +2,13 @@ package cm.gov.minfof.view;
 
 import oracle.adf.model.BindingContext;
 
+import oracle.adf.view.rich.event.DialogEvent;
+
 import oracle.binding.BindingContainer;
 import oracle.binding.OperationBinding;
 
 public class ProduitPfnl3 {
+    ShowJqNotification notifObj = new ShowJqNotification();
     public ProduitPfnl3() {
     }
 
@@ -42,10 +45,13 @@ public class ProduitPfnl3 {
         if (!operationBinding.getErrors().isEmpty()) {
             return null;
         }
+        String nomProduit = notifObj.getValueOfField("ProduitsPfnlView12Iterator", "Nomcommercial");
+        notifObj.showNoticeMessageAction("Enregistrement effectué! Le produit <b>"+ nomProduit +" </b>a été enregistré avec succès");
         return null;
     }
 
     public String supprimeProduitPfnl() {
+        String nomProduit = notifObj.getValueOfField("ProduitsPfnlView12Iterator", "Nomcommercial");
         BindingContainer bindings = getBindings();
         OperationBinding operationBinding = bindings.getOperationBinding("Delete");
         Object result = operationBinding.execute();
@@ -53,6 +59,7 @@ public class ProduitPfnl3 {
         if (!operationBinding.getErrors().isEmpty()) {
             return null;
         }
+        notifObj.showNoticeMessageAction("Suppression effectuée! Le produit <b>"+ nomProduit +" </b>a été supprimé avec succès");
         return null;
     }
 
@@ -75,6 +82,20 @@ public class ProduitPfnl3 {
         if (!operationBinding.getErrors().isEmpty()) {
             return null;
         }
+        notifObj.showNoticeMessageAction("Suppression effectuée! Le sous-produit a été supprimé avec succès");
         return null;
+    }
+
+    public void onDelete(DialogEvent dialogEvent) {
+        if (dialogEvent.getOutcome() == DialogEvent.Outcome.ok) {
+            supprimeProduitPfnl();
+        }
+
+    }
+
+    public void onDeletePartieProduitPfnl(DialogEvent dialogEvent) {
+        if (dialogEvent.getOutcome() == DialogEvent.Outcome.ok) {
+            supprimePartieProduitPfnl();
+        }
     }
 }

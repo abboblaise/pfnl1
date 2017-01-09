@@ -1,10 +1,12 @@
 package cm.gov.minfof.model.entity;
 
 import cm.gov.minfof.model.entity.common.*;
+import cm.gov.minfof.model.entityviewobject.CategorieunitemesureViewImpl;
+import cm.gov.minfof.model.entityviewobject.CollMultiCritereImpl;
+import cm.gov.minfof.model.entityviewobject.CollecteMultiImpl;
 import cm.gov.minfof.model.entityviewobject.NiveauValidationViewImpl;
 import cm.gov.minfof.model.entityviewobject.AgrementsViewImpl;
 import cm.gov.minfof.model.entityviewobject.CategorieproduitViewImpl;
-import cm.gov.minfof.model.entityviewobject.CategorieunitemesureViewImpl;
 import cm.gov.minfof.model.entityviewobject.CollectepfnlViewImpl;
 import cm.gov.minfof.model.entityviewobject.CommuneViewImpl;
 import cm.gov.minfof.model.entityviewobject.DepartementViewImpl;
@@ -14,17 +16,17 @@ import cm.gov.minfof.model.entityviewobject.DetailsexportpfnlViewImpl;
 import cm.gov.minfof.model.entityviewobject.DetailslettrevoitureViewImpl;
 import cm.gov.minfof.model.entityviewobject.ExportpfnlViewImpl;
 import cm.gov.minfof.model.entityviewobject.LettrevoitureViewImpl;
-import cm.gov.minfof.model.entityviewobject.LocaliteViewImpl;
 import cm.gov.minfof.model.entityviewobject.OriginespnflsViewImpl;
 import cm.gov.minfof.model.entityviewobject.PaysViewImpl;
 import cm.gov.minfof.model.entityviewobject.PermisViewImpl;
 import cm.gov.minfof.model.entityviewobject.PermissionnairespnflViewImpl;
 import cm.gov.minfof.model.entityviewobject.PostecontroleViewImpl;
-import cm.gov.minfof.model.entityviewobject.RegionViewImpl;
 
+import cm.gov.minfof.model.entityviewobject.RegionViewImpl;
 import cm.gov.minfof.model.entityviewobject.TransporteurViewImpl;
 import cm.gov.minfof.model.entityviewobject.TypeacteurViewImpl;
 import cm.gov.minfof.model.entityviewobject.UnitemesureViewImpl;
+import cm.gov.minfof.model.entityviewobject.UtilisateurViewImpl;
 import cm.gov.minfof.model.entityviewobject.VehiculeViewImpl;
 import cm.gov.minfof.model.entityviewobject.gestLastIdUnitMesureImpl;
 import cm.gov.minfof.model.entityviewobject.getLastIcCollecteImpl;
@@ -53,7 +55,7 @@ import cm.gov.minfof.model.entityviewobject.typeDocumentViewImpl;
 
 import oracle.jbo.server.ApplicationModuleImpl;
 import oracle.jbo.server.ViewLinkImpl;
-import oracle.jbo.server.ViewObjectImpl;
+
 import cm.gov.minfof.model.entityviewobject.getLastIcCollecteImpl;
 import cm.gov.minfof.model.entityviewobject.getLastIdCategorieUniteMesureImpl;
 import cm.gov.minfof.model.entityviewobject.getLastIdCollectePfnlImpl;
@@ -91,7 +93,6 @@ import java.math.BigDecimal;
 import oracle.jbo.Row;
 import oracle.jbo.server.ApplicationModuleImpl;
 import oracle.jbo.server.ViewLinkImpl;
-import oracle.jbo.server.ViewObjectImpl;
 
 
 //import cm.gov.minfof.model.entityviewobject.getLastIdCategorieMesureImpl;
@@ -123,6 +124,13 @@ import cm.gov.minfof.model.entityviewobject.listeTypePersonneImpl;
 
 import java.math.BigDecimal;
 
+import javax.faces.context.FacesContext;
+import javax.faces.event.PhaseEvent;
+
+import javax.servlet.http.HttpSession;
+
+import oracle.adf.model.binding.DCIteratorBinding;
+
 import oracle.jbo.Row;
 import oracle.jbo.ViewCriteria;
 import oracle.jbo.ViewCriteriaRow;
@@ -136,7 +144,7 @@ import oracle.jbo.server.ViewObjectImpl;
 // ---    Custom code may be added to this class.
 // ---    Warning: Do not modify method signatures of generated methods.
 // ---------------------------------------------------------------------
-public class AppModuleImpl extends ApplicationModuleImpl {
+public class AppModuleImpl extends ApplicationModuleImpl implements AppModule {
     /**
      * This is the default constructor (do not remove).
      */
@@ -1348,30 +1356,6 @@ public class AppModuleImpl extends ApplicationModuleImpl {
 
 
     /**
-     * Container's getter for CategorieunitemesureView4.
-     * @return CategorieunitemesureView4
-     */
-    public CategorieunitemesureViewImpl getCategorieunitemesureView4() {
-        return (CategorieunitemesureViewImpl) findViewObject("CategorieunitemesureView4");
-    }
-
-    /**
-     * Container's getter for UnitemesureView3.
-     * @return UnitemesureView3
-     */
-    public UnitemesureViewImpl getUnitemesureView3() {
-        return (UnitemesureViewImpl) findViewObject("UnitemesureView3");
-    }
-
-    /**
-     * Container's getter for CategToUnitLink.
-     * @return CategToUnitLink
-     */
-    public ViewLinkImpl getCategToUnitLink() {
-        return (ViewLinkImpl) findViewLink("CategToUnitLink");
-    }
-
-    /**
      * Container's getter for CategorieunitemesureView5.
      * @return CategorieunitemesureView5
      */
@@ -1555,117 +1539,6 @@ public class AppModuleImpl extends ApplicationModuleImpl {
         return (ViewObjectImpl) findViewObject("TypevehiculeView2");
     }
 
-    /**
-     * Container's getter for VehiculeView1.
-     * @return VehiculeView1
-     */
-    public VehiculeViewImpl getVehiculeView1() {
-        return (VehiculeViewImpl) findViewObject("VehiculeView1");
-    }
-
-    /**
-     * Container's getter for VehiculeView1_1.
-     * @return VehiculeView1_1
-     */
-    public ViewObjectImpl getVehiculeView1_1() {
-        return (ViewObjectImpl) findViewObject("VehiculeView1_1");
-    }
-
-    /**
-     * Container's getter for VehiculeView2.
-     * @return VehiculeView2
-     */
-    public VehiculeViewImpl getVehiculeView2() {
-        return (VehiculeViewImpl) findViewObject("VehiculeView2");
-    }
-
-    /**
-     * Container's getter for VehiculeView3.
-     * @return VehiculeView3
-     */
-    public VehiculeViewImpl getVehiculeView3() {
-        return (VehiculeViewImpl) findViewObject("VehiculeView3");
-    }
-
-    /**
-     * Container's getter for VehiculeView4.
-     * @return VehiculeView4
-     */
-    public VehiculeViewImpl getVehiculeView4() {
-        return (VehiculeViewImpl) findViewObject("VehiculeView4");
-    }
-
-    /**
-     * Container's getter for VehiculeView1_2.
-     * @return VehiculeView1_2
-     */
-    public ViewObjectImpl getVehiculeView1_2() {
-        return (ViewObjectImpl) findViewObject("VehiculeView1_2");
-    }
-
-    /**
-     * Container's getter for VehiculeView1_3.
-     * @return VehiculeView1_3
-     */
-    public ViewObjectImpl getVehiculeView1_3() {
-        return (ViewObjectImpl) findViewObject("VehiculeView1_3");
-    }
-
-    /**
-     * Container's getter for VehiculeView1_4.
-     * @return VehiculeView1_4
-     */
-    public ViewObjectImpl getVehiculeView1_4() {
-        return (ViewObjectImpl) findViewObject("VehiculeView1_4");
-    }
-
-    /**
-     * Container's getter for FkVehicule3Link1.
-     * @return FkVehicule3Link1
-     */
-    public ViewLinkImpl getFkVehicule3Link1() {
-        return (ViewLinkImpl) findViewLink("FkVehicule3Link1");
-    }
-
-    /**
-     * Container's getter for FkVehicule2Link1.
-     * @return FkVehicule2Link1
-     */
-    public ViewLinkImpl getFkVehicule2Link1() {
-        return (ViewLinkImpl) findViewLink("FkVehicule2Link1");
-    }
-
-    /**
-     * Container's getter for FkVehicule1Link1.
-     * @return FkVehicule1Link1
-     */
-    public ViewLinkImpl getFkVehicule1Link1() {
-        return (ViewLinkImpl) findViewLink("FkVehicule1Link1");
-    }
-
-    /**
-     * Container's getter for FkVehicule1Link2.
-     * @return FkVehicule1Link2
-     */
-    public ViewLinkImpl getFkVehicule1Link2() {
-        return (ViewLinkImpl) findViewLink("FkVehicule1Link2");
-    }
-
-    /**
-     * Container's getter for FkVehicule2Link2.
-     * @return FkVehicule2Link2
-     */
-    public ViewLinkImpl getFkVehicule2Link2() {
-        return (ViewLinkImpl) findViewLink("FkVehicule2Link2");
-    }
-
-    /**
-     * Container's getter for FkVehicule3Link2.
-     * @return FkVehicule3Link2
-     */
-    public ViewLinkImpl getFkVehicule3Link2() {
-        return (ViewLinkImpl) findViewLink("FkVehicule3Link2");
-    }
 
     /**
      * Container's getter for TransporteurView2.
@@ -1771,36 +1644,6 @@ public class AppModuleImpl extends ApplicationModuleImpl {
         return (RegionViewImpl) findViewObject("RegionView5");
     }
 
-    /**
-     * Container's getter for RegionView6.
-     * @return RegionView6
-     */
-    public RegionViewImpl getRegionView6() {
-        return (RegionViewImpl) findViewObject("RegionView6");
-    }
-
-    /**
-     * Container's getter for RegionToVehiculeLink1.
-     * @return RegionToVehiculeLink1
-     */
-    public ViewLinkImpl getRegionToVehiculeLink1() {
-        return (ViewLinkImpl) findViewLink("RegionToVehiculeLink1");
-    }
-    /**
-     * Container's getter for LocaliteView1.
-     * @return LocaliteView1
-     */
-    public LocaliteViewImpl getLocaliteView1() {
-        return (LocaliteViewImpl) findViewObject("LocaliteView1");
-    }
-
-    /**
-     * Container's getter for LocaliteView2.
-     * @return LocaliteView2
-     */
-    public LocaliteViewImpl getLocaliteView2() {
-        return (LocaliteViewImpl) findViewObject("LocaliteView2");
-    }
 
     /**
      * Container's getter for FkLocalite1Link1.
@@ -1826,37 +1669,6 @@ public class AppModuleImpl extends ApplicationModuleImpl {
         return (DepartementViewImpl) findViewObject("DepartementView5");
     }
 
-    /**
-     * Container's getter for LocaliteView3.
-     * @return LocaliteView3
-     */
-    public LocaliteViewImpl getLocaliteView3() {
-        return (LocaliteViewImpl) findViewObject("LocaliteView3");
-    }
-
-    /**
-     * Container's getter for DepToLocaliteLink.
-     * @return DepToLocaliteLink
-     */
-    public ViewLinkImpl getDepToLocaliteLink() {
-        return (ViewLinkImpl) findViewLink("DepToLocaliteLink");
-    }
-
-    /**
-     * Container's getter for LocaliteView4.
-     * @return LocaliteView4
-     */
-    public LocaliteViewImpl getLocaliteView4() {
-        return (LocaliteViewImpl) findViewObject("LocaliteView4");
-    }
-
-    /**
-     * Container's getter for DepToLocaliteLink1.
-     * @return DepToLocaliteLink1
-     */
-    public ViewLinkImpl getDepToLocaliteLink1() {
-        return (ViewLinkImpl) findViewLink("DepToLocaliteLink1");
-    }
 
     /**
      * Container's getter for DepartementView8.
@@ -1874,29 +1686,6 @@ public class AppModuleImpl extends ApplicationModuleImpl {
         return (ViewLinkImpl) findViewLink("DepToLocaliteLink2");
     }
 
-    /**
-     * Container's getter for PostecontroleView1.
-     * @return PostecontroleView1
-     */
-    public PostecontroleViewImpl getPostecontroleView1() {
-        return (PostecontroleViewImpl) findViewObject("PostecontroleView1");
-    }
-
-    /**
-     * Container's getter for PostecontroleView2.
-     * @return PostecontroleView2
-     */
-    public PostecontroleViewImpl getPostecontroleView2() {
-        return (PostecontroleViewImpl) findViewObject("PostecontroleView2");
-    }
-
-    /**
-     * Container's getter for FkPostecontrole1Link1.
-     * @return FkPostecontrole1Link1
-     */
-    public ViewLinkImpl getFkPostecontrole1Link1() {
-        return (ViewLinkImpl) findViewLink("FkPostecontrole1Link1");
-    }
 
     /**
      * Container's getter for getLatsidPostecontrole1.
@@ -1914,53 +1703,6 @@ public class AppModuleImpl extends ApplicationModuleImpl {
         return (DepartementViewImpl) findViewObject("DepartementView9");
     }
 
-    /**
-     * Container's getter for PostecontroleView3.
-     * @return PostecontroleView3
-     */
-    public PostecontroleViewImpl getPostecontroleView3() {
-        return (PostecontroleViewImpl) findViewObject("PostecontroleView3");
-    }
-
-    /**
-     * Container's getter for DepToPostecontroleLink.
-     * @return DepToPostecontroleLink
-     */
-    public ViewLinkImpl getDepToPostecontroleLink() {
-        return (ViewLinkImpl) findViewLink("DepToPostecontroleLink");
-    }
-
-    /**
-     * Container's getter for PostecontroleView4.
-     * @return PostecontroleView4
-     */
-    public PostecontroleViewImpl getPostecontroleView4() {
-        return (PostecontroleViewImpl) findViewObject("PostecontroleView4");
-    }
-
-    /**
-     * Container's getter for DepToPostecontroleLink1.
-     * @return DepToPostecontroleLink1
-     */
-    public ViewLinkImpl getDepToPostecontroleLink1() {
-        return (ViewLinkImpl) findViewLink("DepToPostecontroleLink1");
-    }
-
-    /**
-     * Container's getter for PostecontroleView5.
-     * @return PostecontroleView5
-     */
-    public PostecontroleViewImpl getPostecontroleView5() {
-        return (PostecontroleViewImpl) findViewObject("PostecontroleView5");
-    }
-
-    /**
-     * Container's getter for DepToPostecontroleLink2.
-     * @return DepToPostecontroleLink2
-     */
-    public ViewLinkImpl getDepToPostecontroleLink2() {
-        return (ViewLinkImpl) findViewLink("DepToPostecontroleLink2");
-    }
 
     /**
      * Container's getter for DetailpermisView1.
@@ -2579,21 +2321,6 @@ public class AppModuleImpl extends ApplicationModuleImpl {
         return (ViewLinkImpl) findViewLink("DetailCollToUnitMesureLink1");
     }
 
-    /**
-     * Container's getter for PermisView6.
-     * @return PermisView6
-     */
-    public PermisViewImpl getPermisView6() {
-        return (PermisViewImpl) findViewObject("PermisView6");
-    }
-
-    /**
-     * Container's getter for DetailCollToDocOfficielLink1.
-     * @return DetailCollToDocOfficielLink1
-     */
-    public ViewLinkImpl getDetailCollToDocOfficielLink1() {
-        return (ViewLinkImpl) findViewLink("DetailCollToDocOfficielLink1");
-    }
 
     /**
      * Container's getter for PermissionnairespnflView3.
@@ -3360,14 +3087,6 @@ public class AppModuleImpl extends ApplicationModuleImpl {
 
 
     /**
-     * Container's getter for ExportToPermisLink.
-     * @return ExportToPermisLink
-     */
-    public ViewLinkImpl getExportToPermisLink() {
-        return (ViewLinkImpl) findViewLink("ExportToPermisLink");
-    }
-
-    /**
      * Container's getter for ExportpfnlView6.
      * @return ExportpfnlView6
      */
@@ -3547,56 +3266,49 @@ public class AppModuleImpl extends ApplicationModuleImpl {
      * Container's getter for UtilisateurView1.
      * @return UtilisateurView1
      */
-    public ViewObjectImpl getUtilisateurView1() {
-        return (ViewObjectImpl) findViewObject("UtilisateurView1");
+    public UtilisateurViewImpl getUtilisateurView1() {
+        return (UtilisateurViewImpl) findViewObject("UtilisateurView1");
     }
 
     /**
      * Container's getter for UtilisateurView2.
      * @return UtilisateurView2
      */
-    public ViewObjectImpl getUtilisateurView2() {
-        return (ViewObjectImpl) findViewObject("UtilisateurView2");
+    public UtilisateurViewImpl getUtilisateurView2() {
+        return (UtilisateurViewImpl) findViewObject("UtilisateurView2");
     }
 
     /**
      * Container's getter for UtilisateurView3.
      * @return UtilisateurView3
      */
-    public ViewObjectImpl getUtilisateurView3() {
-        return (ViewObjectImpl) findViewObject("UtilisateurView3");
+    public UtilisateurViewImpl getUtilisateurView3() {
+        return (UtilisateurViewImpl) findViewObject("UtilisateurView3");
     }
 
-    /**
-     * Container's getter for UtilisateurView4.
-     * @return UtilisateurView4
-     */
-    public ViewObjectImpl getUtilisateurView4() {
-        return (ViewObjectImpl) findViewObject("UtilisateurView4");
-    }
 
     /**
      * Container's getter for UtilisateurView5.
      * @return UtilisateurView5
      */
-    public ViewObjectImpl getUtilisateurView5() {
-        return (ViewObjectImpl) findViewObject("UtilisateurView5");
+    public UtilisateurViewImpl getUtilisateurView5() {
+        return (UtilisateurViewImpl) findViewObject("UtilisateurView5");
     }
 
     /**
      * Container's getter for UtilisateurView6.
      * @return UtilisateurView6
      */
-    public ViewObjectImpl getUtilisateurView6() {
-        return (ViewObjectImpl) findViewObject("UtilisateurView6");
+    public UtilisateurViewImpl getUtilisateurView6() {
+        return (UtilisateurViewImpl) findViewObject("UtilisateurView6");
     }
 
     /**
      * Container's getter for UtilisateurView7.
      * @return UtilisateurView7
      */
-    public ViewObjectImpl getUtilisateurView7() {
-        return (ViewObjectImpl) findViewObject("UtilisateurView7");
+    public UtilisateurViewImpl getUtilisateurView7() {
+        return (UtilisateurViewImpl) findViewObject("UtilisateurView7");
     }
 
     /**
@@ -3615,13 +3327,6 @@ public class AppModuleImpl extends ApplicationModuleImpl {
         return (ViewLinkImpl) findViewLink("FkUtilisateur2Link1");
     }
 
-    /**
-     * Container's getter for FkUtilisateur1Link1.
-     * @return FkUtilisateur1Link1
-     */
-    public ViewLinkImpl getFkUtilisateur1Link1() {
-        return (ViewLinkImpl) findViewLink("FkUtilisateur1Link1");
-    }
 
     /**
      * Container's getter for FkUtilisateur3Assoc1Link1.
@@ -3658,11 +3363,14 @@ public class AppModuleImpl extends ApplicationModuleImpl {
         vo.appendViewCriteria(vc);
         vo.executeQuery();
         if (vo.hasNext()){
+            String pgs = "";
             util = new UserData();
             Row rr=vo.next();
             util.setLoginuser(rr.getAttribute("Loginuser").toString());
             util.setNonuser(rr.getAttribute("Nomuser").toString());            
             util.setTelephone(rr.getAttribute("Telephone").toString());
+            util.setEmail(rr.getAttribute("Emailuser").toString());
+            util.setPassworduser(rr.getAttribute("Passworduser").toString());
             BigDecimal bd;
             BigDecimal b1;
             Boolean bb;
@@ -3701,6 +3409,24 @@ public class AppModuleImpl extends ApplicationModuleImpl {
             bb= (Boolean)rr.getAttribute("Saisietransit");
             util.setSaisietransit(bb);
             
+            bb= (Boolean)rr.getAttribute("Premiereconnexion");
+            util.setPconnect(bb);
+            
+            ViewObject vo1 = this.getListePages1();
+            ViewCriteria vc1 = vo1.createViewCriteria();;
+            ViewCriteriaRow vcr1 = vc1.createViewCriteriaRow();
+            vcr1.setAttribute("Idgroupe", util.getIdgroupe());
+            vc1.add(vcr1);
+            vo1.appendViewCriteria(vc1);
+            vo1.executeQuery();
+            while(vo1.hasNext()){
+                Row rr1 = vo1.next();
+                pgs = pgs + (String)rr1.getAttribute("Libellepage")+";";
+                
+            }
+            //System.out.println("les pages : "+pgs);
+            util.setPagesdugroupe(pgs);
+            
         }
         
         return util;
@@ -3729,6 +3455,343 @@ public class AppModuleImpl extends ApplicationModuleImpl {
      */
     public TypeacteurViewImpl getTypeacteurView1() {
         return (TypeacteurViewImpl) findViewObject("TypeacteurView1");
+    }
+
+
+    /**
+     * Container's getter for PermisView10.
+     * @return PermisView10
+     */
+    public PermisViewImpl getPermisView10() {
+        return (PermisViewImpl) findViewObject("PermisView10");
+    }
+
+
+    /**
+     * Container's getter for getLastidCertificatorigine1.
+     * @return getLastidCertificatorigine1
+     */
+    public ViewObjectImpl getgetLastidCertificatorigine1() {
+        return (ViewObjectImpl) findViewObject("getLastidCertificatorigine1");
+    }
+
+    /**
+     * Container's getter for getLastidDetailco1.
+     * @return getLastidDetailco1
+     */
+    public ViewObjectImpl getgetLastidDetailco1() {
+        return (ViewObjectImpl) findViewObject("getLastidDetailco1");
+    }
+
+
+    /**
+     * Container's getter for PermisView6.
+     * @return PermisView6
+     */
+    public PermisViewImpl getPermisView6() {
+        return (PermisViewImpl) findViewObject("PermisView6");
+    }
+
+
+    /**
+     * Container's getter for PagepargroupView1.
+     * @return PagepargroupView1
+     */
+    public ViewObjectImpl getPagepargroupView1() {
+        return (ViewObjectImpl) findViewObject("PagepargroupView1");
+    }
+
+    /**
+     * Container's getter for PageprojetView1.
+     * @return PageprojetView1
+     */
+    public ViewObjectImpl getPageprojetView1() {
+        return (ViewObjectImpl) findViewObject("PageprojetView1");
+    }
+
+    /**
+     * Container's getter for PagepargroupView2.
+     * @return PagepargroupView2
+     */
+    public ViewObjectImpl getPagepargroupView2() {
+        return (ViewObjectImpl) findViewObject("PagepargroupView2");
+    }
+
+    /**
+     * Container's getter for PagepargroupView3.
+     * @return PagepargroupView3
+     */
+    public ViewObjectImpl getPagepargroupView3() {
+        return (ViewObjectImpl) findViewObject("PagepargroupView3");
+    }
+
+    /**
+     * Container's getter for PagepargroupView4.
+     * @return PagepargroupView4
+     */
+    public ViewObjectImpl getPagepargroupView4() {
+        return (ViewObjectImpl) findViewObject("PagepargroupView4");
+    }
+
+    /**
+     * Container's getter for PagepargroupView5.
+     * @return PagepargroupView5
+     */
+    public ViewObjectImpl getPagepargroupView5() {
+        return (ViewObjectImpl) findViewObject("PagepargroupView5");
+    }
+
+    /**
+     * Container's getter for FkPagepargroup2Link1.
+     * @return FkPagepargroup2Link1
+     */
+    public ViewLinkImpl getFkPagepargroup2Link1() {
+        return (ViewLinkImpl) findViewLink("FkPagepargroup2Link1");
+    }
+
+    /**
+     * Container's getter for FkPagepargroup1Link1.
+     * @return FkPagepargroup1Link1
+     */
+    public ViewLinkImpl getFkPagepargroup1Link1() {
+        return (ViewLinkImpl) findViewLink("FkPagepargroup1Link1");
+    }
+
+    /**
+     * Container's getter for FkPagepargroup1Assoc1Link1.
+     * @return FkPagepargroup1Assoc1Link1
+     */
+    public ViewLinkImpl getFkPagepargroup1Assoc1Link1() {
+        return (ViewLinkImpl) findViewLink("FkPagepargroup1Assoc1Link1");
+    }
+
+    /**
+     * Container's getter for FkPagepargroup2Assoc1Link1.
+     * @return FkPagepargroup2Assoc1Link1
+     */
+    public ViewLinkImpl getFkPagepargroup2Assoc1Link1() {
+        return (ViewLinkImpl) findViewLink("FkPagepargroup2Assoc1Link1");
+    }
+
+    /**
+     * Container's getter for GroupeutilisateurView2.
+     * @return GroupeutilisateurView2
+     */
+    public ViewObjectImpl getGroupeutilisateurView2() {
+        return (ViewObjectImpl) findViewObject("GroupeutilisateurView2");
+    }
+
+    /**
+     * Container's getter for PagepargroupView6.
+     * @return PagepargroupView6
+     */
+    public ViewObjectImpl getPagepargroupView6() {
+        return (ViewObjectImpl) findViewObject("PagepargroupView6");
+    }
+
+    /**
+     * Container's getter for PageToGroupeLink.
+     * @return PageToGroupeLink
+     */
+    public ViewLinkImpl getPageToGroupeLink() {
+        return (ViewLinkImpl) findViewLink("PageToGroupeLink");
+    }
+
+    /**
+     * Container's getter for getLastidPagepargroupe1.
+     * @return getLastidPagepargroupe1
+     */
+    public ViewObjectImpl getgetLastidPagepargroupe1() {
+        return (ViewObjectImpl) findViewObject("getLastidPagepargroupe1");
+    }
+
+    /**
+     * Container's getter for ListePages1.
+     * @return ListePages1
+     */
+    public ViewObjectImpl getListePages1() {
+        return (ViewObjectImpl) findViewObject("ListePages1");
+    }
+
+    /**
+     * Container's getter for UtilisateurView8.
+     * @return UtilisateurView8
+     */
+    public UtilisateurViewImpl getUtilisateurView8() {
+        return (UtilisateurViewImpl) findViewObject("UtilisateurView8");
+    }
+    
+    public void changepwd(BigDecimal bd, String pwd){
+        UtilisateurViewImpl uv = getUtilisateurView8();
+        uv.setPwd(bd, pwd);
+        
+    }
+    
+    public void modifuser(BigDecimal bd, String nuser, String puser, String muser){
+        UtilisateurViewImpl uv = getUtilisateurView8();
+        uv.updateUer(bd, nuser, puser, muser);
+    }
+
+
+    /**
+     * Container's getter for PermisView11.
+     * @return PermisView11
+     */
+    public PermisViewImpl getPermisView11() {
+        return (PermisViewImpl) findViewObject("PermisView11");
+    }
+
+
+    /**
+     * Container's getter for CertificatorigineView1.
+     * @return CertificatorigineView1
+     */
+    public ViewObjectImpl getCertificatorigineView1() {
+        return (ViewObjectImpl) findViewObject("CertificatorigineView1");
+    }
+
+    /**
+     * Container's getter for CertificatorigineView2.
+     * @return CertificatorigineView2
+     */
+    public ViewObjectImpl getCertificatorigineView2() {
+        return (ViewObjectImpl) findViewObject("CertificatorigineView2");
+    }
+
+    /**
+     * Container's getter for PermisToCoLink1.
+     * @return PermisToCoLink1
+     */
+    public ViewLinkImpl getPermisToCoLink1() {
+        return (ViewLinkImpl) findViewLink("PermisToCoLink1");
+    }
+
+    /**
+     * Container's getter for CertificatorigineView3.
+     * @return CertificatorigineView3
+     */
+    public ViewObjectImpl getCertificatorigineView3() {
+        return (ViewObjectImpl) findViewObject("CertificatorigineView3");
+    }
+
+    /**
+     * Container's getter for PermisToCoLink2.
+     * @return PermisToCoLink2
+     */
+    public ViewLinkImpl getPermisToCoLink2() {
+        return (ViewLinkImpl) findViewLink("PermisToCoLink2");
+    }
+
+    /**
+     * Container's getter for getLastidCoView1.
+     * @return getLastidCoView1
+     */
+    public ViewObjectImpl getgetLastidCoView1() {
+        return (ViewObjectImpl) findViewObject("getLastidCoView1");
+    }
+
+    /**
+     * Container's getter for LocaliteView3.
+     * @return LocaliteView3
+     */
+    public ViewObjectImpl getLocaliteView3() {
+        return (ViewObjectImpl) findViewObject("LocaliteView3");
+    }
+
+    /**
+     * Container's getter for LocaliteView4.
+     * @return LocaliteView4
+     */
+    public ViewObjectImpl getLocaliteView4() {
+        return (ViewObjectImpl) findViewObject("LocaliteView4");
+    }
+
+    /**
+     * Container's getter for FkLocalite1Link2.
+     * @return FkLocalite1Link2
+     */
+    public ViewLinkImpl getFkLocalite1Link2() {
+        return (ViewLinkImpl) findViewLink("FkLocalite1Link2");
+    }
+
+    /**
+     * Container's getter for PostecontroleView1.
+     * @return PostecontroleView1
+     */
+    public PostecontroleViewImpl getPostecontroleView1() {
+        return (PostecontroleViewImpl) findViewObject("PostecontroleView1");
+    }
+
+    /**
+     * Container's getter for LocaliteView1.
+     * @return LocaliteView1
+     */
+    public ViewObjectImpl getLocaliteView1() {
+        return (ViewObjectImpl) findViewObject("LocaliteView1");
+    }
+
+    /**
+     * Container's getter for LocaliteView2.
+     * @return LocaliteView2
+     */
+    public ViewObjectImpl getLocaliteView2() {
+        return (ViewObjectImpl) findViewObject("LocaliteView2");
+    }
+
+    /**
+     * Container's getter for CollecteMulti1.
+     * @return CollecteMulti1
+     */
+    public CollecteMultiImpl getCollecteMulti1() {
+        return (CollecteMultiImpl) findViewObject("CollecteMulti1");
+    }
+
+    /**
+     * Container's getter for CollMultiCritere1.
+     * @return CollMultiCritere1
+     */
+    public CollMultiCritereImpl getCollMultiCritere1() {
+        return (CollMultiCritereImpl) findViewObject("CollMultiCritere1");
+    }
+
+    /**
+     * Container's getter for LettreVoitureMultiCritere1.
+     * @return LettreVoitureMultiCritere1
+     */
+    public ViewObjectImpl getLettreVoitureMultiCritere1() {
+        return (ViewObjectImpl) findViewObject("LettreVoitureMultiCritere1");
+    }
+
+    /**
+     * Container's getter for ExportMultiCritere1.
+     * @return ExportMultiCritere1
+     */
+    public ViewObjectImpl getExportMultiCritere1() {
+        return (ViewObjectImpl) findViewObject("ExportMultiCritere1");
+    }
+
+    /**
+     * Container's getter for CompilCollecte1.
+     * @return CompilCollecte1
+     */
+    public ViewObjectImpl getCompilCollecte1() {
+        return (ViewObjectImpl) findViewObject("CompilCollecte1");
+    }
+
+    /**
+     * Container's getter for CompilLettreVoiture1.
+     * @return CompilLettreVoiture1
+     */
+    public ViewObjectImpl getCompilLettreVoiture1() {
+        return (ViewObjectImpl) findViewObject("CompilLettreVoiture1");
+    }
+
+    /**
+     * Container's getter for CompilLettreVoitureDestination1.
+     * @return CompilLettreVoitureDestination1
+     */
+    public ViewObjectImpl getCompilLettreVoitureDestination1() {
+        return (ViewObjectImpl) findViewObject("CompilLettreVoitureDestination1");
     }
 }
 

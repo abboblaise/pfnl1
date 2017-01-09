@@ -30,7 +30,6 @@
   </Attribute>
   <Attribute
     Name="Idpermissionnaire"
-    IsNotNull="true"
     ColumnName="idpermissionnaire"
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
@@ -90,7 +89,8 @@
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
     ColumnType="BIGINT"
-    TableName="detailscollectepfnl">
+    TableName="detailscollectepfnl"
+    IsNotNull="true">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="19"/>
     </DesignTime>
@@ -98,23 +98,6 @@
       <SchemaBasedProperties>
         <LABEL
           ResId="UNIT_U00E9_DE_MESURE"/>
-      </SchemaBasedProperties>
-    </Properties>
-  </Attribute>
-  <Attribute
-    Name="Iddocumentofficiel"
-    ColumnName="iddocumentofficiel"
-    SQLType="NUMERIC"
-    Type="java.math.BigDecimal"
-    ColumnType="BIGINT"
-    TableName="detailscollectepfnl">
-    <DesignTime>
-      <Attr Name="_DisplaySize" Value="19"/>
-    </DesignTime>
-    <Properties>
-      <SchemaBasedProperties>
-        <LABEL
-          ResId="DOCUMENT_OFFICIEL"/>
       </SchemaBasedProperties>
     </Properties>
   </Attribute>
@@ -141,7 +124,8 @@
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
     ColumnType="BIGINT"
-    TableName="detailscollectepfnl">
+    TableName="detailscollectepfnl"
+    IsNotNull="true">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="19"/>
     </DesignTime>
@@ -243,20 +227,6 @@
     Type="oracle.jbo.server.EntityImpl"
     IsUpdateable="true"/>
   <AccessorAttribute
-    Name="Detailscollectepfnl2"
-    Association="cm.gov.minfof.model.entity.FkDetailscollectepfnl5Assoc"
-    AssociationEnd="cm.gov.minfof.model.entity.FkDetailscollectepfnl5Assoc.Detailscollectepfnl2"
-    AssociationOtherEnd="cm.gov.minfof.model.entity.FkDetailscollectepfnl5Assoc.IddocumentofficielDetailscollectepfnl"
-    Type="oracle.jbo.RowIterator"
-    IsUpdateable="false"/>
-  <AccessorAttribute
-    Name="IddocumentofficielDetailscollectepfnl"
-    Association="cm.gov.minfof.model.entity.FkDetailscollectepfnl5Assoc"
-    AssociationEnd="cm.gov.minfof.model.entity.FkDetailscollectepfnl5Assoc.IddocumentofficielDetailscollectepfnl"
-    AssociationOtherEnd="cm.gov.minfof.model.entity.FkDetailscollectepfnl5Assoc.Detailscollectepfnl2"
-    Type="oracle.jbo.server.EntityImpl"
-    IsUpdateable="true"/>
-  <AccessorAttribute
     Name="Detailscollectepfnl3"
     Association="cm.gov.minfof.model.entity.FkDetailscollectepfnl4Assoc"
     AssociationEnd="cm.gov.minfof.model.entity.FkDetailscollectepfnl4Assoc.Detailscollectepfnl3"
@@ -354,13 +324,30 @@
     AssociationOtherEnd="cm.gov.minfof.model.entity.DetailCollToPartieProdPfnlAssoc.Detailscollectepfnl"
     Type="cm.gov.minfof.model.entity.PartiesProduitsPfnlImpl"
     IsUpdateable="true"/>
-  <AccessorAttribute
-    Name="Permis"
-    Association="cm.gov.minfof.model.entity.DetailCollToDocOfficielAssoc"
-    AssociationEnd="cm.gov.minfof.model.entity.DetailCollToDocOfficielAssoc.Permis"
-    AssociationOtherEnd="cm.gov.minfof.model.entity.DetailCollToDocOfficielAssoc.Detailscollectepfnl"
-    Type="cm.gov.minfof.model.entity.PermisImpl"
-    IsUpdateable="true"/>
+  <Key
+    Name="DetailscollectepfnlIdpartieproduitpfnlCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"idpartieproduitpfnl" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="Detailscollectepfnl_Idpartiepr"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="cm.gov.minfof.model.entity.Detailscollectepfnl.Idpartieproduitpfnl"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="DetailscollectepfnlIdunitemesureCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"idunitemesure" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="Detailscollectepfnl_Idunitemes"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="cm.gov.minfof.model.entity.Detailscollectepfnl.Idunitemesure"/>
+    </AttrArray>
+  </Key>
   <Key
     Name="DetailscollectepfnlQuantiteCheck">
     <DesignTime>
@@ -434,9 +421,7 @@
       <Attr Name="_isForeign" Value="true"/>
       <Attr Name="_DBObjectName" Value="fk_detailscollectepfnl_5"/>
     </DesignTime>
-    <AttrArray Name="Attributes">
-      <Item Value="cm.gov.minfof.model.entity.Detailscollectepfnl.Iddocumentofficiel"/>
-    </AttrArray>
+    <AttrArray Name="Attributes"/>
   </Key>
   <Key
     Name="FkDetailscollectepfnl6">

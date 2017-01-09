@@ -7,7 +7,7 @@ public class DepartementViewSDOImpl extends SDODataObject implements Departement
 
    public static final int START_PROPERTY_INDEX = 0;
 
-   public static final int END_PROPERTY_INDEX = START_PROPERTY_INDEX + 7;
+   public static final int END_PROPERTY_INDEX = START_PROPERTY_INDEX + 6;
 
    public DepartementViewSDOImpl() {}
 
@@ -59,20 +59,12 @@ public class DepartementViewSDOImpl extends SDODataObject implements Departement
       set(START_PROPERTY_INDEX + 5 , value);
    }
 
-   public java.util.List getLocaliteView() {
+   public java.util.List getCommuneView() {
       return getList(START_PROPERTY_INDEX + 6);
    }
 
-   public void setLocaliteView(java.util.List value) {
+   public void setCommuneView(java.util.List value) {
       set(START_PROPERTY_INDEX + 6 , value);
-   }
-
-   public java.util.List getPostecontroleView() {
-      return getList(START_PROPERTY_INDEX + 7);
-   }
-
-   public void setPostecontroleView(java.util.List value) {
-      set(START_PROPERTY_INDEX + 7 , value);
    }
 
 

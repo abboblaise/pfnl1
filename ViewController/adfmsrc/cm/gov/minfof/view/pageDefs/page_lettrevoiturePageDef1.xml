@@ -3,18 +3,14 @@
                 Package="cm.gov.minfof.view.pageDefs">
   <parameters/>
   <executables>
-    <variableIterator id="variables">
-      <variable Name="dateDebut" Type="oracle.jbo.domain.Timestamp"/>
-      <variable Name="dateFin" Type="oracle.jbo.domain.Timestamp"/>
-    </variableIterator>
     <iterator Binds="LettrevoitureView1" RangeSize="25" DataControl="AppModuleDataControl"
               id="LettrevoitureView1Iterator"/>
-    <searchRegion Binds="LettrevoitureView1Iterator" Criteria=""
-                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="LettrevoitureView1Query"/>
     <iterator Binds="DetailslettrevoitureView5" RangeSize="25" DataControl="AppModuleDataControl"
               id="DetailslettrevoitureView5Iterator"/>
     <searchRegion Binds="DetailslettrevoitureView5Iterator" Criteria=""
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="DetailslettrevoitureView5Query"/>
+    <searchRegion Binds="LettrevoitureView1Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="LettrevoitureView1Query"/>
   </executables>
   <bindings>
     <attributeValues IterBinding="LettrevoitureView1Iterator" id="Numerolettrevoiture">
@@ -26,34 +22,13 @@
           DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
     <list IterBinding="LettrevoitureView1Iterator" StaticList="false" Uses="LOV_Idpermissionnaire"
           id="Idpermissionnaire" DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
-    <list IterBinding="LettrevoitureView1Iterator" StaticList="false" Uses="LOV_Idagrement" id="Idagrement"
-          DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
-    <list IterBinding="LettrevoitureView1Iterator" StaticList="false" Uses="LOV_Idvehicule" id="Idvehicule"
-          DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
     <attributeValues IterBinding="LettrevoitureView1Iterator" id="Nomconducteur">
       <AttrNames>
         <Item Value="Nomconducteur"/>
       </AttrNames>
     </attributeValues>
-    <list IterBinding="LettrevoitureView1Iterator" StaticList="false" Uses="LOV_Idpostechargement"
-          id="Idpostechargement" DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
     <list IterBinding="LettrevoitureView1Iterator" StaticList="false" Uses="LOV_Iddepartementdestination"
           id="Iddepartementdestination" DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
-    <tree IterBinding="LettrevoitureView1Iterator" id="LettrevoitureView1">
-      <nodeDefinition DefName="cm.gov.minfof.model.entityviewobject.LettrevoitureView" Name="LettrevoitureView10">
-        <AttrNames>
-          <Item Value="Numerolettrevoiture"/>
-          <Item Value="Idpermis"/>
-          <Item Value="Idpermissionnaire"/>
-          <Item Value="Idagrement"/>
-          <Item Value="Idvehicule"/>
-          <Item Value="Datelettrevoiture"/>
-          <Item Value="Nomconducteur"/>
-          <Item Value="Idpostechargement"/>
-          <Item Value="Iddepartementdestination"/>
-        </AttrNames>
-      </nodeDefinition>
-    </tree>
     <list IterBinding="DetailslettrevoitureView5Iterator" StaticList="false" Uses="LOV_Idpartieproduitpfnl"
           id="Idpartieproduitpfnl" DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
     <list IterBinding="DetailslettrevoitureView5Iterator" StaticList="false" Uses="LOV_Idunitemesure"
@@ -61,11 +36,6 @@
     <attributeValues IterBinding="DetailslettrevoitureView5Iterator" id="Quantite">
       <AttrNames>
         <Item Value="Quantite"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="DetailslettrevoitureView5Iterator" id="Observations">
-      <AttrNames>
-        <Item Value="Observations"/>
       </AttrNames>
     </attributeValues>
     <tree IterBinding="DetailslettrevoitureView5Iterator" id="DetailslettrevoitureView5">
@@ -79,31 +49,54 @@
         </AttrNames>
       </nodeDefinition>
     </tree>
-    <action IterBinding="LettrevoitureView1Iterator" id="CreateInsert" RequiresUpdateModel="true"
-            Action="createInsertRow"/>
     <action IterBinding="LettrevoitureView1Iterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
     <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
     <action IterBinding="DetailslettrevoitureView5Iterator" id="CreateInsert1" RequiresUpdateModel="true"
             Action="createInsertRow"/>
     <action IterBinding="DetailslettrevoitureView5Iterator" id="Delete1" RequiresUpdateModel="false"
             Action="removeCurrentRow"/>
-    <list IterBinding="DetailslettrevoitureView5Iterator" StaticList="false" Uses="LOV_Idlettrevoiture"
-          id="Idlettrevoiture" DTSupportsMRU="true" SelectItemValueMode="ListObject"/>
     <action id="Rollback" RequiresUpdateModel="false" Action="rollbackTransaction" DataControl="AppModuleDataControl"/>
     <attributeValues IterBinding="LettrevoitureView1Iterator" id="Datelettrevoiture">
       <AttrNames>
         <Item Value="Datelettrevoiture"/>
       </AttrNames>
     </attributeValues>
-    <attributeValues IterBinding="variables" id="dateDebut1">
+    <attributeValues IterBinding="LettrevoitureView1Iterator" id="Immatriculation">
       <AttrNames>
-        <Item Value="dateDebut"/>
+        <Item Value="Immatriculation"/>
       </AttrNames>
     </attributeValues>
-    <attributeValues IterBinding="variables" id="dateFin1">
+    <list IterBinding="LettrevoitureView1Iterator" StaticList="false" Uses="LOV_Idpostechargement"
+          id="Idpostechargement" DTSupportsMRU="true" SelectItemValueMode="ListObject"/>
+    <action IterBinding="LettrevoitureView1Iterator" id="First" RequiresUpdateModel="true" Action="first"/>
+    <action IterBinding="LettrevoitureView1Iterator" id="Previous" RequiresUpdateModel="true" Action="previous"/>
+    <action IterBinding="LettrevoitureView1Iterator" id="Next" RequiresUpdateModel="true" Action="next"/>
+    <action IterBinding="LettrevoitureView1Iterator" id="Last" RequiresUpdateModel="true" Action="last"/>
+    <tree IterBinding="LettrevoitureView1Iterator" id="LettrevoitureView1">
+      <nodeDefinition DefName="cm.gov.minfof.model.entityviewobject.LettrevoitureView" Name="LettrevoitureView10">
+        <AttrNames>
+          <Item Value="Numerolettrevoiture"/>
+          <Item Value="Idpermis"/>
+          <Item Value="Idpermissionnaire"/>
+          <Item Value="Immatriculation"/>
+          <Item Value="Nomconducteur"/>
+          <Item Value="Datelettrevoiture"/>
+          <Item Value="Idpostechargement"/>
+          <Item Value="Iddepartementdestination"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <attributeValues IterBinding="DetailslettrevoitureView5Iterator" id="Observations">
       <AttrNames>
-        <Item Value="dateFin"/>
+        <Item Value="Observations"/>
       </AttrNames>
     </attributeValues>
+    <action IterBinding="DetailslettrevoitureView5Iterator" id="First1" RequiresUpdateModel="true" Action="first"/>
+    <action IterBinding="DetailslettrevoitureView5Iterator" id="Last1" RequiresUpdateModel="true" Action="last"/>
+    <action IterBinding="DetailslettrevoitureView5Iterator" id="Next1" RequiresUpdateModel="true" Action="next"/>
+    <action IterBinding="DetailslettrevoitureView5Iterator" id="Previous1" RequiresUpdateModel="true"
+            Action="previous"/>
+    <action IterBinding="LettrevoitureView1Iterator" id="CreateInsert" RequiresUpdateModel="true"
+            Action="createInsertRow"/>
   </bindings>
 </pageDefinition>

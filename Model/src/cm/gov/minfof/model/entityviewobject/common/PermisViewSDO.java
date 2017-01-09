@@ -38,6 +38,14 @@ public interface PermisViewSDO extends java.io.Serializable {
 
    public void setTypedocument(java.lang.Integer value);
 
+   public java.lang.String getCheminfichier();
+
+   public void setCheminfichier(java.lang.String value);
+
+   public java.lang.String getNomfichier();
+
+   public void setNomfichier(java.lang.String value);
+
    public java.util.List getPermisView();
 
    public void setPermisView(java.util.List value);
@@ -49,6 +57,10 @@ public interface PermisViewSDO extends java.io.Serializable {
    public java.util.List getDetailpermisView();
 
    public void setDetailpermisView(java.util.List value);
+
+   public java.util.List getCertificatorigineView();
+
+   public void setCertificatorigineView(java.util.List value);
 
 
 }

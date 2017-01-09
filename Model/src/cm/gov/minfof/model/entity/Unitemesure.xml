@@ -12,7 +12,8 @@
   BindingStyle="JDBC"
   RowClass="cm.gov.minfof.model.entity.UnitemesureImpl"
   DefClass="cm.gov.minfof.model.entity.UnitemesureDefImpl"
-  CollClass="cm.gov.minfof.model.entity.UnitemesureCollImpl">
+  CollClass="cm.gov.minfof.model.entity.UnitemesureCollImpl"
+  xmlns:validation="http://xmlns.oracle.com/adfm/validation">
   <DesignTime>
     <Attr Name="_codeGenFlag2" Value="Init|Delete|Access|DML|Def|Coll|VarAccess"/>
     <Attr Name="_isCodegen" Value="true"/>
@@ -37,8 +38,7 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR"
-    TableName="unitemesure"
-    DefaultValue="entrez une valeur">
+    TableName="unitemesure">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="45"/>
     </DesignTime>
@@ -56,8 +56,7 @@
     Type="java.math.BigDecimal"
     ColumnType="BIGINT"
     TableName="unitemesure"
-    IsNotNull="true"
-    DefaultValue="1">
+    IsNotNull="true">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="19"/>
     </DesignTime>
@@ -76,8 +75,7 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR"
-    TableName="unitemesure"
-    DefaultValue="RE">
+    TableName="unitemesure">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="45"/>
     </DesignTime>
@@ -95,8 +93,7 @@
     SQLType="FLOAT"
     Type="java.lang.Float"
     ColumnType="FLOAT"
-    TableName="unitemesure"
-    DefaultValue="0">
+    TableName="unitemesure">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="12"/>
     </DesignTime>
@@ -113,8 +110,7 @@
     SQLType="INTEGER"
     Type="java.lang.Integer"
     ColumnType="TINYINT"
-    TableName="unitemesure"
-    DefaultValue="1">
+    TableName="unitemesure">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="10"/>
     </DesignTime>
@@ -132,8 +128,7 @@
     SQLType="FLOAT"
     Type="java.lang.Float"
     ColumnType="FLOAT"
-    TableName="unitemesure"
-    DefaultValue="0">
+    TableName="unitemesure">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="12"/>
     </DesignTime>
@@ -187,6 +182,17 @@
     AssociationOtherEnd="cm.gov.minfof.model.entity.DetailExportToUnitMesure.Unitemesure"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <Key
+    Name="AltKey"
+    AltKey="true">
+    <DesignTime>
+      <Attr Name="_isUnique" Value="true"/>
+      <Attr Name="_DBObjectName" Value="unitemesure"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="cm.gov.minfof.model.entity.Unitemesure.Libelleunitemesure"/>
+    </AttrArray>
+  </Key>
   <Key
     Name="Primary1"
     PrimaryKey="true">
@@ -263,6 +269,15 @@
       <Item Value="cm.gov.minfof.model.entity.Unitemesure.Idunitemesure"/>
     </AttrArray>
   </Key>
+  <validation:UniqueKeyValidationBean
+    Name="UnitemesureRule0"
+    ResId="CET_UNIT_U00E9_DE_MESURE_EXISTE_D_U00E9J_U00E0"
+    KeyName="AltKey">
+    <validation:OnAttributes>
+      <validation:Item
+        Value="Libelleunitemesure"/>
+    </validation:OnAttributes>
+  </validation:UniqueKeyValidationBean>
   <ResourceBundle>
     <PropertiesBundle
       PropertiesFile="cm.gov.minfof.model.ModelBundle"/>

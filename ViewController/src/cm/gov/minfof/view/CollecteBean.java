@@ -42,19 +42,26 @@ import net.sf.jasperreports.engine.util.JRLoader;
 import oracle.adf.model.BindingContext;
 import oracle.adf.model.binding.DCBindingContainer;
 import oracle.adf.model.binding.DCIteratorBinding;
+import oracle.adf.view.rich.event.DialogEvent;
 import oracle.adf.view.rich.event.QueryEvent;
 
 import oracle.binding.AttributeBinding;
 import oracle.binding.BindingContainer;
 import oracle.binding.OperationBinding;
 
+import oracle.jbo.ApplicationModule;
 import oracle.jbo.VariableValueManager;
 import oracle.jbo.ViewCriteria;
+import oracle.jbo.ViewObject;
 import oracle.jbo.domain.Timestamp;
 import oracle.jbo.server.ViewObjectImpl;
 
+import org.apache.myfaces.trinidad.event.AttributeChangeEvent;
+
 public class CollecteBean {
+    ShowJqNotification notifObj = new ShowJqNotification();
     private File fichier = null;
+
 
     public CollecteBean() {
     }
@@ -129,12 +136,14 @@ public class CollecteBean {
 
     public String supprimeCollecte() {
         BindingContainer bindings = getBindings();
-        OperationBinding operationBinding = bindings.getOperationBinding("Delete1");
+        OperationBinding operationBinding = bindings.getOperationBinding("Delete");
         Object result = operationBinding.execute();
-        executemethode("Commit");
+        Object o = executemethode("Commit");
+        //System.out.println("object = " + o);
         if (!operationBinding.getErrors().isEmpty()) {
             return null;
         }
+        notifObj.showNoticeMessageAction("Suppression effectuée!<br> La collecte a été supprimée avec succès");
         return null;
     }
 
@@ -167,6 +176,7 @@ public class CollecteBean {
         if (!operationBinding.getErrors().isEmpty()) {
             return null;
         }
+        notifObj.showNoticeMessageAction("Suppression effectuée! <br>La ligne a été supprimée avec succès");
         return null;
     }
 
@@ -181,12 +191,14 @@ public class CollecteBean {
     }
 
     public String enregistrerCollecte() {
+        System.out.println("entree dans enregistreCollecte");
         BindingContainer bindings = getBindings();
         OperationBinding operationBinding = bindings.getOperationBinding("Commit");
         Object result = operationBinding.execute();
         if (!operationBinding.getErrors().isEmpty()) {
             return null;
         }
+        notifObj.showNoticeMessageAction("Enregistrement effectué! <br>La collecte a été enregistrée avec succès");
         return null;
     }
 
@@ -298,19 +310,19 @@ public class CollecteBean {
         Timestamp sd = (Timestamp) attr.getInputValue();
         attr = (AttributeBinding) bindings.getControlBinding("dateFinVar1");
         Timestamp ed = (Timestamp) attr.getInputValue();
-        
+
         DCIteratorBinding iterIB = (DCIteratorBinding) getBindings().get("CollectepfnlView1Iterator");
-        ViewObjectImpl ttVO =  (ViewObjectImpl)iterIB.getViewObject();  
-        ViewCriteria vc = ttVO.getViewCriteria("CollectepfnlViewCriteria");  
-        VariableValueManager vvm_vc = vc.ensureVariableManager();         
-        vvm_vc.setVariableValue("dateDebut",sd);         
-        vvm_vc.setVariableValue("dateFin",ed); 
-        ttVO.setApplyViewCriteriaNames(new String[]{"CollectepfnlViewCriteria"});         
+        ViewObjectImpl ttVO = (ViewObjectImpl) iterIB.getViewObject();
+        ViewCriteria vc = ttVO.getViewCriteria("CollectepfnlViewCriteria");
+        VariableValueManager vvm_vc = vc.ensureVariableManager();
+        vvm_vc.setVariableValue("dateDebut", sd);
+        vvm_vc.setVariableValue("dateFin", ed);
+        ttVO.setApplyViewCriteriaNames(new String[] { "CollectepfnlViewCriteria" });
 
         invokeMethodExpression("#{bindings.CollectepfnlView1Query.processQuery}", Object.class, QueryEvent.class,
                                queryEvent);
     }
-    
+
     public Object invokeMethodExpression(String expr, Class returnType, Class[] argTypes, Object[] args) {
         FacesContext fc = FacesContext.getCurrentInstance();
         ELContext elctx = fc.getELContext();
@@ -318,8 +330,51 @@ public class CollecteBean {
         MethodExpression methodExpr = elFactory.createMethodExpression(elctx, expr, returnType, argTypes);
         return methodExpr.invoke(elctx, args);
     }
-    
+
     public Object invokeMethodExpression(String expr, Class returnType, Class argType, Object argument) {
         return invokeMethodExpression(expr, returnType, new Class[] { argType }, new Object[] { argument });
+    }
+
+    public void onDeleteCollecte(DialogEvent dialogEvent) {
+        if (dialogEvent.getOutcome() == DialogEvent.Outcome.ok) {
+            supprimeCollecte();
+        }
+    }
+
+    public void onDeleteDetailsCollecte(DialogEvent dialogEvent) {
+        if (dialogEvent.getOutcome() == DialogEvent.Outcome.ok) {
+            supprimerDetailCollecte();
+        }
+    }
+
+    public void qryId1_attributeChangeListener(AttributeChangeEvent attributeChangeEvent) {
+        /*    System.out.println("je suis entré");
+        DCIteratorBinding multiCritereIter = (DCIteratorBinding) getBindings().get("CollMultiCritere1Iterator");
+        DCIteratorBinding collecteCompileeIter = (DCIteratorBinding) getBindings().get("CompilCollecte1Iterator");
+        ViewCriteria multiCritereVC = multiCritereIter.getViewCriteria();
+        collecteCompileeIter.getViewObject().applyViewCriteria(multiCritereVC);
+        collecteCompileeIter.executeQuery();
+        System.out.println("je suis sorti");*/
+    }
+
+    public String actualiserHistogramme() {
+        System.out.println("je suis entré");
+        DCIteratorBinding multiCritereIter = (DCIteratorBinding) getBindings().get("CollMultiCritere1Iterator");
+        DCIteratorBinding collecteCompileeIter = (DCIteratorBinding) getBindings().get("CompilCollecte1Iterator");
+        ViewCriteria multiCritereVC;
+        
+        ApplicationModule appModule = multiCritereIter.getViewObject().getApplicationModule();
+        ViewObject vo = appModule.findViewObject("CollMultiCritere1");
+        ViewCriteria critere = vo.getViewCriteriaManager().getViewCriteria("CollMultiCritereCriteria");
+        
+        
+        multiCritereVC = multiCritereIter.getViewCriteria();
+        System.out.println("criteria = " + multiCritereVC.getName());
+        collecteCompileeIter.getViewObject().applyViewCriteria(critere);
+        collecteCompileeIter.executeQuery();
+        System.out.println("je suis sorti");
+       
+
+        return null;
     }
 }

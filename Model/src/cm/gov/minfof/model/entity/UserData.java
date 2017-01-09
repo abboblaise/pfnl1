@@ -2,11 +2,14 @@ package cm.gov.minfof.model.entity;
 
 import java.math.BigDecimal;
 
+
 public class UserData {
     private BigDecimal idutilisateur;
     private String loginuser;
+    private String Passworduser;
     private String nonuser;
     private String telephone;
+    private String email;
     private int niveauintervention;
     private BigDecimal idregion;
     private BigDecimal iddepartement;
@@ -20,6 +23,34 @@ public class UserData {
     private Boolean estcent;
     private Boolean estdep;
     private Boolean estreg;
+    private String pagesdugroupe;
+    private Boolean pconnect;
+
+
+    public void setPassworduser(String Passworduser) {
+        this.Passworduser = Passworduser;
+    }
+
+    public String getPassworduser() {
+        return Passworduser;
+    }
+
+    public void setPconnect(Boolean pconnect) {
+        this.pconnect = pconnect;
+    }
+
+    public Boolean getPconnect() {
+        return pconnect;
+    }
+
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getEmail() {
+        return email;
+    }
 
     public void setSaisieexport(Boolean saisieexport) {
         this.saisieexport = saisieexport;
@@ -157,4 +188,15 @@ public class UserData {
     public BigDecimal getIdgroupe() {
         return idgroupe;
     }
+
+
+    public void setPagesdugroupe(String pagesdugroupe) {
+        this.pagesdugroupe = pagesdugroupe;
+    }
+
+    public String getPagesdugroupe() {
+        return pagesdugroupe;
+    }
+    
+    
 }

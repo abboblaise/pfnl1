@@ -72,6 +72,9 @@
       <string v="oracle.toplink.workbench.addin/toplinkContentSet"/>
    </list>
    <value n="defaultPackage" v="cm.gov.minfof.view"/>
+   <hash n="oracle.adfdtinternal.view.rich.setting.ADFViewSettings">
+      <value n="ENABLE_ADF_WEBAPP_LIB_SUPPORT" v="true"/>
+   </hash>
    <hash n="oracle.ide.model.DependencyConfiguration">
       <list n="dependencyList">
          <hash>
@@ -88,6 +91,7 @@
          <list n="constituent-sets">
             <hash>
                <list n="pattern-filters">
+                  <string v="+arriere.jpg"/>
                   <string v="+logo_pfnl.png"/>
                   <string v="+texte.png"/>
                   <string v="+image-saleka1.jpg"/>
@@ -116,6 +120,8 @@
          <string v="ADFc"/>
          <string v="ADFm"/>
          <string v="Database"/>
+         <string v="HTML"/>
+         <string v="JAVASCRIPT"/>
          <string v="JSF"/>
          <string v="JSP"/>
          <string v="Java"/>
@@ -348,6 +354,22 @@
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
+            <value n="id" v="AbsoluteLayout"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="MyComponentsLib.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="ADF Common Web Runtime"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Mail"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
             <value n="id" v="Oracle XML Parser v2"/>
             <value n="isJDK" v="false"/>
          </hash>
@@ -449,6 +471,22 @@
                <value n="description" v="Jasperreports-functions-6.3.0.jar"/>
                <value n="id" v="Jasperreports-functions-6.3.0.jar"/>
                <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="../lib/MyComponentsLib.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="MyComponentsLib.jar"/>
+               <value n="id" v="MyComponentsLib.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="../lib/javamail-1.4.7/mail.jar" jar-entry=""/>
+               </list>
+               <value n="description" v="Mail"/>
+               <value n="id" v="Mail"/>
             </hash>
          </list>
       </hash>
@@ -575,6 +613,22 @@
          </hash>
          <hash>
             <value n="id" v="Jasperreports-functions-6.3.0.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="AbsoluteLayout"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="MyComponentsLib.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="ADF Common Web Runtime"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Mail"/>
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
@@ -721,6 +775,16 @@
             <value n="taglibURL" v="@oracle.home@../oracle_common/modules/oracle.adf.view/dvt-faces.jar!/META-INF/bi.taglib.xml"/>
             <value n="URI" v="http://xmlns.oracle.com/dss/adf/faces"/>
             <value n="version" v="1.1"/>
+         </hash>
+         <hash>
+            <value n="libraries" v="ADF Faces Components"/>
+            <value n="name" v="MyComponents"/>
+            <value n="prefix" v="mycomps"/>
+            <value n="runInEditor" v="true"/>
+            <value n="showInPalette" v="true"/>
+            <value n="taglibURL" v="@project@../lib/MyComponentsLib.jar!/META-INF/mycomponents.taglib.xml"/>
+            <value n="URI" v="http://mycompany.com/adf/components"/>
+            <value n="version" v="2.0"/>
          </hash>
       </list>
    </hash>

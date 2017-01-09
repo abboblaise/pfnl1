@@ -25,9 +25,6 @@ public interface CollectepfnlViewRow extends Row {
 
     void setIddepartement(BigDecimal value);
 
-    String getCodepcfc();
-
-    void setCodepcfc(String value);
 
     BigDecimal getIdlocalite();
 

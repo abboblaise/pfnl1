@@ -9,18 +9,22 @@ import javax.faces.context.FacesContext;
 import oracle.adf.model.BindingContext;
 import oracle.adf.model.binding.DCBindingContainer;
 import oracle.adf.model.binding.DCIteratorBinding;
+import oracle.adf.view.rich.event.DialogEvent;
 import oracle.adf.view.rich.event.QueryEvent;
 
 import oracle.binding.AttributeBinding;
 import oracle.binding.BindingContainer;
 import oracle.binding.OperationBinding;
 
+import oracle.jbo.ApplicationModule;
 import oracle.jbo.VariableValueManager;
 import oracle.jbo.ViewCriteria;
+import oracle.jbo.ViewObject;
 import oracle.jbo.domain.Timestamp;
 import oracle.jbo.server.ViewObjectImpl;
 
 public class LettreVoitureBean {
+    ShowJqNotification notifObj = new ShowJqNotification();
     public LettreVoitureBean() {
     }
 
@@ -32,6 +36,7 @@ public class LettreVoitureBean {
         BindingContainer bindings = getBindings();
         OperationBinding operationBinding = bindings.getOperationBinding("CreateInsert");
         Object result = operationBinding.execute();
+        executemethode("Commit");
         if (!operationBinding.getErrors().isEmpty()) {
             return null;
         }
@@ -75,5 +80,92 @@ public class LettreVoitureBean {
 
     public Object invokeMethodExpression(String expr, Class returnType, Class argType, Object argument) {
         return invokeMethodExpression(expr, returnType, new Class[] { argType }, new Object[] { argument });
+    }
+    
+    public BindingContainer getBindingContainer() {
+    BindingContext bindingContext = BindingContext.getCurrent();
+    return bindingContext.getCurrentBindingsEntry();
+    }
+    
+    public Object executemethode(String mthod){
+        BindingContainer bds = getBindingContainer();
+        OperationBinding ob = bds.getOperationBinding(mthod);
+        return ob.execute();
+    }
+
+    public String supprimerLettre() {
+        BindingContainer bindings = getBindings();
+        OperationBinding operationBinding = bindings.getOperationBinding("Delete");
+        Object result = operationBinding.execute();
+        executemethode("Commit");
+        if (!operationBinding.getErrors().isEmpty()) {
+            return null;
+        }
+        notifObj.showNoticeMessageAction("Suppression effectuée! Lettre de voiture supprimée avec succès");
+        return null;
+    }
+
+    public void onDeleteLettre(DialogEvent dialogEvent) {
+        if (dialogEvent.getOutcome() == DialogEvent.Outcome.ok) {
+            supprimerLettre();
+        }
+    }
+
+    public String supprimerDetailsLettre() {
+        BindingContainer bindings = getBindings();
+        OperationBinding operationBinding = bindings.getOperationBinding("Delete1");
+        Object result = operationBinding.execute();
+        executemethode("Commit");
+        if (!operationBinding.getErrors().isEmpty()) {
+            return null;
+        }
+        notifObj.showNoticeMessageAction("Suppression effectuée! Ligne de lettre de voiture supprimée avec succès");
+        return null;
+    }
+
+    public void onDeleteDetailsLettre(DialogEvent dialogEvent) {
+        if (dialogEvent.getOutcome() == DialogEvent.Outcome.ok) {
+            supprimerDetailsLettre();
+        }
+    }
+
+    public String enregistrerLettre() {
+        BindingContainer bindings = getBindings();
+        OperationBinding operationBinding = bindings.getOperationBinding("Commit");
+        Object result = operationBinding.execute();
+        if (!operationBinding.getErrors().isEmpty()) {
+            return null;
+        }
+        notifObj.showNoticeMessageAction("Enregistrement effectué! Lettre de voiture enregistrée avec succès");
+        return null;
+    }
+
+    public String creerDetailLV() {
+        BindingContainer bindings = getBindings();
+        OperationBinding operationBinding = bindings.getOperationBinding("CreateInsert1");
+        Object result = operationBinding.execute();
+        executemethode("Commit");
+        if (!operationBinding.getErrors().isEmpty()) {
+            return null;
+        }
+        return null;
+    }
+
+    public String refreshGraph() {
+        
+        DCIteratorBinding multiCritereIter = (DCIteratorBinding) getBindings().get("LettreVoitureMultiCritere1Iterator");
+        DCIteratorBinding lettreCompileeDepartIter = (DCIteratorBinding) getBindings().get("CompilLettreVoiture1Iterator");
+        DCIteratorBinding lettreCompileeDestIter = (DCIteratorBinding) getBindings().get("CompilLettreVoitureDestination1Iterator");
+        ViewCriteria multiCritereVC;
+        
+        ApplicationModule appModule = multiCritereIter.getViewObject().getApplicationModule();
+        ViewObject vo = appModule.findViewObject("LettreVoitureMultiCritere1");
+        ViewCriteria critere = vo.getViewCriteriaManager().getViewCriteria("LettreVoitureMultiCritereCriteria");
+                        
+        lettreCompileeDepartIter.getViewObject().applyViewCriteria(critere);
+        lettreCompileeDestIter.getViewObject().applyViewCriteria(critere);
+        lettreCompileeDepartIter.executeQuery();
+        lettreCompileeDestIter.executeQuery();
+        return null;
     }
 }

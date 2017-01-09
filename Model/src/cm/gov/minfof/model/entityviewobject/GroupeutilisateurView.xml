@@ -45,4 +45,9 @@
     ViewLink="cm.gov.minfof.model.entityviewobject.FkUtilisateur1Assoc1Link"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="PagepargroupView"
+    ViewLink="cm.gov.minfof.model.entityviewobject.PageToGroupeLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
 </ViewObject>

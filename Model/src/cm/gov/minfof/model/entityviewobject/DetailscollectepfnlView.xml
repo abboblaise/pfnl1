@@ -67,6 +67,10 @@
     Name="TypeacteurView1"
     ViewObjectName="cm.gov.minfof.model.entityviewobject.TypeacteurView"
     RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="CommuneView1"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.CommuneView"
+    RowLevelBinds="true"/>
   <ListBinding
     Name="LOV_Idorigine"
     ListVOName="OriginespnflsView1"
@@ -106,7 +110,7 @@
   </ListBinding>
   <ListBinding
     Name="LOV_Iddestination"
-    ListVOName="DepartementView1"
+    ListVOName="CommuneView1"
     NullValueFlag="start"
     NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
     MRUCount="0">
@@ -115,10 +119,10 @@
     </AttrArray>
     <AttrArray Name="AttrExpressions"/>
     <AttrArray Name="ListAttrNames">
-      <Item Value="Iddepartements"/>
+      <Item Value="Idcommunes"/>
     </AttrArray>
     <AttrArray Name="ListDisplayAttrNames">
-      <Item Value="Nomdepartement"/>
+      <Item Value="Nomcommune"/>
     </AttrArray>
     <DisplayCriteria/>
   </ListBinding>
@@ -155,24 +159,6 @@
     </AttrArray>
     <AttrArray Name="ListDisplayAttrNames">
       <Item Value="Nomouraisonsociale"/>
-    </AttrArray>
-    <DisplayCriteria/>
-  </ListBinding>
-  <ListBinding
-    Name="LOV_Iddocumentofficiel"
-    ListVOName="permisActifView1"
-    NullValueFlag="end"
-    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
-    MRUCount="0">
-    <AttrArray Name="AttrNames">
-      <Item Value="Iddocumentofficiel"/>
-    </AttrArray>
-    <AttrArray Name="AttrExpressions"/>
-    <AttrArray Name="ListAttrNames">
-      <Item Value="Idpermis"/>
-    </AttrArray>
-    <AttrArray Name="ListDisplayAttrNames">
-      <Item Value="Numeropermis"/>
     </AttrArray>
     <DisplayCriteria/>
   </ListBinding>
@@ -272,20 +258,6 @@
     </Properties>
   </ViewAttribute>
   <ViewAttribute
-    Name="Iddocumentofficiel"
-    PrecisionRule="true"
-    EntityAttrName="Iddocumentofficiel"
-    EntityUsage="Detailscollectepfnl"
-    AliasName="iddocumentofficiel"
-    LOVName="LOV_Iddocumentofficiel">
-    <Properties>
-      <SchemaBasedProperties>
-        <CONTROLTYPE
-          Value="choice"/>
-      </SchemaBasedProperties>
-    </Properties>
-  </ViewAttribute>
-  <ViewAttribute
     Name="Iddestination"
     PrecisionRule="true"
     EntityAttrName="Iddestination"
@@ -328,10 +300,10 @@
     LOVName="LOV_Idprovenance">
     <Properties>
       <SchemaBasedProperties>
-        <CONTROLTYPE
-          Value="choice"/>
         <LABEL
           ResId="PROVENANCE"/>
+        <CONTROLTYPE
+          Value="choice"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
@@ -356,18 +328,8 @@
     </Properties>
   </ViewAttribute>
   <ViewLinkAccessor
-    Name="DetailscollectepfnlView"
-    ViewLink="cm.gov.minfof.model.entityviewobject.FkDetailscollectepfnl7Link"
-    Type="oracle.jbo.RowIterator"
-    IsUpdateable="false"/>
-  <ViewLinkAccessor
     Name="DetailscollectepfnlView1"
     ViewLink="cm.gov.minfof.model.entityviewobject.FkDetailscollectepfnl6Link"
-    Type="oracle.jbo.RowIterator"
-    IsUpdateable="false"/>
-  <ViewLinkAccessor
-    Name="DetailscollectepfnlView2"
-    ViewLink="cm.gov.minfof.model.entityviewobject.FkDetailscollectepfnl5Link"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
   <ViewLinkAccessor
@@ -414,11 +376,6 @@
   <ViewLinkAccessor
     Name="UnitemesureView"
     ViewLink="cm.gov.minfof.model.entityviewobject.DetailCollToUnitMesureLink"
-    Type="oracle.jbo.server.ViewRowImpl"
-    IsUpdateable="false"/>
-  <ViewLinkAccessor
-    Name="PermisView"
-    ViewLink="cm.gov.minfof.model.entityviewobject.DetailCollToDocOfficielLink"
     Type="oracle.jbo.server.ViewRowImpl"
     IsUpdateable="false"/>
   <ViewLinkAccessor

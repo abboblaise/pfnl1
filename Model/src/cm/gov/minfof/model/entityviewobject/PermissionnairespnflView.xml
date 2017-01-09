@@ -37,12 +37,8 @@
     ViewObjectName="cm.gov.minfof.model.entityviewobject.listeExploitant"
     RowLevelBinds="true"/>
   <ViewAccessor
-    Name="DepartementView1"
-    ViewObjectName="cm.gov.minfof.model.entityviewobject.DepartementView"
-    RowLevelBinds="true"/>
-  <ViewAccessor
-    Name="PaysView1"
-    ViewObjectName="cm.gov.minfof.model.entityviewobject.PaysView"
+    Name="CommuneView1"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.CommuneView"
     RowLevelBinds="true"/>
   <ListBinding
     Name="LOV_Statut"
@@ -65,8 +61,7 @@
   <ListBinding
     Name="LOV_Typepersonne"
     ListVOName="listeTypePersonne1"
-    NullValueFlag="start"
-    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    NullValueFlag="none"
     MRUCount="0">
     <AttrArray Name="AttrNames">
       <Item Value="Typepersonne"/>
@@ -99,38 +94,20 @@
     <DisplayCriteria/>
   </ListBinding>
   <ListBinding
-    Name="LOV_Iddepartements"
-    ListVOName="DepartementView1"
+    Name="LOV_Idcommune"
+    ListVOName="CommuneView1"
     NullValueFlag="start"
     NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
     MRUCount="0">
     <AttrArray Name="AttrNames">
-      <Item Value="Iddepartements"/>
+      <Item Value="Idcommune"/>
     </AttrArray>
     <AttrArray Name="AttrExpressions"/>
     <AttrArray Name="ListAttrNames">
-      <Item Value="Iddepartements"/>
+      <Item Value="Idcommunes"/>
     </AttrArray>
     <AttrArray Name="ListDisplayAttrNames">
-      <Item Value="Nomdepartement"/>
-    </AttrArray>
-    <DisplayCriteria/>
-  </ListBinding>
-  <ListBinding
-    Name="LOV_Idpays"
-    ListVOName="PaysView1"
-    NullValueFlag="start"
-    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
-    MRUCount="0">
-    <AttrArray Name="AttrNames">
-      <Item Value="Idpays"/>
-    </AttrArray>
-    <AttrArray Name="AttrExpressions"/>
-    <AttrArray Name="ListAttrNames">
-      <Item Value="Idpays"/>
-    </AttrArray>
-    <AttrArray Name="ListDisplayAttrNames">
-      <Item Value="Nompays"/>
+      <Item Value="Nomcommune"/>
     </AttrArray>
     <DisplayCriteria/>
   </ListBinding>
@@ -188,20 +165,6 @@
     EntityUsage="Permissionnairespnfl"
     AliasName="CodePNFL"/>
   <ViewAttribute
-    Name="Iddepartements"
-    PrecisionRule="true"
-    EntityAttrName="Iddepartements"
-    EntityUsage="Permissionnairespnfl"
-    AliasName="IDDepartements"
-    LOVName="LOV_Iddepartements">
-    <Properties>
-      <SchemaBasedProperties>
-        <CONTROLTYPE
-          Value="choice"/>
-      </SchemaBasedProperties>
-    </Properties>
-  </ViewAttribute>
-  <ViewAttribute
     Name="Natureactivite"
     PrecisionRule="true"
     EntityAttrName="Natureactivite"
@@ -227,20 +190,6 @@
     EntityUsage="Permissionnairespnfl"
     AliasName="NUI"/>
   <ViewAttribute
-    Name="Idpays"
-    PrecisionRule="true"
-    EntityAttrName="Idpays"
-    EntityUsage="Permissionnairespnfl"
-    AliasName="IDPays"
-    LOVName="LOV_Idpays">
-    <Properties>
-      <SchemaBasedProperties>
-        <CONTROLTYPE
-          Value="choice"/>
-      </SchemaBasedProperties>
-    </Properties>
-  </ViewAttribute>
-  <ViewAttribute
     Name="Profession"
     PrecisionRule="true"
     EntityAttrName="Profession"
@@ -252,7 +201,8 @@
     EntityAttrName="Typepersonne"
     EntityUsage="Permissionnairespnfl"
     AliasName="typepersonne"
-    LOVName="LOV_Typepersonne">
+    LOVName="LOV_Typepersonne"
+    DefaultValue="2">
     <Properties>
       <SchemaBasedProperties>
         <CONTROLTYPE
@@ -280,11 +230,20 @@
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
-  <ViewLinkAccessor
-    Name="PermissionnairespnflView1"
-    ViewLink="cm.gov.minfof.model.entityviewobject.FkPermissionnairespnfl1Link"
-    Type="oracle.jbo.RowIterator"
-    IsUpdateable="false"/>
+  <ViewAttribute
+    Name="Idcommune"
+    PrecisionRule="true"
+    EntityAttrName="Idcommune"
+    EntityUsage="Permissionnairespnfl"
+    AliasName="idcommune"
+    LOVName="LOV_Idcommune">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewLinkAccessor
     Name="DetailscollectepfnlView"
     ViewLink="cm.gov.minfof.model.entityviewobject.DetailCollToPermissionnaireLink"

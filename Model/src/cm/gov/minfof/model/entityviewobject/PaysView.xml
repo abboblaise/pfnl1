@@ -37,6 +37,18 @@
     EntityAttrName="Nompays"
     EntityUsage="Pays"
     AliasName="NOMPays"/>
+  <ViewAttribute
+    Name="Codepays"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Codepays"
+    EntityUsage="Pays"
+    AliasName="codepays"/>
+  <SortCriteria>
+    <Sort
+      Attribute="Idpays"
+      Ascending="false"/>
+  </SortCriteria>
   <SortCriteria>
     <Sort
       Attribute="Idpays"

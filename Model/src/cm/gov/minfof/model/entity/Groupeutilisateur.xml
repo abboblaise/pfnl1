@@ -62,6 +62,13 @@
     AssociationOtherEnd="cm.gov.minfof.model.entity.FkUtilisateur1Assoc1.Groupeutilisateur2"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="Pagepargroup"
+    Association="cm.gov.minfof.model.entity.GroupeToPage"
+    AssociationEnd="cm.gov.minfof.model.entity.GroupeToPage.Pagepargroup"
+    AssociationOtherEnd="cm.gov.minfof.model.entity.GroupeToPage.Groupeutilisateur"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
   <Key
     Name="Primary1"
     PrimaryKey="true">

@@ -3,63 +3,45 @@
                 Package="cm.gov.minfof.view.pageDefs">
   <parameters/>
   <executables>
-    <iterator Binds="LocaliteView4" RangeSize="10" DataControl="AppModuleDataControl" id="LocaliteView4Iterator"/>
-    <iterator Binds="DepartementView1" RangeSize="-1" DataControl="AppModuleDataControl" id="DepartementView1Iterator"/>
-    <searchRegion Binds="LocaliteView4Iterator" Criteria=""
-                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="LocaliteView4Query"/>
+    <iterator Binds="LocaliteView1" RangeSize="25" DataControl="AppModuleDataControl" id="LocaliteView1Iterator"/>
+    <searchRegion Binds="LocaliteView1Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="LocaliteView11Query"/>
   </executables>
   <bindings>
-    <attributeValues IterBinding="LocaliteView4Iterator" id="Nomlocalite">
+    <action id="Commit" DataControl="AppModuleDataControl" RequiresUpdateModel="true" Action="commitTransaction"/>
+    <tree IterBinding="LocaliteView1Iterator" id="LocaliteView1">
+      <nodeDefinition DefName="cm.gov.minfof.model.entityviewobject.LocaliteView" Name="LocaliteView10">
+        <AttrNames>
+          <Item Value="Idlocalite"/>
+          <Item Value="Nomlocalite"/>
+          <Item Value="Idcommune"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <attributeValues IterBinding="LocaliteView1Iterator" id="Nomlocalite">
       <AttrNames>
         <Item Value="Nomlocalite"/>
       </AttrNames>
     </attributeValues>
-    <attributeValues IterBinding="LocaliteView4Iterator" id="Iddepartement">
-      <AttrNames>
-        <Item Value="Iddepartement"/>
-      </AttrNames>
-    </attributeValues>
-    <action IterBinding="LocaliteView4Iterator" id="Create" InstanceName="AppModuleDataControl.LocaliteView4"
-            DataControl="AppModuleDataControl" RequiresUpdateModel="true" Action="createRow"/>
-    <action IterBinding="LocaliteView4Iterator" id="Delete" InstanceName="AppModuleDataControl.LocaliteView4"
-            DataControl="AppModuleDataControl" RequiresUpdateModel="false" Action="removeCurrentRow"/>
-    <action id="Commit" DataControl="AppModuleDataControl" RequiresUpdateModel="true" Action="commitTransaction"/>
-    <list IterBinding="LocaliteView4Iterator" id="Iddepartements" DTSupportsMRU="true"
-          SelectItemValueMode="ListObject" StaticList="false" ListIter="DepartementView1Iterator">
-      <AttrNames>
-        <Item Value="Iddepartement"/>
-      </AttrNames>
-      <ListAttrNames>
-        <Item Value="Iddepartements"/>
-      </ListAttrNames>
-      <ListDisplayAttrNames>
-        <Item Value="Nomdepartement"/>
-      </ListDisplayAttrNames>
-    </list>
-    <tree IterBinding="LocaliteView4Iterator" id="LocaliteView4">
-      <nodeDefinition DefName="cm.gov.minfof.model.entityviewobject.LocaliteView" Name="LocaliteView40">
-        <AttrNames>
-          <Item Value="Nomlocalite"/>
-          <Item Value="Iddepartement"/>
-        </AttrNames>
-      </nodeDefinition>
-    </tree>
-    <list IterBinding="DepartementView1Iterator" ListOperMode="navigation" ListIter="DepartementView1Iterator"
-          id="DepartementView1" DTSupportsMRU="true" SelectItemValueMode="ListObject">
-      <AttrNames>
-        <Item Value="Nomdepartement"/>
-      </AttrNames>
-    </list>
-    <tree IterBinding="LocaliteView4Iterator" id="LocaliteView41">
-      <nodeDefinition DefName="cm.gov.minfof.model.entityviewobject.LocaliteView" Name="LocaliteView410">
-        <AttrNames>
-          <Item Value="Iddepartement"/>
-          <Item Value="Nomlocalite"/>
-        </AttrNames>
-      </nodeDefinition>
-    </tree>
-    <action IterBinding="LocaliteView4Iterator" id="CreateInsert" InstanceName="AppModuleDataControl.LocaliteView4"
-            DataControl="AppModuleDataControl" RequiresUpdateModel="true" Action="createInsertRow"/>
+    <action IterBinding="LocaliteView1Iterator" id="First" RequiresUpdateModel="true" Action="first"/>
+    <action IterBinding="LocaliteView1Iterator" id="Previous" RequiresUpdateModel="true" Action="previous"/>
+    <action IterBinding="LocaliteView1Iterator" id="Next" RequiresUpdateModel="true" Action="next"/>
+    <action IterBinding="LocaliteView1Iterator" id="Last" RequiresUpdateModel="true" Action="last"/>
+    <action IterBinding="LocaliteView1Iterator" id="Create" RequiresUpdateModel="true" Action="createRow"/>
+    <action IterBinding="LocaliteView1Iterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
     <action id="Rollback" RequiresUpdateModel="false" Action="rollbackTransaction" DataControl="AppModuleDataControl"/>
+    <tree IterBinding="LocaliteView1Iterator" id="LocaliteView11">
+      <nodeDefinition DefName="cm.gov.minfof.model.entityviewobject.LocaliteView" Name="LocaliteView110">
+        <AttrNames>
+          <Item Value="Idlocalite"/>
+          <Item Value="Nomlocalite"/>
+          <Item Value="Idcommune"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <list IterBinding="LocaliteView1Iterator" StaticList="false" Uses="LOV_Idcommune" id="Idcommune"
+          DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
+    <action IterBinding="LocaliteView1Iterator" id="CreateInsert" InstanceName="AppModuleDataControl.LocaliteView1"
+            DataControl="AppModuleDataControl" RequiresUpdateModel="true" Action="createInsertRow"/>
   </bindings>
 </pageDefinition>

@@ -38,8 +38,7 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR"
-    TableName="permis"
-    DefaultValue="entrez une valeur">
+    TableName="permis">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="100"/>
     </DesignTime>
@@ -76,10 +75,6 @@
     ColumnType="DATE"
     TableName="permis"
     IsNotNull="true">
-    <TransientExpression
-      Name="ExpressionScript"
-      trustMode="untrusted"
-      CodeSourceName="PermisRow"/>
     <Properties>
       <SchemaBasedProperties>
         <LABEL
@@ -139,8 +134,7 @@
     Type="java.math.BigDecimal"
     ColumnType="BIGINT"
     TableName="permis"
-    IsNotNull="true"
-    DefaultValue="1">
+    IsNotNull="true">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="19"/>
     </DesignTime>
@@ -158,8 +152,7 @@
     Type="java.lang.Integer"
     ColumnType="TINYINT"
     TableName="permis"
-    IsNotNull="true"
-    DefaultValue="1">
+    IsNotNull="true">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="3"/>
     </DesignTime>
@@ -169,6 +162,30 @@
           ResId="cm.gov.minfof.model.entity.Permis.Typedocument_LABEL"/>
       </SchemaBasedProperties>
     </Properties>
+  </Attribute>
+  <Attribute
+    Name="Cheminfichier"
+    Precision="500"
+    ColumnName="cheminfichier"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR"
+    TableName="permis">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="500"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Nomfichier"
+    Precision="100"
+    ColumnName="nomfichier"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR"
+    TableName="permis">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="100"/>
+    </DesignTime>
   </Attribute>
   <AccessorAttribute
     Name="Permis"
@@ -206,13 +223,6 @@
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
   <AccessorAttribute
-    Name="Detailscollectepfnl"
-    Association="cm.gov.minfof.model.entity.DetailCollToDocOfficielAssoc"
-    AssociationEnd="cm.gov.minfof.model.entity.DetailCollToDocOfficielAssoc.Detailscollectepfnl"
-    AssociationOtherEnd="cm.gov.minfof.model.entity.DetailCollToDocOfficielAssoc.Permis"
-    Type="oracle.jbo.RowIterator"
-    IsUpdateable="false"/>
-  <AccessorAttribute
     Name="Permissionnairespnfl"
     Association="cm.gov.minfof.model.entity.PermissionnaireToPermisAssoc"
     AssociationEnd="cm.gov.minfof.model.entity.PermissionnaireToPermisAssoc.Permissionnairespnfl"
@@ -224,6 +234,13 @@
     Association="cm.gov.minfof.model.entity.ExportToPermisAssoc"
     AssociationEnd="cm.gov.minfof.model.entity.ExportToPermisAssoc.Exportpfnl"
     AssociationOtherEnd="cm.gov.minfof.model.entity.ExportToPermisAssoc.Permis"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="Certificatorigine"
+    Association="cm.gov.minfof.model.entity.PermisToCoAssoc"
+    AssociationEnd="cm.gov.minfof.model.entity.PermisToCoAssoc.Certificatorigine"
+    AssociationOtherEnd="cm.gov.minfof.model.entity.PermisToCoAssoc.Permis"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
   <Key

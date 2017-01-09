@@ -26,13 +26,9 @@ public interface DepartementViewSDO extends java.io.Serializable {
 
    public void setDepartementView(java.util.List value);
 
-   public java.util.List getLocaliteView();
+   public java.util.List getCommuneView();
 
-   public void setLocaliteView(java.util.List value);
-
-   public java.util.List getPostecontroleView();
-
-   public void setPostecontroleView(java.util.List value);
+   public void setCommuneView(java.util.List value);
 
 
 }

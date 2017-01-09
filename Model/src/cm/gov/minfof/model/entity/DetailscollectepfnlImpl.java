@@ -27,7 +27,6 @@ public class DetailscollectepfnlImpl extends EntityImpl {
         Idorigine,
         Quantite,
         Idunitemesure,
-        Iddocumentofficiel,
         Iddestination,
         Idpartieproduitpfnl,
         Idcollectepfnl,
@@ -38,8 +37,6 @@ public class DetailscollectepfnlImpl extends EntityImpl {
         IdcollectepfnlDetailscollectepfnl,
         Detailscollectepfnl1,
         IddestinationDetailscollectepfnl,
-        Detailscollectepfnl2,
-        IddocumentofficielDetailscollectepfnl,
         Detailscollectepfnl3,
         IdunitemesureDetailscollectepfnl,
         Detailscollectepfnl4,
@@ -53,8 +50,7 @@ public class DetailscollectepfnlImpl extends EntityImpl {
         Unitemesure,
         Departement,
         Permissionnairespnfl,
-        PartiesProduitsPfnl,
-        Permis;
+        PartiesProduitsPfnl;
         private static AttributesEnum[] vals = null;
         private static final int firstIndex = 0;
 
@@ -84,7 +80,6 @@ public class DetailscollectepfnlImpl extends EntityImpl {
     public static final int IDORIGINE = AttributesEnum.Idorigine.index();
     public static final int QUANTITE = AttributesEnum.Quantite.index();
     public static final int IDUNITEMESURE = AttributesEnum.Idunitemesure.index();
-    public static final int IDDOCUMENTOFFICIEL = AttributesEnum.Iddocumentofficiel.index();
     public static final int IDDESTINATION = AttributesEnum.Iddestination.index();
     public static final int IDPARTIEPRODUITPFNL = AttributesEnum.Idpartieproduitpfnl.index();
     public static final int IDCOLLECTEPFNL = AttributesEnum.Idcollectepfnl.index();
@@ -96,9 +91,6 @@ public class DetailscollectepfnlImpl extends EntityImpl {
         AttributesEnum.IdcollectepfnlDetailscollectepfnl.index();
     public static final int DETAILSCOLLECTEPFNL1 = AttributesEnum.Detailscollectepfnl1.index();
     public static final int IDDESTINATIONDETAILSCOLLECTEPFNL = AttributesEnum.IddestinationDetailscollectepfnl.index();
-    public static final int DETAILSCOLLECTEPFNL2 = AttributesEnum.Detailscollectepfnl2.index();
-    public static final int IDDOCUMENTOFFICIELDETAILSCOLLECTEPFNL =
-        AttributesEnum.IddocumentofficielDetailscollectepfnl.index();
     public static final int DETAILSCOLLECTEPFNL3 = AttributesEnum.Detailscollectepfnl3.index();
     public static final int IDUNITEMESUREDETAILSCOLLECTEPFNL = AttributesEnum.IdunitemesureDetailscollectepfnl.index();
     public static final int DETAILSCOLLECTEPFNL4 = AttributesEnum.Detailscollectepfnl4.index();
@@ -115,7 +107,6 @@ public class DetailscollectepfnlImpl extends EntityImpl {
     public static final int DEPARTEMENT = AttributesEnum.Departement.index();
     public static final int PERMISSIONNAIRESPNFL = AttributesEnum.Permissionnairespnfl.index();
     public static final int PARTIESPRODUITSPFNL = AttributesEnum.PartiesProduitsPfnl.index();
-    public static final int PERMIS = AttributesEnum.Permis.index();
 
     /**
      * This is the default constructor (do not remove).
@@ -211,21 +202,6 @@ public class DetailscollectepfnlImpl extends EntityImpl {
         setAttributeInternal(IDUNITEMESURE, value);
     }
 
-    /**
-     * Gets the attribute value for Iddocumentofficiel, using the alias name Iddocumentofficiel.
-     * @return the value of Iddocumentofficiel
-     */
-    public BigDecimal getIddocumentofficiel() {
-        return (BigDecimal) getAttributeInternal(IDDOCUMENTOFFICIEL);
-    }
-
-    /**
-     * Sets <code>value</code> as the attribute value for Iddocumentofficiel.
-     * @param value value to set the Iddocumentofficiel
-     */
-    public void setIddocumentofficiel(BigDecimal value) {
-        setAttributeInternal(IDDOCUMENTOFFICIEL, value);
-    }
 
     /**
      * Gets the attribute value for Iddestination, using the alias name Iddestination.
@@ -365,26 +341,6 @@ public class DetailscollectepfnlImpl extends EntityImpl {
         setAttributeInternal(IDDESTINATIONDETAILSCOLLECTEPFNL, value);
     }
 
-    /**
-     * @return the associated entity oracle.jbo.RowIterator.
-     */
-    public RowIterator getDetailscollectepfnl2() {
-        return (RowIterator) getAttributeInternal(DETAILSCOLLECTEPFNL2);
-    }
-
-    /**
-     * @return the associated entity DetailscollectepfnlImpl.
-     */
-    public DetailscollectepfnlImpl getIddocumentofficielDetailscollectepfnl() {
-        return (DetailscollectepfnlImpl) getAttributeInternal(IDDOCUMENTOFFICIELDETAILSCOLLECTEPFNL);
-    }
-
-    /**
-     * Sets <code>value</code> as the associated entity DetailscollectepfnlImpl.
-     */
-    public void setIddocumentofficielDetailscollectepfnl(DetailscollectepfnlImpl value) {
-        setAttributeInternal(IDDOCUMENTOFFICIELDETAILSCOLLECTEPFNL, value);
-    }
 
     /**
      * @return the associated entity oracle.jbo.RowIterator.
@@ -552,20 +508,6 @@ public class DetailscollectepfnlImpl extends EntityImpl {
      */
     public void setPartiesProduitsPfnl(PartiesProduitsPfnlImpl value) {
         setAttributeInternal(PARTIESPRODUITSPFNL, value);
-    }
-
-    /**
-     * @return the associated entity PermisImpl.
-     */
-    public PermisImpl getPermis() {
-        return (PermisImpl) getAttributeInternal(PERMIS);
-    }
-
-    /**
-     * Sets <code>value</code> as the associated entity PermisImpl.
-     */
-    public void setPermis(PermisImpl value) {
-        setAttributeInternal(PERMIS, value);
     }
 
 

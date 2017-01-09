@@ -9,11 +9,6 @@
                   id="PaysView1Query"/>
   </executables>
   <bindings>
-    <attributeValues IterBinding="PaysView1Iterator" id="Idpays">
-      <AttrNames>
-        <Item Value="Idpays"/>
-      </AttrNames>
-    </attributeValues>
     <attributeValues IterBinding="PaysView1Iterator" id="Nompays">
       <AttrNames>
         <Item Value="Nompays"/>
@@ -25,6 +20,7 @@
         <AttrNames>
           <Item Value="Idpays"/>
           <Item Value="Nompays"/>
+          <Item Value="Codepays"/>
         </AttrNames>
       </nodeDefinition>
     </tree>
@@ -32,5 +28,14 @@
     <action IterBinding="PaysView1Iterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
     <action id="Rollback" RequiresUpdateModel="false" Action="rollbackTransaction" DataControl="AppModuleDataControl"/>
     <action IterBinding="PaysView1Iterator" id="Create" RequiresUpdateModel="true" Action="createRow"/>
+    <attributeValues IterBinding="PaysView1Iterator" id="Codepays">
+      <AttrNames>
+        <Item Value="Codepays"/>
+      </AttrNames>
+    </attributeValues>
+    <action IterBinding="PaysView1Iterator" id="First" RequiresUpdateModel="true" Action="first"/>
+    <action IterBinding="PaysView1Iterator" id="Previous" RequiresUpdateModel="true" Action="previous"/>
+    <action IterBinding="PaysView1Iterator" id="Next" RequiresUpdateModel="true" Action="next"/>
+    <action IterBinding="PaysView1Iterator" id="Last" RequiresUpdateModel="true" Action="last"/>
   </bindings>
 </pageDefinition>

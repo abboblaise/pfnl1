@@ -19,18 +19,15 @@
             <xsd:element name="Contact" type="xsd:string" minOccurs="0" nillable="true"/>
             <xsd:element name="Mail" type="xsd:string" minOccurs="0" nillable="true"/>
             <xsd:element name="Codepnfl" type="xsd:string" minOccurs="0" nillable="true"/>
-            <xsd:element name="Iddepartements" type="xsd:decimal" minOccurs="0" nillable="true"/>
             <xsd:element name="Natureactivite" type="xsd:string" minOccurs="0" nillable="true"/>
             <xsd:element name="Numceqe" type="xsd:string" minOccurs="0" nillable="true"/>
             <xsd:element name="Idpermissionnairespnfl" type="xsd:decimal" minOccurs="0"/>
             <xsd:element name="Nui" type="xsd:string" minOccurs="0" nillable="true"/>
-            <xsd:element name="Idpays" type="xsd:decimal" minOccurs="0" nillable="true"/>
             <xsd:element name="Profession" type="xsd:string" minOccurs="0" nillable="true"/>
-            <xsd:element name="Typepersonne" type="xsd:int" minOccurs="0" nillable="true"/>
+            <xsd:element name="Typepersonne" type="xsd:int" minOccurs="0" nillable="true" default="2"/>
             <xsd:element name="Adressep" type="xsd:string" minOccurs="0" nillable="true"/>
             <xsd:element name="Sexe" type="xsd:int" minOccurs="0" nillable="true"/>
-            <xsd:element name="PermissionnairespnflView1" type="PermissionnairespnflViewSDO" minOccurs="0"
-                 maxOccurs="unbounded"/>
+            <xsd:element name="Idcommune" type="xsd:decimal" minOccurs="0" nillable="true"/>
             <xsd:element name="PermisView" type="PermisViewSDO" minOccurs="0" maxOccurs="unbounded"/>
         </xsd:sequence>
     </xsd:complexType>

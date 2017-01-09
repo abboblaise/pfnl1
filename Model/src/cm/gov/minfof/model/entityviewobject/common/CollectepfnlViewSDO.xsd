@@ -16,10 +16,10 @@
         <xsd:sequence>
             <xsd:element name="Idcollectepfnl" type="xsd:decimal" minOccurs="0"/>
             <xsd:element name="Datecollecte" type="ns0:dateTime-Timestamp" minOccurs="0"/>
-            <xsd:element name="Identificateur" type="xsd:string" minOccurs="0" nillable="true"/>
             <xsd:element name="Iddepartement" type="xsd:decimal" minOccurs="0" nillable="true"/>
-            <xsd:element name="Codepcfc" type="xsd:string" minOccurs="0" nillable="true"/>
             <xsd:element name="Idlocalite" type="xsd:decimal" minOccurs="0" nillable="true"/>
+            <xsd:element name="Idposte" type="xsd:decimal" minOccurs="0" nillable="true"/>
+            <xsd:element name="Idutilisateur" type="xsd:decimal" minOccurs="0" nillable="true"/>
             <xsd:element name="CollectepfnlView" type="CollectepfnlViewSDO" minOccurs="0" maxOccurs="unbounded"/>
             <xsd:element name="DetailscollectepfnlView" type="DetailscollectepfnlViewSDO" minOccurs="0"
                  maxOccurs="unbounded"/>

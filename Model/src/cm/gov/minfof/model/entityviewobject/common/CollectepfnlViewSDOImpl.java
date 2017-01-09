@@ -27,35 +27,35 @@ public class CollectepfnlViewSDOImpl extends SDODataObject implements Collectepf
       set(START_PROPERTY_INDEX + 1 , value);
    }
 
-   public java.lang.String getIdentificateur() {
-      return getString(START_PROPERTY_INDEX + 2);
-   }
-
-   public void setIdentificateur(java.lang.String value) {
-      set(START_PROPERTY_INDEX + 2 , value);
-   }
-
    public java.math.BigDecimal getIddepartement() {
-      return getBigDecimal(START_PROPERTY_INDEX + 3);
+      return getBigDecimal(START_PROPERTY_INDEX + 2);
    }
 
    public void setIddepartement(java.math.BigDecimal value) {
-      set(START_PROPERTY_INDEX + 3 , value);
-   }
-
-   public java.lang.String getCodepcfc() {
-      return getString(START_PROPERTY_INDEX + 4);
-   }
-
-   public void setCodepcfc(java.lang.String value) {
-      set(START_PROPERTY_INDEX + 4 , value);
+      set(START_PROPERTY_INDEX + 2 , value);
    }
 
    public java.math.BigDecimal getIdlocalite() {
-      return getBigDecimal(START_PROPERTY_INDEX + 5);
+      return getBigDecimal(START_PROPERTY_INDEX + 3);
    }
 
    public void setIdlocalite(java.math.BigDecimal value) {
+      set(START_PROPERTY_INDEX + 3 , value);
+   }
+
+   public java.math.BigDecimal getIdposte() {
+      return getBigDecimal(START_PROPERTY_INDEX + 4);
+   }
+
+   public void setIdposte(java.math.BigDecimal value) {
+      set(START_PROPERTY_INDEX + 4 , value);
+   }
+
+   public java.math.BigDecimal getIdutilisateur() {
+      return getBigDecimal(START_PROPERTY_INDEX + 5);
+   }
+
+   public void setIdutilisateur(java.math.BigDecimal value) {
       set(START_PROPERTY_INDEX + 5 , value);
    }
 

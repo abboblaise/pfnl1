@@ -14,9 +14,9 @@
             <xsd:element name="Idpostecontrole" type="xsd:decimal" minOccurs="0"/>
             <xsd:element name="Codeposte" type="xsd:string" minOccurs="0"/>
             <xsd:element name="Intituleposte" type="xsd:string" minOccurs="0"/>
-            <xsd:element name="Iddepartement" type="xsd:decimal" minOccurs="0"/>
             <xsd:element name="Posteexport" type="xsd:int" minOccurs="0" nillable="true"/>
-            <xsd:element name="PostecontroleView" type="PostecontroleViewSDO" minOccurs="0" maxOccurs="unbounded"/>
+            <xsd:element name="Idcommune" type="xsd:decimal" minOccurs="0" nillable="true"/>
+            <xsd:element name="Nomcommune" type="xsd:string" minOccurs="0" nillable="true"/>
         </xsd:sequence>
     </xsd:complexType>
     <xsd:element name="postecontroleViewSDO" type="PostecontroleViewSDO"/>

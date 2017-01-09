@@ -59,8 +59,7 @@
     Type="java.lang.String"
     ColumnType="VARCHAR"
     TableName="produitspfnl"
-    IsNotNull="true"
-    DefaultValue="entrez un nom">
+    IsNotNull="true">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="100"/>
     </DesignTime>
@@ -152,8 +151,7 @@
     Type="java.math.BigDecimal"
     ColumnType="BIGINT"
     TableName="produitspfnl"
-    IsNotNull="true"
-    DefaultValue="1">
+    IsNotNull="true">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="19"/>
     </DesignTime>

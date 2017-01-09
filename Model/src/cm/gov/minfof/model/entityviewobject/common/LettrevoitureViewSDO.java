@@ -10,14 +10,6 @@ public interface LettrevoitureViewSDO extends java.io.Serializable {
 
    public void setIdpermissionnaire(java.math.BigDecimal value);
 
-   public java.math.BigDecimal getIdvehicule();
-
-   public void setIdvehicule(java.math.BigDecimal value);
-
-   public java.math.BigDecimal getIdagrement();
-
-   public void setIdagrement(java.math.BigDecimal value);
-
    public java.math.BigDecimal getIddepartementdestination();
 
    public void setIddepartementdestination(java.math.BigDecimal value);
@@ -42,21 +34,13 @@ public interface LettrevoitureViewSDO extends java.io.Serializable {
 
    public void setDatelettrevoiture(java.sql.Timestamp value);
 
-   public java.util.List getLettrevoitureView();
+   public java.lang.String getImmatriculation();
 
-   public void setLettrevoitureView(java.util.List value);
-
-   public java.util.List getLettrevoitureView1();
-
-   public void setLettrevoitureView1(java.util.List value);
+   public void setImmatriculation(java.lang.String value);
 
    public java.util.List getLettrevoitureView2();
 
    public void setLettrevoitureView2(java.util.List value);
-
-   public java.util.List getLettrevoitureView3();
-
-   public void setLettrevoitureView3(java.util.List value);
 
    public java.util.List getLettrevoitureView4();
 

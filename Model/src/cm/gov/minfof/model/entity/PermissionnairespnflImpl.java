@@ -28,20 +28,15 @@ public class PermissionnairespnflImpl extends EntityImpl {
         Contact,
         Mail,
         Codepnfl,
-        Iddepartements,
         Natureactivite,
         Numceqe,
         Idpermissionnairespnfl,
         Nui,
-        Idpays,
         Profession,
         Typepersonne,
         Adressep,
         Sexe,
-        Permissionnairespnfl,
-        IddepartementsPermissionnairespnfl,
-        Permissionnairespnfl1,
-        IdpaysPermissionnairespnfl,
+        Idcommune,
         Detailscollectepfnl,
         Permis,
         Exportpfnl;
@@ -76,21 +71,15 @@ public class PermissionnairespnflImpl extends EntityImpl {
     public static final int CONTACT = AttributesEnum.Contact.index();
     public static final int MAIL = AttributesEnum.Mail.index();
     public static final int CODEPNFL = AttributesEnum.Codepnfl.index();
-    public static final int IDDEPARTEMENTS = AttributesEnum.Iddepartements.index();
     public static final int NATUREACTIVITE = AttributesEnum.Natureactivite.index();
     public static final int NUMCEQE = AttributesEnum.Numceqe.index();
     public static final int IDPERMISSIONNAIRESPNFL = AttributesEnum.Idpermissionnairespnfl.index();
     public static final int NUI = AttributesEnum.Nui.index();
-    public static final int IDPAYS = AttributesEnum.Idpays.index();
     public static final int PROFESSION = AttributesEnum.Profession.index();
     public static final int TYPEPERSONNE = AttributesEnum.Typepersonne.index();
     public static final int ADRESSEP = AttributesEnum.Adressep.index();
     public static final int SEXE = AttributesEnum.Sexe.index();
-    public static final int PERMISSIONNAIRESPNFL = AttributesEnum.Permissionnairespnfl.index();
-    public static final int IDDEPARTEMENTSPERMISSIONNAIRESPNFL =
-        AttributesEnum.IddepartementsPermissionnairespnfl.index();
-    public static final int PERMISSIONNAIRESPNFL1 = AttributesEnum.Permissionnairespnfl1.index();
-    public static final int IDPAYSPERMISSIONNAIRESPNFL = AttributesEnum.IdpaysPermissionnairespnfl.index();
+    public static final int IDCOMMUNE = AttributesEnum.Idcommune.index();
     public static final int DETAILSCOLLECTEPFNL = AttributesEnum.Detailscollectepfnl.index();
     public static final int PERMIS = AttributesEnum.Permis.index();
     public static final int EXPORTPFNL = AttributesEnum.Exportpfnl.index();
@@ -221,21 +210,6 @@ public class PermissionnairespnflImpl extends EntityImpl {
         setAttributeInternal(CODEPNFL, value);
     }
 
-    /**
-     * Gets the attribute value for Iddepartements, using the alias name Iddepartements.
-     * @return the value of Iddepartements
-     */
-    public BigDecimal getIddepartements() {
-        return (BigDecimal) getAttributeInternal(IDDEPARTEMENTS);
-    }
-
-    /**
-     * Sets <code>value</code> as the attribute value for Iddepartements.
-     * @param value value to set the Iddepartements
-     */
-    public void setIddepartements(BigDecimal value) {
-        setAttributeInternal(IDDEPARTEMENTS, value);
-    }
 
     /**
      * Gets the attribute value for Natureactivite, using the alias name Natureactivite.
@@ -302,21 +276,6 @@ public class PermissionnairespnflImpl extends EntityImpl {
         setAttributeInternal(NUI, value);
     }
 
-    /**
-     * Gets the attribute value for Idpays, using the alias name Idpays.
-     * @return the value of Idpays
-     */
-    public BigDecimal getIdpays() {
-        return (BigDecimal) getAttributeInternal(IDPAYS);
-    }
-
-    /**
-     * Sets <code>value</code> as the attribute value for Idpays.
-     * @param value value to set the Idpays
-     */
-    public void setIdpays(BigDecimal value) {
-        setAttributeInternal(IDPAYS, value);
-    }
 
     /**
      * Gets the attribute value for Profession, using the alias name Profession.
@@ -384,45 +343,19 @@ public class PermissionnairespnflImpl extends EntityImpl {
 
 
     /**
-     * @return the associated entity oracle.jbo.RowIterator.
+     * Gets the attribute value for Idcommune, using the alias name Idcommune.
+     * @return the value of Idcommune
      */
-    public RowIterator getPermissionnairespnfl() {
-        return (RowIterator) getAttributeInternal(PERMISSIONNAIRESPNFL);
+    public BigDecimal getIdcommune() {
+        return (BigDecimal) getAttributeInternal(IDCOMMUNE);
     }
 
     /**
-     * @return the associated entity PermissionnairespnflImpl.
+     * Sets <code>value</code> as the attribute value for Idcommune.
+     * @param value value to set the Idcommune
      */
-    public PermissionnairespnflImpl getIddepartementsPermissionnairespnfl() {
-        return (PermissionnairespnflImpl) getAttributeInternal(IDDEPARTEMENTSPERMISSIONNAIRESPNFL);
-    }
-
-    /**
-     * Sets <code>value</code> as the associated entity PermissionnairespnflImpl.
-     */
-    public void setIddepartementsPermissionnairespnfl(PermissionnairespnflImpl value) {
-        setAttributeInternal(IDDEPARTEMENTSPERMISSIONNAIRESPNFL, value);
-    }
-
-    /**
-     * @return the associated entity oracle.jbo.RowIterator.
-     */
-    public RowIterator getPermissionnairespnfl1() {
-        return (RowIterator) getAttributeInternal(PERMISSIONNAIRESPNFL1);
-    }
-
-    /**
-     * @return the associated entity PermissionnairespnflImpl.
-     */
-    public PermissionnairespnflImpl getIdpaysPermissionnairespnfl() {
-        return (PermissionnairespnflImpl) getAttributeInternal(IDPAYSPERMISSIONNAIRESPNFL);
-    }
-
-    /**
-     * Sets <code>value</code> as the associated entity PermissionnairespnflImpl.
-     */
-    public void setIdpaysPermissionnairespnfl(PermissionnairespnflImpl value) {
-        setAttributeInternal(IDPAYSPERMISSIONNAIRESPNFL, value);
+    public void setIdcommune(BigDecimal value) {
+        setAttributeInternal(IDCOMMUNE, value);
     }
 
 

@@ -26,16 +26,16 @@ public class CollectepfnlImpl extends EntityImpl {
     protected enum AttributesEnum {
         Idcollectepfnl,
         Datecollecte,
-        Identificateur,
         Iddepartement,
-        Codepcfc,
         Idlocalite,
+        Idposte,
+        Idutilisateur,
         Collectepfnl,
         IdlocaliteCollectepfnl,
         Detailscollectepfnl,
-        Departement,
-        Localite;
+        Departement;
         private static AttributesEnum[] vals = null;
+        ;
         private static final int firstIndex = 0;
 
         protected int index() {
@@ -61,15 +61,14 @@ public class CollectepfnlImpl extends EntityImpl {
 
     public static final int IDCOLLECTEPFNL = AttributesEnum.Idcollectepfnl.index();
     public static final int DATECOLLECTE = AttributesEnum.Datecollecte.index();
-    public static final int IDENTIFICATEUR = AttributesEnum.Identificateur.index();
     public static final int IDDEPARTEMENT = AttributesEnum.Iddepartement.index();
-    public static final int CODEPCFC = AttributesEnum.Codepcfc.index();
     public static final int IDLOCALITE = AttributesEnum.Idlocalite.index();
+    public static final int IDPOSTE = AttributesEnum.Idposte.index();
+    public static final int IDUTILISATEUR = AttributesEnum.Idutilisateur.index();
     public static final int COLLECTEPFNL = AttributesEnum.Collectepfnl.index();
     public static final int IDLOCALITECOLLECTEPFNL = AttributesEnum.IdlocaliteCollectepfnl.index();
     public static final int DETAILSCOLLECTEPFNL = AttributesEnum.Detailscollectepfnl.index();
     public static final int DEPARTEMENT = AttributesEnum.Departement.index();
-    public static final int LOCALITE = AttributesEnum.Localite.index();
 
     /**
      * This is the default constructor (do not remove).
@@ -117,21 +116,6 @@ public class CollectepfnlImpl extends EntityImpl {
         setAttributeInternal(DATECOLLECTE, value);
     }
 
-    /**
-     * Gets the attribute value for Identificateur, using the alias name Identificateur.
-     * @return the value of Identificateur
-     */
-    public String getIdentificateur() {
-        return (String) getAttributeInternal(IDENTIFICATEUR);
-    }
-
-    /**
-     * Sets <code>value</code> as the attribute value for Identificateur.
-     * @param value value to set the Identificateur
-     */
-    public void setIdentificateur(String value) {
-        setAttributeInternal(IDENTIFICATEUR, value);
-    }
 
     /**
      * Gets the attribute value for Iddepartement, using the alias name Iddepartement.
@@ -149,21 +133,6 @@ public class CollectepfnlImpl extends EntityImpl {
         setAttributeInternal(IDDEPARTEMENT, value);
     }
 
-    /**
-     * Gets the attribute value for Codepcfc, using the alias name Codepcfc.
-     * @return the value of Codepcfc
-     */
-    public String getCodepcfc() {
-        return (String) getAttributeInternal(CODEPCFC);
-    }
-
-    /**
-     * Sets <code>value</code> as the attribute value for Codepcfc.
-     * @param value value to set the Codepcfc
-     */
-    public void setCodepcfc(String value) {
-        setAttributeInternal(CODEPCFC, value);
-    }
 
     /**
      * Gets the attribute value for Idlocalite, using the alias name Idlocalite.
@@ -179,6 +148,38 @@ public class CollectepfnlImpl extends EntityImpl {
      */
     public void setIdlocalite(BigDecimal value) {
         setAttributeInternal(IDLOCALITE, value);
+    }
+
+    /**
+     * Gets the attribute value for Idposte, using the alias name Idposte.
+     * @return the value of Idposte
+     */
+    public BigDecimal getIdposte() {
+        return (BigDecimal) getAttributeInternal(IDPOSTE);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for Idposte.
+     * @param value value to set the Idposte
+     */
+    public void setIdposte(BigDecimal value) {
+        setAttributeInternal(IDPOSTE, value);
+    }
+
+    /**
+     * Gets the attribute value for Idutilisateur, using the alias name Idutilisateur.
+     * @return the value of Idutilisateur
+     */
+    public BigDecimal getIdutilisateur() {
+        return (BigDecimal) getAttributeInternal(IDUTILISATEUR);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for Idutilisateur.
+     * @param value value to set the Idutilisateur
+     */
+    public void setIdutilisateur(BigDecimal value) {
+        setAttributeInternal(IDUTILISATEUR, value);
     }
 
     /**
@@ -214,20 +215,6 @@ public class CollectepfnlImpl extends EntityImpl {
      */
     public RowIterator getDepartement() {
         return (RowIterator) getAttributeInternal(DEPARTEMENT);
-    }
-
-    /**
-     * @return the associated entity LocaliteImpl.
-     */
-    public LocaliteImpl getLocalite() {
-        return (LocaliteImpl) getAttributeInternal(LOCALITE);
-    }
-
-    /**
-     * Sets <code>value</code> as the associated entity LocaliteImpl.
-     */
-    public void setLocalite(LocaliteImpl value) {
-        setAttributeInternal(LOCALITE, value);
     }
 
 

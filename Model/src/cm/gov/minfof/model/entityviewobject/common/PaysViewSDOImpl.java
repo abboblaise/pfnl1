@@ -7,7 +7,7 @@ public class PaysViewSDOImpl extends SDODataObject implements PaysViewSDO {
 
    public static final int START_PROPERTY_INDEX = 0;
 
-   public static final int END_PROPERTY_INDEX = START_PROPERTY_INDEX + 1;
+   public static final int END_PROPERTY_INDEX = START_PROPERTY_INDEX + 2;
 
    public PaysViewSDOImpl() {}
 
@@ -25,6 +25,14 @@ public class PaysViewSDOImpl extends SDODataObject implements PaysViewSDO {
 
    public void setNompays(java.lang.String value) {
       set(START_PROPERTY_INDEX + 1 , value);
+   }
+
+   public java.lang.String getCodepays() {
+      return getString(START_PROPERTY_INDEX + 2);
+   }
+
+   public void setCodepays(java.lang.String value) {
+      set(START_PROPERTY_INDEX + 2 , value);
    }
 
 

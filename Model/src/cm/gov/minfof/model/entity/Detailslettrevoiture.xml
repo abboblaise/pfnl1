@@ -69,6 +69,14 @@
     <DesignTime>
       <Attr Name="_DisplaySize" Value="150"/>
     </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYHEIGHT
+          Value="4"/>
+        <DISPLAYWIDTH
+          Value="20"/>
+      </SchemaBasedProperties>
+    </Properties>
   </Attribute>
   <Attribute
     Name="Idunitemesure"
@@ -77,8 +85,7 @@
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
     ColumnType="BIGINT"
-    TableName="detailslettrevoiture"
-    DefaultValue="1">
+    TableName="detailslettrevoiture">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="19"/>
     </DesignTime>
@@ -143,31 +150,10 @@
     Type="oracle.jbo.server.EntityImpl"
     IsUpdateable="true"/>
   <AccessorAttribute
-    Name="Lettrevoiture"
-    Association="cm.gov.minfof.model.entity.FkLettrevoiture5Assoc1"
-    AssociationEnd="cm.gov.minfof.model.entity.FkLettrevoiture5Assoc1.Lettrevoiture"
-    AssociationOtherEnd="cm.gov.minfof.model.entity.FkLettrevoiture5Assoc1.Detailslettrevoiture"
-    Type="oracle.jbo.RowIterator"
-    IsUpdateable="false"/>
-  <AccessorAttribute
-    Name="Lettrevoiture1"
-    Association="cm.gov.minfof.model.entity.FkLettrevoiture4Assoc1"
-    AssociationEnd="cm.gov.minfof.model.entity.FkLettrevoiture4Assoc1.Lettrevoiture1"
-    AssociationOtherEnd="cm.gov.minfof.model.entity.FkLettrevoiture4Assoc1.Detailslettrevoiture1"
-    Type="oracle.jbo.RowIterator"
-    IsUpdateable="false"/>
-  <AccessorAttribute
     Name="Lettrevoiture2"
     Association="cm.gov.minfof.model.entity.FkLettrevoiture3Assoc1"
     AssociationEnd="cm.gov.minfof.model.entity.FkLettrevoiture3Assoc1.Lettrevoiture2"
     AssociationOtherEnd="cm.gov.minfof.model.entity.FkLettrevoiture3Assoc1.Detailslettrevoiture2"
-    Type="oracle.jbo.RowIterator"
-    IsUpdateable="false"/>
-  <AccessorAttribute
-    Name="Lettrevoiture3"
-    Association="cm.gov.minfof.model.entity.FkLettrevoiture2Assoc1"
-    AssociationEnd="cm.gov.minfof.model.entity.FkLettrevoiture2Assoc1.Lettrevoiture3"
-    AssociationOtherEnd="cm.gov.minfof.model.entity.FkLettrevoiture2Assoc1.Detailslettrevoiture3"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
   <AccessorAttribute

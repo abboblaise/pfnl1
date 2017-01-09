@@ -21,10 +21,6 @@
           DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
     <list IterBinding="LettrevoitureView1Iterator" StaticList="false" Uses="LOV_Idpermissionnaire"
           id="Idpermissionnaire" DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
-    <list IterBinding="LettrevoitureView1Iterator" StaticList="false" Uses="LOV_Idagrement" id="Idagrement"
-          DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
-    <list IterBinding="LettrevoitureView1Iterator" StaticList="false" Uses="LOV_Idvehicule" id="Idvehicule"
-          DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
     <attributeValues IterBinding="LettrevoitureView1Iterator" id="Nomconducteur">
       <AttrNames>
         <Item Value="Nomconducteur"/>
@@ -40,8 +36,6 @@
           <Item Value="Numerolettrevoiture"/>
           <Item Value="Idpermis"/>
           <Item Value="Idpermissionnaire"/>
-          <Item Value="Idagrement"/>
-          <Item Value="Idvehicule"/>
           <Item Value="Nomconducteur"/>
           <Item Value="Idpostechargement"/>
           <Item Value="Iddepartementdestination"/>

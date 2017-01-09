@@ -22,10 +22,6 @@ public interface DetailscollectepfnlViewSDO extends java.io.Serializable {
 
    public void setIdunitemesure(java.math.BigDecimal value);
 
-   public java.math.BigDecimal getIddocumentofficiel();
-
-   public void setIddocumentofficiel(java.math.BigDecimal value);
-
    public java.math.BigDecimal getIddestination();
 
    public void setIddestination(java.math.BigDecimal value);
@@ -50,17 +46,9 @@ public interface DetailscollectepfnlViewSDO extends java.io.Serializable {
 
    public void setTypeacteur(java.lang.Integer value);
 
-   public java.util.List getDetailscollectepfnlView();
-
-   public void setDetailscollectepfnlView(java.util.List value);
-
    public java.util.List getDetailscollectepfnlView1();
 
    public void setDetailscollectepfnlView1(java.util.List value);
-
-   public java.util.List getDetailscollectepfnlView2();
-
-   public void setDetailscollectepfnlView2(java.util.List value);
 
    public java.util.List getDetailscollectepfnlView3();
 
@@ -81,10 +69,6 @@ public interface DetailscollectepfnlViewSDO extends java.io.Serializable {
    public cm.gov.minfof.model.entityviewobject.common.PermissionnairespnflViewSDO getPermissionnairespnflView();
 
    public void setPermissionnairespnflView(cm.gov.minfof.model.entityviewobject.common.PermissionnairespnflViewSDO value);
-
-   public cm.gov.minfof.model.entityviewobject.common.PermisViewSDO getPermisView();
-
-   public void setPermisView(cm.gov.minfof.model.entityviewobject.common.PermisViewSDO value);
 
    public cm.gov.minfof.model.entity.common.PartiesProduitsPfnlViewSDO getPartiesProduitsPfnlView();
 

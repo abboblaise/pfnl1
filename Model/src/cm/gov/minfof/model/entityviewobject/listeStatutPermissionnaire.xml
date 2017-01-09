@@ -28,7 +28,8 @@
     IsPersistent="false"
     PrecisionRule="true"
     Type="java.lang.Integer"
-    ColumnType="$none$"/>
+    ColumnType="$none$"
+    SQLType="INTEGER"/>
   <ViewAttribute
     Name="libelleStatutPermissionnaire"
     IsUpdateable="false"
@@ -42,7 +43,7 @@
     <Item Value="id"/>
   </AttrArray>
   <StaticList
-    Rows="3"
+    Rows="4"
     Columns="2"/>
   <ResourceBundle>
     <PropertiesBundle

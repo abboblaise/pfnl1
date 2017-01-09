@@ -34,8 +34,7 @@
     Type="java.math.BigDecimal"
     ColumnType="BIGINT"
     TableName="exportpfnl"
-    IsNotNull="true"
-    DefaultValue="1">
+    IsNotNull="true">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="19"/>
     </DesignTime>
@@ -55,8 +54,7 @@
     Type="java.math.BigDecimal"
     ColumnType="BIGINT"
     TableName="exportpfnl"
-    IsNotNull="true"
-    DefaultValue="1">
+    IsNotNull="true">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="19"/>
     </DesignTime>
@@ -78,7 +76,6 @@
     Type="java.lang.String"
     ColumnType="VARCHAR"
     TableName="exportpfnl"
-    DefaultValue="entrez une valeur"
     IsNotNull="true">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="100"/>
@@ -99,9 +96,7 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR"
-    TableName="exportpfnl"
-    IsNotNull="true"
-    DefaultValue="entrez une valeur">
+    TableName="exportpfnl">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="100"/>
     </DesignTime>
@@ -126,6 +121,23 @@
       <SchemaBasedProperties>
         <LABEL
           ResId="DATE_D_EXPORTATION"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
+  <Attribute
+    Name="Idposteexport"
+    ColumnName="idposteexport"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="BIGINT"
+    TableName="exportpfnl">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="19"/>
+    </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="POSTE_D_EXPORTATION"/>
       </SchemaBasedProperties>
     </Properties>
   </Attribute>
@@ -200,18 +212,6 @@
     </DesignTime>
     <AttrArray Name="Attributes">
       <Item Value="cm.gov.minfof.model.entity.Exportpfnl.Idpermissionnaire"/>
-    </AttrArray>
-  </Key>
-  <Key
-    Name="ExportpfnlNumerocoCheck">
-    <DesignTime>
-      <Attr Name="_isNotNull" Value="true"/>
-      <Attr Name="_checkCondition" Value='"numeroco" IS NOT NULL'/>
-      <Attr Name="_isCheck" Value="true"/>
-      <Attr Name="_DBObjectName" Value="Exportpfnl_Numeroco_Check"/>
-    </DesignTime>
-    <AttrArray Name="Attributes">
-      <Item Value="cm.gov.minfof.model.entity.Exportpfnl.Numeroco"/>
     </AttrArray>
   </Key>
   <Key

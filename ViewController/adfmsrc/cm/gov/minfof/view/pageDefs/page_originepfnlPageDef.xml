@@ -10,11 +10,6 @@
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="OriginespnflsView1Query"/>
   </executables>
   <bindings>
-    <attributeValues IterBinding="OriginespnflsView1Iterator" id="Idoriginespnfls">
-      <AttrNames>
-        <Item Value="Idoriginespnfls"/>
-      </AttrNames>
-    </attributeValues>
     <attributeValues IterBinding="OriginespnflsView1Iterator" id="Nomsource">
       <AttrNames>
         <Item Value="Nomsource"/>
@@ -36,5 +31,9 @@
     <action IterBinding="OriginespnflsView1Iterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
     <action id="Rollback" RequiresUpdateModel="false" Action="rollbackTransaction" DataControl="AppModuleDataControl"/>
     <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
+    <action IterBinding="OriginespnflsView1Iterator" id="First" RequiresUpdateModel="true" Action="first"/>
+    <action IterBinding="OriginespnflsView1Iterator" id="Previous" RequiresUpdateModel="true" Action="previous"/>
+    <action IterBinding="OriginespnflsView1Iterator" id="Next" RequiresUpdateModel="true" Action="next"/>
+    <action IterBinding="OriginespnflsView1Iterator" id="Last" RequiresUpdateModel="true" Action="last"/>
   </bindings>
 </pageDefinition>

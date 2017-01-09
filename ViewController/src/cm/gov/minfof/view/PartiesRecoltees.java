@@ -2,10 +2,13 @@ package cm.gov.minfof.view;
 
 import oracle.adf.model.BindingContext;
 
+import oracle.adf.view.rich.event.DialogEvent;
+
 import oracle.binding.BindingContainer;
 import oracle.binding.OperationBinding;
 
 public class PartiesRecoltees {
+    ShowJqNotification notifObj = new ShowJqNotification();
     public PartiesRecoltees() {
     }
 
@@ -33,10 +36,13 @@ public class PartiesRecoltees {
         if (!operationBinding.getErrors().isEmpty()) {
             return null;
         }
+        String nomPartie = notifObj.getValueOfField("PartiesRecolteesView1Iterator", "Nompartierecoltee");
+        notifObj.showNoticeMessageAction("Enregistrement effectué! La partie <b>"+ nomPartie +" </b>a été enregistrée avec succès");
         return null;
     }
 
     public String supprimePartieRecoltees() {
+        String nomPartie = notifObj.getValueOfField("PartiesRecolteesView1Iterator", "Nompartierecoltee");
         BindingContainer bindings = getBindings();
         OperationBinding operationBinding = bindings.getOperationBinding("Delete");
         Object result = operationBinding.execute();
@@ -44,6 +50,7 @@ public class PartiesRecoltees {
         if (!operationBinding.getErrors().isEmpty()) {
             return null;
         }
+        notifObj.showNoticeMessageAction("Suppression effectuée! La partie <b>"+ nomPartie +" </b>a été supprimée avec succès");
         return null;
     }
 
@@ -56,5 +63,11 @@ public class PartiesRecoltees {
             return null;
         }
         return null;
+    }
+
+    public void onDelete(DialogEvent dialogEvent) {
+        if (dialogEvent.getOutcome() == DialogEvent.Outcome.ok) {
+            supprimePartieRecoltees();
+        }
     }
 }

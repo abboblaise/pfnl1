@@ -180,6 +180,18 @@
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
+  <ViewAttribute
+    Name="Cheminfichier"
+    PrecisionRule="true"
+    EntityAttrName="Cheminfichier"
+    EntityUsage="Permis"
+    AliasName="cheminfichier"/>
+  <ViewAttribute
+    Name="Nomfichier"
+    PrecisionRule="true"
+    EntityAttrName="Nomfichier"
+    EntityUsage="Permis"
+    AliasName="nomfichier"/>
   <ViewCriteria
     Name="PermisViewCriteria"
     ViewObjectName="cm.gov.minfof.model.entityviewobject.PermisView"
@@ -257,12 +269,6 @@
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
   <ViewLinkAccessor
-    Name="DetailscollectepfnlView"
-    ViewLink="cm.gov.minfof.model.entityviewobject.DetailCollToDocOfficielLink"
-    Type="oracle.jbo.RowIterator"
-    Reversed="true"
-    IsUpdateable="false"/>
-  <ViewLinkAccessor
     Name="PermissionnairespnflView"
     ViewLink="cm.gov.minfof.model.entityviewobject.PermissionnaireToPermisLink"
     Type="oracle.jbo.server.ViewRowImpl"
@@ -274,8 +280,73 @@
     Type="oracle.jbo.RowIterator"
     Reversed="true"
     IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="CertificatorigineView"
+    ViewLink="cm.gov.minfof.model.entityviewobject.PermisToCoLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
   <ClientInterface
     Name="__clientInterface">
+    <Method
+      Name="setDebut"
+      MethodName="setDebut">
+      <Return
+        Name="_return_type_"
+        Type="void"/>
+      <Parameter
+        Name="value"
+        Type="java.sql.Timestamp"/>
+    </Method>
+    <Method
+      Name="setFin"
+      MethodName="setFin">
+      <Return
+        Name="_return_type_"
+        Type="void"/>
+      <Parameter
+        Name="value"
+        Type="java.sql.Timestamp"/>
+    </Method>
+    <Method
+      Name="setDebut"
+      MethodName="setDebut">
+      <Return
+        Name="_return_type_"
+        Type="void"/>
+      <Parameter
+        Name="value"
+        Type="java.sql.Timestamp"/>
+    </Method>
+    <Method
+      Name="setFin"
+      MethodName="setFin">
+      <Return
+        Name="_return_type_"
+        Type="void"/>
+      <Parameter
+        Name="value"
+        Type="java.sql.Timestamp"/>
+    </Method>
+    <Method
+      Name="setDebut"
+      MethodName="setDebut">
+      <Return
+        Name="_return_type_"
+        Type="void"/>
+      <Parameter
+        Name="value"
+        Type="java.sql.Timestamp"/>
+    </Method>
+    <Method
+      Name="setFin"
+      MethodName="setFin">
+      <Return
+        Name="_return_type_"
+        Type="void"/>
+      <Parameter
+        Name="value"
+        Type="java.sql.Timestamp"/>
+    </Method>
     <Method
       Name="setDebut"
       MethodName="setDebut">

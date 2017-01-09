@@ -8,7 +8,10 @@
   InheritPersonalization="merge"
   BindingStyle="JDBC"
   CustomQuery="true"
-  PageIterMode="Full">
+  PageIterMode="Full"
+  SdoGen="true"
+  SdoName="cm.gov.minfof.model.queryviewobject.common.RegionsViewSDO"
+  SdoNameSpace="/cm/gov/minfof/model/queryviewobject/common/">
   <DesignTime>
     <Attr Name="_isExpertMode" Value="true"/>
   </DesignTime>
@@ -74,7 +77,7 @@ FROM pfnl.regions PfnlRegions]]></SQLQuery>
     ColumnType="LONGTEXT"
     AliasName="descriptionregions"
     Expression="descriptionregions"
-    SQLType="STRUCT"/>
+    SQLType="$none$"/>
   <ViewAttribute
     Name="Cheflieuregion"
     IsUpdateable="false"

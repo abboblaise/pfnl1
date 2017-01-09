@@ -35,15 +35,18 @@ public class PermisImpl extends EntityImpl {
         Idagrement,
         Idpermissionnaire,
         Typedocument,
+        Cheminfichier,
+        Nomfichier,
         Permis,
         IdpermissionnairePermis,
         Permis1,
         IdagrementPermis,
         Detailpermis,
-        Detailscollectepfnl,
         Permissionnairespnfl,
-        Exportpfnl;
+        Exportpfnl,
+        Certificatorigine;
         private static AttributesEnum[] vals = null;
+        ;
         private static final int firstIndex = 0;
 
         protected int index() {
@@ -76,14 +79,16 @@ public class PermisImpl extends EntityImpl {
     public static final int IDAGREMENT = AttributesEnum.Idagrement.index();
     public static final int IDPERMISSIONNAIRE = AttributesEnum.Idpermissionnaire.index();
     public static final int TYPEDOCUMENT = AttributesEnum.Typedocument.index();
+    public static final int CHEMINFICHIER = AttributesEnum.Cheminfichier.index();
+    public static final int NOMFICHIER = AttributesEnum.Nomfichier.index();
     public static final int PERMIS = AttributesEnum.Permis.index();
     public static final int IDPERMISSIONNAIREPERMIS = AttributesEnum.IdpermissionnairePermis.index();
     public static final int PERMIS1 = AttributesEnum.Permis1.index();
     public static final int IDAGREMENTPERMIS = AttributesEnum.IdagrementPermis.index();
     public static final int DETAILPERMIS = AttributesEnum.Detailpermis.index();
-    public static final int DETAILSCOLLECTEPFNL = AttributesEnum.Detailscollectepfnl.index();
     public static final int PERMISSIONNAIRESPNFL = AttributesEnum.Permissionnairespnfl.index();
     public static final int EXPORTPFNL = AttributesEnum.Exportpfnl.index();
+    public static final int CERTIFICATORIGINE = AttributesEnum.Certificatorigine.index();
 
     /**
      * This is the default constructor (do not remove).
@@ -244,6 +249,39 @@ public class PermisImpl extends EntityImpl {
     }
 
     /**
+     * Gets the attribute value for Cheminfichier, using the alias name Cheminfichier.
+     * @return the value of Cheminfichier
+     */
+    public String getCheminfichier() {
+        return (String) getAttributeInternal(CHEMINFICHIER);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for Cheminfichier.
+     * @param value value to set the Cheminfichier
+     */
+    public void setCheminfichier(String value) {
+        setAttributeInternal(CHEMINFICHIER, value);
+    }
+
+    /**
+     * Gets the attribute value for Nomfichier, using the alias name Nomfichier.
+     * @return the value of Nomfichier
+     */
+    public String getNomfichier() {
+        return (String) getAttributeInternal(NOMFICHIER);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for Nomfichier.
+     * @param value value to set the Nomfichier
+     */
+    public void setNomfichier(String value) {
+        setAttributeInternal(NOMFICHIER, value);
+    }
+
+
+    /**
      * @return the associated entity oracle.jbo.RowIterator.
      */
     public RowIterator getPermis() {
@@ -294,14 +332,6 @@ public class PermisImpl extends EntityImpl {
 
 
     /**
-     * @return the associated entity oracle.jbo.RowIterator.
-     */
-    public RowIterator getDetailscollectepfnl() {
-        return (RowIterator) getAttributeInternal(DETAILSCOLLECTEPFNL);
-    }
-
-
-    /**
      * @return the associated entity PermissionnairespnflImpl.
      */
     public PermissionnairespnflImpl getPermissionnairespnfl() {
@@ -321,6 +351,14 @@ public class PermisImpl extends EntityImpl {
      */
     public RowIterator getExportpfnl() {
         return (RowIterator) getAttributeInternal(EXPORTPFNL);
+    }
+
+
+    /**
+     * @return the associated entity oracle.jbo.RowIterator.
+     */
+    public RowIterator getCertificatorigine() {
+        return (RowIterator) getAttributeInternal(CERTIFICATORIGINE);
     }
 
 

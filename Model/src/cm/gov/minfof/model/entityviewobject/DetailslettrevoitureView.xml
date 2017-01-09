@@ -202,23 +202,8 @@
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
   <ViewLinkAccessor
-    Name="LettrevoitureView"
-    ViewLink="cm.gov.minfof.model.entityviewobject.FkLettrevoiture5Assoc1Link"
-    Type="oracle.jbo.RowIterator"
-    IsUpdateable="false"/>
-  <ViewLinkAccessor
-    Name="LettrevoitureView1"
-    ViewLink="cm.gov.minfof.model.entityviewobject.FkLettrevoiture4Assoc1Link"
-    Type="oracle.jbo.RowIterator"
-    IsUpdateable="false"/>
-  <ViewLinkAccessor
     Name="LettrevoitureView2"
     ViewLink="cm.gov.minfof.model.entityviewobject.FkLettrevoiture3Assoc1Link"
-    Type="oracle.jbo.RowIterator"
-    IsUpdateable="false"/>
-  <ViewLinkAccessor
-    Name="LettrevoitureView3"
-    ViewLink="cm.gov.minfof.model.entityviewobject.FkLettrevoiture2Assoc1Link"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
   <ViewLinkAccessor

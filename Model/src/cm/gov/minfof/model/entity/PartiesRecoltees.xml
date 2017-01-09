@@ -12,7 +12,8 @@
   BindingStyle="JDBC"
   DefClass="cm.gov.minfof.model.entity.PartiesRecolteesDefImpl"
   RowClass="cm.gov.minfof.model.entity.PartiesRecolteesImpl"
-  CollClass="cm.gov.minfof.model.entity.PartiesRecolteesCollImpl">
+  CollClass="cm.gov.minfof.model.entity.PartiesRecolteesCollImpl"
+  xmlns:validation="http://xmlns.oracle.com/adfm/validation">
   <DesignTime>
     <Attr Name="_codeGenFlag2" Value="Init|Delete|Access|DML|Def|Coll|VarAccess"/>
     <Attr Name="_isCodegen" Value="true"/>
@@ -38,8 +39,7 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR"
-    TableName="partiesrecoltees"
-    DefaultValue="Entrez un nom">
+    TableName="partiesrecoltees">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="100"/>
     </DesignTime>
@@ -74,6 +74,17 @@
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
   <Key
+    Name="AltKey"
+    AltKey="true">
+    <DesignTime>
+      <Attr Name="_isUnique" Value="true"/>
+      <Attr Name="_DBObjectName" Value="partiesrecoltees"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="cm.gov.minfof.model.entity.PartiesRecoltees.Nompartierecoltee"/>
+    </AttrArray>
+  </Key>
+  <Key
     Name="Primary1"
     PrimaryKey="true">
     <DesignTime>
@@ -83,6 +94,15 @@
       <Item Value="cm.gov.minfof.model.entity.PartiesRecoltees.Idpartiesrecoltees"/>
     </AttrArray>
   </Key>
+  <validation:UniqueKeyValidationBean
+    Name="PartiesRecolteesRule0"
+    ResId="CETTE_PARTIE_R_U00E9COLT_U00E9E_EXISTE_D_U00E9J_U00E0"
+    KeyName="AltKey">
+    <validation:OnAttributes>
+      <validation:Item
+        Value="Nompartierecoltee"/>
+    </validation:OnAttributes>
+  </validation:UniqueKeyValidationBean>
   <ResourceBundle>
     <PropertiesBundle
       PropertiesFile="cm.gov.minfof.model.ModelBundle"/>

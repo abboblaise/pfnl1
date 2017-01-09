@@ -1,97 +1,48 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!DOCTYPE html>
 <f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
-        xmlns:c="http://java.sun.com/jsp/jstl/core">
+        xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:mycomps="http://mycompany.com/adf/components">
     <c:set var="viewcontrollerBundle" value="#{adfBundle['cm.gov.minfof.view.ViewControllerBundle']}"/>
     <af:document title="#{viewcontrollerBundle.FICHE_DE_COLLECTE}" id="d1">
+        <af:resource source="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js" type="javascript"/>
+        <af:resource source="js/jquery.growl.js" type="javascript"/>
+        <af:resource source="style/jquery.growl.css" type="css"/>
         <af:messages id="m1"/>
         <af:form id="f1">
             <af:pageTemplate viewId="/TemplateGlobal.jsf" id="pt1">
                 <f:facet name="content">
-                    <af:panelSplitter id="ps1" splitterPosition="544" orientation="horizontal">
+                    <af:panelSplitter id="ps1" splitterPosition="625" orientation="horizontal">
                         <f:facet name="first">
-                            <af:panelSplitter id="ps2" orientation="vertical">
-                                <f:facet name="first">
-                                    <af:panelBox text="#{viewcontrollerBundle.EDITION_DES_COLLECTES}" id="pb1">
-                                        <f:facet name="toolbar"/>
-                                        <af:panelFormLayout id="pfl1">
-                                            <af:inputText value="#{bindings.Identificateur.inputValue}"
-                                                          label="#{bindings.Identificateur.hints.label}"
-                                                          required="#{bindings.Identificateur.hints.mandatory}"
-                                                          columns="#{bindings.Identificateur.hints.displayWidth}"
-                                                          maximumLength="#{bindings.Identificateur.hints.precision}"
-                                                          shortDesc="#{bindings.Identificateur.hints.tooltip}" id="it1">
-                                                <f:validator binding="#{bindings.Identificateur.validator}"/>
-                                            </af:inputText>
-                                            <af:selectOneChoice value="#{bindings.Iddepartement.inputValue}"
-                                                                label="#{bindings.Iddepartement.label}"
-                                                                required="#{bindings.Iddepartement.hints.mandatory}"
-                                                                shortDesc="#{bindings.Iddepartement.hints.tooltip}"
-                                                                id="soc1">
-                                                <f:selectItems value="#{bindings.Iddepartement.items}" id="si1"/>
-                                                <f:validator binding="#{bindings.Iddepartement.validator}"/>
-                                            </af:selectOneChoice>
-                                            <af:selectOneChoice value="#{bindings.Idlocalite.inputValue}"
-                                                                label="#{bindings.Idlocalite.label}"
-                                                                required="#{bindings.Idlocalite.hints.mandatory}"
-                                                                shortDesc="#{bindings.Idlocalite.hints.tooltip}"
-                                                                id="soc2">
-                                                <f:selectItems value="#{bindings.Idlocalite.items}" id="si2"/>
-                                                <f:validator binding="#{bindings.Idlocalite.validator}"/>
-                                            </af:selectOneChoice>
-                                            <af:inputText value="#{bindings.Codepcfc.inputValue}"
-                                                          label="#{bindings.Codepcfc.hints.label}"
-                                                          required="#{bindings.Codepcfc.hints.mandatory}"
-                                                          columns="#{bindings.Codepcfc.hints.displayWidth}"
-                                                          maximumLength="#{bindings.Codepcfc.hints.precision}"
-                                                          shortDesc="#{bindings.Codepcfc.hints.tooltip}" id="it3">
-                                                <f:validator binding="#{bindings.Codepcfc.validator}"/>
-                                            </af:inputText>
-                                            <af:inputDate value="#{bindings.Datecollecte.inputValue}"
-                                                          label="#{bindings.Datecollecte.hints.label}"
-                                                          required="#{bindings.Datecollecte.hints.mandatory}"
-                                                          columns="#{bindings.Datecollecte.hints.displayWidth}"
-                                                          shortDesc="#{bindings.Datecollecte.hints.tooltip}" id="id1">
-                                                <f:validator binding="#{bindings.Datecollecte.validator}"/>
-                                                <af:convertDateTime pattern="#{bindings.Datecollecte.format}"/>
-                                            </af:inputDate>
-                                            <f:facet name="footer">
-                                                <af:panelGroupLayout id="pgl1">
-                                                    <af:button text="Submit" id="b1" visible="false"/>
-                                                    <af:button
-                                                               text="#{viewcontrollerBundle.NOUVEAU}"
-                                                               disabled="#{!bindings.CreateInsert.enabled}" id="b2"
-                                                               action="#{collecteBean.creerCollecte}"/>
-                                                    <af:spacer width="10" height="10" id="s2"/>
-                                                    <af:button text="#{viewcontrollerBundle.ENREGISTRER}" id="b3"
-                                                               disabled="false"
-                                                               action="#{collecteBean.enregistrerCollecte}"/>
-                                                    <af:spacer width="10" height="10" id="s3"/>
-                                                    <af:button
-                                                               text="#{viewcontrollerBundle.SUPPRIMER}"
-                                                               id="b7" action="#{collecteBean.supprimeCollecte}"/>
-                                                    <af:spacer width="10" height="10" id="s4"/>
-                                                    <af:button actionListener="#{bindings.Rollback.execute}"
-                                                               text="#{viewcontrollerBundle.ANNULER}"
-                                                               immediate="true" id="b6">
-                                                        <af:resetActionListener/>
-                                                    </af:button>
-                                                    <af:spacer width="10" height="10" id="s5"/>
-                                                    <af:button text="#{viewcontrollerBundle.IMPRIMER}" id="b8"
-                                                               action="#{collecteBean.imprimeEtat}">
-                                                        <af:fileDownloadActionListener method="#{collecteBean.imprime}"
-                                                                                       contentType="application/pdf"
-                                                                                       filename="resultta.pdf"/>
-                                                    </af:button>
-                                                </af:panelGroupLayout>
-                                            </f:facet>
-                                        </af:panelFormLayout>
-                                    </af:panelBox>
+                            <af:panelBox text="#{viewcontrollerBundle.EDITION_DES_COLLECTES}" id="pb5"
+                                         showDisclosure="false">
+                                <f:facet name="toolbar">
+                                    <af:panelGroupLayout id="pgl4">
+                                        <af:button actionListener="#{bindings.Rollback.execute}"
+                                                   text="#{viewcontrollerBundle.ACTUALISER}" immediate="true" id="b9">
+                                            <af:resetActionListener/>
+                                        </af:button>
+                                        <af:spacer width="10" height="10" id="s3"/>
+                                        <af:button text="#{viewcontrollerBundle.SUPPRIMER}" id="b7"
+                                                   action="#{collecteBean.supprimeCollecte}" visible="false"/>
+                                        <mycomps:ConfirmButton id="cb1" ButtonText="#{viewcontrollerBundle.SUPPRIMER}"
+                                                               ConfirmationMessage="#{viewcontrollerBundle.VOULEZ_VOUS_VRAIMENT_SUPPRIMER_}"
+                                                               onDialogReturn="#{collecteBean.onDeleteCollecte}">
+                                            <f:facet name="DialogContent"/>
+                                        </mycomps:ConfirmButton>
+                                        <af:spacer width="10" height="10" id="s4"/>
+                                        <af:button text="#{viewcontrollerBundle.IMPRIMER}" id="b8"
+                                                   action="#{collecteBean.imprimeEtat}" visible="true">
+                                            <af:fileDownloadActionListener method="#{collecteBean.imprime}"
+                                                                           contentType="application/pdf"
+                                                                           filename="resultta.pdf"/>
+                                        </af:button>
+                                    </af:panelGroupLayout>
                                 </f:facet>
-                                <f:facet name="second">
-                                    <af:panelBox text="#{viewcontrollerBundle.LISTE_DES_COLLECTES}" id="pb2">
-                                        <f:facet name="toolbar"/>
-                                        <af:panelCollection id="pc2">
+                                <af:spacer width="10" height="10" id="s13"/>
+                                <af:panelTabbed position="above" id="pt2">
+                                    <af:showDetailItem id="tab1" text="#{viewcontrollerBundle.CONSULTATION}"
+                                                       disclosed="true">
+                                        <af:panelCollection id="pc2" inlineStyle="width:620px;">
                                             <f:facet name="menus"/>
                                             <f:facet name="toolbar"/>
                                             <af:table value="#{bindings.CollectepfnlView1.collectionModel}" var="row"
@@ -104,219 +55,255 @@
                                                       fetchSize="#{bindings.CollectepfnlView1.rangeSize}"
                                                       filterModel="#{bindings.CollectepfnlView1Query.queryDescriptor}"
                                                       filterVisible="true"
-                                                      queryListener="#{collecteBean.onCollecteQuery}"
-                                                      varStatus="vs" id="t1" partialTriggers=":::b2 :::b3 :::b7"
-                                                      columnSelection="single" editingMode="readOnly">
-                                                <af:column sortProperty="#{bindings.CollectepfnlView1.hints.Identificateur.name}"
+                                                      queryListener="#{bindings.CollectepfnlView1Query.processQuery}"
+                                                      varStatus="vs" id="t1" autoHeightRows="15"
+                                                      partialTriggers=":::b12 :::b13 :::b14 :::b15 :::b16 :::b17 :::b18 :::b19">
+                                                <af:column sortProperty="#{bindings.CollectepfnlView1.hints.Idcollectepfnl.name}"
                                                            filterable="true" sortable="true"
-                                                           headerText="#{bindings.CollectepfnlView1.hints.Identificateur.label}"
-                                                           id="c2" width="100">
-                                                    <af:outputText value="#{row.Identificateur}"
-                                                                   shortDesc="#{bindings.CollectepfnlView1.hints.Identificateur.tooltip}"
-                                                                   id="ot2"/>
+                                                           headerText="#{bindings.CollectepfnlView1.hints.Idcollectepfnl.label}"
+                                                           id="c1" rowHeader="true" width="65">
+                                                    <af:outputText value="#{row.Idcollectepfnl}"
+                                                                   shortDesc="#{bindings.CollectepfnlView1.hints.Idcollectepfnl.tooltip}"
+                                                                   id="ot1">
+                                                        <af:convertNumber groupingUsed="false"
+                                                                          pattern="#{bindings.CollectepfnlView1.hints.Idcollectepfnl.format}"/>
+                                                    </af:outputText>
                                                 </af:column>
-                                                <af:column headerText="#{bindings.CollectepfnlView1.hints.Iddepartement.label}"
-                                                           id="c3"
-                                                           sortProperty="#{bindings.CollectepfnlView1.hints.Iddepartement.name}"
-                                                           filterable="true" width="100">
+                                                <af:column sortProperty="#{bindings.CollectepfnlView1.hints.Datecollecte.name}"
+                                                           filterable="true" sortable="true"
+                                                           headerText="#{bindings.CollectepfnlView1.hints.Datecollecte.label}"
+                                                           id="c2" width="148">
+                                                    <f:facet name="filter">
+                                                        <af:inputDate value="#{bindings.CollectepfnlView1Query.queryDescriptor.filterConjunctionCriterion.criterionMap.Datecollecte.value}"
+                                                                      id="id2">
+                                                            <af:convertDateTime pattern="#{bindings.CollectepfnlView1.hints.Datecollecte.format}"/>
+                                                        </af:inputDate>
+                                                    </f:facet>
+                                                    <af:outputText value="#{row.Datecollecte}"
+                                                                   shortDesc="#{bindings.CollectepfnlView1.hints.Datecollecte.tooltip}"
+                                                                   id="ot2">
+                                                        <af:convertDateTime pattern="#{bindings.CollectepfnlView1.hints.Datecollecte.format}"/>
+                                                    </af:outputText>
+                                                </af:column>
+                                                <af:column sortProperty="#{bindings.CollectepfnlView1.hints.Iddepartement.name}"
+                                                           filterable="true" sortable="true"
+                                                           headerText="#{bindings.CollectepfnlView1.hints.Iddepartement.label}"
+                                                           id="c3" width="87">
                                                     <af:selectOneChoice value="#{row.bindings.Iddepartement.inputValue}"
                                                                         label="#{row.bindings.Iddepartement.label}"
                                                                         required="#{bindings.CollectepfnlView1.hints.Iddepartement.mandatory}"
                                                                         shortDesc="#{bindings.CollectepfnlView1.hints.Iddepartement.tooltip}"
-                                                                        id="soc3" disabled="false" readOnly="true">
+                                                                        readOnly="true" id="soc3">
                                                         <f:selectItems value="#{row.bindings.Iddepartement.items}"
                                                                        id="si3"/>
                                                         <f:validator binding="#{row.bindings.Iddepartement.validator}"/>
                                                     </af:selectOneChoice>
                                                 </af:column>
-                                                <af:column headerText="#{bindings.CollectepfnlView1.hints.Idlocalite.label}"
-                                                           id="c5"
-                                                           sortProperty="#{bindings.CollectepfnlView1.hints.Idlocalite.name}"
-                                                           filterable="true" width="131">
+                                                <af:column sortProperty="#{bindings.CollectepfnlView1.hints.Idlocalite.name}"
+                                                           filterable="true" sortable="true"
+                                                           headerText="#{bindings.CollectepfnlView1.hints.Idlocalite.label}"
+                                                           id="c4" width="98">
                                                     <af:selectOneChoice value="#{row.bindings.Idlocalite.inputValue}"
                                                                         label="#{row.bindings.Idlocalite.label}"
                                                                         required="#{bindings.CollectepfnlView1.hints.Idlocalite.mandatory}"
                                                                         shortDesc="#{bindings.CollectepfnlView1.hints.Idlocalite.tooltip}"
-                                                                        id="soc4" readOnly="true">
+                                                                        readOnly="true" id="soc4">
                                                         <f:selectItems value="#{row.bindings.Idlocalite.items}"
                                                                        id="si4"/>
                                                         <f:validator binding="#{row.bindings.Idlocalite.validator}"/>
                                                     </af:selectOneChoice>
                                                 </af:column>
-                                                <af:column sortProperty="#{bindings.CollectepfnlView1.hints.Codepcfc.name}"
+                                                <af:column sortProperty="#{bindings.CollectepfnlView1.hints.Idposte.name}"
                                                            filterable="true" sortable="true"
-                                                           headerText="#{bindings.CollectepfnlView1.hints.Codepcfc.label}"
-                                                           id="c4" width="69">
-                                                    <af:outputText value="#{row.Codepcfc}"
-                                                                   shortDesc="#{bindings.CollectepfnlView1.hints.Codepcfc.tooltip}"
-                                                                   id="ot4"/>
+                                                           headerText="#{bindings.CollectepfnlView1.hints.Idposte.label}"
+                                                           id="c5" width="111">
+                                                    <af:selectOneChoice value="#{row.bindings.Idposte.inputValue}"
+                                                                        label="#{row.bindings.Idposte.label}"
+                                                                        required="#{bindings.CollectepfnlView1.hints.Idposte.mandatory}"
+                                                                        shortDesc="#{bindings.CollectepfnlView1.hints.Idposte.tooltip}"
+                                                                        readOnly="true" id="soc20">
+                                                        <f:selectItems value="#{row.bindings.Idposte.items}" id="si20"/>
+                                                        <f:validator binding="#{row.bindings.Idposte.validator}"/>
+                                                    </af:selectOneChoice>
                                                 </af:column>
-                                                <af:column sortProperty="#{bindings.CollectepfnlView1.hints.Datecollecte.name}"
+                                                <af:column sortProperty="#{bindings.CollectepfnlView1.hints.Idutilisateur.name}"
                                                            filterable="true" sortable="true"
-                                                           headerText="#{bindings.CollectepfnlView1.hints.Datecollecte.label}"
-                                                           id="c1" width="100">
-                                                    <f:facet name="filter">
-                                                        <af:panelGroupLayout id="pgl3">
-                                                            <af:panelLabelAndMessage label="#{viewcontrollerBundle.DU}" id="plam1">
-                                                                <af:inputDate value="#{bindings.dateDebutVar1.inputValue}"
-                                                                              id="id2">
-                                                                    <af:convertDateTime pattern="#{bindings.CollectepfnlView1.hints.Datecollecte.format}"/>
-                                                                </af:inputDate>
-                                                            </af:panelLabelAndMessage>
-                                                            <af:panelLabelAndMessage label="#{viewcontrollerBundle.AU}" id="plam2">
-                                                                <af:inputDate value="#{bindings.dateFinVar1.inputValue}"
-                                                                              id="id3">
-                                                                    <af:convertDateTime pattern="#{bindings.CollectepfnlView1.hints.Datecollecte.format}"/>
-                                                                </af:inputDate>
-                                                            </af:panelLabelAndMessage>
-                                                        </af:panelGroupLayout>
-                                                    </f:facet>
-                                                    <af:inputDate value="#{row.bindings.Datecollecte.inputValue}"
-                                                                  label="#{bindings.CollectepfnlView1.hints.Datecollecte.label}"
-                                                                  required="#{bindings.CollectepfnlView1.hints.Datecollecte.mandatory}"
-                                                                  columns="#{bindings.CollectepfnlView1.hints.Datecollecte.displayWidth}"
-                                                                  shortDesc="#{bindings.CollectepfnlView1.hints.Datecollecte.tooltip}">
-                                                        <f:validator binding="#{row.bindings.Datecollecte.validator}"/>
-                                                        <af:convertDateTime pattern="#{bindings.CollectepfnlView1.hints.Datecollecte.format}"/>
-                                                    </af:inputDate>
+                                                           headerText="#{bindings.CollectepfnlView1.hints.Idutilisateur.label}"
+                                                           id="c16" width="91">
+                                                    <af:selectOneChoice value="#{row.bindings.Idutilisateur.inputValue}"
+                                                                        label="#{row.bindings.Idutilisateur.label}"
+                                                                        required="#{bindings.CollectepfnlView1.hints.Idutilisateur.mandatory}"
+                                                                        shortDesc="#{bindings.CollectepfnlView1.hints.Idutilisateur.tooltip}"
+                                                                        readOnly="true" id="soc21">
+                                                        <f:selectItems value="#{row.bindings.Idutilisateur.items}"
+                                                                       id="si21"/>
+                                                        <f:validator binding="#{row.bindings.Idutilisateur.validator}"/>
+                                                    </af:selectOneChoice>
                                                 </af:column>
                                             </af:table>
                                             <f:facet name="statusbar"/>
                                         </af:panelCollection>
-                                    </af:panelBox>
-                                </f:facet>
-                            </af:panelSplitter>
+                                    </af:showDetailItem>
+                                    <af:showDetailItem id="tab2" text="#{viewcontrollerBundle.EDITION}">
+                                        <af:panelBox id="pb1" showDisclosure="false">
+                                            <f:facet name="toolbar"/>
+                                            <af:panelGridLayout id="pgl3">
+                                                <af:gridRow marginTop="5px" height="auto" id="gr1">
+                                                    <af:gridCell marginStart="5px" width="auto" id="gc1">
+                                                        <af:outputText value="#{bindings.Idutilisateur.label}"
+                                                                       id="ot4"/>
+                                                    </af:gridCell>
+                                                    <af:gridCell marginStart="5px" width="auto" marginEnd="5px"
+                                                                 id="gc2">
+                                                        <af:selectOneChoice value="#{bindings.Idutilisateur.inputValue}"
+                                                                            required="#{bindings.Idutilisateur.hints.mandatory}"
+                                                                            shortDesc="#{bindings.Idutilisateur.hints.tooltip}"
+                                                                            id="soc23">
+                                                            <f:selectItems value="#{bindings.Idutilisateur.items}"
+                                                                           id="si23"/>
+                                                            <f:validator binding="#{bindings.Idutilisateur.validator}"/>
+                                                        </af:selectOneChoice>
+                                                    </af:gridCell>
+                                                </af:gridRow>
+                                                <af:gridRow marginTop="5px" height="auto" id="gr2">
+                                                    <af:gridCell marginStart="5px" width="auto" id="gc3">
+                                                        <af:outputText value="#{bindings.Idposte.label}" id="ot7"/>
+                                                    </af:gridCell>
+                                                    <af:gridCell marginStart="5px" width="208px" marginEnd="5px"
+                                                                 id="gc4">
+                                                        <af:selectOneChoice value="#{bindings.Idposte.inputValue}"
+                                                                            required="#{bindings.Idposte.hints.mandatory}"
+                                                                            shortDesc="#{bindings.Idposte.hints.tooltip}"
+                                                                            id="soc22">
+                                                            <f:selectItems value="#{bindings.Idposte.items}" id="si22"/>
+                                                            <f:validator binding="#{bindings.Idposte.validator}"/>
+                                                        </af:selectOneChoice>
+                                                    </af:gridCell>
+                                                </af:gridRow>
+                                                <af:gridRow marginTop="5px" height="auto" id="gr3">
+                                                    <af:gridCell marginStart="5px" width="auto" id="gc5">
+                                                        <af:outputText value="#{bindings.Iddepartement.label}"
+                                                                       id="ot8"/>
+                                                    </af:gridCell>
+                                                    <af:gridCell marginStart="5px" width="auto" marginEnd="5px"
+                                                                 id="gc6">
+                                                        <af:selectOneChoice value="#{bindings.Iddepartement.inputValue}"
+                                                                            required="#{bindings.Iddepartement.hints.mandatory}"
+                                                                            shortDesc="#{bindings.Iddepartement.hints.tooltip}"
+                                                                            id="soc1">
+                                                            <f:selectItems value="#{bindings.Iddepartement.items}"
+                                                                           id="si1"/>
+                                                            <f:validator binding="#{bindings.Iddepartement.validator}"/>
+                                                        </af:selectOneChoice>
+                                                    </af:gridCell>
+                                                </af:gridRow>
+                                                <af:gridRow marginTop="5px" height="auto" id="gr4">
+                                                    <af:gridCell marginStart="5px" width="auto" id="gc7">
+                                                        <af:outputText value="#{bindings.Idlocalite.label}" id="ot9"/>
+                                                    </af:gridCell>
+                                                    <af:gridCell marginStart="5px" width="auto" marginEnd="5px"
+                                                                 id="gc8">
+                                                        <af:selectOneChoice value="#{bindings.Idlocalite.inputValue}"
+                                                                            required="#{bindings.Idlocalite.hints.mandatory}"
+                                                                            shortDesc="#{bindings.Idlocalite.hints.tooltip}"
+                                                                            id="soc2">
+                                                            <f:selectItems value="#{bindings.Idlocalite.items}"
+                                                                           id="si2"/>
+                                                            <f:validator binding="#{bindings.Idlocalite.validator}"/>
+                                                        </af:selectOneChoice>
+                                                    </af:gridCell>
+                                                </af:gridRow>
+                                                <af:gridRow marginTop="5px" height="auto" id="gr5">
+                                                    <af:gridCell marginStart="5px" width="auto" id="gc9">
+                                                        <af:outputText value="#{bindings.Datecollecte.hints.label}"
+                                                                       id="ot10"/>
+                                                    </af:gridCell>
+                                                    <af:gridCell marginStart="5px" width="auto" marginEnd="5px"
+                                                                 id="gc10">
+                                                        <af:inputDate value="#{bindings.Datecollecte.inputValue}"
+                                                                      required="#{bindings.Datecollecte.hints.mandatory}"
+                                                                      columns="#{bindings.Datecollecte.hints.displayWidth}"
+                                                                      shortDesc="#{bindings.Datecollecte.hints.tooltip}"
+                                                                      id="id1">
+                                                            <f:validator binding="#{bindings.Datecollecte.validator}"/>
+                                                            <af:convertDateTime pattern="#{bindings.Datecollecte.format}"/>
+                                                        </af:inputDate>
+                                                    </af:gridCell>
+                                                </af:gridRow>
+                                                <af:gridRow marginTop="5px" height="auto" id="gr6">
+                                                    <af:gridCell marginStart="5px" width="auto" id="gc11"/>
+                                                    <af:gridCell marginStart="5px" width="auto" marginEnd="5px"
+                                                                 id="gc12"/>
+                                                </af:gridRow>
+                                                <af:gridRow marginTop="5px" height="auto" id="gr7">
+                                                    <af:gridCell marginStart="5px" columnSpan="2" marginEnd="5px"
+                                                                 id="gc13">
+                                                        <af:panelGroupLayout id="pgl7">
+                                                            <af:button actionListener="#{bindings.First.execute}"
+                                                                       text="#{viewcontrollerBundle.FIRST}"
+                                                                       disabled="#{!bindings.First.enabled}"
+                                                                       partialSubmit="true" id="b12"/>
+                                                            <af:spacer width="10" height="10" id="s7"/>
+                                                            <af:button actionListener="#{bindings.Previous.execute}"
+                                                                       text="#{viewcontrollerBundle.PREVIOUS}"
+                                                                       disabled="#{!bindings.Previous.enabled}"
+                                                                       partialSubmit="true" id="b13"/>
+                                                            <af:spacer width="10" height="10" id="s8"/>
+                                                            <af:button actionListener="#{bindings.Next.execute}" disabled="#{!bindings.Next.enabled}"
+                                                                       partialSubmit="true" id="b14"
+                                                                       text="#{viewcontrollerBundle.NEXT}"/>
+                                                            <af:spacer width="10" height="10" id="s9"/>
+                                                            <af:button actionListener="#{bindings.Last.execute}"
+                                                                       text="#{viewcontrollerBundle.LAST}" disabled="#{!bindings.Last.enabled}"
+                                                                       partialSubmit="true" id="b15"/>
+                                                        </af:panelGroupLayout>
+                                                    </af:gridCell>
+                                                </af:gridRow>
+                                                <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr8">
+                                                    <af:gridCell marginStart="5px" columnSpan="2" marginEnd="5px"
+                                                                 id="gc14">
+                                                        <af:panelGroupLayout id="pgl1">
+                                                            <af:button text="Submit" id="b1" visible="false"/>
+                                                            <af:button text="#{viewcontrollerBundle.NOUVEAU}"
+                                                                       disabled="#{!bindings.CreateInsert.enabled}"
+                                                                       id="b2" action="#{collecteBean.creerCollecte}"/>
+                                                            <af:spacer width="10" height="10" id="s2"/>
+                                                            <af:button text="#{viewcontrollerBundle.ENREGISTRER}"
+                                                                       id="b10" disabled="false"
+                                                                       action="#{collecteBean.enregistrerCollecte}"/>
+                                                            <af:spacer width="10" height="10" id="s6"/>
+                                                            <af:button actionListener="#{bindings.Rollback.execute}"
+                                                                       text="#{viewcontrollerBundle.ANNULER}"
+                                                                       immediate="true" id="b11">
+                                                                <af:resetActionListener/>
+                                                            </af:button>
+                                                        </af:panelGroupLayout>
+                                                    </af:gridCell>
+                                                </af:gridRow>
+                                            </af:panelGridLayout>
+                                        </af:panelBox>
+                                    </af:showDetailItem>
+                                </af:panelTabbed>
+                            </af:panelBox>
                         </f:facet>
                         <f:facet name="second">
-                            <af:panelSplitter id="ps3" orientation="vertical" splitterPosition="161">
-                                <f:facet name="first">
-                                    <af:panelBox text="#{viewcontrollerBundle.AJOUT}" id="pb4">
-                                        <f:facet name="toolbar">
-                                            <af:panelGroupLayout id="pgl2">
-                                                <af:button
-                                                           text="#{viewcontrollerBundle.NOUVEAU}"
-                                                           disabled="#{!bindings.CreateInsert1.enabled}" id="b4"
-                                                           action="#{collecteBean.creerDetailsCollecte}"/>
-                                                <af:spacer width="10" height="10" id="s1"/>
-                                                <af:button
-                                                           text="#{viewcontrollerBundle.SUPPRIMER}"
-                                                           disabled="#{!bindings.Delete.enabled}" id="b5"
-                                                           action="#{collecteBean.supprimerDetailCollecte}"/>
-                                            </af:panelGroupLayout>
-                                        </f:facet>
-                                        <af:panelFormLayout id="pfl2" rows="4">
-                                            <af:selectOneChoice value="#{bindings.Typeacteur.inputValue}"
-                                                                label="#{bindings.Typeacteur.label}"
-                                                                required="#{bindings.Typeacteur.hints.mandatory}"
-                                                                shortDesc="#{bindings.Typeacteur.hints.tooltip}"
-                                                                id="soc19" autoSubmit="true">
-                                                <f:selectItems value="#{bindings.Typeacteur.items}" id="si19"/>
-                                                <f:validator binding="#{bindings.Typeacteur.validator}"/>
-                                            </af:selectOneChoice>
-                                            <af:inputText value="#{bindings.Nomacteur.inputValue}"
-                                                          label="#{bindings.Nomacteur.hints.label}"
-                                                          required="#{bindings.Nomacteur.hints.mandatory}"
-                                                          columns="#{bindings.Nomacteur.hints.displayWidth}"
-                                                          maximumLength="#{bindings.Nomacteur.hints.precision}"
-                                                          shortDesc="#{bindings.Nomacteur.hints.tooltip}" id="it5"
-                                                          rendered="#{bindings.Typeacteur.inputValue eq 2}">
-                                                <f:validator binding="#{bindings.Nomacteur.validator}"/>
-                                            </af:inputText>
-                                            <af:selectOneChoice value="#{bindings.Idpermissionnaire.inputValue}"
-                                                                label="#{bindings.Idpermissionnaire.label}"
-                                                                required="#{bindings.Idpermissionnaire.hints.mandatory}"
-                                                                shortDesc="#{bindings.Idpermissionnaire.hints.tooltip}"
-                                                                id="soc9" autoSubmit="true"
-                                                                rendered="#{bindings.Typeacteur.inputValue eq 1}">
-                                                <f:selectItems value="#{bindings.Idpermissionnaire.items}" id="si9"/>
-                                                <f:validator binding="#{bindings.Idpermissionnaire.validator}"/>
-                                            </af:selectOneChoice>
-                                            <af:selectOneChoice value="#{bindings.Idunitemesure.inputValue}"
-                                                                label="#{bindings.Idunitemesure.label}"
-                                                                required="#{bindings.Idunitemesure.hints.mandatory}"
-                                                                shortDesc="#{bindings.Idunitemesure.hints.tooltip}"
-                                                                id="soc12">
-                                                <f:selectItems value="#{bindings.Idunitemesure.items}" id="si12"/>
-                                                <f:validator binding="#{bindings.Idunitemesure.validator}"/>
-                                            </af:selectOneChoice>
-                                            <af:selectOneChoice value="#{bindings.Iddocumentofficiel.inputValue}"
-                                                                label="#{viewcontrollerBundle.DOCUMENT}"
-                                                                required="#{bindings.Iddocumentofficiel.hints.mandatory}"
-                                                                shortDesc="#{bindings.Iddocumentofficiel.hints.tooltip}"
-                                                                id="soc13" partialTriggers="soc9">
-                                                <f:selectItems value="#{bindings.Iddocumentofficiel.items}" id="si13"/>
-                                                <f:validator binding="#{bindings.Iddocumentofficiel.validator}"/>
-                                            </af:selectOneChoice>
-                                            <af:selectOneChoice value="#{bindings.Idprovenance.inputValue}"
-                                                                label="#{bindings.Idprovenance.label}"
-                                                                required="#{bindings.Idprovenance.hints.mandatory}"
-                                                                shortDesc="#{bindings.Idprovenance.hints.tooltip}"
-                                                                id="soc16">
-                                                <f:selectItems value="#{bindings.Idprovenance.items}" id="si16"/>
-                                                <f:validator binding="#{bindings.Idprovenance.validator}"/>
-                                            </af:selectOneChoice>
-                                            <af:selectOneChoice value="#{bindings.Idpartieproduitpfnl.inputValue}"
-                                                                label="#{bindings.Idpartieproduitpfnl.label}"
-                                                                required="#{bindings.Idpartieproduitpfnl.hints.mandatory}"
-                                                                shortDesc="#{bindings.Idpartieproduitpfnl.hints.tooltip}"
-                                                                id="soc15">
-                                                <f:selectItems value="#{bindings.Idpartieproduitpfnl.items}" id="si15"/>
-                                                <f:validator binding="#{bindings.Idpartieproduitpfnl.validator}"/>
-                                            </af:selectOneChoice>
-                                            <af:selectOneChoice value="#{bindings.Idorigine.inputValue}"
-                                                                label="#{viewcontrollerBundle.SOURCE_D_APPRO}"
-                                                                required="#{bindings.Idorigine.hints.mandatory}"
-                                                                shortDesc="#{bindings.Idorigine.hints.tooltip}"
-                                                                id="soc11">
-                                                <f:selectItems value="#{bindings.Idorigine.items}" id="si11"/>
-                                                <f:validator binding="#{bindings.Idorigine.validator}"/>
-                                            </af:selectOneChoice>
-                                            <af:inputText value="#{bindings.Quantite.inputValue}"
-                                                          label="#{bindings.Quantite.hints.label}"
-                                                          required="#{bindings.Quantite.hints.mandatory}"
-                                                          columns="#{bindings.Quantite.hints.displayWidth}"
-                                                          maximumLength="#{bindings.Quantite.hints.precision}"
-                                                          shortDesc="#{bindings.Quantite.hints.tooltip}" id="it4">
-                                                <f:validator binding="#{bindings.Quantite.validator}"/>
-                                                <af:convertNumber groupingUsed="false"
-                                                                  pattern="#{bindings.Quantite.format}"/>
-                                            </af:inputText>
-                                            <af:selectOneChoice value="#{bindings.Iddestination.inputValue}"
-                                                                label="#{bindings.Iddestination.label}"
-                                                                required="#{bindings.Iddestination.hints.mandatory}"
-                                                                shortDesc="#{bindings.Iddestination.hints.tooltip}"
-                                                                id="soc14">
-                                                <f:selectItems value="#{bindings.Iddestination.items}" id="si14"/>
-                                                <f:validator binding="#{bindings.Iddestination.validator}"/>
-                                            </af:selectOneChoice>
-                                            <af:inputText value="#{bindings.Iddetailscollectepfnl.inputValue}"
-                                                          label="#{bindings.Iddetailscollectepfnl.hints.label}"
-                                                          required="#{bindings.Iddetailscollectepfnl.hints.mandatory}"
-                                                          columns="#{bindings.Iddetailscollectepfnl.hints.displayWidth}"
-                                                          maximumLength="#{bindings.Iddetailscollectepfnl.hints.precision}"
-                                                          shortDesc="#{bindings.Iddetailscollectepfnl.hints.tooltip}"
-                                                          id="it2" visible="false">
-                                                <f:validator binding="#{bindings.Iddetailscollectepfnl.validator}"/>
-                                                <af:convertNumber groupingUsed="false"
-                                                                  pattern="#{bindings.Iddetailscollectepfnl.format}"/>
-                                            </af:inputText>
-                                            <af:inputText value="#{bindings.Idcollectepfnl.inputValue}"
-                                                          label="#{bindings.Idcollectepfnl.hints.label}"
-                                                          required="#{bindings.Idcollectepfnl.hints.mandatory}"
-                                                          columns="#{bindings.Idcollectepfnl.hints.displayWidth}"
-                                                          maximumLength="#{bindings.Idcollectepfnl.hints.precision}"
-                                                          shortDesc="#{bindings.Idcollectepfnl.hints.tooltip}" id="it6"
-                                                          visible="false">
-                                                <f:validator binding="#{bindings.Idcollectepfnl.validator}"/>
-                                                <af:convertNumber groupingUsed="false"
-                                                                  pattern="#{bindings.Idcollectepfnl.format}"/>
-                                            </af:inputText>
-                                        </af:panelFormLayout>
-                                    </af:panelBox>
+                            <af:panelBox text="#{viewcontrollerBundle.D_U00E9TAILS_DE_LA_COLLECTE}" id="pb2"
+                                         showDisclosure="false">
+                                <f:facet name="toolbar">
+                                    <af:panelGroupLayout id="pgl6">
+                                        <af:button text="#{viewcontrollerBundle.SUPPRIMER}"
+                                                   disabled="#{!bindings.Delete.enabled}" id="b5"
+                                                   action="#{collecteBean.supprimerDetailCollecte}" visible="false"/>
+                                        <mycomps:ConfirmButton id="cb2" ButtonText="#{viewcontrollerBundle.SUPPRIMER}"
+                                                               ConfirmationMessage="#{viewcontrollerBundle.VOULEZ_VOUS_VRAIMENT_SUPPRIMER_}"
+                                                               onDialogReturn="#{collecteBean.onDeleteDetailsCollecte}">
+                                            <f:facet name="DialogContent"/>
+                                        </mycomps:ConfirmButton>
+                                    </af:panelGroupLayout>
                                 </f:facet>
-                                <f:facet name="second">
-                                    <af:panelBox text="#{viewcontrollerBundle.D_U00E9TAILS_DE_LA_COLLECTE}" id="pb3">
-                                        <f:facet name="toolbar"/>
+                                <af:panelTabbed position="above" id="pt3">
+                                    <af:showDetailItem id="tab3" text="#{viewcontrollerBundle.CONSULTATION}"
+                                                       disclosed="true">
                                         <af:panelCollection id="pc1" partialTriggers="::b4 ::b5 ::b3">
                                             <f:facet name="menus"/>
                                             <f:facet name="toolbar">
@@ -333,7 +320,9 @@
                                                       filterModel="#{bindings.DetailscollectepfnlView17Query.queryDescriptor}"
                                                       filterVisible="true"
                                                       queryListener="#{bindings.DetailscollectepfnlView17Query.processQuery}"
-                                                      varStatus="vs" id="t2" partialTriggers=":::b4 :::b5">
+                                                      varStatus="vs" id="t2"
+                                                      partialTriggers=":::b4 :::b5 :::b16 :::b17 :::b18 :::b19"
+                                                      autoHeightRows="15">
                                                 <af:column sortProperty="#{bindings.DetailscollectepfnlView17.hints.Idcollectepfnl.name}"
                                                            filterable="true" sortable="true"
                                                            headerText="#{bindings.DetailscollectepfnlView17.hints.Idcollectepfnl.label}"
@@ -356,6 +345,18 @@
                                                                           pattern="#{bindings.DetailscollectepfnlView17.hints.Iddetailscollectepfnl.format}"/>
                                                     </af:outputText>
                                                 </af:column>
+                                                <af:column headerText="#{bindings.DetailscollectepfnlView17.hints.Typeacteur.label}"
+                                                           id="c12" visible="false">
+                                                    <af:selectOneChoice value="#{row.bindings.Typeacteur.inputValue}"
+                                                                        label="#{row.bindings.Typeacteur.label}"
+                                                                        required="#{bindings.DetailscollectepfnlView17.hints.Typeacteur.mandatory}"
+                                                                        shortDesc="#{bindings.DetailscollectepfnlView17.hints.Typeacteur.tooltip}"
+                                                                        readOnly="true" id="soc8">
+                                                        <f:selectItems value="#{row.bindings.Typeacteur.items}"
+                                                                       id="si8"/>
+                                                        <f:validator binding="#{row.bindings.Typeacteur.validator}"/>
+                                                    </af:selectOneChoice>
+                                                </af:column>
                                                 <af:column sortProperty="#{bindings.DetailscollectepfnlView17.hints.Idpermissionnaire.name}"
                                                            filterable="true" sortable="true"
                                                            headerText="#{bindings.DetailscollectepfnlView17.hints.Idpermissionnaire.label}"
@@ -369,6 +370,9 @@
                                                                        id="si5"/>
                                                         <f:validator binding="#{row.bindings.Idpermissionnaire.validator}"/>
                                                     </af:selectOneChoice>
+                                                    <af:outputText value="#{row.Nomacteur}"
+                                                                   shortDesc="#{bindings.DetailscollectepfnlView17.hints.Nomacteur.tooltip}"
+                                                                   id="ot20"/>
                                                 </af:column>
                                                 <af:column sortProperty="#{bindings.DetailscollectepfnlView17.hints.Idpartieproduitpfnl.name}"
                                                            filterable="true" sortable="true"
@@ -408,20 +412,6 @@
                                                         <af:convertNumber groupingUsed="false"
                                                                           pattern="#{bindings.DetailscollectepfnlView17.hints.Quantite.format}"/>
                                                     </af:outputText>
-                                                </af:column>
-                                                <af:column sortProperty="#{bindings.DetailscollectepfnlView17.hints.Iddocumentofficiel.name}"
-                                                           filterable="true" sortable="true"
-                                                           headerText="#{bindings.DetailscollectepfnlView17.hints.Iddocumentofficiel.label}"
-                                                           id="c12">
-                                                    <af:selectOneChoice value="#{row.bindings.Iddocumentofficiel.inputValue}"
-                                                                        label="#{row.bindings.Iddocumentofficiel.label}"
-                                                                        required="#{bindings.DetailscollectepfnlView17.hints.Iddocumentofficiel.mandatory}"
-                                                                        shortDesc="#{bindings.DetailscollectepfnlView17.hints.Iddocumentofficiel.tooltip}"
-                                                                        readOnly="true" id="soc8">
-                                                        <f:selectItems value="#{row.bindings.Iddocumentofficiel.items}"
-                                                                       id="si8"/>
-                                                        <f:validator binding="#{row.bindings.Iddocumentofficiel.validator}"/>
-                                                    </af:selectOneChoice>
                                                 </af:column>
                                                 <af:column sortProperty="#{bindings.DetailscollectepfnlView17.hints.Idorigine.name}"
                                                            filterable="true" sortable="true"
@@ -468,9 +458,229 @@
                                             </af:table>
                                             <f:facet name="statusbar"/>
                                         </af:panelCollection>
-                                    </af:panelBox>
-                                </f:facet>
-                            </af:panelSplitter>
+                                    </af:showDetailItem>
+                                    <af:showDetailItem id="tab4" text="#{viewcontrollerBundle.EDITION}">
+                                        <af:panelBox id="pb3" showDisclosure="false">
+                                            <f:facet name="toolbar"/>
+                                            <af:panelGridLayout id="pgl5">
+                                                <af:gridRow marginTop="5px" height="auto" id="gr9">
+                                                    <af:gridCell marginStart="5px" width="auto" id="gc15">
+                                                        <af:outputText value="#{bindings.Typeacteur.label}" id="ot11"/>
+                                                    </af:gridCell>
+                                                    <af:gridCell marginStart="5px" width="auto" marginEnd="5px"
+                                                                 id="gc16">
+                                                        <af:selectOneChoice value="#{bindings.Typeacteur.inputValue}"
+                                                                            required="#{bindings.Typeacteur.hints.mandatory}"
+                                                                            shortDesc="#{bindings.Typeacteur.hints.tooltip}"
+                                                                            id="soc19" autoSubmit="true">
+                                                            <f:selectItems value="#{bindings.Typeacteur.items}"
+                                                                           id="si19"/>
+                                                            <f:validator binding="#{bindings.Typeacteur.validator}"/>
+                                                        </af:selectOneChoice>
+                                                    </af:gridCell>
+                                                </af:gridRow>
+                                                <af:gridRow marginTop="5px" height="auto" id="gr10">
+                                                    <af:gridCell marginStart="5px" width="auto" id="gc17">
+                                                        <af:outputText value="#{bindings.Nomacteur.hints.label}"
+                                                                       id="ot12"
+                                                                       visible="#{bindings.Typeacteur.inputValue eq 2}"/>
+                                                    </af:gridCell>
+                                                    <af:gridCell marginStart="5px" width="auto" marginEnd="5px"
+                                                                 id="gc18">
+                                                        <af:inputText value="#{bindings.Nomacteur.inputValue}"
+                                                                      required="#{bindings.Nomacteur.hints.mandatory}"
+                                                                      columns="#{bindings.Nomacteur.hints.displayWidth}"
+                                                                      maximumLength="#{bindings.Nomacteur.hints.precision}"
+                                                                      shortDesc="#{bindings.Nomacteur.hints.tooltip}"
+                                                                      id="it5"
+                                                                      visible="#{bindings.Typeacteur.inputValue eq 2}">
+                                                            <f:validator binding="#{bindings.Nomacteur.validator}"/>
+                                                        </af:inputText>
+                                                    </af:gridCell>
+                                                </af:gridRow>
+                                                <af:gridRow id="gr17">
+                                                    <af:gridCell id="gc31">
+                                                        <af:outputText value="#{bindings.Idpermissionnaire.label}"
+                                                                       id="ot13"
+                                                                       visible="#{bindings.Typeacteur.inputValue eq 1}"/>
+                                                    </af:gridCell>
+                                                    <af:gridCell id="gc32">
+                                                        <af:selectOneChoice value="#{bindings.Idpermissionnaire.inputValue}"
+                                                                            required="#{bindings.Idpermissionnaire.hints.mandatory}"
+                                                                            shortDesc="#{bindings.Idpermissionnaire.hints.tooltip}"
+                                                                            id="soc9" autoSubmit="true"
+                                                                            visible="#{bindings.Typeacteur.inputValue eq 1}">
+                                                            <f:selectItems value="#{bindings.Idpermissionnaire.items}"
+                                                                           id="si9"/>
+                                                            <f:validator binding="#{bindings.Idpermissionnaire.validator}"/>
+                                                        </af:selectOneChoice>
+                                                    </af:gridCell>
+                                                </af:gridRow>
+                                                <af:gridRow marginTop="5px" height="auto" id="gr11">
+                                                    <af:gridCell marginStart="5px" width="auto" id="gc19">
+                                                        <af:outputText value="#{bindings.Idpartieproduitpfnl.label}"
+                                                                       id="ot14"/>
+                                                    </af:gridCell>
+                                                    <af:gridCell marginStart="5px" width="auto" marginEnd="5px"
+                                                                 id="gc20">
+                                                        <af:selectOneChoice value="#{bindings.Idpartieproduitpfnl.inputValue}"
+                                                                            required="#{bindings.Idpartieproduitpfnl.hints.mandatory}"
+                                                                            shortDesc="#{bindings.Idpartieproduitpfnl.hints.tooltip}"
+                                                                            id="soc15">
+                                                            <f:selectItems value="#{bindings.Idpartieproduitpfnl.items}"
+                                                                           id="si15"/>
+                                                            <f:validator binding="#{bindings.Idpartieproduitpfnl.validator}"/>
+                                                        </af:selectOneChoice>
+                                                    </af:gridCell>
+                                                </af:gridRow>
+                                                <af:gridRow marginTop="5px" height="auto" id="gr12">
+                                                    <af:gridCell marginStart="5px" width="auto" id="gc21">
+                                                        <af:outputText value="#{bindings.Idunitemesure.label}"
+                                                                       id="ot15"/>
+                                                    </af:gridCell>
+                                                    <af:gridCell marginStart="5px" width="auto" marginEnd="5px"
+                                                                 id="gc22">
+                                                        <af:selectOneChoice value="#{bindings.Idunitemesure.inputValue}"
+                                                                            required="#{bindings.Idunitemesure.hints.mandatory}"
+                                                                            shortDesc="#{bindings.Idunitemesure.hints.tooltip}"
+                                                                            id="soc12">
+                                                            <f:selectItems value="#{bindings.Idunitemesure.items}"
+                                                                           id="si12"/>
+                                                            <f:validator binding="#{bindings.Idunitemesure.validator}"/>
+                                                        </af:selectOneChoice>
+                                                    </af:gridCell>
+                                                </af:gridRow>
+                                                <af:gridRow marginTop="5px" height="auto" id="gr13">
+                                                    <af:gridCell marginStart="5px" width="auto" id="gc23">
+                                                        <af:outputText value="#{bindings.Quantite.hints.label}"
+                                                                       id="ot16"/>
+                                                    </af:gridCell>
+                                                    <af:gridCell marginStart="5px" width="auto" marginEnd="5px"
+                                                                 id="gc24">
+                                                        <af:inputText value="#{bindings.Quantite.inputValue}"
+                                                                      required="#{bindings.Quantite.hints.mandatory}"
+                                                                      columns="#{bindings.Quantite.hints.displayWidth}"
+                                                                      maximumLength="#{bindings.Quantite.hints.precision}"
+                                                                      shortDesc="#{bindings.Quantite.hints.tooltip}"
+                                                                      id="it4">
+                                                            <f:validator binding="#{bindings.Quantite.validator}"/>
+                                                            <af:convertNumber groupingUsed="false"
+                                                                              pattern="#{bindings.Quantite.format}"/>
+                                                        </af:inputText>
+                                                    </af:gridCell>
+                                                </af:gridRow>
+                                                <af:gridRow marginTop="5px" height="auto" id="gr14">
+                                                    <af:gridCell marginStart="5px" width="auto" id="gc25">
+                                                        <af:outputText value="#{viewcontrollerBundle.SOURCE_D_APPRO}"
+                                                                       id="ot17"/>
+                                                    </af:gridCell>
+                                                    <af:gridCell marginStart="5px" width="auto" marginEnd="5px"
+                                                                 id="gc26">
+                                                        <af:selectOneChoice value="#{bindings.Idorigine.inputValue}"
+                                                                            required="#{bindings.Idorigine.hints.mandatory}"
+                                                                            shortDesc="#{bindings.Idorigine.hints.tooltip}"
+                                                                            id="soc11">
+                                                            <f:selectItems value="#{bindings.Idorigine.items}"
+                                                                           id="si11"/>
+                                                            <f:validator binding="#{bindings.Idorigine.validator}"/>
+                                                        </af:selectOneChoice>
+                                                    </af:gridCell>
+                                                </af:gridRow>
+                                                <af:gridRow marginTop="5px" height="auto" id="gr15">
+                                                    <af:gridCell marginStart="5px" width="auto" id="gc27">
+                                                        <af:outputText value="#{bindings.Idprovenance.label}"
+                                                                       id="ot18"/>
+                                                    </af:gridCell>
+                                                    <af:gridCell marginStart="5px" width="auto" marginEnd="5px"
+                                                                 id="gc28">
+                                                        <af:selectOneChoice value="#{bindings.Idprovenance.inputValue}"
+                                                                            required="#{bindings.Idprovenance.hints.mandatory}"
+                                                                            shortDesc="#{bindings.Idprovenance.hints.tooltip}"
+                                                                            id="soc16">
+                                                            <f:selectItems value="#{bindings.Idprovenance.items}"
+                                                                           id="si16"/>
+                                                            <f:validator binding="#{bindings.Idprovenance.validator}"/>
+                                                        </af:selectOneChoice>
+                                                    </af:gridCell>
+                                                </af:gridRow>
+                                                <af:gridRow marginTop="5px" height="auto" id="gr16">
+                                                    <af:gridCell marginStart="5px" width="auto" id="gc29">
+                                                        <af:outputText value="#{bindings.Iddestination.label}"
+                                                                       id="ot19"/>
+                                                    </af:gridCell>
+                                                    <af:gridCell marginStart="5px" width="auto" marginEnd="5px"
+                                                                 id="gc30">
+                                                        <af:selectOneChoice value="#{bindings.Iddestination.inputValue}"
+                                                                            required="#{bindings.Iddestination.hints.mandatory}"
+                                                                            shortDesc="#{bindings.Iddestination.hints.tooltip}"
+                                                                            id="soc14">
+                                                            <f:selectItems value="#{bindings.Iddestination.items}"
+                                                                           id="si14"/>
+                                                            <f:validator binding="#{bindings.Iddestination.validator}"/>
+                                                        </af:selectOneChoice>
+                                                    </af:gridCell>
+                                                </af:gridRow>
+                                                <af:gridRow marginTop="5px" height="auto" id="gr18">
+                                                    <af:gridCell marginStart="5px" width="auto" id="gc33"/>
+                                                    <af:gridCell marginStart="5px" width="auto" marginEnd="5px"
+                                                                 id="gc34"/>
+                                                </af:gridRow>
+                                                <af:gridRow marginTop="5px" height="auto" id="gr19">
+                                                    <af:gridCell marginStart="5px" columnSpan="2" marginEnd="5px"
+                                                                 id="gc35">
+                                                        <af:panelGroupLayout id="pgl8">
+                                                            <af:button
+                                                                       text="#{viewcontrollerBundle.FIRST}"
+                                                                       disabled="#{!bindings.First1.enabled}"
+                                                                       partialSubmit="true" id="b16"
+                                                                       actionListener="#{bindings.First1.execute}"/>
+                                                            <af:spacer width="10" height="10" id="s10"/>
+                                                            <af:button
+                                                                       text="#{viewcontrollerBundle.PREVIOUS}"
+                                                                       disabled="#{!bindings.Previous1.enabled}"
+                                                                       partialSubmit="true" id="b17"
+                                                                       actionListener="#{bindings.Previous1.execute}"/>
+                                                            <af:spacer width="10" height="10" id="s11"/>
+                                                            <af:button
+                                                                       disabled="#{!bindings.Next1.enabled}"
+                                                                       partialSubmit="true" id="b18"
+                                                                       text="#{viewcontrollerBundle.NEXT}"
+                                                                       actionListener="#{bindings.Next1.execute}"/>
+                                                            <af:spacer width="10" height="10" id="s12"/>
+                                                            <af:button
+                                                                       text="#{viewcontrollerBundle.LAST}"
+                                                                       disabled="#{!bindings.Last1.enabled}"
+                                                                       partialSubmit="true" id="b19"
+                                                                       actionListener="#{bindings.Last1.execute}"/>
+                                                        </af:panelGroupLayout>
+                                                    </af:gridCell>
+                                                </af:gridRow>
+                                                <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr20">
+                                                    <af:gridCell marginStart="5px" columnSpan="2" marginEnd="5px"
+                                                                 id="gc36">
+                                                        <af:panelGroupLayout id="pgl2">
+                                                            <af:button text="#{viewcontrollerBundle.NOUVEAU}"
+                                                                       disabled="#{!bindings.CreateInsert1.enabled}"
+                                                                       id="b4"
+                                                                       action="#{collecteBean.creerDetailsCollecte}"/>
+                                                            <af:spacer width="10" height="10" id="s1"/>
+                                                            <af:button text="#{viewcontrollerBundle.ENREGISTRER}"
+                                                                       id="b3" disabled="false"
+                                                                       action="#{collecteBean.enregistrerCollecte}"/>
+                                                            <af:spacer width="10" height="10" id="s5"/>
+                                                            <af:button actionListener="#{bindings.Rollback.execute}"
+                                                                       text="#{viewcontrollerBundle.ANNULER}"
+                                                                       immediate="true" id="b6">
+                                                                <af:resetActionListener/>
+                                                            </af:button>
+                                                        </af:panelGroupLayout>
+                                                    </af:gridCell>
+                                                </af:gridRow>
+                                            </af:panelGridLayout>
+                                        </af:panelBox>
+                                    </af:showDetailItem>
+                                </af:panelTabbed>
+                            </af:panelBox>
                         </f:facet>
                     </af:panelSplitter>
                 </f:facet>

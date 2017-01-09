@@ -4,6 +4,8 @@ import java.io.IOException;
 
 import java.math.BigDecimal;
 
+import java.util.Random;
+
 import oracle.jbo.AttributeList;
 import oracle.jbo.Key;
 import oracle.jbo.Row;
@@ -35,6 +37,8 @@ public class UtilisateurImpl extends EntityImpl {
         Saisiecollecte,
         Saisieexport,
         Saisietransit,
+        Emailuser,
+        Premiereconnexion,
         Utilisateur,
         IdgroupeUtilisateur,
         Utilisateur1,
@@ -80,6 +84,8 @@ public class UtilisateurImpl extends EntityImpl {
     public static final int SAISIECOLLECTE = AttributesEnum.Saisiecollecte.index();
     public static final int SAISIEEXPORT = AttributesEnum.Saisieexport.index();
     public static final int SAISIETRANSIT = AttributesEnum.Saisietransit.index();
+    public static final int EMAILUSER = AttributesEnum.Emailuser.index();
+    public static final int PREMIERECONNEXION = AttributesEnum.Premiereconnexion.index();
     public static final int UTILISATEUR = AttributesEnum.Utilisateur.index();
     public static final int IDGROUPEUTILISATEUR = AttributesEnum.IdgroupeUtilisateur.index();
     public static final int UTILISATEUR1 = AttributesEnum.Utilisateur1.index();
@@ -310,6 +316,38 @@ public class UtilisateurImpl extends EntityImpl {
     }
 
     /**
+     * Gets the attribute value for Emailuser, using the alias name Emailuser.
+     * @return the value of Emailuser
+     */
+    public String getEmailuser() {
+        return (String) getAttributeInternal(EMAILUSER);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for Emailuser.
+     * @param value value to set the Emailuser
+     */
+    public void setEmailuser(String value) {
+        setAttributeInternal(EMAILUSER, value);
+    }
+
+    /**
+     * Gets the attribute value for Premiereconnexion, using the alias name Premiereconnexion.
+     * @return the value of Premiereconnexion
+     */
+    public Boolean getPremiereconnexion() {
+        return (Boolean) getAttributeInternal(PREMIERECONNEXION);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for Premiereconnexion.
+     * @param value value to set the Premiereconnexion
+     */
+    public void setPremiereconnexion(Boolean value) {
+        setAttributeInternal(PREMIERECONNEXION, value);
+    }
+
+    /**
      * @return the associated entity oracle.jbo.RowIterator.
      */
     public RowIterator getUtilisateur() {
@@ -456,7 +494,14 @@ public class UtilisateurImpl extends EntityImpl {
             //System.out.println("actif = " + getActif());
             BigDecimal id = getLastId("getLastIdUtilisateur1");
             setIdutilisateur(id);
+            setPremiereconnexion(true);
+            String pswd=generateRandomChars();
+            try {
+                setPassworduser(pswd);
+            } catch (IOException f) {
+            }
         }
+        
         super.doDML(operation, e);
     }
     
@@ -476,6 +521,19 @@ public class UtilisateurImpl extends EntityImpl {
         BigDecimal un = new BigDecimal(1);
         lastId = lastId.add(un);
         return lastId; 
+    }
+    
+    public static String generateRandomChars() {
+        String candidateChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890"; 
+        int length = 12;
+        StringBuilder sb = new StringBuilder();
+        Random random = new Random();
+        for (int i = 0; i < length; i++) {
+            sb.append(candidateChars.charAt(random.nextInt(candidateChars
+                    .length())));
+        }
+
+        return sb.toString();
     }
 }
 

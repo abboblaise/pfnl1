@@ -28,6 +28,14 @@
     Name="getLibelleProduitComplet1"
     ViewObjectName="cm.gov.minfof.model.entityviewobject.getLibelleProduitComplet"
     RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="CertificatorigineView1"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.CertificatorigineView"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="PaysView1"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.PaysView"
+    RowLevelBinds="true"/>
   <ListBinding
     Name="LOV_Idunitemesure"
     ListVOName="UnitemesureView1"
@@ -61,6 +69,42 @@
     </AttrArray>
     <AttrArray Name="ListDisplayAttrNames">
       <Item Value="Libelle"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_Idcertificat"
+    ListVOName="CertificatorigineView1"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="Idcertificat"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Idcertificatorigine"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Numeroco"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_Idpays"
+    ListVOName="PaysView1"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="Idpays"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Idpays"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Nompays"/>
     </AttrArray>
     <DisplayCriteria/>
   </ListBinding>
@@ -113,6 +157,34 @@
     EntityUsage="Detailsexportpfnl"
     AliasName="idpartieproduitpfnl"
     LOVName="LOV_Idpartieproduitpfnl">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="Idcertificat"
+    PrecisionRule="true"
+    EntityAttrName="Idcertificat"
+    EntityUsage="Detailsexportpfnl"
+    AliasName="idcertificat"
+    LOVName="LOV_Idcertificat">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="Idpays"
+    PrecisionRule="true"
+    EntityAttrName="Idpays"
+    EntityUsage="Detailsexportpfnl"
+    AliasName="idpays"
+    LOVName="LOV_Idpays">
     <Properties>
       <SchemaBasedProperties>
         <CONTROLTYPE

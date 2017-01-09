@@ -27,11 +27,11 @@ public class LocaliteViewSDOImpl extends SDODataObject implements LocaliteViewSD
       set(START_PROPERTY_INDEX + 1 , value);
    }
 
-   public java.math.BigDecimal getIddepartement() {
+   public java.math.BigDecimal getIdcommune() {
       return getBigDecimal(START_PROPERTY_INDEX + 2);
    }
 
-   public void setIddepartement(java.math.BigDecimal value) {
+   public void setIdcommune(java.math.BigDecimal value) {
       set(START_PROPERTY_INDEX + 2 , value);
    }
 

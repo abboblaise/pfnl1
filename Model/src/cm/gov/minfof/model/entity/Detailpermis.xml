@@ -56,8 +56,7 @@
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
     ColumnType="BIGINT"
-    TableName="detailpermis"
-    DefaultValue="1">
+    TableName="detailpermis">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="19"/>
     </DesignTime>

@@ -39,8 +39,7 @@
     Type="java.lang.String"
     ColumnType="VARCHAR"
     TableName="famillepfnl"
-    IsNotNull="true"
-    DefaultValue="Entrez un nom">
+    IsNotNull="true">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="70"/>
     </DesignTime>

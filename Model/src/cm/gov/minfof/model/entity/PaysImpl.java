@@ -22,9 +22,9 @@ public class PaysImpl extends EntityImpl {
      */
     protected enum AttributesEnum {
         Idpays,
-        Nompays;
+        Nompays,
+        Codepays;
         private static AttributesEnum[] vals = null;
-        ;
         private static final int firstIndex = 0;
 
         protected int index() {
@@ -50,6 +50,7 @@ public class PaysImpl extends EntityImpl {
 
     public static final int IDPAYS = AttributesEnum.Idpays.index();
     public static final int NOMPAYS = AttributesEnum.Nompays.index();
+    public static final int CODEPAYS = AttributesEnum.Codepays.index();
 
     /**
      * This is the default constructor (do not remove).
@@ -95,6 +96,23 @@ public class PaysImpl extends EntityImpl {
      */
     public void setNompays(String value) {
         setAttributeInternal(NOMPAYS, value);
+    }
+
+
+    /**
+     * Gets the attribute value for Codepays, using the alias name Codepays.
+     * @return the value of Codepays
+     */
+    public String getCodepays() {
+        return (String) getAttributeInternal(CODEPAYS);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for Codepays.
+     * @param value value to set the Codepays
+     */
+    public void setCodepays(String value) {
+        setAttributeInternal(CODEPAYS, value);
     }
 
 

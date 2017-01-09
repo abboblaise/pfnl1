@@ -122,4 +122,34 @@
     <managed-bean-class>cm.gov.minfof.view.ConnectBean</managed-bean-class>
     <managed-bean-scope>request</managed-bean-scope>
   </managed-bean>
+  <managed-bean id="__25">
+    <managed-bean-name>PagegroupeBean</managed-bean-name>
+    <managed-bean-class>cm.gov.minfof.view.PagegroupeBean</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+  </managed-bean>
+  <managed-bean id="__26">
+    <managed-bean-name>ModifuserBean</managed-bean-name>
+    <managed-bean-class>cm.gov.minfof.view.ModifuserBean</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+  </managed-bean>
+  <managed-bean id="__27">
+    <managed-bean-name>certificatBean</managed-bean-name>
+    <managed-bean-class>cm.gov.minfof.view.certificatBean</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+  </managed-bean>
+  <managed-bean id="__28">
+    <managed-bean-name>categorieproduitBean</managed-bean-name>
+    <managed-bean-class>cm.gov.minfof.view.categorieproduitBean</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+  </managed-bean>
+  <managed-bean id="__30">
+    <managed-bean-name>uniteMesureBean</managed-bean-name>
+    <managed-bean-class>cm.gov.minfof.view.uniteMesure</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+  </managed-bean>
+  <managed-bean id="__31">
+    <managed-bean-name>ResetTableFilterBean</managed-bean-name>
+    <managed-bean-class>cm.gov.minfof.view.ResetTableFilterBean</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+  </managed-bean>
 </adfc-config>

@@ -111,5 +111,23 @@
         <Item Value="fin"/>
       </AttrNames>
     </attributeValues>
+    <attributeValues IterBinding="PermisView1Iterator" id="Nomfichier">
+      <AttrNames>
+        <Item Value="Nomfichier"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="PermisView1Iterator" id="Cheminfichier">
+      <AttrNames>
+        <Item Value="Cheminfichier"/>
+      </AttrNames>
+    </attributeValues>
+    <action IterBinding="DetailpermisView6Iterator" id="First" RequiresUpdateModel="true" Action="first"/>
+    <action IterBinding="DetailpermisView6Iterator" id="Previous" RequiresUpdateModel="true" Action="previous"/>
+    <action IterBinding="DetailpermisView6Iterator" id="Next" RequiresUpdateModel="true" Action="next"/>
+    <action IterBinding="DetailpermisView6Iterator" id="Last" RequiresUpdateModel="true" Action="last"/>
+    <action IterBinding="PermisView1Iterator" id="First1" RequiresUpdateModel="true" Action="first"/>
+    <action IterBinding="PermisView1Iterator" id="Previous1" RequiresUpdateModel="true" Action="previous"/>
+    <action IterBinding="PermisView1Iterator" id="Next1" RequiresUpdateModel="true" Action="next"/>
+    <action IterBinding="PermisView1Iterator" id="Last1" RequiresUpdateModel="true" Action="last"/>
   </bindings>
 </pageDefinition>

@@ -17,28 +17,52 @@
   ComponentClass="cm.gov.minfof.model.entityviewobject.PostecontroleViewImpl"
   SdoGen="true"
   SdoName="cm.gov.minfof.model.entityviewobject.common.PostecontroleViewSDO"
-  SdoNameSpace="/cm/gov/minfof/model/entityviewobject/common/">
+  SdoNameSpace="/cm/gov/minfof/model/entityviewobject/common/"
+  RowClass="cm.gov.minfof.model.entityviewobject.PostecontroleViewRowImpl">
   <DesignTime>
-    <Attr Name="_codeGenFlag2" Value="Coll|VarAccess"/>
+    <Attr Name="_codeGenFlag2" Value="Access|Coll|Prog|VarAccess"/>
+    <Attr Name="_isCodegen" Value="true"/>
   </DesignTime>
   <ViewAccessor
-    Name="DepartementView1"
-    ViewObjectName="cm.gov.minfof.model.entityviewobject.DepartementView"
+    Name="CommuneView1"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.CommuneView"
     RowLevelBinds="true"/>
   <ListBinding
-    Name="LOV_Iddepartement"
-    ListVOName="DepartementView1"
-    NullValueFlag="none"
+    Name="LOV_Idcommune"
+    ListVOName="CommuneView1"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
     MRUCount="0">
     <AttrArray Name="AttrNames">
-      <Item Value="Iddepartement"/>
+      <Item Value="Idcommune"/>
     </AttrArray>
     <AttrArray Name="AttrExpressions"/>
     <AttrArray Name="ListAttrNames">
-      <Item Value="Iddepartements"/>
+      <Item Value="Idcommunes"/>
     </AttrArray>
     <AttrArray Name="ListDisplayAttrNames">
-      <Item Value="Nomdepartement"/>
+      <Item Value="Nomcommune"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_Nomcommune"
+    ListVOName="CommuneView1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="Nomcommune"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="DerivedAttrNames">
+      <Item Value="Idcommune"/>
+    </AttrArray>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Nomcommune"/>
+      <Item Value="Idcommunes"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Nomcommune"/>
     </AttrArray>
     <DisplayCriteria/>
   </ListBinding>
@@ -83,23 +107,6 @@
     </Properties>
   </ViewAttribute>
   <ViewAttribute
-    Name="Iddepartement"
-    IsNotNull="true"
-    PrecisionRule="true"
-    EntityAttrName="Iddepartement"
-    EntityUsage="Postecontrole"
-    AliasName="iddepartement"
-    LOVName="LOV_Iddepartement">
-    <Properties>
-      <SchemaBasedProperties>
-        <CONTROLTYPE
-          Value="choice"/>
-        <LABEL
-          ResId="D_U00E9PARTEMENT"/>
-      </SchemaBasedProperties>
-    </Properties>
-  </ViewAttribute>
-  <ViewAttribute
     Name="Posteexport"
     PrecisionRule="true"
     EntityAttrName="Posteexport"
@@ -112,17 +119,38 @@
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
-  <ViewLinkAccessor
-    Name="PostecontroleView"
-    ViewLink="cm.gov.minfof.model.entityviewobject.FkPostecontrole1Link"
-    Type="oracle.jbo.RowIterator"
-    IsUpdateable="false"/>
-  <ViewLinkAccessor
-    Name="DepartementView"
-    ViewLink="cm.gov.minfof.model.entityviewobject.DepToPostecontroleLink"
-    Type="oracle.jbo.server.ViewRowImpl"
-    Reversed="true"
-    IsUpdateable="false"/>
+  <ViewAttribute
+    Name="Idcommune"
+    PrecisionRule="true"
+    IsNotNull="true"
+    EntityAttrName="Idcommune"
+    EntityUsage="Postecontrole"
+    AliasName="idcommune"
+    LOVName="LOV_Idcommune">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="Nomcommune"
+    IsSelected="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Type="java.lang.String"
+    ColumnType="CHAR"
+    AliasName="VIEW_ATTR"
+    SQLType="VARCHAR"
+    LOVName="LOV_Nomcommune">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ResourceBundle>
     <PropertiesBundle
       PropertiesFile="cm.gov.minfof.model.ModelBundle"/>

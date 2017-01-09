@@ -10,9 +10,9 @@ public interface LocaliteViewSDO extends java.io.Serializable {
 
    public void setNomlocalite(java.lang.String value);
 
-   public java.math.BigDecimal getIddepartement();
+   public java.math.BigDecimal getIdcommune();
 
-   public void setIddepartement(java.math.BigDecimal value);
+   public void setIdcommune(java.math.BigDecimal value);
 
    public java.util.List getLocaliteView();
 

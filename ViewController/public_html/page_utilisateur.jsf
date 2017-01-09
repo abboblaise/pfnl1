@@ -19,20 +19,22 @@
                                           shortDesc="#{bindings.Loginuser.hints.tooltip}" id="it1">
                                 <f:validator binding="#{bindings.Loginuser.validator}"/>
                             </af:inputText>
-                            <af:selectBooleanCheckbox
-                                                      label="#{viewcontrollerBundle.EDITER_LE_MOT_DE_PASSE}" id="sbc1"
-                                                      value="#{connectBean.editpwd}"/>
+                            <af:inputText value="#{bindings.Emailuser.inputValue}"
+                                          label="#{bindings.Emailuser.hints.label}"
+                                          required="#{bindings.Emailuser.hints.mandatory}"
+                                          columns="#{bindings.Emailuser.hints.displayWidth}"
+                                          maximumLength="#{bindings.Emailuser.hints.precision}"
+                                          shortDesc="#{bindings.Emailuser.hints.tooltip}" id="it5">
+                                <f:validator binding="#{bindings.Emailuser.validator}"/>
+                            </af:inputText>
                             <af:inputText value="#{bindings.Passworduser.inputValue}"
                                           label="#{bindings.Passworduser.hints.label}"
-                                          required="#{bindings.Passworduser.hints.mandatory}"
                                           columns="#{bindings.Passworduser.hints.displayWidth}"
                                           maximumLength="#{bindings.Passworduser.hints.precision}"
-                                          shortDesc="#{bindings.Passworduser.hints.tooltip}" id="it2" secret="true">
+                                          shortDesc="#{bindings.Passworduser.hints.tooltip}" id="it2" secret="true"
+                                          disabled="true">
                                 <f:validator binding="#{bindings.Passworduser.validator}"/>
                             </af:inputText>
-                            <af:inputText label="#{viewcontrollerBundle.CONFIRMER}" id="it9"
-                                          secret="true"
-                                          required="true" validator="#{connectBean.ValideMotdepasse}" value="test"/>
                             <af:inputText value="#{bindings.Nomuser.inputValue}" label="#{bindings.Nomuser.hints.label}"
                                           required="#{bindings.Nomuser.hints.mandatory}"
                                           columns="#{bindings.Nomuser.hints.displayWidth}"
@@ -47,6 +49,20 @@
                                           maximumLength="#{bindings.Telephone.hints.precision}"
                                           shortDesc="#{bindings.Telephone.hints.tooltip}" id="it4">
                                 <f:validator binding="#{bindings.Telephone.validator}"/>
+                                <af:target>
+                                    <af:decorativeBox id="db1">
+                                        <f:facet name="top"/>
+                                        <f:facet name="center"/>
+                                    </af:decorativeBox>
+                                    <af:decorativeBox id="db2">
+                                        <f:facet name="top"/>
+                                        <f:facet name="center"/>
+                                    </af:decorativeBox>
+                                    <af:decorativeBox id="db3">
+                                        <f:facet name="top"/>
+                                        <f:facet name="center"/>
+                                    </af:decorativeBox>
+                                </af:target>
                             </af:inputText>
                             <af:selectOneChoice value="#{bindings.Niveauintervention.inputValue}"
                                                 label="#{bindings.Niveauintervention.label}"
@@ -88,6 +104,10 @@
                             <af:selectBooleanCheckbox value="#{bindings.Saisietransit.inputValue}"
                                                       label="#{bindings.Saisietransit.label}"
                                                       shortDesc="#{bindings.Saisietransit.hints.tooltip}" id="sbc4"/>
+                            <af:selectBooleanCheckbox value="#{bindings.Premiereconnexion.inputValue}"
+                                                      label="#{bindings.Premiereconnexion.label}"
+                                                      shortDesc="#{bindings.Premiereconnexion.hints.tooltip}"
+                                                      id="sbc5" disabled="true"/>
                             <f:facet name="footer">
                                 <af:panelGroupLayout id="pgl1">
                                     <af:button text="#{viewcontrollerBundle.ENREGISTRER}" id="b1" rendered="true"
@@ -127,24 +147,33 @@
                                       filterModel="#{bindings.UtilisateurView1Query.queryDescriptor}"
                                       filterVisible="true"
                                       queryListener="#{bindings.UtilisateurView1Query.processQuery}" varStatus="vs"
-                                      id="t1" partialTriggers=":::b5 :::b6 :::b7 :::b8">
+                                      id="t1" partialTriggers=":::b1 :::b2 :::b3 :::b4">
                                 <af:column sortProperty="#{bindings.UtilisateurView1.hints.Loginuser.name}"
                                            filterable="true" sortable="true"
-                                           headerText="#{bindings.UtilisateurView1.hints.Loginuser.label}" id="c1">
+                                           headerText="#{bindings.UtilisateurView1.hints.Loginuser.label}" id="c1"
+                                           width="100">
                                     <af:outputText value="#{row.Loginuser}"
                                                    shortDesc="#{bindings.UtilisateurView1.hints.Loginuser.tooltip}"
                                                    id="ot1"/>
                                 </af:column>
                                 <af:column sortProperty="#{bindings.UtilisateurView1.hints.Nomuser.name}"
                                            filterable="true" sortable="true"
-                                           headerText="#{bindings.UtilisateurView1.hints.Nomuser.label}" id="c2">
+                                           headerText="#{bindings.UtilisateurView1.hints.Nomuser.label}" id="c2"
+                                           width="100">
                                     <af:outputText value="#{row.Nomuser}"
                                                    shortDesc="#{bindings.UtilisateurView1.hints.Nomuser.tooltip}"
                                                    id="ot2"/>
                                 </af:column>
+                                <af:column headerText="#{bindings.UtilisateurView1.hints.Emailuser.label}" id="c8"
+                                           width="250">
+                                    <af:outputText value="#{row.Emailuser}"
+                                                   shortDesc="#{bindings.UtilisateurView1.hints.Emailuser.tooltip}"
+                                                   id="ot4"/>
+                                </af:column>
                                 <af:column sortProperty="#{bindings.UtilisateurView1.hints.Telephone.name}"
                                            filterable="true" sortable="true"
-                                           headerText="#{bindings.UtilisateurView1.hints.Telephone.label}" id="c3">
+                                           headerText="#{bindings.UtilisateurView1.hints.Telephone.label}" id="c3"
+                                           width="-50">
                                     <af:outputText value="#{row.Telephone}"
                                                    shortDesc="#{bindings.UtilisateurView1.hints.Telephone.tooltip}"
                                                    id="ot3"/>
@@ -152,7 +181,7 @@
                                 <af:column sortProperty="#{bindings.UtilisateurView1.hints.Niveauintervention.name}"
                                            filterable="true" sortable="true"
                                            headerText="#{bindings.UtilisateurView1.hints.Niveauintervention.label}"
-                                           id="c4">
+                                           id="c4" width="100">
                                     <af:selectOneChoice value="#{row.bindings.Niveauintervention.inputValue}"
                                                         label="#{row.bindings.Niveauintervention.label}"
                                                         required="#{bindings.UtilisateurView1.hints.Niveauintervention.mandatory}"
@@ -164,7 +193,8 @@
                                 </af:column>
                                 <af:column sortProperty="#{bindings.UtilisateurView1.hints.Idregions.name}"
                                            filterable="true" sortable="true"
-                                           headerText="#{bindings.UtilisateurView1.hints.Idregions.label}" id="c5">
+                                           headerText="#{bindings.UtilisateurView1.hints.Idregions.label}" id="c5"
+                                           width="100">
                                     <af:selectOneChoice value="#{row.bindings.Idregions.inputValue}"
                                                         label="#{row.bindings.Idregions.label}"
                                                         required="#{bindings.UtilisateurView1.hints.Idregions.mandatory}"
@@ -176,7 +206,8 @@
                                 </af:column>
                                 <af:column sortProperty="#{bindings.UtilisateurView1.hints.Iddepartements.name}"
                                            filterable="true" sortable="true"
-                                           headerText="#{bindings.UtilisateurView1.hints.Iddepartements.label}" id="c6">
+                                           headerText="#{bindings.UtilisateurView1.hints.Iddepartements.label}" id="c6"
+                                           width="100">
                                     <af:selectOneChoice value="#{row.bindings.Iddepartements.inputValue}"
                                                         label="#{row.bindings.Iddepartements.label}"
                                                         required="#{bindings.UtilisateurView1.hints.Iddepartements.mandatory}"
@@ -188,7 +219,8 @@
                                 </af:column>
                                 <af:column sortProperty="#{bindings.UtilisateurView1.hints.Idgroupe.name}"
                                            filterable="true" sortable="true"
-                                           headerText="#{bindings.UtilisateurView1.hints.Idgroupe.label}" id="c7">
+                                           headerText="#{bindings.UtilisateurView1.hints.Idgroupe.label}" id="c7"
+                                           width="100">
                                     <af:selectOneChoice value="#{row.bindings.Idgroupe.inputValue}"
                                                         label="#{row.bindings.Idgroupe.label}"
                                                         required="#{bindings.UtilisateurView1.hints.Idgroupe.mandatory}"
@@ -206,4 +238,5 @@
             </af:pageTemplate>
         </af:form>
     </af:document>
+    <!--oracle-jdev-comment:preferred-managed-bean-name:connectBean-->
 </f:view>

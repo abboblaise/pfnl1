@@ -32,21 +32,22 @@
   <Attribute
     Name="Nomsource"
     IsUnique="true"
-    Precision="20"
+    Precision="100"
     ColumnName="NOMSOURCE"
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR"
     TableName="originespnfls"
-    IsNotNull="true"
-    DefaultValue="Entrez un nom">
+    IsNotNull="true">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="20"/>
     </DesignTime>
     <Properties>
       <SchemaBasedProperties>
         <LABEL
-          ResId="cm.gov.minfof.model.entity.Originespnfls.Nomsource_LABEL"/>
+          ResId="SOURCE"/>
+        <DISPLAYWIDTH
+          Value="50"/>
       </SchemaBasedProperties>
     </Properties>
   </Attribute>
@@ -57,15 +58,14 @@
     Type="java.lang.Integer"
     ColumnType="TINYINT"
     TableName="originespnfls"
-    IsNotNull="true"
-    DefaultValue="1">
+    IsNotNull="true">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="3"/>
     </DesignTime>
     <Properties>
       <SchemaBasedProperties>
         <LABEL
-          ResId="cm.gov.minfof.model.entity.Originespnfls.Originepnfl_LABEL"/>
+          ResId="TYPE_DE_SOURCE"/>
       </SchemaBasedProperties>
     </Properties>
   </Attribute>

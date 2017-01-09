@@ -26,6 +26,10 @@ public interface ExportpfnlViewSDO extends java.io.Serializable {
 
    public void setDateexport(java.sql.Timestamp value);
 
+   public java.math.BigDecimal getIdposteexport();
+
+   public void setIdposteexport(java.math.BigDecimal value);
+
    public java.util.List getExportpfnlView();
 
    public void setExportpfnlView(java.util.List value);

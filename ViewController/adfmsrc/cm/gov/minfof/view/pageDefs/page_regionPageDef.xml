@@ -29,11 +29,6 @@
         <Item Value="Descriptionregions"/>
       </AttrNames>
     </attributeValues>
-    <attributeValues IterBinding="RegionView1Iterator" id="Idregions">
-      <AttrNames>
-        <Item Value="Idregions"/>
-      </AttrNames>
-    </attributeValues>
     <tree IterBinding="RegionView1Iterator" id="RegionView1">
       <nodeDefinition DefName="cm.gov.minfof.model.entityviewobject.RegionView" Name="RegionView10">
         <AttrNames>
@@ -50,5 +45,9 @@
     <action IterBinding="RegionView1Iterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
     <action IterBinding="RegionView1Iterator" id="Create" RequiresUpdateModel="true" Action="createRow"/>
     <action id="Rollback" RequiresUpdateModel="false" Action="rollbackTransaction" DataControl="AppModuleDataControl"/>
+    <action IterBinding="RegionView1Iterator" id="First" RequiresUpdateModel="true" Action="first"/>
+    <action IterBinding="RegionView1Iterator" id="Previous" RequiresUpdateModel="true" Action="previous"/>
+    <action IterBinding="RegionView1Iterator" id="Next" RequiresUpdateModel="true" Action="next"/>
+    <action IterBinding="RegionView1Iterator" id="Last" RequiresUpdateModel="true" Action="last"/>
   </bindings>
 </pageDefinition>

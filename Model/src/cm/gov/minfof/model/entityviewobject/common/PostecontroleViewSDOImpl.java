@@ -35,27 +35,27 @@ public class PostecontroleViewSDOImpl extends SDODataObject implements Postecont
       set(START_PROPERTY_INDEX + 2 , value);
    }
 
-   public java.math.BigDecimal getIddepartement() {
-      return getBigDecimal(START_PROPERTY_INDEX + 3);
-   }
-
-   public void setIddepartement(java.math.BigDecimal value) {
-      set(START_PROPERTY_INDEX + 3 , value);
-   }
-
    public java.lang.Integer getPosteexport() {
-      return getInt(START_PROPERTY_INDEX + 4);
+      return getInt(START_PROPERTY_INDEX + 3);
    }
 
    public void setPosteexport(java.lang.Integer value) {
+      set(START_PROPERTY_INDEX + 3 , value);
+   }
+
+   public java.math.BigDecimal getIdcommune() {
+      return getBigDecimal(START_PROPERTY_INDEX + 4);
+   }
+
+   public void setIdcommune(java.math.BigDecimal value) {
       set(START_PROPERTY_INDEX + 4 , value);
    }
 
-   public java.util.List getPostecontroleView() {
-      return getList(START_PROPERTY_INDEX + 5);
+   public java.lang.String getNomcommune() {
+      return getString(START_PROPERTY_INDEX + 5);
    }
 
-   public void setPostecontroleView(java.util.List value) {
+   public void setNomcommune(java.lang.String value) {
       set(START_PROPERTY_INDEX + 5 , value);
    }
 

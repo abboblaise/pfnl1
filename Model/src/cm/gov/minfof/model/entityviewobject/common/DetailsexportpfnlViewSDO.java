@@ -26,6 +26,14 @@ public interface DetailsexportpfnlViewSDO extends java.io.Serializable {
 
    public void setIdpartieproduitpfnl(java.math.BigDecimal value);
 
+   public java.math.BigDecimal getIdcertificat();
+
+   public void setIdcertificat(java.math.BigDecimal value);
+
+   public java.math.BigDecimal getIdpays();
+
+   public void setIdpays(java.math.BigDecimal value);
+
    public java.util.List getDetailsexportpfnlView();
 
    public void setDetailsexportpfnlView(java.util.List value);
@@ -38,13 +46,13 @@ public interface DetailsexportpfnlViewSDO extends java.io.Serializable {
 
    public void setDetailsexportpfnlView2(java.util.List value);
 
-   public cm.gov.minfof.model.entityviewobject.common.UnitemesureViewSDO getUnitemesureView();
-
-   public void setUnitemesureView(cm.gov.minfof.model.entityviewobject.common.UnitemesureViewSDO value);
-
    public cm.gov.minfof.model.entity.common.PartiesProduitsPfnlViewSDO getPartiesProduitsPfnlView();
 
    public void setPartiesProduitsPfnlView(cm.gov.minfof.model.entity.common.PartiesProduitsPfnlViewSDO value);
+
+   public cm.gov.minfof.model.entityviewobject.common.UnitemesureViewSDO getUnitemesureView();
+
+   public void setUnitemesureView(cm.gov.minfof.model.entityviewobject.common.UnitemesureViewSDO value);
 
 
 }

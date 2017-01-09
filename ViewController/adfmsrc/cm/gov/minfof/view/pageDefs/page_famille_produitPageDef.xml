@@ -9,11 +9,6 @@
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="FamillePfnlView1Query"/>
   </executables>
   <bindings>
-    <attributeValues IterBinding="FamillePfnlView1Iterator" id="Idfamillepfnl">
-      <AttrNames>
-        <Item Value="Idfamillepfnl"/>
-      </AttrNames>
-    </attributeValues>
     <attributeValues IterBinding="FamillePfnlView1Iterator" id="Nomfamille">
       <AttrNames>
         <Item Value="Nomfamille"/>
@@ -27,10 +22,14 @@
         </AttrNames>
       </nodeDefinition>
     </tree>
-    <action IterBinding="FamillePfnlView1Iterator" id="CreateInsert" RequiresUpdateModel="true"
-            Action="createInsertRow"/>
     <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
     <action IterBinding="FamillePfnlView1Iterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
     <action id="Rollback" RequiresUpdateModel="false" Action="rollbackTransaction" DataControl="AppModuleDataControl"/>
+    <action IterBinding="FamillePfnlView1Iterator" id="First" RequiresUpdateModel="true" Action="first"/>
+    <action IterBinding="FamillePfnlView1Iterator" id="Previous" RequiresUpdateModel="true" Action="previous"/>
+    <action IterBinding="FamillePfnlView1Iterator" id="Next" RequiresUpdateModel="true" Action="next"/>
+    <action IterBinding="FamillePfnlView1Iterator" id="Last" RequiresUpdateModel="true" Action="last"/>
+    <action IterBinding="FamillePfnlView1Iterator" id="CreateInsert" RequiresUpdateModel="true"
+            Action="createInsertRow"/>
   </bindings>
 </pageDefinition>

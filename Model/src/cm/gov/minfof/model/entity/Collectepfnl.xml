@@ -48,26 +48,6 @@
     </Properties>
   </Attribute>
   <Attribute
-    Name="Identificateur"
-    Precision="100"
-    ColumnName="identificateur"
-    SQLType="VARCHAR"
-    Type="java.lang.String"
-    ColumnType="VARCHAR"
-    TableName="collectepfnl">
-    <DesignTime>
-      <Attr Name="_DisplaySize" Value="100"/>
-    </DesignTime>
-    <Properties>
-      <SchemaBasedProperties>
-        <DISPLAYWIDTH
-          Value="25"/>
-        <LABEL
-          ResId="IDENTIFICATEUR"/>
-      </SchemaBasedProperties>
-    </Properties>
-  </Attribute>
-  <Attribute
     Name="Iddepartement"
     ColumnName="iddepartement"
     SQLType="NUMERIC"
@@ -81,26 +61,6 @@
       <SchemaBasedProperties>
         <LABEL
           ResId="D_U00E9PARTEMENT"/>
-      </SchemaBasedProperties>
-    </Properties>
-  </Attribute>
-  <Attribute
-    Name="Codepcfc"
-    Precision="45"
-    ColumnName="codepcfc"
-    SQLType="VARCHAR"
-    Type="java.lang.String"
-    ColumnType="VARCHAR"
-    TableName="collectepfnl">
-    <DesignTime>
-      <Attr Name="_DisplaySize" Value="45"/>
-    </DesignTime>
-    <Properties>
-      <SchemaBasedProperties>
-        <LABEL
-          ResId="CODE_PCFC"/>
-        <DISPLAYWIDTH
-          Value="10"/>
       </SchemaBasedProperties>
     </Properties>
   </Attribute>
@@ -120,6 +80,28 @@
           ResId="LOCALIT_U00E9"/>
       </SchemaBasedProperties>
     </Properties>
+  </Attribute>
+  <Attribute
+    Name="Idposte"
+    ColumnName="idposte"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="BIGINT"
+    TableName="collectepfnl">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="19"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Idutilisateur"
+    ColumnName="idutilisateur"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="BIGINT"
+    TableName="collectepfnl">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="19"/>
+    </DesignTime>
   </Attribute>
   <AccessorAttribute
     Name="Collectepfnl"
@@ -149,13 +131,6 @@
     AssociationOtherEnd="cm.gov.minfof.model.entity.DeptToCollecteAssoc.Collectepfnl"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
-  <AccessorAttribute
-    Name="Localite"
-    Association="cm.gov.minfof.model.entity.LocaliteToCollecteAssoc"
-    AssociationEnd="cm.gov.minfof.model.entity.LocaliteToCollecteAssoc.Localite"
-    AssociationOtherEnd="cm.gov.minfof.model.entity.LocaliteToCollecteAssoc.Collectepfnl"
-    Type="cm.gov.minfof.model.entity.LocaliteImpl"
-    IsUpdateable="true"/>
   <Key
     Name="Primary1"
     PrimaryKey="true">

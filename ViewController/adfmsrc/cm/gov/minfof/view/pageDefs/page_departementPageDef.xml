@@ -16,11 +16,6 @@
         <Item Value="Nomregion"/>
       </AttrNames>
     </list>
-    <attributeValues IterBinding="DepartementView3Iterator" id="Iddepartements">
-      <AttrNames>
-        <Item Value="Iddepartements"/>
-      </AttrNames>
-    </attributeValues>
     <attributeValues IterBinding="DepartementView3Iterator" id="Nomdepartement">
       <AttrNames>
         <Item Value="Nomdepartement"/>
@@ -29,11 +24,6 @@
     <attributeValues IterBinding="DepartementView3Iterator" id="Codedepartement">
       <AttrNames>
         <Item Value="Codedepartement"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="DepartementView3Iterator" id="Idregions">
-      <AttrNames>
-        <Item Value="Idregions"/>
       </AttrNames>
     </attributeValues>
     <attributeValues IterBinding="DepartementView3Iterator" id="Nomcheflieu">
@@ -58,5 +48,9 @@
     <action IterBinding="DepartementView3Iterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
     <action IterBinding="DepartementView3Iterator" id="Create" RequiresUpdateModel="true" Action="createRow"/>
     <action id="Rollback" RequiresUpdateModel="false" Action="rollbackTransaction" DataControl="AppModuleDataControl"/>
+    <action IterBinding="DepartementView3Iterator" id="First" RequiresUpdateModel="true" Action="first"/>
+    <action IterBinding="DepartementView3Iterator" id="Previous" RequiresUpdateModel="true" Action="previous"/>
+    <action IterBinding="DepartementView3Iterator" id="Next" RequiresUpdateModel="true" Action="next"/>
+    <action IterBinding="DepartementView3Iterator" id="Last" RequiresUpdateModel="true" Action="last"/>
   </bindings>
 </pageDefinition>

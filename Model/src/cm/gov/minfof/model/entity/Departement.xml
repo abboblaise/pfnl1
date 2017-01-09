@@ -39,8 +39,7 @@
     Type="java.lang.String"
     ColumnType="VARCHAR"
     TableName="departements"
-    IsNotNull="true"
-    DefaultValue="entrez un nom">
+    IsNotNull="true">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="50"/>
     </DesignTime>
@@ -145,20 +144,6 @@
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
   <AccessorAttribute
-    Name="Localite"
-    Association="cm.gov.minfof.model.entity.DepToLocaliteAssoc"
-    AssociationEnd="cm.gov.minfof.model.entity.DepToLocaliteAssoc.Localite"
-    AssociationOtherEnd="cm.gov.minfof.model.entity.DepToLocaliteAssoc.Departement"
-    Type="oracle.jbo.RowIterator"
-    IsUpdateable="false"/>
-  <AccessorAttribute
-    Name="Postecontrole"
-    Association="cm.gov.minfof.model.entity.DepToPosteAssoc"
-    AssociationEnd="cm.gov.minfof.model.entity.DepToPosteAssoc.Postecontrole"
-    AssociationOtherEnd="cm.gov.minfof.model.entity.DepToPosteAssoc.Departement"
-    Type="oracle.jbo.RowIterator"
-    IsUpdateable="false"/>
-  <AccessorAttribute
     Name="Collectepfnl"
     Association="cm.gov.minfof.model.entity.DeptToCollecteAssoc"
     AssociationEnd="cm.gov.minfof.model.entity.DeptToCollecteAssoc.Collectepfnl"
@@ -235,8 +220,6 @@
       <validation:Item
         Value="Codedepartement"/>
     </validation:OnAttributes>
-    <validation:ResExpressions
-      Name="DepartementRule0_ResExprList"/>
   </validation:UniqueKeyValidationBean>
   <ResourceBundle>
     <PropertiesBundle

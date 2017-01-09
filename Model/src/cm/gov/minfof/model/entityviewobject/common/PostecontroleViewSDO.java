@@ -14,17 +14,17 @@ public interface PostecontroleViewSDO extends java.io.Serializable {
 
    public void setIntituleposte(java.lang.String value);
 
-   public java.math.BigDecimal getIddepartement();
-
-   public void setIddepartement(java.math.BigDecimal value);
-
    public java.lang.Integer getPosteexport();
 
    public void setPosteexport(java.lang.Integer value);
 
-   public java.util.List getPostecontroleView();
+   public java.math.BigDecimal getIdcommune();
 
-   public void setPostecontroleView(java.util.List value);
+   public void setIdcommune(java.math.BigDecimal value);
+
+   public java.lang.String getNomcommune();
+
+   public void setNomcommune(java.lang.String value);
 
 
 }

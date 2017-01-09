@@ -38,6 +38,7 @@ public class VehiculeImpl extends EntityImpl {
         Region,
         Typevehicule;
         private static AttributesEnum[] vals = null;
+        ;
         private static final int firstIndex = 0;
 
         protected int index() {
@@ -59,6 +60,8 @@ public class VehiculeImpl extends EntityImpl {
             return vals;
         }
     }
+
+
     public static final int IDVEHICULE = AttributesEnum.Idvehicule.index();
     public static final int IDTRANSPORTEUR = AttributesEnum.Idtransporteur.index();
     public static final int IDREGION = AttributesEnum.Idregion.index();
@@ -81,6 +84,14 @@ public class VehiculeImpl extends EntityImpl {
      */
     public VehiculeImpl() {
     }
+
+    /**
+     * @return the definition object for this instance class.
+     */
+    public static synchronized EntityDefImpl getDefinitionObject() {
+        return EntityDefImpl.findDefObject("cm.gov.minfof.model.entity.Vehicule");
+    }
+
 
     /**
      * Gets the attribute value for Idvehicule, using the alias name Idvehicule.
@@ -336,6 +347,7 @@ public class VehiculeImpl extends EntityImpl {
         setAttributeInternal(TYPEVEHICULE, value);
     }
 
+
     /**
      * @param idvehicule key constituent
 
@@ -343,13 +355,6 @@ public class VehiculeImpl extends EntityImpl {
      */
     public static Key createPrimaryKey(BigDecimal idvehicule) {
         return new Key(new Object[] { idvehicule });
-    }
-
-    /**
-     * @return the definition object for this instance class.
-     */
-    public static synchronized EntityDefImpl getDefinitionObject() {
-        return EntityDefImpl.findDefObject("cm.gov.minfof.model.entity.Vehicule");
     }
 
     /**

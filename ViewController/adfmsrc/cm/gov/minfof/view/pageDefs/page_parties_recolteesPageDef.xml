@@ -10,11 +10,6 @@
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="PartiesRecolteesView1Query"/>
   </executables>
   <bindings>
-    <attributeValues IterBinding="PartiesRecolteesView1Iterator" id="Idpartiesrecoltees">
-      <AttrNames>
-        <Item Value="Idpartiesrecoltees"/>
-      </AttrNames>
-    </attributeValues>
     <attributeValues IterBinding="PartiesRecolteesView1Iterator" id="Nompartierecoltee">
       <AttrNames>
         <Item Value="Nompartierecoltee"/>
@@ -34,5 +29,9 @@
     <action IterBinding="PartiesRecolteesView1Iterator" id="Delete" RequiresUpdateModel="false"
             Action="removeCurrentRow"/>
     <action id="Rollback" RequiresUpdateModel="false" Action="rollbackTransaction" DataControl="AppModuleDataControl"/>
+    <action IterBinding="PartiesRecolteesView1Iterator" id="First" RequiresUpdateModel="true" Action="first"/>
+    <action IterBinding="PartiesRecolteesView1Iterator" id="Previous" RequiresUpdateModel="true" Action="previous"/>
+    <action IterBinding="PartiesRecolteesView1Iterator" id="Next" RequiresUpdateModel="true" Action="next"/>
+    <action IterBinding="PartiesRecolteesView1Iterator" id="Last" RequiresUpdateModel="true" Action="last"/>
   </bindings>
 </pageDefinition>

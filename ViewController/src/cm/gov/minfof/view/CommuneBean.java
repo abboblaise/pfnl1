@@ -2,10 +2,13 @@ package cm.gov.minfof.view;
 
 import oracle.adf.model.BindingContext;
 
+import oracle.adf.view.rich.event.DialogEvent;
+
 import oracle.binding.BindingContainer;
 import oracle.binding.OperationBinding;
 
 public class CommuneBean {
+    ShowJqNotification notifObj = new ShowJqNotification();
     public CommuneBean() {
     }
 
@@ -14,12 +17,14 @@ public class CommuneBean {
     }
 
     public String enregistreCommune() {
+        String nomCommune = notifObj.getValueOfField("CommuneView5Iterator", "Nomcommune");
         BindingContainer bindings = getBindings();
         OperationBinding operationBinding = bindings.getOperationBinding("Commit");
         Object result = operationBinding.execute();
         if (!operationBinding.getErrors().isEmpty()) {
             return null;
         }
+        notifObj.showNoticeMessageAction("Enregistrement effectué! La commune <b>"+ nomCommune +" </b>a été enregistrée avec succès");
         return null;
     }
     
@@ -35,6 +40,7 @@ public class CommuneBean {
     }
 
     public String supprimeCommune() {
+        String nomCommune = notifObj.getValueOfField("CommuneView5Iterator", "Nomcommune");
         BindingContainer bindings = getBindings();
         OperationBinding operationBinding = bindings.getOperationBinding("Delete");
         Object result = operationBinding.execute();
@@ -42,6 +48,7 @@ public class CommuneBean {
         if (!operationBinding.getErrors().isEmpty()) {
             return null;
         }
+        notifObj.showNoticeMessageAction("Suppression effectuée! La commune <b>"+ nomCommune +" </b>a été supprimée avec succès");
         return null;
     }
 
@@ -64,5 +71,11 @@ public class CommuneBean {
             return null;
         }
         return null;
+    }
+
+    public void onDeleteCommune(DialogEvent dialogEvent) {
+        if (dialogEvent.getOutcome() == DialogEvent.Outcome.ok) {
+            supprimeCommune();
+            }
     }
 }

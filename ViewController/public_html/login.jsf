@@ -5,6 +5,9 @@
         <c:set var="viewcontrollerBundle" value="#{adfBundle['cm.gov.minfof.view.ViewControllerBundle']}"/>
         <af:document title="login.jspx" id="d1" 
                      inlineStyle='background-image:url("arriere-login.jpg"); background-repeat:repeat-x; background-position:inherit; background-size:200pt auto; background-origin:padding-box;'>
+        <af:resource source="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js" type="javascript"/>
+        <af:resource source="js/jquery.growl.js" type="javascript"/>
+        <af:resource source="style/jquery.growl.css" type="css"/>
             <af:form id="f1" defaultCommand="b1">
                 <af:panelGridLayout id="pgl1">
                 <af:gridRow id="gr4">
@@ -16,7 +19,7 @@
                         <af:gridCell width="100%" halign="center" valign="middle" id="gc1">
                         <af:panelBox text="#{viewcontrollerBundle.CONNEXION}" id="pb1"
                                      inlineStyle="width:421px; border-width:5px; background-color:Teal;" titleHalign="center"
-                                     showHeader="always">
+                                     showHeader="always" showDisclosure="false">
                             <f:facet name="toolbar"/>
                             <af:panelFormLayout id="pfl1" inlineStyle="border-width:5.0px;">
                                 <f:facet name="footer">
@@ -54,7 +57,10 @@
                         </af:panelBox>
                     </af:gridCell>
                     </af:gridRow>
-                </af:panelGridLayout>
+                <af:gridRow id="gr5">
+                    <af:gridCell id="gc7" inlineStyle='background-image:url("arriere.jpg");'/>
+                </af:gridRow>
+            </af:panelGridLayout>
             </af:form>
         </af:document>
     </f:view>

@@ -23,16 +23,6 @@
         <Item Value="Nomdepartement"/>
       </AttrNames>
     </list>
-    <attributeValues IterBinding="CommuneView5Iterator" id="Idcommunes">
-      <AttrNames>
-        <Item Value="Idcommunes"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="CommuneView5Iterator" id="Iddepartements">
-      <AttrNames>
-        <Item Value="Iddepartements"/>
-      </AttrNames>
-    </attributeValues>
     <attributeValues IterBinding="CommuneView5Iterator" id="Nomcommune">
       <AttrNames>
         <Item Value="Nomcommune"/>
@@ -50,5 +40,10 @@
     <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
     <action IterBinding="CommuneView5Iterator" id="CreateInsert" RequiresUpdateModel="true" Action="createInsertRow"/>
     <action IterBinding="CommuneView5Iterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
+    <action IterBinding="CommuneView5Iterator" id="First" RequiresUpdateModel="true" Action="first"/>
+    <action IterBinding="CommuneView5Iterator" id="Previous" RequiresUpdateModel="true" Action="previous"/>
+    <action IterBinding="CommuneView5Iterator" id="Next" RequiresUpdateModel="true" Action="next"/>
+    <action IterBinding="CommuneView5Iterator" id="Last" RequiresUpdateModel="true" Action="last"/>
+    <action id="Rollback" DataControl="AppModuleDataControl" RequiresUpdateModel="false" Action="rollbackTransaction"/>
   </bindings>
 </pageDefinition>

@@ -18,7 +18,6 @@
   </DesignTime>
   <Attribute
     Name="Idutilisateur"
-    IsNotNull="true"
     ColumnName="idutilisateur"
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
@@ -37,7 +36,8 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR"
-    TableName="utilisateur">
+    TableName="utilisateur"
+    DefaultValue="Entrez un login">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="45"/>
     </DesignTime>
@@ -58,7 +58,8 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR"
-    TableName="utilisateur">
+    TableName="utilisateur"
+    DefaultValue="pswd">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="45"/>
     </DesignTime>
@@ -192,6 +193,36 @@
     Type="java.lang.Boolean"
     ColumnType="BIT"
     TableName="utilisateur"/>
+  <Attribute
+    Name="Emailuser"
+    Precision="120"
+    ColumnName="emailuser"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR"
+    TableName="utilisateur"
+    IsNotNull="true"
+    DefaultValue="Entrez un email">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="120"/>
+    </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="EMAIL"/>
+        <DISPLAYWIDTH
+          Value="20"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
+  <Attribute
+    Name="Premiereconnexion"
+    ColumnName="premiereconnexion"
+    SQLType="BIT"
+    Type="java.lang.Boolean"
+    ColumnType="BIT"
+    TableName="utilisateur"
+    DefaultValue="1"/>
   <AccessorAttribute
     Name="Utilisateur"
     Association="cm.gov.minfof.model.entity.FkUtilisateur3Assoc"
@@ -263,6 +294,18 @@
     </DesignTime>
     <AttrArray Name="Attributes">
       <Item Value="cm.gov.minfof.model.entity.Utilisateur.Idutilisateur"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="UtilisateurEmailuserCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"emailuser" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="Utilisateur_Emailuser_Check"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="cm.gov.minfof.model.entity.Utilisateur.Emailuser"/>
     </AttrArray>
   </Key>
   <Key

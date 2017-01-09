@@ -40,6 +40,14 @@
     Name="LocaliteView1"
     ViewObjectName="cm.gov.minfof.model.entityviewobject.LocaliteView"
     RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="PostecontroleView1"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.PostecontroleView"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="UtilisateurView1"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.UtilisateurView"
+    RowLevelBinds="true"/>
   <ListBinding
     Name="LOV_Iddepartement"
     ListVOName="DepartementView1"
@@ -77,6 +85,42 @@
     </AttrArray>
     <DisplayCriteria/>
   </ListBinding>
+  <ListBinding
+    Name="LOV_Idposte"
+    ListVOName="PostecontroleView1"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="Idposte"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Idpostecontrole"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Intituleposte"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_Idutilisateur"
+    ListVOName="UtilisateurView1"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="Idutilisateur"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Idutilisateur"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Nomuser"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
   <EntityUsage
     Name="Collectepfnl"
     Entity="cm.gov.minfof.model.entity.Collectepfnl"/>
@@ -98,20 +142,7 @@
     <Properties>
       <SchemaBasedProperties>
         <LABEL
-          ResId="DATE_DE_COLLECTE"/>
-      </SchemaBasedProperties>
-    </Properties>
-  </ViewAttribute>
-  <ViewAttribute
-    Name="Identificateur"
-    PrecisionRule="true"
-    EntityAttrName="Identificateur"
-    EntityUsage="Collectepfnl"
-    AliasName="identificateur">
-    <Properties>
-      <SchemaBasedProperties>
-        <LABEL
-          ResId="IDINTIFICATEUR"/>
+          ResId="DATE"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
@@ -130,12 +161,6 @@
     </Properties>
   </ViewAttribute>
   <ViewAttribute
-    Name="Codepcfc"
-    PrecisionRule="true"
-    EntityAttrName="Codepcfc"
-    EntityUsage="Collectepfnl"
-    AliasName="codepcfc"/>
-  <ViewAttribute
     Name="Idlocalite"
     PrecisionRule="true"
     EntityAttrName="Idlocalite"
@@ -144,6 +169,38 @@
     LOVName="LOV_Idlocalite">
     <Properties>
       <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="Idposte"
+    PrecisionRule="true"
+    EntityAttrName="Idposte"
+    EntityUsage="Collectepfnl"
+    AliasName="idposte"
+    LOVName="LOV_Idposte">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+        <LABEL
+          ResId="POSTE_CONTR_U00F4LE"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="Idutilisateur"
+    PrecisionRule="true"
+    EntityAttrName="Idutilisateur"
+    EntityUsage="Collectepfnl"
+    AliasName="idutilisateur"
+    LOVName="LOV_Idutilisateur">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="IDENTIFICATEUR"/>
         <CONTROLTYPE
           Value="choice"/>
       </SchemaBasedProperties>
@@ -244,6 +301,26 @@
         Type="java.sql.Timestamp"/>
     </Method>
   </ClientInterface>
+  <ClientRowInterface
+    Name="__rowClientInterface">
+    <Method
+      Name="getIdentificateur"
+      MethodName="getIdentificateur">
+      <Return
+        Name="_return_type_"
+        Type="java.lang.String"/>
+    </Method>
+    <Method
+      Name="setIdentificateur"
+      MethodName="setIdentificateur">
+      <Return
+        Name="_return_type_"
+        Type="void"/>
+      <Parameter
+        Name="value"
+        Type="java.lang.String"/>
+    </Method>
+  </ClientRowInterface>
   <ResourceBundle>
     <PropertiesBundle
       PropertiesFile="cm.gov.minfof.model.ModelBundle"/>

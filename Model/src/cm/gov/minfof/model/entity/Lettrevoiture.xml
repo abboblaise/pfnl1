@@ -35,8 +35,7 @@
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
     ColumnType="BIGINT"
-    TableName="lettrevoiture"
-    DefaultValue="1">
+    TableName="lettrevoiture">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="19"/>
     </DesignTime>
@@ -50,8 +49,9 @@
     </Properties>
   </Attribute>
   <Attribute
-    Name="Idvehicule"
-    ColumnName="idvehicule"
+    Name="Iddepartementdestination"
+    IsNotNull="true"
+    ColumnName="iddepartementdestination"
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
     ColumnType="BIGINT"
@@ -61,52 +61,10 @@
     </DesignTime>
     <Properties>
       <SchemaBasedProperties>
-        <LABEL
-          ResId="V_U00E9HICULE"/>
         <DISPLAYWIDTH
           Value="20"/>
-      </SchemaBasedProperties>
-    </Properties>
-  </Attribute>
-  <Attribute
-    Name="Idagrement"
-    IsNotNull="true"
-    ColumnName="idagrement"
-    SQLType="NUMERIC"
-    Type="java.math.BigDecimal"
-    ColumnType="BIGINT"
-    TableName="lettrevoiture"
-    DefaultValue="1">
-    <DesignTime>
-      <Attr Name="_DisplaySize" Value="19"/>
-    </DesignTime>
-    <Properties>
-      <SchemaBasedProperties>
         <LABEL
-          ResId="AGREMENT"/>
-        <DISPLAYWIDTH
-          Value="20"/>
-      </SchemaBasedProperties>
-    </Properties>
-  </Attribute>
-  <Attribute
-    Name="Iddepartementdestination"
-    IsNotNull="true"
-    ColumnName="iddepartementdestination"
-    SQLType="NUMERIC"
-    Type="java.math.BigDecimal"
-    ColumnType="BIGINT"
-    TableName="lettrevoiture"
-    DefaultValue="5">
-    <DesignTime>
-      <Attr Name="_DisplaySize" Value="19"/>
-    </DesignTime>
-    <Properties>
-      <SchemaBasedProperties>
-        <LABEL
-          ResId="D_U00E9PARTEMENT_DESTINATION"/>
-        <DISPLAYWIDTH
-          Value="20"/>
+          ResId="DESTINATION"/>
       </SchemaBasedProperties>
     </Properties>
   </Attribute>
@@ -137,17 +95,16 @@
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
     ColumnType="BIGINT"
-    TableName="lettrevoiture"
-    DefaultValue="1">
+    TableName="lettrevoiture">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="19"/>
     </DesignTime>
     <Properties>
       <SchemaBasedProperties>
-        <LABEL
-          ResId="POSTE_CHARGEMENT"/>
         <DISPLAYWIDTH
           Value="20"/>
+        <LABEL
+          ResId="D_U00E9PART"/>
       </SchemaBasedProperties>
     </Properties>
   </Attribute>
@@ -160,8 +117,7 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR"
-    TableName="lettrevoiture"
-    DefaultValue="entrez une valeur">
+    TableName="lettrevoiture">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="10"/>
     </DesignTime>
@@ -181,8 +137,7 @@
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
     ColumnType="BIGINT"
-    TableName="lettrevoiture"
-    DefaultValue="1">
+    TableName="lettrevoiture">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="19"/>
     </DesignTime>
@@ -214,34 +169,25 @@
       </SchemaBasedProperties>
     </Properties>
   </Attribute>
-  <AccessorAttribute
-    Name="Lettrevoiture"
-    Association="cm.gov.minfof.model.entity.FkLettrevoiture5Assoc"
-    AssociationEnd="cm.gov.minfof.model.entity.FkLettrevoiture5Assoc.Lettrevoiture"
-    AssociationOtherEnd="cm.gov.minfof.model.entity.FkLettrevoiture5Assoc.IdvehiculeLettrevoiture"
-    Type="oracle.jbo.RowIterator"
-    IsUpdateable="false"/>
-  <AccessorAttribute
-    Name="IdvehiculeLettrevoiture"
-    Association="cm.gov.minfof.model.entity.FkLettrevoiture5Assoc"
-    AssociationEnd="cm.gov.minfof.model.entity.FkLettrevoiture5Assoc.IdvehiculeLettrevoiture"
-    AssociationOtherEnd="cm.gov.minfof.model.entity.FkLettrevoiture5Assoc.Lettrevoiture"
-    Type="oracle.jbo.server.EntityImpl"
-    IsUpdateable="true"/>
-  <AccessorAttribute
-    Name="Lettrevoiture1"
-    Association="cm.gov.minfof.model.entity.FkLettrevoiture4Assoc"
-    AssociationEnd="cm.gov.minfof.model.entity.FkLettrevoiture4Assoc.Lettrevoiture1"
-    AssociationOtherEnd="cm.gov.minfof.model.entity.FkLettrevoiture4Assoc.IdpostechargementLettrevoiture"
-    Type="oracle.jbo.RowIterator"
-    IsUpdateable="false"/>
-  <AccessorAttribute
-    Name="IdpostechargementLettrevoiture"
-    Association="cm.gov.minfof.model.entity.FkLettrevoiture4Assoc"
-    AssociationEnd="cm.gov.minfof.model.entity.FkLettrevoiture4Assoc.IdpostechargementLettrevoiture"
-    AssociationOtherEnd="cm.gov.minfof.model.entity.FkLettrevoiture4Assoc.Lettrevoiture1"
-    Type="oracle.jbo.server.EntityImpl"
-    IsUpdateable="true"/>
+  <Attribute
+    Name="Immatriculation"
+    IsNotNull="true"
+    Precision="50"
+    ColumnName="immatriculation"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR"
+    TableName="lettrevoiture">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="50"/>
+    </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="12"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
   <AccessorAttribute
     Name="Lettrevoiture2"
     Association="cm.gov.minfof.model.entity.FkLettrevoiture3Assoc"
@@ -254,20 +200,6 @@
     Association="cm.gov.minfof.model.entity.FkLettrevoiture3Assoc"
     AssociationEnd="cm.gov.minfof.model.entity.FkLettrevoiture3Assoc.IddepartementdestinationLettrevoiture"
     AssociationOtherEnd="cm.gov.minfof.model.entity.FkLettrevoiture3Assoc.Lettrevoiture2"
-    Type="oracle.jbo.server.EntityImpl"
-    IsUpdateable="true"/>
-  <AccessorAttribute
-    Name="Lettrevoiture3"
-    Association="cm.gov.minfof.model.entity.FkLettrevoiture2Assoc"
-    AssociationEnd="cm.gov.minfof.model.entity.FkLettrevoiture2Assoc.Lettrevoiture3"
-    AssociationOtherEnd="cm.gov.minfof.model.entity.FkLettrevoiture2Assoc.IdagrementLettrevoiture"
-    Type="oracle.jbo.RowIterator"
-    IsUpdateable="false"/>
-  <AccessorAttribute
-    Name="IdagrementLettrevoiture"
-    Association="cm.gov.minfof.model.entity.FkLettrevoiture2Assoc"
-    AssociationEnd="cm.gov.minfof.model.entity.FkLettrevoiture2Assoc.IdagrementLettrevoiture"
-    AssociationOtherEnd="cm.gov.minfof.model.entity.FkLettrevoiture2Assoc.Lettrevoiture3"
     Type="oracle.jbo.server.EntityImpl"
     IsUpdateable="true"/>
   <AccessorAttribute
@@ -285,31 +217,10 @@
     Type="oracle.jbo.server.EntityImpl"
     IsUpdateable="true"/>
   <AccessorAttribute
-    Name="Detailslettrevoiture"
-    Association="cm.gov.minfof.model.entity.FkLettrevoiture5Assoc1"
-    AssociationEnd="cm.gov.minfof.model.entity.FkLettrevoiture5Assoc1.Detailslettrevoiture"
-    AssociationOtherEnd="cm.gov.minfof.model.entity.FkLettrevoiture5Assoc1.Lettrevoiture"
-    Type="oracle.jbo.server.EntityImpl"
-    IsUpdateable="true"/>
-  <AccessorAttribute
-    Name="Detailslettrevoiture1"
-    Association="cm.gov.minfof.model.entity.FkLettrevoiture4Assoc1"
-    AssociationEnd="cm.gov.minfof.model.entity.FkLettrevoiture4Assoc1.Detailslettrevoiture1"
-    AssociationOtherEnd="cm.gov.minfof.model.entity.FkLettrevoiture4Assoc1.Lettrevoiture1"
-    Type="oracle.jbo.server.EntityImpl"
-    IsUpdateable="true"/>
-  <AccessorAttribute
     Name="Detailslettrevoiture2"
     Association="cm.gov.minfof.model.entity.FkLettrevoiture3Assoc1"
     AssociationEnd="cm.gov.minfof.model.entity.FkLettrevoiture3Assoc1.Detailslettrevoiture2"
     AssociationOtherEnd="cm.gov.minfof.model.entity.FkLettrevoiture3Assoc1.Lettrevoiture2"
-    Type="oracle.jbo.server.EntityImpl"
-    IsUpdateable="true"/>
-  <AccessorAttribute
-    Name="Detailslettrevoiture3"
-    Association="cm.gov.minfof.model.entity.FkLettrevoiture2Assoc1"
-    AssociationEnd="cm.gov.minfof.model.entity.FkLettrevoiture2Assoc1.Detailslettrevoiture3"
-    AssociationOtherEnd="cm.gov.minfof.model.entity.FkLettrevoiture2Assoc1.Lettrevoiture3"
     Type="oracle.jbo.server.EntityImpl"
     IsUpdateable="true"/>
   <AccessorAttribute
@@ -378,9 +289,7 @@
       <Attr Name="_isForeign" Value="true"/>
       <Attr Name="_DBObjectName" Value="fk_lettrevoiture_2"/>
     </DesignTime>
-    <AttrArray Name="Attributes">
-      <Item Value="cm.gov.minfof.model.entity.Lettrevoiture.Idagrement"/>
-    </AttrArray>
+    <AttrArray Name="Attributes"/>
   </Key>
   <Key
     Name="FkLettrevoiture3">
@@ -411,9 +320,7 @@
       <Attr Name="_isForeign" Value="true"/>
       <Attr Name="_DBObjectName" Value="fk_lettrevoiture_5"/>
     </DesignTime>
-    <AttrArray Name="Attributes">
-      <Item Value="cm.gov.minfof.model.entity.Lettrevoiture.Idvehicule"/>
-    </AttrArray>
+    <AttrArray Name="Attributes"/>
   </Key>
   <ResourceBundle>
     <PropertiesBundle

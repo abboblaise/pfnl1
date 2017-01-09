@@ -13,7 +13,14 @@
   CustomQuery="false"
   SelectAllAttributes="false"
   FetchMode="FETCH_AS_NEEDED"
-  PageIterMode="Full">
+  PageIterMode="Full"
+  ComponentClass="cm.gov.minfof.model.entityviewobject.UtilisateurViewImpl"
+  RowClass="cm.gov.minfof.model.entityviewobject.UtilisateurViewRowImpl"
+  DefClass="cm.gov.minfof.model.entityviewobject.UtilisateurViewDefImpl">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Access|Def|Coll|Prog|VarAccess"/>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
   <ViewAccessor
     Name="RegionView1"
     ViewObjectName="cm.gov.minfof.model.entityviewobject.RegionView"
@@ -105,13 +112,6 @@
   <EntityUsage
     Name="Utilisateur"
     Entity="cm.gov.minfof.model.entity.Utilisateur"/>
-  <ViewAttribute
-    Name="Idutilisateur"
-    IsNotNull="true"
-    PrecisionRule="true"
-    EntityAttrName="Idutilisateur"
-    EntityUsage="Utilisateur"
-    AliasName="idutilisateur"/>
   <ViewAttribute
     Name="Loginuser"
     IsNotNull="true"
@@ -233,6 +233,25 @@
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
+  <ViewAttribute
+    Name="Idutilisateur"
+    PrecisionRule="true"
+    EntityAttrName="Idutilisateur"
+    EntityUsage="Utilisateur"
+    AliasName="idutilisateur"/>
+  <ViewAttribute
+    Name="Emailuser"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Emailuser"
+    EntityUsage="Utilisateur"
+    AliasName="emailuser"/>
+  <ViewAttribute
+    Name="Premiereconnexion"
+    PrecisionRule="true"
+    EntityAttrName="Premiereconnexion"
+    EntityUsage="Utilisateur"
+    AliasName="premiereconnexion"/>
   <ViewLinkAccessor
     Name="UtilisateurView"
     ViewLink="cm.gov.minfof.model.entityviewobject.FkUtilisateur3Link"

@@ -2,10 +2,13 @@ package cm.gov.minfof.view;
 
 import oracle.adf.model.BindingContext;
 
+import oracle.adf.view.rich.event.DialogEvent;
+
 import oracle.binding.BindingContainer;
 import oracle.binding.OperationBinding;
 
 public class OriginePfnlBean {
+    ShowJqNotification notifObj = new ShowJqNotification();
     public OriginePfnlBean() {
     }
 
@@ -36,6 +39,7 @@ public class OriginePfnlBean {
     }
 
     public String supprimeOriginePfnl() {
+        String nomSource = notifObj.getValueOfField("OriginespnflsView1Iterator", "Nomsource");
         BindingContainer bindings = getBindings();
         OperationBinding operationBinding = bindings.getOperationBinding("Delete");
         Object result = operationBinding.execute();
@@ -43,6 +47,25 @@ public class OriginePfnlBean {
         if (!operationBinding.getErrors().isEmpty()) {
             return null;
         }
+        notifObj.showNoticeMessageAction("Suppression effectuée! <b>"+ nomSource +" </b>a été supprimée avec succès");
+        return null;
+    }
+
+    public void onDelete(DialogEvent dialogEvent) {
+        if (dialogEvent.getOutcome() == DialogEvent.Outcome.ok) {
+            supprimeOriginePfnl();
+        }
+    }
+
+    public String enregistreOriginePfnl() {
+        BindingContainer bindings = getBindings();
+        OperationBinding operationBinding = bindings.getOperationBinding("Commit");
+        Object result = operationBinding.execute();
+        if (!operationBinding.getErrors().isEmpty()) {
+            return null;
+        }
+        String nomSource = notifObj.getValueOfField("OriginespnflsView1Iterator", "Nomsource");
+        notifObj.showNoticeMessageAction("Enregistrement effectué! <b>"+ nomSource +" </b>a été enregistrée avec succès");
         return null;
     }
 }

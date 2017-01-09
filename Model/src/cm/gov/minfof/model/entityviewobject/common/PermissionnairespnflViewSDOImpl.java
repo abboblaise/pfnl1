@@ -7,7 +7,7 @@ public class PermissionnairespnflViewSDOImpl extends SDODataObject implements Pe
 
    public static final int START_PROPERTY_INDEX = 0;
 
-   public static final int END_PROPERTY_INDEX = START_PROPERTY_INDEX + 18;
+   public static final int END_PROPERTY_INDEX = START_PROPERTY_INDEX + 16;
 
    public PermissionnairespnflViewSDOImpl() {}
 
@@ -67,100 +67,84 @@ public class PermissionnairespnflViewSDOImpl extends SDODataObject implements Pe
       set(START_PROPERTY_INDEX + 6 , value);
    }
 
-   public java.math.BigDecimal getIddepartements() {
-      return getBigDecimal(START_PROPERTY_INDEX + 7);
-   }
-
-   public void setIddepartements(java.math.BigDecimal value) {
-      set(START_PROPERTY_INDEX + 7 , value);
-   }
-
    public java.lang.String getNatureactivite() {
-      return getString(START_PROPERTY_INDEX + 8);
+      return getString(START_PROPERTY_INDEX + 7);
    }
 
    public void setNatureactivite(java.lang.String value) {
-      set(START_PROPERTY_INDEX + 8 , value);
+      set(START_PROPERTY_INDEX + 7 , value);
    }
 
    public java.lang.String getNumceqe() {
-      return getString(START_PROPERTY_INDEX + 9);
+      return getString(START_PROPERTY_INDEX + 8);
    }
 
    public void setNumceqe(java.lang.String value) {
-      set(START_PROPERTY_INDEX + 9 , value);
+      set(START_PROPERTY_INDEX + 8 , value);
    }
 
    public java.math.BigDecimal getIdpermissionnairespnfl() {
-      return getBigDecimal(START_PROPERTY_INDEX + 10);
+      return getBigDecimal(START_PROPERTY_INDEX + 9);
    }
 
    public void setIdpermissionnairespnfl(java.math.BigDecimal value) {
-      set(START_PROPERTY_INDEX + 10 , value);
+      set(START_PROPERTY_INDEX + 9 , value);
    }
 
    public java.lang.String getNui() {
-      return getString(START_PROPERTY_INDEX + 11);
+      return getString(START_PROPERTY_INDEX + 10);
    }
 
    public void setNui(java.lang.String value) {
-      set(START_PROPERTY_INDEX + 11 , value);
-   }
-
-   public java.math.BigDecimal getIdpays() {
-      return getBigDecimal(START_PROPERTY_INDEX + 12);
-   }
-
-   public void setIdpays(java.math.BigDecimal value) {
-      set(START_PROPERTY_INDEX + 12 , value);
+      set(START_PROPERTY_INDEX + 10 , value);
    }
 
    public java.lang.String getProfession() {
-      return getString(START_PROPERTY_INDEX + 13);
+      return getString(START_PROPERTY_INDEX + 11);
    }
 
    public void setProfession(java.lang.String value) {
-      set(START_PROPERTY_INDEX + 13 , value);
+      set(START_PROPERTY_INDEX + 11 , value);
    }
 
    public java.lang.Integer getTypepersonne() {
-      return getInt(START_PROPERTY_INDEX + 14);
+      return getInt(START_PROPERTY_INDEX + 12);
    }
 
    public void setTypepersonne(java.lang.Integer value) {
-      set(START_PROPERTY_INDEX + 14 , value);
+      set(START_PROPERTY_INDEX + 12 , value);
    }
 
    public java.lang.String getAdressep() {
-      return getString(START_PROPERTY_INDEX + 15);
+      return getString(START_PROPERTY_INDEX + 13);
    }
 
    public void setAdressep(java.lang.String value) {
-      set(START_PROPERTY_INDEX + 15 , value);
+      set(START_PROPERTY_INDEX + 13 , value);
    }
 
    public java.lang.Integer getSexe() {
-      return getInt(START_PROPERTY_INDEX + 16);
+      return getInt(START_PROPERTY_INDEX + 14);
    }
 
    public void setSexe(java.lang.Integer value) {
-      set(START_PROPERTY_INDEX + 16 , value);
+      set(START_PROPERTY_INDEX + 14 , value);
    }
 
-   public java.util.List getPermissionnairespnflView1() {
-      return getList(START_PROPERTY_INDEX + 17);
+   public java.math.BigDecimal getIdcommune() {
+      return getBigDecimal(START_PROPERTY_INDEX + 15);
    }
 
-   public void setPermissionnairespnflView1(java.util.List value) {
-      set(START_PROPERTY_INDEX + 17 , value);
+   public void setIdcommune(java.math.BigDecimal value) {
+      set(START_PROPERTY_INDEX + 15 , value);
    }
 
    public java.util.List getPermisView() {
-      return getList(START_PROPERTY_INDEX + 18);
+      return getList(START_PROPERTY_INDEX + 16);
    }
 
    public void setPermisView(java.util.List value) {
-      set(START_PROPERTY_INDEX + 18 , value);
+      set(START_PROPERTY_INDEX + 16 , value);
    }
 
 

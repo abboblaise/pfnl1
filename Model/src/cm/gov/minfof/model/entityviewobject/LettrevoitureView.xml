@@ -69,6 +69,10 @@
       </PIMap>
     </ParameterMap>
   </ViewAccessor>
+  <ViewAccessor
+    Name="LocaliteView1"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.LocaliteView"
+    RowLevelBinds="true"/>
   <ListBinding
     Name="LOV_Idpermissionnaire"
     ListVOName="PermissionnairespnflView1"
@@ -83,41 +87,6 @@
     </AttrArray>
     <AttrArray Name="ListDisplayAttrNames">
       <Item Value="Nomouraisonsociale"/>
-    </AttrArray>
-    <DisplayCriteria/>
-  </ListBinding>
-  <ListBinding
-    Name="LOV_Idvehicule"
-    ListVOName="VehiculeView1"
-    NullValueFlag="start"
-    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
-    MRUCount="0">
-    <AttrArray Name="AttrNames">
-      <Item Value="Idvehicule"/>
-    </AttrArray>
-    <AttrArray Name="AttrExpressions"/>
-    <AttrArray Name="ListAttrNames">
-      <Item Value="Idvehicule"/>
-    </AttrArray>
-    <AttrArray Name="ListDisplayAttrNames">
-      <Item Value="Immatriculation"/>
-    </AttrArray>
-    <DisplayCriteria/>
-  </ListBinding>
-  <ListBinding
-    Name="LOV_Idagrement"
-    ListVOName="AgrementByPermisView1"
-    NullValueFlag="none"
-    MRUCount="0">
-    <AttrArray Name="AttrNames">
-      <Item Value="Idagrement"/>
-    </AttrArray>
-    <AttrArray Name="AttrExpressions"/>
-    <AttrArray Name="ListAttrNames">
-      <Item Value="Idagrements"/>
-    </AttrArray>
-    <AttrArray Name="ListDisplayAttrNames">
-      <Item Value="Numagreement"/>
     </AttrArray>
     <DisplayCriteria/>
   </ListBinding>
@@ -140,7 +109,7 @@
   </ListBinding>
   <ListBinding
     Name="LOV_Idpostechargement"
-    ListVOName="PostecontroleView1"
+    ListVOName="LocaliteView1"
     NullValueFlag="none"
     MRUCount="0">
     <AttrArray Name="AttrNames">
@@ -148,10 +117,10 @@
     </AttrArray>
     <AttrArray Name="AttrExpressions"/>
     <AttrArray Name="ListAttrNames">
-      <Item Value="Idpostecontrole"/>
+      <Item Value="Idlocalite"/>
     </AttrArray>
     <AttrArray Name="ListDisplayAttrNames">
-      <Item Value="Intituleposte"/>
+      <Item Value="Nomlocalite"/>
     </AttrArray>
     <DisplayCriteria/>
   </ListBinding>
@@ -190,35 +159,6 @@
     EntityUsage="Lettrevoiture"
     AliasName="idpermissionnaire"
     LOVName="LOV_Idpermissionnaire">
-    <Properties>
-      <SchemaBasedProperties>
-        <CONTROLTYPE
-          Value="choice"/>
-      </SchemaBasedProperties>
-    </Properties>
-  </ViewAttribute>
-  <ViewAttribute
-    Name="Idvehicule"
-    PrecisionRule="true"
-    EntityAttrName="Idvehicule"
-    EntityUsage="Lettrevoiture"
-    AliasName="idvehicule"
-    LOVName="LOV_Idvehicule">
-    <Properties>
-      <SchemaBasedProperties>
-        <CONTROLTYPE
-          Value="choice"/>
-      </SchemaBasedProperties>
-    </Properties>
-  </ViewAttribute>
-  <ViewAttribute
-    Name="Idagrement"
-    IsNotNull="true"
-    PrecisionRule="true"
-    EntityAttrName="Idagrement"
-    EntityUsage="Lettrevoiture"
-    AliasName="idagrement"
-    LOVName="LOV_Idagrement">
     <Properties>
       <SchemaBasedProperties>
         <CONTROLTYPE
@@ -292,6 +232,13 @@
     EntityAttrName="Datelettrevoiture"
     EntityUsage="Lettrevoiture"
     AliasName="datelettrevoiture"/>
+  <ViewAttribute
+    Name="Immatriculation"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Immatriculation"
+    EntityUsage="Lettrevoiture"
+    AliasName="immatriculation"/>
   <ViewCriteria
     Name="LettrevoitureViewCriteria"
     ViewObjectName="cm.gov.minfof.model.entityviewobject.LettrevoitureView"
@@ -354,23 +301,8 @@
     </ViewCriteriaRow>
   </ViewCriteria>
   <ViewLinkAccessor
-    Name="LettrevoitureView"
-    ViewLink="cm.gov.minfof.model.entityviewobject.FkLettrevoiture5Link"
-    Type="oracle.jbo.RowIterator"
-    IsUpdateable="false"/>
-  <ViewLinkAccessor
-    Name="LettrevoitureView1"
-    ViewLink="cm.gov.minfof.model.entityviewobject.FkLettrevoiture4Link"
-    Type="oracle.jbo.RowIterator"
-    IsUpdateable="false"/>
-  <ViewLinkAccessor
     Name="LettrevoitureView2"
     ViewLink="cm.gov.minfof.model.entityviewobject.FkLettrevoiture3Link"
-    Type="oracle.jbo.RowIterator"
-    IsUpdateable="false"/>
-  <ViewLinkAccessor
-    Name="LettrevoitureView3"
-    ViewLink="cm.gov.minfof.model.entityviewobject.FkLettrevoiture2Link"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
   <ViewLinkAccessor
@@ -395,6 +327,86 @@
     IsUpdateable="false"/>
   <ClientInterface
     Name="__clientInterface">
+    <Method
+      Name="setdateDebut"
+      MethodName="setdateDebut">
+      <Return
+        Name="_return_type_"
+        Type="void"/>
+      <Parameter
+        Name="value"
+        Type="java.sql.Timestamp"/>
+    </Method>
+    <Method
+      Name="setdateFin"
+      MethodName="setdateFin">
+      <Return
+        Name="_return_type_"
+        Type="void"/>
+      <Parameter
+        Name="value"
+        Type="java.sql.Timestamp"/>
+    </Method>
+    <Method
+      Name="setdateDebut"
+      MethodName="setdateDebut">
+      <Return
+        Name="_return_type_"
+        Type="void"/>
+      <Parameter
+        Name="value"
+        Type="java.sql.Timestamp"/>
+    </Method>
+    <Method
+      Name="setdateFin"
+      MethodName="setdateFin">
+      <Return
+        Name="_return_type_"
+        Type="void"/>
+      <Parameter
+        Name="value"
+        Type="java.sql.Timestamp"/>
+    </Method>
+    <Method
+      Name="setdateDebut"
+      MethodName="setdateDebut">
+      <Return
+        Name="_return_type_"
+        Type="void"/>
+      <Parameter
+        Name="value"
+        Type="java.sql.Timestamp"/>
+    </Method>
+    <Method
+      Name="setdateFin"
+      MethodName="setdateFin">
+      <Return
+        Name="_return_type_"
+        Type="void"/>
+      <Parameter
+        Name="value"
+        Type="java.sql.Timestamp"/>
+    </Method>
+    <Method
+      Name="setdateDebut"
+      MethodName="setdateDebut">
+      <Return
+        Name="_return_type_"
+        Type="void"/>
+      <Parameter
+        Name="value"
+        Type="java.sql.Timestamp"/>
+    </Method>
+    <Method
+      Name="setdateFin"
+      MethodName="setdateFin">
+      <Return
+        Name="_return_type_"
+        Type="void"/>
+      <Parameter
+        Name="value"
+        Type="java.sql.Timestamp"/>
+    </Method>
     <Method
       Name="setdateDebut"
       MethodName="setdateDebut">

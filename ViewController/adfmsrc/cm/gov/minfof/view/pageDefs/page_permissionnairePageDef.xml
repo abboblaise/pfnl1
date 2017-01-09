@@ -4,13 +4,13 @@
   <parameters/>
   <executables>
     <variableIterator id="variables"/>
-    <iterator Binds="PermissionnairespnflView1" RangeSize="25" DataControl="AppModuleDataControl"
-              id="PermissionnairespnflView1Iterator"/>
     <searchRegion Binds="PermissionnairespnflView1Iterator" Criteria=""
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="PermissionnairespnflView1Query"/>
     <iterator Binds="PermisView8" RangeSize="25" DataControl="AppModuleDataControl" id="PermisView8Iterator"/>
     <searchRegion Binds="PermisView8Iterator" Criteria=""
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="PermisView8Query"/>
+    <iterator id="PermissionnairespnflView1Iterator" Binds="PermissionnairespnflView1"
+              DataControl="AppModuleDataControl" RangeSize="25"/>
   </executables>
   <bindings>
     <attributeValues IterBinding="PermissionnairespnflView1Iterator" id="Codepnfl">
@@ -45,21 +45,9 @@
         <Item Value="Mail"/>
       </AttrNames>
     </attributeValues>
-    <list IterBinding="PermissionnairespnflView1Iterator" StaticList="false" Uses="LOV_Iddepartements"
-          id="Iddepartements" DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
     <attributeValues IterBinding="PermissionnairespnflView1Iterator" id="Natureactivite">
       <AttrNames>
         <Item Value="Natureactivite"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="PermissionnairespnflView1Iterator" id="Numceqe">
-      <AttrNames>
-        <Item Value="Numceqe"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="PermissionnairespnflView1Iterator" id="Idpermissionnairespnfl">
-      <AttrNames>
-        <Item Value="Idpermissionnairespnfl"/>
       </AttrNames>
     </attributeValues>
     <attributeValues IterBinding="PermissionnairespnflView1Iterator" id="Nui">
@@ -67,8 +55,6 @@
         <Item Value="Nui"/>
       </AttrNames>
     </attributeValues>
-    <list IterBinding="PermissionnairespnflView1Iterator" StaticList="false" Uses="LOV_Idpays" id="Idpays"
-          DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
     <attributeValues IterBinding="PermissionnairespnflView1Iterator" id="Profession">
       <AttrNames>
         <Item Value="Profession"/>
@@ -94,16 +80,15 @@
           <Item Value="Contact"/>
           <Item Value="Mail"/>
           <Item Value="Codepnfl"/>
-          <Item Value="Iddepartements"/>
           <Item Value="Natureactivite"/>
           <Item Value="Numceqe"/>
           <Item Value="Idpermissionnairespnfl"/>
           <Item Value="Nui"/>
-          <Item Value="Idpays"/>
           <Item Value="Profession"/>
           <Item Value="Typepersonne"/>
           <Item Value="Adressep"/>
           <Item Value="Sexe"/>
+          <Item Value="Idcommune"/>
         </AttrNames>
       </nodeDefinition>
     </tree>
@@ -123,5 +108,14 @@
         </AttrNames>
       </nodeDefinition>
     </tree>
+    <list IterBinding="PermissionnairespnflView1Iterator" StaticList="false" Uses="LOV_Idcommune" id="Idcommune"
+          DTSupportsMRU="true" SelectItemValueMode="ListObject"/>
+    <action IterBinding="PermissionnairespnflView1Iterator" id="Create"
+            InstanceName="AppModuleDataControl.PermissionnairespnflView1" DataControl="AppModuleDataControl"
+            RequiresUpdateModel="true" Action="createRow"/>
+    <action IterBinding="PermissionnairespnflView1Iterator" id="First" RequiresUpdateModel="true" Action="first"/>
+    <action IterBinding="PermissionnairespnflView1Iterator" id="Previous" RequiresUpdateModel="true" Action="previous"/>
+    <action IterBinding="PermissionnairespnflView1Iterator" id="Next" RequiresUpdateModel="true" Action="next"/>
+    <action IterBinding="PermissionnairespnflView1Iterator" id="Last" RequiresUpdateModel="true" Action="last"/>
   </bindings>
 </pageDefinition>

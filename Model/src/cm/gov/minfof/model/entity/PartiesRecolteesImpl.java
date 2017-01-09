@@ -27,7 +27,6 @@ public class PartiesRecolteesImpl extends EntityImpl {
         PartiesProduitsPfnl1,
         ProduitsPfnl;
         private static AttributesEnum[] vals = null;
-        ;
         private static final int firstIndex = 0;
 
         protected int index() {

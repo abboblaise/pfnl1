@@ -30,6 +30,7 @@ public class ExportpfnlImpl extends EntityImpl {
         Numeroexport,
         Numeroco,
         Dateexport,
+        Idposteexport,
         Exportpfnl,
         IdpermissionnaireExportpfnl,
         Exportpfnl1,
@@ -67,6 +68,7 @@ public class ExportpfnlImpl extends EntityImpl {
     public static final int NUMEROEXPORT = AttributesEnum.Numeroexport.index();
     public static final int NUMEROCO = AttributesEnum.Numeroco.index();
     public static final int DATEEXPORT = AttributesEnum.Dateexport.index();
+    public static final int IDPOSTEEXPORT = AttributesEnum.Idposteexport.index();
     public static final int EXPORTPFNL = AttributesEnum.Exportpfnl.index();
     public static final int IDPERMISSIONNAIREEXPORTPFNL = AttributesEnum.IdpermissionnaireExportpfnl.index();
     public static final int EXPORTPFNL1 = AttributesEnum.Exportpfnl1.index();
@@ -183,6 +185,22 @@ public class ExportpfnlImpl extends EntityImpl {
      */
     public void setDateexport(Timestamp value) {
         setAttributeInternal(DATEEXPORT, value);
+    }
+
+    /**
+     * Gets the attribute value for Idposteexport, using the alias name Idposteexport.
+     * @return the value of Idposteexport
+     */
+    public BigDecimal getIdposteexport() {
+        return (BigDecimal) getAttributeInternal(IDPOSTEEXPORT);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for Idposteexport.
+     * @param value value to set the Idposteexport
+     */
+    public void setIdposteexport(BigDecimal value) {
+        setAttributeInternal(IDPOSTEEXPORT, value);
     }
 
     /**

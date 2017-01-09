@@ -15,19 +15,12 @@
         <Item Value="Libellecategorie"/>
       </AttrNames>
     </attributeValues>
-    <attributeValues IterBinding="CategorieproduitView1Iterator" id="Codecategorie">
-      <AttrNames>
-        <Item Value="Codecategorie"/>
-      </AttrNames>
-    </attributeValues>
     <attributeValues IterBinding="CategorieproduitView1Iterator" id="Observation">
       <AttrNames>
         <Item Value="Observation"/>
       </AttrNames>
     </attributeValues>
     <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
-    <action IterBinding="CategorieproduitView1Iterator" id="CreateInsert" RequiresUpdateModel="true"
-            Action="createInsertRow"/>
     <action IterBinding="CategorieproduitView1Iterator" id="Delete" RequiresUpdateModel="false"
             Action="removeCurrentRow"/>
     <tree IterBinding="CategorieproduitView1Iterator" id="CategorieproduitView1">
@@ -61,5 +54,11 @@
         <Item Value="false"/>
       </ValueList>
     </button>
+    <action IterBinding="CategorieproduitView1Iterator" id="First" RequiresUpdateModel="true" Action="first"/>
+    <action IterBinding="CategorieproduitView1Iterator" id="Previous" RequiresUpdateModel="true" Action="previous"/>
+    <action IterBinding="CategorieproduitView1Iterator" id="Next" RequiresUpdateModel="true" Action="next"/>
+    <action IterBinding="CategorieproduitView1Iterator" id="Last" RequiresUpdateModel="true" Action="last"/>
+    <action IterBinding="CategorieproduitView1Iterator" id="CreateInsert" RequiresUpdateModel="true"
+            Action="createInsertRow"/>
   </bindings>
 </pageDefinition>

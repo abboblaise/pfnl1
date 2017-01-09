@@ -36,8 +36,7 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR"
-    TableName="categorieproduit"
-    DefaultValue="entrez un nom">
+    TableName="categorieproduit">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="45"/>
     </DesignTime>
@@ -52,14 +51,12 @@
   </Attribute>
   <Attribute
     Name="Codecategorie"
-    IsNotNull="true"
     Precision="4"
     ColumnName="codecategorie"
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR"
-    TableName="categorieproduit"
-    DefaultValue="entrez un nom">
+    TableName="categorieproduit">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="4"/>
     </DesignTime>
@@ -96,7 +93,8 @@
     SQLType="BIT"
     Type="java.lang.Boolean"
     ColumnType="BIT"
-    TableName="categorieproduit">
+    TableName="categorieproduit"
+    DefaultValue="false">
     <Properties>
       <SchemaBasedProperties>
         <LABEL

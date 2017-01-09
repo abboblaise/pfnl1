@@ -14,13 +14,10 @@
               id="DetailsexportpfnlView12Iterator"/>
     <searchRegion Binds="DetailsexportpfnlView12Iterator" Criteria=""
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="DetailsexportpfnlView12Query"/>
+    <iterator id="CertificatorigineView1Iterator" Binds="CertificatorigineView1" DataControl="AppModuleDataControl"
+              RangeSize="25"/>
   </executables>
   <bindings>
-    <attributeValues IterBinding="ExportpfnlView1Iterator" id="Idexportpfnl">
-      <AttrNames>
-        <Item Value="Idexportpfnl"/>
-      </AttrNames>
-    </attributeValues>
     <list IterBinding="ExportpfnlView1Iterator" StaticList="false" Uses="LOV_Idpermis" id="Idpermis"
           DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
     <list IterBinding="ExportpfnlView1Iterator" StaticList="false" Uses="LOV_Idpermissionnaire" id="Idpermissionnaire"
@@ -28,11 +25,6 @@
     <attributeValues IterBinding="ExportpfnlView1Iterator" id="Numeroexport">
       <AttrNames>
         <Item Value="Numeroexport"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="ExportpfnlView1Iterator" id="Numeroco">
-      <AttrNames>
-        <Item Value="Numeroco"/>
       </AttrNames>
     </attributeValues>
     <tree IterBinding="ExportpfnlView1Iterator" id="ExportpfnlView1">
@@ -44,19 +36,10 @@
           <Item Value="Numeroexport"/>
           <Item Value="Numeroco"/>
           <Item Value="Dateexport"/>
+          <Item Value="Idposteexport"/>
         </AttrNames>
       </nodeDefinition>
     </tree>
-    <attributeValues IterBinding="DetailsexportpfnlView12Iterator" id="Iddetailsexportpfnl">
-      <AttrNames>
-        <Item Value="Iddetailsexportpfnl"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="DetailsexportpfnlView12Iterator" id="Idexportpfnl1">
-      <AttrNames>
-        <Item Value="Idexportpfnl"/>
-      </AttrNames>
-    </attributeValues>
     <list IterBinding="DetailsexportpfnlView12Iterator" StaticList="false" Uses="LOV_Idunitemesure" id="Idunitemesure"
           DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
     <attributeValues IterBinding="DetailsexportpfnlView12Iterator" id="Quantite">
@@ -81,6 +64,8 @@
           <Item Value="Quantite"/>
           <Item Value="Observations"/>
           <Item Value="Idpartieproduitpfnl"/>
+          <Item Value="Idcertificat"/>
+          <Item Value="Idpays"/>
         </AttrNames>
       </nodeDefinition>
     </tree>
@@ -105,5 +90,24 @@
         <Item Value="dateFin"/>
       </AttrNames>
     </attributeValues>
+    <action IterBinding="ExportpfnlView1Iterator" id="First" RequiresUpdateModel="true" Action="first"/>
+    <action IterBinding="ExportpfnlView1Iterator" id="Previous" RequiresUpdateModel="true" Action="previous"/>
+    <action IterBinding="ExportpfnlView1Iterator" id="Next" RequiresUpdateModel="true" Action="next"/>
+    <action IterBinding="ExportpfnlView1Iterator" id="Last" RequiresUpdateModel="true" Action="last"/>
+    <list IterBinding="ExportpfnlView1Iterator" StaticList="false" Uses="LOV_Idposteexport" id="Idposteexport"
+          DTSupportsMRU="true" SelectItemValueMode="ListObject"/>
+    <list IterBinding="DetailsexportpfnlView12Iterator" StaticList="false" Uses="LOV_Idcertificat" id="Idcertificat"
+          DTSupportsMRU="true" SelectItemValueMode="ListObject"/>
+    <list IterBinding="DetailsexportpfnlView12Iterator" StaticList="false" Uses="LOV_Idpays" id="Idpays"
+          DTSupportsMRU="true" SelectItemValueMode="ListObject"/>
+    <action IterBinding="DetailsexportpfnlView12Iterator" id="First1" RequiresUpdateModel="true" Action="first"/>
+    <action IterBinding="DetailsexportpfnlView12Iterator" id="Last1" RequiresUpdateModel="true" Action="last"/>
+    <action IterBinding="DetailsexportpfnlView12Iterator" id="Next1" RequiresUpdateModel="true" Action="next"/>
+    <action IterBinding="DetailsexportpfnlView12Iterator" id="Previous1" RequiresUpdateModel="true" Action="previous"/>
+    <action IterBinding="ExportpfnlView1Iterator" id="Delete" InstanceName="AppModuleDataControl.ExportpfnlView1"
+            DataControl="AppModuleDataControl" RequiresUpdateModel="false" Action="removeCurrentRow"/>
+    <action IterBinding="DetailsexportpfnlView12Iterator" id="Delete1"
+            InstanceName="AppModuleDataControl.DetailsexportpfnlView12" DataControl="AppModuleDataControl"
+            RequiresUpdateModel="false" Action="removeCurrentRow"/>
   </bindings>
 </pageDefinition>

@@ -30,10 +30,6 @@ public interface PermissionnairespnflViewSDO extends java.io.Serializable {
 
    public void setCodepnfl(java.lang.String value);
 
-   public java.math.BigDecimal getIddepartements();
-
-   public void setIddepartements(java.math.BigDecimal value);
-
    public java.lang.String getNatureactivite();
 
    public void setNatureactivite(java.lang.String value);
@@ -49,10 +45,6 @@ public interface PermissionnairespnflViewSDO extends java.io.Serializable {
    public java.lang.String getNui();
 
    public void setNui(java.lang.String value);
-
-   public java.math.BigDecimal getIdpays();
-
-   public void setIdpays(java.math.BigDecimal value);
 
    public java.lang.String getProfession();
 
@@ -70,9 +62,9 @@ public interface PermissionnairespnflViewSDO extends java.io.Serializable {
 
    public void setSexe(java.lang.Integer value);
 
-   public java.util.List getPermissionnairespnflView1();
+   public java.math.BigDecimal getIdcommune();
 
-   public void setPermissionnairespnflView1(java.util.List value);
+   public void setIdcommune(java.math.BigDecimal value);
 
    public java.util.List getPermisView();
 

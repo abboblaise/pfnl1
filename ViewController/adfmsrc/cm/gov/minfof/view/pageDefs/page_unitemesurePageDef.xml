@@ -24,11 +24,6 @@
         <Item Value="0"/>
       </ValueList>
     </button>
-    <attributeValues IterBinding="UnitemesureView1Iterator" id="Idunitemesure">
-      <AttrNames>
-        <Item Value="Idunitemesure"/>
-      </AttrNames>
-    </attributeValues>
     <attributeValues IterBinding="UnitemesureView1Iterator" id="Libelleunitemesure">
       <AttrNames>
         <Item Value="Libelleunitemesure"/>
@@ -59,5 +54,10 @@
         </AttrNames>
       </nodeDefinition>
     </tree>
+    <action id="Rollback" RequiresUpdateModel="false" Action="rollbackTransaction" DataControl="AppModuleDataControl"/>
+    <action IterBinding="UnitemesureView1Iterator" id="First" RequiresUpdateModel="true" Action="first"/>
+    <action IterBinding="UnitemesureView1Iterator" id="Previous" RequiresUpdateModel="true" Action="previous"/>
+    <action IterBinding="UnitemesureView1Iterator" id="Next" RequiresUpdateModel="true" Action="next"/>
+    <action IterBinding="UnitemesureView1Iterator" id="Last" RequiresUpdateModel="true" Action="last"/>
   </bindings>
 </pageDefinition>

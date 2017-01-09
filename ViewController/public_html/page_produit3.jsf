@@ -1,118 +1,41 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!DOCTYPE html>
 <f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
-        xmlns:c="http://java.sun.com/jsp/jstl/core">
+        xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:mycomps="http://mycompany.com/adf/components">
     <c:set var="viewcontrollerBundle" value="#{adfBundle['cm.gov.minfof.view.ViewControllerBundle']}"/>
     <af:document title="#{viewcontrollerBundle.EDITION_DES_PRODUITS}" id="d1">
+        <af:resource source="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js" type="javascript"/>
+        <af:resource source="js/jquery.growl.js" type="javascript"/>
+        <af:resource source="style/jquery.growl.css" type="css"/>
         <af:messages id="m1"/>
         <af:form id="f1">
             <af:pageTemplate viewId="/TemplateGlobal.jsf" id="pt1">
                 <f:facet name="content">
-                    <af:panelSplitter id="ps1" splitterPosition="632">
+                    <af:panelSplitter id="ps1" splitterPosition="531">
                         <f:facet name="first">
-                            <af:panelSplitter id="ps2" orientation="vertical" splitterPosition="171">
-                                <f:facet name="first">
-                                    <af:panelBox text="#{viewcontrollerBundle.EDITION_DES_PRODUITS}" id="pb1">
-                                        <f:facet name="toolbar"/>
-                                        <af:panelFormLayout id="pfl1" rows="4">
-                                            <af:inputText value="#{bindings.Idproduitspfnl.inputValue}"
-                                                          label="#{bindings.Idproduitspfnl.hints.label}"
-                                                          required="#{bindings.Idproduitspfnl.hints.mandatory}"
-                                                          columns="#{bindings.Idproduitspfnl.hints.displayWidth}"
-                                                          maximumLength="#{bindings.Idproduitspfnl.hints.precision}"
-                                                          shortDesc="#{bindings.Idproduitspfnl.hints.tooltip}" id="it1"
-                                                          visible="false">
-                                                <f:validator binding="#{bindings.Idproduitspfnl.validator}"/>
-                                                <af:convertNumber groupingUsed="false"
-                                                                  pattern="#{bindings.Idproduitspfnl.format}"/>
-                                            </af:inputText>
-                                            <af:selectOneChoice value="#{bindings.Idcategorie.inputValue}"
-                                                                label="#{bindings.Idcategorie.label}"
-                                                                required="#{bindings.Idcategorie.hints.mandatory}"
-                                                                shortDesc="#{bindings.Idcategorie.hints.tooltip}"
-                                                                id="soc9">
-                                                <f:selectItems value="#{bindings.Idcategorie.items}" id="si9"/>
-                                                <f:validator binding="#{bindings.Idcategorie.validator}"/>
-                                            </af:selectOneChoice>
-                                            <af:inputText value="#{bindings.Nomcommercial.inputValue}"
-                                                          label="#{bindings.Nomcommercial.hints.label}"
-                                                          required="#{bindings.Nomcommercial.hints.mandatory}"
-                                                          columns="#{bindings.Nomcommercial.hints.displayWidth}"
-                                                          maximumLength="#{bindings.Nomcommercial.hints.precision}"
-                                                          shortDesc="#{bindings.Nomcommercial.hints.tooltip}" id="it3">
-                                                <f:validator binding="#{bindings.Nomcommercial.validator}"/>
-                                            </af:inputText>
-                                            <af:selectOneChoice value="#{bindings.Idfamillepfnl.inputValue}"
-                                                                label="#{bindings.Idfamillepfnl.label}"
-                                                                required="#{bindings.Idfamillepfnl.hints.mandatory}"
-                                                                shortDesc="#{bindings.Idfamillepfnl.hints.tooltip}"
-                                                                id="soc1">
-                                                <f:selectItems value="#{bindings.Idfamillepfnl.items}" id="si1"/>
-                                                <f:validator binding="#{bindings.Idfamillepfnl.validator}"/>
-                                            </af:selectOneChoice>
-                                            <af:inputText value="#{bindings.Codeproduit.inputValue}"
-                                                          label="#{bindings.Codeproduit.hints.label}"
-                                                          required="#{bindings.Codeproduit.hints.mandatory}"
-                                                          columns="#{bindings.Codeproduit.hints.displayWidth}"
-                                                          maximumLength="#{bindings.Codeproduit.hints.precision}"
-                                                          shortDesc="#{bindings.Codeproduit.hints.tooltip}" id="it4">
-                                                <f:validator binding="#{bindings.Codeproduit.validator}"/>
-                                            </af:inputText>
-                                            <af:inputText value="#{bindings.Nomscientifique.inputValue}"
-                                                          label="#{bindings.Nomscientifique.hints.label}"
-                                                          required="#{bindings.Nomscientifique.hints.mandatory}"
-                                                          columns="#{bindings.Nomscientifique.hints.displayWidth}"
-                                                          maximumLength="#{bindings.Nomscientifique.hints.precision}"
-                                                          shortDesc="#{bindings.Nomscientifique.hints.tooltip}"
-                                                          id="it2">
-                                                <f:validator binding="#{bindings.Nomscientifique.validator}"/>
-                                            </af:inputText>
-                                            <af:inputText value="#{bindings.Descriptionsommaire.inputValue}"
-                                                          label="#{bindings.Descriptionsommaire.hints.label}"
-                                                          required="#{bindings.Descriptionsommaire.hints.mandatory}"
-                                                          columns="#{bindings.Descriptionsommaire.hints.displayWidth}"
-                                                          maximumLength="#{bindings.Descriptionsommaire.hints.precision}"
-                                                          shortDesc="#{bindings.Descriptionsommaire.hints.tooltip}"
-                                                          id="it5">
-                                                <f:validator binding="#{bindings.Descriptionsommaire.validator}"/>
-                                            </af:inputText>
-                                            <af:inputText value="#{bindings.Modeattribution.inputValue}"
-                                                          label="#{bindings.Modeattribution.hints.label}"
-                                                          required="#{bindings.Modeattribution.hints.mandatory}"
-                                                          columns="#{bindings.Modeattribution.hints.displayWidth}"
-                                                          maximumLength="#{bindings.Modeattribution.hints.precision}"
-                                                          shortDesc="#{bindings.Modeattribution.hints.tooltip}"
-                                                          id="it6">
-                                                <f:validator binding="#{bindings.Modeattribution.validator}"/>
-                                            </af:inputText>
-                                            <f:facet name="footer">
-                                                <af:panelGroupLayout id="pgl1">
-                                                    <af:button text="#{viewcontrollerBundle.NOUVEAU}"
-                                                               disabled="#{!bindings.CreateInsert.enabled}" id="b2"
-                                                               action="#{produitPfnl3.creerProduitPfnl}"/>
-                                                    <af:spacer width="10" height="10" id="s1"/>
-                                                    <af:button text="#{viewcontrollerBundle.ENREGISTRER}" id="b1"
-                                                               actionListener="#{bindings.Commit.execute}"
-                                                               action="#{produitPfnl3.enregProduitPfnl}"/>
-                                                    <af:spacer width="10" height="10" id="s2"/>
-                                                    <af:button text="#{viewcontrollerBundle.SUPPRIMER}"
-                                                               disabled="#{!bindings.Delete.enabled}" id="b3"
-                                                               action="#{produitPfnl3.supprimeProduitPfnl}"/>
-                                                    <af:spacer width="10" height="10" id="s4"/>
-                                                    <af:button actionListener="#{bindings.Rollback.execute}"
-                                                               text="#{viewcontrollerBundle.ANNULER}"
-                                                               immediate="true" id="b6">
-                                                        <af:resetActionListener/>
-                                                    </af:button>
-                                                </af:panelGroupLayout>
-                                            </f:facet>
-                                        </af:panelFormLayout>
-                                    </af:panelBox>
+                            <af:panelBox text="#{viewcontrollerBundle.EDITION_DES_PRODUITS}" id="pb5"
+                                         showDisclosure="false">
+                                <f:facet name="toolbar">
+                                    <af:panelGroupLayout id="pgl4">
+                                        <af:button actionListener="#{bindings.Rollback.execute}"
+                                                   text="#{viewcontrollerBundle.ACTUALISER}" immediate="true" id="b7">
+                                            <af:resetActionListener/>
+                                        </af:button>
+                                        <af:spacer width="10" height="10" id="s5"/>
+                                        <af:button text="#{viewcontrollerBundle.SUPPRIMER}"
+                                                   disabled="#{!bindings.Delete.enabled}" id="b3"
+                                                   action="#{produitPfnl3.supprimeProduitPfnl}" visible="false"/>
+                                        <mycomps:ConfirmButton id="cb1" ButtonText="#{viewcontrollerBundle.SUPPRIMER}"
+                                                               ConfirmationMessage="#{viewcontrollerBundle.VOULEZ_VOUS_VRAIMENT_SUPPRIMER_}"
+                                                               onDialogReturn="#{produitPfnl3.onDelete}">
+                                            <f:facet name="DialogContent"/>
+                                        </mycomps:ConfirmButton>
+                                    </af:panelGroupLayout>
                                 </f:facet>
-                                <f:facet name="second">
-                                    <af:panelBox text="#{viewcontrollerBundle.LISTE_DES_PRODUITS}" id="pb2">
-                                        <f:facet name="toolbar"/>
-                                        <af:panelCollection id="pc1">
+                                <af:spacer width="10" height="10" id="s12"/>
+                                <af:panelTabbed position="above" id="pt2">
+                                    <af:showDetailItem id="tab1" text="#{viewcontrollerBundle.CONSULTATION}">
+                                        <af:panelCollection id="pc1" inlineStyle="height:272px;">
                                             <f:facet name="menus"/>
                                             <f:facet name="toolbar"/>
                                             <af:table value="#{bindings.ProduitsPfnlView12.collectionModel}" var="row"
@@ -126,11 +49,12 @@
                                                       filterModel="#{bindings.ProduitsPfnlView12Query.queryDescriptor}"
                                                       filterVisible="true"
                                                       queryListener="#{bindings.ProduitsPfnlView12Query.processQuery}"
-                                                      varStatus="vs" id="t1" partialTriggers=":::b2 :::b3">
+                                                      varStatus="vs" id="t1"
+                                                      partialTriggers=":::b2 :::b3 :::b8 :::b9 :::b10 :::b11 :::b1 :::b6 :::b13 :::b14 :::b15 :::b16">
                                                 <af:column sortProperty="#{bindings.ProduitsPfnlView12.hints.Idproduitspfnl.name}"
                                                            filterable="true" sortable="true"
                                                            headerText="#{bindings.ProduitsPfnlView12.hints.Idproduitspfnl.label}"
-                                                           id="c1" visible="false">
+                                                           id="c1" visible="true" rowHeader="true">
                                                     <af:outputText value="#{row.Idproduitspfnl}"
                                                                    shortDesc="#{bindings.ProduitsPfnlView12.hints.Idproduitspfnl.tooltip}"
                                                                    id="ot1">
@@ -206,79 +130,206 @@
                                             </af:table>
                                             <f:facet name="statusbar"/>
                                         </af:panelCollection>
-                                    </af:panelBox>
-                                </f:facet>
-                            </af:panelSplitter>
+                                    </af:showDetailItem>
+                                    <af:showDetailItem id="tab2" text="#{viewcontrollerBundle.EDITION}">
+                                        <af:panelBox id="pb2" showDisclosure="false">
+                                            <f:facet name="toolbar"/>
+                                            <af:panelGridLayout id="pgl3">
+                                                <af:gridRow marginTop="5px" height="auto" id="gr1">
+                                                    <af:gridCell marginStart="5px" width="auto" id="gc1">
+                                                        <af:outputText value="#{bindings.Idcategorie.label}" id="ot10"/>
+                                                    </af:gridCell>
+                                                    <af:gridCell marginStart="5px" width="auto" marginEnd="5px"
+                                                                 id="gc2">
+                                                        <af:selectOneChoice value="#{bindings.Idcategorie.inputValue}"
+                                                                            required="#{bindings.Idcategorie.hints.mandatory}"
+                                                                            shortDesc="#{bindings.Idcategorie.hints.tooltip}"
+                                                                            id="soc9">
+                                                            <f:selectItems value="#{bindings.Idcategorie.items}"
+                                                                           id="si9"/>
+                                                            <f:validator binding="#{bindings.Idcategorie.validator}"/>
+                                                        </af:selectOneChoice>
+                                                    </af:gridCell>
+                                                </af:gridRow>
+                                                <af:gridRow marginTop="5px" height="auto" id="gr2">
+                                                    <af:gridCell marginStart="5px" width="auto" id="gc3">
+                                                        <af:outputText value="#{bindings.Nomcommercial.hints.label}"
+                                                                       id="ot11"/>
+                                                    </af:gridCell>
+                                                    <af:gridCell marginStart="5px" width="auto" marginEnd="5px"
+                                                                 id="gc4">
+                                                        <af:inputText value="#{bindings.Nomcommercial.inputValue}"
+                                                                      required="#{bindings.Nomcommercial.hints.mandatory}"
+                                                                      columns="#{bindings.Nomcommercial.hints.displayWidth}"
+                                                                      maximumLength="#{bindings.Nomcommercial.hints.precision}"
+                                                                      shortDesc="#{bindings.Nomcommercial.hints.tooltip}"
+                                                                      id="it3">
+                                                            <f:validator binding="#{bindings.Nomcommercial.validator}"/>
+                                                        </af:inputText>
+                                                    </af:gridCell>
+                                                </af:gridRow>
+                                                <af:gridRow marginTop="5px" height="auto" id="gr3">
+                                                    <af:gridCell marginStart="5px" width="auto" id="gc5">
+                                                        <af:outputText value="#{bindings.Idfamillepfnl.label}"
+                                                                       id="ot12"/>
+                                                    </af:gridCell>
+                                                    <af:gridCell marginStart="5px" width="auto" marginEnd="5px"
+                                                                 id="gc6">
+                                                        <af:selectOneChoice value="#{bindings.Idfamillepfnl.inputValue}"
+                                                                            required="#{bindings.Idfamillepfnl.hints.mandatory}"
+                                                                            shortDesc="#{bindings.Idfamillepfnl.hints.tooltip}"
+                                                                            id="soc1">
+                                                            <f:selectItems value="#{bindings.Idfamillepfnl.items}"
+                                                                           id="si1"/>
+                                                            <f:validator binding="#{bindings.Idfamillepfnl.validator}"/>
+                                                        </af:selectOneChoice>
+                                                    </af:gridCell>
+                                                </af:gridRow>
+                                                <af:gridRow marginTop="5px" height="auto" id="gr4">
+                                                    <af:gridCell marginStart="5px" width="auto" id="gc7">
+                                                        <af:outputText value="#{bindings.Codeproduit.hints.label}"
+                                                                       id="ot13"/>
+                                                    </af:gridCell>
+                                                    <af:gridCell marginStart="5px" width="auto" marginEnd="5px"
+                                                                 id="gc8">
+                                                        <af:inputText value="#{bindings.Codeproduit.inputValue}"
+                                                                      required="#{bindings.Codeproduit.hints.mandatory}"
+                                                                      columns="#{bindings.Codeproduit.hints.displayWidth}"
+                                                                      maximumLength="#{bindings.Codeproduit.hints.precision}"
+                                                                      shortDesc="#{bindings.Codeproduit.hints.tooltip}"
+                                                                      id="it4">
+                                                            <f:validator binding="#{bindings.Codeproduit.validator}"/>
+                                                        </af:inputText>
+                                                    </af:gridCell>
+                                                </af:gridRow>
+                                                <af:gridRow marginTop="5px" height="auto" id="gr5">
+                                                    <af:gridCell marginStart="5px" width="auto" id="gc9">
+                                                        <af:outputText value="#{bindings.Nomscientifique.hints.label}"
+                                                                       id="ot14"/>
+                                                    </af:gridCell>
+                                                    <af:gridCell marginStart="5px" width="auto" marginEnd="5px"
+                                                                 id="gc10">
+                                                        <af:inputText value="#{bindings.Nomscientifique.inputValue}"
+                                                                      required="#{bindings.Nomscientifique.hints.mandatory}"
+                                                                      columns="#{bindings.Nomscientifique.hints.displayWidth}"
+                                                                      maximumLength="#{bindings.Nomscientifique.hints.precision}"
+                                                                      shortDesc="#{bindings.Nomscientifique.hints.tooltip}"
+                                                                      id="it2">
+                                                            <f:validator binding="#{bindings.Nomscientifique.validator}"/>
+                                                        </af:inputText>
+                                                    </af:gridCell>
+                                                </af:gridRow>
+                                                <af:gridRow marginTop="5px" height="auto" id="gr6">
+                                                    <af:gridCell marginStart="5px" width="auto" id="gc11">
+                                                        <af:outputText value="#{bindings.Descriptionsommaire.hints.label}"
+                                                                       id="ot15"/>
+                                                    </af:gridCell>
+                                                    <af:gridCell marginStart="5px" width="auto" marginEnd="5px"
+                                                                 id="gc12">
+                                                        <af:inputText value="#{bindings.Descriptionsommaire.inputValue}"
+                                                                      required="#{bindings.Descriptionsommaire.hints.mandatory}"
+                                                                      columns="#{bindings.Descriptionsommaire.hints.displayWidth}"
+                                                                      maximumLength="#{bindings.Descriptionsommaire.hints.precision}"
+                                                                      shortDesc="#{bindings.Descriptionsommaire.hints.tooltip}"
+                                                                      id="it5" rows="4">
+                                                            <f:validator binding="#{bindings.Descriptionsommaire.validator}"/>
+                                                        </af:inputText>
+                                                    </af:gridCell>
+                                                </af:gridRow>
+                                                <af:gridRow marginTop="5px" height="auto" id="gr7">
+                                                    <af:gridCell marginStart="5px" width="auto" id="gc13">
+                                                        <af:outputText value="#{bindings.Modeattribution.hints.label}"
+                                                                       id="ot16"/>
+                                                    </af:gridCell>
+                                                    <af:gridCell marginStart="5px" width="auto" marginEnd="5px"
+                                                                 id="gc14">
+                                                        <af:inputText value="#{bindings.Modeattribution.inputValue}"
+                                                                      required="#{bindings.Modeattribution.hints.mandatory}"
+                                                                      columns="#{bindings.Modeattribution.hints.displayWidth}"
+                                                                      maximumLength="#{bindings.Modeattribution.hints.precision}"
+                                                                      shortDesc="#{bindings.Modeattribution.hints.tooltip}"
+                                                                      id="it6">
+                                                            <f:validator binding="#{bindings.Modeattribution.validator}"/>
+                                                        </af:inputText>
+                                                    </af:gridCell>
+                                                </af:gridRow>
+                                                <af:gridRow marginTop="5px" height="auto" id="gr8">
+                                                    <af:gridCell marginStart="5px" width="auto" id="gc15"/>
+                                                    <af:gridCell marginStart="5px" width="auto" marginEnd="5px"
+                                                                 id="gc16"/>
+                                                </af:gridRow>
+                                                <af:gridRow marginTop="5px" height="auto" id="gr10">
+                                                    <af:gridCell marginStart="5px" columnSpan="2" marginEnd="5px"
+                                                                 id="gc19">
+                                                        <af:panelGroupLayout id="pgl5">
+                                                            <af:button text="#{viewcontrollerBundle.FIRST}"
+                                                                       disabled="#{!bindings.First.enabled}"
+                                                                       partialSubmit="true" id="b8"
+                                                                       actionListener="#{bindings.First.execute}"/>
+                                                            <af:spacer width="10" height="10" id="s4"/>
+                                                            <af:button actionListener="#{bindings.Previous.execute}"
+                                                                       text="#{viewcontrollerBundle.PREVIOUS}"
+                                                                       disabled="#{!bindings.Previous.enabled}"
+                                                                       partialSubmit="true" id="b9"/>
+                                                            <af:spacer width="10" height="10" id="s6"/>
+                                                            <af:button actionListener="#{bindings.Next.execute}"
+                                                                       text="#{viewcontrollerBundle.NEXT}"
+                                                                       disabled="#{!bindings.Next.enabled}"
+                                                                       partialSubmit="true" id="b10"/>
+                                                            <af:spacer width="10" height="10" id="s7"/>
+                                                            <af:button text="#{viewcontrollerBundle.LAST}"
+                                                                       disabled="#{!bindings.Last.enabled}"
+                                                                       partialSubmit="true" id="b11"
+                                                                       actionListener="#{bindings.Last.execute}"/>
+                                                        </af:panelGroupLayout>
+                                                    </af:gridCell>
+                                                </af:gridRow>
+                                                <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr11">
+                                                    <af:gridCell marginStart="5px" columnSpan="2" marginEnd="5px"
+                                                                 id="gc20">
+                                                        <af:panelGroupLayout id="pgl1">
+                                                            <af:button text="#{viewcontrollerBundle.NOUVEAU}"
+                                                                       disabled="#{!bindings.Create.enabled}" id="b2"
+                                                                       action="#{produitPfnl3.creerProduitPfnl}"/>
+                                                            <af:spacer width="10" height="10" id="s1"/>
+                                                            <af:button text="#{viewcontrollerBundle.ENREGISTRER}"
+                                                                       id="b1"
+                                                                       actionListener="#{bindings.Commit.execute}"
+                                                                       action="#{produitPfnl3.enregProduitPfnl}"
+                                                                       visible="false"/>
+                                                            <af:spacer width="10" height="10" id="s2"/>
+                                                            <af:button actionListener="#{bindings.Rollback.execute}"
+                                                                       text="#{viewcontrollerBundle.ANNULER}"
+                                                                       immediate="true" id="b6">
+                                                                <af:resetActionListener/>
+                                                            </af:button>
+                                                        </af:panelGroupLayout>
+                                                    </af:gridCell>
+                                                </af:gridRow>
+                                            </af:panelGridLayout>
+                                        </af:panelBox>
+                                    </af:showDetailItem>
+                                </af:panelTabbed>
+                            </af:panelBox>
                         </f:facet>
                         <f:facet name="second">
-                            <af:panelSplitter id="ps3" orientation="vertical" splitterPosition="114">
-                                <f:facet name="first">
-                                    <af:panelBox text="#{viewcontrollerBundle.AJOUTER_PARTIES_RECOLT_U00E9ES}" id="pb3">
-                                        <f:facet name="toolbar">
-                                            <af:panelGroupLayout id="pgl2">
-                                                <af:button
-                                                           text="#{viewcontrollerBundle.NOUVEAU}"
-                                                           disabled="#{!bindings.CreateInsert1.enabled}" id="b4"
-                                                           action="#{produitPfnl3.creerPartieProduitPfnl}"/>
-                                                <af:spacer width="10" height="10" id="s3"/>
-                                                <af:button text="#{viewcontrollerBundle.SUPPRIMER}"
-                                                           disabled="#{!bindings.Delete1.enabled}" id="b5"
-                                                           action="#{produitPfnl3.supprimePartieProduitPfnl}"/>
-                                            </af:panelGroupLayout>
-                                        </f:facet>
-                                        <af:panelFormLayout id="pfl2">
-                                            <af:inputText value="#{bindings.Idpartiesproduitspfnl.inputValue}"
-                                                          label="#{bindings.Idpartiesproduitspfnl.hints.label}"
-                                                          required="#{bindings.Idpartiesproduitspfnl.hints.mandatory}"
-                                                          columns="#{bindings.Idpartiesproduitspfnl.hints.displayWidth}"
-                                                          maximumLength="#{bindings.Idpartiesproduitspfnl.hints.precision}"
-                                                          shortDesc="#{bindings.Idpartiesproduitspfnl.hints.tooltip}"
-                                                          id="it8" visible="false">
-                                                <f:validator binding="#{bindings.Idpartiesproduitspfnl.validator}"/>
-                                                <af:convertNumber groupingUsed="false"
-                                                                  pattern="#{bindings.Idpartiesproduitspfnl.format}"/>
-                                            </af:inputText>
-                                            <af:selectOneChoice value="#{bindings.Idpartiesrecoltees.inputValue}"
-                                                                label="#{bindings.Idpartiesrecoltees.label}"
-                                                                required="#{bindings.Idpartiesrecoltees.hints.mandatory}"
-                                                                shortDesc="#{bindings.Idpartiesrecoltees.hints.tooltip}"
-                                                                id="soc6">
-                                                <f:selectItems value="#{bindings.Idpartiesrecoltees.items}" id="si6"/>
-                                                <f:validator binding="#{bindings.Idpartiesrecoltees.validator}"/>
-                                            </af:selectOneChoice>
-                                            <af:inputText value="#{bindings.Idproduitspfnl1.inputValue}"
-                                                          label="#{bindings.Idproduitspfnl1.hints.label}"
-                                                          required="#{bindings.Idproduitspfnl1.hints.mandatory}"
-                                                          columns="#{bindings.Idproduitspfnl1.hints.displayWidth}"
-                                                          maximumLength="#{bindings.Idproduitspfnl1.hints.precision}"
-                                                          shortDesc="#{bindings.Idproduitspfnl1.hints.tooltip}"
-                                                          id="it9" visible="false">
-                                                <f:validator binding="#{bindings.Idproduitspfnl1.validator}"/>
-                                                <af:convertNumber groupingUsed="false"
-                                                                  pattern="#{bindings.Idproduitspfnl1.format}"/>
-                                            </af:inputText>
-                                            <af:selectOneChoice value="#{bindings.Idunitemesure.inputValue}"
-                                                                label="#{bindings.Idunitemesure.label}"
-                                                                required="#{bindings.Idunitemesure.hints.mandatory}"
-                                                                shortDesc="#{bindings.Idunitemesure.hints.tooltip}"
-                                                                id="soc7">
-                                                <f:selectItems value="#{bindings.Idunitemesure.items}" id="si7"/>
-                                                <f:validator binding="#{bindings.Idunitemesure.validator}"/>
-                                            </af:selectOneChoice>
-                                            <af:selectOneChoice value="#{bindings.Idunitemesureexport.inputValue}"
-                                                                label="#{bindings.Idunitemesureexport.label}"
-                                                                required="#{bindings.Idunitemesureexport.hints.mandatory}"
-                                                                shortDesc="#{bindings.Idunitemesureexport.hints.tooltip}"
-                                                                id="soc8">
-                                                <f:selectItems value="#{bindings.Idunitemesureexport.items}" id="si8"/>
-                                                <f:validator binding="#{bindings.Idunitemesureexport.validator}"/>
-                                            </af:selectOneChoice>
-                                        </af:panelFormLayout>
-                                    </af:panelBox>
+                            <af:panelBox text="#{viewcontrollerBundle.DETAILS_DU_PRODUIT}" id="pb1"
+                                         showDisclosure="false">
+                                <f:facet name="toolbar">
+                                    <af:panelGroupLayout id="pgl7">
+                                        <af:button text="#{viewcontrollerBundle.SUPPRIMER}"
+                                                   disabled="#{!bindings.Delete1.enabled}" id="b5"
+                                                   action="#{produitPfnl3.supprimePartieProduitPfnl}" visible="false"/>
+                                        <mycomps:ConfirmButton id="cb2" ButtonText="#{viewcontrollerBundle.SUPPRIMER}"
+                                                               ConfirmationMessage="#{viewcontrollerBundle.VOULEZ_VOUS_VRAIMENT_SUPPRIMER_}"
+                                                               onDialogReturn="#{produitPfnl3.onDeletePartieProduitPfnl}">
+                                            <f:facet name="DialogContent"/>
+                                        </mycomps:ConfirmButton>
+                                    </af:panelGroupLayout>
                                 </f:facet>
-                                <f:facet name="second">
-                                    <af:panelBox text="#{viewcontrollerBundle.LISTE_DES_PARTIES_R_U00E9COLT_U00E9ES}" id="pb4">
-                                        <f:facet name="toolbar"/>
+                                <af:panelTabbed position="above" id="pt3">
+                                    <af:showDetailItem id="tab3" text="#{viewcontrollerBundle.CONSULTATION}"
+                                                       disclosed="true">
                                         <af:panelCollection id="pc2">
                                             <f:facet name="menus"/>
                                             <f:facet name="toolbar"/>
@@ -293,11 +344,12 @@
                                                       filterModel="#{bindings.PartiesProduitsPfnlView24Query.queryDescriptor}"
                                                       filterVisible="true"
                                                       queryListener="#{bindings.PartiesProduitsPfnlView24Query.processQuery}"
-                                                      varStatus="vs" id="t2" partialTriggers=":::b4 :::b5 :::b1">
+                                                      varStatus="vs" id="t2"
+                                                      partialTriggers=":::b4 :::b5 :::b1 :::b13 :::b16 :::b15 :::b14">
                                                 <af:column sortProperty="#{bindings.PartiesProduitsPfnlView24.hints.Idpartiesproduitspfnl.name}"
                                                            filterable="true" sortable="true"
                                                            headerText="#{bindings.PartiesProduitsPfnlView24.hints.Idpartiesproduitspfnl.label}"
-                                                           id="c9" visible="false">
+                                                           id="c9" visible="true" rowHeader="true">
                                                     <af:outputText value="#{row.Idpartiesproduitspfnl}"
                                                                    shortDesc="#{bindings.PartiesProduitsPfnlView24.hints.Idpartiesproduitspfnl.tooltip}"
                                                                    id="ot8">
@@ -361,9 +413,119 @@
                                             </af:table>
                                             <f:facet name="statusbar"/>
                                         </af:panelCollection>
-                                    </af:panelBox>
-                                </f:facet>
-                            </af:panelSplitter>
+                                    </af:showDetailItem>
+                                    <af:showDetailItem id="tab4" text="#{viewcontrollerBundle.EDITION}">
+                                        <af:panelBox id="pb4" showDisclosure="false">
+                                            <f:facet name="toolbar"/>
+                                            <af:panelGridLayout id="pgl6">
+                                                <af:gridRow marginTop="5px" height="auto" id="gr9">
+                                                    <af:gridCell marginStart="5px" width="auto" id="gc17">
+                                                        <af:outputText value="#{bindings.Idpartiesrecoltees.label}" id="ot17"/>
+                                                    </af:gridCell>
+                                                    <af:gridCell marginStart="5px" width="auto" marginEnd="5px"
+                                                                 id="gc18">
+                                                        <af:selectOneChoice value="#{bindings.Idpartiesrecoltees.inputValue}"
+                                                                            required="#{bindings.Idpartiesrecoltees.hints.mandatory}"
+                                                                            shortDesc="#{bindings.Idpartiesrecoltees.hints.tooltip}"
+                                                                            id="soc6">
+                                                            <f:selectItems value="#{bindings.Idpartiesrecoltees.items}"
+                                                                           id="si6"/>
+                                                            <f:validator binding="#{bindings.Idpartiesrecoltees.validator}"/>
+                                                        </af:selectOneChoice>
+                                                    </af:gridCell>
+                                                </af:gridRow>
+                                                <af:gridRow marginTop="5px" height="auto" id="gr12">
+                                                    <af:gridCell marginStart="5px" width="auto" id="gc21">
+                                                        <af:outputText value="#{bindings.Idunitemesure.label}" id="ot18"/>
+                                                    </af:gridCell>
+                                                    <af:gridCell marginStart="5px" width="auto" marginEnd="5px"
+                                                                 id="gc22">
+                                                        <af:selectOneChoice value="#{bindings.Idunitemesure.inputValue}"
+                                                                            required="#{bindings.Idunitemesure.hints.mandatory}"
+                                                                            shortDesc="#{bindings.Idunitemesure.hints.tooltip}"
+                                                                            id="soc7">
+                                                            <f:selectItems value="#{bindings.Idunitemesure.items}"
+                                                                           id="si7"/>
+                                                            <f:validator binding="#{bindings.Idunitemesure.validator}"/>
+                                                        </af:selectOneChoice>
+                                                    </af:gridCell>
+                                                </af:gridRow>
+                                                <af:gridRow marginTop="5px" height="auto" id="gr13">
+                                                    <af:gridCell marginStart="5px" width="auto" id="gc23">
+                                                        <af:outputText value="#{bindings.Idunitemesureexport.label}" id="ot19"/>
+                                                    </af:gridCell>
+                                                    <af:gridCell marginStart="5px" width="auto" marginEnd="5px"
+                                                                 id="gc24">
+                                                        <af:selectOneChoice value="#{bindings.Idunitemesureexport.inputValue}"
+                                                                            required="#{bindings.Idunitemesureexport.hints.mandatory}"
+                                                                            shortDesc="#{bindings.Idunitemesureexport.hints.tooltip}"
+                                                                            id="soc8">
+                                                            <f:selectItems value="#{bindings.Idunitemesureexport.items}"
+                                                                           id="si8"/>
+                                                            <f:validator binding="#{bindings.Idunitemesureexport.validator}"/>
+                                                        </af:selectOneChoice>
+                                                    </af:gridCell>
+                                                </af:gridRow>
+                                                <af:gridRow marginTop="5px" height="auto" id="gr14">
+                                                    <af:gridCell marginStart="5px" width="auto" id="gc25"/>
+                                                    <af:gridCell marginStart="5px" width="auto" marginEnd="5px"
+                                                                 id="gc26"/>
+                                                </af:gridRow>
+                                                <af:gridRow marginTop="5px" height="auto" id="gr15">
+                                                    <af:gridCell marginStart="5px" columnSpan="2" marginEnd="5px"
+                                                                 id="gc27">
+                                                        <af:panelGroupLayout id="pgl8">
+                                                            <af:button text="#{viewcontrollerBundle.FIRST}"
+                                                                       disabled="#{!bindings.First1.enabled}"
+                                                                       partialSubmit="true" id="b13"
+                                                                       actionListener="#{bindings.First1.execute}"/>
+                                                            <af:spacer width="10" height="10" id="s8"/>
+                                                            <af:button
+                                                                       text="#{viewcontrollerBundle.PREVIOUS}"
+                                                                       disabled="#{!bindings.Previous1.enabled}"
+                                                                       partialSubmit="true" id="b14"
+                                                                       actionListener="#{bindings.Previous1.execute}"/>
+                                                            <af:spacer width="10" height="10" id="s9"/>
+                                                            <af:button
+                                                                       text="#{viewcontrollerBundle.NEXT}"
+                                                                       disabled="#{!bindings.Next1.enabled}"
+                                                                       partialSubmit="true" id="b15"
+                                                                       actionListener="#{bindings.Next1.execute}"/>
+                                                            <af:spacer width="10" height="10" id="s10"/>
+                                                            <af:button text="#{viewcontrollerBundle.LAST}"
+                                                                       disabled="#{!bindings.Last1.enabled}"
+                                                                       partialSubmit="true" id="b16"
+                                                                       actionListener="#{bindings.Last1.execute}"/>
+                                                        </af:panelGroupLayout>
+                                                    </af:gridCell>
+                                                </af:gridRow>
+                                                <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr16">
+                                                    <af:gridCell marginStart="5px" columnSpan="2" marginEnd="5px"
+                                                                 id="gc28">
+                                                        <af:panelGroupLayout id="pgl2">
+                                                            <af:button text="#{viewcontrollerBundle.NOUVEAU}"
+                                                                       disabled="#{!bindings.Create1.enabled}"
+                                                                       id="b4"
+                                                                       action="#{produitPfnl3.creerPartieProduitPfnl}"/>
+                                                            <af:spacer width="10" height="10" id="s3"/>
+                                                            <af:button text="#{viewcontrollerBundle.ENREGISTRER}"
+                                                                       id="b12"
+                                                                       actionListener="#{bindings.Commit.execute}"
+                                                                       action="#{produitPfnl3.enregProduitPfnl}"/>
+                                                            <af:spacer width="10" height="10" id="s11"/>
+                                                            <af:button actionListener="#{bindings.Rollback.execute}"
+                                                                       text="#{viewcontrollerBundle.ANNULER}"
+                                                                       immediate="true" id="b17">
+                                                                <af:resetActionListener/>
+                                                            </af:button>
+                                                        </af:panelGroupLayout>
+                                                    </af:gridCell>
+                                                </af:gridRow>
+                                            </af:panelGridLayout>
+                                        </af:panelBox>
+                                    </af:showDetailItem>
+                                </af:panelTabbed>
+                            </af:panelBox>
                         </f:facet>
                     </af:panelSplitter>
                 </f:facet>

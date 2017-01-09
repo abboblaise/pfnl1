@@ -174,11 +174,6 @@ FROM pfnl.detailscollectepfnl PfnlDetailscollectepfnl]]></SQLQuery>
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
   <ViewLinkAccessor
-    Name="IddocumentofficielDetailscollectepfnlView1"
-    ViewLink="cm.gov.minfof.model.queryviewobject.FkDetailscollectepfnl5Link"
-    Type="oracle.jbo.RowIterator"
-    IsUpdateable="false"/>
-  <ViewLinkAccessor
     Name="IddestinationDetailscollectepfnlView1"
     ViewLink="cm.gov.minfof.model.queryviewobject.FkDetailscollectepfnl6Link"
     Type="oracle.jbo.RowIterator"

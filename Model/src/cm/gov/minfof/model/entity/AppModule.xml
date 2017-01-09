@@ -8,7 +8,8 @@
   InheritPersonalization="merge"
   ClearCacheOnRollback="true"
   ComponentClass="cm.gov.minfof.model.entity.AppModuleImpl"
-  DefClass="cm.gov.minfof.model.entity.AppModuleDefImpl">
+  DefClass="cm.gov.minfof.model.entity.AppModuleDefImpl"
+  ComponentInterface="cm.gov.minfof.model.entity.common.AppModule">
   <DesignTime>
     <Attr Name="_isDefCodegen" Value="true"/>
     <Attr Name="_isCodegen" Value="true"/>
@@ -321,12 +322,6 @@
     Name="CategorieunitemesureView3"
     ViewObjectName="cm.gov.minfof.model.entityviewobject.CategorieunitemesureView"/>
   <ViewUsage
-    Name="CategorieunitemesureView4"
-    ViewObjectName="cm.gov.minfof.model.entityviewobject.CategorieunitemesureView"/>
-  <ViewUsage
-    Name="UnitemesureView3"
-    ViewObjectName="cm.gov.minfof.model.entityviewobject.UnitemesureView"/>
-  <ViewUsage
     Name="CategorieunitemesureView5"
     ViewObjectName="cm.gov.minfof.model.entityviewobject.CategorieunitemesureView"/>
   <ViewUsage
@@ -354,35 +349,14 @@
     Name="DepartementView5"
     ViewObjectName="cm.gov.minfof.model.entityviewobject.DepartementView"/>
   <ViewUsage
-    Name="LocaliteView3"
-    ViewObjectName="cm.gov.minfof.model.entityviewobject.LocaliteView"/>
-  <ViewUsage
-    Name="LocaliteView4"
-    ViewObjectName="cm.gov.minfof.model.entityviewobject.LocaliteView"/>
-  <ViewUsage
     Name="DepartementView8"
     ViewObjectName="cm.gov.minfof.model.entityviewobject.DepartementView"/>
-  <ViewUsage
-    Name="PostecontroleView1"
-    ViewObjectName="cm.gov.minfof.model.entityviewobject.PostecontroleView"/>
-  <ViewUsage
-    Name="PostecontroleView2"
-    ViewObjectName="cm.gov.minfof.model.entityviewobject.PostecontroleView"/>
   <ViewUsage
     Name="getLatsidPostecontrole1"
     ViewObjectName="cm.gov.minfof.model.entityviewobject.getLatsidPostecontrole"/>
   <ViewUsage
     Name="DepartementView9"
     ViewObjectName="cm.gov.minfof.model.entityviewobject.DepartementView"/>
-  <ViewUsage
-    Name="PostecontroleView3"
-    ViewObjectName="cm.gov.minfof.model.entityviewobject.PostecontroleView"/>
-  <ViewUsage
-    Name="PostecontroleView4"
-    ViewObjectName="cm.gov.minfof.model.entityviewobject.PostecontroleView"/>
-  <ViewUsage
-    Name="PostecontroleView5"
-    ViewObjectName="cm.gov.minfof.model.entityviewobject.PostecontroleView"/>
   <ViewUsage
     Name="DetailpermisView1"
     ViewObjectName="cm.gov.minfof.model.entityviewobject.DetailpermisView"/>
@@ -447,30 +421,6 @@
     Name="TypevehiculeView2"
     ViewObjectName="cm.gov.minfof.model.queryviewobject.TypevehiculeView"/>
   <ViewUsage
-    Name="VehiculeView1"
-    ViewObjectName="cm.gov.minfof.model.entityviewobject.VehiculeView"/>
-  <ViewUsage
-    Name="VehiculeView1_1"
-    ViewObjectName="cm.gov.minfof.model.queryviewobject.VehiculeView1"/>
-  <ViewUsage
-    Name="VehiculeView2"
-    ViewObjectName="cm.gov.minfof.model.entityviewobject.VehiculeView"/>
-  <ViewUsage
-    Name="VehiculeView3"
-    ViewObjectName="cm.gov.minfof.model.entityviewobject.VehiculeView"/>
-  <ViewUsage
-    Name="VehiculeView4"
-    ViewObjectName="cm.gov.minfof.model.entityviewobject.VehiculeView"/>
-  <ViewUsage
-    Name="VehiculeView1_2"
-    ViewObjectName="cm.gov.minfof.model.queryviewobject.VehiculeView1"/>
-  <ViewUsage
-    Name="VehiculeView1_3"
-    ViewObjectName="cm.gov.minfof.model.queryviewobject.VehiculeView1"/>
-  <ViewUsage
-    Name="VehiculeView1_4"
-    ViewObjectName="cm.gov.minfof.model.queryviewobject.VehiculeView1"/>
-  <ViewUsage
     Name="TransporteurView2"
     ViewObjectName="cm.gov.minfof.model.entityviewobject.TransporteurView"/>
   <ViewUsage
@@ -499,9 +449,6 @@
     ViewObjectName="cm.gov.minfof.model.entityviewobject.TypeVehiculeForMeView"/>
   <ViewUsage
     Name="RegionView5"
-    ViewObjectName="cm.gov.minfof.model.entityviewobject.RegionView"/>
-  <ViewUsage
-    Name="RegionView6"
     ViewObjectName="cm.gov.minfof.model.entityviewobject.RegionView"/>
   <ViewUsage
     Name="CollectepfnlView1"
@@ -864,9 +811,6 @@
     Name="UtilisateurView3"
     ViewObjectName="cm.gov.minfof.model.entityviewobject.UtilisateurView"/>
   <ViewUsage
-    Name="UtilisateurView4"
-    ViewObjectName="cm.gov.minfof.model.entityviewobject.UtilisateurView"/>
-  <ViewUsage
     Name="UtilisateurView5"
     ViewObjectName="cm.gov.minfof.model.entityviewobject.UtilisateurView"/>
   <ViewUsage
@@ -876,17 +820,98 @@
     Name="UtilisateurView7"
     ViewObjectName="cm.gov.minfof.model.entityviewobject.UtilisateurView"/>
   <ViewUsage
+    Name="UtilisateurView8"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.UtilisateurView"/>
+  <ViewUsage
     Name="NiveauValidationView1"
     ViewObjectName="cm.gov.minfof.model.entityviewobject.NiveauValidationView"/>
   <ViewUsage
     Name="getLastIdUtilisateur1"
     ViewObjectName="cm.gov.minfof.model.entityviewobject.getLastIdUtilisateur"/>
   <ViewUsage
+    Name="TypeacteurView1"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.TypeacteurView"/>
+  <ViewUsage
+    Name="PermisView10"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.PermisView"/>
+  <ViewUsage
+    Name="PagepargroupView1"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.PagepargroupView"/>
+  <ViewUsage
+    Name="PageprojetView1"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.PageprojetView"/>
+  <ViewUsage
+    Name="PagepargroupView2"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.PagepargroupView"/>
+  <ViewUsage
+    Name="PagepargroupView3"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.PagepargroupView"/>
+  <ViewUsage
+    Name="PagepargroupView4"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.PagepargroupView"/>
+  <ViewUsage
+    Name="PagepargroupView5"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.PagepargroupView"/>
+  <ViewUsage
+    Name="GroupeutilisateurView2"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.GroupeutilisateurView"/>
+  <ViewUsage
+    Name="PagepargroupView6"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.PagepargroupView"/>
+  <ViewUsage
+    Name="getLastidPagepargroupe1"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.getLastidPagepargroupe"/>
+  <ViewUsage
     Name="PermisView6"
     ViewObjectName="cm.gov.minfof.model.entityviewobject.PermisView"/>
   <ViewUsage
-    Name="TypeacteurView1"
-    ViewObjectName="cm.gov.minfof.model.entityviewobject.TypeacteurView"/>
+    Name="ListePages1"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.ListePages"/>
+  <ViewUsage
+    Name="PermisView11"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.PermisView"/>
+  <ViewUsage
+    Name="CertificatorigineView1"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.CertificatorigineView"/>
+  <ViewUsage
+    Name="CertificatorigineView2"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.CertificatorigineView"/>
+  <ViewUsage
+    Name="CertificatorigineView3"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.CertificatorigineView"/>
+  <ViewUsage
+    Name="getLastidCoView1"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.getLastidCoView"/>
+  <ViewUsage
+    Name="LocaliteView3"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.LocaliteView"/>
+  <ViewUsage
+    Name="LocaliteView4"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.LocaliteView"/>
+  <ViewUsage
+    Name="PostecontroleView1"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.PostecontroleView"/>
+  <ViewUsage
+    Name="CollecteMulti1"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.CollecteMulti"/>
+  <ViewUsage
+    Name="CollMultiCritere1"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.CollMultiCritere"/>
+  <ViewUsage
+    Name="LettreVoitureMultiCritere1"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.LettreVoitureMultiCritere"/>
+  <ViewUsage
+    Name="ExportMultiCritere1"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.ExportMultiCritere"/>
+  <ViewUsage
+    Name="CompilCollecte1"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.CompilCollecte"/>
+  <ViewUsage
+    Name="CompilLettreVoiture1"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.CompilLettreVoiture"/>
+  <ViewUsage
+    Name="CompilLettreVoitureDestination1"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.CompilLettreVoitureDestination"/>
   <ViewLinkUsage
     Name="PermissionnaireToPermisLink"
     ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.PermissionnaireToPermisLink"
@@ -976,12 +1001,6 @@
     ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.ExportToDetailExportLink"
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.ExportpfnlView4"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.DetailsexportpfnlView9"
-    Reversed="false"/>
-  <ViewLinkUsage
-    Name="ExportToPermisLink"
-    ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.ExportToPermisLink"
-    SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.ExportpfnlView5"
-    DstViewUsageName="cm.gov.minfof.model.entity.AppModule.PermisView6"
     Reversed="false"/>
   <ViewLinkUsage
     Name="ExportToPermissionnaireLink"
@@ -1272,12 +1291,6 @@
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.UnitemesureView1_2"
     Reversed="false"/>
   <ViewLinkUsage
-    Name="CategToUnitLink"
-    ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.CategToUnitLink"
-    SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.CategorieunitemesureView4"
-    DstViewUsageName="cm.gov.minfof.model.entity.AppModule.UnitemesureView3"
-    Reversed="false"/>
-  <ViewLinkUsage
     Name="CategToUnitLink1"
     ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.CategToUnitLink"
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.UnitemesureView1"
@@ -1306,48 +1319,6 @@
     ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.FkLocalite1Link"
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.LocaliteView1"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.LocaliteView2"
-    Reversed="false"/>
-  <ViewLinkUsage
-    Name="DepToLocaliteLink"
-    ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.DepToLocaliteLink"
-    SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.DepartementView5"
-    DstViewUsageName="cm.gov.minfof.model.entity.AppModule.LocaliteView3"
-    Reversed="false"/>
-  <ViewLinkUsage
-    Name="DepToLocaliteLink1"
-    ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.DepToLocaliteLink"
-    SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.DepartementView1"
-    DstViewUsageName="cm.gov.minfof.model.entity.AppModule.LocaliteView4"
-    Reversed="false"/>
-  <ViewLinkUsage
-    Name="DepToLocaliteLink2"
-    ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.DepToLocaliteLink"
-    SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.LocaliteView1"
-    DstViewUsageName="cm.gov.minfof.model.entity.AppModule.DepartementView8"
-    Reversed="true"/>
-  <ViewLinkUsage
-    Name="FkPostecontrole1Link1"
-    ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.FkPostecontrole1Link"
-    SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.PostecontroleView1"
-    DstViewUsageName="cm.gov.minfof.model.entity.AppModule.PostecontroleView2"
-    Reversed="false"/>
-  <ViewLinkUsage
-    Name="DepToPostecontroleLink"
-    ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.DepToPostecontroleLink"
-    SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.DepartementView9"
-    DstViewUsageName="cm.gov.minfof.model.entity.AppModule.PostecontroleView3"
-    Reversed="false"/>
-  <ViewLinkUsage
-    Name="DepToPostecontroleLink1"
-    ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.DepToPostecontroleLink"
-    SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.DepartementView1"
-    DstViewUsageName="cm.gov.minfof.model.entity.AppModule.PostecontroleView4"
-    Reversed="false"/>
-  <ViewLinkUsage
-    Name="DepToPostecontroleLink2"
-    ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.DepToPostecontroleLink"
-    SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.DepartementView5"
-    DstViewUsageName="cm.gov.minfof.model.entity.AppModule.PostecontroleView5"
     Reversed="false"/>
   <ViewLinkUsage
     Name="FkDetailpermis3Link1"
@@ -1398,42 +1369,6 @@
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.UnitemesureView6"
     Reversed="false"/>
   <ViewLinkUsage
-    Name="FkVehicule3Link1"
-    ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.FkVehicule3Link"
-    SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.VehiculeView1"
-    DstViewUsageName="cm.gov.minfof.model.entity.AppModule.VehiculeView2"
-    Reversed="false"/>
-  <ViewLinkUsage
-    Name="FkVehicule2Link1"
-    ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.FkVehicule2Link"
-    SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.VehiculeView1"
-    DstViewUsageName="cm.gov.minfof.model.entity.AppModule.VehiculeView3"
-    Reversed="false"/>
-  <ViewLinkUsage
-    Name="FkVehicule1Link1"
-    ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.FkVehicule1Link"
-    SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.VehiculeView1"
-    DstViewUsageName="cm.gov.minfof.model.entity.AppModule.VehiculeView4"
-    Reversed="false"/>
-  <ViewLinkUsage
-    Name="FkVehicule1Link2"
-    ViewLinkObjectName="cm.gov.minfof.model.queryviewobject.FkVehicule1Link"
-    SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.VehiculeView1_1"
-    DstViewUsageName="cm.gov.minfof.model.entity.AppModule.VehiculeView1_2"
-    Reversed="false"/>
-  <ViewLinkUsage
-    Name="FkVehicule2Link2"
-    ViewLinkObjectName="cm.gov.minfof.model.queryviewobject.FkVehicule2Link"
-    SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.VehiculeView1_1"
-    DstViewUsageName="cm.gov.minfof.model.entity.AppModule.VehiculeView1_3"
-    Reversed="false"/>
-  <ViewLinkUsage
-    Name="FkVehicule3Link2"
-    ViewLinkObjectName="cm.gov.minfof.model.queryviewobject.FkVehicule3Link"
-    SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.VehiculeView1_1"
-    DstViewUsageName="cm.gov.minfof.model.entity.AppModule.VehiculeView1_4"
-    Reversed="false"/>
-  <ViewLinkUsage
     Name="TransporteurToVehiculeLink"
     ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.TransporteurToVehiculeLink"
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.TransporteurView2"
@@ -1452,12 +1387,6 @@
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.VehiculeView7"
     Reversed="false"/>
   <ViewLinkUsage
-    Name="RegionToVehiculeLink1"
-    ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.RegionToVehiculeLink"
-    SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.VehiculeView1"
-    DstViewUsageName="cm.gov.minfof.model.entity.AppModule.RegionView6"
-    Reversed="true"/>
-  <ViewLinkUsage
     Name="FkCollectepfnl1Link1"
     ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.FkCollectepfnl1Link"
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.CollectepfnlView1"
@@ -1470,22 +1399,10 @@
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.CollectepfnlView4"
     Reversed="false"/>
   <ViewLinkUsage
-    Name="FkDetailscollectepfnl7Link1"
-    ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.FkDetailscollectepfnl7Link"
-    SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.DetailscollectepfnlView1"
-    DstViewUsageName="cm.gov.minfof.model.entity.AppModule.DetailscollectepfnlView2"
-    Reversed="false"/>
-  <ViewLinkUsage
     Name="FkDetailscollectepfnl6Link1"
     ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.FkDetailscollectepfnl6Link"
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.DetailscollectepfnlView1"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.DetailscollectepfnlView3"
-    Reversed="false"/>
-  <ViewLinkUsage
-    Name="FkDetailscollectepfnl5Link1"
-    ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.FkDetailscollectepfnl5Link"
-    SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.DetailscollectepfnlView1"
-    DstViewUsageName="cm.gov.minfof.model.entity.AppModule.DetailscollectepfnlView4"
     Reversed="false"/>
   <ViewLinkUsage
     Name="FkDetailscollectepfnl4Link1"
@@ -1535,12 +1452,7 @@
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.DetailscollectepfnlView1_1"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.DetailscollectepfnlView1_5"
     Reversed="false"/>
-  <ViewLinkUsage
-    Name="FkDetailscollectepfnl5Link2"
-    ViewLinkObjectName="cm.gov.minfof.model.queryviewobject.FkDetailscollectepfnl5Link"
-    SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.DetailscollectepfnlView1_1"
-    DstViewUsageName="cm.gov.minfof.model.entity.AppModule.DetailscollectepfnlView1_6"
-    Reversed="false"/>
+
   <ViewLinkUsage
     Name="FkDetailscollectepfnl6Link2"
     ViewLinkObjectName="cm.gov.minfof.model.queryviewobject.FkDetailscollectepfnl6Link"
@@ -1584,12 +1496,6 @@
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.UnitemesureView7"
     Reversed="false"/>
   <ViewLinkUsage
-    Name="DetailCollToDocOfficielLink"
-    ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.DetailCollToDocOfficielLink"
-    SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.DetailscollectepfnlView14"
-    DstViewUsageName="cm.gov.minfof.model.entity.AppModule.PermisView5"
-    Reversed="false"/>
-  <ViewLinkUsage
     Name="DetailCollToDeptLink"
     ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.DetailCollToDeptLink"
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.DetailscollectepfnlView15"
@@ -1614,12 +1520,6 @@
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.UnitemesureView8"
     Reversed="false"/>
   <ViewLinkUsage
-    Name="DetailCollToDocOfficielLink1"
-    ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.DetailCollToDocOfficielLink"
-    SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.DetailscollectepfnlView17"
-    DstViewUsageName="cm.gov.minfof.model.entity.AppModule.PermisView6"
-    Reversed="false"/>
-  <ViewLinkUsage
     Name="DetailCollToPermissionnaireLink1"
     ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.DetailCollToPermissionnaireLink"
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.DetailscollectepfnlView17"
@@ -1638,28 +1538,10 @@
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.OriginespnflsView5"
     Reversed="false"/>
   <ViewLinkUsage
-    Name="FkLettrevoiture5Link1"
-    ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.FkLettrevoiture5Link"
-    SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.LettrevoitureView1"
-    DstViewUsageName="cm.gov.minfof.model.entity.AppModule.LettrevoitureView2"
-    Reversed="false"/>
-  <ViewLinkUsage
-    Name="FkLettrevoiture4Link1"
-    ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.FkLettrevoiture4Link"
-    SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.LettrevoitureView1"
-    DstViewUsageName="cm.gov.minfof.model.entity.AppModule.LettrevoitureView3"
-    Reversed="false"/>
-  <ViewLinkUsage
     Name="FkLettrevoiture3Link1"
     ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.FkLettrevoiture3Link"
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.LettrevoitureView1"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.LettrevoitureView4"
-    Reversed="false"/>
-  <ViewLinkUsage
-    Name="FkLettrevoiture2Link1"
-    ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.FkLettrevoiture2Link"
-    SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.LettrevoitureView1"
-    DstViewUsageName="cm.gov.minfof.model.entity.AppModule.LettrevoitureView5"
     Reversed="false"/>
   <ViewLinkUsage
     Name="FkLettrevoiture1Link1"
@@ -1686,28 +1568,10 @@
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.DetailslettrevoitureView4"
     Reversed="false"/>
   <ViewLinkUsage
-    Name="FkLettrevoiture5Assoc1Link1"
-    ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.FkLettrevoiture5Assoc1Link"
-    SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.DetailslettrevoitureView1"
-    DstViewUsageName="cm.gov.minfof.model.entity.AppModule.LettrevoitureView7"
-    Reversed="false"/>
-  <ViewLinkUsage
-    Name="FkLettrevoiture4Assoc1Link1"
-    ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.FkLettrevoiture4Assoc1Link"
-    SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.DetailslettrevoitureView1"
-    DstViewUsageName="cm.gov.minfof.model.entity.AppModule.LettrevoitureView8"
-    Reversed="false"/>
-  <ViewLinkUsage
     Name="FkLettrevoiture3Assoc1Link1"
     ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.FkLettrevoiture3Assoc1Link"
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.DetailslettrevoitureView1"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.LettrevoitureView9"
-    Reversed="false"/>
-  <ViewLinkUsage
-    Name="FkLettrevoiture2Assoc1Link1"
-    ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.FkLettrevoiture2Assoc1Link"
-    SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.DetailslettrevoitureView1"
-    DstViewUsageName="cm.gov.minfof.model.entity.AppModule.LettrevoitureView10"
     Reversed="false"/>
   <ViewLinkUsage
     Name="FkLettrevoiture1Assoc1Link1"
@@ -1746,12 +1610,6 @@
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.UtilisateurView3"
     Reversed="false"/>
   <ViewLinkUsage
-    Name="FkUtilisateur1Link1"
-    ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.FkUtilisateur1Link"
-    SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.UtilisateurView1"
-    DstViewUsageName="cm.gov.minfof.model.entity.AppModule.UtilisateurView4"
-    Reversed="false"/>
-  <ViewLinkUsage
     Name="FkUtilisateur3Assoc1Link1"
     ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.FkUtilisateur3Assoc1Link"
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.GroupeutilisateurView1"
@@ -1769,9 +1627,54 @@
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.GroupeutilisateurView1"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.UtilisateurView7"
     Reversed="false"/>
-  <ViewUsage
-    Name="PermisView6"
-    ViewObjectName="cm.gov.minfof.model.entityviewobject.PermisView"/>
+  <ViewLinkUsage
+    Name="FkPagepargroup2Link1"
+    ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.FkPagepargroup2Link"
+    SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.PagepargroupView1"
+    DstViewUsageName="cm.gov.minfof.model.entity.AppModule.PagepargroupView2"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="FkPagepargroup1Link1"
+    ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.FkPagepargroup1Link"
+    SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.PagepargroupView1"
+    DstViewUsageName="cm.gov.minfof.model.entity.AppModule.PagepargroupView3"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="FkPagepargroup1Assoc1Link1"
+    ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.FkPagepargroup1Assoc1Link"
+    SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.PageprojetView1"
+    DstViewUsageName="cm.gov.minfof.model.entity.AppModule.PagepargroupView4"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="FkPagepargroup2Assoc1Link1"
+    ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.FkPagepargroup2Assoc1Link"
+    SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.PageprojetView1"
+    DstViewUsageName="cm.gov.minfof.model.entity.AppModule.PagepargroupView5"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="PageToGroupeLink"
+    ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.PageToGroupeLink"
+    SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.GroupeutilisateurView2"
+    DstViewUsageName="cm.gov.minfof.model.entity.AppModule.PagepargroupView6"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="PermisToCoLink1"
+    ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.PermisToCoLink"
+    SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.PermisView1"
+    DstViewUsageName="cm.gov.minfof.model.entity.AppModule.CertificatorigineView2"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="PermisToCoLink2"
+    ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.PermisToCoLink"
+    SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.PermisView10"
+    DstViewUsageName="cm.gov.minfof.model.entity.AppModule.CertificatorigineView3"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="FkLocalite1Link2"
+    ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.FkLocalite1Link"
+    SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.LocaliteView3"
+    DstViewUsageName="cm.gov.minfof.model.entity.AppModule.LocaliteView4"
+    Reversed="false"/>
   <Remote
     Name="ServiceInterface"
     ServerClassName="cm.gov.minfof.model.entity.server.serviceinterface.pfnl_wbsImpl"
@@ -1781,13 +1684,105 @@
       <Attr Name="_targetNameSpace" Value="/cm/gov/minfof/model/entity/common/"/>
     </DesignTime>
   </Remote>
-  <ServiceViewUsage
-    ViewUsageName="AgrementsView1">
-    <DesignTime>
-      <Attr Name="_GetOpName" Value="getAgrementsView1"/>
-      <Attr Name="_FindOpName" Value="findAgrementsView1"/>
-    </DesignTime>
-  </ServiceViewUsage>
+  <ClientInterface
+    Name="__clientInterface">
+    <Method
+      Name="changepwd"
+      MethodName="changepwd">
+      <Return
+        Name="_return_type_"
+        Type="void"/>
+      <Parameter
+        Name="bd"
+        Type="java.math.BigDecimal"/>
+      <Parameter
+        Name="pwd"
+        Type="java.lang.String"/>
+    </Method>
+    <Method
+      Name="modifuser"
+      MethodName="modifuser">
+      <Return
+        Name="_return_type_"
+        Type="void"/>
+      <Parameter
+        Name="bd"
+        Type="java.math.BigDecimal"/>
+      <Parameter
+        Name="nuser"
+        Type="java.lang.String"/>
+      <Parameter
+        Name="puser"
+        Type="java.lang.String"/>
+      <Parameter
+        Name="muser"
+        Type="java.lang.String"/>
+    </Method>
+    <Method
+      Name="changepwd"
+      MethodName="changepwd">
+      <Return
+        Name="_return_type_"
+        Type="void"/>
+      <Parameter
+        Name="bd"
+        Type="java.math.BigDecimal"/>
+      <Parameter
+        Name="pwd"
+        Type="java.lang.String"/>
+    </Method>
+    <Method
+      Name="modifuser"
+      MethodName="modifuser">
+      <Return
+        Name="_return_type_"
+        Type="void"/>
+      <Parameter
+        Name="bd"
+        Type="java.math.BigDecimal"/>
+      <Parameter
+        Name="nuser"
+        Type="java.lang.String"/>
+      <Parameter
+        Name="puser"
+        Type="java.lang.String"/>
+      <Parameter
+        Name="muser"
+        Type="java.lang.String"/>
+    </Method>
+    <Method
+      Name="changepwd"
+      MethodName="changepwd">
+      <Return
+        Name="_return_type_"
+        Type="void"/>
+      <Parameter
+        Name="bd"
+        Type="java.math.BigDecimal"/>
+      <Parameter
+        Name="pwd"
+        Type="java.lang.String"/>
+    </Method>
+    <Method
+      Name="modifuser"
+      MethodName="modifuser">
+      <Return
+        Name="_return_type_"
+        Type="void"/>
+      <Parameter
+        Name="bd"
+        Type="java.math.BigDecimal"/>
+      <Parameter
+        Name="nuser"
+        Type="java.lang.String"/>
+      <Parameter
+        Name="puser"
+        Type="java.lang.String"/>
+      <Parameter
+        Name="muser"
+        Type="java.lang.String"/>
+    </Method>
+  </ClientInterface>
   <ServiceViewUsage
     ViewUsageName="CategorieproduitView1">
     <DesignTime>
@@ -1803,6 +1798,13 @@
     </DesignTime>
   </ServiceViewUsage>
   <ServiceViewUsage
+    ViewUsageName="CertificatorigineView1">
+    <DesignTime>
+      <Attr Name="_GetOpName" Value="getCertificatorigineView1"/>
+      <Attr Name="_FindOpName" Value="findCertificatorigineView1"/>
+    </DesignTime>
+  </ServiceViewUsage>
+  <ServiceViewUsage
     ViewUsageName="CollectepfnlView1">
     <DesignTime>
       <Attr Name="_GetOpName" Value="getCollectepfnlView1"/>
@@ -1810,10 +1812,10 @@
     </DesignTime>
   </ServiceViewUsage>
   <ServiceViewUsage
-    ViewUsageName="CommunesView1">
+    ViewUsageName="CommuneView1">
     <DesignTime>
-      <Attr Name="_GetOpName" Value="getCommunesView1"/>
-      <Attr Name="_FindOpName" Value="findCommunesView1"/>
+      <Attr Name="_GetOpName" Value="getCommuneView1"/>
+      <Attr Name="_FindOpName" Value="findCommuneView1"/>
     </DesignTime>
   </ServiceViewUsage>
   <ServiceViewUsage
@@ -1943,17 +1945,10 @@
     </DesignTime>
   </ServiceViewUsage>
   <ServiceViewUsage
-    ViewUsageName="TransporteurView1">
+    ViewUsageName="RegionsView1">
     <DesignTime>
-      <Attr Name="_GetOpName" Value="getTransporteurView1"/>
-      <Attr Name="_FindOpName" Value="findTransporteurView1"/>
-    </DesignTime>
-  </ServiceViewUsage>
-  <ServiceViewUsage
-    ViewUsageName="TypevehiculeView1">
-    <DesignTime>
-      <Attr Name="_GetOpName" Value="getTypevehiculeView1"/>
-      <Attr Name="_FindOpName" Value="findTypevehiculeView1"/>
+      <Attr Name="_GetOpName" Value="getRegionsView1"/>
+      <Attr Name="_FindOpName" Value="findRegionsView1"/>
     </DesignTime>
   </ServiceViewUsage>
   <ServiceViewUsage
@@ -1961,13 +1956,6 @@
     <DesignTime>
       <Attr Name="_GetOpName" Value="getUnitemesureView1"/>
       <Attr Name="_FindOpName" Value="findUnitemesureView1"/>
-    </DesignTime>
-  </ServiceViewUsage>
-  <ServiceViewUsage
-    ViewUsageName="VehiculeView1">
-    <DesignTime>
-      <Attr Name="_GetOpName" Value="getVehiculeView1"/>
-      <Attr Name="_FindOpName" Value="findVehiculeView1"/>
     </DesignTime>
   </ServiceViewUsage>
 </AppModule>

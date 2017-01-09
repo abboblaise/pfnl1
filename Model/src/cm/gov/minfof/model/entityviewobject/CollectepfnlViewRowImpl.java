@@ -18,7 +18,19 @@ import oracle.jbo.server.ViewRowImpl;
 // ---------------------------------------------------------------------
 public class CollectepfnlViewRowImpl extends ViewRowImpl implements CollectepfnlViewRow {
 
+
     public static final int ENTITY_COLLECTEPFNL = 0;
+
+    @Override
+    public String getIdentificateur() {
+        // TODO Implement this method
+        return null;
+    }
+
+    @Override
+    public void setIdentificateur(String value) {
+        // TODO Implement this method
+    }
 
     /**
      * AttributesEnum: generated enum for identifying attributes and accessors. DO NOT MODIFY.
@@ -26,14 +38,16 @@ public class CollectepfnlViewRowImpl extends ViewRowImpl implements Collectepfnl
     protected enum AttributesEnum {
         Idcollectepfnl,
         Datecollecte,
-        Identificateur,
         Iddepartement,
-        Codepcfc,
         Idlocalite,
+        Idposte,
+        Idutilisateur,
         CollectepfnlView,
         DetailscollectepfnlView,
         DepartementView1,
-        LocaliteView1;
+        LocaliteView1,
+        PostecontroleView1,
+        UtilisateurView1;
         private static AttributesEnum[] vals = null;
         ;
         private static final int firstIndex = 0;
@@ -58,16 +72,19 @@ public class CollectepfnlViewRowImpl extends ViewRowImpl implements Collectepfnl
         }
     }
 
+
     public static final int IDCOLLECTEPFNL = AttributesEnum.Idcollectepfnl.index();
     public static final int DATECOLLECTE = AttributesEnum.Datecollecte.index();
-    public static final int IDENTIFICATEUR = AttributesEnum.Identificateur.index();
     public static final int IDDEPARTEMENT = AttributesEnum.Iddepartement.index();
-    public static final int CODEPCFC = AttributesEnum.Codepcfc.index();
     public static final int IDLOCALITE = AttributesEnum.Idlocalite.index();
+    public static final int IDPOSTE = AttributesEnum.Idposte.index();
+    public static final int IDUTILISATEUR = AttributesEnum.Idutilisateur.index();
     public static final int COLLECTEPFNLVIEW = AttributesEnum.CollectepfnlView.index();
     public static final int DETAILSCOLLECTEPFNLVIEW = AttributesEnum.DetailscollectepfnlView.index();
     public static final int DEPARTEMENTVIEW1 = AttributesEnum.DepartementView1.index();
     public static final int LOCALITEVIEW1 = AttributesEnum.LocaliteView1.index();
+    public static final int POSTECONTROLEVIEW1 = AttributesEnum.PostecontroleView1.index();
+    public static final int UTILISATEURVIEW1 = AttributesEnum.UtilisateurView1.index();
 
     /**
      * This is the default constructor (do not remove).
@@ -115,21 +132,6 @@ public class CollectepfnlViewRowImpl extends ViewRowImpl implements Collectepfnl
         setAttributeInternal(DATECOLLECTE, value);
     }
 
-    /**
-     * Gets the attribute value for identificateur using the alias name Identificateur.
-     * @return the identificateur
-     */
-    public String getIdentificateur() {
-        return (String) getAttributeInternal(IDENTIFICATEUR);
-    }
-
-    /**
-     * Sets <code>value</code> as attribute value for identificateur using the alias name Identificateur.
-     * @param value value to set the identificateur
-     */
-    public void setIdentificateur(String value) {
-        setAttributeInternal(IDENTIFICATEUR, value);
-    }
 
     /**
      * Gets the attribute value for iddepartement using the alias name Iddepartement.
@@ -147,21 +149,6 @@ public class CollectepfnlViewRowImpl extends ViewRowImpl implements Collectepfnl
         setAttributeInternal(IDDEPARTEMENT, value);
     }
 
-    /**
-     * Gets the attribute value for codepcfc using the alias name Codepcfc.
-     * @return the codepcfc
-     */
-    public String getCodepcfc() {
-        return (String) getAttributeInternal(CODEPCFC);
-    }
-
-    /**
-     * Sets <code>value</code> as attribute value for codepcfc using the alias name Codepcfc.
-     * @param value value to set the codepcfc
-     */
-    public void setCodepcfc(String value) {
-        setAttributeInternal(CODEPCFC, value);
-    }
 
     /**
      * Gets the attribute value for idlocalite using the alias name Idlocalite.
@@ -177,6 +164,38 @@ public class CollectepfnlViewRowImpl extends ViewRowImpl implements Collectepfnl
      */
     public void setIdlocalite(BigDecimal value) {
         setAttributeInternal(IDLOCALITE, value);
+    }
+
+    /**
+     * Gets the attribute value for idposte using the alias name Idposte.
+     * @return the idposte
+     */
+    public BigDecimal getIdposte() {
+        return (BigDecimal) getAttributeInternal(IDPOSTE);
+    }
+
+    /**
+     * Sets <code>value</code> as attribute value for idposte using the alias name Idposte.
+     * @param value value to set the idposte
+     */
+    public void setIdposte(BigDecimal value) {
+        setAttributeInternal(IDPOSTE, value);
+    }
+
+    /**
+     * Gets the attribute value for idutilisateur using the alias name Idutilisateur.
+     * @return the idutilisateur
+     */
+    public BigDecimal getIdutilisateur() {
+        return (BigDecimal) getAttributeInternal(IDUTILISATEUR);
+    }
+
+    /**
+     * Sets <code>value</code> as attribute value for idutilisateur using the alias name Idutilisateur.
+     * @param value value to set the idutilisateur
+     */
+    public void setIdutilisateur(BigDecimal value) {
+        setAttributeInternal(IDUTILISATEUR, value);
     }
 
     /**
@@ -205,6 +224,20 @@ public class CollectepfnlViewRowImpl extends ViewRowImpl implements Collectepfnl
      */
     public RowSet getLocaliteView1() {
         return (RowSet) getAttributeInternal(LOCALITEVIEW1);
+    }
+
+    /**
+     * Gets the view accessor <code>RowSet</code> PostecontroleView1.
+     */
+    public RowSet getPostecontroleView1() {
+        return (RowSet) getAttributeInternal(POSTECONTROLEVIEW1);
+    }
+
+    /**
+     * Gets the view accessor <code>RowSet</code> UtilisateurView1.
+     */
+    public RowSet getUtilisateurView1() {
+        return (RowSet) getAttributeInternal(UTILISATEURVIEW1);
     }
 }
 

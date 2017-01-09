@@ -85,8 +85,23 @@
           <Item Value="Saisiecollecte"/>
           <Item Value="Saisieexport"/>
           <Item Value="Saisietransit"/>
+          <Item Value="Emailuser"/>
         </AttrNames>
       </nodeDefinition>
     </tree>
+    <attributeValues IterBinding="UtilisateurView1Iterator" id="Emailuser">
+      <AttrNames>
+        <Item Value="Emailuser"/>
+      </AttrNames>
+    </attributeValues>
+    <button IterBinding="UtilisateurView1Iterator" id="Premiereconnexion" DTSupportsMRU="false" StaticList="true">
+      <AttrNames>
+        <Item Value="Premiereconnexion"/>
+      </AttrNames>
+      <ValueList>
+        <Item Value="true"/>
+        <Item Value="false"/>
+      </ValueList>
+    </button>
   </bindings>
 </pageDefinition>

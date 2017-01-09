@@ -27,6 +27,8 @@ public class DetailsexportpfnlImpl extends EntityImpl {
         Quantite,
         Observations,
         Idpartieproduitpfnl,
+        Idcertificat,
+        Idpays,
         Detailsexportpfnl,
         IdunitemesureDetailsexportpfnl,
         Detailsexportpfnl1,
@@ -66,6 +68,8 @@ public class DetailsexportpfnlImpl extends EntityImpl {
     public static final int QUANTITE = AttributesEnum.Quantite.index();
     public static final int OBSERVATIONS = AttributesEnum.Observations.index();
     public static final int IDPARTIEPRODUITPFNL = AttributesEnum.Idpartieproduitpfnl.index();
+    public static final int IDCERTIFICAT = AttributesEnum.Idcertificat.index();
+    public static final int IDPAYS = AttributesEnum.Idpays.index();
     public static final int DETAILSEXPORTPFNL = AttributesEnum.Detailsexportpfnl.index();
     public static final int IDUNITEMESUREDETAILSEXPORTPFNL = AttributesEnum.IdunitemesureDetailsexportpfnl.index();
     public static final int DETAILSEXPORTPFNL1 = AttributesEnum.Detailsexportpfnl1.index();
@@ -185,6 +189,38 @@ public class DetailsexportpfnlImpl extends EntityImpl {
      */
     public void setIdpartieproduitpfnl(BigDecimal value) {
         setAttributeInternal(IDPARTIEPRODUITPFNL, value);
+    }
+
+    /**
+     * Gets the attribute value for Idcertificat, using the alias name Idcertificat.
+     * @return the value of Idcertificat
+     */
+    public BigDecimal getIdcertificat() {
+        return (BigDecimal) getAttributeInternal(IDCERTIFICAT);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for Idcertificat.
+     * @param value value to set the Idcertificat
+     */
+    public void setIdcertificat(BigDecimal value) {
+        setAttributeInternal(IDCERTIFICAT, value);
+    }
+
+    /**
+     * Gets the attribute value for Idpays, using the alias name Idpays.
+     * @return the value of Idpays
+     */
+    public BigDecimal getIdpays() {
+        return (BigDecimal) getAttributeInternal(IDPAYS);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for Idpays.
+     * @param value value to set the Idpays
+     */
+    public void setIdpays(BigDecimal value) {
+        setAttributeInternal(IDPAYS, value);
     }
 
     /**

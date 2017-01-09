@@ -156,13 +156,6 @@
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
   <AccessorAttribute
-    Name="Vehicule"
-    Association="fk_Vehicule1Assoc"
-    AssociationEnd="fk_Vehicule1Assoc.Vehicule"
-    AssociationOtherEnd="fk_Vehicule1Assoc.Agrements1"
-    Type="oracle.jbo.RowIterator"
-    IsUpdateable="false"/>
-  <AccessorAttribute
     Name="Vehicule1"
     Association="fk_VehiculeAssoc"
     AssociationEnd="fk_VehiculeAssoc.Vehicule1"
@@ -226,13 +219,6 @@
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
   <AccessorAttribute
-    Name="PartiesProduitsPfnl"
-    Association="fk_PartiesProduitsPfnl1Assoc"
-    AssociationEnd="fk_PartiesProduitsPfnl1Assoc.PartiesProduitsPfnl"
-    AssociationOtherEnd="fk_PartiesProduitsPfnl1Assoc.Agrements1"
-    Type="oracle.jbo.RowIterator"
-    IsUpdateable="false"/>
-  <AccessorAttribute
     Name="PartiesProduitsPfnl1"
     Association="fk_PartiesProduitsPfnlAssoc"
     AssociationEnd="fk_PartiesProduitsPfnlAssoc.PartiesProduitsPfnl1"
@@ -251,6 +237,13 @@
     Association="FkPartiesproduitspfnl1Assoc"
     AssociationEnd="FkPartiesproduitspfnl1Assoc.PartiesProduitsPfnl3"
     AssociationOtherEnd="FkPartiesproduitspfnl1Assoc.Agrements13"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="PartiesProduitsPfnl"
+    Association="cm.gov.minfof.model.entity.fk_PartiesProduitsPfnl1Assoc"
+    AssociationEnd="cm.gov.minfof.model.entity.fk_PartiesProduitsPfnl1Assoc.PartiesProduitsPfnl"
+    AssociationOtherEnd="cm.gov.minfof.model.entity.fk_PartiesProduitsPfnl1Assoc.Agrements1"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
   <Key

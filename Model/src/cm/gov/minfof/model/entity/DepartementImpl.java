@@ -31,11 +31,10 @@ public class DepartementImpl extends EntityImpl {
         Region,
         Commune,
         Commune1,
-        Localite,
-        Postecontrole,
         Collectepfnl,
         Detailscollectepfnl;
         private static AttributesEnum[] vals = null;
+        ;
         private static final int firstIndex = 0;
 
         protected int index() {
@@ -69,8 +68,6 @@ public class DepartementImpl extends EntityImpl {
     public static final int REGION = AttributesEnum.Region.index();
     public static final int COMMUNE = AttributesEnum.Commune.index();
     public static final int COMMUNE1 = AttributesEnum.Commune1.index();
-    public static final int LOCALITE = AttributesEnum.Localite.index();
-    public static final int POSTECONTROLE = AttributesEnum.Postecontrole.index();
     public static final int COLLECTEPFNL = AttributesEnum.Collectepfnl.index();
     public static final int DETAILSCOLLECTEPFNL = AttributesEnum.Detailscollectepfnl.index();
 
@@ -226,32 +223,16 @@ public class DepartementImpl extends EntityImpl {
 
 
     /**
-     * @return the associated entity oracle.jbo.RowIterator.
-     */
-    public RowIterator getLocalite() {
-        return (RowIterator) getAttributeInternal(LOCALITE);
-    }
-
-
-    /**
-     * @return the associated entity oracle.jbo.RowIterator.
-     */
-    public RowIterator getPostecontrole() {
-        return (RowIterator) getAttributeInternal(POSTECONTROLE);
-    }
-
-
-    /**
      * @return the associated entity oracle.jbo.server.EntityImpl.
      */
-    public EntityImpl getCollectepfnl() {
-        return (EntityImpl) getAttributeInternal(COLLECTEPFNL);
+    public CollectepfnlImpl getCollectepfnl() {
+        return (CollectepfnlImpl) getAttributeInternal(COLLECTEPFNL);
     }
 
     /**
      * Sets <code>value</code> as the associated entity oracle.jbo.server.EntityImpl.
      */
-    public void setCollectepfnl(EntityImpl value) {
+    public void setCollectepfnl(CollectepfnlImpl value) {
         setAttributeInternal(COLLECTEPFNL, value);
     }
 

@@ -14,11 +14,6 @@
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="PartiesProduitsPfnlView24Query"/>
   </executables>
   <bindings>
-    <attributeValues IterBinding="ProduitsPfnlView12Iterator" id="Idproduitspfnl">
-      <AttrNames>
-        <Item Value="Idproduitspfnl"/>
-      </AttrNames>
-    </attributeValues>
     <attributeValues IterBinding="ProduitsPfnlView12Iterator" id="Nomscientifique">
       <AttrNames>
         <Item Value="Nomscientifique"/>
@@ -71,32 +66,35 @@
         </AttrNames>
       </nodeDefinition>
     </tree>
-    <attributeValues IterBinding="PartiesProduitsPfnlView24Iterator" id="Idpartiesproduitspfnl">
-      <AttrNames>
-        <Item Value="Idpartiesproduitspfnl"/>
-      </AttrNames>
-    </attributeValues>
     <list IterBinding="PartiesProduitsPfnlView24Iterator" StaticList="false" Uses="LOV_Idpartiesrecoltees"
           id="Idpartiesrecoltees" DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
-    <attributeValues IterBinding="PartiesProduitsPfnlView24Iterator" id="Idproduitspfnl1">
-      <AttrNames>
-        <Item Value="Idproduitspfnl"/>
-      </AttrNames>
-    </attributeValues>
     <list IterBinding="PartiesProduitsPfnlView24Iterator" StaticList="false" Uses="LOV_Idunitemesure"
           id="Idunitemesure" DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
     <list IterBinding="PartiesProduitsPfnlView24Iterator" StaticList="false" Uses="LOV_Idunitemesureexport"
           id="Idunitemesureexport" DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
-    <action IterBinding="ProduitsPfnlView12Iterator" id="CreateInsert" RequiresUpdateModel="true"
-            Action="createInsertRow"/>
     <action IterBinding="ProduitsPfnlView12Iterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
-    <action IterBinding="PartiesProduitsPfnlView24Iterator" id="CreateInsert1" RequiresUpdateModel="true"
-            Action="createInsertRow"/>
     <action IterBinding="PartiesProduitsPfnlView24Iterator" id="Delete1" RequiresUpdateModel="false"
             Action="removeCurrentRow"/>
     <list IterBinding="ProduitsPfnlView12Iterator" StaticList="false" Uses="LOV_Idcategorie" id="Idcategorie"
           DTSupportsMRU="true" SelectItemValueMode="ListObject"/>
     <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
     <action id="Rollback" RequiresUpdateModel="false" Action="rollbackTransaction" DataControl="AppModuleDataControl"/>
+    <action IterBinding="ProduitsPfnlView12Iterator" id="Create" RequiresUpdateModel="true" Action="createRow"/>
+    <action IterBinding="ProduitsPfnlView12Iterator" id="First" RequiresUpdateModel="true" Action="first"/>
+    <action IterBinding="ProduitsPfnlView12Iterator" id="Previous" RequiresUpdateModel="true" Action="previous"/>
+    <action IterBinding="ProduitsPfnlView12Iterator" id="Next" RequiresUpdateModel="true" Action="next"/>
+    <action IterBinding="ProduitsPfnlView12Iterator" id="Last" RequiresUpdateModel="true" Action="last"/>
+    <action IterBinding="PartiesProduitsPfnlView24Iterator" id="Create1" RequiresUpdateModel="true" Action="createRow"/>
+    <action IterBinding="PartiesProduitsPfnlView24Iterator" id="First1" RequiresUpdateModel="true" Action="first"/>
+    <action IterBinding="PartiesProduitsPfnlView24Iterator" id="Last1" RequiresUpdateModel="true" Action="last"/>
+    <action IterBinding="PartiesProduitsPfnlView24Iterator" id="Next1" RequiresUpdateModel="true" Action="next"/>
+    <action IterBinding="PartiesProduitsPfnlView24Iterator" id="Previous1" RequiresUpdateModel="true"
+            Action="previous"/>
+    <action IterBinding="ProduitsPfnlView12Iterator" id="CreateInsert"
+            InstanceName="AppModuleDataControl.ProduitsPfnlView12" DataControl="AppModuleDataControl"
+            RequiresUpdateModel="true" Action="createInsertRow"/>
+    <action IterBinding="PartiesProduitsPfnlView24Iterator" id="CreateInsert1"
+            InstanceName="AppModuleDataControl.PartiesProduitsPfnlView24" DataControl="AppModuleDataControl"
+            RequiresUpdateModel="true" Action="createInsertRow"/>
   </bindings>
 </pageDefinition>

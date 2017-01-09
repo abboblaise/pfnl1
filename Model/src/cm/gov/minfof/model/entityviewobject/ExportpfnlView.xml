@@ -37,6 +37,10 @@
     Name="PermissionnairespnflView1"
     ViewObjectName="cm.gov.minfof.model.entityviewobject.PermissionnairespnflView"
     RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="PostecontroleView1"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.PostecontroleView"
+    RowLevelBinds="true"/>
   <ListBinding
     Name="LOV_Idpermis"
     ListVOName="PermisView1"
@@ -70,6 +74,24 @@
     </AttrArray>
     <AttrArray Name="ListDisplayAttrNames">
       <Item Value="Nomouraisonsociale"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_Idposteexport"
+    ListVOName="PostecontroleView1"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="Idposteexport"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Idpostecontrole"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Intituleposte"/>
     </AttrArray>
     <DisplayCriteria/>
   </ListBinding>
@@ -131,6 +153,20 @@
     EntityAttrName="Dateexport"
     EntityUsage="Exportpfnl"
     AliasName="dateexport"/>
+  <ViewAttribute
+    Name="Idposteexport"
+    PrecisionRule="true"
+    EntityAttrName="Idposteexport"
+    EntityUsage="Exportpfnl"
+    AliasName="idposteexport"
+    LOVName="LOV_Idposteexport">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewCriteria
     Name="ExportpfnlViewCriteria"
     ViewObjectName="cm.gov.minfof.model.entityviewobject.ExportpfnlView"

@@ -10,6 +10,10 @@ public interface PaysViewSDO extends java.io.Serializable {
 
    public void setNompays(java.lang.String value);
 
+   public java.lang.String getCodepays();
+
+   public void setCodepays(java.lang.String value);
+
 
 }
 

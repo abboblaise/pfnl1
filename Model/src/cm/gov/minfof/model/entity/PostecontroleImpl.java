@@ -27,11 +27,8 @@ public class PostecontroleImpl extends EntityImpl {
         Idpostecontrole,
         Codeposte,
         Intituleposte,
-        Iddepartement,
         Posteexport,
-        Postecontrole,
-        IddepartementPostecontrole,
-        Departement;
+        Idcommune;
         private static AttributesEnum[] vals = null;
         private static final int firstIndex = 0;
 
@@ -59,11 +56,8 @@ public class PostecontroleImpl extends EntityImpl {
     public static final int IDPOSTECONTROLE = AttributesEnum.Idpostecontrole.index();
     public static final int CODEPOSTE = AttributesEnum.Codeposte.index();
     public static final int INTITULEPOSTE = AttributesEnum.Intituleposte.index();
-    public static final int IDDEPARTEMENT = AttributesEnum.Iddepartement.index();
     public static final int POSTEEXPORT = AttributesEnum.Posteexport.index();
-    public static final int POSTECONTROLE = AttributesEnum.Postecontrole.index();
-    public static final int IDDEPARTEMENTPOSTECONTROLE = AttributesEnum.IddepartementPostecontrole.index();
-    public static final int DEPARTEMENT = AttributesEnum.Departement.index();
+    public static final int IDCOMMUNE = AttributesEnum.Idcommune.index();
 
     /**
      * This is the default constructor (do not remove).
@@ -129,22 +123,6 @@ public class PostecontroleImpl extends EntityImpl {
 
 
     /**
-     * Gets the attribute value for Iddepartement, using the alias name Iddepartement.
-     * @return the value of Iddepartement
-     */
-    public BigDecimal getIddepartement() {
-        return (BigDecimal) getAttributeInternal(IDDEPARTEMENT);
-    }
-
-    /**
-     * Sets <code>value</code> as the attribute value for Iddepartement.
-     * @param value value to set the Iddepartement
-     */
-    public void setIddepartement(BigDecimal value) {
-        setAttributeInternal(IDDEPARTEMENT, value);
-    }
-
-    /**
      * Gets the attribute value for Posteexport, using the alias name Posteexport.
      * @return the value of Posteexport
      */
@@ -160,39 +138,21 @@ public class PostecontroleImpl extends EntityImpl {
         setAttributeInternal(POSTEEXPORT, value);
     }
 
+
     /**
-     * @return the associated entity oracle.jbo.RowIterator.
+     * Gets the attribute value for Idcommune, using the alias name Idcommune.
+     * @return the value of Idcommune
      */
-    public RowIterator getPostecontrole() {
-        return (RowIterator) getAttributeInternal(POSTECONTROLE);
+    public BigDecimal getIdcommune() {
+        return (BigDecimal) getAttributeInternal(IDCOMMUNE);
     }
 
     /**
-     * @return the associated entity PostecontroleImpl.
+     * Sets <code>value</code> as the attribute value for Idcommune.
+     * @param value value to set the Idcommune
      */
-    public PostecontroleImpl getIddepartementPostecontrole() {
-        return (PostecontroleImpl) getAttributeInternal(IDDEPARTEMENTPOSTECONTROLE);
-    }
-
-    /**
-     * Sets <code>value</code> as the associated entity PostecontroleImpl.
-     */
-    public void setIddepartementPostecontrole(PostecontroleImpl value) {
-        setAttributeInternal(IDDEPARTEMENTPOSTECONTROLE, value);
-    }
-
-    /**
-     * @return the associated entity DepartementImpl.
-     */
-    public DepartementImpl getDepartement() {
-        return (DepartementImpl) getAttributeInternal(DEPARTEMENT);
-    }
-
-    /**
-     * Sets <code>value</code> as the associated entity DepartementImpl.
-     */
-    public void setDepartement(DepartementImpl value) {
-        setAttributeInternal(DEPARTEMENT, value);
+    public void setIdcommune(BigDecimal value) {
+        setAttributeInternal(IDCOMMUNE, value);
     }
 
 

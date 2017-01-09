@@ -3,9 +3,11 @@
   <application>
     <default-render-kit-id>oracle.adf.rich</default-render-kit-id>
   </application>
+  <!--
   <lifecycle>
     <phase-listener>cm.gov.minfof.view.VerifUser</phase-listener>
   </lifecycle>
+  -->
   <navigation-rule>
     <from-view-id>*</from-view-id>
     <navigation-case>
@@ -13,5 +15,18 @@
       <to-view-id>/login.jsf</to-view-id>
     </navigation-case>
   </navigation-rule>
-  
+  <navigation-rule>
+    <from-view-id>*</from-view-id>
+    <navigation-case>
+      <from-outcome>toindex</from-outcome>
+      <to-view-id>/index.jsf</to-view-id>
+    </navigation-case>
+  </navigation-rule>
+  <navigation-rule>
+    <from-view-id>*</from-view-id>
+    <navigation-case>
+      <from-outcome>topwd</from-outcome>
+      <to-view-id>/page_modifpwd.jsf</to-view-id>
+    </navigation-case>
+  </navigation-rule>
 </faces-config>
