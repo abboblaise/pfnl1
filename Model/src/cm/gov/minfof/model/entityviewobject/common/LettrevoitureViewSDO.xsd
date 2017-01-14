@@ -22,6 +22,9 @@
             <xsd:element name="Idpermis" type="xsd:decimal" minOccurs="0"/>
             <xsd:element name="Datelettrevoiture" type="ns0:dateTime-Timestamp" minOccurs="0"/>
             <xsd:element name="Immatriculation" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="iddepartemental" type="xsd:decimal" minOccurs="0" nillable="true"/>
+            <xsd:element name="idregional" type="xsd:decimal" minOccurs="0" nillable="true"/>
+            <xsd:element name="Idpostechargement1" type="xsd:decimal" minOccurs="0"/>
             <xsd:element name="LettrevoitureView2" type="LettrevoitureViewSDO" minOccurs="0" maxOccurs="unbounded"/>
             <xsd:element name="LettrevoitureView4" type="LettrevoitureViewSDO" minOccurs="0" maxOccurs="unbounded"/>
         </xsd:sequence>

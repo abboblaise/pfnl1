@@ -12,9 +12,11 @@
   BindingStyle="JDBC"
   BatchThreshold="1"
   DefClass="cm.gov.minfof.model.entity.LettrevoitureDefImpl"
-  CollClass="cm.gov.minfof.model.entity.LettrevoitureCollImpl">
+  CollClass="cm.gov.minfof.model.entity.LettrevoitureCollImpl"
+  RowClass="cm.gov.minfof.model.entity.LettrevoitureImpl">
   <DesignTime>
-    <Attr Name="_codeGenFlag2" Value="Def|Coll"/>
+    <Attr Name="_codeGenFlag2" Value="Access|Def|Coll"/>
+    <Attr Name="_isCodegen" Value="true"/>
   </DesignTime>
   <Attribute
     Name="Idlettrevoiture"
@@ -188,6 +190,22 @@
       </SchemaBasedProperties>
     </Properties>
   </Attribute>
+  <Attribute
+    Name="iddepartemental"
+    ColumnName="iddepartemental"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="BIGINT"
+    IsPersistent="false"
+    IsQueriable="false"/>
+  <Attribute
+    Name="idregional"
+    ColumnName="idregional"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="BIGINT"
+    IsPersistent="false"
+    IsQueriable="false"/>
   <AccessorAttribute
     Name="Lettrevoiture2"
     Association="cm.gov.minfof.model.entity.FkLettrevoiture3Assoc"

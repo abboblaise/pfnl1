@@ -72,7 +72,39 @@
   <ViewAccessor
     Name="LocaliteView1"
     ViewObjectName="cm.gov.minfof.model.entityviewobject.LocaliteView"
-    RowLevelBinds="true"/>
+    RowLevelBinds="true"
+    OrderBy="Localite.nomlocalite">
+    <ParameterMap>
+      <PIMap Variable="iddepartementalbind">
+        <TransientExpression
+          trustMode="untrusted"
+          Name="ExpressionScript"><![CDATA[iddepartemental]]></TransientExpression>
+      </PIMap>
+    </ParameterMap>
+  </ViewAccessor>
+  <ViewAccessor
+    Name="getLocaliteUser1"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.getLocaliteUser"
+    RowLevelBinds="true">
+    <ViewCriteriaUsage
+      Name="depCriteria"
+      FullName="cm.gov.minfof.model.entityviewobject.getLocaliteUser.depCriteria"/>
+    <ViewCriteriaUsage
+      Name="getLocaliteUserCriteria"
+      FullName="cm.gov.minfof.model.entityviewobject.getLocaliteUser.getLocaliteUserCriteria"/>
+    <ParameterMap>
+      <PIMap Variable="iddepartementalbind">
+        <TransientExpression
+          trustMode="untrusted"
+          Name="ExpressionScript"><![CDATA[iddepartemental]]></TransientExpression>
+      </PIMap>
+      <PIMap Variable="idregionalbind">
+        <TransientExpression
+          trustMode="untrusted"
+          Name="ExpressionScript"><![CDATA[idregional]]></TransientExpression>
+      </PIMap>
+    </ParameterMap>
+  </ViewAccessor>
   <ListBinding
     Name="LOV_Idpermissionnaire"
     ListVOName="PermissionnairespnflView1"
@@ -109,7 +141,7 @@
   </ListBinding>
   <ListBinding
     Name="LOV_Idpostechargement"
-    ListVOName="LocaliteView1"
+    ListVOName="getLocaliteUser1"
     NullValueFlag="none"
     MRUCount="0">
     <AttrArray Name="AttrNames">
@@ -138,6 +170,23 @@
     </AttrArray>
     <AttrArray Name="ListDisplayAttrNames">
       <Item Value="Numeropermis"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_Idpostechargement1"
+    ListVOName="LocaliteView1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="Idpostechargement1"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Idlocalite"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Nomlocalite"/>
     </AttrArray>
     <DisplayCriteria/>
   </ListBinding>
@@ -239,6 +288,37 @@
     EntityAttrName="Immatriculation"
     EntityUsage="Lettrevoiture"
     AliasName="immatriculation"/>
+  <ViewAttribute
+    Name="iddepartemental"
+    PrecisionRule="true"
+    EntityAttrName="iddepartemental"
+    EntityUsage="Lettrevoiture"
+    AliasName="iddepartemental"
+    IsQueriable="false"
+    IsPersistent="false"/>
+  <ViewAttribute
+    Name="idregional"
+    PrecisionRule="true"
+    EntityAttrName="idregional"
+    EntityUsage="Lettrevoiture"
+    AliasName="idregional"
+    IsQueriable="false"
+    IsPersistent="false"/>
+  <ViewAttribute
+    Name="Idpostechargement1"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Idpostechargement"
+    EntityUsage="Lettrevoiture"
+    AliasName="Idpostechargement1"
+    LOVName="LOV_Idpostechargement1">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewCriteria
     Name="LettrevoitureViewCriteria"
     ViewObjectName="cm.gov.minfof.model.entityviewobject.LettrevoitureView"

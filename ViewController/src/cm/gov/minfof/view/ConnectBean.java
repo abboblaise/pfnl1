@@ -82,7 +82,6 @@ public class ConnectBean {
         BindingContainer bindings = getBindings();
         OperationBinding operationBinding = bindings.getOperationBinding("Commit");
         Object result = operationBinding.execute();
-        executemethode("Execute");
         if (!operationBinding.getErrors().isEmpty()) {
             return null;
         }

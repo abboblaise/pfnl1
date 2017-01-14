@@ -61,6 +61,11 @@
     ViewLink="cm.gov.minfof.model.entityviewobject.DepartementsIbfk1Assoc2Link"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="LocaliteView"
+    ViewLink="cm.gov.minfof.model.entityviewobject.CommuneToLocaliteLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
   <ResourceBundle>
     <PropertiesBundle
       PropertiesFile="cm.gov.minfof.model.ModelBundle"/>

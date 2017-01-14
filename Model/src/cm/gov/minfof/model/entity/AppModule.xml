@@ -912,6 +912,21 @@
   <ViewUsage
     Name="CompilLettreVoitureDestination1"
     ViewObjectName="cm.gov.minfof.model.entityviewobject.CompilLettreVoitureDestination"/>
+  <ViewUsage
+    Name="RegionView6"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.RegionView"/>
+  <ViewUsage
+    Name="DepartementView12"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.DepartementView"/>
+  <ViewUsage
+    Name="CommuneView6"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.CommuneView"/>
+  <ViewUsage
+    Name="LocaliteView5"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.LocaliteView"/>
+  <ViewUsage
+    Name="getLocaliteUser1"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.getLocaliteUser"/>
   <ViewLinkUsage
     Name="PermissionnaireToPermisLink"
     ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.PermissionnaireToPermisLink"
@@ -1674,6 +1689,18 @@
     ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.FkLocalite1Link"
     SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.LocaliteView3"
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.LocaliteView4"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="regiontodeplink"
+    ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.regiontodeplink"
+    SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.RegionView6"
+    DstViewUsageName="cm.gov.minfof.model.entity.AppModule.DepartementView12"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="CommuneToLocaliteLink"
+    ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.CommuneToLocaliteLink"
+    SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.CommuneView6"
+    DstViewUsageName="cm.gov.minfof.model.entity.AppModule.LocaliteView5"
     Reversed="false"/>
   <Remote
     Name="ServiceInterface"

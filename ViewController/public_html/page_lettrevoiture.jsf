@@ -124,14 +124,14 @@
                                                            filterable="true" sortable="true"
                                                            headerText="#{bindings.LettrevoitureView1.hints.Idpostechargement.label}"
                                                            id="c7">
-                                                    <af:selectOneChoice value="#{row.bindings.Idpostechargement.inputValue}"
-                                                                        label="#{row.bindings.Idpostechargement.label}"
-                                                                        required="#{bindings.LettrevoitureView1.hints.Idpostechargement.mandatory}"
-                                                                        shortDesc="#{bindings.LettrevoitureView1.hints.Idpostechargement.tooltip}"
-                                                                        readOnly="true" id="soc7">
-                                                        <f:selectItems value="#{row.bindings.Idpostechargement.items}"
+                                                    <af:selectOneChoice value="#{row.bindings.Idpostechargement1.inputValue}"
+                                                                        label="#{row.bindings.Idpostechargement1.label}"
+                                                                        required="#{bindings.LettrevoitureView1.hints.Idpostechargement1.mandatory}"
+                                                                        shortDesc="#{bindings.LettrevoitureView1.hints.Idpostechargement1.tooltip}"
+                                                                        id="soc7" readOnly="true">
+                                                        <f:selectItems value="#{row.bindings.Idpostechargement1.items}"
                                                                        id="si7"/>
-                                                        <f:validator binding="#{row.bindings.Idpostechargement.validator}"/>
+                                                        <f:validator binding="#{row.bindings.Idpostechargement1.validator}"/>
                                                     </af:selectOneChoice>
                                                 </af:column>
                                                 <af:column sortProperty="#{bindings.LettrevoitureView1.hints.Iddepartementdestination.name}"
@@ -181,7 +181,8 @@
                                                         <af:selectOneChoice value="#{bindings.Idpermis.inputValue}"
                                                                             required="#{bindings.Idpermis.hints.mandatory}"
                                                                             shortDesc="#{bindings.Idpermis.hints.tooltip}"
-                                                                            id="soc1" autoSubmit="true">
+                                                                            id="soc1" autoSubmit="false"
+                                                                            valueChangeListener="#{lettreVoitureBean.valuechangepermis}">
                                                             <f:selectItems value="#{bindings.Idpermis.items}" id="si1"/>
                                                             <f:validator binding="#{bindings.Idpermis.validator}"/>
                                                         </af:selectOneChoice>

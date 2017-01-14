@@ -11,6 +11,8 @@
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="DetailslettrevoitureView5Query"/>
     <searchRegion Binds="LettrevoitureView1Iterator" Criteria=""
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="LettrevoitureView1Query"/>
+    <iterator id="getLocaliteUser1Iterator" Binds="getLocaliteUser1" DataControl="AppModuleDataControl" RangeSize="25"
+              Refresh="always"/>
   </executables>
   <bindings>
     <attributeValues IterBinding="LettrevoitureView1Iterator" id="Numerolettrevoiture">
@@ -83,6 +85,7 @@
           <Item Value="Datelettrevoiture"/>
           <Item Value="Idpostechargement"/>
           <Item Value="Iddepartementdestination"/>
+          <Item Value="Idpostechargement1"/>
         </AttrNames>
       </nodeDefinition>
     </tree>
@@ -98,5 +101,7 @@
             Action="previous"/>
     <action IterBinding="LettrevoitureView1Iterator" id="CreateInsert" RequiresUpdateModel="true"
             Action="createInsertRow"/>
+    <list IterBinding="LettrevoitureView1Iterator" StaticList="false" Uses="LOV_Idpostechargement1"
+          id="Idpostechargement1" DTSupportsMRU="true" SelectItemValueMode="ListObject"/>
   </bindings>
 </pageDefinition>

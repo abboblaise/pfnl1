@@ -30,7 +30,8 @@ public class RegionViewRowImpl extends ViewRowImpl implements RegionViewRow {
         Cheflieuregion,
         DepartementView,
         CommuneView,
-        VehiculeView;
+        VehiculeView,
+        DepartementView1;
         private static AttributesEnum[] vals = null;
         ;
         private static final int firstIndex = 0;
@@ -64,6 +65,7 @@ public class RegionViewRowImpl extends ViewRowImpl implements RegionViewRow {
     public static final int DEPARTEMENTVIEW = AttributesEnum.DepartementView.index();
     public static final int COMMUNEVIEW = AttributesEnum.CommuneView.index();
     public static final int VEHICULEVIEW = AttributesEnum.VehiculeView.index();
+    public static final int DEPARTEMENTVIEW1 = AttributesEnum.DepartementView1.index();
 
     /**
      * This is the default constructor (do not remove).
@@ -178,6 +180,13 @@ public class RegionViewRowImpl extends ViewRowImpl implements RegionViewRow {
      */
     public RowIterator getVehiculeView() {
         return (RowIterator) getAttributeInternal(VEHICULEVIEW);
+    }
+
+    /**
+     * Gets the associated <code>RowIterator</code> using master-detail link DepartementView1.
+     */
+    public RowIterator getDepartementView1() {
+        return (RowIterator) getAttributeInternal(DEPARTEMENTVIEW1);
     }
 
 

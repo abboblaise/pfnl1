@@ -38,6 +38,18 @@ public interface LettrevoitureViewSDO extends java.io.Serializable {
 
    public void setImmatriculation(java.lang.String value);
 
+   public java.math.BigDecimal getIddepartemental();
+
+   public void setIddepartemental(java.math.BigDecimal value);
+
+   public java.math.BigDecimal getIdregional();
+
+   public void setIdregional(java.math.BigDecimal value);
+
+   public java.math.BigDecimal getIdpostechargement1();
+
+   public void setIdpostechargement1(java.math.BigDecimal value);
+
    public java.util.List getLettrevoitureView2();
 
    public void setLettrevoitureView2(java.util.List value);

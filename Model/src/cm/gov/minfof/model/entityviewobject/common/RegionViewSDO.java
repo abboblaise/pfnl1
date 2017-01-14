@@ -26,9 +26,17 @@ public interface RegionViewSDO extends java.io.Serializable {
 
    public void setDepartementView(java.util.List value);
 
+   public java.util.List getCommuneView();
+
+   public void setCommuneView(java.util.List value);
+
    public java.util.List getVehiculeView();
 
    public void setVehiculeView(java.util.List value);
+
+   public java.util.List getDepartementView1();
+
+   public void setDepartementView1(java.util.List value);
 
 
 }

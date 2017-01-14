@@ -1,10 +1,18 @@
 package cm.gov.minfof.view;
 
+import cm.gov.minfof.model.entity.UserData;
+
+import java.math.BigDecimal;
+
 import javax.el.ELContext;
 import javax.el.ExpressionFactory;
 import javax.el.MethodExpression;
 
 import javax.faces.context.FacesContext;
+
+import javax.faces.event.ValueChangeEvent;
+
+import javax.servlet.http.HttpSession;
 
 import oracle.adf.model.BindingContext;
 import oracle.adf.model.binding.DCBindingContainer;
@@ -17,6 +25,7 @@ import oracle.binding.BindingContainer;
 import oracle.binding.OperationBinding;
 
 import oracle.jbo.ApplicationModule;
+import oracle.jbo.Row;
 import oracle.jbo.VariableValueManager;
 import oracle.jbo.ViewCriteria;
 import oracle.jbo.ViewObject;
@@ -167,5 +176,37 @@ public class LettreVoitureBean {
         lettreCompileeDepartIter.executeQuery();
         lettreCompileeDestIter.executeQuery();
         return null;
+    }
+    
+    public String chargelocalite(){
+        System.out.println("Entrée dans la procédure");
+        FacesContext fc = FacesContext.getCurrentInstance();
+        HttpSession session = (HttpSession) fc.getExternalContext().getSession(true);
+        UserData ud = (UserData) session.getAttribute("user");
+        
+        System.out.println("Niveu intervention : "+ud.getNiveauintervention());
+        System.out.println("Ideregion:"+ud.getIdregion()+"\n iddeartement: "+ud.getIddepartement());
+        
+        DCIteratorBinding iterIB = (DCIteratorBinding) getBindings().get("getLocaliteUser1Iterator");
+        ViewObjectImpl vo =  (ViewObjectImpl)iterIB.getViewObject();  
+        if (ud.getNiveauintervention() == 2)
+        vo.setWhereClause("Idregions="+ud.getIdregion());
+        
+        if (ud.getNiveauintervention() == 3)
+        vo.setWhereClause("Iddepartements="+ud.getIddepartement());
+        
+        vo.executeQuery();
+        while (vo.hasNext()){
+            Row rr1 = vo.next();
+            System.out.println("nom localité : "+rr1.getAttribute("Nomlocalite"));
+        }
+        System.out.println("Prcédure exécutée");
+        return null;
+    }
+
+    public void valuechangepermis(ValueChangeEvent valueChangeEvent) {
+        // Add event code here...
+        //chargelocalite();
+        
     }
 }

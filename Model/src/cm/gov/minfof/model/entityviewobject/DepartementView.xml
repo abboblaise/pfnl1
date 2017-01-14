@@ -74,6 +74,12 @@
     Type="oracle.jbo.RowIterator"
     Reversed="true"
     IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="RegionView"
+    ViewLink="cm.gov.minfof.model.entityviewobject.regiontodeplink"
+    Type="cm.gov.minfof.model.entityviewobject.RegionViewRowImpl"
+    Reversed="true"
+    IsUpdateable="false"/>
   <SortCriteria>
     <Sort
       Attribute="Iddepartements"

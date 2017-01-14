@@ -7,7 +7,7 @@ public class LettrevoitureViewSDOImpl extends SDODataObject implements Lettrevoi
 
    public static final int START_PROPERTY_INDEX = 0;
 
-   public static final int END_PROPERTY_INDEX = START_PROPERTY_INDEX + 10;
+   public static final int END_PROPERTY_INDEX = START_PROPERTY_INDEX + 13;
 
    public LettrevoitureViewSDOImpl() {}
 
@@ -83,20 +83,44 @@ public class LettrevoitureViewSDOImpl extends SDODataObject implements Lettrevoi
       set(START_PROPERTY_INDEX + 8 , value);
    }
 
-   public java.util.List getLettrevoitureView2() {
-      return getList(START_PROPERTY_INDEX + 9);
+   public java.math.BigDecimal getIddepartemental() {
+      return getBigDecimal(START_PROPERTY_INDEX + 9);
    }
 
-   public void setLettrevoitureView2(java.util.List value) {
+   public void setIddepartemental(java.math.BigDecimal value) {
       set(START_PROPERTY_INDEX + 9 , value);
    }
 
+   public java.math.BigDecimal getIdregional() {
+      return getBigDecimal(START_PROPERTY_INDEX + 10);
+   }
+
+   public void setIdregional(java.math.BigDecimal value) {
+      set(START_PROPERTY_INDEX + 10 , value);
+   }
+
+   public java.math.BigDecimal getIdpostechargement1() {
+      return getBigDecimal(START_PROPERTY_INDEX + 11);
+   }
+
+   public void setIdpostechargement1(java.math.BigDecimal value) {
+      set(START_PROPERTY_INDEX + 11 , value);
+   }
+
+   public java.util.List getLettrevoitureView2() {
+      return getList(START_PROPERTY_INDEX + 12);
+   }
+
+   public void setLettrevoitureView2(java.util.List value) {
+      set(START_PROPERTY_INDEX + 12 , value);
+   }
+
    public java.util.List getLettrevoitureView4() {
-      return getList(START_PROPERTY_INDEX + 10);
+      return getList(START_PROPERTY_INDEX + 13);
    }
 
    public void setLettrevoitureView4(java.util.List value) {
-      set(START_PROPERTY_INDEX + 10 , value);
+      set(START_PROPERTY_INDEX + 13 , value);
    }
 
 

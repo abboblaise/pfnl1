@@ -3427,6 +3427,23 @@ public class AppModuleImpl extends ApplicationModuleImpl implements AppModule {
             //System.out.println("les pages : "+pgs);
             util.setPagesdugroupe(pgs);
             
+            //gestion des niveaux d'intervention
+            if(util.getNiveauintervention() == 1)
+            {
+                util.setIdregion(null);
+                util.setIddepartement(null);
+            }
+            if(util.getNiveauintervention() == 2)
+            {
+                //util.setIdregion(null);
+                util.setIddepartement(null);
+            }
+            if(util.getNiveauintervention() == 3)
+            {
+                util.setIdregion(null);
+                //util.setIddepartement(null);
+            }
+            
         }
         
         return util;
@@ -3792,6 +3809,62 @@ public class AppModuleImpl extends ApplicationModuleImpl implements AppModule {
      */
     public ViewObjectImpl getCompilLettreVoitureDestination1() {
         return (ViewObjectImpl) findViewObject("CompilLettreVoitureDestination1");
+    }
+
+    /**
+     * Container's getter for RegionView6.
+     * @return RegionView6
+     */
+    public RegionViewImpl getRegionView6() {
+        return (RegionViewImpl) findViewObject("RegionView6");
+    }
+
+    /**
+     * Container's getter for DepartementView12.
+     * @return DepartementView12
+     */
+    public DepartementViewImpl getDepartementView12() {
+        return (DepartementViewImpl) findViewObject("DepartementView12");
+    }
+
+    /**
+     * Container's getter for regiontodeplink.
+     * @return regiontodeplink
+     */
+    public ViewLinkImpl getregiontodeplink() {
+        return (ViewLinkImpl) findViewLink("regiontodeplink");
+    }
+
+    /**
+     * Container's getter for CommuneView6.
+     * @return CommuneView6
+     */
+    public CommuneViewImpl getCommuneView6() {
+        return (CommuneViewImpl) findViewObject("CommuneView6");
+    }
+
+    /**
+     * Container's getter for LocaliteView5.
+     * @return LocaliteView5
+     */
+    public ViewObjectImpl getLocaliteView5() {
+        return (ViewObjectImpl) findViewObject("LocaliteView5");
+    }
+
+    /**
+     * Container's getter for CommuneToLocaliteLink.
+     * @return CommuneToLocaliteLink
+     */
+    public ViewLinkImpl getCommuneToLocaliteLink() {
+        return (ViewLinkImpl) findViewLink("CommuneToLocaliteLink");
+    }
+
+    /**
+     * Container's getter for getLocaliteUser1.
+     * @return getLocaliteUser1
+     */
+    public ViewObjectImpl getgetLocaliteUser1() {
+        return (ViewObjectImpl) findViewObject("getLocaliteUser1");
     }
 }
 

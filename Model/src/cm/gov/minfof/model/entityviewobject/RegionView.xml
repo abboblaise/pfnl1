@@ -77,6 +77,11 @@
     ViewLink="cm.gov.minfof.model.entityviewobject.RegionToVehiculeLink"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="DepartementView1"
+    ViewLink="cm.gov.minfof.model.entityviewobject.regiontodeplink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
   <SortCriteria>
     <Sort
       Attribute="Idregions"

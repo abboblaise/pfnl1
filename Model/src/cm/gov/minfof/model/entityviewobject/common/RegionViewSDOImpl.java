@@ -7,7 +7,7 @@ public class RegionViewSDOImpl extends SDODataObject implements RegionViewSDO {
 
    public static final int START_PROPERTY_INDEX = 0;
 
-   public static final int END_PROPERTY_INDEX = START_PROPERTY_INDEX + 6;
+   public static final int END_PROPERTY_INDEX = START_PROPERTY_INDEX + 8;
 
    public RegionViewSDOImpl() {}
 
@@ -59,12 +59,28 @@ public class RegionViewSDOImpl extends SDODataObject implements RegionViewSDO {
       set(START_PROPERTY_INDEX + 5 , value);
    }
 
-   public java.util.List getVehiculeView() {
+   public java.util.List getCommuneView() {
       return getList(START_PROPERTY_INDEX + 6);
    }
 
-   public void setVehiculeView(java.util.List value) {
+   public void setCommuneView(java.util.List value) {
       set(START_PROPERTY_INDEX + 6 , value);
+   }
+
+   public java.util.List getVehiculeView() {
+      return getList(START_PROPERTY_INDEX + 7);
+   }
+
+   public void setVehiculeView(java.util.List value) {
+      set(START_PROPERTY_INDEX + 7 , value);
+   }
+
+   public java.util.List getDepartementView1() {
+      return getList(START_PROPERTY_INDEX + 8);
+   }
+
+   public void setDepartementView1(java.util.List value) {
+      set(START_PROPERTY_INDEX + 8 , value);
    }
 
 

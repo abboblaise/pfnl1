@@ -22,6 +22,10 @@ public interface CommuneViewSDO extends java.io.Serializable {
 
    public void setDepartementView(java.util.List value);
 
+   public java.util.List getLocaliteView();
+
+   public void setLocaliteView(java.util.List value);
+
 
 }
 

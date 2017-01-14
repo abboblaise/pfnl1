@@ -104,6 +104,13 @@
     AssociationOtherEnd="cm.gov.minfof.model.entity.CommunesIbfk1Assoc2.Commune1"
     Type="oracle.jbo.server.EntityImpl"
     IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="Localite"
+    Association="cm.gov.minfof.model.entity.CommuneToLocaliteassoc"
+    AssociationEnd="cm.gov.minfof.model.entity.CommuneToLocaliteassoc.Localite"
+    AssociationOtherEnd="cm.gov.minfof.model.entity.CommuneToLocaliteassoc.Commune"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
   <Key
     Name="CommunesNomcommuneCheck">
     <DesignTime>
