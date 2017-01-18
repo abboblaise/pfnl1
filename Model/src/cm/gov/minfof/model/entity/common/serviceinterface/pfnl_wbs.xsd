@@ -2,14 +2,12 @@
      xmlns:tns="/cm/gov/minfof/model/entity/common/types/" xmlns:ns0="/cm/gov/minfof/model/entityviewobject/common/"
      xmlns:ns1="/cm/gov/minfof/model/entity/common/" xmlns:ns2="http://xmlns.oracle.com/adf/svc/types/"
      xmlns:ns3="/cm/gov/minfof/model/queryviewobject/common/">
-    <import namespace="/cm/gov/minfof/model/entityviewobject/common/" schemaLocation="../../../entityviewobject/common/TypevehiculeViewSDO.xsd"/>
+    <import namespace="/cm/gov/minfof/model/queryviewobject/common/" schemaLocation="../../../queryviewobject/common/RegionsViewSDO.xsd"/>
     <import namespace="/cm/gov/minfof/model/entityviewobject/common/" schemaLocation="../../../entityviewobject/common/ExportpfnlViewSDO.xsd"/>
     <import namespace="/cm/gov/minfof/model/entityviewobject/common/" schemaLocation="../../../entityviewobject/common/DepartementViewSDO.xsd"/>
     <import namespace="/cm/gov/minfof/model/entityviewobject/common/" schemaLocation="../../../entityviewobject/common/LettrevoitureViewSDO.xsd"/>
-    <import namespace="/cm/gov/minfof/model/entityviewobject/common/" schemaLocation="../../../entityviewobject/common/TransporteurViewSDO.xsd"/>
     <import namespace="/cm/gov/minfof/model/entityviewobject/common/" schemaLocation="../../../entityviewobject/common/DetailscollectepfnlViewSDO.xsd"/>
     <import namespace="/cm/gov/minfof/model/entityviewobject/common/" schemaLocation="../../../entityviewobject/common/CollectepfnlViewSDO.xsd"/>
-    <import namespace="/cm/gov/minfof/model/entityviewobject/common/" schemaLocation="../../../entityviewobject/common/VehiculeViewSDO.xsd"/>
     <import namespace="/cm/gov/minfof/model/entityviewobject/common/" schemaLocation="../../../entityviewobject/common/LocaliteViewSDO.xsd"/>
     <import namespace="/cm/gov/minfof/model/entityviewobject/common/" schemaLocation="../../../entityviewobject/common/CategorieproduitViewSDO.xsd"/>
     <import namespace="/cm/gov/minfof/model/entity/common/" schemaLocation="../ProduitsPfnlViewSDO.xsd"/>
@@ -19,46 +17,17 @@
     <import namespace="/cm/gov/minfof/model/entityviewobject/common/" schemaLocation="../../../entityviewobject/common/DetailpermisViewSDO.xsd"/>
     <import namespace="/cm/gov/minfof/model/entityviewobject/common/" schemaLocation="../../../entityviewobject/common/PostecontroleViewSDO.xsd"/>
     <import namespace="/cm/gov/minfof/model/entityviewobject/common/" schemaLocation="../../../entityviewobject/common/DetailsexportpfnlViewSDO.xsd"/>
-    <import namespace="/cm/gov/minfof/model/queryviewobject/common/" schemaLocation="../../../queryviewobject/common/CommunesViewSDO.xsd"/>
     <import namespace="/cm/gov/minfof/model/entityviewobject/common/" schemaLocation="../../../entityviewobject/common/PermisViewSDO.xsd"/>
     <import namespace="http://xmlns.oracle.com/adf/svc/types/" schemaLocation="classpath:/META-INF/wsdl/BC4JService.xsd"/>
     <import namespace="/cm/gov/minfof/model/entity/common/" schemaLocation="../FamillePfnlViewSDO.xsd"/>
     <import namespace="/cm/gov/minfof/model/entityviewobject/common/" schemaLocation="../../../entityviewobject/common/PartiproduitSDO.xsd"/>
     <import namespace="/cm/gov/minfof/model/entity/common/" schemaLocation="../PartiesRecolteesViewSDO.xsd"/>
     <import namespace="/cm/gov/minfof/model/entityviewobject/common/" schemaLocation="../../../entityviewobject/common/PaysViewSDO.xsd"/>
+    <import namespace="/cm/gov/minfof/model/entityviewobject/common/" schemaLocation="../../../entityviewobject/common/CertificatorigineViewSDO.xsd"/>
     <import namespace="/cm/gov/minfof/model/entityviewobject/common/" schemaLocation="../../../entityviewobject/common/RegionViewSDO.xsd"/>
     <import namespace="/cm/gov/minfof/model/entityviewobject/common/" schemaLocation="../../../entityviewobject/common/OriginespnflsViewSDO.xsd"/>
     <import namespace="/cm/gov/minfof/model/entityviewobject/common/" schemaLocation="../../../entityviewobject/common/CategorieunitemesureViewSDO.xsd"/>
-    <import namespace="/cm/gov/minfof/model/entityviewobject/common/" schemaLocation="../../../entityviewobject/common/AgrementsViewSDO.xsd"/>
-    <element name="getAgrementsView1">
-        <complexType>
-            <sequence>
-                <element name="idagrements" type="decimal"/>
-            </sequence>
-        </complexType>
-    </element>
-    <element name="getAgrementsView1Response">
-        <complexType>
-            <sequence>
-                <element name="result" type="ns0:AgrementsViewSDO"/>
-            </sequence>
-        </complexType>
-    </element>
-    <element name="findAgrementsView1">
-        <complexType>
-            <sequence>
-                <element name="findCriteria" type="ns2:FindCriteria"/>
-                <element name="findControl" type="ns2:FindControl"/>
-            </sequence>
-        </complexType>
-    </element>
-    <element name="findAgrementsView1Response">
-        <complexType>
-            <sequence>
-                <element name="result" type="ns0:AgrementsViewSDO" minOccurs="0" maxOccurs="unbounded"/>
-            </sequence>
-        </complexType>
-    </element>
+    <import namespace="/cm/gov/minfof/model/entityviewobject/common/" schemaLocation="../../../entityviewobject/common/CommuneViewSDO.xsd"/>
     <element name="getCategorieproduitView1">
         <complexType>
             <sequence>
@@ -117,6 +86,35 @@
             </sequence>
         </complexType>
     </element>
+    <element name="getCertificatorigineView1">
+        <complexType>
+            <sequence>
+                <element name="idcertificatorigine" type="decimal"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="getCertificatorigineView1Response">
+        <complexType>
+            <sequence>
+                <element name="result" type="ns0:CertificatorigineViewSDO"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="findCertificatorigineView1">
+        <complexType>
+            <sequence>
+                <element name="findCriteria" type="ns2:FindCriteria"/>
+                <element name="findControl" type="ns2:FindControl"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="findCertificatorigineView1Response">
+        <complexType>
+            <sequence>
+                <element name="result" type="ns0:CertificatorigineViewSDO" minOccurs="0" maxOccurs="unbounded"/>
+            </sequence>
+        </complexType>
+    </element>
     <element name="getCollectepfnlView1">
         <complexType>
             <sequence>
@@ -146,21 +144,21 @@
             </sequence>
         </complexType>
     </element>
-    <element name="getCommunesView1">
+    <element name="getCommuneView1">
         <complexType>
             <sequence>
                 <element name="idcommunes" type="decimal"/>
             </sequence>
         </complexType>
     </element>
-    <element name="getCommunesView1Response">
+    <element name="getCommuneView1Response">
         <complexType>
             <sequence>
-                <element name="result" type="ns3:CommunesViewSDO"/>
+                <element name="result" type="ns0:CommuneViewSDO"/>
             </sequence>
         </complexType>
     </element>
-    <element name="findCommunesView1">
+    <element name="findCommuneView1">
         <complexType>
             <sequence>
                 <element name="findCriteria" type="ns2:FindCriteria"/>
@@ -168,10 +166,10 @@
             </sequence>
         </complexType>
     </element>
-    <element name="findCommunesView1Response">
+    <element name="findCommuneView1Response">
         <complexType>
             <sequence>
-                <element name="result" type="ns3:CommunesViewSDO" minOccurs="0" maxOccurs="unbounded"/>
+                <element name="result" type="ns0:CommuneViewSDO" minOccurs="0" maxOccurs="unbounded"/>
             </sequence>
         </complexType>
     </element>
@@ -697,21 +695,21 @@
             </sequence>
         </complexType>
     </element>
-    <element name="getTransporteurView1">
+    <element name="getRegionsView1">
         <complexType>
             <sequence>
-                <element name="idtransporteur" type="decimal"/>
+                <element name="idregions" type="decimal"/>
             </sequence>
         </complexType>
     </element>
-    <element name="getTransporteurView1Response">
+    <element name="getRegionsView1Response">
         <complexType>
             <sequence>
-                <element name="result" type="ns0:TransporteurViewSDO"/>
+                <element name="result" type="ns3:RegionsViewSDO"/>
             </sequence>
         </complexType>
     </element>
-    <element name="findTransporteurView1">
+    <element name="findRegionsView1">
         <complexType>
             <sequence>
                 <element name="findCriteria" type="ns2:FindCriteria"/>
@@ -719,39 +717,10 @@
             </sequence>
         </complexType>
     </element>
-    <element name="findTransporteurView1Response">
+    <element name="findRegionsView1Response">
         <complexType>
             <sequence>
-                <element name="result" type="ns0:TransporteurViewSDO" minOccurs="0" maxOccurs="unbounded"/>
-            </sequence>
-        </complexType>
-    </element>
-    <element name="getTypevehiculeView1">
-        <complexType>
-            <sequence>
-                <element name="idtypevehicule" type="decimal"/>
-            </sequence>
-        </complexType>
-    </element>
-    <element name="getTypevehiculeView1Response">
-        <complexType>
-            <sequence>
-                <element name="result" type="ns0:TypevehiculeViewSDO"/>
-            </sequence>
-        </complexType>
-    </element>
-    <element name="findTypevehiculeView1">
-        <complexType>
-            <sequence>
-                <element name="findCriteria" type="ns2:FindCriteria"/>
-                <element name="findControl" type="ns2:FindControl"/>
-            </sequence>
-        </complexType>
-    </element>
-    <element name="findTypevehiculeView1Response">
-        <complexType>
-            <sequence>
-                <element name="result" type="ns0:TypevehiculeViewSDO" minOccurs="0" maxOccurs="unbounded"/>
+                <element name="result" type="ns3:RegionsViewSDO" minOccurs="0" maxOccurs="unbounded"/>
             </sequence>
         </complexType>
     </element>
@@ -781,35 +750,6 @@
         <complexType>
             <sequence>
                 <element name="result" type="ns0:UnitemesureViewSDO" minOccurs="0" maxOccurs="unbounded"/>
-            </sequence>
-        </complexType>
-    </element>
-    <element name="getVehiculeView1">
-        <complexType>
-            <sequence>
-                <element name="idvehicule" type="decimal"/>
-            </sequence>
-        </complexType>
-    </element>
-    <element name="getVehiculeView1Response">
-        <complexType>
-            <sequence>
-                <element name="result" type="ns0:VehiculeViewSDO"/>
-            </sequence>
-        </complexType>
-    </element>
-    <element name="findVehiculeView1">
-        <complexType>
-            <sequence>
-                <element name="findCriteria" type="ns2:FindCriteria"/>
-                <element name="findControl" type="ns2:FindControl"/>
-            </sequence>
-        </complexType>
-    </element>
-    <element name="findVehiculeView1Response">
-        <complexType>
-            <sequence>
-                <element name="result" type="ns0:VehiculeViewSDO" minOccurs="0" maxOccurs="unbounded"/>
             </sequence>
         </complexType>
     </element>

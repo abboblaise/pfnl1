@@ -4,78 +4,47 @@
   <parameters/>
   <executables>
     <variableIterator id="variables"/>
-    <iterator Binds="DepartementView1" RangeSize="25" DataControl="AppModuleDataControl" id="DepartementView1Iterator"/>
-    <iterator Binds="PostecontroleView4" RangeSize="25" DataControl="AppModuleDataControl"
-              id="PostecontroleView4Iterator"/>
-    <searchRegion Binds="PostecontroleView4Iterator" Criteria=""
-                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="PostecontroleView41Query"/>
+    <iterator Binds="PostecontroleView1" RangeSize="10" DataControl="AppModuleDataControl"
+              id="PostecontroleView1Iterator"/>
   </executables>
   <bindings>
-    <list IterBinding="DepartementView1Iterator" ListOperMode="navigation" ListIter="DepartementView1Iterator"
-          id="DepartementView1" DTSupportsMRU="true" SelectItemValueMode="ListObject">
-      <AttrNames>
-        <Item Value="Nomdepartement"/>
-      </AttrNames>
-    </list>
-    <attributeValues IterBinding="PostecontroleView4Iterator" id="Codeposte">
-      <AttrNames>
-        <Item Value="Codeposte"/>
-      </AttrNames>
-    </attributeValues>
-    <attributeValues IterBinding="PostecontroleView4Iterator" id="Intituleposte">
-      <AttrNames>
-        <Item Value="Intituleposte"/>
-      </AttrNames>
-    </attributeValues>
-    <action IterBinding="PostecontroleView4Iterator" id="Create" InstanceName="AppModuleDataControl.PostecontroleView4"
+    <action IterBinding="PostecontroleView1Iterator" id="Create" InstanceName="AppModuleDataControl.PostecontroleView1"
             DataControl="AppModuleDataControl" RequiresUpdateModel="true" Action="createRow"/>
-    <action IterBinding="PostecontroleView4Iterator" id="CreateInsert"
-            InstanceName="AppModuleDataControl.PostecontroleView4" DataControl="AppModuleDataControl"
-            RequiresUpdateModel="true" Action="createInsertRow"/>
-    <action IterBinding="PostecontroleView4Iterator" id="Delete" InstanceName="AppModuleDataControl.PostecontroleView4"
-            DataControl="AppModuleDataControl" RequiresUpdateModel="false" Action="removeCurrentRow"/>
     <action id="Commit" DataControl="AppModuleDataControl" RequiresUpdateModel="true" Action="commitTransaction"/>
-    <tree IterBinding="PostecontroleView4Iterator" id="PostecontroleView4">
-      <nodeDefinition DefName="cm.gov.minfof.model.entityviewobject.PostecontroleView" Name="PostecontroleView40">
+    <action id="Rollback" DataControl="AppModuleDataControl" RequiresUpdateModel="false" Action="rollbackTransaction"/>
+    <action IterBinding="PostecontroleView1Iterator" id="Delete" InstanceName="AppModuleDataControl.PostecontroleView1"
+            DataControl="AppModuleDataControl" RequiresUpdateModel="false" Action="removeCurrentRow"/>
+    <tree IterBinding="PostecontroleView1Iterator" id="PostecontroleView1">
+      <nodeDefinition DefName="cm.gov.minfof.model.entityviewobject.PostecontroleView" Name="PostecontroleView10">
         <AttrNames>
           <Item Value="Idpostecontrole"/>
-          <Item Value="Codeposte"/>
-          <Item Value="Intituleposte"/>
-          <Item Value="Posteexport"/>
         </AttrNames>
       </nodeDefinition>
     </tree>
-    <attributeValues IterBinding="PostecontroleView4Iterator" id="Idpostecontrole">
+    <attributeValues IterBinding="PostecontroleView1Iterator" id="Idpostecontrole">
       <AttrNames>
         <Item Value="Idpostecontrole"/>
       </AttrNames>
     </attributeValues>
-    <button IterBinding="PostecontroleView4Iterator" id="Posteexport1" DTSupportsMRU="false" StaticList="true">
+    <attributeValues IterBinding="PostecontroleView1Iterator" id="Codeposte">
+      <AttrNames>
+        <Item Value="Codeposte"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="PostecontroleView1Iterator" id="Intituleposte">
+      <AttrNames>
+        <Item Value="Intituleposte"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="PostecontroleView1Iterator" id="Posteexport">
       <AttrNames>
         <Item Value="Posteexport"/>
       </AttrNames>
-      <ValueList>
-        <Item Value="1"/>
-        <Item Value="0"/>
-      </ValueList>
-    </button>
-    <tree IterBinding="PostecontroleView4Iterator" id="PostecontroleView41">
-      <nodeDefinition DefName="cm.gov.minfof.model.entityviewobject.PostecontroleView" Name="PostecontroleView410">
-        <AttrNames>
-          <Item Value="Codeposte"/>
-          <Item Value="Intituleposte"/>
-          <Item Value="Posteexport" Binds="Posteexport1"/>
-        </AttrNames>
-      </nodeDefinition>
-    </tree>
-    <tree IterBinding="PostecontroleView4Iterator" id="PostecontroleView42">
-      <nodeDefinition DefName="cm.gov.minfof.model.entityviewobject.PostecontroleView" Name="PostecontroleView420">
-        <AttrNames>
-          <Item Value="Codeposte"/>
-          <Item Value="Intituleposte"/>
-          <Item Value="Posteexport"/>
-        </AttrNames>
-      </nodeDefinition>
-    </tree>
+    </attributeValues>
+    <attributeValues IterBinding="PostecontroleView1Iterator" id="Idcommune">
+      <AttrNames>
+        <Item Value="Idcommune"/>
+      </AttrNames>
+    </attributeValues>
   </bindings>
 </pageDefinition>

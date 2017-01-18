@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="US-ASCII" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
 <!---->
 <ViewObject
@@ -12,34 +12,33 @@
   BindingStyle="JDBC"
   CustomQuery="false"
   SelectAllAttributes="false"
-  FetchMode="FETCH_AS_NEEDED"
   PageIterMode="Full"
-  ComponentClass="cm.gov.minfof.model.entityviewobject.LocaliteViewImpl"
   SdoGen="true"
   SdoName="cm.gov.minfof.model.entityviewobject.common.LocaliteViewSDO"
   SdoNameSpace="/cm/gov/minfof/model/entityviewobject/common/">
-  <DesignTime>
-    <Attr Name="_codeGenFlag2" Value="Coll|VarAccess"/>
-  </DesignTime>
+  <Variable
+    Name="idregionalbind"
+    Kind="viewcriteria"
+    Type="java.math.BigDecimal"/>
   <ViewAccessor
-    Name="DepartementView1"
-    ViewObjectName="cm.gov.minfof.model.entityviewobject.DepartementView"
+    Name="CommuneView1"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.CommuneView"
     RowLevelBinds="true"/>
   <ListBinding
-    Name="LOV_Iddepartement"
-    ListVOName="DepartementView1"
+    Name="LOV_Idcommune"
+    ListVOName="CommuneView1"
     NullValueFlag="start"
     NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
     MRUCount="0">
     <AttrArray Name="AttrNames">
-      <Item Value="Iddepartement"/>
+      <Item Value="Idcommune"/>
     </AttrArray>
     <AttrArray Name="AttrExpressions"/>
     <AttrArray Name="ListAttrNames">
-      <Item Value="Iddepartements"/>
+      <Item Value="Idcommunes"/>
     </AttrArray>
     <AttrArray Name="ListDisplayAttrNames">
-      <Item Value="Nomdepartement"/>
+      <Item Value="Nomcommune"/>
     </AttrArray>
     <DisplayCriteria/>
   </ListBinding>
@@ -59,27 +58,18 @@
     PrecisionRule="true"
     EntityAttrName="Nomlocalite"
     EntityUsage="Localite"
-    AliasName="nomlocalite">
-    <Properties>
-      <SchemaBasedProperties>
-        <LABEL
-          ResId="NOM_DE_LA_LOCALIT_U00E9"/>
-      </SchemaBasedProperties>
-    </Properties>
-  </ViewAttribute>
+    AliasName="nomlocalite"/>
   <ViewAttribute
-    Name="Iddepartement"
+    Name="Idcommune"
     PrecisionRule="true"
-    EntityAttrName="Iddepartement"
+    EntityAttrName="Idcommune"
     EntityUsage="Localite"
-    AliasName="iddepartement"
-    LOVName="LOV_Iddepartement">
+    AliasName="idcommune"
+    LOVName="LOV_Idcommune">
     <Properties>
       <SchemaBasedProperties>
         <CONTROLTYPE
           Value="choice"/>
-        <LABEL
-          ResId="D_U00E9PARTEMENT"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
@@ -89,13 +79,9 @@
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
   <ViewLinkAccessor
-    Name="DepartementView"
-    ViewLink="cm.gov.minfof.model.entityviewobject.DepToLocaliteLink"
+    Name="CommuneView"
+    ViewLink="cm.gov.minfof.model.entityviewobject.CommuneToLocaliteLink"
     Type="oracle.jbo.server.ViewRowImpl"
     Reversed="true"
     IsUpdateable="false"/>
-  <ResourceBundle>
-    <PropertiesBundle
-      PropertiesFile="cm.gov.minfof.model.ModelBundle"/>
-  </ResourceBundle>
 </ViewObject>
