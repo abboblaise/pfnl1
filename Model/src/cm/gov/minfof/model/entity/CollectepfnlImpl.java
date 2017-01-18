@@ -4,6 +4,10 @@ import java.math.BigDecimal;
 
 import java.sql.Date;
 
+import javax.faces.context.FacesContext;
+
+import javax.servlet.http.HttpSession;
+
 import oracle.jbo.AttributeList;
 import oracle.jbo.Key;
 import oracle.jbo.Row;
@@ -30,12 +34,18 @@ public class CollectepfnlImpl extends EntityImpl {
         Idlocalite,
         Idposte,
         Idutilisateur,
+        idregional,
+        iddepartmental,
+        nomposte,
+        nomdepartement,
+        nomlocalite,
+        idusr,
+        nomuser,
         Collectepfnl,
         IdlocaliteCollectepfnl,
         Detailscollectepfnl,
         Departement;
         private static AttributesEnum[] vals = null;
-        ;
         private static final int firstIndex = 0;
 
         protected int index() {
@@ -65,6 +75,13 @@ public class CollectepfnlImpl extends EntityImpl {
     public static final int IDLOCALITE = AttributesEnum.Idlocalite.index();
     public static final int IDPOSTE = AttributesEnum.Idposte.index();
     public static final int IDUTILISATEUR = AttributesEnum.Idutilisateur.index();
+    public static final int IDREGIONAL = AttributesEnum.idregional.index();
+    public static final int IDDEPARTMENTAL = AttributesEnum.iddepartmental.index();
+    public static final int NOMPOSTE = AttributesEnum.nomposte.index();
+    public static final int NOMDEPARTEMENT = AttributesEnum.nomdepartement.index();
+    public static final int NOMLOCALITE = AttributesEnum.nomlocalite.index();
+    public static final int IDUSR = AttributesEnum.idusr.index();
+    public static final int NOMUSER = AttributesEnum.nomuser.index();
     public static final int COLLECTEPFNL = AttributesEnum.Collectepfnl.index();
     public static final int IDLOCALITECOLLECTEPFNL = AttributesEnum.IdlocaliteCollectepfnl.index();
     public static final int DETAILSCOLLECTEPFNL = AttributesEnum.Detailscollectepfnl.index();
@@ -180,6 +197,132 @@ public class CollectepfnlImpl extends EntityImpl {
      */
     public void setIdutilisateur(BigDecimal value) {
         setAttributeInternal(IDUTILISATEUR, value);
+    }
+
+    /**
+     * Gets the attribute value for idregional, using the alias name idregional.
+     * @return the value of idregional
+     */
+    public BigDecimal getidregional() {
+        FacesContext fc = FacesContext.getCurrentInstance();
+        HttpSession session = (HttpSession) fc.getExternalContext().getSession(true);
+        UserData ud = (UserData) session.getAttribute("user");
+        return ud.getIdregion();
+        //return (BigDecimal) getAttributeInternal(IDREGIONAL);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for idregional.
+     * @param value value to set the idregional
+     */
+    public void setidregional(BigDecimal value) {
+        setAttributeInternal(IDREGIONAL, value);
+    }
+
+    /**
+     * Gets the attribute value for iddepartmental, using the alias name iddepartmental.
+     * @return the value of iddepartmental
+     */
+    public BigDecimal getiddepartmental() {
+        FacesContext fc = FacesContext.getCurrentInstance();
+        HttpSession session = (HttpSession) fc.getExternalContext().getSession(true);
+        UserData ud = (UserData) session.getAttribute("user");
+        System.out.println("Id département"+ud.getIddepartement());
+        return ud.getIddepartement();
+        //return (BigDecimal) getAttributeInternal(IDDEPARTMENTAL);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for iddepartmental.
+     * @param value value to set the iddepartmental
+     */
+    public void setiddepartmental(BigDecimal value) {
+        setAttributeInternal(IDDEPARTMENTAL, value);
+    }
+
+    /**
+     * Gets the attribute value for nomposte, using the alias name nomposte.
+     * @return the value of nomposte
+     */
+    public String getnomposte() {
+        return (String) getAttributeInternal(NOMPOSTE);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for nomposte.
+     * @param value value to set the nomposte
+     */
+    public void setnomposte(String value) {
+        setAttributeInternal(NOMPOSTE, value);
+    }
+
+    /**
+     * Gets the attribute value for nomdepartement, using the alias name nomdepartement.
+     * @return the value of nomdepartement
+     */
+    public String getnomdepartement() {
+        return (String) getAttributeInternal(NOMDEPARTEMENT);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for nomdepartement.
+     * @param value value to set the nomdepartement
+     */
+    public void setnomdepartement(String value) {
+        setAttributeInternal(NOMDEPARTEMENT, value);
+    }
+
+    /**
+     * Gets the attribute value for nomlocalite, using the alias name nomlocalite.
+     * @return the value of nomlocalite
+     */
+    public String getnomlocalite() {
+        return (String) getAttributeInternal(NOMLOCALITE);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for nomlocalite.
+     * @param value value to set the nomlocalite
+     */
+    public void setnomlocalite(String value) {
+        setAttributeInternal(NOMLOCALITE, value);
+    }
+
+    /**
+     * Gets the attribute value for idusr, using the alias name idusr.
+     * @return the value of idusr
+     */
+    public BigDecimal getidusr() {
+        FacesContext fc = FacesContext.getCurrentInstance();
+        HttpSession session = (HttpSession) fc.getExternalContext().getSession(true);
+        UserData ud = (UserData) session.getAttribute("user");
+        //System.out.println("Id département"+ud.getIddepartement());
+        return ud.getIdutilisateur();
+        //return (BigDecimal) getAttributeInternal(IDUSR);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for idusr.
+     * @param value value to set the idusr
+     */
+    public void setidusr(BigDecimal value) {
+        setAttributeInternal(IDUSR, value);
+    }
+
+    /**
+     * Gets the attribute value for nomuser, using the alias name nomuser.
+     * @return the value of nomuser
+     */
+    public String getnomuser() {
+        return (String) getAttributeInternal(NOMUSER);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for nomuser.
+     * @param value value to set the nomuser
+     */
+    public void setnomuser(String value) {
+        setAttributeInternal(NOMUSER, value);
     }
 
     /**

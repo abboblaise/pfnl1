@@ -14,11 +14,6 @@
         <Item Value="Loginuser"/>
       </AttrNames>
     </attributeValues>
-    <attributeValues IterBinding="UtilisateurView1Iterator" id="Passworduser">
-      <AttrNames>
-        <Item Value="Passworduser"/>
-      </AttrNames>
-    </attributeValues>
     <attributeValues IterBinding="UtilisateurView1Iterator" id="Nomuser">
       <AttrNames>
         <Item Value="Nomuser"/>
@@ -91,14 +86,5 @@
         <Item Value="Emailuser"/>
       </AttrNames>
     </attributeValues>
-    <button IterBinding="UtilisateurView1Iterator" id="Premiereconnexion" DTSupportsMRU="false" StaticList="true">
-      <AttrNames>
-        <Item Value="Premiereconnexion"/>
-      </AttrNames>
-      <ValueList>
-        <Item Value="true"/>
-        <Item Value="false"/>
-      </ValueList>
-    </button>
   </bindings>
 </pageDefinition>

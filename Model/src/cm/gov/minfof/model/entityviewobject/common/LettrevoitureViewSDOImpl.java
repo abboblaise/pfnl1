@@ -7,7 +7,7 @@ public class LettrevoitureViewSDOImpl extends SDODataObject implements Lettrevoi
 
    public static final int START_PROPERTY_INDEX = 0;
 
-   public static final int END_PROPERTY_INDEX = START_PROPERTY_INDEX + 13;
+   public static final int END_PROPERTY_INDEX = START_PROPERTY_INDEX + 14;
 
    public LettrevoitureViewSDOImpl() {}
 
@@ -107,20 +107,28 @@ public class LettrevoitureViewSDOImpl extends SDODataObject implements Lettrevoi
       set(START_PROPERTY_INDEX + 11 , value);
    }
 
-   public java.util.List getLettrevoitureView2() {
-      return getList(START_PROPERTY_INDEX + 12);
+   public java.lang.String getNomdepart() {
+      return getString(START_PROPERTY_INDEX + 12);
    }
 
-   public void setLettrevoitureView2(java.util.List value) {
+   public void setNomdepart(java.lang.String value) {
       set(START_PROPERTY_INDEX + 12 , value);
    }
 
-   public java.util.List getLettrevoitureView4() {
+   public java.util.List getLettrevoitureView2() {
       return getList(START_PROPERTY_INDEX + 13);
    }
 
-   public void setLettrevoitureView4(java.util.List value) {
+   public void setLettrevoitureView2(java.util.List value) {
       set(START_PROPERTY_INDEX + 13 , value);
+   }
+
+   public java.util.List getLettrevoitureView4() {
+      return getList(START_PROPERTY_INDEX + 14);
+   }
+
+   public void setLettrevoitureView4(java.util.List value) {
+      set(START_PROPERTY_INDEX + 14 , value);
    }
 
 

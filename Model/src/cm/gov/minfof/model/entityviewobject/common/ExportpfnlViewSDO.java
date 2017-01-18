@@ -30,6 +30,18 @@ public interface ExportpfnlViewSDO extends java.io.Serializable {
 
    public void setIdposteexport(java.math.BigDecimal value);
 
+   public java.math.BigDecimal getIddepartemental();
+
+   public void setIddepartemental(java.math.BigDecimal value);
+
+   public java.math.BigDecimal getIdregional();
+
+   public void setIdregional(java.math.BigDecimal value);
+
+   public java.math.BigDecimal getIdposteexport1();
+
+   public void setIdposteexport1(java.math.BigDecimal value);
+
    public java.util.List getExportpfnlView();
 
    public void setExportpfnlView(java.util.List value);

@@ -62,6 +62,7 @@
           <Item Value="Iddestination"/>
           <Item Value="Nomacteur"/>
           <Item Value="Typeacteur"/>
+          <Item Value="Idprovenance1"/>
         </AttrNames>
       </nodeDefinition>
     </tree>
@@ -91,6 +92,10 @@
           <Item Value="Idlocalite"/>
           <Item Value="Idposte"/>
           <Item Value="Idutilisateur"/>
+          <Item Value="Iddepartement1"/>
+          <Item Value="Idlocalite1"/>
+          <Item Value="Idposte1"/>
+          <Item Value="Idutilisateur1"/>
         </AttrNames>
       </nodeDefinition>
     </tree>
@@ -107,5 +112,16 @@
             Action="previous"/>
     <action IterBinding="DetailscollectepfnlView17Iterator" id="Next1" RequiresUpdateModel="true" Action="next"/>
     <action IterBinding="DetailscollectepfnlView17Iterator" id="Last1" RequiresUpdateModel="true" Action="last"/>
+    <listOfValues IterBinding="CollectepfnlView1Iterator" StaticList="false" Uses="LOV_Idutilisateur"
+                  id="Idutilisateur1"/>
+    <listOfValues IterBinding="CollectepfnlView1Iterator" StaticList="false" Uses="LOV_nomdepartement"
+                  id="nomdepartement"/>
+    <listOfValues IterBinding="CollectepfnlView1Iterator" StaticList="false" Uses="LOV_nomposte" id="nomposte"/>
+    <listOfValues IterBinding="CollectepfnlView1Iterator" StaticList="false" Uses="LOV_nomlocalite" id="nomlocalite"/>
+    <action IterBinding="CollectepfnlView1Iterator" id="Delete1" InstanceName="AppModuleDataControl.CollectepfnlView1"
+            DataControl="AppModuleDataControl" RequiresUpdateModel="false" Action="removeCurrentRow"/>
+    <listOfValues IterBinding="CollectepfnlView1Iterator" StaticList="false" Uses="LOV_nomuser" id="nomuser"/>
+    <listOfValues IterBinding="DetailscollectepfnlView17Iterator" StaticList="false" Uses="LOV_nomprovenance"
+                  id="nomprovenance"/>
   </bindings>
 </pageDefinition>

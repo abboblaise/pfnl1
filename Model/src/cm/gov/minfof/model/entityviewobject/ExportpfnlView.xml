@@ -41,6 +41,29 @@
     Name="PostecontroleView1"
     ViewObjectName="cm.gov.minfof.model.entityviewobject.PostecontroleView"
     RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="getPosteUserView1"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.getPosteUserView"
+    RowLevelBinds="true">
+    <ViewCriteriaUsage
+      Name="departementCriteria"
+      FullName="cm.gov.minfof.model.entityviewobject.getPosteUserView.departementCriteria"/>
+    <ViewCriteriaUsage
+      Name="regionCriteria"
+      FullName="cm.gov.minfof.model.entityviewobject.getPosteUserView.regionCriteria"/>
+    <ParameterMap>
+      <PIMap Variable="iddepartementbind">
+        <TransientExpression
+          trustMode="untrusted"
+          Name="ExpressionScript"><![CDATA[iddepartemental]]></TransientExpression>
+      </PIMap>
+      <PIMap Variable="idregionbind">
+        <TransientExpression
+          trustMode="untrusted"
+          Name="ExpressionScript"><![CDATA[idregional]]></TransientExpression>
+      </PIMap>
+    </ParameterMap>
+  </ViewAccessor>
   <ListBinding
     Name="LOV_Idpermis"
     ListVOName="PermisView1"
@@ -79,12 +102,30 @@
   </ListBinding>
   <ListBinding
     Name="LOV_Idposteexport"
-    ListVOName="PostecontroleView1"
+    ListVOName="getPosteUserView1"
     NullValueFlag="start"
     NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
     MRUCount="0">
     <AttrArray Name="AttrNames">
       <Item Value="Idposteexport"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Idpostecontrole"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Intituleposte"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_Idposteexport1"
+    ListVOName="PostecontroleView1"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="Idposteexport1"/>
     </AttrArray>
     <AttrArray Name="AttrExpressions"/>
     <AttrArray Name="ListAttrNames">
@@ -160,6 +201,36 @@
     EntityUsage="Exportpfnl"
     AliasName="idposteexport"
     LOVName="LOV_Idposteexport">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="iddepartemental"
+    IsQueriable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    EntityAttrName="iddepartemental"
+    EntityUsage="Exportpfnl"
+    AliasName="iddepartemental"/>
+  <ViewAttribute
+    Name="idregional"
+    IsQueriable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    EntityAttrName="idregional"
+    EntityUsage="Exportpfnl"
+    AliasName="idregional"/>
+  <ViewAttribute
+    Name="Idposteexport1"
+    PrecisionRule="true"
+    EntityAttrName="Idposteexport"
+    EntityUsage="Exportpfnl"
+    AliasName="Idposteexport1"
+    LOVName="LOV_Idposteexport1">
     <Properties>
       <SchemaBasedProperties>
         <CONTROLTYPE

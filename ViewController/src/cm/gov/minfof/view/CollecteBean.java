@@ -136,7 +136,7 @@ public class CollecteBean {
 
     public String supprimeCollecte() {
         BindingContainer bindings = getBindings();
-        OperationBinding operationBinding = bindings.getOperationBinding("Delete");
+        OperationBinding operationBinding = bindings.getOperationBinding("Delete1");
         Object result = operationBinding.execute();
         Object o = executemethode("Commit");
         //System.out.println("object = " + o);

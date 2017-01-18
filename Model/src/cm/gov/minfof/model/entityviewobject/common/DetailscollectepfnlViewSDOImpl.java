@@ -7,7 +7,7 @@ public class DetailscollectepfnlViewSDOImpl extends SDODataObject implements Det
 
    public static final int START_PROPERTY_INDEX = 0;
 
-   public static final int END_PROPERTY_INDEX = START_PROPERTY_INDEX + 20;
+   public static final int END_PROPERTY_INDEX = START_PROPERTY_INDEX + 24;
 
    public DetailscollectepfnlViewSDOImpl() {}
 
@@ -99,84 +99,116 @@ public class DetailscollectepfnlViewSDOImpl extends SDODataObject implements Det
       set(START_PROPERTY_INDEX + 10 , value);
    }
 
-   public java.util.List getDetailscollectepfnlView1() {
-      return getList(START_PROPERTY_INDEX + 11);
+   public java.math.BigDecimal getIddepartemental() {
+      return getBigDecimal(START_PROPERTY_INDEX + 11);
    }
 
-   public void setDetailscollectepfnlView1(java.util.List value) {
+   public void setIddepartemental(java.math.BigDecimal value) {
       set(START_PROPERTY_INDEX + 11 , value);
    }
 
-   public java.util.List getDetailscollectepfnlView3() {
-      return getList(START_PROPERTY_INDEX + 12);
+   public java.math.BigDecimal getIdregonal() {
+      return getBigDecimal(START_PROPERTY_INDEX + 12);
    }
 
-   public void setDetailscollectepfnlView3(java.util.List value) {
+   public void setIdregonal(java.math.BigDecimal value) {
       set(START_PROPERTY_INDEX + 12 , value);
    }
 
-   public java.util.List getDetailscollectepfnlView4() {
-      return getList(START_PROPERTY_INDEX + 13);
+   public java.math.BigDecimal getIdprovenance1() {
+      return getBigDecimal(START_PROPERTY_INDEX + 13);
    }
 
-   public void setDetailscollectepfnlView4(java.util.List value) {
+   public void setIdprovenance1(java.math.BigDecimal value) {
       set(START_PROPERTY_INDEX + 13 , value);
    }
 
-   public java.util.List getDetailscollectepfnlView5() {
-      return getList(START_PROPERTY_INDEX + 14);
+   public java.lang.String getNomprovenance() {
+      return getString(START_PROPERTY_INDEX + 14);
    }
 
-   public void setDetailscollectepfnlView5(java.util.List value) {
+   public void setNomprovenance(java.lang.String value) {
       set(START_PROPERTY_INDEX + 14 , value);
    }
 
-   public java.util.List getDetailscollectepfnlView6() {
+   public java.util.List getDetailscollectepfnlView1() {
       return getList(START_PROPERTY_INDEX + 15);
    }
 
-   public void setDetailscollectepfnlView6(java.util.List value) {
+   public void setDetailscollectepfnlView1(java.util.List value) {
       set(START_PROPERTY_INDEX + 15 , value);
    }
 
-   public cm.gov.minfof.model.entityviewobject.common.PermissionnairespnflViewSDO getPermissionnairespnflView() {
-      return (cm.gov.minfof.model.entityviewobject.common.PermissionnairespnflViewSDO)get(START_PROPERTY_INDEX + 16);
+   public java.util.List getDetailscollectepfnlView3() {
+      return getList(START_PROPERTY_INDEX + 16);
    }
 
-   public void setPermissionnairespnflView(cm.gov.minfof.model.entityviewobject.common.PermissionnairespnflViewSDO value) {
+   public void setDetailscollectepfnlView3(java.util.List value) {
       set(START_PROPERTY_INDEX + 16 , value);
    }
 
-   public cm.gov.minfof.model.entity.common.PartiesProduitsPfnlViewSDO getPartiesProduitsPfnlView() {
-      return (cm.gov.minfof.model.entity.common.PartiesProduitsPfnlViewSDO)get(START_PROPERTY_INDEX + 17);
+   public java.util.List getDetailscollectepfnlView4() {
+      return getList(START_PROPERTY_INDEX + 17);
    }
 
-   public void setPartiesProduitsPfnlView(cm.gov.minfof.model.entity.common.PartiesProduitsPfnlViewSDO value) {
+   public void setDetailscollectepfnlView4(java.util.List value) {
       set(START_PROPERTY_INDEX + 17 , value);
    }
 
-   public cm.gov.minfof.model.entityviewobject.common.UnitemesureViewSDO getUnitemesureView() {
-      return (cm.gov.minfof.model.entityviewobject.common.UnitemesureViewSDO)get(START_PROPERTY_INDEX + 18);
+   public java.util.List getDetailscollectepfnlView5() {
+      return getList(START_PROPERTY_INDEX + 18);
    }
 
-   public void setUnitemesureView(cm.gov.minfof.model.entityviewobject.common.UnitemesureViewSDO value) {
+   public void setDetailscollectepfnlView5(java.util.List value) {
       set(START_PROPERTY_INDEX + 18 , value);
    }
 
-   public cm.gov.minfof.model.entityviewobject.common.OriginespnflsViewSDO getOriginespnflsView() {
-      return (cm.gov.minfof.model.entityviewobject.common.OriginespnflsViewSDO)get(START_PROPERTY_INDEX + 19);
+   public java.util.List getDetailscollectepfnlView6() {
+      return getList(START_PROPERTY_INDEX + 19);
    }
 
-   public void setOriginespnflsView(cm.gov.minfof.model.entityviewobject.common.OriginespnflsViewSDO value) {
+   public void setDetailscollectepfnlView6(java.util.List value) {
       set(START_PROPERTY_INDEX + 19 , value);
    }
 
+   public cm.gov.minfof.model.entityviewobject.common.PermissionnairespnflViewSDO getPermissionnairespnflView() {
+      return (cm.gov.minfof.model.entityviewobject.common.PermissionnairespnflViewSDO)get(START_PROPERTY_INDEX + 20);
+   }
+
+   public void setPermissionnairespnflView(cm.gov.minfof.model.entityviewobject.common.PermissionnairespnflViewSDO value) {
+      set(START_PROPERTY_INDEX + 20 , value);
+   }
+
+   public cm.gov.minfof.model.entity.common.PartiesProduitsPfnlViewSDO getPartiesProduitsPfnlView() {
+      return (cm.gov.minfof.model.entity.common.PartiesProduitsPfnlViewSDO)get(START_PROPERTY_INDEX + 21);
+   }
+
+   public void setPartiesProduitsPfnlView(cm.gov.minfof.model.entity.common.PartiesProduitsPfnlViewSDO value) {
+      set(START_PROPERTY_INDEX + 21 , value);
+   }
+
+   public cm.gov.minfof.model.entityviewobject.common.UnitemesureViewSDO getUnitemesureView() {
+      return (cm.gov.minfof.model.entityviewobject.common.UnitemesureViewSDO)get(START_PROPERTY_INDEX + 22);
+   }
+
+   public void setUnitemesureView(cm.gov.minfof.model.entityviewobject.common.UnitemesureViewSDO value) {
+      set(START_PROPERTY_INDEX + 22 , value);
+   }
+
+   public cm.gov.minfof.model.entityviewobject.common.OriginespnflsViewSDO getOriginespnflsView() {
+      return (cm.gov.minfof.model.entityviewobject.common.OriginespnflsViewSDO)get(START_PROPERTY_INDEX + 23);
+   }
+
+   public void setOriginespnflsView(cm.gov.minfof.model.entityviewobject.common.OriginespnflsViewSDO value) {
+      set(START_PROPERTY_INDEX + 23 , value);
+   }
+
    public cm.gov.minfof.model.entityviewobject.common.DepartementViewSDO getDepartementView() {
-      return (cm.gov.minfof.model.entityviewobject.common.DepartementViewSDO)get(START_PROPERTY_INDEX + 20);
+      return (cm.gov.minfof.model.entityviewobject.common.DepartementViewSDO)get(START_PROPERTY_INDEX + 24);
    }
 
    public void setDepartementView(cm.gov.minfof.model.entityviewobject.common.DepartementViewSDO value) {
-      set(START_PROPERTY_INDEX + 20 , value);
+      set(START_PROPERTY_INDEX + 24 , value);
    }
 
 

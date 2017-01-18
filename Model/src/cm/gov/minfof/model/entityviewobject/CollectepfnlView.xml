@@ -48,9 +48,77 @@
     Name="UtilisateurView1"
     ViewObjectName="cm.gov.minfof.model.entityviewobject.UtilisateurView"
     RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="getLocaliteUser1"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.getLocaliteUser"
+    RowLevelBinds="true">
+    <ViewCriteriaUsage
+      Name="depCriteria"
+      FullName="cm.gov.minfof.model.entityviewobject.getLocaliteUser.depCriteria"/>
+    <ParameterMap>
+      <PIMap Variable="iddepartementalbind">
+        <TransientExpression
+          trustMode="untrusted"
+          Name="ExpressionScript"><![CDATA[Iddepartement]]></TransientExpression>
+      </PIMap>
+    </ParameterMap>
+  </ViewAccessor>
+  <ViewAccessor
+    Name="getPosteUserView1"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.getPosteUserView"
+    RowLevelBinds="true">
+    <ViewCriteriaUsage
+      Name="departementCriteria"
+      FullName="cm.gov.minfof.model.entityviewobject.getPosteUserView.departementCriteria"/>
+    <ParameterMap>
+      <PIMap Variable="iddepartementbind">
+        <TransientExpression
+          trustMode="untrusted"
+          Name="ExpressionScript"><![CDATA[Iddepartement]]></TransientExpression>
+      </PIMap>
+    </ParameterMap>
+  </ViewAccessor>
+  <ViewAccessor
+    Name="getDepartementUser1"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.getDepartementUser"
+    RowLevelBinds="true">
+    <ViewCriteriaUsage
+      Name="DepartementCriteria"
+      FullName="cm.gov.minfof.model.entityviewobject.getDepartementUser.DepartementCriteria"/>
+    <ViewCriteriaUsage
+      Name="RegionCriteria"
+      FullName="cm.gov.minfof.model.entityviewobject.getDepartementUser.RegionCriteria"/>
+    <ParameterMap>
+      <PIMap Variable="iddepartementbind">
+        <TransientExpression
+          trustMode="untrusted"
+          Name="ExpressionScript"><![CDATA[iddepartmental]]></TransientExpression>
+      </PIMap>
+      <PIMap Variable="idregionbind">
+        <TransientExpression
+          trustMode="untrusted"
+          Name="ExpressionScript"><![CDATA[idregional]]></TransientExpression>
+      </PIMap>
+    </ParameterMap>
+  </ViewAccessor>
+  <ViewAccessor
+    Name="getUtilisateur1"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.getUtilisateur"
+    RowLevelBinds="true">
+    <ViewCriteriaUsage
+      Name="iduserCriteria"
+      FullName="cm.gov.minfof.model.entityviewobject.getUtilisateur.iduserCriteria"/>
+    <ParameterMap>
+      <PIMap Variable="iduserbind">
+        <TransientExpression
+          trustMode="untrusted"
+          Name="ExpressionScript"><![CDATA[idusr]]></TransientExpression>
+      </PIMap>
+    </ParameterMap>
+  </ViewAccessor>
   <ListBinding
     Name="LOV_Iddepartement"
-    ListVOName="DepartementView1"
+    ListVOName="getDepartementUser1"
     NullValueFlag="start"
     NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
     MRUCount="0">
@@ -62,14 +130,13 @@
       <Item Value="Iddepartements"/>
     </AttrArray>
     <AttrArray Name="ListDisplayAttrNames">
-      <Item Value="Codedepartement"/>
       <Item Value="Nomdepartement"/>
     </AttrArray>
     <DisplayCriteria/>
   </ListBinding>
   <ListBinding
     Name="LOV_Idlocalite"
-    ListVOName="LocaliteView1"
+    ListVOName="getLocaliteUser1"
     NullValueFlag="start"
     NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
     MRUCount="0">
@@ -87,7 +154,7 @@
   </ListBinding>
   <ListBinding
     Name="LOV_Idposte"
-    ListVOName="PostecontroleView1"
+    ListVOName="getPosteUserView1"
     NullValueFlag="start"
     NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
     MRUCount="0">
@@ -105,15 +172,177 @@
   </ListBinding>
   <ListBinding
     Name="LOV_Idutilisateur"
-    ListVOName="UtilisateurView1"
+    ListVOName="getUtilisateur1"
     NullValueFlag="start"
     NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
-    MRUCount="0">
+    MRUCount="0"
+    ComboRowCountHint="10">
     <AttrArray Name="AttrNames">
       <Item Value="Idutilisateur"/>
     </AttrArray>
     <AttrArray Name="AttrExpressions"/>
     <AttrArray Name="ListAttrNames">
+      <Item Value="Idutilisateur"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Nomuser"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_Iddepartement1"
+    ListVOName="DepartementView1"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="Iddepartement1"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Iddepartements"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Nomdepartement"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_Idlocalite1"
+    ListVOName="LocaliteView1"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="Idlocalite1"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Idlocalite"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Nomlocalite"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_Idposte1"
+    ListVOName="PostecontroleView1"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="Idposte1"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Idpostecontrole"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Intituleposte"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_Idutilisateur1"
+    ListVOName="UtilisateurView1"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="Idutilisateur1"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Idutilisateur"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_nomposte"
+    ListVOName="getPosteUserView1"
+    ComboRowCountHint="10"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="nomposte"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="DerivedAttrNames">
+      <Item Value="Idposte"/>
+    </AttrArray>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Intituleposte"/>
+      <Item Value="Idpostecontrole"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Intituleposte"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_nomlocalite"
+    ListVOName="getLocaliteUser1"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0"
+    ComboRowCountHint="10">
+    <AttrArray Name="AttrNames">
+      <Item Value="nomlocalite"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="DerivedAttrNames">
+      <Item Value="Idlocalite"/>
+    </AttrArray>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Nomlocalite"/>
+      <Item Value="Idlocalite"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Nomlocalite"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_nomdepartement"
+    ListVOName="getDepartementUser1"
+    ComboRowCountHint="10"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="nomdepartement"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="DerivedAttrNames">
+      <Item Value="Iddepartement"/>
+    </AttrArray>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Nomdepartement"/>
+      <Item Value="Iddepartements"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Nomdepartement"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_nomuser"
+    ListVOName="getUtilisateur1"
+    ComboRowCountHint="10"
+    NullValueFlag="end"
+    MRUCount="0"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}">
+    <AttrArray Name="AttrNames">
+      <Item Value="nomuser"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="DerivedAttrNames">
+      <Item Value="Idutilisateur"/>
+    </AttrArray>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Nomuser"/>
       <Item Value="Idutilisateur"/>
     </AttrArray>
     <AttrArray Name="ListDisplayAttrNames">
@@ -183,10 +412,10 @@
     LOVName="LOV_Idposte">
     <Properties>
       <SchemaBasedProperties>
-        <CONTROLTYPE
-          Value="choice"/>
         <LABEL
           ResId="POSTE_CONTR_U00F4LE"/>
+        <CONTROLTYPE
+          Value="choice"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
@@ -202,7 +431,151 @@
         <LABEL
           ResId="IDENTIFICATEUR"/>
         <CONTROLTYPE
+          Value="combo_lov"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="iddepartmental"
+    PrecisionRule="true"
+    EntityAttrName="iddepartmental"
+    EntityUsage="Collectepfnl"
+    AliasName="iddepartmental"
+    IsQueriable="false"
+    IsPersistent="false"/>
+  <ViewAttribute
+    Name="idregional"
+    IsQueriable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    EntityAttrName="idregional"
+    EntityUsage="Collectepfnl"
+    AliasName="idregional"/>
+  <ViewAttribute
+    Name="Iddepartement1"
+    PrecisionRule="true"
+    EntityAttrName="Iddepartement"
+    EntityUsage="Collectepfnl"
+    AliasName="Iddepartement1"
+    LOVName="LOV_Iddepartement1">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
           Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="Idlocalite1"
+    PrecisionRule="true"
+    EntityAttrName="Idlocalite"
+    EntityUsage="Collectepfnl"
+    AliasName="Idlocalite1"
+    LOVName="LOV_Idlocalite1">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="Idposte1"
+    PrecisionRule="true"
+    EntityAttrName="Idposte"
+    EntityUsage="Collectepfnl"
+    AliasName="Idposte1"
+    LOVName="LOV_Idposte1">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="idusr"
+    IsQueriable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    EntityAttrName="idusr"
+    EntityUsage="Collectepfnl"
+    AliasName="idusr"/>
+  <ViewAttribute
+    Name="nomdepartement"
+    IsQueriable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    EntityAttrName="nomdepartement"
+    EntityUsage="Collectepfnl"
+    AliasName="nomdepartement"
+    LOVName="LOV_nomdepartement">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo_lov"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="nomlocalite"
+    IsQueriable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    EntityAttrName="nomlocalite"
+    EntityUsage="Collectepfnl"
+    AliasName="nomlocalite"
+    LOVName="LOV_nomlocalite">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo_lov"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="nomposte"
+    IsQueriable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    EntityAttrName="nomposte"
+    EntityUsage="Collectepfnl"
+    AliasName="nomposte"
+    LOVName="LOV_nomposte">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo_lov"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="Idutilisateur1"
+    PrecisionRule="true"
+    EntityAttrName="Idutilisateur"
+    EntityUsage="Collectepfnl"
+    AliasName="Idutilisateur1"
+    LOVName="LOV_Idutilisateur1">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="nomuser"
+    IsQueriable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    EntityAttrName="nomuser"
+    EntityUsage="Collectepfnl"
+    AliasName="nomuser"
+    LOVName="LOV_nomuser">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo_lov"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>

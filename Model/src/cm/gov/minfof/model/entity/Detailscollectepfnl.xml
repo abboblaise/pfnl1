@@ -198,6 +198,39 @@
       </SchemaBasedProperties>
     </Properties>
   </Attribute>
+  <Attribute
+    Name="iddepartemental"
+    ColumnName="iddepartemental"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="BIGINT"
+    IsPersistent="false"
+    IsQueriable="false"/>
+  <Attribute
+    Name="idregonal"
+    ColumnName="idregonal"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="BIGINT"
+    IsPersistent="false"
+    IsQueriable="false"/>
+  <Attribute
+    Name="nomprovenance"
+    Precision="80"
+    ColumnName="nomprovenance"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="CHAR"
+    TableName="detailscollectepfnl"
+    IsPersistent="false"
+    IsQueriable="false">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="20"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
   <AccessorAttribute
     Name="Detailscollectepfnl"
     Association="cm.gov.minfof.model.entity.FkDetailscollectepfnl7Assoc"

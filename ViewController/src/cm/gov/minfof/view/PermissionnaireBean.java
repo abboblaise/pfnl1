@@ -1,11 +1,19 @@
 package cm.gov.minfof.view;
 
+import javax.faces.application.FacesMessage;
+import javax.faces.component.UIComponent;
+import javax.faces.context.FacesContext;
+
+import javax.faces.validator.ValidatorException;
+
 import oracle.adf.model.BindingContext;
 
 import oracle.adf.view.rich.event.DialogEvent;
 
 import oracle.binding.BindingContainer;
 import oracle.binding.OperationBinding;
+
+import org.apache.commons.validator.routines.EmailValidator;
 
 public class PermissionnaireBean {
     ShowJqNotification notifObj = new ShowJqNotification();
@@ -67,5 +75,16 @@ public class PermissionnaireBean {
         if (dialogEvent.getOutcome() == DialogEvent.Outcome.ok) {
             supprimerPermissionnaire();
         }
+    }
+
+    public void Validemail(FacesContext facesContext, UIComponent uIComponent, Object object) {
+        // Add event code here...
+        String lemail = (String)object;
+        EmailValidator emailValidator = EmailValidator.getInstance();
+        if(!emailValidator.isValid(lemail)){
+            FacesMessage message = new FacesMessage("l'adresse email n'est au forma valide");
+            throw new ValidatorException(message);
+        }
+
     }
 }

@@ -141,6 +141,23 @@
       </SchemaBasedProperties>
     </Properties>
   </Attribute>
+  <Attribute
+    Name="iddepartemental"
+    ColumnName="iddepartemental"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="BIGINT"
+    IsPersistent="false"
+    IsQueriable="false"/>
+  <Attribute
+    Name="idregional"
+    ColumnName="idregional"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="BIGINT"
+    TableName="exportpfnl"
+    IsPersistent="false"
+    IsQueriable="false"/>
   <AccessorAttribute
     Name="Exportpfnl"
     Association="cm.gov.minfof.model.entity.FkExportpfnl2Assoc"

@@ -37,6 +37,7 @@
           <Item Value="Numeroco"/>
           <Item Value="Dateexport"/>
           <Item Value="Idposteexport"/>
+          <Item Value="Idposteexport1"/>
         </AttrNames>
       </nodeDefinition>
     </tree>

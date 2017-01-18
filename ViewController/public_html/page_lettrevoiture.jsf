@@ -258,14 +258,15 @@
                                                     </af:gridCell>
                                                     <af:gridCell marginStart="5px" width="auto" marginEnd="5px"
                                                                  id="gc14">
-                                                        <af:selectOneChoice value="#{bindings.Idpostechargement.inputValue}"
-                                                                            required="#{bindings.Idpostechargement.hints.mandatory}"
-                                                                            shortDesc="#{bindings.Idpostechargement.hints.tooltip}"
-                                                                            id="soc4">
-                                                            <f:selectItems value="#{bindings.Idpostechargement.items}"
-                                                                           id="si4"/>
-                                                            <f:validator binding="#{bindings.Idpostechargement.validator}"/>
-                                                        </af:selectOneChoice>
+                                                        <af:inputComboboxListOfValues id="nomdepartId"
+                                                                                      popupTitle="Search and Select: #{bindings.nomdepart.hints.label}"
+                                                                                      value="#{bindings.nomdepart.inputValue}"
+                                                                                      model="#{bindings.nomdepart.listOfValuesModel}"
+                                                                                      required="#{bindings.nomdepart.hints.mandatory}"
+                                                                                      columns="#{bindings.nomdepart.hints.displayWidth}"
+                                                                                      shortDesc="#{bindings.nomdepart.hints.tooltip}">
+                                                            <f:validator binding="#{bindings.nomdepart.validator}"/>
+                                                        </af:inputComboboxListOfValues>
                                                     </af:gridCell>
                                                 </af:gridRow>
                                                 <af:gridRow marginTop="5px" height="auto" id="gr8">

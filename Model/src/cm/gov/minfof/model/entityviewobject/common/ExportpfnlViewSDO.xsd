@@ -23,6 +23,9 @@
             <xsd:element name="Numeroco" type="xsd:string" minOccurs="0" nillable="true"/>
             <xsd:element name="Dateexport" type="ns0:dateTime-Timestamp" minOccurs="0"/>
             <xsd:element name="Idposteexport" type="xsd:decimal" minOccurs="0" nillable="true"/>
+            <xsd:element name="iddepartemental" type="xsd:decimal" minOccurs="0" nillable="true"/>
+            <xsd:element name="idregional" type="xsd:decimal" minOccurs="0" nillable="true"/>
+            <xsd:element name="Idposteexport1" type="xsd:decimal" minOccurs="0" nillable="true"/>
             <xsd:element name="ExportpfnlView" type="ExportpfnlViewSDO" minOccurs="0" maxOccurs="unbounded"/>
             <xsd:element name="ExportpfnlView1" type="ExportpfnlViewSDO" minOccurs="0" maxOccurs="unbounded"/>
             <xsd:element name="DetailsexportpfnlView" type="DetailsexportpfnlViewSDO" minOccurs="0"

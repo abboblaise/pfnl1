@@ -46,6 +46,22 @@ public interface DetailscollectepfnlViewSDO extends java.io.Serializable {
 
    public void setTypeacteur(java.lang.Integer value);
 
+   public java.math.BigDecimal getIddepartemental();
+
+   public void setIddepartemental(java.math.BigDecimal value);
+
+   public java.math.BigDecimal getIdregonal();
+
+   public void setIdregonal(java.math.BigDecimal value);
+
+   public java.math.BigDecimal getIdprovenance1();
+
+   public void setIdprovenance1(java.math.BigDecimal value);
+
+   public java.lang.String getNomprovenance();
+
+   public void setNomprovenance(java.lang.String value);
+
    public java.util.List getDetailscollectepfnlView1();
 
    public void setDetailscollectepfnlView1(java.util.List value);

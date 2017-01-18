@@ -18,9 +18,11 @@
   ComponentInterface="cm.gov.minfof.model.entityviewobject.common.LettrevoitureView"
   SdoGen="true"
   SdoName="cm.gov.minfof.model.entityviewobject.common.LettrevoitureViewSDO"
-  SdoNameSpace="/cm/gov/minfof/model/entityviewobject/common/">
+  SdoNameSpace="/cm/gov/minfof/model/entityviewobject/common/"
+  RowClass="cm.gov.minfof.model.entityviewobject.LettrevoitureViewRowImpl">
   <DesignTime>
-    <Attr Name="_codeGenFlag2" Value="Coll|VarAccess"/>
+    <Attr Name="_codeGenFlag2" Value="Access|Coll|VarAccess"/>
+    <Attr Name="_isCodegen" Value="true"/>
   </DesignTime>
   <Variable
     Name="dateFin"
@@ -190,6 +192,29 @@
     </AttrArray>
     <DisplayCriteria/>
   </ListBinding>
+  <ListBinding
+    Name="LOV_nomdepart"
+    ListVOName="getLocaliteUser1"
+    ComboRowCountHint="10"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="nomdepart"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="DerivedAttrNames">
+      <Item Value="Idpostechargement"/>
+    </AttrArray>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Nomlocalite"/>
+      <Item Value="Idlocalite"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Nomlocalite"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
   <EntityUsage
     Name="Lettrevoiture"
     Entity="cm.gov.minfof.model.entity.Lettrevoiture"/>
@@ -316,6 +341,22 @@
       <SchemaBasedProperties>
         <CONTROLTYPE
           Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="nomdepart"
+    IsQueriable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    EntityAttrName="nomdepart"
+    EntityUsage="Lettrevoiture"
+    AliasName="nomdepart"
+    LOVName="LOV_nomdepart">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo_lov"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>

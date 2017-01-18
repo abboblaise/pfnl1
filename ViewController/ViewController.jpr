@@ -370,6 +370,10 @@
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
+            <value n="id" v="Commons-validator-1.5.1.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
             <value n="id" v="Oracle XML Parser v2"/>
             <value n="isJDK" v="false"/>
          </hash>
@@ -487,6 +491,15 @@
                </list>
                <value n="description" v="Mail"/>
                <value n="id" v="Mail"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="../lib/commons-validator-1.5.1.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Commons-validator-1.5.1.jar"/>
+               <value n="id" v="Commons-validator-1.5.1.jar"/>
+               <value n="locked" v="true"/>
             </hash>
          </list>
       </hash>
@@ -629,6 +642,10 @@
          </hash>
          <hash>
             <value n="id" v="Mail"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Commons-validator-1.5.1.jar"/>
             <value n="isJDK" v="false"/>
          </hash>
          <hash>

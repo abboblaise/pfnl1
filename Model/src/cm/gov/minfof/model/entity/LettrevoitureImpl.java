@@ -33,6 +33,7 @@ public class LettrevoitureImpl extends EntityImpl {
         Immatriculation,
         iddepartemental,
         idregional,
+        nomdepart,
         Lettrevoiture2,
         IddepartementdestinationLettrevoiture,
         Lettrevoiture4,
@@ -64,6 +65,7 @@ public class LettrevoitureImpl extends EntityImpl {
             return vals;
         }
     }
+
     public static final int IDLETTREVOITURE = AttributesEnum.Idlettrevoiture.index();
     public static final int IDPERMISSIONNAIRE = AttributesEnum.Idpermissionnaire.index();
     public static final int IDDEPARTEMENTDESTINATION = AttributesEnum.Iddepartementdestination.index();
@@ -75,6 +77,7 @@ public class LettrevoitureImpl extends EntityImpl {
     public static final int IMMATRICULATION = AttributesEnum.Immatriculation.index();
     public static final int IDDEPARTEMENTAL = AttributesEnum.iddepartemental.index();
     public static final int IDREGIONAL = AttributesEnum.idregional.index();
+    public static final int NOMDEPART = AttributesEnum.nomdepart.index();
     public static final int LETTREVOITURE2 = AttributesEnum.Lettrevoiture2.index();
     public static final int IDDEPARTEMENTDESTINATIONLETTREVOITURE =
         AttributesEnum.IddepartementdestinationLettrevoiture.index();
@@ -90,6 +93,13 @@ public class LettrevoitureImpl extends EntityImpl {
      * This is the default constructor (do not remove).
      */
     public LettrevoitureImpl() {
+    }
+
+    /**
+     * @return the definition object for this instance class.
+     */
+    public static synchronized EntityDefImpl getDefinitionObject() {
+        return EntityDefImpl.findDefObject("cm.gov.minfof.model.entity.Lettrevoiture");
     }
 
     /**
@@ -280,6 +290,22 @@ public class LettrevoitureImpl extends EntityImpl {
     }
 
     /**
+     * Gets the attribute value for nomdepart, using the alias name nomdepart.
+     * @return the value of nomdepart
+     */
+    public String getnomdepart() {
+        return (String) getAttributeInternal(NOMDEPART);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for nomdepart.
+     * @param value value to set the nomdepart
+     */
+    public void setnomdepart(String value) {
+        setAttributeInternal(NOMDEPART, value);
+    }
+
+    /**
      * @return the associated entity oracle.jbo.RowIterator.
      */
     public RowIterator getLettrevoiture2() {
@@ -379,11 +405,6 @@ public class LettrevoitureImpl extends EntityImpl {
         return new Key(new Object[] { idlettrevoiture });
     }
 
-    /**
-     * @return the definition object for this instance class.
-     */
-    public static synchronized EntityDefImpl getDefinitionObject() {
-        return EntityDefImpl.findDefObject("cm.gov.minfof.model.entity.Lettrevoiture");
-    }
+
 }
 

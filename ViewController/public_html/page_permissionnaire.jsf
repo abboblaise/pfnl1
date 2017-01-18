@@ -352,7 +352,8 @@
                                                                       columns="#{bindings.Mail.hints.displayWidth}"
                                                                       maximumLength="#{bindings.Mail.hints.precision}"
                                                                       shortDesc="#{bindings.Mail.hints.tooltip}"
-                                                                      id="it6">
+                                                                      id="it6"
+                                                                      validator="#{permissionnaireBean.Validemail}">
                                                             <f:validator binding="#{bindings.Mail.validator}"/>
                                                         </af:inputText>
                                                     </af:gridCell>

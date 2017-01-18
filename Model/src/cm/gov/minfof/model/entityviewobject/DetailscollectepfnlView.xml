@@ -16,9 +16,11 @@
   ComponentClass="cm.gov.minfof.model.entityviewobject.DetailscollectepfnlViewImpl"
   SdoGen="true"
   SdoName="cm.gov.minfof.model.entityviewobject.common.DetailscollectepfnlViewSDO"
-  SdoNameSpace="/cm/gov/minfof/model/entityviewobject/common/">
+  SdoNameSpace="/cm/gov/minfof/model/entityviewobject/common/"
+  RowClass="cm.gov.minfof.model.entityviewobject.DetailscollectepfnlViewRowImpl">
   <DesignTime>
-    <Attr Name="_codeGenFlag2" Value="Coll|VarAccess"/>
+    <Attr Name="_codeGenFlag2" Value="Access|Coll|VarAccess"/>
+    <Attr Name="_isCodegen" Value="true"/>
   </DesignTime>
   <ViewAccessor
     Name="OriginespnflsView1"
@@ -71,6 +73,29 @@
     Name="CommuneView1"
     ViewObjectName="cm.gov.minfof.model.entityviewobject.CommuneView"
     RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="getLocaliteUser1"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.getLocaliteUser"
+    RowLevelBinds="true">
+    <ViewCriteriaUsage
+      Name="depCriteria"
+      FullName="cm.gov.minfof.model.entityviewobject.getLocaliteUser.depCriteria"/>
+    <ViewCriteriaUsage
+      Name="getLocaliteUserCriteria"
+      FullName="cm.gov.minfof.model.entityviewobject.getLocaliteUser.getLocaliteUserCriteria"/>
+    <ParameterMap>
+      <PIMap Variable="iddepartementalbind">
+        <TransientExpression
+          trustMode="untrusted"
+          Name="ExpressionScript"><![CDATA[iddepartemental]]></TransientExpression>
+      </PIMap>
+      <PIMap Variable="idregionalbind">
+        <TransientExpression
+          trustMode="untrusted"
+          Name="ExpressionScript"><![CDATA[idregonal]]></TransientExpression>
+      </PIMap>
+    </ParameterMap>
+  </ViewAccessor>
   <ListBinding
     Name="LOV_Idorigine"
     ListVOName="OriginespnflsView1"
@@ -164,7 +189,7 @@
   </ListBinding>
   <ListBinding
     Name="LOV_Idprovenance"
-    ListVOName="LocaliteView1"
+    ListVOName="getLocaliteUser1"
     NullValueFlag="start"
     NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
     MRUCount="0">
@@ -194,6 +219,47 @@
     </AttrArray>
     <AttrArray Name="ListDisplayAttrNames">
       <Item Value="libelletype"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_Idprovenance1"
+    ListVOName="LocaliteView1"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="Idprovenance1"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Idlocalite"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Nomlocalite"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_nomprovenance"
+    ListVOName="getLocaliteUser1"
+    ComboRowCountHint="10"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="nomprovenance"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="DerivedAttrNames">
+      <Item Value="Idprovenance"/>
+    </AttrArray>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Nomlocalite"/>
+      <Item Value="Idlocalite"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Nomlocalite"/>
     </AttrArray>
     <DisplayCriteria/>
   </ListBinding>
@@ -324,6 +390,52 @@
       <SchemaBasedProperties>
         <CONTROLTYPE
           Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="iddepartemental"
+    IsQueriable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    EntityAttrName="iddepartemental"
+    EntityUsage="Detailscollectepfnl"
+    AliasName="iddepartemental"/>
+  <ViewAttribute
+    Name="idregonal"
+    IsQueriable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    EntityAttrName="idregonal"
+    EntityUsage="Detailscollectepfnl"
+    AliasName="idregonal"/>
+  <ViewAttribute
+    Name="Idprovenance1"
+    PrecisionRule="true"
+    EntityAttrName="Idprovenance"
+    EntityUsage="Detailscollectepfnl"
+    AliasName="Idprovenance1"
+    LOVName="LOV_Idprovenance1">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="nomprovenance"
+    IsQueriable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    EntityAttrName="nomprovenance"
+    EntityUsage="Detailscollectepfnl"
+    AliasName="nomprovenance"
+    LOVName="LOV_nomprovenance">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo_lov"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>

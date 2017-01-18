@@ -103,5 +103,6 @@
             Action="createInsertRow"/>
     <list IterBinding="LettrevoitureView1Iterator" StaticList="false" Uses="LOV_Idpostechargement1"
           id="Idpostechargement1" DTSupportsMRU="true" SelectItemValueMode="ListObject"/>
+    <listOfValues IterBinding="LettrevoitureView1Iterator" StaticList="false" Uses="LOV_nomdepart" id="nomdepart"/>
   </bindings>
 </pageDefinition>

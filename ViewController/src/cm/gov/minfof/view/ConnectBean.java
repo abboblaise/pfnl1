@@ -29,6 +29,8 @@ import javax.mail.internet.MimeMessage;
 
 import oracle.adf.model.binding.DCIteratorBinding;
 
+import org.apache.commons.validator.routines.EmailValidator;
+
 public class ConnectBean {
     private boolean editpwd;
 
@@ -222,4 +224,15 @@ public class ConnectBean {
          });
        return session;
      }
+
+    public void Valideemail(FacesContext facesContext, UIComponent uIComponent, Object object) {
+        // Add event code here...
+        String lemail = (String)object;
+        EmailValidator emailValidator = EmailValidator.getInstance();
+        if(!emailValidator.isValid(lemail)){
+            FacesMessage message = new FacesMessage("l'adresse email n'est au forma valide");
+            throw new ValidatorException(message);
+        }
+
+    }
 }

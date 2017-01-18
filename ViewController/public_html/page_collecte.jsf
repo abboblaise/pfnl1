@@ -85,59 +85,51 @@
                                                         <af:convertDateTime pattern="#{bindings.CollectepfnlView1.hints.Datecollecte.format}"/>
                                                     </af:outputText>
                                                 </af:column>
-                                                <af:column sortProperty="#{bindings.CollectepfnlView1.hints.Iddepartement.name}"
-                                                           filterable="true" sortable="true"
-                                                           headerText="#{bindings.CollectepfnlView1.hints.Iddepartement.label}"
-                                                           id="c3" width="87">
-                                                    <af:selectOneChoice value="#{row.bindings.Iddepartement.inputValue}"
-                                                                        label="#{row.bindings.Iddepartement.label}"
-                                                                        required="#{bindings.CollectepfnlView1.hints.Iddepartement.mandatory}"
-                                                                        shortDesc="#{bindings.CollectepfnlView1.hints.Iddepartement.tooltip}"
-                                                                        readOnly="true" id="soc3">
-                                                        <f:selectItems value="#{row.bindings.Iddepartement.items}"
+                                                <af:column headerText="#{bindings.CollectepfnlView1.hints.Iddepartement1.label}"
+                                                           id="c17">
+                                                    <af:selectOneChoice value="#{row.bindings.Iddepartement1.inputValue}"
+                                                                        label="#{row.bindings.Iddepartement1.label}"
+                                                                        required="#{bindings.CollectepfnlView1.hints.Iddepartement1.mandatory}"
+                                                                        shortDesc="#{bindings.CollectepfnlView1.hints.Iddepartement1.tooltip}"
+                                                                        id="soc13" readOnly="true">
+                                                        <f:selectItems value="#{row.bindings.Iddepartement1.items}"
+                                                                       id="si13"/>
+                                                        <f:validator binding="#{row.bindings.Iddepartement1.validator}"/>
+                                                    </af:selectOneChoice>
+                                                </af:column>
+                                                <af:column headerText="#{bindings.CollectepfnlView1.hints.Idlocalite1.label}"
+                                                           id="c3">
+                                                    <af:selectOneChoice value="#{row.bindings.Idlocalite1.inputValue}"
+                                                                        label="#{row.bindings.Idlocalite1.label}"
+                                                                        required="#{bindings.CollectepfnlView1.hints.Idlocalite1.mandatory}"
+                                                                        shortDesc="#{bindings.CollectepfnlView1.hints.Idlocalite1.tooltip}"
+                                                                        id="soc3" readOnly="true">
+                                                        <f:selectItems value="#{row.bindings.Idlocalite1.items}"
                                                                        id="si3"/>
-                                                        <f:validator binding="#{row.bindings.Iddepartement.validator}"/>
+                                                        <f:validator binding="#{row.bindings.Idlocalite1.validator}"/>
                                                     </af:selectOneChoice>
                                                 </af:column>
-                                                <af:column sortProperty="#{bindings.CollectepfnlView1.hints.Idlocalite.name}"
-                                                           filterable="true" sortable="true"
-                                                           headerText="#{bindings.CollectepfnlView1.hints.Idlocalite.label}"
-                                                           id="c4" width="98">
-                                                    <af:selectOneChoice value="#{row.bindings.Idlocalite.inputValue}"
-                                                                        label="#{row.bindings.Idlocalite.label}"
-                                                                        required="#{bindings.CollectepfnlView1.hints.Idlocalite.mandatory}"
-                                                                        shortDesc="#{bindings.CollectepfnlView1.hints.Idlocalite.tooltip}"
-                                                                        readOnly="true" id="soc4">
-                                                        <f:selectItems value="#{row.bindings.Idlocalite.items}"
-                                                                       id="si4"/>
-                                                        <f:validator binding="#{row.bindings.Idlocalite.validator}"/>
+                                                <af:column headerText="#{bindings.CollectepfnlView1.hints.Idposte1.label}"
+                                                           id="c4">
+                                                    <af:selectOneChoice value="#{row.bindings.Idposte1.inputValue}"
+                                                                        label="#{row.bindings.Idposte1.label}"
+                                                                        required="#{bindings.CollectepfnlView1.hints.Idposte1.mandatory}"
+                                                                        shortDesc="#{bindings.CollectepfnlView1.hints.Idposte1.tooltip}"
+                                                                        id="soc4" readOnly="true">
+                                                        <f:selectItems value="#{row.bindings.Idposte1.items}" id="si4"/>
+                                                        <f:validator binding="#{row.bindings.Idposte1.validator}"/>
                                                     </af:selectOneChoice>
                                                 </af:column>
-                                                <af:column sortProperty="#{bindings.CollectepfnlView1.hints.Idposte.name}"
-                                                           filterable="true" sortable="true"
-                                                           headerText="#{bindings.CollectepfnlView1.hints.Idposte.label}"
-                                                           id="c5" width="111">
-                                                    <af:selectOneChoice value="#{row.bindings.Idposte.inputValue}"
-                                                                        label="#{row.bindings.Idposte.label}"
-                                                                        required="#{bindings.CollectepfnlView1.hints.Idposte.mandatory}"
-                                                                        shortDesc="#{bindings.CollectepfnlView1.hints.Idposte.tooltip}"
-                                                                        readOnly="true" id="soc20">
-                                                        <f:selectItems value="#{row.bindings.Idposte.items}" id="si20"/>
-                                                        <f:validator binding="#{row.bindings.Idposte.validator}"/>
-                                                    </af:selectOneChoice>
-                                                </af:column>
-                                                <af:column sortProperty="#{bindings.CollectepfnlView1.hints.Idutilisateur.name}"
-                                                           filterable="true" sortable="true"
-                                                           headerText="#{bindings.CollectepfnlView1.hints.Idutilisateur.label}"
-                                                           id="c16" width="91">
-                                                    <af:selectOneChoice value="#{row.bindings.Idutilisateur.inputValue}"
-                                                                        label="#{row.bindings.Idutilisateur.label}"
-                                                                        required="#{bindings.CollectepfnlView1.hints.Idutilisateur.mandatory}"
-                                                                        shortDesc="#{bindings.CollectepfnlView1.hints.Idutilisateur.tooltip}"
-                                                                        readOnly="true" id="soc21">
-                                                        <f:selectItems value="#{row.bindings.Idutilisateur.items}"
-                                                                       id="si21"/>
-                                                        <f:validator binding="#{row.bindings.Idutilisateur.validator}"/>
+                                                <af:column headerText="#{bindings.CollectepfnlView1.hints.Idutilisateur1.label}"
+                                                           id="c14">
+                                                    <af:selectOneChoice value="#{row.bindings.Idutilisateur1.inputValue}"
+                                                                        label="#{row.bindings.Idutilisateur1.label}"
+                                                                        required="#{bindings.CollectepfnlView1.hints.Idutilisateur1.mandatory}"
+                                                                        shortDesc="#{bindings.CollectepfnlView1.hints.Idutilisateur1.tooltip}"
+                                                                        id="soc17" readOnly="true">
+                                                        <f:selectItems value="#{row.bindings.Idutilisateur1.items}"
+                                                                       id="si17"/>
+                                                        <f:validator binding="#{row.bindings.Idutilisateur1.validator}"/>
                                                     </af:selectOneChoice>
                                                 </af:column>
                                             </af:table>
@@ -155,46 +147,50 @@
                                                     </af:gridCell>
                                                     <af:gridCell marginStart="5px" width="auto" marginEnd="5px"
                                                                  id="gc2">
-                                                        <af:selectOneChoice value="#{bindings.Idutilisateur.inputValue}"
-                                                                            required="#{bindings.Idutilisateur.hints.mandatory}"
-                                                                            shortDesc="#{bindings.Idutilisateur.hints.tooltip}"
-                                                                            id="soc23">
-                                                            <f:selectItems value="#{bindings.Idutilisateur.items}"
-                                                                           id="si23"/>
-                                                            <f:validator binding="#{bindings.Idutilisateur.validator}"/>
-                                                        </af:selectOneChoice>
+                                                        <af:inputComboboxListOfValues id="nomuserId"
+                                                                                      popupTitle="Search and Select: #{bindings.nomuser.hints.label}"
+                                                                                      value="#{bindings.nomuser.inputValue}"
+                                                                                      model="#{bindings.nomuser.listOfValuesModel}"
+                                                                                      required="#{bindings.nomuser.hints.mandatory}"
+                                                                                      columns="#{bindings.nomuser.hints.displayWidth}"
+                                                                                      shortDesc="#{bindings.nomuser.hints.tooltip}">
+                                                            <f:validator binding="#{bindings.nomuser.validator}"/>
+                                                        </af:inputComboboxListOfValues>
                                                     </af:gridCell>
                                                 </af:gridRow>
                                                 <af:gridRow marginTop="5px" height="auto" id="gr2">
                                                     <af:gridCell marginStart="5px" width="auto" id="gc3">
-                                                        <af:outputText value="#{bindings.Idposte.label}" id="ot7"/>
+                                                        <af:outputText value="#{bindings.Iddepartement.label}"
+                                                                       id="ot8"/>
                                                     </af:gridCell>
                                                     <af:gridCell marginStart="5px" width="208px" marginEnd="5px"
                                                                  id="gc4">
-                                                        <af:selectOneChoice value="#{bindings.Idposte.inputValue}"
-                                                                            required="#{bindings.Idposte.hints.mandatory}"
-                                                                            shortDesc="#{bindings.Idposte.hints.tooltip}"
-                                                                            id="soc22">
-                                                            <f:selectItems value="#{bindings.Idposte.items}" id="si22"/>
-                                                            <f:validator binding="#{bindings.Idposte.validator}"/>
-                                                        </af:selectOneChoice>
+                                                        <af:inputComboboxListOfValues id="nomdepartementId" autoSubmit="true"
+                                                                                      popupTitle="Search and Select: #{bindings.nomdepartement.hints.label}"
+                                                                                      value="#{bindings.nomdepartement.inputValue}"
+                                                                                      model="#{bindings.nomdepartement.listOfValuesModel}"
+                                                                                      required="#{bindings.nomdepartement.hints.mandatory}"
+                                                                                      columns="#{bindings.nomdepartement.hints.displayWidth}"
+                                                                                      shortDesc="#{bindings.nomdepartement.hints.tooltip}">
+                                                            <f:validator binding="#{bindings.nomdepartement.validator}"/>
+                                                        </af:inputComboboxListOfValues>
                                                     </af:gridCell>
                                                 </af:gridRow>
                                                 <af:gridRow marginTop="5px" height="auto" id="gr3">
                                                     <af:gridCell marginStart="5px" width="auto" id="gc5">
-                                                        <af:outputText value="#{bindings.Iddepartement.label}"
-                                                                       id="ot8"/>
+                                                        <af:outputText value="#{bindings.Idposte.label}" id="ot7"/>
                                                     </af:gridCell>
                                                     <af:gridCell marginStart="5px" width="auto" marginEnd="5px"
                                                                  id="gc6">
-                                                        <af:selectOneChoice value="#{bindings.Iddepartement.inputValue}"
-                                                                            required="#{bindings.Iddepartement.hints.mandatory}"
-                                                                            shortDesc="#{bindings.Iddepartement.hints.tooltip}"
-                                                                            id="soc1">
-                                                            <f:selectItems value="#{bindings.Iddepartement.items}"
-                                                                           id="si1"/>
-                                                            <f:validator binding="#{bindings.Iddepartement.validator}"/>
-                                                        </af:selectOneChoice>
+                                                        <af:inputComboboxListOfValues id="nomposteId" partialTriggers="nomdepartementId"
+                                                                                      popupTitle="Search and Select: #{bindings.nomposte.hints.label}"
+                                                                                      value="#{bindings.nomposte.inputValue}"
+                                                                                      model="#{bindings.nomposte.listOfValuesModel}"
+                                                                                      required="#{bindings.nomposte.hints.mandatory}"
+                                                                                      columns="#{bindings.nomposte.hints.displayWidth}"
+                                                                                      shortDesc="#{bindings.nomposte.hints.tooltip}">
+                                                            <f:validator binding="#{bindings.nomposte.validator}"/>
+                                                        </af:inputComboboxListOfValues>
                                                     </af:gridCell>
                                                 </af:gridRow>
                                                 <af:gridRow marginTop="5px" height="auto" id="gr4">
@@ -203,14 +199,15 @@
                                                     </af:gridCell>
                                                     <af:gridCell marginStart="5px" width="auto" marginEnd="5px"
                                                                  id="gc8">
-                                                        <af:selectOneChoice value="#{bindings.Idlocalite.inputValue}"
-                                                                            required="#{bindings.Idlocalite.hints.mandatory}"
-                                                                            shortDesc="#{bindings.Idlocalite.hints.tooltip}"
-                                                                            id="soc2">
-                                                            <f:selectItems value="#{bindings.Idlocalite.items}"
-                                                                           id="si2"/>
-                                                            <f:validator binding="#{bindings.Idlocalite.validator}"/>
-                                                        </af:selectOneChoice>
+                                                        <af:inputComboboxListOfValues id="nomlocaliteId" partialTriggers="nomdepartementId"
+                                                                                      popupTitle="Search and Select: #{bindings.nomlocalite.hints.label}"
+                                                                                      value="#{bindings.nomlocalite.inputValue}"
+                                                                                      model="#{bindings.nomlocalite.listOfValuesModel}"
+                                                                                      required="#{bindings.nomlocalite.hints.mandatory}"
+                                                                                      columns="#{bindings.nomlocalite.hints.displayWidth}"
+                                                                                      shortDesc="#{bindings.nomlocalite.hints.tooltip}">
+                                                            <f:validator binding="#{bindings.nomlocalite.validator}"/>
+                                                        </af:inputComboboxListOfValues>
                                                     </af:gridCell>
                                                 </af:gridRow>
                                                 <af:gridRow marginTop="5px" height="auto" id="gr5">
@@ -427,18 +424,16 @@
                                                         <f:validator binding="#{row.bindings.Idorigine.validator}"/>
                                                     </af:selectOneChoice>
                                                 </af:column>
-                                                <af:column sortProperty="#{bindings.DetailscollectepfnlView17.hints.Idprovenance.name}"
-                                                           filterable="true" sortable="true"
-                                                           headerText="#{bindings.DetailscollectepfnlView17.hints.Idprovenance.label}"
-                                                           id="c14">
-                                                    <af:selectOneChoice value="#{row.bindings.Idprovenance.inputValue}"
-                                                                        label="#{row.bindings.Idprovenance.label}"
-                                                                        required="#{bindings.DetailscollectepfnlView17.hints.Idprovenance.mandatory}"
-                                                                        shortDesc="#{bindings.DetailscollectepfnlView17.hints.Idprovenance.tooltip}"
-                                                                        readOnly="true" id="soc17">
-                                                        <f:selectItems value="#{row.bindings.Idprovenance.items}"
-                                                                       id="si17"/>
-                                                        <f:validator binding="#{row.bindings.Idprovenance.validator}"/>
+                                                <af:column headerText="#{bindings.DetailscollectepfnlView17.hints.Idprovenance1.label}"
+                                                           id="c5">
+                                                    <af:selectOneChoice value="#{row.bindings.Idprovenance1.inputValue}"
+                                                                        label="#{row.bindings.Idprovenance1.label}"
+                                                                        required="#{bindings.DetailscollectepfnlView17.hints.Idprovenance1.mandatory}"
+                                                                        shortDesc="#{bindings.DetailscollectepfnlView17.hints.Idprovenance1.tooltip}"
+                                                                        id="soc20" readOnly="true">
+                                                        <f:selectItems value="#{row.bindings.Idprovenance1.items}"
+                                                                       id="si20"/>
+                                                        <f:validator binding="#{row.bindings.Idprovenance1.validator}"/>
                                                     </af:selectOneChoice>
                                                 </af:column>
                                                 <af:column sortProperty="#{bindings.DetailscollectepfnlView17.hints.Iddestination.name}"
@@ -593,14 +588,15 @@
                                                     </af:gridCell>
                                                     <af:gridCell marginStart="5px" width="auto" marginEnd="5px"
                                                                  id="gc28">
-                                                        <af:selectOneChoice value="#{bindings.Idprovenance.inputValue}"
-                                                                            required="#{bindings.Idprovenance.hints.mandatory}"
-                                                                            shortDesc="#{bindings.Idprovenance.hints.tooltip}"
-                                                                            id="soc16">
-                                                            <f:selectItems value="#{bindings.Idprovenance.items}"
-                                                                           id="si16"/>
-                                                            <f:validator binding="#{bindings.Idprovenance.validator}"/>
-                                                        </af:selectOneChoice>
+                                                        <af:inputComboboxListOfValues id="nomprovenanceId"
+                                                                                      popupTitle="Search and Select: #{bindings.nomprovenance.hints.label}"
+                                                                                      value="#{bindings.nomprovenance.inputValue}"
+                                                                                      model="#{bindings.nomprovenance.listOfValuesModel}"
+                                                                                      required="#{bindings.nomprovenance.hints.mandatory}"
+                                                                                      columns="#{bindings.nomprovenance.hints.displayWidth}"
+                                                                                      shortDesc="#{bindings.nomprovenance.hints.tooltip}">
+                                                            <f:validator binding="#{bindings.nomprovenance.validator}"/>
+                                                        </af:inputComboboxListOfValues>
                                                     </af:gridCell>
                                                 </af:gridRow>
                                                 <af:gridRow marginTop="5px" height="auto" id="gr16">

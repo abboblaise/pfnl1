@@ -4,12 +4,12 @@ import cm.gov.minfof.model.entity.common.*;
 import cm.gov.minfof.model.entityviewobject.CategorieunitemesureViewImpl;
 import cm.gov.minfof.model.entityviewobject.CollMultiCritereImpl;
 import cm.gov.minfof.model.entityviewobject.CollecteMultiImpl;
+import cm.gov.minfof.model.entityviewobject.DepartementViewImpl;
 import cm.gov.minfof.model.entityviewobject.NiveauValidationViewImpl;
 import cm.gov.minfof.model.entityviewobject.AgrementsViewImpl;
 import cm.gov.minfof.model.entityviewobject.CategorieproduitViewImpl;
 import cm.gov.minfof.model.entityviewobject.CollectepfnlViewImpl;
 import cm.gov.minfof.model.entityviewobject.CommuneViewImpl;
-import cm.gov.minfof.model.entityviewobject.DepartementViewImpl;
 import cm.gov.minfof.model.entityviewobject.DetailpermisViewImpl;
 import cm.gov.minfof.model.entityviewobject.DetailscollectepfnlViewImpl;
 import cm.gov.minfof.model.entityviewobject.DetailsexportpfnlViewImpl;
@@ -3865,6 +3865,30 @@ public class AppModuleImpl extends ApplicationModuleImpl implements AppModule {
      */
     public ViewObjectImpl getgetLocaliteUser1() {
         return (ViewObjectImpl) findViewObject("getLocaliteUser1");
+    }
+
+    /**
+     * Container's getter for getPosteUserView1.
+     * @return getPosteUserView1
+     */
+    public ViewObjectImpl getgetPosteUserView1() {
+        return (ViewObjectImpl) findViewObject("getPosteUserView1");
+    }
+
+    /**
+     * Container's getter for getDepartementUser1.
+     * @return getDepartementUser1
+     */
+    public ViewObjectImpl getgetDepartementUser1() {
+        return (ViewObjectImpl) findViewObject("getDepartementUser1");
+    }
+
+    /**
+     * Container's getter for getUtilisateur1.
+     * @return getUtilisateur1
+     */
+    public ViewObjectImpl getgetUtilisateur1() {
+        return (ViewObjectImpl) findViewObject("getUtilisateur1");
     }
 }
 

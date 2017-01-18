@@ -36,10 +36,6 @@
     Type="oracle.jbo.domain.Timestamp"
     ColumnType="DATE"
     TableName="collectepfnl">
-    <TransientExpression
-      Name="ExpressionScript"
-      trustMode="untrusted"
-      CodeSourceName="CollectepfnlRow"/>
     <Properties>
       <SchemaBasedProperties>
         <LABEL
@@ -91,6 +87,12 @@
     <DesignTime>
       <Attr Name="_DisplaySize" Value="19"/>
     </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="POSTE_DE_CONT_U00F4LE"/>
+      </SchemaBasedProperties>
+    </Properties>
   </Attribute>
   <Attribute
     Name="Idutilisateur"
@@ -102,6 +104,103 @@
     <DesignTime>
       <Attr Name="_DisplaySize" Value="19"/>
     </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="idregional"
+    ColumnName="idregional"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="BIGINT"
+    IsPersistent="false"
+    IsQueriable="false"/>
+  <Attribute
+    Name="iddepartmental"
+    ColumnName="iddepartmental"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="BIGINT"
+    IsPersistent="false"
+    IsQueriable="false"/>
+  <Attribute
+    Name="nomposte"
+    Precision="80"
+    ColumnName="nomposte"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="CHAR"
+    IsPersistent="false"
+    IsQueriable="false">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="20"/>
+        <LABEL
+          ResId="POSTE_DE_CONT_U00F4LE"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
+  <Attribute
+    Name="nomdepartement"
+    Precision="80"
+    ColumnName="nomdepartement"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="CHAR"
+    IsPersistent="false"
+    IsQueriable="false">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="D_U00E9PARTEMENT"/>
+        <DISPLAYWIDTH
+          Value="20"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
+  <Attribute
+    Name="nomlocalite"
+    Precision="80"
+    ColumnName="nomlocalite"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="CHAR"
+    IsPersistent="false"
+    IsQueriable="false">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="LOCALIT_U00E9"/>
+        <DISPLAYWIDTH
+          Value="20"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
+  <Attribute
+    Name="idusr"
+    Precision="80"
+    ColumnName="idusr"
+    SQLType="VARCHAR"
+    Type="java.math.BigDecimal"
+    ColumnType="CHAR"
+    IsPersistent="false"
+    IsQueriable="false"/>
+  <Attribute
+    Name="nomuser"
+    Precision="80"
+    ColumnName="nomuser"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="CHAR"
+    IsPersistent="false"
+    IsQueriable="false">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="IDENTIFICATEUR"/>
+        <DISPLAYWIDTH
+          Value="20"/>
+      </SchemaBasedProperties>
+    </Properties>
   </Attribute>
   <AccessorAttribute
     Name="Collectepfnl"

@@ -2,6 +2,10 @@ package cm.gov.minfof.model.entity;
 
 import java.math.BigDecimal;
 
+import javax.faces.context.FacesContext;
+
+import javax.servlet.http.HttpSession;
+
 import oracle.jbo.AttributeList;
 import oracle.jbo.Key;
 import oracle.jbo.Row;
@@ -33,6 +37,9 @@ public class DetailscollectepfnlImpl extends EntityImpl {
         Idprovenance,
         Nomacteur,
         Typeacteur,
+        iddepartemental,
+        idregonal,
+        nomprovenance,
         Detailscollectepfnl,
         IdcollectepfnlDetailscollectepfnl,
         Detailscollectepfnl1,
@@ -86,6 +93,9 @@ public class DetailscollectepfnlImpl extends EntityImpl {
     public static final int IDPROVENANCE = AttributesEnum.Idprovenance.index();
     public static final int NOMACTEUR = AttributesEnum.Nomacteur.index();
     public static final int TYPEACTEUR = AttributesEnum.Typeacteur.index();
+    public static final int IDDEPARTEMENTAL = AttributesEnum.iddepartemental.index();
+    public static final int IDREGONAL = AttributesEnum.idregonal.index();
+    public static final int NOMPROVENANCE = AttributesEnum.nomprovenance.index();
     public static final int DETAILSCOLLECTEPFNL = AttributesEnum.Detailscollectepfnl.index();
     public static final int IDCOLLECTEPFNLDETAILSCOLLECTEPFNL =
         AttributesEnum.IdcollectepfnlDetailscollectepfnl.index();
@@ -297,6 +307,63 @@ public class DetailscollectepfnlImpl extends EntityImpl {
      */
     public void setTypeacteur(Integer value) {
         setAttributeInternal(TYPEACTEUR, value);
+    }
+
+    /**
+     * Gets the attribute value for iddepartemental, using the alias name iddepartemental.
+     * @return the value of iddepartemental
+     */
+    public BigDecimal getiddepartemental() {
+        FacesContext fc = FacesContext.getCurrentInstance();
+        HttpSession session = (HttpSession) fc.getExternalContext().getSession(true);
+        UserData ud = (UserData) session.getAttribute("user");
+        //System.out.println("Id département"+ud.getIddepartement());
+        return ud.getIddepartement();
+        //return (BigDecimal) getAttributeInternal(IDDEPARTEMENTAL);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for iddepartemental.
+     * @param value value to set the iddepartemental
+     */
+    public void setiddepartemental(BigDecimal value) {
+        setAttributeInternal(IDDEPARTEMENTAL, value);
+    }
+
+    /**
+     * Gets the attribute value for idregonal, using the alias name idregonal.
+     * @return the value of idregonal
+     */
+    public BigDecimal getidregonal() {
+        FacesContext fc = FacesContext.getCurrentInstance();
+        HttpSession session = (HttpSession) fc.getExternalContext().getSession(true);
+        UserData ud = (UserData) session.getAttribute("user");
+        return ud.getIdregion();
+        //return (BigDecimal) getAttributeInternal(IDREGONAL);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for idregonal.
+     * @param value value to set the idregonal
+     */
+    public void setidregonal(BigDecimal value) {
+        setAttributeInternal(IDREGONAL, value);
+    }
+
+    /**
+     * Gets the attribute value for nomprovenance, using the alias name nomprovenance.
+     * @return the value of nomprovenance
+     */
+    public String getnomprovenance() {
+        return (String) getAttributeInternal(NOMPROVENANCE);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for nomprovenance.
+     * @param value value to set the nomprovenance
+     */
+    public void setnomprovenance(String value) {
+        setAttributeInternal(NOMPROVENANCE, value);
     }
 
     /**

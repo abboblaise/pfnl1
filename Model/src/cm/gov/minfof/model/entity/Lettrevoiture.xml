@@ -206,6 +206,23 @@
     ColumnType="BIGINT"
     IsPersistent="false"
     IsQueriable="false"/>
+  <Attribute
+    Name="nomdepart"
+    Precision="80"
+    ColumnName="nomdepart"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="CHAR"
+    TableName="lettrevoiture"
+    IsPersistent="false"
+    IsQueriable="false">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="20"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
   <AccessorAttribute
     Name="Lettrevoiture2"
     Association="cm.gov.minfof.model.entity.FkLettrevoiture3Assoc"

@@ -98,16 +98,16 @@
                                                         <f:validator binding="#{row.bindings.Idpermissionnaire.validator}"/>
                                                     </af:selectOneChoice>
                                                 </af:column>
-                                                <af:column headerText="#{bindings.ExportpfnlView1.hints.Idposteexport.label}"
-                                                           id="c5">
-                                                    <af:selectOneChoice value="#{row.bindings.Idposteexport.inputValue}"
-                                                                        label="#{row.bindings.Idposteexport.label}"
-                                                                        required="#{bindings.ExportpfnlView1.hints.Idposteexport.mandatory}"
-                                                                        shortDesc="#{bindings.ExportpfnlView1.hints.Idposteexport.tooltip}"
-                                                                        readOnly="true" id="soc10">
-                                                        <f:selectItems value="#{row.bindings.Idposteexport.items}"
-                                                                       id="si10"/>
-                                                        <f:validator binding="#{row.bindings.Idposteexport.validator}"/>
+                                                <af:column headerText="#{bindings.ExportpfnlView1.hints.Idposteexport1.label}"
+                                                           id="c15">
+                                                    <af:selectOneChoice value="#{row.bindings.Idposteexport1.inputValue}"
+                                                                        label="#{row.bindings.Idposteexport1.label}"
+                                                                        required="#{bindings.ExportpfnlView1.hints.Idposteexport1.mandatory}"
+                                                                        shortDesc="#{bindings.ExportpfnlView1.hints.Idposteexport1.tooltip}"
+                                                                        id="soc15" readOnly="true">
+                                                        <f:selectItems value="#{row.bindings.Idposteexport1.items}"
+                                                                       id="si15"/>
+                                                        <f:validator binding="#{row.bindings.Idposteexport1.validator}"/>
                                                     </af:selectOneChoice>
                                                 </af:column>
                                                 <af:column headerText="#{bindings.ExportpfnlView1.hints.Dateexport.label}"
