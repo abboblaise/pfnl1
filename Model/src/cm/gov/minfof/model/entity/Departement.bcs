@@ -1,0 +1,9 @@
+//Groovy Scripts for cm.gov.minfof.model.entity.Departement
+
+package cm.gov.minfof.model.entity
+
+import oracle.jbo.script.annotation.MessageParameterExpression;
+
+
+
+
