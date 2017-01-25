@@ -327,9 +327,10 @@
                                                                        id="b4"
                                                                        action="#{lettreVoitureBean.enregistrerLettre}"/>
                                                             <af:spacer width="10" height="10" id="s4"/>
-                                                            <af:button actionListener="#{bindings.Rollback.execute}"
+                                                            <af:button
                                                                        text="#{viewcontrollerBundle.ANNULER}"
-                                                                       immediate="true" id="b6">
+                                                                       immediate="true" id="b6"
+                                                                       action="#{lettreVoitureBean.annulerLettreVoiture}">
                                                                 <af:resetActionListener/>
                                                             </af:button>
                                                         </af:panelGroupLayout>
@@ -536,9 +537,10 @@
                                                                    text="#{viewcontrollerBundle.ENREGISTRER}" id="b12"
                                                                    action="#{lettreVoitureBean.enregistrerLettre}"/>
                                                         <af:spacer width="10" height="10" id="s8"/>
-                                                        <af:button actionListener="#{bindings.Rollback.execute}"
+                                                        <af:button
                                                                    text="#{viewcontrollerBundle.ANNULER}"
-                                                                   immediate="true" id="b13">
+                                                                   immediate="true" id="b13"
+                                                                   action="#{lettreVoitureBean.annulerDetailsLettre}">
                                                             <af:resetActionListener/>
                                                         </af:button>
                                                     </af:panelGroupLayout>

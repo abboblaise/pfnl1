@@ -47,7 +47,7 @@
         <LABEL
           ResId="SOURCE"/>
         <DISPLAYWIDTH
-          Value="50"/>
+          Value="100"/>
       </SchemaBasedProperties>
     </Properties>
   </Attribute>

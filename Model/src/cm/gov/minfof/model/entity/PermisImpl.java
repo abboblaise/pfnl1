@@ -37,6 +37,7 @@ public class PermisImpl extends EntityImpl {
         Typedocument,
         Cheminfichier,
         Nomfichier,
+        Idceqe,
         Permis,
         IdpermissionnairePermis,
         Permis1,
@@ -46,7 +47,6 @@ public class PermisImpl extends EntityImpl {
         Exportpfnl,
         Certificatorigine;
         private static AttributesEnum[] vals = null;
-        ;
         private static final int firstIndex = 0;
 
         protected int index() {
@@ -81,6 +81,7 @@ public class PermisImpl extends EntityImpl {
     public static final int TYPEDOCUMENT = AttributesEnum.Typedocument.index();
     public static final int CHEMINFICHIER = AttributesEnum.Cheminfichier.index();
     public static final int NOMFICHIER = AttributesEnum.Nomfichier.index();
+    public static final int IDCEQE = AttributesEnum.Idceqe.index();
     public static final int PERMIS = AttributesEnum.Permis.index();
     public static final int IDPERMISSIONNAIREPERMIS = AttributesEnum.IdpermissionnairePermis.index();
     public static final int PERMIS1 = AttributesEnum.Permis1.index();
@@ -280,6 +281,22 @@ public class PermisImpl extends EntityImpl {
         setAttributeInternal(NOMFICHIER, value);
     }
 
+
+    /**
+     * Gets the attribute value for Idceqe, using the alias name Idceqe.
+     * @return the value of Idceqe
+     */
+    public BigDecimal getIdceqe() {
+        return (BigDecimal) getAttributeInternal(IDCEQE);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for Idceqe.
+     * @param value value to set the Idceqe
+     */
+    public void setIdceqe(BigDecimal value) {
+        setAttributeInternal(IDCEQE, value);
+    }
 
     /**
      * @return the associated entity oracle.jbo.RowIterator.

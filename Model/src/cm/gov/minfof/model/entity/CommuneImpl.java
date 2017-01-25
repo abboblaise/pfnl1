@@ -24,12 +24,12 @@ public class CommuneImpl extends EntityImpl {
         Idcommunes,
         Nomcommune,
         Iddepartements,
+        Codecommune,
         Commune,
         IddepartementsCommune,
         Departement,
         Region,
-        Departement1,
-        Localite;
+        Departement1;
         private static AttributesEnum[] vals = null;
         private static final int firstIndex = 0;
 
@@ -57,12 +57,12 @@ public class CommuneImpl extends EntityImpl {
     public static final int IDCOMMUNES = AttributesEnum.Idcommunes.index();
     public static final int NOMCOMMUNE = AttributesEnum.Nomcommune.index();
     public static final int IDDEPARTEMENTS = AttributesEnum.Iddepartements.index();
+    public static final int CODECOMMUNE = AttributesEnum.Codecommune.index();
     public static final int COMMUNE = AttributesEnum.Commune.index();
     public static final int IDDEPARTEMENTSCOMMUNE = AttributesEnum.IddepartementsCommune.index();
     public static final int DEPARTEMENT = AttributesEnum.Departement.index();
     public static final int REGION = AttributesEnum.Region.index();
     public static final int DEPARTEMENT1 = AttributesEnum.Departement1.index();
-    public static final int LOCALITE = AttributesEnum.Localite.index();
 
     /**
      * This is the default constructor (do not remove).
@@ -127,6 +127,22 @@ public class CommuneImpl extends EntityImpl {
     }
 
     /**
+     * Gets the attribute value for Codecommune, using the alias name Codecommune.
+     * @return the value of Codecommune
+     */
+    public String getCodecommune() {
+        return (String) getAttributeInternal(CODECOMMUNE);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for Codecommune.
+     * @param value value to set the Codecommune
+     */
+    public void setCodecommune(String value) {
+        setAttributeInternal(CODECOMMUNE, value);
+    }
+
+    /**
      * @return the associated entity oracle.jbo.RowIterator.
      */
     public RowIterator getCommune() {
@@ -180,14 +196,6 @@ public class CommuneImpl extends EntityImpl {
      */
     public void setDepartement1(DepartementImpl value) {
         setAttributeInternal(DEPARTEMENT1, value);
-    }
-
-
-    /**
-     * @return the associated entity oracle.jbo.RowIterator.
-     */
-    public RowIterator getLocalite() {
-        return (RowIterator) getAttributeInternal(LOCALITE);
     }
 
 

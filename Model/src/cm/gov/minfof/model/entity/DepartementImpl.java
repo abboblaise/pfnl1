@@ -34,6 +34,7 @@ public class DepartementImpl extends EntityImpl {
         Collectepfnl,
         Detailscollectepfnl;
         private static AttributesEnum[] vals = null;
+        ;
         private static final int firstIndex = 0;
 
         protected int index() {

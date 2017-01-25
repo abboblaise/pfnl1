@@ -71,4 +71,9 @@ public class certificatBean {
             Supprimersertificat();
         }
     }
+
+    public String annulerCertificat() {
+        notifObj.annulerParentEtDetails("PermisView1Iterator", "CertificatorigineView2Iterator");
+        return null;
+    }
 }

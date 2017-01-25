@@ -68,4 +68,9 @@ public class OriginePfnlBean {
         notifObj.showNoticeMessageAction("Enregistrement effectué! <b>"+ nomSource +" </b>a été enregistrée avec succès");
         return null;
     }
+
+    public String annulerOriginePfnl() {
+        notifObj.annulerParent("OriginespnflsView1Iterator");
+        return null;
+    }
 }

@@ -22,7 +22,7 @@
         ResId="cm.gov.minfof.model.entityviewobject.getLastIdOriginePfnl_LABEL"/>
     </SchemaBasedProperties>
   </Properties>
-  <SQLQuery><![CDATA[select coalesce(max(IDORIGINESPNFLS), 0) as idMax from ORIGINESPNFLS]]></SQLQuery>
+  <SQLQuery><![CDATA[select coalesce(max(IDORIGINESPNFLS), 0) as idMax from originespnfls]]></SQLQuery>
   <ViewAttribute
     Name="Idmax"
     IsPersistent="false"

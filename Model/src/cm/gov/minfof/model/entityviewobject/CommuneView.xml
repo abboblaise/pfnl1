@@ -51,6 +51,13 @@
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
+  <ViewAttribute
+    Name="Codecommune"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Codecommune"
+    EntityUsage="Commune"
+    AliasName="codecommune"/>
   <ViewLinkAccessor
     Name="CommuneView"
     ViewLink="cm.gov.minfof.model.entityviewobject.CommunesIbfk1Link"
@@ -59,11 +66,6 @@
   <ViewLinkAccessor
     Name="DepartementView"
     ViewLink="cm.gov.minfof.model.entityviewobject.DepartementsIbfk1Assoc2Link"
-    Type="oracle.jbo.RowIterator"
-    IsUpdateable="false"/>
-  <ViewLinkAccessor
-    Name="LocaliteView"
-    ViewLink="cm.gov.minfof.model.entityviewobject.CommuneToLocaliteLink"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
   <ResourceBundle>

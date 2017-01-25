@@ -22,12 +22,37 @@
         ResId="cm.gov.minfof.model.entityviewobject.getLibelleProduitComplet_LABEL"/>
     </SchemaBasedProperties>
   </Properties>
-  <SQLQuery><![CDATA[select partiesproduitspfnl.idpartiesproduitspfnl, concat(produitspfnl.nomcommercial, '(', partiesrecoltees.nompartierecoltee, ')') as libelle 
-from produitspfnl
-inner join (partiesrecoltees, partiesproduitspfnl)
-on (produitspfnl.idproduitspfnl = partiesproduitspfnl.idproduitspfnl and 
-	   partiesrecoltees.idpartiesrecoltees = partiesproduitspfnl.idpartiesrecoltees)
-order by 1]]></SQLQuery>
+  <SQLQuery><![CDATA[SELECT 
+    CONCAT(produitspfnl.nomcommercial,'(',
+    partiesrecoltees.nompartierecoltee,')') as libelle, 
+    partiesproduitspfnl.idpartiesproduitspfnl,
+    categorieunitemesure.idcategorieunitemesure
+FROM 
+    produitspfnl, 
+    partiesrecoltees, 
+    partiesproduitspfnl,
+    unitemesure,
+    categorieunitemesure
+WHERE 
+    produitspfnl.idproduitspfnl = partiesproduitspfnl.idproduitspfnl AND 
+    partiesrecoltees.idpartiesrecoltees = partiesproduitspfnl.idpartiesrecoltees AND
+    partiesproduitspfnl.idunitemesure = unitemesure.idunitemesure AND
+    categorieunitemesure.idcategorieunitemesure = unitemesure.idcategorie]]></SQLQuery>
+  <ViewAttribute
+    Name="Libelle"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="202"
+    Type="java.lang.String"
+    ColumnType="VARCHAR"
+    AliasName="libelle"
+    Expression="libelle"
+    SQLType="VARCHAR">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="202"/>
+    </DesignTime>
+  </ViewAttribute>
   <ViewAttribute
     Name="Idpartiesproduitspfnl"
     IsUpdateable="false"
@@ -43,18 +68,17 @@ order by 1]]></SQLQuery>
     </DesignTime>
   </ViewAttribute>
   <ViewAttribute
-    Name="Libelle"
+    Name="Idcategorieunitemesure"
     IsUpdateable="false"
     IsPersistent="false"
     PrecisionRule="true"
-    Precision="202"
-    Type="java.lang.String"
-    ColumnType="VARCHAR"
-    AliasName="libelle"
-    Expression="libelle"
-    SQLType="VARCHAR">
+    Type="java.math.BigDecimal"
+    ColumnType="BIGINT"
+    AliasName="idcategorieunitemesure"
+    Expression="idcategorieunitemesure"
+    SQLType="NUMERIC">
     <DesignTime>
-      <Attr Name="_DisplaySize" Value="202"/>
+      <Attr Name="_DisplaySize" Value="20"/>
     </DesignTime>
   </ViewAttribute>
   <ResourceBundle>

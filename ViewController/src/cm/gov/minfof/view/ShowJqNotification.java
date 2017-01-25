@@ -16,6 +16,10 @@ import oracle.adf.view.rich.component.rich.input.RichInputText;
 
 import oracle.binding.BindingContainer;
 
+import oracle.binding.OperationBinding;
+
+import oracle.jbo.Key;
+
 import org.apache.myfaces.trinidad.render.ExtendedRenderKitService;
 import org.apache.myfaces.trinidad.util.Service;
 
@@ -81,5 +85,86 @@ public class ShowJqNotification {
         DCIteratorBinding iterator = (DCIteratorBinding)getBindings().get(iteratorName); 
         String attribute = (String) iterator.getCurrentRow().getAttribute(attributeName);
         return attribute;
+    }
+    
+    public String annulerDoubleParentEtDetails(String iterateurGrandParent, String iterateurParent, String iterateurEnfant) {
+        Key parentcollecteKey = null;
+        DCIteratorBinding iteratorParentCollecte = (DCIteratorBinding)getBindings().get(iterateurGrandParent);
+        if(iteratorParentCollecte != null && iteratorParentCollecte.getCurrentRow() != null)
+            parentcollecteKey = iteratorParentCollecte.getCurrentRow().getKey();
+        
+        Key collecteKey = null;
+        DCIteratorBinding iteratorCollecte = (DCIteratorBinding)getBindings().get(iterateurParent);
+        if(iteratorCollecte != null && iteratorCollecte.getCurrentRow() != null)
+            collecteKey = iteratorCollecte.getCurrentRow().getKey();
+        
+        Key detailsKey = null;
+        DCIteratorBinding iterator = (DCIteratorBinding)getBindings().get(iterateurEnfant);
+        if(iterator != null && iterator.getCurrentRow() != null)
+            detailsKey = iterator.getCurrentRow().getKey();
+        
+        BindingContainer bindings = getBindings();
+        OperationBinding operationBinding = bindings.getOperationBinding("Rollback");
+        Object result = operationBinding.execute();
+        if (!operationBinding.getErrors().isEmpty()) {
+            return null;
+        }
+        
+        if(iteratorParentCollecte != null && parentcollecteKey != null && parentcollecteKey.isNull() != true)
+            iteratorParentCollecte.setCurrentRowWithKey(parentcollecteKey.toStringFormat(true));
+        
+        if(iteratorCollecte != null && collecteKey != null && collecteKey.isNull() != true)
+            iteratorCollecte.setCurrentRowWithKey(collecteKey.toStringFormat(true));
+        
+        if(iterator != null && detailsKey != null && detailsKey.isNull() != true)
+            iterator.setCurrentRowWithKey(detailsKey.toStringFormat(true));
+        
+        return null;
+    }
+
+    public String annulerParentEtDetails(String iterateurParent, String iterateurEnfant) {
+        Key collecteKey = null;
+        DCIteratorBinding iteratorCollecte = (DCIteratorBinding)getBindings().get(iterateurParent);
+        if(iteratorCollecte != null && iteratorCollecte.getCurrentRow() != null)
+            collecteKey = iteratorCollecte.getCurrentRow().getKey();
+        
+        Key detailsKey = null;
+        DCIteratorBinding iterator = (DCIteratorBinding)getBindings().get(iterateurEnfant);
+        if(iterator != null && iterator.getCurrentRow() != null)
+            detailsKey = iterator.getCurrentRow().getKey();
+        
+        BindingContainer bindings = getBindings();
+        OperationBinding operationBinding = bindings.getOperationBinding("Rollback");
+        Object result = operationBinding.execute();
+        if (!operationBinding.getErrors().isEmpty()) {
+            return null;
+        }
+        
+        if(iteratorCollecte != null && collecteKey != null && collecteKey.isNull() != true)
+            iteratorCollecte.setCurrentRowWithKey(collecteKey.toStringFormat(true));
+        
+        if(iterator != null && detailsKey != null && detailsKey.isNull() != true)
+            iterator.setCurrentRowWithKey(detailsKey.toStringFormat(true));
+        
+        return null;
+    }
+    
+    public String annulerParent(String iterateurParent) {
+        Key collecteKey = null;
+        DCIteratorBinding iteratorCollecte = (DCIteratorBinding)getBindings().get(iterateurParent);
+        if(iteratorCollecte != null && iteratorCollecte.getCurrentRow() != null)
+            collecteKey = iteratorCollecte.getCurrentRow().getKey();
+        
+        BindingContainer bindings = getBindings();
+        OperationBinding operationBinding = bindings.getOperationBinding("Rollback");
+        Object result = operationBinding.execute();
+        if (!operationBinding.getErrors().isEmpty()) {
+            return null;
+        }
+        
+        if(iteratorCollecte != null && collecteKey != null && collecteKey.isNull() != true)
+            iteratorCollecte.setCurrentRowWithKey(collecteKey.toStringFormat(true));
+        
+        return null;
     }
 }

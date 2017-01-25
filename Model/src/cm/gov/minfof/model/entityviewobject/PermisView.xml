@@ -18,9 +18,11 @@
   ComponentInterface="cm.gov.minfof.model.entityviewobject.common.PermisView"
   SdoGen="true"
   SdoName="cm.gov.minfof.model.entityviewobject.common.PermisViewSDO"
-  SdoNameSpace="/cm/gov/minfof/model/entityviewobject/common/">
+  SdoNameSpace="/cm/gov/minfof/model/entityviewobject/common/"
+  RowClass="cm.gov.minfof.model.entityviewobject.PermisViewRowImpl">
   <DesignTime>
-    <Attr Name="_codeGenFlag2" Value="Coll|VarAccess"/>
+    <Attr Name="_codeGenFlag2" Value="Access|Coll|VarAccess"/>
+    <Attr Name="_isCodegen" Value="true"/>
   </DesignTime>
   <Variable
     Name="Fin"
@@ -42,6 +44,36 @@
     Name="typeDocumentView1"
     ViewObjectName="cm.gov.minfof.model.entityviewobject.typeDocumentView"
     RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="CeqeView1"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.CeqeView"
+    RowLevelBinds="true">
+    <ViewCriteriaUsage
+      Name="CeqeViewCriteria"
+      FullName="cm.gov.minfof.model.entityviewobject.CeqeView.CeqeViewCriteria"/>
+    <ParameterMap>
+      <PIMap Variable="idpermissionnairebind">
+        <TransientExpression
+          trustMode="untrusted"
+          Name="ExpressionScript"><![CDATA[Idpermissionnaire]]></TransientExpression>
+      </PIMap>
+    </ParameterMap>
+  </ViewAccessor>
+  <ViewAccessor
+    Name="getCeqeParPermissionnaire1"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.getCeqeParPermissionnaire"
+    RowLevelBinds="true">
+    <ViewCriteriaUsage
+      Name="getCeqeParPermissionnaireCriteria"
+      FullName="cm.gov.minfof.model.entityviewobject.getCeqeParPermissionnaire.getCeqeParPermissionnaireCriteria"/>
+    <ParameterMap>
+      <PIMap Variable="idpermissionnairebind">
+        <TransientExpression
+          trustMode="untrusted"
+          Name="ExpressionScript"><![CDATA[Idpermissionnaire]]></TransientExpression>
+      </PIMap>
+    </ParameterMap>
+  </ViewAccessor>
   <ListBinding
     Name="LOV_Idpermissionnaire"
     ListVOName="PermissionnairespnflView1"
@@ -93,6 +125,69 @@
     </AttrArray>
     <AttrArray Name="ListDisplayAttrNames">
       <Item Value="libelleTypeDocument"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_Idceqe"
+    ListVOName="CeqeView1"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="Idceqe"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Idceqe"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Numeroceqe"/>
+      <Item Value="Idpermissionnaire"/>
+      <Item Value="Datedelivrance"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_numeroceqe"
+    ListVOName="getCeqeParPermissionnaire1"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0"
+    ComboRowCountHint="10">
+    <AttrArray Name="AttrNames">
+      <Item Value="numeroceqe"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="DerivedAttrNames">
+      <Item Value="Idceqe"/>
+    </AttrArray>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Numeroceqe"/>
+      <Item Value="Idceqe"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Numeroceqe"/>
+      <Item Value="Nomouraisonsociale"/>
+      <Item Value="Datedelivrance"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_IdceqeFiltre"
+    ListVOName="getCeqeParPermissionnaire1"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="IdceqeFiltre"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Idceqe"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Nomouraisonsociale"/>
     </AttrArray>
     <DisplayCriteria/>
   </ListBinding>
@@ -192,6 +287,53 @@
     EntityAttrName="Nomfichier"
     EntityUsage="Permis"
     AliasName="nomfichier"/>
+  <ViewAttribute
+    Name="Idceqe"
+    PrecisionRule="true"
+    EntityAttrName="Idceqe"
+    EntityUsage="Permis"
+    AliasName="idceqe"
+    LOVName="LOV_Idceqe">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="numeroceqe"
+    IsSelected="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Type="java.lang.String"
+    ColumnType="CHAR"
+    AliasName="VIEW_ATTR"
+    SQLType="VARCHAR"
+    LOVName="LOV_numeroceqe">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="20"/>
+        <CONTROLTYPE
+          Value="combo_lov"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="IdceqeFiltre"
+    PrecisionRule="true"
+    EntityAttrName="Idceqe"
+    EntityUsage="Permis"
+    AliasName="Idceqe1"
+    LOVName="LOV_IdceqeFiltre">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewCriteria
     Name="PermisViewCriteria"
     ViewObjectName="cm.gov.minfof.model.entityviewobject.PermisView"

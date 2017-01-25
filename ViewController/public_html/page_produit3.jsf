@@ -298,9 +298,10 @@
                                                                        action="#{produitPfnl3.enregProduitPfnl}"
                                                                        visible="false"/>
                                                             <af:spacer width="10" height="10" id="s2"/>
-                                                            <af:button actionListener="#{bindings.Rollback.execute}"
+                                                            <af:button
                                                                        text="#{viewcontrollerBundle.ANNULER}"
-                                                                       immediate="true" id="b6">
+                                                                       immediate="true" id="b6"
+                                                                       action="#{produitPfnl3.annulerProduitPfnl}">
                                                                 <af:resetActionListener/>
                                                             </af:button>
                                                         </af:panelGroupLayout>
@@ -513,9 +514,10 @@
                                                                        actionListener="#{bindings.Commit.execute}"
                                                                        action="#{produitPfnl3.enregProduitPfnl}"/>
                                                             <af:spacer width="10" height="10" id="s11"/>
-                                                            <af:button actionListener="#{bindings.Rollback.execute}"
+                                                            <af:button
                                                                        text="#{viewcontrollerBundle.ANNULER}"
-                                                                       immediate="true" id="b17">
+                                                                       immediate="true" id="b17"
+                                                                       action="#{produitPfnl3.annulerPartiesProduit}">
                                                                 <af:resetActionListener/>
                                                             </af:button>
                                                         </af:panelGroupLayout>

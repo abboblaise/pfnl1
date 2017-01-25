@@ -187,6 +187,17 @@
       <Attr Name="_DisplaySize" Value="100"/>
     </DesignTime>
   </Attribute>
+  <Attribute
+    Name="Idceqe"
+    ColumnName="idceqe"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="BIGINT"
+    TableName="permis">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="19"/>
+    </DesignTime>
+  </Attribute>
   <AccessorAttribute
     Name="Permis"
     Association="cm.gov.minfof.model.entity.FkPermis2Assoc"

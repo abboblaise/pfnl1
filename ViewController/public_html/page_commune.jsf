@@ -65,7 +65,7 @@
                                         <af:column sortProperty="#{bindings.CommuneView5.hints.Idcommunes.name}"
                                                    filterable="true" sortable="true"
                                                    headerText="#{bindings.CommuneView5.hints.Idcommunes.label}" id="c1"
-                                                   visible="false">
+                                                   visible="true" rowHeader="true" width="50">
                                             <af:outputText value="#{row.Idcommunes}"
                                                            shortDesc="#{bindings.CommuneView5.hints.Idcommunes.tooltip}"
                                                            id="ot1">
@@ -83,6 +83,19 @@
                                                 <af:convertNumber groupingUsed="false"
                                                                   pattern="#{bindings.CommuneView5.hints.Iddepartements.format}"/>
                                             </af:outputText>
+                                        </af:column>
+                                        <af:column headerText="#{bindings.CommuneView5.hints.Codecommune.label}" id="c4"
+                                                   sortProperty="#{bindings.CommuneView5.hints.Codecommune.name}"
+                                                   filterable="true" sortable="true">
+                                            <af:inputText value="#{row.bindings.Codecommune.inputValue}"
+                                                          label="#{bindings.CommuneView5.hints.Codecommune.label}"
+                                                          required="#{bindings.CommuneView5.hints.Codecommune.mandatory}"
+                                                          columns="#{bindings.CommuneView5.hints.Codecommune.displayWidth}"
+                                                          maximumLength="#{bindings.CommuneView5.hints.Codecommune.precision}"
+                                                          shortDesc="#{bindings.CommuneView5.hints.Codecommune.tooltip}"
+                                                          id="it2" readOnly="true">
+                                                <f:validator binding="#{row.bindings.Codecommune.validator}"/>
+                                            </af:inputText>
                                         </af:column>
                                         <af:column sortProperty="#{bindings.CommuneView5.hints.Nomcommune.name}"
                                                    filterable="true" sortable="true"
@@ -142,6 +155,21 @@
                                                 </af:inputText>
                                             </af:gridCell>
                                         </af:gridRow>
+                                        <af:gridRow id="gr7" marginTop="5px">
+                                            <af:gridCell id="gc11">
+                                                <af:outputText value="#{bindings.Codecommune.hints.label}" id="ot7"/>
+                                            </af:gridCell>
+                                            <af:gridCell id="gc12">
+                                                <af:inputText value="#{bindings.Codecommune.inputValue}"
+                                                              required="#{bindings.Codecommune.hints.mandatory}"
+                                                              columns="#{bindings.Codecommune.hints.displayWidth}"
+                                                              maximumLength="#{bindings.Codecommune.hints.precision}"
+                                                              shortDesc="#{bindings.Codecommune.hints.tooltip}"
+                                                              id="it1">
+                                                    <f:validator binding="#{bindings.Codecommune.validator}"/>
+                                                </af:inputText>
+                                            </af:gridCell>
+                                        </af:gridRow>
                                         <af:gridRow marginTop="5px" height="auto" id="gr2">
                                             <af:gridCell marginStart="5px" width="auto" id="gc3">
                                                 <af:spacer width="10" height="10" id="s10"/>
@@ -171,7 +199,7 @@
                                                 </af:panelGroupLayout>
                                             </af:gridCell>
                                         </af:gridRow>
-                                        <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr4">
+                                        <af:gridRow marginTop="5px" height="auto" id="gr4">
                                             <af:gridCell marginStart="5px" columnSpan="2" marginEnd="5px" id="gc6">
                                                 <af:panelGroupLayout id="pgl1">
                                                     <af:button text="#{viewcontrollerBundle.NOUVEAU}"

@@ -50,12 +50,14 @@
         <AttrNames>
           <Item Value="Numeropermis"/>
           <Item Value="Idpermissionnaire"/>
+          <Item Value="Nomfichier"/>
           <Item Value="Idagrement"/>
           <Item Value="Zonecoupe"/>
           <Item Value="Datedelivrance"/>
           <Item Value="Datefin"/>
-          <Item Value="Typedocument"/>
           <Item Value="Observation"/>
+          <Item Value="Idpermis"/>
+          <Item Value="Typedocument"/>
         </AttrNames>
       </nodeDefinition>
     </tree>
@@ -129,5 +131,6 @@
     <action IterBinding="PermisView1Iterator" id="Previous1" RequiresUpdateModel="true" Action="previous"/>
     <action IterBinding="PermisView1Iterator" id="Next1" RequiresUpdateModel="true" Action="next"/>
     <action IterBinding="PermisView1Iterator" id="Last1" RequiresUpdateModel="true" Action="last"/>
+    <listOfValues IterBinding="PermisView1Iterator" StaticList="false" Uses="LOV_numeroceqe" id="numeroceqe"/>
   </bindings>
 </pageDefinition>

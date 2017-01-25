@@ -20,6 +20,7 @@ import oracle.adf.model.BindingContext;
 
 import oracle.adf.model.binding.DCBindingContainer;
 import oracle.adf.model.binding.DCIteratorBinding;
+import oracle.adf.view.rich.component.rich.input.RichInputComboboxListOfValues;
 import oracle.adf.view.rich.component.rich.input.RichInputText;
 import oracle.adf.view.rich.component.rich.input.RichSelectOneChoice;
 import oracle.adf.view.rich.event.DialogEvent;
@@ -29,10 +30,12 @@ import oracle.binding.AttributeBinding;
 import oracle.binding.BindingContainer;
 import oracle.binding.OperationBinding;
 
+import oracle.jbo.ApplicationModule;
 import oracle.jbo.Row;
 import oracle.jbo.VariableValueManager;
 import oracle.jbo.ViewCriteria;
 import oracle.jbo.ViewCriteriaRow;
+import oracle.jbo.ViewObject;
 import oracle.jbo.domain.Timestamp;
 import oracle.jbo.server.ViewObjectImpl;
 
@@ -60,7 +63,7 @@ public class ExportPfnlBean {
         BindingContainer bindings = getBindings();
         OperationBinding operationBinding = bindings.getOperationBinding("CreateInsert");
         Object result = operationBinding.execute();
-        executemethode("Commit");
+     //   executemethode("Commit");
         if (!operationBinding.getErrors().isEmpty()) {
             return null;
         }
@@ -94,7 +97,7 @@ public class ExportPfnlBean {
         BindingContainer bindings = getBindings();
         OperationBinding operationBinding = bindings.getOperationBinding("CreateInsert1");
         Object result = operationBinding.execute();
-        executemethode("Commit");
+   //     executemethode("Commit");
         if (!operationBinding.getErrors().isEmpty()) {
             return null;
         }
@@ -114,12 +117,7 @@ public class ExportPfnlBean {
     }
 
     public String annulerExport() {
-        BindingContainer bindings = getBindings();
-        OperationBinding operationBinding = bindings.getOperationBinding("Rollback");
-        Object result = operationBinding.execute();
-        if (!operationBinding.getErrors().isEmpty()) {
-            return null;
-        }
+        notifObj.annulerParent("ExportpfnlView1Iterator");
         return null;
     }
 
@@ -174,7 +172,7 @@ public class ExportPfnlBean {
     }
     
     public void chargedetails(){
-        DCIteratorBinding iterIB = (DCIteratorBinding) getBindings().get("CertificatorigineView1Iterator");
+        DCIteratorBinding iterIB = (DCIteratorBinding) getBindings().get("getCoParPermisActif1Iterator");
         ViewObjectImpl vo =  (ViewObjectImpl)iterIB.getViewObject();  
         //ViewCriteria vc = vo.createViewCriteria();
         //ViewCriteriaRow vcr=vc.createViewCriteriaRow();
@@ -257,13 +255,16 @@ public class ExportPfnlBean {
         //ViewCriteria vc = vo.createViewCriteria();
         //ViewCriteriaRow vcr=vc.createViewCriteriaRow();
         
-        RichSelectOneChoice soc = (RichSelectOneChoice)findComponent(FacesContext.getCurrentInstance().getViewRoot(), "soc13");
+        RichInputComboboxListOfValues soc = (RichInputComboboxListOfValues)findComponent(FacesContext.getCurrentInstance().getViewRoot(), "numeroco1Id");
+        //RichSelectOneChoice soc = (RichSelectOneChoice)findComponent(FacesContext.getCurrentInstance().getViewRoot(), "soc13");
         RichSelectOneChoice idpdt = (RichSelectOneChoice)findComponent(FacesContext.getCurrentInstance().getViewRoot(), "soc6");
         RichSelectOneChoice unitemesure = (RichSelectOneChoice)findComponent(FacesContext.getCurrentInstance().getViewRoot(), "soc5");
         RichSelectOneChoice lepays = (RichSelectOneChoice)findComponent(FacesContext.getCurrentInstance().getViewRoot(), "soc14");
         RichInputText qte = (RichInputText)findComponent(FacesContext.getCurrentInstance().getViewRoot(), "it6");
         
-        BigDecimal bd= (BigDecimal)soc.getValue();
+        System.out.println("soc ="+ soc.getValue());
+        //BigDecimal bd= (BigDecimal)soc.getValue();
+        String bd= soc.getValue().toString();
         BigDecimal idp = new BigDecimal(0);
         BigDecimal idum = new BigDecimal(0);
         BigDecimal idc = new BigDecimal(0);
@@ -273,7 +274,8 @@ public class ExportPfnlBean {
         //vcr.setAttribute("Idcertificatorigine", bd);
         //vc.add(vcr);
         //vo.appendViewCriteria(vc);
-        vo.setWhereClause("Idcertificatorigine = "+bd);
+     //   vo.setWhereClause("Idcertificatorigine = "+bd);
+     vo.setWhereClause("Numeroco = '"+bd+"'");
         vo.executeQuery();
         System.out.println("id certificat: "+bd);
         if(vo.hasNext()){
@@ -293,6 +295,30 @@ public class ExportPfnlBean {
             System.out.println("les données : "+idp+" "+idum+" "+laqte);
             
         }
+        return null;
+    }
+
+    public String rafraichirGraphe() {
+        System.out.println("je suis entré");
+        DCIteratorBinding multiCritereIter = (DCIteratorBinding) getBindings().get("ExportMultiCritere1Iterator");
+        DCIteratorBinding collecteCompileeIter = (DCIteratorBinding) getBindings().get("CompilExportDestination1Iterator");
+        ViewCriteria multiCritereVC;
+        
+        ApplicationModule appModule = multiCritereIter.getViewObject().getApplicationModule();
+        ViewObject vo = appModule.findViewObject("ExportMultiCritere1");
+        ViewCriteria critere = vo.getViewCriteriaManager().getViewCriteria("ExportMultiCritereCriteria");
+        
+        multiCritereVC = multiCritereIter.getViewCriteria();
+        System.out.println("criteria = " + multiCritereVC.getName());
+        collecteCompileeIter.getViewObject().applyViewCriteria(critere);
+        collecteCompileeIter.executeQuery();
+        System.out.println("je suis sorti");
+        
+        return null;
+    }
+
+    public String annulerDetailsExport() {
+        notifObj.annulerParentEtDetails("ExportpfnlView1Iterator", "DetailsexportpfnlView12Iterator");
         return null;
     }
 }

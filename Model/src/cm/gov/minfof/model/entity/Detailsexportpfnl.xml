@@ -149,6 +149,16 @@
       </SchemaBasedProperties>
     </Properties>
   </Attribute>
+  <Attribute
+    Name="numeroco"
+    Precision="80"
+    ColumnName="numeroco"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="CHAR"
+    IsPersistent="false"
+    IsQueriable="false"
+    IsNotNull="true"/>
   <AccessorAttribute
     Name="Detailsexportpfnl"
     Association="cm.gov.minfof.model.entity.FkDetailsexportpfnl3Assoc"
@@ -233,6 +243,18 @@
     </DesignTime>
     <AttrArray Name="Attributes">
       <Item Value="cm.gov.minfof.model.entity.Detailsexportpfnl.Idcertificat"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="DetailsexportpfnlNumerocoCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"numeroco" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="Detailsexportpfnl_Numeroco_Che"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="cm.gov.minfof.model.entity.Detailsexportpfnl.numeroco"/>
     </AttrArray>
   </Key>
   <Key

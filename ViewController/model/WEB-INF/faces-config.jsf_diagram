@@ -43,7 +43,7 @@
    </Page>
    <NavigationCase
       islink="true"
-      id="NavigationCase14"
+      id="NavigationCase24"
       from="Page11"
       to="Page6">
       <property
@@ -55,7 +55,7 @@
    </NavigationCase>
    <NavigationCase
       islink="true"
-      id="NavigationCase15"
+      id="NavigationCase25"
       from="Page11"
       to="Page7">
       <property
@@ -67,7 +67,7 @@
    </NavigationCase>
    <NavigationCase
       islink="true"
-      id="NavigationCase16"
+      id="NavigationCase26"
       from="Page11"
       to="Page9">
       <property

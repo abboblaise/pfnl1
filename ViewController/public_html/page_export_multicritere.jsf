@@ -332,11 +332,24 @@
                                     </dvt:dataCell>
                                 </dvt:pivotTable>
                             </af:showDetailItem>
-                            <af:showDetailItem id="tab3" text="#{viewcontrollerBundle.GRAPHIQUE}"/>
+                            <af:showDetailItem id="tab3" text="#{viewcontrollerBundle.GRAPHIQUE}">
+                                <af:button text="#{viewcontrollerBundle.RAFRA_U00EECHIR_LES_GRAPHES}" id="b4"
+                                           action="#{exportPfnlBean.rafraichirGraphe}"/>
+                                <dvt:barChart id="barChart1" var="row"
+                                              value="#{bindings.CompilExportDestination1.collectionModel}">
+                                    <dvt:chartLegend id="cl1"/>
+                                    <f:facet name="dataStamp">
+                                        <dvt:chartDataItem id="di1" series="#{row.Nompays} #{row.Nomouraisonsociale}"
+                                                           value="#{row.Quantiteconvertiefinal}"
+                                                           group="#{row.Produit}"/>
+                                    </f:facet>
+                                </dvt:barChart>
+                            </af:showDetailItem>
                         </af:panelTabbed>
                     </af:panelGroupLayout>
                 </f:facet>
             </af:pageTemplate>
         </af:form>
     </af:document>
+    <!--oracle-jdev-comment:preferred-managed-bean-name:exportPfnlBean-->
 </f:view>

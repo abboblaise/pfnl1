@@ -80,6 +80,12 @@
       DataType="CHARACTER"
       CompareLength="2"
       Inverse="false"/>
+    <validation:RegExpValidationBean
+      Name="CoderegionRule1"
+      ResId="LE_CODE_DE_LA_R_U00E9GION_EST_ERRON_U00E9"
+      OnAttribute="Coderegion"
+      Pattern="\d+"
+      Inverse="false"/>
   </Attribute>
   <Attribute
     Name="Descriptionregions"

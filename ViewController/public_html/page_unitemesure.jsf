@@ -259,9 +259,9 @@
                                                                disabled="#{!bindings.Delete.enabled}"
                                                                action="#{uniteMesureBean.supprimer}" rendered="false"/>
                                                     <af:spacer width="10" height="10" id="s4"/>
-                                                    <af:button actionListener="#{bindings.Rollback.execute}"
+                                                    <af:button
                                                                text="#{viewcontrollerBundle.ANNULER}" immediate="true"
-                                                               id="b4">
+                                                               id="b4" action="#{uniteMesureBean.annulerUnite}">
                                                         <af:resetActionListener/>
                                                     </af:button>
                                                 </af:panelGroupLayout>

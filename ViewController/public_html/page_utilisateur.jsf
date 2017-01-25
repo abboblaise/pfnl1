@@ -3,7 +3,7 @@
 <f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
         xmlns:c="http://java.sun.com/jsp/jstl/core">
     <c:set var="viewcontrollerBundle" value="#{adfBundle['cm.gov.minfof.view.ViewControllerBundle']}"/>
-    <af:document title="page_utilisateur.jsf" id="d1">
+    <af:document title="#{viewcontrollerBundle.GESTION__DES_UTILISATEURS}" id="d1">
         <af:messages id="m1"/>
         <af:form id="f1">
             <af:pageTemplate viewId="/TemplateGlobal.jsf" id="pt1">
@@ -12,8 +12,7 @@
                         <f:facet name="toolbar">
                             <af:panelGroupLayout id="pgl3">
                                 <af:button actionListener="#{bindings.Rollback.execute}"
-                                           text="#{viewcontrollerBundle.ACTUALISER}"
-                                           disabled="#{!bindings.Rollback.enabled}" immediate="true" id="b5">
+                                           text="#{viewcontrollerBundle.ACTUALISER}" immediate="true" id="b5">
                                     <af:resetActionListener/>
                                 </af:button>
                                 <af:spacer width="10" height="10" id="s2"/>
@@ -297,18 +296,17 @@
                                     <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr8">
                                         <af:gridCell marginStart="5px" columnSpan="4" marginEnd="5px" id="gc26">
                                             <af:panelGroupLayout id="pgl1">
-                                                <af:button text="#{viewcontrollerBundle.ENREGISTRER}" id="b1"
-                                                           rendered="true"
-                                                           action="#{connectBean.EnregistrerUtilisateur}"/>
-                                                <af:spacer width="10" height="10" id="s1"/>
                                                 <af:button text="#{viewcontrollerBundle.NOUVEAU}"
                                                            disabled="#{!bindings.CreateInsert.enabled}" id="b2"
                                                            action="#{connectBean.CreerUtilisateur}"/>
+                                                <af:spacer width="10" height="10" id="s1"/>
+                                                <af:button text="#{viewcontrollerBundle.ENREGISTRER}" id="b1"
+                                                           rendered="true"
+                                                           action="#{connectBean.EnregistrerUtilisateur}"/>
                                                 <af:spacer width="10" height="10" id="s3"/>
-                                                <af:button actionListener="#{bindings.Rollback.execute}"
-                                                           text="#{viewcontrollerBundle.ANNULER}"
-                                                           disabled="#{!bindings.Rollback.enabled}" immediate="true"
-                                                           id="b4">
+                                                <af:button
+                                                           text="#{viewcontrollerBundle.ANNULER}" immediate="true"
+                                                           id="b4" action="#{connectBean.annulerUtilisateur}">
                                                     <af:resetActionListener/>
                                                 </af:button>
                                             </af:panelGroupLayout>

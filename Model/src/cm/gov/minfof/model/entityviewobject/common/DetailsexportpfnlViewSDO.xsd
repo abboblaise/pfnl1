@@ -22,6 +22,8 @@
             <xsd:element name="Idpartieproduitpfnl" type="xsd:decimal" minOccurs="0" nillable="true"/>
             <xsd:element name="Idcertificat" type="xsd:decimal" minOccurs="0" nillable="true"/>
             <xsd:element name="Idpays" type="xsd:decimal" minOccurs="0" nillable="true"/>
+            <xsd:element name="Idcertificat1" type="xsd:decimal" minOccurs="0"/>
+            <xsd:element name="numeroco" type="xsd:string" minOccurs="0" nillable="true"/>
             <xsd:element name="DetailsexportpfnlView" type="DetailsexportpfnlViewSDO" minOccurs="0"
                  maxOccurs="unbounded"/>
             <xsd:element name="DetailsexportpfnlView1" type="DetailsexportpfnlViewSDO" minOccurs="0"

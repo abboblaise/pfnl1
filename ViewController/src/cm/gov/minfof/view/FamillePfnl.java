@@ -70,4 +70,9 @@ public class FamillePfnl {
             supprimeFamillePfnl();
         }
     }
+
+    public String annulerFamille() {
+        notifObj.annulerParent("FamillePfnlView1Iterator");
+        return null;
+    }
 }

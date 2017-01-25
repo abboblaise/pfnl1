@@ -3,8 +3,11 @@ package cm.gov.minfof.view;
 
 import com.sun.mail.util.MailSSLSocketFactory;
 
+import java.math.BigDecimal;
+
 import java.security.GeneralSecurityException;
 
+import java.util.Iterator;
 import java.util.Properties;
 
 import javax.faces.application.FacesMessage;
@@ -29,6 +32,8 @@ import javax.mail.internet.MimeMessage;
 
 import oracle.adf.model.binding.DCIteratorBinding;
 
+import oracle.adf.view.rich.component.rich.input.RichSelectOneChoice;
+
 import org.apache.commons.validator.routines.EmailValidator;
 
 public class ConnectBean {
@@ -45,6 +50,28 @@ public class ConnectBean {
     public ConnectBean() {
         editpwd = false;
     }
+    
+    private UIComponent findComponent(UIComponent base, String id) {
+
+            if (id.equals(base.getId())) {
+                return base;
+            }
+            UIComponent children = null;
+            UIComponent result = null;
+            Iterator childrens = base.getFacetsAndChildren();
+            while (childrens.hasNext() && (result == null)) {
+                children = (UIComponent) childrens.next();
+                if (id.equals(children.getId())) {
+                    result = children;
+                    break;
+                }
+                result = findComponent(children, id);
+                if (result != null) {
+                    break;
+                }
+            }
+            return result;
+        }
     
     public BindingContainer getBindings() {
         return BindingContext.getCurrent().getCurrentBindingsEntry();
@@ -81,6 +108,21 @@ public class ConnectBean {
     }
 
     public String EnregistrerUtilisateur() {
+        RichSelectOneChoice soc = (RichSelectOneChoice)findComponent(FacesContext.getCurrentInstance().getViewRoot(), "soc3");
+        BigDecimal bd= (BigDecimal)soc.getValue();
+        BigDecimal bd1 = new BigDecimal(2);
+        
+        if(bd.equals(bd1)){
+            RichSelectBooleanCheckbox cb = (RichSelectBooleanCheckbox)findComponent(FacesContext.getCurrentInstance().getViewRoot(), "sbc2");
+            cb.setValue(true);
+            
+            cb = (RichSelectBooleanCheckbox)findComponent(FacesContext.getCurrentInstance().getViewRoot(), "sbc3");
+            cb.setValue(true);
+            
+            cb = (RichSelectBooleanCheckbox)findComponent(FacesContext.getCurrentInstance().getViewRoot(), "sbc4");
+            cb.setValue(true);
+        }
+        
         BindingContainer bindings = getBindings();
         OperationBinding operationBinding = bindings.getOperationBinding("Commit");
         Object result = operationBinding.execute();
@@ -234,5 +276,10 @@ public class ConnectBean {
             throw new ValidatorException(message);
         }
 
+    }
+
+    public String annulerUtilisateur() {
+        
+        return null;
     }
 }

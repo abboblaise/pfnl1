@@ -98,4 +98,14 @@ public class ProduitPfnl3 {
             supprimePartieProduitPfnl();
         }
     }
+
+    public String annulerProduitPfnl() {
+        notifObj.annulerParent("ProduitsPfnlView12Iterator");
+        return null;
+    }
+
+    public String annulerPartiesProduit() {
+        notifObj.annulerParentEtDetails("ProduitsPfnlView12Iterator", "PartiesProduitsPfnlView24Iterator");
+        return null;
+    }
 }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.20.47" id="page_exportPageDef"
-                Package="cm.gov.minfof.view.pageDefs">
+                Package="cm.gov.minfof.view.pageDefs" SkipValidation="validateCurrentRows">
   <parameters/>
   <executables>
     <variableIterator id="variables">
@@ -15,6 +15,8 @@
     <searchRegion Binds="DetailsexportpfnlView12Iterator" Criteria=""
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="DetailsexportpfnlView12Query"/>
     <iterator id="CertificatorigineView1Iterator" Binds="CertificatorigineView1" DataControl="AppModuleDataControl"
+              RangeSize="25"/>
+    <iterator id="getCoParPermisActif1Iterator" Binds="getCoParPermisActif1" DataControl="AppModuleDataControl"
               RangeSize="25"/>
   </executables>
   <bindings>
@@ -37,7 +39,7 @@
           <Item Value="Numeroco"/>
           <Item Value="Dateexport"/>
           <Item Value="Idposteexport"/>
-          <Item Value="Idposteexport1"/>
+          <Item Value="Idpermis1"/>
         </AttrNames>
       </nodeDefinition>
     </tree>
@@ -67,6 +69,7 @@
           <Item Value="Idpartieproduitpfnl"/>
           <Item Value="Idcertificat"/>
           <Item Value="Idpays"/>
+          <Item Value="Idcertificat1"/>
         </AttrNames>
       </nodeDefinition>
     </tree>
@@ -110,5 +113,13 @@
     <action IterBinding="DetailsexportpfnlView12Iterator" id="Delete1"
             InstanceName="AppModuleDataControl.DetailsexportpfnlView12" DataControl="AppModuleDataControl"
             RequiresUpdateModel="false" Action="removeCurrentRow"/>
+    <listOfValues IterBinding="DetailsexportpfnlView12Iterator" StaticList="false" Uses="LOV_Idcertificat"
+                  id="Idcertificat1"/>
+    <listOfValues IterBinding="DetailsexportpfnlView12Iterator" StaticList="false" Uses="LOV_numeroco" id="numeroco1"/>
+    <listOfValues IterBinding="ExportpfnlView1Iterator" StaticList="false" Uses="LOV_nomouraisonsociale"
+                  id="nomouraisonsociale"/>
+    <listOfValues IterBinding="ExportpfnlView1Iterator" StaticList="false" Uses="LOV_numeropermis" id="numeropermis"/>
+    <listOfValues IterBinding="ExportpfnlView1Iterator" StaticList="false" Uses="LOV_nompostecontrole"
+                  id="nompostecontrole"/>
   </bindings>
 </pageDefinition>

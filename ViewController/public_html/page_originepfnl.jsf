@@ -155,9 +155,9 @@
                                                     <af:button text="#{viewcontrollerBundle.SUPPRIMER}" id="b3"
                                                                action="#{originePfnlBean.supprimeOriginePfnl}"
                                                                rendered="false"/>
-                                                    <af:button actionListener="#{bindings.Rollback.execute}"
+                                                    <af:button
                                                                text="#{viewcontrollerBundle.ANNULER}" immediate="true"
-                                                               id="b4">
+                                                               id="b4" action="#{originePfnlBean.annulerOriginePfnl}">
                                                         <af:resetActionListener/>
                                                     </af:button>
                                                 </af:panelGroupLayout>

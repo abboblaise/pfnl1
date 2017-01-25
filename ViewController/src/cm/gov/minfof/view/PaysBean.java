@@ -79,4 +79,9 @@ public class PaysBean {
             supprimePays();
         }
     }
+
+    public String annulerPays() {
+        notifObj.annulerParent("PaysView1Iterator");
+        return null;
+    }
 }

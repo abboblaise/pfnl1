@@ -54,6 +54,7 @@
     <page path="/page_lettrevoiture_multicritere.jsf"
           usageId="cm_gov_minfof_view_page_lettrevoiture_multicriterePageDef"/>
     <page path="/page_export_multicritere.jsf" usageId="cm_gov_minfof_view_page_export_multicriterePageDef"/>
+    <page path="/page_ceqe.jsf" usageId="cm_gov_minfof_view_page_ceqePageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="cm_gov_minfof_view_page_regionPageDef" path="cm.gov.minfof.view.pageDefs.page_regionPageDef"/>
@@ -114,6 +115,7 @@
           path="cm.gov.minfof.view.pageDefs.page_lettrevoiture_multicriterePageDef"/>
     <page id="cm_gov_minfof_view_page_export_multicriterePageDef"
           path="cm.gov.minfof.view.pageDefs.page_export_multicriterePageDef"/>
+    <page id="cm_gov_minfof_view_page_ceqePageDef" path="cm.gov.minfof.view.pageDefs.page_ceqePageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="cm.gov.minfof.model.entity"

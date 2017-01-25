@@ -68,4 +68,9 @@ public class PostecBean {
             SupprimerPoste();
         }
     }
+
+    public String annulerPoste() {
+        notifObj.annulerParent("PostecontroleView1Iterator");
+        return null;
+    }
 }

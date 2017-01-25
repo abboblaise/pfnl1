@@ -8,6 +8,8 @@
               id="ExportMultiCritere1Iterator"/>
     <searchRegion Criteria="ExportMultiCritereCriteria" Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
                   Binds="ExportMultiCritere1Iterator" id="ExportMultiCritereCriteriaQuery"/>
+    <iterator Binds="CompilExportDestination1" RangeSize="-1" DataControl="AppModuleDataControl"
+              id="CompilExportDestination1Iterator"/>
   </executables>
   <bindings>
     <tree IterBinding="ExportMultiCritere1Iterator" id="ExportMultiCritere1">
@@ -79,5 +81,16 @@
         </sorts>
       </pivotTableDataMap>
     </pivotTable>
+    <tree IterBinding="CompilExportDestination1Iterator" id="CompilExportDestination1" ChangeEventPolicy="ppr">
+      <nodeDefinition DefName="cm.gov.minfof.model.entityviewobject.CompilExportDestination"
+                      Name="CompilExportDestination1">
+        <AttrNames>
+          <Item Value="Quantiteconvertiefinal"/>
+          <Item Value="Produit"/>
+          <Item Value="Nompays"/>
+          <Item Value="Nomouraisonsociale"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
   </bindings>
 </pageDefinition>

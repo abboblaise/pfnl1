@@ -142,22 +142,56 @@
     </Properties>
   </Attribute>
   <Attribute
-    Name="iddepartemental"
-    ColumnName="iddepartemental"
-    SQLType="NUMERIC"
-    Type="java.math.BigDecimal"
-    ColumnType="BIGINT"
+    Name="nomouraisonsociale"
+    Precision="80"
+    ColumnName="nomouraisonsociale"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="CHAR"
     IsPersistent="false"
-    IsQueriable="false"/>
+    IsQueriable="false"
+    IsNotNull="true">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="20"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
   <Attribute
-    Name="idregional"
-    ColumnName="idregional"
-    SQLType="NUMERIC"
-    Type="java.math.BigDecimal"
-    ColumnType="BIGINT"
+    Name="numeropermis"
+    Precision="80"
+    ColumnName="numeropermis"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="CHAR"
+    IsNotNull="true"
+    IsPersistent="false"
+    IsQueriable="false">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="20"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
+  <Attribute
+    Name="nompostecontrole"
+    Precision="80"
+    ColumnName="nompostecontrole"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="CHAR"
     TableName="exportpfnl"
     IsPersistent="false"
-    IsQueriable="false"/>
+    IsQueriable="false">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="20"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
   <AccessorAttribute
     Name="Exportpfnl"
     Association="cm.gov.minfof.model.entity.FkExportpfnl2Assoc"
@@ -232,6 +266,18 @@
     </AttrArray>
   </Key>
   <Key
+    Name="ExportpfnlNomouraisonsocialeCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"nomouraisonsociale" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="Exportpfnl_Nomouraisonsociale_"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="cm.gov.minfof.model.entity.Exportpfnl.nomouraisonsociale"/>
+    </AttrArray>
+  </Key>
+  <Key
     Name="ExportpfnlNumeroexportCheck">
     <DesignTime>
       <Attr Name="_isNotNull" Value="true"/>
@@ -241,6 +287,18 @@
     </DesignTime>
     <AttrArray Name="Attributes">
       <Item Value="cm.gov.minfof.model.entity.Exportpfnl.Numeroexport"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="ExportpfnlNumeropermisCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"numeropermis" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="Exportpfnl_Numeropermis_Check"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="cm.gov.minfof.model.entity.Exportpfnl.numeropermis"/>
     </AttrArray>
   </Key>
   <Key

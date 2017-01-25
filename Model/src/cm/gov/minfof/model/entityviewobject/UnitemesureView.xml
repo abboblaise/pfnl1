@@ -20,6 +20,10 @@
   <DesignTime>
     <Attr Name="_codeGenFlag2" Value="Coll|VarAccess"/>
   </DesignTime>
+  <Variable
+    Name="idcategoriebind"
+    Kind="viewcriteria"
+    Type="java.math.BigDecimal"/>
   <ViewAccessor
     Name="CategorieunitemesureView1"
     ViewObjectName="cm.gov.minfof.model.entityviewobject.CategorieunitemesureView"
@@ -131,6 +135,47 @@
     EntityAttrName="Arrondi"
     EntityUsage="Unitemesure"
     AliasName="arrondi"/>
+  <ViewCriteria
+    Name="UnitemesureViewCriteria"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.UnitemesureView"
+    Conjunction="AND">
+    <Properties Name="_Props">
+      <CustomProperties>
+        <Property
+          Name="autoExecute"
+          Value="false"/>
+        <Property
+          Name="mode"
+          Value="Basic"/>
+        <Property
+          Name="allowConjunctionOverride"
+          Value="true"/>
+        <Property
+          Name="showInList"
+          Value="true"/>
+        <Property
+          Name="displayOperators"
+          Value="InAdvancedMode"/>
+      </CustomProperties>
+    </Properties>
+    <ViewCriteria
+      Name="UnitemesureViewSubCriteria1"
+      ViewObjectName="cm.gov.minfof.model.entityviewobject.UnitemesureView"
+      Conjunction="AND">
+      <ViewCriteriaRow
+        Name="UnitemesureViewSubCriteria1_row_0"
+        UpperColumns="1">
+        <ViewCriteriaItem
+          Name="Idcategorie"
+          ViewAttribute="Idcategorie"
+          Operator="="
+          Conjunction="AND"
+          Value=":idcategoriebind"
+          IsBindVarValue="true"
+          Required="Optional"/>
+      </ViewCriteriaRow>
+    </ViewCriteria>
+  </ViewCriteria>
   <ViewLinkAccessor
     Name="UnitemesureView"
     ViewLink="cm.gov.minfof.model.entityviewobject.FkUnitemesure1Link"

@@ -6,19 +6,21 @@
   Name="DetailsexportpfnlView"
   Version="12.2.1.20.47"
   InheritPersonalization="merge"
-  SelectListFlags="1"
-  FromListFlags="1"
-  WhereFlags="1"
   BindingStyle="JDBC"
   CustomQuery="false"
-  SelectAllAttributes="false"
   PageIterMode="Full"
   ComponentClass="cm.gov.minfof.model.entityviewobject.DetailsexportpfnlViewImpl"
   SdoGen="true"
   SdoName="cm.gov.minfof.model.entityviewobject.common.DetailsexportpfnlViewSDO"
-  SdoNameSpace="/cm/gov/minfof/model/entityviewobject/common/">
+  SdoNameSpace="/cm/gov/minfof/model/entityviewobject/common/"
+  RowClass="cm.gov.minfof.model.entityviewobject.DetailsexportpfnlViewRowImpl"
+  SelectListFlags="1"
+  FromListFlags="1"
+  WhereFlags="1"
+  SelectAllAttributes="false">
   <DesignTime>
-    <Attr Name="_codeGenFlag2" Value="Coll|VarAccess"/>
+    <Attr Name="_codeGenFlag2" Value="Access|Coll|VarAccess"/>
+    <Attr Name="_isCodegen" Value="true"/>
   </DesignTime>
   <ViewAccessor
     Name="UnitemesureView1"
@@ -36,6 +38,21 @@
     Name="PaysView1"
     ViewObjectName="cm.gov.minfof.model.entityviewobject.PaysView"
     RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="getCoParPermisActif1"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.getCoParPermisActif"
+    RowLevelBinds="true">
+    <ViewCriteriaUsage
+      Name="getCoParPermisActifCriteria"
+      FullName="cm.gov.minfof.model.entityviewobject.getCoParPermisActif.getCoParPermisActifCriteria"/>
+    <ParameterMap>
+      <PIMap Variable="idexportpfnlbind">
+        <TransientExpression
+          trustMode="untrusted"
+          Name="ExpressionScript"><![CDATA[Idexportpfnl]]></TransientExpression>
+      </PIMap>
+    </ParameterMap>
+  </ViewAccessor>
   <ListBinding
     Name="LOV_Idunitemesure"
     ListVOName="UnitemesureView1"
@@ -73,24 +90,6 @@
     <DisplayCriteria/>
   </ListBinding>
   <ListBinding
-    Name="LOV_Idcertificat"
-    ListVOName="CertificatorigineView1"
-    NullValueFlag="start"
-    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
-    MRUCount="0">
-    <AttrArray Name="AttrNames">
-      <Item Value="Idcertificat"/>
-    </AttrArray>
-    <AttrArray Name="AttrExpressions"/>
-    <AttrArray Name="ListAttrNames">
-      <Item Value="Idcertificatorigine"/>
-    </AttrArray>
-    <AttrArray Name="ListDisplayAttrNames">
-      <Item Value="Numeroco"/>
-    </AttrArray>
-    <DisplayCriteria/>
-  </ListBinding>
-  <ListBinding
     Name="LOV_Idpays"
     ListVOName="PaysView1"
     NullValueFlag="start"
@@ -105,6 +104,70 @@
     </AttrArray>
     <AttrArray Name="ListDisplayAttrNames">
       <Item Value="Nompays"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_Idcertificat"
+    ListVOName="getCoParPermisActif1"
+    NullValueFlag="none"
+    MRUCount="0"
+    ComboRowCountHint="10">
+    <AttrArray Name="AttrNames">
+      <Item Value="Idcertificat"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="DerivedAttrNames">
+      <Item Value="numeroco"/>
+    </AttrArray>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Idcertificatorigine"/>
+      <Item Value="Numeroco"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Numeroco"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_Idcertificat1"
+    ListVOName="CertificatorigineView1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="Idcertificat1"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Idcertificatorigine"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Numeroco"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_numeroco"
+    ListVOName="getCoParPermisActif1"
+    ComboRowCountHint="10"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="numeroco"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="DerivedAttrNames">
+      <Item Value="Idcertificat"/>
+    </AttrArray>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Numeroco"/>
+      <Item Value="Idcertificatorigine"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Numeroco"/>
+      <Item Value="Quantite"/>
+      <Item Value="Destinataire"/>
     </AttrArray>
     <DisplayCriteria/>
   </ListBinding>
@@ -174,7 +237,7 @@
     <Properties>
       <SchemaBasedProperties>
         <CONTROLTYPE
-          Value="choice"/>
+          Value="combo_lov"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
@@ -189,6 +252,39 @@
       <SchemaBasedProperties>
         <CONTROLTYPE
           Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="Idcertificat1"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Idcertificat"
+    EntityUsage="Detailsexportpfnl"
+    AliasName="Idcertificat1"
+    LOVName="LOV_Idcertificat1">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="numeroco"
+    IsQueriable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    EntityAttrName="numeroco"
+    EntityUsage="Detailsexportpfnl"
+    AliasName="numeroco"
+    LOVName="LOV_numeroco">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="15"/>
+        <CONTROLTYPE
+          Value="combo_lov"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>

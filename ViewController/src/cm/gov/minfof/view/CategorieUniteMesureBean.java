@@ -69,4 +69,9 @@ public class CategorieUniteMesureBean {
             supprimeCategUnitMesure();
         }
     }
+
+    public String annulerCategorie() {
+        notifObj.annulerParent("CategorieunitemesureView1Iterator");
+        return null;
+    }
 }

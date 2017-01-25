@@ -67,4 +67,9 @@ public class uniteMesure {
             supprimer();
         }
     }
+
+    public String annulerUnite() {
+        notifObj.annulerParent("UnitemesureView1Iterator");
+        return null;
+    }
 }

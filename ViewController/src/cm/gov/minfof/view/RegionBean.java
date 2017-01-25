@@ -96,4 +96,9 @@ public class RegionBean {
             supprimeRegion();
         }
     }
+
+    public String annulerRegion() {
+        notifObj.annulerParent("RegionView1Iterator");
+        return null;
+    }
 }

@@ -36,8 +36,7 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR"
-    TableName="utilisateur"
-    DefaultValue="Entrez un login">
+    TableName="utilisateur">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="45"/>
     </DesignTime>
@@ -52,14 +51,12 @@
   </Attribute>
   <Attribute
     Name="Passworduser"
-    IsNotNull="true"
     Precision="45"
     ColumnName="passworduser"
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR"
-    TableName="utilisateur"
-    DefaultValue="pswd">
+    TableName="utilisateur">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="45"/>
     </DesignTime>
@@ -79,7 +76,8 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR"
-    TableName="utilisateur">
+    TableName="utilisateur"
+    IsNotNull="true">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="100"/>
     </DesignTime>
@@ -110,7 +108,8 @@
     SQLType="INTEGER"
     Type="java.lang.Integer"
     ColumnType="INT"
-    TableName="utilisateur">
+    TableName="utilisateur"
+    IsNotNull="true">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="10"/>
     </DesignTime>
@@ -161,7 +160,8 @@
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
     ColumnType="BIGINT"
-    TableName="utilisateur">
+    TableName="utilisateur"
+    IsNotNull="true">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="19"/>
     </DesignTime>
@@ -201,8 +201,7 @@
     Type="java.lang.String"
     ColumnType="VARCHAR"
     TableName="utilisateur"
-    IsNotNull="true"
-    DefaultValue="Entrez un email">
+    IsNotNull="true">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="120"/>
     </DesignTime>
@@ -306,6 +305,42 @@
     </DesignTime>
     <AttrArray Name="Attributes">
       <Item Value="cm.gov.minfof.model.entity.Utilisateur.Emailuser"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="UtilisateurIdgroupeCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"idgroupe" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="Utilisateur_Idgroupe_Check"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="cm.gov.minfof.model.entity.Utilisateur.Idgroupe"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="UtilisateurNiveauinterventionCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"niveauintervention" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="UTILISATEUR_NIVEAUINTERVENTION"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="cm.gov.minfof.model.entity.Utilisateur.Niveauintervention"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="UtilisateurNomuserCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"nomuser" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="Utilisateur_Nomuser_Check"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="cm.gov.minfof.model.entity.Utilisateur.Nomuser"/>
     </AttrArray>
   </Key>
   <Key

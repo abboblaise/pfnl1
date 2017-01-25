@@ -14,9 +14,11 @@ public class getLibelleProduitCompletRowImpl extends ViewRowImpl {
      * AttributesEnum: generated enum for identifying attributes and accessors. DO NOT MODIFY.
      */
     protected enum AttributesEnum {
+        Libelle,
         Idpartiesproduitspfnl,
-        Libelle;
+        Idcategorieunitemesure;
         private static AttributesEnum[] vals = null;
+        ;
         private static final int firstIndex = 0;
 
         protected int index() {
@@ -38,8 +40,11 @@ public class getLibelleProduitCompletRowImpl extends ViewRowImpl {
             return vals;
         }
     }
-    public static final int IDPARTIESPRODUITSPFNL = AttributesEnum.Idpartiesproduitspfnl.index();
+
+
     public static final int LIBELLE = AttributesEnum.Libelle.index();
+    public static final int IDPARTIESPRODUITSPFNL = AttributesEnum.Idpartiesproduitspfnl.index();
+    public static final int IDCATEGORIEUNITEMESURE = AttributesEnum.Idcategorieunitemesure.index();
 
     /**
      * This is the default constructor (do not remove).

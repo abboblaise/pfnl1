@@ -29,6 +29,7 @@ public class DetailsexportpfnlImpl extends EntityImpl {
         Idpartieproduitpfnl,
         Idcertificat,
         Idpays,
+        numeroco,
         Detailsexportpfnl,
         IdunitemesureDetailsexportpfnl,
         Detailsexportpfnl1,
@@ -70,6 +71,7 @@ public class DetailsexportpfnlImpl extends EntityImpl {
     public static final int IDPARTIEPRODUITPFNL = AttributesEnum.Idpartieproduitpfnl.index();
     public static final int IDCERTIFICAT = AttributesEnum.Idcertificat.index();
     public static final int IDPAYS = AttributesEnum.Idpays.index();
+    public static final int NUMEROCO = AttributesEnum.numeroco.index();
     public static final int DETAILSEXPORTPFNL = AttributesEnum.Detailsexportpfnl.index();
     public static final int IDUNITEMESUREDETAILSEXPORTPFNL = AttributesEnum.IdunitemesureDetailsexportpfnl.index();
     public static final int DETAILSEXPORTPFNL1 = AttributesEnum.Detailsexportpfnl1.index();
@@ -221,6 +223,24 @@ public class DetailsexportpfnlImpl extends EntityImpl {
      */
     public void setIdpays(BigDecimal value) {
         setAttributeInternal(IDPAYS, value);
+    }
+
+
+    /**
+     * Gets the attribute value for numeroco, using the alias name numeroco.
+     * @return the value of numeroco
+     */
+    public String getnumeroco() {
+        
+        return (String) getAttributeInternal(NUMEROCO);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for numeroco.
+     * @param value value to set the numeroco
+     */
+    public void setnumeroco(String value) {
+        setAttributeInternal(NUMEROCO, value);
     }
 
     /**

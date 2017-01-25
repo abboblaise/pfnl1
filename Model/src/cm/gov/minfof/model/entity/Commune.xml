@@ -12,7 +12,8 @@
   BindingStyle="JDBC"
   RowClass="cm.gov.minfof.model.entity.CommuneImpl"
   DefClass="cm.gov.minfof.model.entity.CommuneDefImpl"
-  CollClass="cm.gov.minfof.model.entity.CommuneCollImpl">
+  CollClass="cm.gov.minfof.model.entity.CommuneCollImpl"
+  xmlns:validation="http://xmlns.oracle.com/adfm/validation">
   <DesignTime>
     <Attr Name="_codeGenFlag2" Value="Init|Delete|Access|DML|Def|Coll|VarAccess"/>
     <Attr Name="_isCodegen" Value="true"/>
@@ -69,6 +70,33 @@
       </SchemaBasedProperties>
     </Properties>
   </Attribute>
+  <Attribute
+    Name="Codecommune"
+    Precision="6"
+    ColumnName="codecommune"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR"
+    TableName="communes"
+    IsNotNull="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="6"/>
+    </DesignTime>
+    <validation:RegExpValidationBean
+      Name="CodecommuneRule0"
+      ResId="LE_CODE_DE_LA_COMMUNE_EST_ERRON_U00E9E"
+      OnAttribute="Codecommune"
+      Pattern="\d+"
+      Inverse="false"/>
+    <validation:LengthValidationBean
+      Name="CodecommuneRule1"
+      ResId="LE_CODE_DE_LA_COMMUNE_EST_DE_6_CARACT_U00E8RES"
+      OnAttribute="Codecommune"
+      CompareType="EQUALTO"
+      DataType="CHARACTER"
+      CompareLength="6"
+      Inverse="false"/>
+  </Attribute>
   <AccessorAttribute
     Name="Commune"
     Association="cm.gov.minfof.model.entity.CommunesIbfk1Assoc"
@@ -104,13 +132,29 @@
     AssociationOtherEnd="cm.gov.minfof.model.entity.CommunesIbfk1Assoc2.Commune1"
     Type="oracle.jbo.server.EntityImpl"
     IsUpdateable="true"/>
-  <AccessorAttribute
-    Name="Localite"
-    Association="cm.gov.minfof.model.entity.CommuneToLocaliteassoc"
-    AssociationEnd="cm.gov.minfof.model.entity.CommuneToLocaliteassoc.Localite"
-    AssociationOtherEnd="cm.gov.minfof.model.entity.CommuneToLocaliteassoc.Commune"
-    Type="oracle.jbo.RowIterator"
-    IsUpdateable="false"/>
+  <Key
+    Name="AltKey"
+    AltKey="true">
+    <DesignTime>
+      <Attr Name="_isUnique" Value="true"/>
+      <Attr Name="_DBObjectName" Value="communes"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="cm.gov.minfof.model.entity.Commune.Codecommune"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="CommunesCodecommuneCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"codecommune" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="Communes_Codecommune_Check"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="cm.gov.minfof.model.entity.Commune.Codecommune"/>
+    </AttrArray>
+  </Key>
   <Key
     Name="CommunesNomcommuneCheck">
     <DesignTime>
@@ -155,6 +199,15 @@
       <Item Value="cm.gov.minfof.model.entity.Commune.Iddepartements"/>
     </AttrArray>
   </Key>
+  <validation:UniqueKeyValidationBean
+    Name="CommuneRule0"
+    ResId="CE_CODE_EXISTE_D_U00E9J_U00E0__LE_CODE_DE_LA_COMMUNE_DOIT__U00EATRE_UNIQUE"
+    KeyName="AltKey">
+    <validation:OnAttributes>
+      <validation:Item
+        Value="Codecommune"/>
+    </validation:OnAttributes>
+  </validation:UniqueKeyValidationBean>
   <ResourceBundle>
     <PropertiesBundle
       PropertiesFile="cm.gov.minfof.model.ModelBundle"/>

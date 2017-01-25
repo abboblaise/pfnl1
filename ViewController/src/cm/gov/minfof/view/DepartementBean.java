@@ -80,5 +80,9 @@ public class DepartementBean {
             supprimeDepartement();
         }
     }
-    
+
+    public String annulerDepartement() {
+        notifObj.annulerParentEtDetails("RegionView1Iterator", "DepartementView3Iterator");
+        return null;
+    }
 }

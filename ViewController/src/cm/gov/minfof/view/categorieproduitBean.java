@@ -69,4 +69,9 @@ public class categorieproduitBean {
         }
         return null;
     }
+
+    public String annulerCategProduit() {
+        notifObj.annulerParent("CategorieproduitView1Iterator");
+        return null;
+    }
 }

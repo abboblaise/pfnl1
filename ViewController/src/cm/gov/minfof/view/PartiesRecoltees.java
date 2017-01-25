@@ -70,4 +70,9 @@ public class PartiesRecoltees {
             supprimePartieRecoltees();
         }
     }
+
+    public String annulerPartiesRecoltees() {
+        notifObj.annulerParent("PartiesRecolteesView1Iterator");
+        return null;
+    }
 }

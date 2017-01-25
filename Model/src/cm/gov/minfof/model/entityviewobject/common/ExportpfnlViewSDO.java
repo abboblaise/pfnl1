@@ -30,17 +30,21 @@ public interface ExportpfnlViewSDO extends java.io.Serializable {
 
    public void setIdposteexport(java.math.BigDecimal value);
 
-   public java.math.BigDecimal getIddepartemental();
+   public java.math.BigDecimal getIdpermis1();
 
-   public void setIddepartemental(java.math.BigDecimal value);
+   public void setIdpermis1(java.math.BigDecimal value);
 
-   public java.math.BigDecimal getIdregional();
+   public java.lang.String getNomouraisonsociale();
 
-   public void setIdregional(java.math.BigDecimal value);
+   public void setNomouraisonsociale(java.lang.String value);
 
-   public java.math.BigDecimal getIdposteexport1();
+   public java.lang.String getNumeropermis();
 
-   public void setIdposteexport1(java.math.BigDecimal value);
+   public void setNumeropermis(java.lang.String value);
+
+   public java.lang.String getNompostecontrole();
+
+   public void setNompostecontrole(java.lang.String value);
 
    public java.util.List getExportpfnlView();
 
@@ -54,13 +58,13 @@ public interface ExportpfnlViewSDO extends java.io.Serializable {
 
    public void setDetailsexportpfnlView(java.util.List value);
 
-   public cm.gov.minfof.model.entityviewobject.common.PermissionnairespnflViewSDO getPermissionnairespnflView();
-
-   public void setPermissionnairespnflView(cm.gov.minfof.model.entityviewobject.common.PermissionnairespnflViewSDO value);
-
    public cm.gov.minfof.model.entityviewobject.common.PermisViewSDO getPermisView();
 
    public void setPermisView(cm.gov.minfof.model.entityviewobject.common.PermisViewSDO value);
+
+   public cm.gov.minfof.model.entityviewobject.common.PermissionnairespnflViewSDO getPermissionnairespnflView();
+
+   public void setPermissionnairespnflView(cm.gov.minfof.model.entityviewobject.common.PermissionnairespnflViewSDO value);
 
 
 }

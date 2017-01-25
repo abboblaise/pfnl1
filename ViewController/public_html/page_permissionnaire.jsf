@@ -481,9 +481,10 @@
                                                                        id="b1"
                                                                        action="#{permissionnaireBean.enregistrerPermissionnaire}"/>
                                                             <af:spacer width="10" height="10" id="s3"/>
-                                                            <af:button actionListener="#{bindings.Rollback.execute}"
+                                                            <af:button
                                                                        text="#{viewcontrollerBundle.ANNULER}"
-                                                                       immediate="true" id="b4">
+                                                                       immediate="true" id="b4"
+                                                                       action="#{permissionnaireBean.annulerPermissionnaire}">
                                                                 <af:resetActionListener/>
                                                             </af:button>
                                                         </af:panelGroupLayout>

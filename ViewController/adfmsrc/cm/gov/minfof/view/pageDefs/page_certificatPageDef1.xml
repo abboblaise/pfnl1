@@ -48,6 +48,7 @@
           <Item Value="Quantite"/>
           <Item Value="Idunitemesure"/>
           <Item Value="Destinataire"/>
+          <Item Value="Idpays"/>
         </AttrNames>
       </nodeDefinition>
     </tree>

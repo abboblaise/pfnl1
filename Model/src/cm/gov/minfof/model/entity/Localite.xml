@@ -9,7 +9,12 @@
   DBObjectType="table"
   DBObjectName="localite"
   AliasName="Localite"
-  BindingStyle="JDBC">
+  BindingStyle="JDBC"
+  RowClass="cm.gov.minfof.model.entity.LocaliteImpl">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Access|DML"/>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
   <Attribute
     Name="Idlocalite"
     ColumnName="idlocalite"
@@ -73,13 +78,6 @@
     AssociationOtherEnd="cm.gov.minfof.model.entity.FkLocalite1Assoc.Localite"
     Type="oracle.jbo.server.EntityImpl"
     IsUpdateable="true"/>
-  <AccessorAttribute
-    Name="Commune"
-    Association="cm.gov.minfof.model.entity.CommuneToLocaliteassoc"
-    AssociationEnd="cm.gov.minfof.model.entity.CommuneToLocaliteassoc.Commune"
-    AssociationOtherEnd="cm.gov.minfof.model.entity.CommuneToLocaliteassoc.Localite"
-    Type="cm.gov.minfof.model.entity.CommuneImpl"
-    IsUpdateable="true"/>
   <Key
     Name="LocaliteIdcommuneCheck">
     <DesignTime>
@@ -108,17 +106,6 @@
       <Attr Name="_referencedKey" Value="PRIMARY"/>
       <Attr Name="_isForeign" Value="true"/>
       <Attr Name="_DBObjectName" Value="fk_localite_1"/>
-    </DesignTime>
-    <AttrArray Name="Attributes">
-      <Item Value="cm.gov.minfof.model.entity.Localite.Idcommune"/>
-    </AttrArray>
-  </Key>
-  <Key
-    Name="fk_Localite">
-    <DesignTime>
-      <Attr Name="_referencedKey" Value="PRIMARY"/>
-      <Attr Name="_isForeign" Value="true"/>
-      <Attr Name="_DBObjectName" Value="fk_Localite"/>
     </DesignTime>
     <AttrArray Name="Attributes">
       <Item Value="cm.gov.minfof.model.entity.Localite.Idcommune"/>

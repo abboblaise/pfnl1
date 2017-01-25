@@ -206,9 +206,9 @@
                                                     <af:button text="#{viewcontrollerBundle.SUPPRIMER}"
                                                                disabled="#{!bindings.Delete.enabled}" id="b3"
                                                                action="#{regionBean.supprimeRegion}" rendered="false"/>
-                                                    <af:button actionListener="#{bindings.Rollback.execute}"
+                                                    <af:button
                                                                text="#{viewcontrollerBundle.ANNULER}" immediate="true"
-                                                               id="b6">
+                                                               id="b6" action="#{regionBean.annulerRegion}">
                                                         <af:resetActionListener/>
                                                     </af:button>
                                                 </af:panelGroupLayout>

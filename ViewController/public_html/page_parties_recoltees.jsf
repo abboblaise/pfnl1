@@ -139,9 +139,10 @@
                                                                disabled="#{!bindings.Delete.enabled}" id="b4"
                                                                action="#{partiesRecoltees.supprimePartieRecoltees}"
                                                                rendered="false"/>
-                                                    <af:button actionListener="#{bindings.Rollback.execute}"
+                                                    <af:button
                                                                text="#{viewcontrollerBundle.ANNULER}" immediate="true"
-                                                               id="b5">
+                                                               id="b5"
+                                                               action="#{partiesRecoltees.annulerPartiesRecoltees}">
                                                         <af:resetActionListener/>
                                                     </af:button>
                                                 </af:panelGroupLayout>

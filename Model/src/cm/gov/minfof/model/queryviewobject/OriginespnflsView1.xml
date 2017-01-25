@@ -15,7 +15,7 @@
   <SQLQuery><![CDATA[SELECT PfnlOriginespnfls.IDORIGINESPNFLS,
        PfnlOriginespnfls.NOMSOURCE,
        PfnlOriginespnfls.originepnfl
-FROM pfnl.ORIGINESPNFLS PfnlOriginespnfls]]></SQLQuery>
+FROM pfnl.originespnfls PfnlOriginespnfls]]></SQLQuery>
   <ViewAttribute
     Name="Idoriginespnfls"
     IsUpdateable="false"
@@ -55,7 +55,7 @@ FROM pfnl.ORIGINESPNFLS PfnlOriginespnfls]]></SQLQuery>
     ColumnType="TINYINT"
     AliasName="originepnfl"
     Expression="originepnfl"
-    SQLType="TINYINT">
+    SQLType="INTEGER">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="3"/>
     </DesignTime>

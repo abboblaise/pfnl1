@@ -80,11 +80,18 @@ public class PermissionnaireBean {
     public void Validemail(FacesContext facesContext, UIComponent uIComponent, Object object) {
         // Add event code here...
         String lemail = (String)object;
-        EmailValidator emailValidator = EmailValidator.getInstance();
-        if(!emailValidator.isValid(lemail)){
-            FacesMessage message = new FacesMessage("l'adresse email n'est au forma valide");
-            throw new ValidatorException(message);
+        if(lemail != "" && lemail !=null ){
+            EmailValidator emailValidator = EmailValidator.getInstance();
+            if(!emailValidator.isValid(lemail)){
+                FacesMessage message = new FacesMessage("l'adresse email n'est au forma valide");
+                throw new ValidatorException(message);
+            }
         }
 
+    }
+
+    public String annulerPermissionnaire() {
+        notifObj.annulerParent("PermissionnairespnflView1Iterator");
+        return null;
     }
 }

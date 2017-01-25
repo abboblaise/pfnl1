@@ -35,27 +35,27 @@ public class CommuneViewSDOImpl extends SDODataObject implements CommuneViewSDO 
       set(START_PROPERTY_INDEX + 2 , value);
    }
 
-   public java.util.List getCommuneView() {
-      return getList(START_PROPERTY_INDEX + 3);
+   public java.lang.String getCodecommune() {
+      return getString(START_PROPERTY_INDEX + 3);
    }
 
-   public void setCommuneView(java.util.List value) {
+   public void setCodecommune(java.lang.String value) {
       set(START_PROPERTY_INDEX + 3 , value);
    }
 
-   public java.util.List getDepartementView() {
+   public java.util.List getCommuneView() {
       return getList(START_PROPERTY_INDEX + 4);
    }
 
-   public void setDepartementView(java.util.List value) {
+   public void setCommuneView(java.util.List value) {
       set(START_PROPERTY_INDEX + 4 , value);
    }
 
-   public java.util.List getLocaliteView() {
+   public java.util.List getDepartementView() {
       return getList(START_PROPERTY_INDEX + 5);
    }
 
-   public void setLocaliteView(java.util.List value) {
+   public void setDepartementView(java.util.List value) {
       set(START_PROPERTY_INDEX + 5 , value);
    }
 

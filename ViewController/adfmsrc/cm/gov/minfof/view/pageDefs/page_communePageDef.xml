@@ -33,6 +33,7 @@
         <AttrNames>
           <Item Value="Idcommunes"/>
           <Item Value="Iddepartements"/>
+          <Item Value="Codecommune"/>
           <Item Value="Nomcommune"/>
         </AttrNames>
       </nodeDefinition>
@@ -45,5 +46,10 @@
     <action IterBinding="CommuneView5Iterator" id="Next" RequiresUpdateModel="true" Action="next"/>
     <action IterBinding="CommuneView5Iterator" id="Last" RequiresUpdateModel="true" Action="last"/>
     <action id="Rollback" DataControl="AppModuleDataControl" RequiresUpdateModel="false" Action="rollbackTransaction"/>
+    <attributeValues IterBinding="CommuneView5Iterator" id="Codecommune">
+      <AttrNames>
+        <Item Value="Codecommune"/>
+      </AttrNames>
+    </attributeValues>
   </bindings>
 </pageDefinition>

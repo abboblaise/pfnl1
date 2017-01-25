@@ -209,4 +209,14 @@ public class LettreVoitureBean {
         //chargelocalite();
         
     }
+
+    public String annulerDetailsLettre() {
+        notifObj.annulerParentEtDetails("LettrevoitureView1Iterator", "DetailslettrevoitureView5Iterator");
+        return null;
+    }
+
+    public String annulerLettreVoiture() {
+        notifObj.annulerParent("LettrevoitureView1Iterator");
+        return null;
+    }
 }

@@ -104,10 +104,21 @@
                                                 <f:validator binding="#{row.bindings.Idunitemesure.validator}"/>
                                             </af:selectOneChoice>
                                         </af:column>
+                                        <af:column headerText="#{bindings.CertificatorigineView2.hints.Idpays.label}"
+                                                   id="c6">
+                                            <af:selectOneChoice value="#{row.bindings.Idpays.inputValue}"
+                                                                label="#{row.bindings.Idpays.label}"
+                                                                required="#{bindings.CertificatorigineView2.hints.Idpays.mandatory}"
+                                                                shortDesc="#{bindings.CertificatorigineView2.hints.Idpays.tooltip}"
+                                                                readOnly="true" id="soc8">
+                                                <f:selectItems value="#{row.bindings.Idpays.items}" id="si8"/>
+                                                <f:validator binding="#{row.bindings.Idpays.validator}"/>
+                                            </af:selectOneChoice>
+                                        </af:column>
                                         <af:column sortProperty="#{bindings.CertificatorigineView2.hints.Destinataire.name}"
                                                    filterable="true" sortable="true"
                                                    headerText="#{bindings.CertificatorigineView2.hints.Destinataire.label}"
-                                                   id="c5">
+                                                   id="c5" visible="false">
                                             <af:outputText value="#{row.Destinataire}"
                                                            shortDesc="#{bindings.CertificatorigineView2.hints.Destinataire.tooltip}"
                                                            id="ot9"/>
@@ -124,12 +135,12 @@
                                                 <af:outputText value="#{bindings.Idpermis.label}" id="ot1"/>
                                             </af:gridCell>
                                             <af:gridCell marginStart="5px" width="auto" marginEnd="5px" id="gc2">
-                                                <af:selectOneChoice value="#{bindings.Idpermis.inputValue}"
-                                                                    required="#{bindings.Idpermis.hints.mandatory}"
-                                                                    shortDesc="#{bindings.Idpermis.hints.tooltip}"
-                                                                    id="soc1">
-                                                    <f:selectItems value="#{bindings.Idpermis.items}" id="si1"/>
-                                                    <f:validator binding="#{bindings.Idpermis.validator}"/>
+                                                <af:selectOneChoice value="#{bindings.PermisView1.inputValue}"
+                                                                    required="#{bindings.PermisView1.hints.mandatory}"
+                                                                    shortDesc="#{bindings.PermisView1.hints.tooltip}"
+                                                                    id="soc1" autoSubmit="true">
+                                                    <f:selectItems value="#{bindings.PermisView1.items}" id="si1"/>
+                                                    <f:validator binding="#{bindings.PermisView1.validator}"/>
                                                 </af:selectOneChoice>
                                             </af:gridCell>
                                         </af:gridRow>
@@ -241,9 +252,10 @@
                                                     <af:button text="#{viewcontrollerBundle.ENREGISTRER}" id="b5"
                                                                action="#{certificatBean.EnregCertificat}"/>
                                                     <af:spacer width="10" height="10" id="s5"/>
-                                                    <af:button actionListener="#{bindings.Rollback.execute}"
+                                                    <af:button
                                                                text="#{viewcontrollerBundle.ANNULER}"
-                                                               immediate="true" id="b7">
+                                                               immediate="true" id="b7"
+                                                               action="#{certificatBean.annulerCertificat}">
                                                         <af:resetActionListener/>
                                                     </af:button>
                                                 </af:panelGroupLayout>

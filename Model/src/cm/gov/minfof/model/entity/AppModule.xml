@@ -913,29 +913,32 @@
     Name="CompilLettreVoitureDestination1"
     ViewObjectName="cm.gov.minfof.model.entityviewobject.CompilLettreVoitureDestination"/>
   <ViewUsage
-    Name="RegionView6"
-    ViewObjectName="cm.gov.minfof.model.entityviewobject.RegionView"/>
+    Name="CompilExportDestination1"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.CompilExportDestination"/>
   <ViewUsage
-    Name="DepartementView12"
-    ViewObjectName="cm.gov.minfof.model.entityviewobject.DepartementView"/>
+    Name="getIdCategUnitMesureFromProduit1"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.getIdCategUnitMesureFromProduit"/>
   <ViewUsage
-    Name="CommuneView6"
-    ViewObjectName="cm.gov.minfof.model.entityviewobject.CommuneView"/>
+    Name="getUniteMesureEtCateg1"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.getUniteMesureEtCateg"/>
   <ViewUsage
-    Name="LocaliteView5"
-    ViewObjectName="cm.gov.minfof.model.entityviewobject.LocaliteView"/>
+    Name="CeqeView1"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.CeqeView"/>
   <ViewUsage
-    Name="getLocaliteUser1"
-    ViewObjectName="cm.gov.minfof.model.entityviewobject.getLocaliteUser"/>
+    Name="CeqeView2"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.CeqeView"/>
   <ViewUsage
-    Name="getPosteUserView1"
-    ViewObjectName="cm.gov.minfof.model.entityviewobject.getPosteUserView"/>
+    Name="getLastIdCeqe1"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.getLastIdCeqe"/>
   <ViewUsage
-    Name="getDepartementUser1"
-    ViewObjectName="cm.gov.minfof.model.entityviewobject.getDepartementUser"/>
+    Name="getPermisExportActif1"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.getPermisExportActif"/>
   <ViewUsage
-    Name="getUtilisateur1"
-    ViewObjectName="cm.gov.minfof.model.entityviewobject.getUtilisateur"/>
+    Name="getCoParPermisActif1"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.getCoParPermisActif"/>
+  <ViewUsage
+    Name="getCeqeParPermissionnaire1"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.getCeqeParPermissionnaire"/>
   <ViewLinkUsage
     Name="PermissionnaireToPermisLink"
     ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.PermissionnaireToPermisLink"
@@ -1700,17 +1703,35 @@
     DstViewUsageName="cm.gov.minfof.model.entity.AppModule.LocaliteView4"
     Reversed="false"/>
   <ViewLinkUsage
-    Name="regiontodeplink"
-    ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.regiontodeplink"
-    SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.RegionView6"
-    DstViewUsageName="cm.gov.minfof.model.entity.AppModule.DepartementView12"
+    Name="FkCeqe1Link1"
+    ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.FkCeqe1Link"
+    SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.CeqeView1"
+    DstViewUsageName="cm.gov.minfof.model.entity.AppModule.CeqeView2"
     Reversed="false"/>
-  <ViewLinkUsage
-    Name="CommuneToLocaliteLink"
-    ViewLinkObjectName="cm.gov.minfof.model.entityviewobject.CommuneToLocaliteLink"
-    SrcViewUsageName="cm.gov.minfof.model.entity.AppModule.CommuneView6"
-    DstViewUsageName="cm.gov.minfof.model.entity.AppModule.LocaliteView5"
-    Reversed="false"/>
+  <ViewUsage
+    Name="RegionView6"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.RegionView"/>
+  <ViewUsage
+    Name="DepartementView12"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.DepartementView"/>
+  <ViewUsage
+    Name="CommuneView6"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.CommuneView"/>
+  <ViewUsage
+    Name="LocaliteView5"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.LocaliteView"/>
+  <ViewUsage
+    Name="getLocaliteUser1"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.getLocaliteUser"/>
+  <ViewUsage
+    Name="getPosteUserView1"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.getPosteUserView"/>
+  <ViewUsage
+    Name="getDepartementUser1"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.getDepartementUser"/>
+  <ViewUsage
+    Name="getUtilisateur1"
+    ViewObjectName="cm.gov.minfof.model.entityviewobject.getUtilisateur"/>
   <Remote
     Name="ServiceInterface"
     ServerClassName="cm.gov.minfof.model.entity.server.serviceinterface.pfnl_wbsImpl"

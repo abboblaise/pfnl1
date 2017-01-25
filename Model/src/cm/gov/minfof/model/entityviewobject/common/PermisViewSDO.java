@@ -46,6 +46,18 @@ public interface PermisViewSDO extends java.io.Serializable {
 
    public void setNomfichier(java.lang.String value);
 
+   public java.math.BigDecimal getIdceqe();
+
+   public void setIdceqe(java.math.BigDecimal value);
+
+   public java.lang.String getNumeroceqe();
+
+   public void setNumeroceqe(java.lang.String value);
+
+   public java.math.BigDecimal getIdceqeFiltre();
+
+   public void setIdceqeFiltre(java.math.BigDecimal value);
+
    public java.util.List getPermisView();
 
    public void setPermisView(java.util.List value);

@@ -34,6 +34,14 @@ public interface DetailsexportpfnlViewSDO extends java.io.Serializable {
 
    public void setIdpays(java.math.BigDecimal value);
 
+   public java.math.BigDecimal getIdcertificat1();
+
+   public void setIdcertificat1(java.math.BigDecimal value);
+
+   public java.lang.String getNumeroco();
+
+   public void setNumeroco(java.lang.String value);
+
    public java.util.List getDetailsexportpfnlView();
 
    public void setDetailsexportpfnlView(java.util.List value);

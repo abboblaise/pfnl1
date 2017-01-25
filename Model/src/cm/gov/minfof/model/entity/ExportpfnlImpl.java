@@ -4,10 +4,6 @@ import java.math.BigDecimal;
 
 import java.sql.Date;
 
-import javax.faces.context.FacesContext;
-
-import javax.servlet.http.HttpSession;
-
 import oracle.jbo.AttributeList;
 import oracle.jbo.Key;
 import oracle.jbo.Row;
@@ -35,8 +31,9 @@ public class ExportpfnlImpl extends EntityImpl {
         Numeroco,
         Dateexport,
         Idposteexport,
-        iddepartemental,
-        idregional,
+        nomouraisonsociale,
+        numeropermis,
+        nompostecontrole,
         Exportpfnl,
         IdpermissionnaireExportpfnl,
         Exportpfnl1,
@@ -75,8 +72,9 @@ public class ExportpfnlImpl extends EntityImpl {
     public static final int NUMEROCO = AttributesEnum.Numeroco.index();
     public static final int DATEEXPORT = AttributesEnum.Dateexport.index();
     public static final int IDPOSTEEXPORT = AttributesEnum.Idposteexport.index();
-    public static final int IDDEPARTEMENTAL = AttributesEnum.iddepartemental.index();
-    public static final int IDREGIONAL = AttributesEnum.idregional.index();
+    public static final int NOMOURAISONSOCIALE = AttributesEnum.nomouraisonsociale.index();
+    public static final int NUMEROPERMIS = AttributesEnum.numeropermis.index();
+    public static final int NOMPOSTECONTROLE = AttributesEnum.nompostecontrole.index();
     public static final int EXPORTPFNL = AttributesEnum.Exportpfnl.index();
     public static final int IDPERMISSIONNAIREEXPORTPFNL = AttributesEnum.IdpermissionnaireExportpfnl.index();
     public static final int EXPORTPFNL1 = AttributesEnum.Exportpfnl1.index();
@@ -212,42 +210,51 @@ public class ExportpfnlImpl extends EntityImpl {
     }
 
     /**
-     * Gets the attribute value for iddepartemental, using the alias name iddepartemental.
-     * @return the value of iddepartemental
+     * Gets the attribute value for nomouraisonsociale, using the alias name nomouraisonsociale.
+     * @return the value of nomouraisonsociale
      */
-    public BigDecimal getiddepartemental() {
-        FacesContext fc = FacesContext.getCurrentInstance();
-        HttpSession session = (HttpSession) fc.getExternalContext().getSession(true);
-        UserData ud = (UserData) session.getAttribute("user");
-        System.out.println("Id département"+ud.getIddepartement());
-        return ud.getIddepartement();
+    public String getnomouraisonsociale() {
+        return (String) getAttributeInternal(NOMOURAISONSOCIALE);
     }
 
     /**
-     * Sets <code>value</code> as the attribute value for iddepartemental.
-     * @param value value to set the iddepartemental
+     * Sets <code>value</code> as the attribute value for nomouraisonsociale.
+     * @param value value to set the nomouraisonsociale
      */
-    public void setiddepartemental(BigDecimal value) {
-        setAttributeInternal(IDDEPARTEMENTAL, value);
+    public void setnomouraisonsociale(String value) {
+        setAttributeInternal(NOMOURAISONSOCIALE, value);
     }
 
     /**
-     * Gets the attribute value for idregional, using the alias name idregional.
-     * @return the value of idregional
+     * Gets the attribute value for numeropermis, using the alias name numeropermis.
+     * @return the value of numeropermis
      */
-    public BigDecimal getidregional() {
-        FacesContext fc = FacesContext.getCurrentInstance();
-        HttpSession session = (HttpSession) fc.getExternalContext().getSession(true);
-        UserData ud = (UserData) session.getAttribute("user");
-        return ud.getIdregion();
+    public String getnumeropermis() {
+        return (String) getAttributeInternal(NUMEROPERMIS);
     }
 
     /**
-     * Sets <code>value</code> as the attribute value for idregional.
-     * @param value value to set the idregional
+     * Sets <code>value</code> as the attribute value for numeropermis.
+     * @param value value to set the numeropermis
      */
-    public void setidregional(BigDecimal value) {
-        setAttributeInternal(IDREGIONAL, value);
+    public void setnumeropermis(String value) {
+        setAttributeInternal(NUMEROPERMIS, value);
+    }
+
+    /**
+     * Gets the attribute value for nompostecontrole, using the alias name nompostecontrole.
+     * @return the value of nompostecontrole
+     */
+    public String getnompostecontrole() {
+        return (String) getAttributeInternal(NOMPOSTECONTROLE);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for nompostecontrole.
+     * @param value value to set the nompostecontrole
+     */
+    public void setnompostecontrole(String value) {
+        setAttributeInternal(NOMPOSTECONTROLE, value);
     }
 
     /**

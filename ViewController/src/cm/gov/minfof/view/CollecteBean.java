@@ -50,6 +50,7 @@ import oracle.binding.BindingContainer;
 import oracle.binding.OperationBinding;
 
 import oracle.jbo.ApplicationModule;
+import oracle.jbo.Key;
 import oracle.jbo.VariableValueManager;
 import oracle.jbo.ViewCriteria;
 import oracle.jbo.ViewObject;
@@ -375,6 +376,16 @@ public class CollecteBean {
         System.out.println("je suis sorti");
        
 
+        return null;
+    }
+
+    public String annulerDetailsCollecte() {
+        notifObj.annulerParentEtDetails("CollectepfnlView1Iterator", "DetailscollectepfnlView17Iterator");
+        return null;
+    }
+
+    public String annulerCollecte() {
+        notifObj.annulerParent("CollectepfnlView1Iterator");
         return null;
     }
 }

@@ -64,12 +64,7 @@ public class CommuneBean {
     }
 
     public String annuler() {
-        BindingContainer bindings = getBindings();
-        OperationBinding operationBinding = bindings.getOperationBinding("Rollback");
-        Object result = operationBinding.execute();
-        if (!operationBinding.getErrors().isEmpty()) {
-            return null;
-        }
+        notifObj.annulerDoubleParentEtDetails("RegionView1Iterator", "DepartementView3Iterator", "CommuneView5Iterator");
         return null;
     }
 

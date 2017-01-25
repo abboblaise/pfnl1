@@ -206,6 +206,12 @@ public class PermisBean {
                                          " </b>a été enregistré avec succès");
         return null;
     }
+    
+    private String numeroPermis()
+    {
+        String numPermis = "";
+        return numPermis;
+    }
 
     /**Method to upload file to actual path on Server*/
     private String uploadFile(UploadedFile file) {
@@ -221,6 +227,14 @@ public class PermisBean {
             String nomSansExtension = path.substring(0, lastIndex);
             System.out.println("Sans extension = " + nomSansExtension);
             String numPermis = notifObj.getValueOfField("PermisView1Iterator", "Numeropermis");
+            System.out.println("numero permis = " + numPermis);
+            if(numPermis == null)
+            {
+                FacesContext fc = FacesContext.getCurrentInstance();
+                UIViewRoot root = fc.getViewRoot();
+                RichInputText numPermisInputText = (RichInputText) findComponent(root, "it1");
+                numPermis = numPermisInputText.getValue().toString();
+            }
             String vraiChaine = path.replaceFirst(nomSansExtension, numPermis);
             nomSansExtension.concat(path.substring(lastIndex));
             System.out.println("vraie chaine = " + vraiChaine);
@@ -361,5 +375,16 @@ public class PermisBean {
             e.printStackTrace();
         }
         outputStream.flush();
+    }
+
+
+    public String annulerPermis() {
+        notifObj.annulerParent("PermisView1Iterator");
+        return null;
+    }
+
+    public String annulerDetailsPermis() {
+        notifObj.annulerParentEtDetails("PermisView1Iterator", "DetailpermisView6Iterator");
+        return null;
     }
 }

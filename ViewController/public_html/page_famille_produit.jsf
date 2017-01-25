@@ -131,9 +131,9 @@
                                                     <af:button text="#{viewcontrollerBundle.ENREGISTRER}" id="b3"
                                                                action="#{famillePfnl.enregistreFamillePfnl}"/>
                                                     <af:spacer width="10" height="10" id="s2"/>
-                                                    <af:button actionListener="#{bindings.Rollback.execute}"
+                                                    <af:button
                                                                text="#{viewcontrollerBundle.ANNULER}" immediate="true"
-                                                               id="b5">
+                                                               id="b5" action="#{famillePfnl.annulerFamille}">
                                                         <af:resetActionListener/>
                                                     </af:button>
                                                 </af:panelGroupLayout>

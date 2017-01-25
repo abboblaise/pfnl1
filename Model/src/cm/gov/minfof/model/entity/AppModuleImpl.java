@@ -4,12 +4,12 @@ import cm.gov.minfof.model.entity.common.*;
 import cm.gov.minfof.model.entityviewobject.CategorieunitemesureViewImpl;
 import cm.gov.minfof.model.entityviewobject.CollMultiCritereImpl;
 import cm.gov.minfof.model.entityviewobject.CollecteMultiImpl;
-import cm.gov.minfof.model.entityviewobject.DepartementViewImpl;
 import cm.gov.minfof.model.entityviewobject.NiveauValidationViewImpl;
 import cm.gov.minfof.model.entityviewobject.AgrementsViewImpl;
 import cm.gov.minfof.model.entityviewobject.CategorieproduitViewImpl;
 import cm.gov.minfof.model.entityviewobject.CollectepfnlViewImpl;
 import cm.gov.minfof.model.entityviewobject.CommuneViewImpl;
+import cm.gov.minfof.model.entityviewobject.DepartementViewImpl;
 import cm.gov.minfof.model.entityviewobject.DetailpermisViewImpl;
 import cm.gov.minfof.model.entityviewobject.DetailscollectepfnlViewImpl;
 import cm.gov.minfof.model.entityviewobject.DetailsexportpfnlViewImpl;
@@ -3368,7 +3368,7 @@ public class AppModuleImpl extends ApplicationModuleImpl implements AppModule {
             Row rr=vo.next();
             util.setLoginuser(rr.getAttribute("Loginuser").toString());
             util.setNonuser(rr.getAttribute("Nomuser").toString());            
-            util.setTelephone(rr.getAttribute("Telephone").toString());
+            if(rr.getAttribute("Telephone") != null) util.setTelephone(rr.getAttribute("Telephone").toString());
             util.setEmail(rr.getAttribute("Emailuser").toString());
             util.setPassworduser(rr.getAttribute("Passworduser").toString());
             BigDecimal bd;
@@ -3426,23 +3426,6 @@ public class AppModuleImpl extends ApplicationModuleImpl implements AppModule {
             }
             //System.out.println("les pages : "+pgs);
             util.setPagesdugroupe(pgs);
-            
-            //gestion des niveaux d'intervention
-            if(util.getNiveauintervention() == 1)
-            {
-                util.setIdregion(null);
-                util.setIddepartement(null);
-            }
-            if(util.getNiveauintervention() == 2)
-            {
-                //util.setIdregion(null);
-                util.setIddepartement(null);
-            }
-            if(util.getNiveauintervention() == 3)
-            {
-                util.setIdregion(null);
-                //util.setIddepartement(null);
-            }
             
         }
         
@@ -3810,6 +3793,98 @@ public class AppModuleImpl extends ApplicationModuleImpl implements AppModule {
     public ViewObjectImpl getCompilLettreVoitureDestination1() {
         return (ViewObjectImpl) findViewObject("CompilLettreVoitureDestination1");
     }
+
+    /**
+     * Container's getter for CompilExportDestination1.
+     * @return CompilExportDestination1
+     */
+    public ViewObjectImpl getCompilExportDestination1() {
+        return (ViewObjectImpl) findViewObject("CompilExportDestination1");
+    }
+
+    /**
+     * Container's getter for getIdCategUnitMesureFromProduit1.
+     * @return getIdCategUnitMesureFromProduit1
+     */
+    public ViewObjectImpl getgetIdCategUnitMesureFromProduit1() {
+        return (ViewObjectImpl) findViewObject("getIdCategUnitMesureFromProduit1");
+    }
+
+    /**
+     * Container's getter for getUniteMesureEtCateg1.
+     * @return getUniteMesureEtCateg1
+     */
+    public ViewObjectImpl getgetUniteMesureEtCateg1() {
+        return (ViewObjectImpl) findViewObject("getUniteMesureEtCateg1");
+    }
+
+    /**
+     * Container's getter for CeqeView1.
+     * @return CeqeView1
+     */
+    public ViewObjectImpl getCeqeView1() {
+        return (ViewObjectImpl) findViewObject("CeqeView1");
+    }
+
+    /**
+     * Container's getter for CeqeView2.
+     * @return CeqeView2
+     */
+    public ViewObjectImpl getCeqeView2() {
+        return (ViewObjectImpl) findViewObject("CeqeView2");
+    }
+
+    /**
+     * Container's getter for FkCeqe1Link1.
+     * @return FkCeqe1Link1
+     */
+    public ViewLinkImpl getFkCeqe1Link1() {
+        return (ViewLinkImpl) findViewLink("FkCeqe1Link1");
+    }
+
+    /**
+     * Container's getter for getLastIdCeqe1.
+     * @return getLastIdCeqe1
+     */
+    public ViewObjectImpl getgetLastIdCeqe1() {
+        return (ViewObjectImpl) findViewObject("getLastIdCeqe1");
+    }
+
+    /**
+     * Container's getter for getPermisExportActif1.
+     * @return getPermisExportActif1
+     */
+    public ViewObjectImpl getgetPermisExportActif1() {
+        return (ViewObjectImpl) findViewObject("getPermisExportActif1");
+    }
+
+    /**
+     * Container's getter for getCoParPermisActif1.
+     * @return getCoParPermisActif1
+     */
+    public ViewObjectImpl getgetCoParPermisActif1() {
+        return (ViewObjectImpl) findViewObject("getCoParPermisActif1");
+    }
+
+    /**
+     * Container's getter for getCeqeParPermissionnaire1.
+     * @return getCeqeParPermissionnaire1
+     */
+    public ViewObjectImpl getgetCeqeParPermissionnaire1() {
+        return (ViewObjectImpl) findViewObject("getCeqeParPermissionnaire1");
+    }
+    
+  
+
+  
+
+    /**
+     * Container's getter for origineView1.
+     * @return origineView1
+     */
+ //   public origineViewImpl getorigineView1() {
+ //       return (origineViewImpl) findViewObject("origineView1");
+ //   }
 
     /**
      * Container's getter for RegionView6.

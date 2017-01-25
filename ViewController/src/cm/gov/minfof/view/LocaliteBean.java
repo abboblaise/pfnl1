@@ -68,4 +68,9 @@ public class LocaliteBean {
             SupprimerLocalite();
         }
     }
+
+    public String annulerLocalite() {
+        notifObj.annulerParent("LocaliteView1Iterator");
+        return null;
+    }
 }

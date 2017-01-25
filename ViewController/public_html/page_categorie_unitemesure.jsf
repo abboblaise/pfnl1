@@ -128,9 +128,10 @@
                                                     <af:button text="#{viewcontrollerBundle.ENREGISTRER}" id="b4"
                                                                action="#{categorieUniteMesureBean.enregCategUniteMesure}"/>
                                                     <af:spacer width="10" height="10" id="s3"/>
-                                                    <af:button actionListener="#{bindings.Rollback.execute}"
+                                                    <af:button
                                                                text="#{viewcontrollerBundle.ANNULER}"
-                                                               immediate="true" id="b1">
+                                                               immediate="true" id="b1"
+                                                               action="#{categorieUniteMesureBean.annulerCategorie}">
                                                         <af:resetActionListener/>
                                                     </af:button>
                                                 </af:panelGroupLayout>

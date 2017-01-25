@@ -11,7 +11,8 @@
         <af:form id="f1">
         <af:pageTemplate viewId="/TemplateGlobal.jsf" id="pt1">
         <f:facet name="content">
-                    <af:panelBox text="#{viewcontrollerBundle.EDITION_DES_D_U00E9PARTEMENTS}" id="pb3">
+                    <af:panelBox text="#{viewcontrollerBundle.EDITION_DES_D_U00E9PARTEMENTS}" id="pb3"
+                                 showDisclosure="false">
                         <f:facet name="toolbar">
                             <af:panelGroupLayout id="pgl4">
                                 <af:button actionListener="#{bindings.Rollback.execute}"
@@ -29,6 +30,15 @@
                         <af:spacer width="10" height="10" id="s6"/>
                         <af:panelTabbed position="above" id="pt2" inlineStyle="width:802px;">
                             <af:showDetailItem id="tab1" text="#{viewcontrollerBundle.CONSULTATION}" disclosed="true">
+                                <af:spacer width="10" height="10" id="s10"/>
+                                <af:selectOneChoice value="#{bindings.RegionView1.inputValue}"
+                                                    required="#{bindings.RegionView1.hints.mandatory}"
+                                                    shortDesc="#{bindings.RegionView1.hints.tooltip}" id="soc2"
+                                                    autoSubmit="true" label="#{bindings.RegionView1.label}">
+                                    <f:selectItems value="#{bindings.RegionView1.items}" id="si2"/>
+                                    <f:validator binding="#{bindings.RegionView1.validator}"/>
+                                </af:selectOneChoice>
+                                <af:spacer width="10" height="10" id="s11"/>
                                 <af:panelCollection id="pc1" inlineStyle="width:637px;">
                                     <f:facet name="menus"/>
                                     <f:facet name="toolbar"/>
@@ -215,9 +225,9 @@
                                                                action="#{departementBean.supprimeDepartement}"
                                                                rendered="false"/>
                                                     <af:spacer width="10" height="10" id="s1"/>
-                                                    <af:button actionListener="#{bindings.Rollback.execute}"
+                                                    <af:button
                                                                text="#{viewcontrollerBundle.ANNULER}" immediate="true"
-                                                               id="b6">
+                                                               id="b6" action="#{departementBean.annulerDepartement}">
                                                         <af:resetActionListener/>
                                                     </af:button>
                                                 </af:panelGroupLayout>

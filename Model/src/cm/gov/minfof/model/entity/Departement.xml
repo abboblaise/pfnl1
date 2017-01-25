@@ -60,7 +60,8 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR"
-    TableName="departements">
+    TableName="departements"
+    IsNotNull="true">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="5"/>
     </DesignTime>
@@ -68,8 +69,29 @@
       <SchemaBasedProperties>
         <LABEL
           ResId="cm.gov.minfof.model.entity.Departement.Codedepartement_LABEL"/>
+        <DISPLAYWIDTH
+          Value="4"/>
       </SchemaBasedProperties>
     </Properties>
+    <validation:PreDefinedValidationBean
+      Name="CodedepartementRule1"
+      Description="Precision : (4)"
+      ValName="Precision : (5)"
+      Subtype="PRECISION_SCALE"/>
+    <validation:RegExpValidationBean
+      Name="CodedepartementRule0"
+      ResId="LE_CODE_DU_D_U00E9PARTEMENT_EST_ERRON_U00E9"
+      OnAttribute="Codedepartement"
+      Pattern="\d+"
+      Inverse="false"/>
+    <validation:LengthValidationBean
+      Name="CodedepartementRule2"
+      ResId="LE_CODE_DU_D_U00E9PARTEMENT_DOIT_AVOIR_4_CHIFFRES"
+      OnAttribute="Codedepartement"
+      CompareType="EQUALTO"
+      DataType="CHARACTER"
+      CompareLength="4"
+      Inverse="false"/>
   </Attribute>
   <Attribute
     Name="Idregions"
@@ -157,6 +179,13 @@
     AssociationOtherEnd="cm.gov.minfof.model.entity.DetailCollToDeptAssoc.Departement"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="Agrements1"
+    Association="cm.gov.minfof.model.entity.DepartementsIbfk1Assoc3"
+    AssociationEnd="cm.gov.minfof.model.entity.DepartementsIbfk1Assoc3.Agrements1"
+    AssociationOtherEnd="cm.gov.minfof.model.entity.DepartementsIbfk1Assoc3.Departement"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
   <Key
     Name="AltKey"
     AltKey="true">
@@ -173,6 +202,18 @@
     <DesignTime>
       <Attr Name="_isUnique" Value="true"/>
       <Attr Name="_DBObjectName" Value="codedepartement"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="cm.gov.minfof.model.entity.Departement.Codedepartement"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="DepartementsCodedepartementCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"codedepartement" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="DEPARTEMENTS_CODEDEPARTEMENT_C"/>
     </DesignTime>
     <AttrArray Name="Attributes">
       <Item Value="cm.gov.minfof.model.entity.Departement.Codedepartement"/>

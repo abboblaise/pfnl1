@@ -145,7 +145,7 @@
                                                         <af:outputText value="#{bindings.Idutilisateur.label}"
                                                                        id="ot4"/>
                                                     </af:gridCell>
-                                                    <af:gridCell marginStart="5px" width="auto" marginEnd="5px"
+                                                    <af:gridCell marginStart="5px" width="320pt" marginEnd="5px"
                                                                  id="gc2">
                                                         <af:inputComboboxListOfValues id="nomuserId"
                                                                                       popupTitle="Search and Select: #{bindings.nomuser.hints.label}"
@@ -234,7 +234,7 @@
                                                 </af:gridRow>
                                                 <af:gridRow marginTop="5px" height="auto" id="gr7">
                                                     <af:gridCell marginStart="5px" columnSpan="2" marginEnd="5px"
-                                                                 id="gc13">
+                                                                 id="gc13" width="auto">
                                                         <af:panelGroupLayout id="pgl7">
                                                             <af:button actionListener="#{bindings.First.execute}"
                                                                        text="#{viewcontrollerBundle.FIRST}"
@@ -269,9 +269,10 @@
                                                                        id="b10" disabled="false"
                                                                        action="#{collecteBean.enregistrerCollecte}"/>
                                                             <af:spacer width="10" height="10" id="s6"/>
-                                                            <af:button actionListener="#{bindings.Rollback.execute}"
+                                                            <af:button
                                                                        text="#{viewcontrollerBundle.ANNULER}"
-                                                                       immediate="true" id="b11">
+                                                                       immediate="true" id="b11"
+                                                                       action="#{collecteBean.annulerCollecte}">
                                                                 <af:resetActionListener/>
                                                             </af:button>
                                                         </af:panelGroupLayout>
@@ -664,9 +665,10 @@
                                                                        id="b3" disabled="false"
                                                                        action="#{collecteBean.enregistrerCollecte}"/>
                                                             <af:spacer width="10" height="10" id="s5"/>
-                                                            <af:button actionListener="#{bindings.Rollback.execute}"
+                                                            <af:button
                                                                        text="#{viewcontrollerBundle.ANNULER}"
-                                                                       immediate="true" id="b6">
+                                                                       immediate="true" id="b6"
+                                                                       action="#{collecteBean.annulerDetailsCollecte}">
                                                                 <af:resetActionListener/>
                                                             </af:button>
                                                         </af:panelGroupLayout>

@@ -129,7 +129,8 @@
     Type="java.lang.String"
     ColumnType="CHAR"
     IsPersistent="false"
-    IsQueriable="false">
+    IsQueriable="false"
+    IsNotNull="true">
     <Properties>
       <SchemaBasedProperties>
         <DISPLAYWIDTH
@@ -147,7 +148,8 @@
     Type="java.lang.String"
     ColumnType="CHAR"
     IsPersistent="false"
-    IsQueriable="false">
+    IsQueriable="false"
+    IsNotNull="true">
     <Properties>
       <SchemaBasedProperties>
         <LABEL
@@ -165,7 +167,8 @@
     Type="java.lang.String"
     ColumnType="CHAR"
     IsPersistent="false"
-    IsQueriable="false">
+    IsQueriable="false"
+    IsNotNull="true">
     <Properties>
       <SchemaBasedProperties>
         <LABEL
@@ -192,7 +195,8 @@
     Type="java.lang.String"
     ColumnType="CHAR"
     IsPersistent="false"
-    IsQueriable="false">
+    IsQueriable="false"
+    IsNotNull="true">
     <Properties>
       <SchemaBasedProperties>
         <LABEL
@@ -230,6 +234,54 @@
     AssociationOtherEnd="cm.gov.minfof.model.entity.DeptToCollecteAssoc.Collectepfnl"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <Key
+    Name="CollectepfnlNomdepartementCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"nomdepartement" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="COLLECTEPFNL_NOMDEPARTEMENT_CH"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="cm.gov.minfof.model.entity.Collectepfnl.nomdepartement"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="CollectepfnlNomlocaliteCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"nomlocalite" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="COLLECTEPFNL_NOMLOCALITE_CHECK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="cm.gov.minfof.model.entity.Collectepfnl.nomlocalite"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="CollectepfnlNomposteCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"nomposte" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="COLLECTEPFNL_NOMPOSTE_CHECK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="cm.gov.minfof.model.entity.Collectepfnl.nomposte"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="CollectepfnlNomuserCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"nomuser" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="COLLECTEPFNL_NOMUSER_CHECK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="cm.gov.minfof.model.entity.Collectepfnl.nomuser"/>
+    </AttrArray>
+  </Key>
   <Key
     Name="Primary1"
     PrimaryKey="true">
